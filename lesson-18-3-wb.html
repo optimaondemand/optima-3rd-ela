@@ -1,0 +1,3412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Optima Academy Online — Lesson 18.3: The Whipping Boy (Ch. 5)</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Nunito:wght@400;600;700;800;900&display=swap');
+
+*,*::before,*::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: 'Nunito', 'Century Gothic', 'Arial Rounded MT Bold', Verdana, sans-serif;
+  background: #F0F2F8;
+  color: #2A0A4A;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+.page-wrap {
+  max-width: 920px;
+  margin: 0 auto;
+  background: #FFFFFF;
+  box-shadow: 0 0 40px rgba(14, 28, 66, 0.08);
+}
+
+/* ═══════════ PROGRESS BAR ═══════════ */
+.progress-wrap {
+  position: sticky;
+  top: 0;
+  z-index: 200;
+  background: #2A0A4A;
+  padding: 8px 20px 10px;
+  border-bottom: none;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+.progress-label {
+  font-size: 12px;
+  color: #5C2D91;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  white-space: nowrap;
+}
+.progress-track {
+  flex: 1;
+  height: 10px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+}
+.progress-fill {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, #5C2D91, #7A45C4, #B8860B);
+  border-radius: 10px;
+  transition: width 0.4s ease;
+}
+.progress-pct {
+  font-size: 13px;
+  color: #B8860B;
+  font-weight: 800;
+  min-width: 36px;
+  text-align: right;
+}
+
+/* ═══════════ HEADER ═══════════ */
+.header {
+  background: #2A0A4A;
+  border-bottom: 6px solid #5C2D91;
+  padding: 20px 28px 18px;
+  position: relative;
+  overflow: hidden;
+}
+.header::after {
+  content: '';
+  position: absolute;
+  bottom: 6px;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #5C2D91, #7A45C4, #5C2D91);
+}
+.header-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+.header-logo {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+.header-logo img { width: 48px; height: 38px; }
+.header-org { font-size: 22px; color: #fff; font-weight: 800; line-height: 1.15; }
+.header-sub { font-size: 11px; color: #5C2D91; letter-spacing: 0.5px; }
+.header-title {
+  font-family: 'Lora', Georgia, serif;
+  font-size: 28px;
+  color: #fff;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 10px;
+}
+.header-title em { color: #FFE9B8; font-style: italic; }
+.header-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(85, 200, 232, 0.15);
+  border: 1.5px solid rgba(85, 200, 232, 0.35);
+  border-radius: 28px;
+  padding: 6px 16px;
+}
+.header-badge-icon { font-size: 22px; }
+.header-badge-text { font-size: 18px; color: #fff; font-weight: 800; }
+
+/* ═══════════ INFO STRIP ═══════════ */
+.info-strip {
+  display: flex;
+  flex-wrap: wrap;
+  background: #FFFFFF;
+  border-bottom: 2px solid #E2E8F4;
+}
+.info-cell {
+  flex: 1;
+  min-width: 150px;
+  padding: 12px 16px;
+  border-right: 1px solid #E2E8F4;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.info-cell:last-child { border-right: none; }
+.info-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  flex-shrink: 0;
+}
+.info-label {
+  font-size: 10px;
+  color: #7A88A8;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: 700;
+}
+.info-value { font-size: 16px; color: #2A0A4A; font-weight: 800; line-height: 1.2; }
+.info-detail { font-size: 11px; color: #3A4A6B; line-height: 1.3; }
+
+/* ═══════════ INTRO COLLAPSIBLE ═══════════ */
+.intro-section { transition: max-height 0.35s ease, padding 0.35s ease, opacity 0.25s ease; overflow: hidden; }
+.intro-section.collapsed .intro-2col,
+.intro-section.collapsed .need-strip { display: none; }
+.intro-collapsed-bar {
+  display: none;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 28px;
+  background: #FFF8F0;
+  border-bottom: 2px solid #E8D5A0;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+.intro-collapsed-bar:hover { background: #FFF8E8; }
+.intro-section.collapsed .intro-collapsed-bar { display: flex; }
+.intro-collapsed-icon { font-size: 18px; }
+.intro-collapsed-text {
+  font-size: 14px;
+  color: #5A4A3A;
+  font-weight: 700;
+  flex: 1;
+}
+.intro-collapsed-toggle {
+  font-size: 12px;
+  color: #B8860B;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* ═══════════ INTRO 2-COL ═══════════ */
+.intro-2col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  padding: 20px 28px 4px;
+}
+.intro-card {
+  background: #FFFFFF;
+  border: 2px solid #E2E8F4;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(14, 28, 66, 0.04);
+}
+.intro-card-head {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 18px;
+  border-bottom: 2px solid;
+}
+.intro-card-head-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.intro-card-head-label {
+  font-size: 10px;
+  color: #7A88A8;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  font-weight: 700;
+}
+.intro-card-head-title { font-size: 18px; color: #2A0A4A; font-weight: 800; line-height: 1.2; }
+.intro-card-body { padding: 14px 18px; }
+.intro-card-body p { font-size: 15px; color: #3A4A6B; line-height: 1.65; margin-bottom: 8px; }
+.intro-card-body p:last-child { margin-bottom: 0; }
+.intro-card-body .obj-line {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  font-size: 15px;
+  color: #2A0A4A;
+  line-height: 1.55;
+  margin-bottom: 8px;
+}
+.intro-card-body .obj-line:last-child { margin-bottom: 0; }
+.intro-card-body .obj-icon { flex-shrink: 0; font-size: 17px; }
+.theme-question .intro-card-head { background: #FFF8E8; border-color: #E8D5A0; }
+.theme-question .intro-card-head-icon { background: #B8860B; }
+.theme-objectives .intro-card-head { background: #EAF8FD; border-color: #D6F2FB; }
+.theme-objectives .intro-card-head-icon { background: #5C2D91; }
+
+/* ═══════════ NEED STRIP ═══════════ */
+.need-strip {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 12px 28px 18px;
+}
+.need-strip-label {
+  font-size: 13px;
+  color: #3A4A6B;
+  font-weight: 700;
+  white-space: nowrap;
+}
+.need-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  background: #E3F8ED;
+  border: 1.5px solid #B8E8CF;
+  border-radius: 20px;
+  padding: 5px 12px;
+  font-size: 13px;
+  color: #2A0A4A;
+  font-weight: 700;
+}
+
+/* ═══════════ TAB BAR ═══════════ */
+.tab-bar {
+  position: sticky;
+  top: 38px;
+  z-index: 100;
+  background: #FFFFFF;
+  border-bottom: 3px solid #E2E8F4;
+  display: flex;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  box-shadow: 0 -4px 0 0 #2A0A4A;
+}
+.tab-bar::-webkit-scrollbar { display: none; }
+.tab-btn {
+  flex: 1;
+  min-width: 130px;
+  padding: 12px 8px 11px;
+  background: transparent;
+  border: none;
+  border-bottom: 4px solid transparent;
+  font-family: 'Nunito', sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  color: #7A88A8;
+  cursor: pointer;
+  transition: all 0.2s;
+  white-space: nowrap;
+  line-height: 1.3;
+  text-align: center;
+}
+.tab-btn:hover { color: #2A0A4A; background: #EAF8FD; }
+.tab-btn.active {
+  color: #2A0A4A;
+  border-bottom-color: #5C2D91;
+  background: #FFFFFF;
+}
+.tab-btn .tab-check {
+  display: none;
+  font-size: 12px;
+  color: #34B76F;
+  margin-left: 4px;
+  font-weight: 800;
+}
+.tab-btn.visited .tab-check { display: inline; }
+.tab-panel { display: none; padding: 24px 28px 36px; }
+.tab-panel.active { display: block; }
+
+/* ═══════════ VIDEO WRAP ═══════════ */
+.video-wrap {
+  border-radius: 18px;
+  overflow: hidden;
+  border: 2px solid #E2E8F4;
+  box-shadow: 0 4px 20px rgba(14, 28, 66, 0.08);
+  background: #000;
+  margin: 0 0 22px;
+}
+.video-wrap-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 18px;
+  background: linear-gradient(135deg, #2A0A4A, #1A2D5A);
+  border-bottom: 2px solid rgba(85, 200, 232, 0.2);
+}
+.video-wrap-type {
+  font-size: 10px;
+  color: #5C2D91;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-weight: 800;
+  margin-bottom: 2px;
+}
+.video-wrap-title { font-size: 16px; color: #fff; font-weight: 800; line-height: 1.2; }
+.video-ratio {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+}
+.video-placeholder {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #2A0A4A, #1A2D5A);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 24px;
+}
+.video-placeholder-icon { font-size: 44px; margin-bottom: 10px; opacity: 0.55; }
+.video-placeholder-text {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.55);
+  font-weight: 600;
+  line-height: 1.5;
+  font-family: 'Nunito', sans-serif;
+}
+.video-placeholder-id {
+  font-size: 11px;
+  color: rgba(85, 200, 232, 0.4);
+  font-family: monospace;
+  margin-top: 6px;
+  letter-spacing: 0.5px;
+}
+.video-teacher-notes {
+  margin-top: 14px;
+  padding: 12px 16px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px dashed rgba(85, 200, 232, 0.25);
+  border-radius: 8px;
+  text-align: left;
+  max-width: 480px;
+}
+.video-teacher-notes-label {
+  font-size: 10px;
+  color: rgba(85, 200, 232, 0.5);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 800;
+  margin-bottom: 6px;
+  font-family: 'Nunito', sans-serif;
+}
+.video-teacher-notes-text {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.4);
+  line-height: 1.55;
+  font-family: 'Nunito', sans-serif;
+}
+
+/* ═══════════ ACTIVITY CARDS ═══════════ */
+.activity {
+  background: #FFFFFF;
+  border: 2px solid #E2E8F4;
+  border-radius: 18px;
+  margin-bottom: 18px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(14, 28, 66, 0.04);
+}
+.activity.bl-cyan { border-left: 6px solid #5C2D91; }
+.activity.bl-gold { border-left: 6px solid #B8860B; }
+.activity.bl-green { border-left: 6px solid #34B76F; }
+.activity.bl-purple { border-left: 6px solid #8B6FC0; }
+.activity.bl-rose { border-left: 6px solid #c7627e; }
+.activity.bl-navy { border-left: 6px solid #2A0A4A; }
+.activity-head {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 20px 14px 18px;
+  border-bottom: 1.5px solid #E2E8F4;
+}
+.activity-num {
+  width: 38px;
+  height: 38px;
+  border-radius: 14px;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.activity-title { font-size: 19px; color: #2A0A4A; font-weight: 800; line-height: 1.2; }
+.activity-sub { font-size: 12px; color: #7A88A8; }
+.activity-time {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 700;
+  color: #fff;
+  white-space: nowrap;
+  margin-left: auto;
+}
+.activity-body { padding: 18px 22px; }
+.activity-body p { font-size: 17px; color: #3A4A6B; line-height: 1.75; margin-bottom: 12px; }
+.activity-body p:last-child { margin-bottom: 0; }
+
+/* ═══════════ CALLOUTS ═══════════ */
+.callout {
+  border-radius: 14px;
+  padding: 16px 18px;
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+.callout:last-child { margin-bottom: 0; }
+.callout-icon { font-size: 28px; flex-shrink: 0; margin-top: 2px; }
+.callout p { font-size: 16px; color: #2A0A4A; line-height: 1.65; margin: 0; }
+.callout-info { background: #EAF8FD; border: 2px solid #D6F2FB; }
+.callout-think { background: #FFF8E8; border: 2px solid #E8D5A0; }
+.callout-tip { background: #E3F8ED; border: 2px solid #B8E8CF; }
+.callout-vocab { background: #F0E8FF; border: 2px solid #D8CCF0; }
+.callout-submit { background: #FDE8F0; border: 2px solid #F0B8CA; }
+
+/* ═══════════ SOCRATIC BOX ═══════════ */
+.socratic-box {
+  background: linear-gradient(135deg, #F0E8FF 0%, #E8DCFA 100%);
+  border: 2px solid #D8CCF0;
+  border-radius: 14px;
+  padding: 16px 18px;
+  margin-bottom: 14px;
+}
+.socratic-box:last-child { margin-bottom: 0; }
+.socratic-label {
+  font-size: 12px;
+  color: #6B4FB0;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: 800;
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.socratic-q {
+  font-size: 16px;
+  color: #2A0A4A;
+  line-height: 1.7;
+  font-style: italic;
+  margin-bottom: 8px;
+}
+.socratic-q:last-child { margin-bottom: 0; }
+.socratic-q strong { font-style: normal; color: #2A0A4A; }
+
+/* ═══════════ DOL & PRACTICE TASKS ═══════════ */
+.task-box {
+  background: #FAFBFF;
+  border: 2px solid #E2E8F4;
+  border-radius: 14px;
+  padding: 16px 18px;
+  margin-bottom: 14px;
+}
+.task-box:last-child { margin-bottom: 0; }
+.task-label {
+  font-size: 12px;
+  color: #5C2D91;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  font-weight: 800;
+  margin-bottom: 10px;
+}
+.task-sentence {
+  background: #FFFFFF;
+  border: 1.5px solid #E2E8F4;
+  border-left: 4px solid #B8860B;
+  border-radius: 10px;
+  padding: 12px 16px;
+  font-size: 16px;
+  color: #2A0A4A;
+  line-height: 1.6;
+  margin-bottom: 10px;
+  font-family: 'Lora', Georgia, serif;
+}
+.task-sentence:last-child { margin-bottom: 0; }
+.task-instruction { font-size: 15px; color: #3A4A6B; line-height: 1.6; margin-bottom: 10px; }
+
+/* ═══════════ POETRY ═══════════ */
+.poem-box {
+  background: linear-gradient(135deg, #FFF8F0 0%, #FFF8E8 100%);
+  border: 2px solid #E8D5A0;
+  border-radius: 14px;
+  padding: 18px 22px;
+  margin-bottom: 14px;
+}
+.poem-title {
+  font-family: 'Lora', Georgia, serif;
+  font-size: 18px;
+  color: #2A0A4A;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+.poem-author {
+  font-size: 13px;
+  color: #7A88A8;
+  font-style: italic;
+  margin-bottom: 12px;
+}
+.poem-text {
+  font-family: 'Lora', Georgia, serif;
+  font-size: 16px;
+  color: #3A4A6B;
+  line-height: 1.8;
+  font-style: italic;
+  white-space: pre-line;
+}
+
+/* ═══════════ STORY JOURNEY TRACKER ═══════════ */
+.tracker-card {
+  background: #FFFFFF;
+  border: 2px solid #E2E8F4;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(14, 28, 66, 0.04);
+  margin-bottom: 22px;
+}
+.tracker-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 20px;
+  background: linear-gradient(135deg, #3D1A6B 0%, #5C2D91 100%);
+  border-bottom: 2px solid #3a6b1e;
+}
+.tracker-header-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.2);
+  color: #fff;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.tracker-header-label {
+  font-size: 10px;
+  color: rgba(255, 255, 255, 0.7);
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  font-weight: 700;
+}
+.tracker-header-title { font-size: 17px; color: #fff; font-weight: 800; line-height: 1.2; }
+.scene-wrap {
+  width: 100%;
+  position: relative;
+  height: 210px;
+  overflow: hidden;
+  border-bottom: 3px solid #8b6f47;
+  background: linear-gradient(180deg, #c2ddf0 0%, #d4eaf7 30%, #a8d5a0 50%, #7db356 58%, #5a9a3a 65%, #5C2D91 100%);
+  user-select: none;
+}
+.cloud {
+  position: absolute;
+  background: rgba(255, 255, 255, 0.55);
+  border-radius: 50%;
+  filter: blur(2px);
+}
+.hills-far {
+  position: absolute;
+  bottom: 60px;
+  left: 0;
+  right: 0;
+  height: 80px;
+  background:
+    radial-gradient(ellipse 220px 60px at 10% 100%, #8abb6d 70%, transparent 71%),
+    radial-gradient(ellipse 300px 70px at 30% 100%, #79ad58 70%, transparent 71%),
+    radial-gradient(ellipse 250px 55px at 55% 100%, #8abb6d 70%, transparent 71%),
+    radial-gradient(ellipse 280px 65px at 78% 100%, #6fa04a 70%, transparent 71%),
+    radial-gradient(ellipse 200px 50px at 95% 100%, #8abb6d 70%, transparent 71%);
+}
+.path-svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+.tree, .house, .flower {
+  position: absolute;
+  pointer-events: none;
+  z-index: 1;
+  filter: drop-shadow(0 2px 2px rgba(0, 0, 0, 0.15));
+}
+.flower { filter: none; font-size: 12px; z-index: 2; }
+.lake {
+  position: absolute;
+  background: linear-gradient(180deg, rgba(135, 188, 222, 0.5), rgba(135, 188, 222, 0.3));
+  border-radius: 50%;
+  filter: blur(2px);
+  z-index: 1;
+}
+.node {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  z-index: 5;
+  border: 3px solid #f5f0e6;
+  background: #fff;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.18), inset 0 -2px 0 rgba(0, 0, 0, 0.05);
+}
+.node.done {
+  background: #5C2D91;
+  border-color: #fde8a0;
+  box-shadow: 0 0 0 2px #5C2D91, 0 2px 8px rgba(74, 124, 46, 0.45);
+  color: #fff;
+}
+.node.active {
+  background: #B8860B;
+  border-color: #fde8a0;
+  box-shadow: 0 0 0 3px #B8860B, 0 0 14px rgba(199, 146, 44, 0.5);
+  transform: scale(1.15);
+  color: #fff;
+}
+.node.upcoming { opacity: 0.55; }
+.character-token {
+  position: absolute;
+  font-size: 26px;
+  z-index: 20;
+  pointer-events: none;
+  filter: drop-shadow(0 3px 5px rgba(0, 0, 0, 0.3));
+  animation: hop 2s ease-in-out infinite;
+}
+@keyframes hop {
+  0%, 100% { transform: translateY(0) rotate(-3deg); }
+  50% { transform: translateY(-5px) rotate(3deg); }
+}
+.title-plaque {
+  position: absolute;
+  top: 8px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(253, 248, 240, 0.92);
+  border: 2px solid #c4a882;
+  border-radius: 8px;
+  padding: 3px 18px 4px;
+  z-index: 15;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  white-space: nowrap;
+}
+.title-plaque h1 {
+  font-family: 'Lora', Georgia, serif;
+  font-size: 14px;
+  font-weight: 700;
+  color: #2d5016;
+  line-height: 1.2;
+}
+.title-plaque h1 em { color: #8B6914; font-style: italic; }
+.tracker-chapter-label {
+  text-align: center;
+  padding: 10px 16px;
+  font-size: 13px;
+  color: #7A88A8;
+  font-weight: 600;
+  background: #FAFBFF;
+  border-top: 1px solid #E2E8F4;
+}
+.tracker-chapter-label strong { color: #B8860B; }
+
+/* ═══════════ KEY CONCEPT ═══════════ */
+.key-concept {
+  background: #FFF8E8;
+  border: 2px solid #E8D5A0;
+  border-radius: 14px;
+  padding: 16px 18px;
+  margin-bottom: 14px;
+}
+.key-concept:last-child { margin-bottom: 0; }
+.key-concept-label {
+  font-size: 12px;
+  color: #B8860B;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: 800;
+  margin-bottom: 8px;
+}
+.key-concept p { font-size: 15px; color: #2A0A4A; line-height: 1.7; margin-bottom: 6px; }
+
+/* ═══════════ VOCABULARY FLIP CARDS ═══════════ */
+.vocab-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  margin: 14px 0;
+}
+.flip-card {
+  perspective: 800px;
+  height: 175px;
+  cursor: pointer;
+}
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.5s ease;
+  transform-style: preserve-3d;
+}
+.flip-card.flipped .flip-card-inner { transform: rotateY(180deg); }
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 16px;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 16px;
+  text-align: center;
+  border: 2px solid #E2E8F4;
+  box-shadow: 0 2px 10px rgba(14, 28, 66, 0.06);
+}
+.flip-card-front {
+  background: #FFFFFF;
+  border-top: 5px solid #5C2D91;
+}
+.flip-card-front .fc-emoji { font-size: 28px; margin-bottom: 6px; }
+.flip-card-front .fc-word {
+  font-family: 'Lora', Georgia, serif;
+  font-size: 17px;
+  font-weight: 700;
+  color: #2A0A4A;
+  margin-bottom: 4px;
+}
+.flip-card-front .fc-tap {
+  font-size: 11px;
+  color: #7A88A8;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+}
+.flip-card-back {
+  background: linear-gradient(145deg, #2A0A4A, #1A2D5A);
+  border-color: #2A0A4A;
+  transform: rotateY(180deg);
+}
+.flip-card-back .fc-def {
+  font-size: 13.5px;
+  color: #fff;
+  line-height: 1.5;
+  font-weight: 600;
+}
+.flip-card-back .fc-word-back {
+  font-size: 10px;
+  color: #5C2D91;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 800;
+  margin-bottom: 6px;
+}
+
+/* ═══════════ COPYWORK ═══════════ */
+.copywork-box {
+  background: linear-gradient(135deg, #FFF8F0 0%, #FFF8E8 100%);
+  border: 2px solid #E8D5A0;
+  border-radius: 14px;
+  padding: 18px 20px;
+  margin-bottom: 14px;
+}
+.copywork-label {
+  font-size: 12px;
+  color: #B8860B;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: 800;
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.copywork-text {
+  font-family: 'Lora', Georgia, serif;
+  font-size: 17px;
+  color: #2A0A4A;
+  line-height: 1.7;
+  font-style: italic;
+  margin-bottom: 8px;
+}
+.copywork-instruction { font-size: 14px; color: #3A4A6B; line-height: 1.5; }
+
+/* ═══════════ READING BOX ═══════════ */
+.reading-links {
+  background: #EAF8FD;
+  border: 2px solid #D6F2FB;
+  border-radius: 14px;
+  padding: 16px 18px;
+  margin-bottom: 16px;
+}
+.reading-links-title {
+  font-size: 14px;
+  color: #1A6B8E;
+  font-weight: 800;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+.reading-link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 14px;
+  background: #FFFFFF;
+  border: 1.5px solid #B8E0F0;
+  border-radius: 10px;
+  margin-bottom: 8px;
+  font-size: 15px;
+  color: #2A0A4A;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.15s, border-color 0.15s;
+}
+.reading-link:last-child { margin-bottom: 0; }
+.reading-link:hover { background: #EAF8FD; border-color: #5C2D91; }
+.reading-link-icon { font-size: 20px; }
+
+/* ═══════════ RWM ═══════════ */
+.rwm-box {
+  background: #FFFFFF;
+  border: 2px solid #E2E8F4;
+  border-radius: 14px;
+  overflow: hidden;
+  margin-bottom: 14px;
+}
+.rwm-header {
+  background: linear-gradient(135deg, #2A0A4A, #1A2D5A);
+  color: #fff;
+  padding: 12px 18px;
+  font-size: 14px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+}
+.rwm-sentence {
+  background: linear-gradient(135deg, #FFF8F0 0%, #FFF8E8 100%);
+  border-bottom: 2px solid #E8D5A0;
+  padding: 16px 20px;
+  font-family: 'Lora', Georgia, serif;
+  font-size: 17px;
+  color: #2A0A4A;
+  line-height: 1.7;
+  font-style: italic;
+}
+.rwm-step {
+  padding: 14px 20px;
+  border-bottom: 1.5px solid #E2E8F4;
+}
+.rwm-step:last-child { border-bottom: none; }
+.rwm-step-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  color: #5C2D91;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 8px;
+}
+.rwm-step-text { font-size: 15px; color: #3A4A6B; line-height: 1.6; }
+.rwm-frame {
+  background: #FAFBFF;
+  border: 1.5px dashed #B8860B;
+  border-radius: 8px;
+  padding: 10px 14px;
+  margin-top: 8px;
+  font-family: 'Lora', Georgia, serif;
+  font-size: 15px;
+  color: #B8860B;
+  font-style: italic;
+}
+
+/* ═══════════ FLUENCY ═══════════ */
+.fluency-passage {
+  background: linear-gradient(135deg, #FFF8F0 0%, #FFF8E8 100%);
+  border: 2px solid #E8D5A0;
+  border-left: 6px solid #B8860B;
+  border-radius: 14px;
+  padding: 20px 24px;
+  margin-bottom: 16px;
+  font-family: 'Lora', Georgia, serif;
+  font-size: 17px;
+  color: #2A0A4A;
+  line-height: 1.85;
+  font-style: italic;
+}
+
+/* ═══════════ ASSIGNMENT QUESTIONS ═══════════ */
+.q-block {
+  background: #FAFBFF;
+  border: 2px solid #E2E8F4;
+  border-radius: 14px;
+  padding: 14px 18px;
+  margin-bottom: 12px;
+}
+.q-block:last-child { margin-bottom: 0; }
+.q-num {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: #5C2D91;
+  color: #fff;
+  font-weight: 800;
+  font-size: 14px;
+  margin-right: 8px;
+  vertical-align: middle;
+}
+.q-text { font-size: 16px; color: #2A0A4A; line-height: 1.65; margin-bottom: 4px; }
+.q-hint { font-size: 14px; color: #7A88A8; font-style: italic; }
+.chapter-section-title {
+  font-family: 'Lora', Georgia, serif;
+  font-size: 20px;
+  color: #2A0A4A;
+  font-weight: 700;
+  margin: 18px 0 12px;
+  padding-bottom: 6px;
+  border-bottom: 2px solid #5C2D91;
+}
+.chapter-section-title:first-child { margin-top: 6px; }
+
+/* ═══════════ TURN-IN CHECKLIST ═══════════ */
+.turn-in-card {
+  background: #FFFFFF;
+  border: 2px solid #E2E8F4;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(14, 28, 66, 0.04);
+  margin-top: 18px;
+}
+.turn-in-header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  background: #EAF8FD;
+  padding: 18px 22px;
+  border-bottom: 2px solid #D6F2FB;
+}
+.turn-in-header-icon { font-size: 36px; line-height: 1; flex-shrink: 0; }
+.turn-in-header-label {
+  font-size: 11px;
+  color: #1A6B8E;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 3px;
+}
+.turn-in-header-title {
+  font-family: 'Lora', Georgia, serif;
+  font-size: 22px;
+  color: #2A0A4A;
+  font-weight: 700;
+  line-height: 1.15;
+}
+.turn-in-body { padding: 18px 22px 20px; }
+.turn-in-intro { font-size: 15px; color: #3A4A6B; margin-bottom: 16px; line-height: 1.55; }
+.turn-in-checklist { display: flex; flex-direction: column; gap: 10px; }
+.turn-in-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 12px 16px;
+  background: #FAFBFF;
+  border: 1.5px solid #E2E8F4;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background 0.2s, border-color 0.2s;
+}
+.turn-in-item:hover { background: #EAF8FD; border-color: #B8E0F0; }
+.turn-in-item.checked { background: #E3F8ED; border-color: #B8E8CF; }
+.turn-in-item .turn-in-check {
+  width: 26px;
+  height: 26px;
+  border-radius: 8px;
+  border: 2px solid #B8E0F0;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  font-size: 16px;
+  line-height: 1;
+  transition: background 0.2s, border-color 0.2s;
+}
+.turn-in-item.checked .turn-in-check { background: #34B76F; border-color: #34B76F; }
+.turn-in-item-text { font-size: 15px; color: #2A0A4A; font-weight: 600; line-height: 1.55; flex: 1; }
+.turn-in-item.checked .turn-in-item-text { color: #3A4A6B; }
+
+/* ═══════════ QUOTE STRIP ═══════════ */
+.quote-strip {
+  background: linear-gradient(135deg, #FFF8F0 0%, #FFF8E8 100%);
+  border-bottom: 2px solid #E8D5A0;
+  padding: 14px 28px;
+  text-align: center;
+}
+.quote-strip-text {
+  font-family: 'Lora', Georgia, serif;
+  font-size: 16px;
+  font-style: italic;
+  color: #5A4A3A;
+  line-height: 1.6;
+}
+.quote-strip-attr {
+  font-family: 'Nunito', sans-serif;
+  font-size: 11px;
+  color: #7A88A8;
+  font-weight: 700;
+  margin-top: 4px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* ═══════════ NARRATIVE TRANSITION ═══════════ */
+.tab-next-wrap { text-align: center; padding: 24px 0 8px; }
+.tab-transition-voice {
+  font-family: 'Lora', Georgia, serif;
+  font-size: 15px;
+  font-style: italic;
+  color: #5A4A3A;
+  margin-bottom: 12px;
+  line-height: 1.6;
+}
+
+/* ═══════════ OPEN BOOK CARD ═══════════ */
+.open-book-wrap {
+  position: relative;
+  margin-bottom: 22px;
+  padding: 10px 6px 6px;
+}
+/* The hard cover behind everything */
+.open-book-cover {
+  position: absolute;
+  top: 0;
+  left: 2px;
+  right: 2px;
+  bottom: 0;
+  background: linear-gradient(145deg, #3A6B1E, #4A7C2E, #5A8C3E);
+  border-radius: 6px 20px 20px 6px;
+  box-shadow: 0 4px 20px rgba(90, 50, 60, 0.2);
+}
+/* Thick spine strip — the bound center */
+.open-book-spine {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 22px;
+  height: 100%;
+  background: linear-gradient(90deg, #2D5016, #356019, #4A7C2E, #356019, #2D5016);
+  border-radius: 4px;
+  z-index: 1;
+  box-shadow: inset 0 0 6px rgba(0,0,0,0.2);
+}
+/* Page layer 3 (deepest) */
+.open-book-pages-3 {
+  position: absolute;
+  top: 3px;
+  left: 14px;
+  right: 14px;
+  bottom: 3px;
+  background: #E8E0D4;
+  border-radius: 3px 12px 12px 3px;
+  z-index: 2;
+}
+/* Page layer 2 */
+.open-book-pages-2 {
+  position: absolute;
+  top: 5px;
+  left: 16px;
+  right: 16px;
+  bottom: 4px;
+  background: #F0E8DC;
+  border-radius: 3px 10px 10px 3px;
+  z-index: 3;
+}
+/* Page layer 1 (just behind the main pages) */
+.open-book-pages-1 {
+  position: absolute;
+  top: 7px;
+  left: 18px;
+  right: 18px;
+  bottom: 5px;
+  background: #F5EEE4;
+  border-radius: 3px 8px 8px 3px;
+  z-index: 4;
+}
+/* The main open pages (content goes here) */
+.open-book {
+  position: relative;
+  background: linear-gradient(170deg, #FFFDF8 0%, #FFF8F0 40%, #FFFDF8 100%);
+  border: none;
+  border-radius: 3px 6px 6px 3px;
+  padding: 0;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 160px;
+  z-index: 5;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+}
+/* Center fold / gutter shadow */
+.open-book::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 24px;
+  height: 100%;
+  background: linear-gradient(90deg,
+    transparent 0%,
+    rgba(0,0,0,0.04) 20%,
+    rgba(0,0,0,0.07) 40%,
+    rgba(90,70,50,0.10) 50%,
+    rgba(0,0,0,0.07) 60%,
+    rgba(0,0,0,0.04) 80%,
+    transparent 100%
+  );
+  z-index: 6;
+  pointer-events: none;
+}
+/* Subtle page edge lines on the left side (stacked pages effect) */
+.open-book::after {
+  content: '';
+  position: absolute;
+  top: 8px;
+  bottom: 8px;
+  right: 0;
+  width: 4px;
+  background: repeating-linear-gradient(180deg,
+    transparent 0px,
+    transparent 3px,
+    rgba(200,185,165,0.3) 3px,
+    rgba(200,185,165,0.3) 4px
+  );
+  border-radius: 0 4px 4px 0;
+  z-index: 6;
+  pointer-events: none;
+}
+.open-book-left {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  opacity: 0.3;
+  position: relative;
+}
+/* Page edge lines on the left outer side too */
+.open-book-left::before {
+  content: '';
+  position: absolute;
+  top: 8px;
+  bottom: 8px;
+  left: 0;
+  width: 4px;
+  background: repeating-linear-gradient(180deg,
+    transparent 0px,
+    transparent 3px,
+    rgba(200,185,165,0.3) 3px,
+    rgba(200,185,165,0.3) 4px
+  );
+  border-radius: 4px 0 0 4px;
+}
+.open-book-left-deco {
+  font-size: 48px;
+  filter: grayscale(30%);
+}
+.open-book-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 24px 28px 24px 20px;
+}
+.open-book-title {
+  font-family: 'Lora', Georgia, serif;
+  font-size: 22px;
+  font-weight: 700;
+  color: #2A0A4A;
+  margin-bottom: 4px;
+}
+.open-book-title em { color: #4A7C2E; }
+.open-book-chapter {
+  font-family: 'Lora', Georgia, serif;
+  font-size: 16px;
+  color: #5A4A3A;
+  font-style: italic;
+  margin-bottom: 14px;
+}
+.open-book-prompt {
+  font-size: 14px;
+  color: #7A88A8;
+  font-weight: 600;
+}
+
+/* ═══════════ TAB NEXT BUTTON ═══════════ */
+.tab-next-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 13px 30px;
+  background: linear-gradient(135deg, #5C2D91, #7A45C4);
+  color: #2A0A4A;
+  border: none;
+  border-radius: 28px;
+  font-family: 'Nunito', sans-serif;
+  font-size: 16px;
+  font-weight: 800;
+  cursor: pointer;
+  box-shadow: 0 4px 16px rgba(85, 200, 232, 0.3);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.tab-next-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 22px rgba(85, 200, 232, 0.4);
+}
+
+/* ═══════════ BACK TO TOP ═══════════ */
+.back-to-top {
+  position: fixed;
+  bottom: 28px;
+  right: 28px;
+  height: 44px;
+  padding: 0 18px 0 14px;
+  border-radius: 22px;
+  background: linear-gradient(135deg, #2A0A4A, #1A2D5A);
+  color: #fff;
+  border: 2px solid #5C2D91;
+  font-size: 14px;
+  font-weight: 800;
+  font-family: 'Nunito', sans-serif;
+  cursor: pointer;
+  box-shadow: 0 4px 18px rgba(14, 28, 66, 0.35);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(20px);
+  transition: opacity 0.3s, visibility 0.3s, transform 0.3s, box-shadow 0.2s;
+  z-index: 500;
+  letter-spacing: 0.3px;
+}
+.back-to-top.show { opacity: 1; visibility: visible; transform: translateY(0); }
+.back-to-top:hover {
+  box-shadow: 0 6px 24px rgba(14, 28, 66, 0.5);
+  transform: translateY(-3px);
+}
+
+/* ═══════════ CONFETTI ═══════════ */
+#confettiCanvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 10000;
+}
+
+/* ═══════════ GATHERED ANSWERS REVIEW ═══════════ */
+.gathered-card {
+  background: #FFFFFF;
+  border: 2px solid #E2E8F4;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(14, 28, 66, 0.04);
+  margin-top: 22px;
+}
+.gathered-header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  background: linear-gradient(135deg, #2A0A4A, #1A2D5A);
+  padding: 16px 22px;
+  border-bottom: 2px solid rgba(85, 200, 232, 0.2);
+}
+.gathered-header-icon { font-size: 28px; line-height: 1; }
+.gathered-header-label {
+  font-size: 11px;
+  color: #5C2D91;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 2px;
+}
+.gathered-header-title {
+  font-family: 'Lora', Georgia, serif;
+  font-size: 20px;
+  color: #fff;
+  font-weight: 700;
+}
+.gathered-body { padding: 18px 22px 20px; }
+.gathered-intro { font-size: 15px; color: #3A4A6B; margin-bottom: 14px; line-height: 1.55; }
+.gathered-output {
+  width: 100%;
+  min-height: 300px;
+  padding: 16px 18px;
+  border: 2px solid #E2E8F4;
+  border-radius: 12px;
+  font-family: 'Nunito', sans-serif;
+  font-size: 14px;
+  color: #2A0A4A;
+  line-height: 1.65;
+  background: #FAFBFF;
+  resize: vertical;
+  white-space: pre-wrap;
+}
+.gathered-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 14px;
+  flex-wrap: wrap;
+}
+.gathered-btn {
+  flex: 1;
+  min-width: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 14px 20px;
+  border: none;
+  border-radius: 14px;
+  font-family: 'Nunito', sans-serif;
+  font-size: 15px;
+  font-weight: 800;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.gathered-btn:hover { transform: translateY(-2px); }
+.gathered-btn-copy {
+  background: linear-gradient(135deg, #5C2D91, #7A45C4);
+  color: #2A0A4A;
+  box-shadow: 0 4px 14px rgba(85, 200, 232, 0.25);
+}
+.gathered-btn-pdf {
+  background: linear-gradient(135deg, #2A0A4A, #1A2D5A);
+  color: #fff;
+  border: 2px solid #5C2D91;
+  box-shadow: 0 4px 14px rgba(14, 28, 66, 0.25);
+}
+.gathered-copied {
+  text-align: center;
+  font-size: 14px;
+  font-weight: 700;
+  color: #34B76F;
+  margin-top: 8px;
+  display: none;
+}
+.gathered-copied.show { display: block; }
+
+/* ═══════════ FOOTER ═══════════ */
+.footer {
+  background: #2A0A4A;
+  border-top: 4px solid #5C2D91;
+  padding: 18px 28px;
+  text-align: center;
+}
+.footer-main { font-size: 14px; color: #fff; margin-bottom: 4px; }
+.footer-main span { color: #5C2D91; font-weight: 700; }
+.footer-sub { font-size: 12px; color: rgba(255, 255, 255, 0.5); margin-bottom: 2px; }
+.footer-copy { font-size: 11px; color: rgba(255, 255, 255, 0.3); }
+
+/* ═══════════ PAUSE & THINK SIDE BY SIDE ═══════════ */
+.pause-columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin: 14px 0;
+}
+.pause-col {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+@media (max-width: 620px) {
+  .pause-columns { grid-template-columns: 1fr; }
+}
+
+/* ═══════════ FILL-IN-BLANK GAME ═══════════ */
+.fillin-game { margin: 14px 0; }
+.fillin-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 14px;
+  background: #FFFFFF;
+  border: 2px solid #E2E8F4;
+  border-radius: 12px;
+  margin-bottom: 10px;
+  font-size: 16px;
+  color: #2A0A4A;
+  flex-wrap: wrap;
+}
+.fillin-item:last-child { margin-bottom: 0; }
+.fillin-input {
+  display: inline-block;
+  width: 120px;
+  padding: 4px 10px;
+  border: 2px dashed #8B6FC0;
+  border-radius: 8px;
+  font-family: 'Lora', Georgia, serif;
+  font-size: 15px;
+  font-weight: 700;
+  color: #8B6FC0;
+  text-align: center;
+  background: #FAFBFF;
+  outline: none;
+  transition: border-color 0.2s, background 0.2s;
+}
+.fillin-input:focus { border-color: #5C2D91; background: #fff; }
+.fillin-input.correct { border-color: #34B76F; background: #E3F8ED; color: #1a5c2e; border-style: solid; }
+.fillin-input.wrong { border-color: #E8636B; background: #FFF0EC; animation: shake 0.4s ease; }
+.fillin-check-btn {
+  display: block;
+  margin: 14px auto 0;
+  padding: 10px 24px;
+  background: linear-gradient(135deg, #8B6FC0, #a88ad4);
+  color: #fff;
+  border: none;
+  border-radius: 24px;
+  font-family: 'Nunito', sans-serif;
+  font-size: 15px;
+  font-weight: 800;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+.fillin-check-btn:hover { transform: translateY(-2px); }
+.fillin-feedback {
+  text-align: center;
+  padding: 10px;
+  font-size: 15px;
+  font-weight: 700;
+  color: #34B76F;
+  display: none;
+}
+.fillin-feedback.show { display: block; }
+
+/* ═══════════ SHOW WHAT YOU KNOW (graded response) ═══════════ */
+.swyk {
+  background: linear-gradient(135deg, #FFF8F0 0%, #FFF8E8 100%);
+  border: 2px solid #E8D5A0;
+  border-left: 6px solid #B8860B;
+  border-radius: 14px;
+  padding: 16px 18px;
+  margin-top: 16px;
+}
+.swyk-label {
+  font-size: 12px;
+  color: #B8860B;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  font-weight: 800;
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.swyk-prompt {
+  font-size: 15px;
+  color: #2A0A4A;
+  line-height: 1.6;
+  margin-bottom: 8px;
+}
+
+/* ═══════════ PERSISTENT TEXTBOX PROMPT ═══════════ */
+.textbox-prompt {
+  font-size: 14px;
+  color: #2A0A4A;
+  font-weight: 700;
+  line-height: 1.5;
+  padding: 8px 12px;
+  background: #EAF8FD;
+  border: 1.5px solid #D6F2FB;
+  border-bottom: none;
+  border-radius: 10px 10px 0 0;
+  margin-top: 10px;
+}
+.textbox-prompt + .journal-box {
+  border-radius: 0 0 12px 12px;
+  margin-top: 0;
+}
+
+/* ═══════════ TODAY'S PATH ═══════════ */
+.todays-path {
+  background: #FAFBFF;
+  border: 2px solid #E2E8F4;
+  border-radius: 14px;
+  padding: 14px 18px;
+  margin-top: 14px;
+}
+.todays-path-title {
+  font-size: 14px;
+  color: #2A0A4A;
+  font-weight: 800;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.todays-path-steps {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-wrap: wrap;
+  font-size: 13px;
+  color: #3A4A6B;
+  font-weight: 600;
+}
+.todays-path-step {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 5px 12px;
+  background: #FFFFFF;
+  border: 1.5px solid #E2E8F4;
+  border-radius: 20px;
+  white-space: nowrap;
+}
+.todays-path-arrow { color: #B0B8CC; font-size: 11px; }
+
+/* ═══════════ DOL HIGHLIGHTER ═══════════ */
+.dol-model-label {
+  font-size: 12px;
+  color: #34B76F;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  font-weight: 800;
+  margin-bottom: 6px;
+}
+.dol-fix-label {
+  font-size: 12px;
+  color: #B8860B;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  font-weight: 800;
+  margin-bottom: 6px;
+  margin-top: 16px;
+}
+.dol-sentence-wrap {
+  background: #FFFFFF;
+  border: 1.5px solid #E2E8F4;
+  border-radius: 10px;
+  padding: 12px 16px;
+  font-size: 16px;
+  color: #2A0A4A;
+  line-height: 1.8;
+  font-family: 'Lora', Georgia, serif;
+}
+.dol-highlight-word {
+  display: inline;
+  padding: 2px 4px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.15s;
+  border: 1.5px solid transparent;
+}
+.dol-highlight-word:hover { background: #EAF8FD; }
+.dol-highlight-word.highlighted {
+  background: #E3F8ED;
+  border-color: #34B76F;
+  font-weight: 700;
+}
+.dol-highlight-word.key-reveal {
+  background: #FFF8E8;
+  border-color: #B8860B;
+  font-weight: 700;
+}
+.dol-hint {
+  font-size: 13px;
+  color: #7A88A8;
+  font-style: italic;
+  margin-top: 8px;
+}
+
+/* ═══════════ VOCAB DECODE STEPS ═══════════ */
+.decode-steps { margin: 14px 0; }
+.decode-step {
+  display: flex;
+  gap: 14px;
+  padding: 14px 16px;
+  background: #FFFFFF;
+  border: 2px solid #E2E8F4;
+  border-radius: 14px;
+  margin-bottom: 12px;
+}
+.decode-step:last-child { margin-bottom: 0; }
+.decode-step-num {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.decode-step-content { flex: 1; }
+.decode-step-title {
+  font-size: 14px;
+  font-weight: 800;
+  color: #2A0A4A;
+  margin-bottom: 4px;
+}
+.decode-step-text {
+  font-size: 14px;
+  color: #3A4A6B;
+  line-height: 1.55;
+}
+.decode-sentence {
+  background: linear-gradient(135deg, #FFF8F0 0%, #FFF8E8 100%);
+  border: 1.5px solid #E8D5A0;
+  border-left: 4px solid #B8860B;
+  border-radius: 8px;
+  padding: 10px 14px;
+  margin: 8px 0;
+  font-family: 'Lora', Georgia, serif;
+  font-size: 15px;
+  color: #2A0A4A;
+  line-height: 1.6;
+  font-style: italic;
+}
+.decode-word-parts {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  flex-wrap: wrap;
+  margin: 8px 0;
+}
+.decode-part {
+  padding: 4px 10px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 700;
+}
+.decode-part-root { background: #F0E8FF; color: #8B6FC0; border: 1.5px solid #D8CCF0; }
+.decode-part-affix { background: #EAF8FD; color: #1A6B8E; border: 1.5px solid #D6F2FB; }
+.decode-part-plus { color: #B0B8CC; font-size: 12px; font-weight: 800; }
+.decode-reveal {
+  display: none;
+  margin-top: 8px;
+  padding: 10px 14px;
+  background: #E3F8ED;
+  border: 1.5px solid #B8E8CF;
+  border-radius: 8px;
+  font-size: 14px;
+  color: #2A0A4A;
+  line-height: 1.5;
+}
+.decode-reveal.show { display: block; }
+.decode-try-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 14px;
+  background: linear-gradient(135deg, #5C2D91, #7A45C4);
+  color: #2A0A4A;
+  border: none;
+  border-radius: 16px;
+  font-family: 'Nunito', sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  margin-top: 8px;
+}
+
+/* ═══════════ THINKING STOP ═══════════ */
+.thinking-stop {
+  background: #FAFBFF;
+  border: 2px dashed #D6F2FB;
+  border-radius: 10px;
+  padding: 10px 14px;
+  margin-top: 10px;
+  font-size: 13px;
+  color: #7A88A8;
+  font-style: italic;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* ═══════════ JOURNAL TEXT BOXES ═══════════ */
+.journal-box {
+  width: 100%;
+  min-height: 70px;
+  padding: 12px 14px;
+  border: 2px solid #E2E8F4;
+  border-radius: 12px;
+  font-family: 'Nunito', sans-serif;
+  font-size: 15px;
+  color: #2A0A4A;
+  line-height: 1.6;
+  resize: vertical;
+  background: #FAFBFF;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  margin-top: 10px;
+}
+.journal-box:focus {
+  outline: none;
+  border-color: #5C2D91;
+  box-shadow: 0 0 0 3px rgba(85, 200, 232, 0.15);
+  background: #fff;
+}
+.journal-box::placeholder { color: #B0B8CC; font-style: italic; }
+.journal-label {
+  font-size: 12px;
+  color: #7A88A8;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-top: 12px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.journal-label .saved-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #B0B8CC;
+  transition: background 0.3s;
+}
+.journal-label .saved-dot.saved { background: #34B76F; }
+
+/* ═══════════ ROOT MATCH GAME ═══════════ */
+.root-match-game { margin: 14px 0; }
+.root-match-prompt {
+  font-size: 15px;
+  color: #3A4A6B;
+  margin-bottom: 12px;
+  line-height: 1.6;
+}
+.root-match-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+.root-match-item {
+  padding: 12px 16px;
+  background: #FFFFFF;
+  border: 2px solid #E2E8F4;
+  border-radius: 12px;
+  font-size: 15px;
+  color: #2A0A4A;
+  font-weight: 600;
+  cursor: pointer;
+  text-align: center;
+  transition: background 0.15s, border-color 0.2s, transform 0.15s;
+  user-select: none;
+}
+.root-match-item:hover { transform: translateY(-1px); border-color: #8B6FC0; }
+.root-match-item.selected { background: #F0E8FF; border-color: #8B6FC0; box-shadow: 0 0 0 3px rgba(139, 111, 192, 0.2); }
+.root-match-item.matched { background: #E3F8ED; border-color: #34B76F; pointer-events: none; opacity: 0.85; }
+.root-match-item.wrong-flash { background: #FFF0EC; border-color: #E8636B; animation: shake 0.4s ease; }
+.root-match-item.is-word { font-weight: 800; font-family: 'Lora', Georgia, serif; font-size: 16px; color: #8B6FC0; }
+.root-match-feedback {
+  text-align: center;
+  padding: 10px;
+  font-size: 15px;
+  font-weight: 700;
+  color: #34B76F;
+  display: none;
+}
+.root-match-feedback.show { display: block; }
+
+/* ═══════════ DOWNLOAD BUTTON ═══════════ */
+.download-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  padding: 16px 24px;
+  background: linear-gradient(135deg, #2A0A4A, #1A2D5A);
+  color: #fff;
+  border: 2px solid #5C2D91;
+  border-radius: 16px;
+  font-family: 'Nunito', sans-serif;
+  font-size: 17px;
+  font-weight: 800;
+  cursor: pointer;
+  margin-top: 18px;
+  transition: transform 0.2s, box-shadow 0.2s;
+  box-shadow: 0 4px 16px rgba(14, 28, 66, 0.25);
+}
+.download-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 24px rgba(14, 28, 66, 0.35);
+}
+.download-btn-icon { font-size: 22px; }
+.download-btn-sub {
+  font-size: 12px;
+  color: rgba(255,255,255,0.6);
+  font-weight: 600;
+  text-align: center;
+  margin-top: 6px;
+}
+
+/* ═══════════ WORD SORT GAME ═══════════ */
+.sort-game { margin: 14px 0; }
+.sort-bank {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 14px;
+  background: #FAFBFF;
+  border: 2px dashed #D6F2FB;
+  border-radius: 14px;
+  margin-bottom: 14px;
+  min-height: 52px;
+  justify-content: center;
+}
+.sort-chip {
+  display: inline-flex;
+  align-items: center;
+  padding: 8px 16px;
+  background: #FFFFFF;
+  border: 2px solid #E2E8F4;
+  border-radius: 24px;
+  font-size: 15px;
+  font-weight: 700;
+  color: #2A0A4A;
+  cursor: grab;
+  user-select: none;
+  transition: transform 0.15s, box-shadow 0.15s, background 0.2s, border-color 0.2s;
+}
+.sort-chip:hover { transform: translateY(-2px); box-shadow: 0 4px 12px rgba(14,28,66,0.12); }
+.sort-chip.placed { opacity: 0.4; pointer-events: none; }
+.sort-chip.correct { background: #E3F8ED; border-color: #34B76F; color: #1a5c2e; }
+.sort-chip.wrong { background: #FFF0EC; border-color: #E8636B; color: #8a3030; animation: shake 0.4s ease; }
+@keyframes shake { 0%,100%{transform:translateX(0)} 25%{transform:translateX(-6px)} 75%{transform:translateX(6px)} }
+.sort-columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+.sort-col {
+  background: #FFFFFF;
+  border: 2px solid #E2E8F4;
+  border-radius: 14px;
+  overflow: hidden;
+  min-height: 160px;
+}
+.sort-col-header {
+  padding: 10px 14px;
+  font-size: 15px;
+  font-weight: 800;
+  color: #fff;
+  text-align: center;
+}
+.sort-col-drop {
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-height: 120px;
+}
+.sort-col-drop .sort-chip { cursor: pointer; }
+.sort-col-drop .sort-chip:hover { transform: none; box-shadow: none; }
+.sort-score {
+  text-align: center;
+  padding: 10px;
+  font-size: 14px;
+  font-weight: 700;
+  color: #34B76F;
+  display: none;
+}
+.sort-score.show { display: block; }
+.sort-check-btn {
+  display: block;
+  margin: 14px auto 0;
+  padding: 10px 24px;
+  background: linear-gradient(135deg, #5C2D91, #7A45C4);
+  color: #2A0A4A;
+  border: none;
+  border-radius: 24px;
+  font-family: 'Nunito', sans-serif;
+  font-size: 15px;
+  font-weight: 800;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+.sort-check-btn:hover { transform: translateY(-2px); }
+
+/* ═══════════ INTERJECTION SPOTTER GAME ═══════════ */
+.spotter-game { margin: 14px 0; }
+.spotter-sentence {
+  background: #FFFFFF;
+  border: 2px solid #E2E8F4;
+  border-radius: 12px;
+  padding: 14px 16px;
+  margin-bottom: 10px;
+  line-height: 1.8;
+  font-size: 16px;
+  color: #2A0A4A;
+}
+.spotter-word {
+  display: inline;
+  padding: 2px 6px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s;
+  border: 2px solid transparent;
+}
+.spotter-word:hover { background: #EAF8FD; border-color: #5C2D91; }
+.spotter-word.selected { background: #FFF8E8; border-color: #B8860B; font-weight: 700; }
+.spotter-word.correct-reveal { background: #E3F8ED; border-color: #34B76F; color: #1a5c2e; font-weight: 700; }
+.spotter-word.wrong-reveal { background: #FFF0EC; border-color: #E8636B; text-decoration: line-through; }
+.spotter-result {
+  font-size: 14px;
+  font-weight: 700;
+  padding: 8px 14px;
+  border-radius: 10px;
+  margin-top: 6px;
+  display: none;
+}
+.spotter-result.show { display: block; }
+.spotter-result.win { background: #E3F8ED; color: #1a5c2e; }
+.spotter-result.miss { background: #FFF8E8; color: #B8860B; }
+
+/* ═══════════ SENTENCE BUILDER ═══════════ */
+.builder-game { margin: 14px 0; }
+.builder-slots {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  padding: 14px;
+  background: #FAFBFF;
+  border: 2px solid #E2E8F4;
+  border-radius: 14px;
+  margin-bottom: 12px;
+  min-height: 52px;
+}
+.builder-slot {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 60px;
+  padding: 8px 12px;
+  background: #FFFFFF;
+  border: 2px dashed #D6F2FB;
+  border-radius: 10px;
+  font-size: 15px;
+  color: #7A88A8;
+  font-weight: 600;
+  min-height: 40px;
+  transition: border-color 0.2s;
+}
+.builder-slot.filled {
+  border-style: solid;
+  border-color: #5C2D91;
+  color: #2A0A4A;
+  font-weight: 700;
+  background: #EAF8FD;
+  cursor: pointer;
+}
+.builder-bank {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+}
+.builder-word {
+  display: inline-flex;
+  align-items: center;
+  padding: 8px 14px;
+  background: #FFFFFF;
+  border: 2px solid #E2E8F4;
+  border-radius: 24px;
+  font-size: 15px;
+  font-weight: 700;
+  color: #2A0A4A;
+  cursor: pointer;
+  user-select: none;
+  transition: transform 0.15s, box-shadow 0.15s;
+}
+.builder-word:hover { transform: translateY(-2px); box-shadow: 0 4px 12px rgba(14,28,66,0.12); }
+.builder-word.used { opacity: 0.35; pointer-events: none; }
+.builder-result {
+  text-align: center;
+  padding: 10px;
+  font-size: 15px;
+  font-weight: 700;
+  border-radius: 10px;
+  margin-top: 12px;
+  display: none;
+}
+.builder-result.show { display: block; }
+.builder-result.correct { background: #E3F8ED; color: #1a5c2e; }
+.builder-result.incorrect { background: #FFF0EC; color: #8a3030; }
+
+/* ═══════════ VOCAB MATCH GAME ═══════════ */
+.match-game { margin: 14px 0; }
+.match-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+.match-item {
+  padding: 12px 14px;
+  background: #FFFFFF;
+  border: 2px solid #E2E8F4;
+  border-radius: 12px;
+  font-size: 14px;
+  color: #2A0A4A;
+  font-weight: 600;
+  cursor: pointer;
+  text-align: center;
+  line-height: 1.5;
+  transition: background 0.15s, border-color 0.2s, transform 0.15s;
+  user-select: none;
+}
+.match-item:hover { transform: translateY(-1px); border-color: #5C2D91; }
+.match-item.selected { background: #EAF8FD; border-color: #5C2D91; box-shadow: 0 0 0 3px rgba(85,200,232,0.25); }
+.match-item.matched { background: #E3F8ED; border-color: #34B76F; pointer-events: none; opacity: 0.8; }
+.match-item.wrong-flash { background: #FFF0EC; border-color: #E8636B; animation: shake 0.4s ease; }
+.match-item.is-word { font-weight: 800; font-family: 'Lora', Georgia, serif; font-size: 16px; }
+.match-feedback {
+  text-align: center;
+  padding: 10px;
+  font-size: 15px;
+  font-weight: 700;
+  color: #34B76F;
+  display: none;
+}
+.match-feedback.show { display: block; }
+
+/* ═══════════ DOL CHECKER ═══════════ */
+.dol-check-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 18px;
+  background: linear-gradient(135deg, #8B6FC0, #a88ad4);
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+  font-family: 'Nunito', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: transform 0.15s;
+}
+.dol-check-btn:hover { transform: translateY(-2px); }
+.dol-answer {
+  display: none;
+  margin-top: 10px;
+  padding: 12px 16px;
+  background: #E3F8ED;
+  border: 2px solid #B8E8CF;
+  border-left: 4px solid #34B76F;
+  border-radius: 10px;
+  font-size: 15px;
+  color: #2A0A4A;
+  line-height: 1.65;
+}
+.dol-answer.show { display: block; }
+
+
+/* Writing Project step chips */
+.wp-step {
+  flex: 1 1 130px;
+  min-width: 105px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px 6px 8px;
+  border-radius: 12px;
+  border: 2px solid #E2E8F4;
+  text-align: center;
+  font-family: 'Nunito', sans-serif;
+  line-height: 1.2;
+}
+.wp-step.current { box-shadow: 0 0 0 3px rgba(199,146,44,0.25); border-color: #B8860B; }
+.wp-step.done { border-color: #34B76F; }
+.wp-step-mark { font-size: 18px; font-weight: 800; margin-bottom: 2px; }
+.wp-step-name { font-size: 13px; font-weight: 800; margin-bottom: 2px; }
+.wp-step-wk { font-size: 10px; opacity: 0.85; text-transform: uppercase; letter-spacing: 0.5px; }
+
+/* ═══════════ RESPONSIVE ═══════════ */
+@media (max-width: 620px) {
+  .intro-2col { grid-template-columns: 1fr; }
+  .vocab-grid { grid-template-columns: 1fr; }
+  .flip-card { height: 165px; }
+  .header-title { font-size: 22px; }
+  .tab-btn { min-width: 100px; font-size: 11px; padding: 10px 6px 9px; }
+}
+</style>
+</head>
+<body>
+
+<canvas id="confettiCanvas"></canvas>
+<button class="back-to-top" id="backToTop" type="button">📖 Back to Top</button>
+<span id="pageTop" aria-hidden="true" style="position:absolute;top:0;left:0;width:1px;height:1px;"></span>
+
+<div class="page-wrap">
+
+<!-- ═══════════ PROGRESS BAR ═══════════ -->
+<div class="progress-wrap">
+  <span class="progress-label">📖 Lesson Progress</span>
+  <div class="progress-track"><div class="progress-fill" id="progressFill"></div></div>
+  <span class="progress-pct" id="progressPct">0%</span>
+</div>
+
+<!-- ═══════════ HEADER ═══════════ -->
+<div class="header">
+  <div class="header-brand">
+    <div class="header-logo"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy" /></div>
+    <div><div class="header-org">Optima Academy Online</div><div class="header-sub">An Education Experience Company</div></div>
+  </div>
+  <div class="header-title"><em>The Whipping Boy</em> &mdash; Ch. 5</div>
+  <div class="header-badge"><span class="header-badge-icon">👑</span><span class="header-badge-text">Lesson 18.3</span></div>
+</div>
+
+<!-- ═══════════ INFO STRIP ═══════════ -->
+<div class="info-strip">
+  <div class="info-cell"><div class="info-icon" style="background:#E3F8ED;">📚</div><div><div class="info-label">Unit</div><div class="info-value">Unit 3</div><div class="info-detail">The Whipping Boy</div></div></div>
+  <div class="info-cell"><div class="info-icon" style="background:#EAF8FD;">📅</div><div><div class="info-label">Week</div><div class="info-value">Week 18</div><div class="info-detail">Lesson 18.3 of 4</div></div></div>
+  <div class="info-cell"><div class="info-icon" style="background:#FFF8E8;">📖</div><div><div class="info-label">Reading</div><div class="info-value">Ch. 5</div><div class="info-detail">Hold-Your-Nose Billy and Cutwater</div></div></div>
+  <div class="info-cell"><div class="info-icon" style="background:#F0E8FF;">🔤</div><div><div class="info-label">Focus</div><div class="info-value">Conjunctions: and, but, so</div><div class="info-detail">Prefix over- means too much</div></div></div>
+</div>
+
+<!-- ═══════════ QUOTE STRIP ═══════════ -->
+<div class="quote-strip">
+  <div class="quote-strip-text">&ldquo;Billy was a big man, raw as a skinned ox, and he smelled like a ton of garlic.&rdquo;</div>
+  <div class="quote-strip-attr">&mdash; Sid Fleischman, <em>The Whipping Boy</em></div>
+
+</div>
+
+
+<!-- ═══════════ INTRO (collapsible) ═══════════ -->
+<div class="intro-section" id="introSection">
+  <div class="intro-collapsed-bar" onclick="expandIntro()">
+    <span class="intro-collapsed-icon">🎯</span>
+    <span class="intro-collapsed-text">Today's Objectives &amp; Path</span>
+    <span class="intro-collapsed-toggle">▼ Expand</span>
+  </div>
+  <div class="intro-2col">
+    <div class="intro-card theme-question">
+      <div class="intro-card-head"><div class="intro-card-head-icon">❓</div><div><div class="intro-card-head-label">Big Question</div><div class="intro-card-head-title">Today's Wonder</div></div></div>
+      <div class="intro-card-body"><p>When you are in a dangerous situation, is it better to stay quiet or to speak up? What does Jemmy do — and why?</p></div>
+    </div>
+    <div class="intro-card theme-objectives">
+      <div class="intro-card-head"><div class="intro-card-head-icon">🎯</div><div><div class="intro-card-head-label">Objectives</div><div class="intro-card-head-title">By the end of this lesson&hellip;</div></div></div>
+      <div class="intro-card-body">
+        <div class="obj-line"><span class="obj-icon">📖</span><span><strong>Reading:</strong> I will opinion writing begins with a clear claim.</span></div>
+        <div class="obj-line"><span class="obj-icon">✏️</span><span><strong>Grammar:</strong> I will study conjunctions: and, but, so.</span></div>
+        <div class="obj-line"><span class="obj-icon">🔤</span><span><strong>Spelling:</strong> I will practice closed syllables in longer words.</span></div>
+      </div>
+    </div>
+  </div>
+  <!-- Today's Path -->
+  <div class="todays-path">
+    <div class="todays-path-title">🗺️ Today's Path</div>
+    <div class="todays-path-steps">
+      <span class="todays-path-step">🌅 Warm up with DOL</span>
+      <span class="todays-path-arrow">→</span>
+      <span class="todays-path-step">🔤 Practice word study skills</span>
+      <span class="todays-path-arrow">→</span>
+      <span class="todays-path-step">📖 Read Ch. 5</span>
+      <span class="todays-path-arrow">→</span>
+      <span class="todays-path-step">📬 Answer &amp; submit</span>
+    </div>
+  </div>
+  <div class="need-strip">
+    <span class="need-strip-label">You'll need:</span>
+    <span class="need-chip">📓 Reading Journal</span>
+    <span class="need-chip">✏️ Pencil</span>
+    <span class="need-chip">📕 Your Novel</span>
+  </div>
+</div>
+
+<!-- ═══════════ TAB BAR ═══════════ -->
+<div class="tab-bar" id="tabBar">
+  <button class="tab-btn active" data-tab="warmup" onclick="switchTab('warmup')">🌅 Warm-Up<span class="tab-check">✓</span></button>
+  <button class="tab-btn" data-tab="words" onclick="switchTab('words')">🔤 Word Study<span class="tab-check">✓</span></button>
+  <button class="tab-btn" data-tab="reading" onclick="switchTab('reading')">📖 Reading<span class="tab-check">✓</span></button>
+  <button class="tab-btn" data-tab="assignment" onclick="switchTab('assignment')">📬 Assignment<span class="tab-check">✓</span></button>
+</div>
+
+
+<!-- ════════════════════════════════════════════ -->
+<!-- TAB 1: WARM-UP                              -->
+<!-- ════════════════════════════════════════════ -->
+<div class="tab-panel active" id="tab-warmup">
+
+  <div class="video-wrap">
+    <div class="video-wrap-header"><span style="font-size:20px;">🎬</span><div><div class="video-wrap-type">Welcome · Day 3 of 4</div><div class="video-wrap-title">Welcome to Lesson 18.3!</div></div></div>
+    <div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text">Teacher welcome video</div><div class="video-placeholder-id"><!-- slot: wb-18-3-welcome --></div><div class="video-teacher-notes"><div class="video-teacher-notes-label">📋 Teacher Recording Notes</div><div class="video-teacher-notes-text">• Welcome students to Lesson 18.3 — the first ELA lesson of the year<br>• Preview: "This week we meet The Whipping Boy and her family. Today is Chapters 1 and 2."<br>• Mention the big question: a small problem can quietly become a big one<br>• Quick path overview: warm up → word study → read → assignment<br>• Encouraging tone: "Pay attention to how the characters are introduced in Ch. 5."<br>• ~1–2 minutes</div></div></div></div>
+  </div>
+
+
+  <!-- What Good Readers Do -->
+  <div class="activity bl-purple">
+    <div class="activity-head"><div class="activity-num" style="background:#8B6FC0;">1</div><div><div class="activity-title">📚 What Good Readers Do</div><div class="activity-sub">Set your reading lens for the week</div></div></div>
+    <div class="activity-body">
+      <p>Good readers notice how characters handle pressure. Watch Jemmy carefully in Chapter 5 — does he fight, trick, or stay silent? Why?</p>
+      <div class="socratic-box">
+        <div class="socratic-label">🧠 As you read this week, watch for:</div>
+        <p class="socratic-q">Good readers notice how characters handle pressure. Watch Jemmy carefully in Chapter 5 — does he fight, trick, or stay silent? Why?</p>
+      </div>
+      <div class="thinking-stop">💭 Think about this as you read today — you don't need to write anything here.</div>
+    </div>
+  </div>
+
+  <!-- DOL -->
+  <div class="activity bl-cyan">
+    <div class="activity-head"><div class="activity-num" style="background:#5C2D91;">2</div><div><div class="activity-title">✏️ Daily Oral Language</div><div class="activity-sub">Study the model, then fix the sentence.</div></div></div>
+    <div class="activity-body">
+      <p>The first sentence is <strong>correct</strong>. Tap the parts you notice are done right &mdash; capital letters, punctuation, quotation marks, anything that follows the rules. Then use it as a model to fix the second sentence.</p>
+
+      <div class="task-box">
+        <div class="dol-model-label">✅ Correct Model — from the novel</div>
+        <div class="dol-sentence-wrap" id="dolModel" style="font-family:'Lora',Georgia,serif;font-size:16px;line-height:1.7;padding:12px 16px;background:#fff;border:1.5px solid #E2E8F4;border-left:4px solid #B8860B;border-radius:10px;">
+          Billy was a big man, raw as a skinned ox, and he smelled like a ton of garlic.
+        </div>
+        <div id="dolExplain" style="min-height:24px;margin-top:6px;font-size:13px;color:#34B76F;font-weight:700;transition:opacity 0.2s;"></div>
+        <div class="dol-hint">Tap the highlighted parts to see what's correct about them.</div>
+
+        <div class="dol-fix-label">🔧 Now fix this one</div>
+        <div class="dol-sentence-wrap" style="border-left:4px solid #B8860B;">
+          cutwater was a thin man sharp as a knife blade and he moved like a shadow
+        </div>
+        <div class="dol-hint">Use the model above to help you. Rewrite this sentence correctly in your notebook.</div>
+
+        <button class="dol-check-btn" style="margin-top:12px;" onclick="document.getElementById('dolAns').classList.toggle('show')">🔍 Check My Work</button>
+        <div class="dol-answer" id="dolAns">
+          <p style="margin-bottom:6px;"><strong>Corrected:</strong> Cutwater was a thin man, sharp as a knife blade, and he moved like a shadow.</p>
+          <p style="font-size:13px;color:#7A88A8;font-style:italic;">Capital C on Cutwater; commas around the description sharp as a knife blade; and connects the last clause; period ends.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="tab-next-wrap">
+    <p class="tab-transition-voice">Now that your mind is warmed up, let&rsquo;s sharpen your words and skills.</p>
+    <button class="tab-next-btn" onclick="switchTab('words')">Continue to 🔤 Word Study →</button>
+  </div>
+</div><!-- /tab-warmup -->
+
+
+<!-- ════════════════════════════════════════════ -->
+<!-- TAB 2: WORD STUDY                           -->
+<!-- ════════════════════════════════════════════ -->
+<div class="tab-panel" id="tab-words">
+
+  <!-- MORPHOLOGY -->
+  <div class="activity bl-purple">
+    <div class="activity-head"><div class="activity-num" style="background:#8B6FC0;">1</div><div><div class="activity-title">🌱 Morphology: Prefix over- (Day 3: Use)</div><div class="activity-sub">Four prefixes you'll see all year</div></div></div>
+    <div class="activity-body">
+      <div class="video-wrap" style="margin-bottom:14px;">
+        <div class="video-wrap-header"><span style="font-size:20px;">🌱</span><div><div class="video-wrap-type">Morphology · Introduction</div><div class="video-wrap-title">Prefix over- means too much</div></div></div>
+        <div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🌱</div><div class="video-placeholder-text">Teacher introduces this week's word parts</div><div class="video-placeholder-id"><!-- slot: wb-18-3-morphology --></div><div class="video-teacher-notes"><div class="video-teacher-notes-label">📋 Teacher Recording Notes</div><div class="video-teacher-notes-text">• Day 1 = define<br>• Define base word, prefix, suffix<br>• Use examples connected to The Whipping Boy: "The Whipping Boy was worried" — worried = worry + -ed<br>• Walk through "unhappy," "helper," "resting," "painful" — show the parts<br>• Preview the fill-in game<br>• ~2–3 minutes</div></div></div></div>
+      </div>
+      <p>Today we use <strong>over-</strong> words in our own sentences — drawing on what is happening in the story.</p>
+      <div class="key-concept">
+        <div class="key-concept-label">📌 Examples</div>
+        <p><strong>overpowered</strong> &nbsp;|&nbsp; <strong>overjoyed</strong> &nbsp;|&nbsp; <strong>overloaded</strong> &nbsp;|&nbsp; <strong>overwhelmed</strong></p>
+      </div>
+
+      <div class="callout callout-info"><span class="callout-icon">🧩</span><p>Type the missing <strong>prefix</strong> at the start of each word.</p></div>
+      <div class="fillin-game" id="fillinGame">
+<div class="fillin-item">over<input class="fillin-input" id="fill1" data-answer="ruled" maxlength="12" placeholder="______">  — forced to obey someone with more power</div>
+        <div class="fillin-item">over<input class="fillin-input" id="fill2" data-answer="shadowed" maxlength="12" placeholder="______">  — blocked out or made less important</div>
+        <div class="fillin-item">over<input class="fillin-input" id="fill3" data-answer="come" maxlength="12" placeholder="______">  — defeated or got past something hard</div>
+        <div class="fillin-item">over<input class="fillin-input" id="fill4" data-answer="whelmed" maxlength="12" placeholder="______">  — hit by too much at once</div>
+        <button class="fillin-check-btn" onclick="checkFillIn()">Check My Work</button>
+        <div class="fillin-feedback" id="fillinFeedback">🌱 All correct!</div>
+      </div>
+      
+      <div class="swyk">
+        <div class="swyk-label">🪶 Show What You Know</div>
+        <div class="swyk-prompt">Use one over- word in a sentence about Jemmy's feelings when Billy and Cutwater capture the boys.</div>
+        <div class="textbox-prompt">Use the prefix and its meaning.</div>
+        <textarea class="journal-box" id="journal-morph" data-label="Morphology SWYK: word parts" placeholder="When the outlaws appeared, Jemmy felt..." oninput="autoSave(this,'dot-morph');gatherAnswers();"></textarea>
+      </div>
+    </div>
+  </div>
+
+  <!-- VOCABULARY -->
+  <div class="activity bl-cyan">
+    <div class="activity-head"><div class="activity-num" style="background:#5C2D91;">2</div><div><div class="activity-title">🔤 Vocabulary</div><div class="activity-sub">Words from this week's chapters.</div></div></div>
+    <div class="activity-body">
+      <div class="video-wrap" style="margin-bottom:14px;">
+        <div class="video-wrap-header"><span style="font-size:20px;">🔤</span><div><div class="video-wrap-type">Vocabulary · Introduction</div><div class="video-wrap-title">How to Figure Out Unfamiliar Words</div></div></div>
+        <div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🔤</div><div class="video-placeholder-text">Teacher models the 3-step vocabulary strategy</div><div class="video-placeholder-id"><!-- slot: wb-18-3-vocabulary --></div><div class="video-teacher-notes"><div class="video-teacher-notes-label">📋 Teacher Recording Notes</div><div class="video-teacher-notes-text">• Day 1 = teach the 3-step decode strategy<br>• Model the full process with "eavesdrop" from Chapter 7<br>• Step 1: read the sentence. Step 2: look at parts. Step 3: confirm.<br>• Emphasize: "Try this yourself before flipping the cards!"<br>• ~3–4 minutes</div></div></div></div>
+      </div>
+      <p>When you meet a word you don't know, use these three steps <em>in order</em>:</p>
+
+      <!-- MODELED WORD -->
+      <div class="key-concept">
+        <div class="key-concept-label">📌 Let's try it together: "ruffian"</div>
+      </div>
+
+      <div class="decode-steps">
+        <div class="decode-step">
+          <div class="decode-step-num" style="background:#5C2D91;">1</div>
+          <div class="decode-step-content">
+            <div class="decode-step-title">Read the Sentence</div>
+            <div class="decode-step-text">Find the word in the book. What clues does the sentence give you?</div>
+            <div class="decode-sentence">"A clod and a ruffian," declared the prince.</div>
+            <div class="decode-step-text">The prince is insulting the outlaws. A ruffian is probably a rough, dangerous, badly-behaved person.</div>
+          </div>
+        </div>
+        <div class="decode-step">
+          <div class="decode-step-num" style="background:#8B6FC0;">2</div>
+          <div class="decode-step-content">
+            <div class="decode-step-title">Look at the Word Parts</div>
+            <div class="decode-step-text">Do you see a root, prefix, or suffix you recognize?</div>
+            <div class="decode-word-parts">
+              <span class="decode-part decode-part-affix">eaves-</span>
+              <span class="decode-part-plus">+</span>
+              <span class="decode-part decode-part-root">drop</span>
+            </div>
+            <div class="decode-step-text"><strong>Eaves</strong> are the edges of a roof. Long ago, people would stand under the eaves to listen to people inside through the windows. So <em>eavesdrop</em> = to listen secretly, like someone hiding under the eaves.</div>
+          </div>
+        </div>
+        <div class="decode-step">
+          <div class="decode-step-num" style="background:#34B76F;">3</div>
+          <div class="decode-step-content">
+            <div class="decode-step-title">Confirm</div>
+            <div class="decode-step-text">Were we close?</div>
+            <div class="decode-reveal show" style="display:block;">✅ <strong>Eavesdrop</strong> means to secretly listen to a conversation you weren't meant to hear. Our context and word parts got us there!</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="callout callout-info" style="margin-top:16px;"><span class="callout-icon">🎯</span><p><strong>Your turn!</strong> Each word below has its actual sentence from the book above it. Read the sentence, look for word parts, and guess what the word means. Then tap the card to check.</p></div>
+
+      <div class="vocab-grid" style="grid-template-columns:1fr 1fr;">
+        <div class="vocab-decode-item">
+          <div class="flip-card" onclick="this.classList.toggle('flipped')" style="height:150px;">
+            <div class="flip-card-inner">
+              <div class="flip-card-front"><div class="fc-emoji">⚔️</div><div class="fc-word">ruffian</div><div class="fc-tap">tap to flip</div></div>
+              <div class="flip-card-back"><div class="fc-word-back">ruffian</div><div class="fc-def">A rough, violent person; a bully or criminal.</div></div>
+            </div>
+          </div>
+        </div>
+        <div class="vocab-decode-item">
+          <div class="flip-card" onclick="this.classList.toggle('flipped')" style="height:150px;">
+            <div class="flip-card-inner">
+              <div class="flip-card-front"><div class="fc-emoji">🎭</div><div class="fc-word">exploit</div><div class="fc-tap">tap to flip</div></div>
+              <div class="flip-card-back"><div class="fc-word-back">exploit</div><div class="fc-def">A bold, daring act — often sung about by ballad sellers.</div></div>
+            </div>
+          </div>
+        </div>
+        <div class="vocab-decode-item">
+          <div class="flip-card" onclick="this.classList.toggle('flipped')" style="height:150px;">
+            <div class="flip-card-inner">
+              <div class="flip-card-front"><div class="fc-emoji">👑</div><div class="fc-word">heir</div><div class="fc-tap">tap to flip</div></div>
+              <div class="flip-card-back"><div class="fc-word-back">heir</div><div class="fc-def">The person who will inherit a throne or title.</div></div>
+            </div>
+          </div>
+        </div>
+        <div class="vocab-decode-item">
+          <div class="flip-card" onclick="this.classList.toggle('flipped')" style="height:150px;">
+            <div class="flip-card-inner">
+              <div class="flip-card-front"><div class="fc-emoji">🪙</div><div class="fc-word">ransom</div><div class="fc-tap">tap to flip</div></div>
+              <div class="flip-card-back"><div class="fc-word-back">ransom</div><div class="fc-def">Money paid or demanded to free a prisoner.</div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="callout callout-info" style="margin-top:16px;"><span class="callout-icon">🎯</span><p><strong>Quick Match:</strong> Tap a word, then tap its meaning.</p></div>
+      <div class="match-game" id="vocabMatch">
+        <div class="match-grid" id="matchGrid">
+          <div class="match-item is-word" data-match="A" onclick="matchClick(this)">ruffian</div>
+          <div class="match-item" data-match="C" onclick="matchClick(this)">The person who will inherit a throne or title.</div>
+          <div class="match-item is-word" data-match="B" onclick="matchClick(this)">exploit</div>
+          <div class="match-item" data-match="D" onclick="matchClick(this)">Money paid or demanded to free a prisoner.</div>
+          <div class="match-item is-word" data-match="C" onclick="matchClick(this)">heir</div>
+          <div class="match-item" data-match="A" onclick="matchClick(this)">A rough, violent person; a bully or criminal.</div>
+          <div class="match-item is-word" data-match="D" onclick="matchClick(this)">ransom</div>
+          <div class="match-item" data-match="B" onclick="matchClick(this)">A bold, daring act — often sung about by ballad sellers.</div>
+        </div>
+        <div class="match-feedback" id="matchFeedback">✨ All matched!</div>
+      </div>
+  </div>
+
+  <!-- GRAMMAR -->
+  <div class="activity bl-gold">
+    <div class="activity-head"><div class="activity-num" style="background:#B8860B;">3</div><div><div class="activity-title">✏️ Grammar: Conjunctions (Day 3: Use in writing)</div><div class="activity-sub">Learn it, then spot the conjunction.</div></div></div>
+    <div class="activity-body">
+      <div class="video-wrap" style="margin-bottom:14px;">
+        <div class="video-wrap-header"><span style="font-size:20px;">✏️</span><div><div class="video-wrap-type">Grammar · Introduction</div><div class="video-wrap-title">Nouns &amp; Subjects</div></div></div>
+        <div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">✏️</div><div class="video-placeholder-text">Teacher introduces today's grammar focus</div><div class="video-placeholder-id"><!-- slot: wb-18-3-grammar --></div><div class="video-teacher-notes"><div class="video-teacher-notes-label">📋 Teacher Recording Notes</div><div class="video-teacher-notes-text">• Day 1 = define<br>• Define noun: a person, place, animal, or thing<br>• Define subject: the noun the sentence is about<br>• Use the sentence: "The Whipping Boy lived in an underground house." Show that The Whipping Boy is the subject<br>• Show that some sentences have many nouns but only one subject<br>• Preview the spotter game<br>• ~2–3 minutes</div></div></div></div>
+      </div>
+      <p>Today you write your own sentences using <strong>and</strong>, <strong>but</strong>, and <strong>so</strong> — each one about Chapter 5.</p>
+      <div class="task-box" style="background:#FFF8F0;border-color:#E8D5A0;">
+        <div class="task-sentence" style="border-left-color:#B8860B;"><strong>The Whipping Boy hurried</strong> down the tunnel to her children.</div>
+      </div>
+      <p style="margin-top:10px;color:#3A4A6B;">Today you write your own sentences using <strong>and</strong>, <strong>but</strong>, and <strong>so</strong> — each one about Chapter 5.</p>
+      <div class="spotter-game" id="gramSpot">
+<div class="spotter-sentence" id="spot1" data-done="false">
+  <span class="spotter-word" data-correct="false" onclick="spotterPick(this,'spot1')">Jemmy</span> <span class="spotter-word" data-correct="false" onclick="spotterPick(this,'spot1')">wanted</span> <span class="spotter-word" data-correct="false" onclick="spotterPick(this,'spot1')">to</span> <span class="spotter-word" data-correct="false" onclick="spotterPick(this,'spot1')">run,</span> <span class="spotter-word" data-correct="true" onclick="spotterPick(this,'spot1')"><strong>but</strong></span> <span class="spotter-word" data-correct="false" onclick="spotterPick(this,'spot1')">Billy</span> <span class="spotter-word" data-correct="false" onclick="spotterPick(this,'spot1')">held</span> <span class="spotter-word" data-correct="false" onclick="spotterPick(this,'spot1')">his</span> <span class="spotter-word" data-correct="false" onclick="spotterPick(this,'spot1')">ear.</span>
+  <div class="spotter-result" id="spot1-result"></div>
+</div>
+<div class="spotter-sentence" id="spot2" data-done="false">
+  <span class="spotter-word" data-correct="false" onclick="spotterPick(this,'spot2')">Billy</span> <span class="spotter-word" data-correct="true" onclick="spotterPick(this,'spot2')">demanded</span> <span class="spotter-word" data-correct="false" onclick="spotterPick(this,'spot2')">gold,</span> <span class="spotter-word" data-correct="true" onclick="spotterPick(this,'spot2')">and</span> <span class="spotter-word" data-correct="false" onclick="spotterPick(this,'spot2')">Cutwater</span> <span class="spotter-word" data-correct="false" onclick="spotterPick(this,'spot2')">wanted</span> <span class="spotter-word" data-correct="false" onclick="spotterPick(this,'spot2')">jewels.</span>
+  <div class="spotter-result" id="spot2-result"></div>
+</div>
+<div class="spotter-sentence" id="spot3" data-done="false">
+  <span class="spotter-word" data-correct="false" onclick="spotterPick(this,'spot3')">The</span> <span class="spotter-word" data-correct="false" onclick="spotterPick(this,'spot3')">lantern</span> <span class="spotter-word" data-correct="false" onclick="spotterPick(this,'spot3')">swayed,</span> <span class="spotter-word" data-correct="true" onclick="spotterPick(this,'spot3')">so</span> <span class="spotter-word" data-correct="false" onclick="spotterPick(this,'spot3')">long</span> <span class="spotter-word" data-correct="false" onclick="spotterPick(this,'spot3')">shadows</span> <span class="spotter-word" data-correct="false" onclick="spotterPick(this,'spot3')">fell</span> <span class="spotter-word" data-correct="false" onclick="spotterPick(this,'spot3')">on</span> <span class="spotter-word" data-correct="false" onclick="spotterPick(this,'spot3')">the</span> <span class="spotter-word" data-correct="false" onclick="spotterPick(this,'spot3')">walls.</span>
+  <div class="spotter-result" id="spot3-result"></div>
+</div>
+<div class="spotter-sentence" id="spot4" data-done="false">
+  <span class="spotter-word" data-correct="false" onclick="spotterPick(this,'spot4')">Billy</span> <span class="spotter-word" data-correct="false" onclick="spotterPick(this,'spot4')">was</span> <span class="spotter-word" data-correct="false" onclick="spotterPick(this,'spot4')">famous,</span> <span class="spotter-word" data-correct="true" onclick="spotterPick(this,'spot4')">but</span> <span class="spotter-word" data-correct="false" onclick="spotterPick(this,'spot4')">not</span> <span class="spotter-word" data-correct="false" onclick="spotterPick(this,'spot4')">for</span> <span class="spotter-word" data-correct="false" onclick="spotterPick(this,'spot4')">anything</span> <span class="spotter-word" data-correct="false" onclick="spotterPick(this,'spot4')">good.</span>
+  <div class="spotter-result" id="spot4-result"></div>
+</div>
+      </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- SPELLING -->
+  <div class="activity bl-navy">
+    <div class="activity-head"><div class="activity-num" style="background:#2A0A4A;">4</div><div><div class="activity-title">🔠 Spelling: Closed Syllables (Day 3: Apply)</div><div class="activity-sub">Discover the pattern.</div></div></div>
+    <div class="activity-body">
+      <div class="video-wrap" style="margin-bottom:14px;">
+        <div class="video-wrap-header"><span style="font-size:20px;">🔠</span><div><div class="video-wrap-type">Spelling · Introduction</div><div class="video-wrap-title">Closed syllables in longer words</div></div></div>
+        <div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🔠</div><div class="video-placeholder-text">Teacher introduces this week's spelling focus</div><div class="video-placeholder-id"><!-- slot: 2-1-spelling --></div><div class="video-teacher-notes"><div class="video-teacher-notes-label">📋 Teacher Recording Notes</div><div class="video-teacher-notes-text">• Day 1 = discover (don't tell first)<br>• Show the two groups; ask: "Where does each bold syllable end?"<br>• Guide to: closed = consonant, short; open = vowel, long<br>• Reveal rule after they think<br>• Preview the sort game<br>• ~2–3 minutes</div></div></div></div>
+      </div>
+      <p>Divide each word into syllables. Mark the closed syllable and its short vowel.</p>
+
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:14px 0;">
+        <div class="key-concept" style="margin-bottom:0;">
+          <div class="key-concept-label">Group A — divided like this</div>
+          <p style="font-size:17px;font-weight:700;letter-spacing:0.5px;">rab<strong style="color:#4A7C2E;">·</strong>bit · gar<strong style="color:#4A7C2E;">·</strong>den · bas<strong style="color:#4A7C2E;">·</strong>ket · sis<strong style="color:#4A7C2E;">·</strong>ter</p>
+        </div>
+        <div class="key-concept" style="margin-bottom:0;background:#F0E8FF;border-color:#D8CCF0;">
+          <div class="key-concept-label" style="color:#8B6FC0;">Group B — same pattern</div>
+          <p style="font-size:17px;font-weight:700;letter-spacing:0.5px;">tun<strong style="color:#8B6914;">·</strong>nel · ham<strong style="color:#8B6914;">·</strong>per · win<strong style="color:#8B6914;">·</strong>ter · pic<strong style="color:#8B6914;">·</strong>nic</p>
+        </div>
+      </div>
+
+      <div class="socratic-box">
+        <div class="socratic-label">🔍 What do you notice?</div>
+        <p class="socratic-q">Look at the letters around the dot in each word. Count: vowel, consonant, consonant, vowel. That's the <strong>VCCV pattern</strong>.</p>
+        <p class="socratic-q">Where does the dot fall — before, between, or after the two consonants?</p>
+        <p class="socratic-q">Can you say the rule in your own words?</p>
+      </div>
+
+      <button class="dol-check-btn" style="margin:12px auto;display:block;" onclick="document.getElementById('spellReveal').classList.toggle('show')">🔍 See the Rule</button>
+      <div class="dol-answer" id="spellReveal"><p>When a word has the <strong>VCCV</strong> pattern (vowel–consonant–consonant–vowel), you divide it <em>between the two consonants</em>.</p><p>This helps you read long words like <em>tunnel</em> (<strong>tun·nel</strong>) and <em>basket</em> (<strong>bas·ket</strong>).</p></div>
+
+      <div class="callout callout-info" style="margin-top:16px;"><span class="callout-icon">🎮</span><p><strong>Practice:</strong> Sort these words using the pattern you discovered.</p></div>
+      <div class="sort-game" id="spellSort">
+  <div class="sort-bank" id="sortBank"><span class="sort-chip" data-group="a" onclick="pickSortChip(this)">trumpet</span><span class="sort-chip" data-group="a" onclick="pickSortChip(this)">lesson</span><span class="sort-chip" data-group="a" onclick="pickSortChip(this)">harvest</span><span class="sort-chip" data-group="a" onclick="pickSortChip(this)">cotton</span><span class="sort-chip" data-group="b" onclick="pickSortChip(this)">frozen</span><span class="sort-chip" data-group="b" onclick="pickSortChip(this)">publish</span></div>
+  <div class="sort-columns">
+    <div class="sort-col"><div class="sort-col-header" style="background:linear-gradient(135deg,#3D1A6B,#5C2D91);">Closed syllable (divide between consonants)</div><div class="sort-col-drop" data-col="a" onclick="dropSortChip(this,'a')"></div></div>
+    <div class="sort-col"><div class="sort-col-header" style="background:linear-gradient(135deg,#B8860B,#7A45C4);">Other pattern</div><div class="sort-col-drop" data-col="b" onclick="dropSortChip(this,'b')"></div></div>
+  </div>
+  <div class="sort-score" id="sortScore"></div>
+</div>
+      
+    </div>
+  </div>
+
+  <div class="tab-next-wrap">
+    <p class="tab-transition-voice">Your words and skills are sharp. Time to open the book.</p>
+    <button class="tab-next-btn" onclick="switchTab('reading')">Continue to 📖 Reading →</button>
+  </div>
+</div><!-- /tab-words -->
+
+
+<!-- ════════════════════════════════════════════ -->
+<!-- TAB 3: READING                              -->
+<!-- ════════════════════════════════════════════ -->
+<div class="tab-panel" id="tab-reading">
+
+  <!-- Story Journey Tracker -->
+  <div class="tracker-card">
+    <div class="tracker-header"><div class="tracker-header-icon">🗺️</div><div><div class="tracker-header-label">Your Story Journey</div><div class="tracker-header-title">Jemmy's Journey</div></div></div>
+    <div class="scene-wrap" id="scene">
+      <div class="title-plaque"><h1><em>The Whipping Boy</em></h1></div>
+      <div class="cloud" style="width:90px;height:26px;top:10px;left:5%"></div>
+      <div class="cloud" style="width:55px;height:18px;top:22px;left:20%"></div>
+      <div class="cloud" style="width:100px;height:28px;top:8px;left:45%"></div>
+      <div class="cloud" style="width:65px;height:20px;top:20px;left:72%"></div>
+      <div class="cloud" style="width:45px;height:14px;top:30px;left:90%"></div>
+      <!-- plowed field strip in the back -->
+      <div style="position:absolute;bottom:55px;left:30%;right:30%;height:14px;background:repeating-linear-gradient(90deg,#8B6914 0 6px,#5a4a2e 6px 8px);opacity:0.4;border-radius:4px;"></div>
+      <div class="hills-far"></div>
+      <!-- meadow grass tufts -->
+      <div class="tree" style="top:48px;left:2%;font-size:22px">🌳</div>
+      <div class="tree" style="top:56px;left:8%;font-size:18px">🌿</div>
+      <div class="tree" style="top:50px;left:15%;font-size:24px">🌳</div>
+      <div class="tree" style="top:54px;left:32%;font-size:18px">🌾</div>
+      <div class="tree" style="top:46px;left:40%;font-size:22px">🌳</div>
+      <div class="tree" style="top:52px;left:62%;font-size:20px">🌿</div>
+      <div class="tree" style="top:44px;left:70%;font-size:24px">🌳</div>
+      <div class="tree" style="top:50px;left:80%;font-size:18px">🌾</div>
+      <div class="tree" style="top:48px;left:93%;font-size:22px">🌳</div>
+      <!-- Whipping Boy landmarks: castle, forest, outlaws' hut, river, city -->
+      <div class="house" style="top:60px;left:3%;font-size:20px">🏠</div>
+      <div class="house" style="top:55px;left:24%;font-size:18px">🪨</div>
+      <div class="house" style="top:50px;left:46%;font-size:18px">🌿</div>
+      <div class="house" style="top:54px;left:66%;font-size:18px">🔬</div>
+      <div class="house" style="top:54px;left:92%;font-size:20px">🕳️</div>
+      <!-- small wildlife/insects -->
+      <div class="flower" style="bottom:36px;left:12%">🌾</div>
+      <div class="flower" style="bottom:24px;left:18%">🐛</div>
+      <div class="flower" style="bottom:30px;left:28%">🌿</div>
+      <div class="flower" style="bottom:34px;left:55%">🌾</div>
+      <div class="flower" style="bottom:22px;left:60%">🐛</div>
+      <div class="flower" style="bottom:28px;left:74%">🌿</div>
+      <div class="flower" style="bottom:32px;left:88%">🌾</div>
+      <svg class="path-svg" viewBox="0 0 1400 210" preserveAspectRatio="none">
+        <path d="M -20,165 C 60,160 80,130 150,125 C 220,120 240,155 320,148 C 400,140 420,105 510,108 C 600,112 620,150 710,142 C 800,134 830,100 920,105 C 1010,110 1030,148 1110,140 C 1190,132 1220,110 1300,115 C 1340,117 1400,130 1430,135" fill="none" stroke="#8B6914" stroke-width="14" stroke-linecap="round" opacity="0.4"/>
+        <path d="M -20,165 C 60,160 80,130 150,125 C 220,120 240,155 320,148 C 400,140 420,105 510,108 C 600,112 620,150 710,142 C 800,134 830,100 920,105 C 1010,110 1030,148 1110,140 C 1190,132 1220,110 1300,115 C 1340,117 1400,130 1430,135" fill="none" stroke="#C9A36A" stroke-width="7" stroke-linecap="round" stroke-dasharray="4 8" opacity="0.5"/>
+      </svg>
+      <div class="character-token" id="characterToken">👑</div>
+    </div>
+    <div class="tracker-chapter-label">📍 You are here: <strong>Ch. 5</strong></div>
+  </div>
+
+  <!-- Virtue Watch -->
+  <div class="activity bl-purple" style="border-left-color:#8B6FC0;">
+    <div class="activity-head" style="background:linear-gradient(135deg,#F0E8FF,#E8DCFA);border-bottom-color:#D8CCF0;">
+      <div class="activity-num" style="background:#8B6FC0;">📜</div>
+      <div>
+        <div class="activity-title">Character Spotlight — Week 18</div>
+        <div class="activity-sub">A key theme from Ch. 5</div>
+      </div>
+    </div>
+    <div class="activity-body">
+      <div class="key-concept" style="background:#F0E8FF;border-color:#D8CCF0;margin-bottom:14px;">
+        <div class="key-concept-label" style="color:#6B4FB0;">💎 As you read, notice:</div>
+        <p>Good readers notice how characters handle pressure. Watch Jemmy carefully in Chapter 5 — does he fight, trick, or stay silent? Why?</p>
+      </div>
+      <div class="socratic-box">
+        <div class="socratic-label">👑 The book's service moment:</div>
+        <p class="socratic-q" style="font-style:normal;">When The Whipping Boy sees Jeremy tangled in string and the cat coming, she could have run. She stays and unties him instead. Later, Nicodemus and the rats agree to move her cinderblock house — a dangerous, hours-long job — because she asked for help.</p>
+      </div>
+      <div class="thinking-stop">💭 Think: How will your character help someone in your story?</div>
+    </div>
+  </div>
+
+
+  <!-- Reading video -->
+  <div class="video-wrap">
+    <div class="video-wrap-header"><span style="font-size:20px;">📖</span><div><div class="video-wrap-type">Reading · Chapter Introduction</div><div class="video-wrap-title">Meeting The Whipping Boy</div></div></div>
+    <div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">📖</div><div class="video-placeholder-text">Teacher introduces today's chapters</div><div class="video-placeholder-id"><!-- slot: wb-18-3-reading --></div><div class="video-teacher-notes"><div class="video-teacher-notes-label">📋 Teacher Recording Notes</div><div class="video-teacher-notes-text">• Set up today's reading: Ch. 5 — Hold-Your-Nose Billy and Cutwater<br>• Frame the big question for students<br>• Reading lens: Good readers notice how characters handle pressure. Watch Jemmy carefully in Chapter 5 — d<br>• ~2–3 minutes</div></div></div></div>
+  </div>
+
+  <!-- Open book + links -->
+  <div class="activity bl-green">
+    <div class="activity-head"><div class="activity-num" style="background:#34B76F;">1</div><div><div class="activity-title">📕 Read: Ch. 5</div><div class="activity-sub">Hold-Your-Nose Billy and Cutwater</div></div></div>
+    <div class="activity-body">
+      <div class="open-book-wrap">
+        <div class="open-book-cover"></div>
+        <div class="open-book-spine"></div>
+        <div class="open-book-pages-3"></div>
+        <div class="open-book-pages-2"></div>
+        <div class="open-book-pages-1"></div>
+        <div class="open-book">
+          <div class="open-book-left"><div class="open-book-left-deco">👑</div></div>
+          <div class="open-book-right">
+            <div class="open-book-title"><em>The Whipping Boy</em></div>
+            <div style="height:10px;"></div>
+            <div class="open-book-chapter" style="font-size:14px;color:#7A88A8;font-style:normal;font-family:'Nunito',sans-serif;font-weight:700;">Ch. 5</div>
+            <div class="open-book-prompt" style="margin-top:8px;">Open your novel to Ch. 5.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="callout callout-info" style="margin-bottom:14px;">
+        <span class="callout-icon">📕</span>
+        <p><strong>Open your novel to Ch. 5.</strong> Read at your own pace. Use the Pause &amp; Think prompts below to stop and think along the way.</p>
+      </div>
+
+      <div class="pause-columns">
+        <div class="pause-col">
+          <div class="socratic-box" style="margin-bottom:0;">
+            <div class="socratic-label">⏸️ Pause &amp; Think — Part 1</div>
+            <p class="socratic-q">Jemmy jabs the prince with his elbow to keep him quiet. Why does he do this?</p>
+          </div>
+          <div class="thinking-stop">💭 Pause and think about this — no need to write.</div>
+        </div>
+<div class="pause-col">
+          <div class="socratic-box" style="margin-bottom:0;">
+            <div class="socratic-label">⏸️ Pause &amp; Think — Part 2</div>
+            <p class="socratic-q">What does Cutwater find in the basket that changes everything? <strong>How do the outlaws react?</strong></p>
+          </div>
+          <div class="thinking-stop">💭 Pause and think about this — no need to write.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="tab-next-wrap">
+    <p class="tab-transition-voice">You&rsquo;ve read and noticed. Now answer the questions and submit your work.</p>
+    <button class="tab-next-btn" onclick="switchTab('assignment')">Continue to 📬 Assignment →</button>
+  </div>
+</div><!-- /tab-reading -->
+
+
+<!-- ════════════════════════════════════════════ -->
+<!-- TAB 4: ASSIGNMENT                           -->
+<!-- ════════════════════════════════════════════ -->
+<div class="tab-panel" id="tab-assignment">
+
+  <div class="video-wrap" style="margin-bottom:16px;">
+    <div class="video-wrap-header"><span style="font-size:20px;">📬</span><div><div class="video-wrap-type">Assignment · Overview</div><div class="video-wrap-title">What You're Submitting Today</div></div></div>
+    <div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">📬</div><div class="video-placeholder-text">Teacher explains what to submit</div><div class="video-placeholder-id"><!-- slot: wb-18-3-assignment --></div><div class="video-teacher-notes"><div class="video-teacher-notes-label">📋 Teacher Recording Notes</div><div class="video-teacher-notes-text">• Explain what's being submitted: 3 chapter questions + 1 writing connection + 1 morphology response<br>• Remind them to use text evidence<br>• Walk through: type → review gathered box → copy/download → submit to Canvas<br>• Encouraging close<br>• ~1–2 minutes</div></div></div></div>
+  </div>
+
+  <div class="callout callout-info" style="margin-bottom:20px;">
+    <span class="callout-icon">📬</span>
+    <p><strong>This is the part you submit.</strong> Type your answers below. When you're done, copy or download your work at the bottom.</p>
+  </div>
+
+  <!-- Part A: Chapter Thinking -->
+  <div class="activity bl-cyan">
+    <div class="activity-head"><div class="activity-num" style="background:#5C2D91;">A</div><div><div class="activity-title">📖 Chapter Thinking</div><div class="activity-sub">Answer in complete sentences with evidence from the text.</div></div></div>
+    <div class="activity-body">
+      <div class="q-block"><div class="q-text"><span class="q-num">1</span>How does Jemmy know who Hold-Your-Nose Billy is, and what does this tell us about how famous Billy is?</div></div>
+      <div class="textbox-prompt">Think about what Jemmy remembers from the streets.</div>
+      <textarea class="journal-box" id="journal-q1" data-label="Q1: chapter thinking" placeholder="Jemmy knows Billy because... This tells us that Billy is..." oninput="autoSave(this,'dot-q1');gatherAnswers();"></textarea>
+
+      <div class="q-block"><div class="q-text"><span class="q-num">2</span>When the prince announces who he is, the outlaws don't bow. What do they do instead?</div></div>
+      <div class="textbox-prompt">Look at what Billy says about the prince's weight in gold.</div>
+      <textarea class="journal-box" id="journal-q2" data-label="Q2: chapter thinking" placeholder="Instead of bowing, the outlaws... Their new plan is to..." oninput="autoSave(this,'dot-q2');gatherAnswers();"></textarea>
+
+      <div class="q-block"><div class="q-text"><span class="q-num">3</span>Jemmy jabbed the prince to keep him quiet. Was this the right thing to do? Use a detail to support your answer.</div></div>
+      <div class="textbox-prompt">Think about what might have happened if the prince kept talking.</div>
+      <textarea class="journal-box" id="journal-q3" data-label="Q3: chapter thinking" placeholder="I think Jemmy's jab was (right/wrong) because..." oninput="autoSave(this,'dot-q3');gatherAnswers();"></textarea>
+    </div>
+  </div>
+
+  <!-- Part B: Word Study Connection -->
+  <div class="activity bl-purple">
+    <div class="activity-head"><div class="activity-num" style="background:#8B6FC0;">B</div><div><div class="activity-title">🔤 Word Study Connection (Morphology)</div><div class="activity-sub">Your morphology response from the Word Study tab.</div></div></div>
+    <div class="activity-body">
+      <p style="font-size:15px;color:#7A88A8;">Your morphology answer was saved on the Word Study tab. It will appear in your gathered work below.</p>
+    </div>
+  </div>
+
+  <!-- Part C: Writing Connection -->
+  <div class="activity bl-gold" id="writers-workshop">
+    <div class="activity-head" style="background:linear-gradient(135deg,#FFF8F0,#FFF8E8);border-bottom-color:#E8D5A0;">
+      <div class="activity-num" style="background:#B8860B;">✍️</div>
+      <div>
+        <div class="activity-title">Writer&rsquo;s Workshop: Week 18 &middot; Choose a Claim</div>
+        <div class="activity-sub">Opinion: choose a character claim</div>
+      </div>
+    </div>
+    <div class="activity-body">
+      <div style="display:flex;flex-wrap:wrap;gap:4px;justify-content:flex-start;align-items:center;margin-bottom:10px;">
+<span style="background:#B8860B;color:#fff;padding:4px 8px;border-radius:6px;font-size:11px;">★ Choose a Claim</span>
+          <span style="background:#FAFBFF;color:#7A88A8;padding:4px 8px;border-radius:6px;font-size:11px;">○ Add Reasons</span>
+          <span style="background:#FAFBFF;color:#7A88A8;padding:4px 8px;border-radius:6px;font-size:11px;">○ Draft</span>
+          <span style="background:#FAFBFF;color:#7A88A8;padding:4px 8px;border-radius:6px;font-size:11px;">○ Revise</span>
+          <span style="background:#FAFBFF;color:#7A88A8;padding:4px 8px;border-radius:6px;font-size:11px;">○ Publish</span>
+        </div>
+      <div class="callout callout-info" style="margin:0 0 14px 0;padding:10px 14px;"><span class="callout-icon">🎯</span><p style="font-size:14px;"><strong>Today&rsquo;s focus:</strong> Today: Add a text example from the book</p></div>
+
+      <!-- WATCH HOW -->
+      <div class="key-concept" style="background:#FFFEF7;border-color:#E8D5A0;margin-bottom:14px;">
+        <div class="key-concept-label" style="color:#B8860B;">👀 Watch How &mdash; Meet Today, our example writer</div>
+        <p style="font-size:14px;"><em>Today: Add a text example from the book</em></p>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:10px;">
+          <div style="background:#FFF;border:1px solid #E8D5A0;border-radius:6px;padding:10px;">
+            <div style="font-size:11px;color:#C7627E;font-weight:700;letter-spacing:0.5px;">BEFORE</div>
+            <div style="font-style:italic;font-size:13px;margin-top:4px;"><em>Clara's reason:</em> One reason is that Prince Brat enjoys watching Jemmy get whipped.</div>
+          </div>
+          <div style="background:#FFF;border:1px solid #E8D5A0;border-radius:6px;padding:10px;">
+            <div style="font-size:11px;color:#4A7C2E;font-weight:700;letter-spacing:0.5px;">AFTER</div>
+            <div style="font-style:italic;font-size:13px;margin-top:4px;"><em>Clara adds:</em> For example, in Chapter 2, Prince Brat tells the tutor to give Jemmy 'ten whacks, and good and hard.' He watches without feeling sorry.</div>
+          </div>
+        </div>
+        
+      </div>
+
+      <!-- TODAY'S TOOL -->
+      <div class="key-concept" style="background:#F0F7FF;border-color:#C8DCEE;margin-bottom:14px;">
+        <div class="key-concept-label" style="color:#3D5285;">📋 Today's Tool: Adding a Text Example</div>
+        <p style='font-size:14px;'>A text example proves your reason is true. Always name the chapter!</p>
+<div style='background:#E8F1E8;border-radius:8px;padding:10px;margin-top:8px;font-size:13px;'>
+  <strong>Pattern:</strong> &ldquo;For example, in Chapter ___, [character] ___, which shows ___.&rdquo;
+</div>
+      </div>
+
+      <!-- SENTENCE FRAMES -->
+      <div class="key-concept" style="background:#F0E8FF;border-color:#D8CCF0;margin-bottom:14px;">
+        <div class="key-concept-label" style="color:#6B4FB0;">🪶 Sentence Frames You Can Borrow</div>
+        <p style="font-size:13px;margin-bottom:6px;">Stuck on how to start? Try one of these:</p>
+        <ul style="margin:0 0 0 18px;font-size:14px;">
+  <li style="margin-bottom:4px;">&ldquo;For example, in Chapter ___, [character] ___.&rdquo;</li>
+<li style="margin-bottom:4px;">&ldquo;This shows that ___ because ___.&rdquo;</li>
+<li style="margin-bottom:4px;">&ldquo;Another example is when ___.&rdquo;</li>
+        </ul>
+      </div>
+
+      <!-- NOW YOU TRY -->
+      <div class="callout callout-info" style="background:#E8F1E8;border-color:#A8C8A8;margin:0 0 10px 0;padding:10px 14px;"><span class="callout-icon">📝</span><p style="font-size:14px;"><strong>Now you try.</strong> Add one text example. Use 'For example, in Chapter ___...'</p></div>
+      <div class="textbox-prompt">Add one text example. Use 'For example, in Chapter ___...'</div>
+      <textarea class="journal-box" id="journal-writing" data-label="Writing Connection" placeholder="For example, in Chapter ___, Prince Brat..." oninput="autoSave(this,'dot-writing');gatherAnswers();"></textarea>
+    </div>
+  </div>
+
+  <!-- Gathered Answers -->
+  <div class="gathered-card">
+    <div class="gathered-header"><div class="gathered-header-icon">📋</div><div><div class="gathered-header-label">All Your Work</div><div class="gathered-header-title">Review, Copy, or Download</div></div></div>
+    <div class="gathered-body">
+      <p class="gathered-intro">Everything you typed is gathered below. Copy to paste into Canvas, or download as a PDF.</p>
+      <textarea class="gathered-output" id="gatheredOutput" readonly></textarea>
+      <div class="gathered-actions">
+        <button class="gathered-btn gathered-btn-copy" onclick="copyGathered()">📋 Copy to Clipboard</button>
+        <button class="gathered-btn gathered-btn-pdf" onclick="downloadJournal()">📄 Download as PDF</button>
+      </div>
+      <div class="gathered-copied" id="gatheredCopied">✅ Copied to clipboard!</div>
+    </div>
+  </div>
+
+  <!-- Checklist -->
+  <div class="turn-in-card" style="margin-top:18px;">
+    <div class="turn-in-header"><div class="turn-in-header-icon">📬</div><div><div class="turn-in-header-label">Ready?</div><div class="turn-in-header-title">Before You Submit</div></div></div>
+    <div class="turn-in-body">
+      <div class="turn-in-checklist">
+        <div class="turn-in-item" onclick="toggleCheck(this)"><div class="turn-in-check"></div><div class="turn-in-item-text">I answered all 3 chapter questions with evidence.</div></div>
+        <div class="turn-in-item" onclick="toggleCheck(this)"><div class="turn-in-check"></div><div class="turn-in-item-text">I completed my Morphology response.</div></div>
+        <div class="turn-in-item" onclick="toggleCheck(this)"><div class="turn-in-check"></div><div class="turn-in-item-text">I added a text example to my opinion writing.</div></div>
+        <div class="turn-in-item" onclick="toggleCheck(this)"><div class="turn-in-check"></div><div class="turn-in-item-text">I copied or downloaded my work and submitted it to Canvas.</div></div>
+      </div>
+    </div>
+  </div>
+</div><!-- /tab-assignment -->
+
+
+<!-- ═══════════ FOOTER ═══════════ -->
+<div class="footer">
+  <div class="footer-main"><span>Optima Academy Online</span> · 3rd Grade ELA · Week 18 · Lesson 18.3</div>
+  <div class="footer-sub"><em>The Whipping Boy</em> — Ch. 7 &amp; 8</div>
+  <div class="footer-copy">© Optima Academy Online · An Education Experience Company</div>
+</div>
+
+</div><!-- /page-wrap -->
+
+<script>
+/* ───── TAB SWITCHING ───── */
+function switchTab(tabId) {
+  document.querySelectorAll('.tab-panel').forEach(function(p) { p.classList.remove('active'); });
+  document.querySelectorAll('.tab-btn').forEach(function(b) { b.classList.remove('active'); });
+  document.getElementById('tab-' + tabId).classList.add('active');
+  var btn = document.querySelector('.tab-btn[data-tab="' + tabId + '"]');
+  btn.classList.add('active');
+  btn.classList.add('visited');
+  updateProgress();
+
+  var intro = document.getElementById('introSection');
+  if (tabId === 'warmup') { intro.classList.remove('collapsed'); }
+  else { intro.classList.add('collapsed'); }
+
+  // Auto-gather answers when arriving at assignment tab
+  if (tabId === 'assignment') { gatherAnswers(); }
+
+  document.getElementById('pageTop').scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+
+function expandIntro() {
+  document.getElementById('introSection').classList.remove('collapsed');
+}
+
+/* ───── GATHER ALL ANSWERS ───── */
+function gatherAnswers() {
+  var output = '';
+  var sections = [
+    { title: '📖 CHAPTER THINKING', ids: ['journal-q1','journal-q2','journal-q3'] },
+    { title: '🔤 WORD STUDY CONNECTION (MORPHOLOGY)', ids: ['journal-morph'] },
+    { title: '🪶 WRITING CONNECTION', ids: ['journal-writing'] }
+  ];
+
+  output += 'LESSON 18.3 — The Whipping Boy, Ch. 5\n';
+  output += '════════════════════════════════════════\n\n';
+
+  sections.forEach(function(sec) {
+    output += sec.title + '\n';
+    output += '────────────────────────────────\n';
+    sec.ids.forEach(function(id) {
+      var el = document.getElementById(id);
+      if (!el) return;
+      var label = el.getAttribute('data-label') || id;
+      var val = el.value.trim();
+      output += '\n' + label + '\n';
+      output += (val || '(no answer)') + '\n';
+    });
+    output += '\n';
+  });
+
+  // Mini-game results
+  output += '🎮 PRACTICE ACTIVITIES\n';
+  output += '────────────────────────────────\n';
+  output += (window._fillinDone ? '✅' : '⬜') + ' Morphology Word Parts\n';
+  output += (matchCount >= 4 ? '✅' : '⬜') + ' Vocabulary Match\n';
+  var spotDone = 0;
+  for (var i = 1; i <= 4; i++) {
+    var s = document.getElementById('spot' + i);
+    if (s && s.getAttribute('data-done') === 'true') spotDone++;
+  }
+  output += (spotDone >= 3 ? '✅' : '⬜') + ' Action Verb Spotter\n';
+  output += (sortPlaced >= sortTotal ? '✅' : '⬜') + ' Spelling Word Sort\n';
+
+  var gathered = document.getElementById('gatheredOutput');
+  if (gathered) gathered.value = output;
+}
+
+/* ───── COPY TO CLIPBOARD ───── */
+function copyGathered() {
+  var gathered = document.getElementById('gatheredOutput');
+  if (!gathered) return;
+  gathered.select();
+  gathered.setSelectionRange(0, 99999);
+  try {
+    navigator.clipboard.writeText(gathered.value).then(function() {
+      showCopied();
+    }).catch(function() {
+      document.execCommand('copy');
+      showCopied();
+    });
+  } catch(e) {
+    document.execCommand('copy');
+    showCopied();
+  }
+}
+
+function showCopied() {
+  var msg = document.getElementById('gatheredCopied');
+  msg.classList.add('show');
+  setTimeout(function() { msg.classList.remove('show'); }, 2500);
+}
+
+function updateProgress() {
+  const total = document.querySelectorAll('.tab-btn').length;
+  const visited = document.querySelectorAll('.tab-btn.visited').length;
+  const pct = Math.round((visited / total) * 100);
+  document.getElementById('progressFill').style.width = pct + '%';
+  document.getElementById('progressPct').textContent = pct + '%';
+}
+
+// Mark the first tab as visited on page load
+document.querySelector('.tab-btn.active').classList.add('visited');
+updateProgress();
+
+// Sync tab bar sticky position to progress bar height
+(function() {
+  var pw = document.querySelector('.progress-wrap');
+  var tb = document.querySelector('.tab-bar');
+  if (pw && tb) {
+    tb.style.top = pw.offsetHeight + 'px';
+  }
+})();
+
+/* ───── TURN-IN CHECKLIST ───── */
+function toggleCheck(item) {
+  item.classList.toggle('checked');
+  const check = item.querySelector('.turn-in-check');
+  check.textContent = item.classList.contains('checked') ? '✓' : '';
+
+  // Confetti if all items checked
+  const container = item.closest('.turn-in-checklist');
+  if (!container) return;
+  const allChecked = container.querySelectorAll('.turn-in-item').length === container.querySelectorAll('.turn-in-item.checked').length;
+  if (allChecked && container.querySelectorAll('.turn-in-item').length > 0) {
+    fireConfetti();
+  }
+}
+
+/* ───── CONFETTI ───── */
+function fireConfetti() {
+  var canvas = document.getElementById('confettiCanvas');
+  var ctx = canvas.getContext('2d');
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+  var colors = ['#5C2D91', '#B8860B', '#34B76F', '#8B6FC0', '#c7627e', '#FFE9B8'];
+  var emojis = ['✏️', '🔎', '💡', '📖', '🧠'];
+  var particles = [];
+
+  for (var i = 0; i < 90; i++) {
+    particles.push({
+      type: 'square',
+      x: Math.random() * canvas.width,
+      y: -20 - Math.random() * 120,
+      vx: (Math.random() - 0.5) * 6,
+      vy: Math.random() * 3.5 + 2,
+      size: Math.random() * 8 + 4,
+      color: colors[Math.floor(Math.random() * colors.length)],
+      rot: Math.random() * Math.PI * 2,
+      vrot: (Math.random() - 0.5) * 0.2
+    });
+  }
+
+  for (var j = 0; j < 25; j++) {
+    particles.push({
+      type: 'emoji',
+      emoji: emojis[Math.floor(Math.random() * emojis.length)],
+      x: Math.random() * canvas.width,
+      y: -30 - Math.random() * 150,
+      vx: (Math.random() - 0.5) * 5,
+      vy: Math.random() * 3 + 1.5,
+      size: Math.random() * 10 + 22,
+      rot: Math.random() * Math.PI * 2,
+      vrot: (Math.random() - 0.5) * 0.12
+    });
+  }
+
+  var frame = 0;
+  var totalFrames = 300;
+  var fadeStart = 240;
+
+  function animate() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+    var alpha = 1;
+    if (frame > fadeStart) {
+      alpha = 1 - ((frame - fadeStart) / (totalFrames - fadeStart));
+      if (alpha < 0) alpha = 0;
+    }
+    ctx.globalAlpha = alpha;
+
+    particles.forEach(function(p) {
+      p.x += p.vx;
+      p.y += p.vy;
+      p.vy += 0.08;
+      p.rot += p.vrot;
+      ctx.save();
+      ctx.translate(p.x, p.y);
+      ctx.rotate(p.rot);
+      if (p.type === 'emoji') {
+        ctx.font = p.size + 'px serif';
+        ctx.textAlign = 'center';
+        ctx.textBaseline = 'middle';
+        ctx.fillText(p.emoji, 0, 0);
+      } else {
+        ctx.fillStyle = p.color;
+        ctx.fillRect(-p.size / 2, -p.size / 2, p.size, p.size);
+      }
+      ctx.restore();
+    });
+
+    frame++;
+    if (frame < totalFrames) {
+      requestAnimationFrame(animate);
+    } else {
+      ctx.globalAlpha = 1;
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+    }
+  }
+  animate();
+}
+
+/* ───── BACK TO TOP (iframe-aware) ───── */
+(function() {
+  var btn = document.getElementById('backToTop');
+  if (!btn) return;
+  var inIframe = (function() {
+    try { return window.self !== window.top; } catch (e) { return true; }
+  })();
+
+  btn.addEventListener('click', function() {
+    try { window.scrollTo({ top: 0, behavior: 'smooth' }); } catch (e) {}
+    document.documentElement.scrollTop = 0;
+    document.body.scrollTop = 0;
+    var top = document.getElementById('pageTop');
+    if (top && top.scrollIntoView) {
+      try { top.scrollIntoView({ behavior: 'smooth', block: 'start' }); } catch (e) {}
+    }
+    try {
+      if (window.frameElement && window.frameElement.scrollIntoView) {
+        window.frameElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    } catch (e) {}
+    if (inIframe) {
+      try { window.parent.postMessage({ type: 'optima-lesson:scroll-to-top' }, '*'); } catch (e) {}
+    }
+  });
+
+  if (inIframe) {
+    setTimeout(function() { btn.classList.add('show'); }, 1500);
+  } else {
+    window.addEventListener('scroll', function() {
+      btn.classList.toggle('show', window.pageYOffset > 400);
+    });
+  }
+})();
+
+/* ───── WORD SORT GAME ───── */
+var sortSelected = null;
+var sortPlaced = 0;
+var sortTotal = 6;
+
+function pickSortChip(chip) {
+  if (chip.classList.contains('placed')) return;
+  if (sortSelected) sortSelected.style.outline = '';
+  sortSelected = chip;
+  chip.style.outline = '3px solid #5C2D91';
+  chip.style.outlineOffset = '2px';
+}
+
+function dropSortChip(colDrop, colName) {
+  if (!sortSelected) return;
+  var correctGroup = sortSelected.getAttribute('data-group');
+  var clone = sortSelected.cloneNode(true);
+  clone.style.outline = '';
+  clone.onclick = null;
+  clone.style.cursor = 'default';
+
+  if (correctGroup === colName) {
+    clone.classList.add('correct');
+    sortSelected.classList.add('placed');
+    colDrop.appendChild(clone);
+    sortPlaced++;
+  } else {
+    clone.classList.add('wrong');
+    colDrop.appendChild(clone);
+    setTimeout(function() { colDrop.removeChild(clone); }, 600);
+  }
+  sortSelected.style.outline = '';
+  sortSelected = null;
+
+  if (sortPlaced >= sortTotal) {
+    var sc = document.getElementById('sortScore');
+    sc.textContent = '🎉 All sorted correctly! You know the "au" vs. "aw" pattern.';
+    sc.classList.add('show');
+  }
+}
+
+/* ───── VOCAB MATCH GAME ───── */
+var matchFirst = null;
+var matchCount = 0;
+
+function matchClick(item) {
+  if (item.classList.contains('matched')) return;
+
+  if (!matchFirst) {
+    matchFirst = item;
+    item.classList.add('selected');
+    return;
+  }
+
+  if (matchFirst === item) {
+    matchFirst.classList.remove('selected');
+    matchFirst = null;
+    return;
+  }
+
+  var key1 = matchFirst.getAttribute('data-match');
+  var key2 = item.getAttribute('data-match');
+
+  if (key1 === key2 && matchFirst.classList.contains('is-word') !== item.classList.contains('is-word')) {
+    matchFirst.classList.remove('selected');
+    matchFirst.classList.add('matched');
+    item.classList.add('matched');
+    matchCount++;
+    matchFirst = null;
+    if (matchCount >= 4) {
+      document.getElementById('matchFeedback').classList.add('show');
+    }
+  } else {
+    item.classList.add('wrong-flash');
+    matchFirst.classList.add('wrong-flash');
+    var a = matchFirst;
+    var b = item;
+    setTimeout(function() {
+      a.classList.remove('wrong-flash', 'selected');
+      b.classList.remove('wrong-flash');
+    }, 500);
+    matchFirst = null;
+  }
+}
+
+/* ───── INTERJECTION SPOTTER ───── */
+function spotterPick(word, sentenceId) {
+  var sentence = document.getElementById(sentenceId);
+  if (sentence.getAttribute('data-done') === 'true') return;
+
+  var words = sentence.querySelectorAll('.spotter-word');
+  words.forEach(function(w) { w.classList.remove('selected'); });
+
+  var result = document.getElementById(sentenceId + '-result');
+  var isCorrect = word.getAttribute('data-correct') === 'true';
+
+  if (isCorrect) {
+    word.classList.add('correct-reveal');
+    result.textContent = '✅ That\'s it! "' + word.textContent.replace(/[,!.]/g,'').trim() + '" is correct.';
+    result.className = 'spotter-result show win';
+  } else {
+    word.classList.add('wrong-reveal');
+    result.textContent = '🤔 Not quite — try again!';
+    result.className = 'spotter-result show miss';
+    setTimeout(function() {
+      word.classList.remove('wrong-reveal');
+      result.classList.remove('show');
+    }, 1500);
+    return;
+  }
+  sentence.setAttribute('data-done', 'true');
+}
+
+/* ───── DOL HIGHLIGHTER ───── */
+function dolHighlight(word, explanation) {
+  word.classList.toggle('highlighted');
+  var explain = document.getElementById('dolExplain');
+  if (word.classList.contains('highlighted') && explanation) {
+    explain.textContent = '→ ' + explanation;
+    explain.style.opacity = '1';
+  } else if (!explanation) {
+    explain.textContent = '';
+  } else {
+    // Check if any highlighted words remain
+    var anyHighlighted = document.querySelectorAll('#dolModel .highlighted');
+    if (anyHighlighted.length === 0) {
+      explain.textContent = '';
+    } else {
+      // Show the last highlighted word's explanation
+      var last = anyHighlighted[anyHighlighted.length - 1];
+      explain.textContent = '';
+    }
+  }
+}
+
+/* ───── AUTO-SAVE JOURNAL BOXES ───── */
+function autoSave(textarea, dotId) {
+  var dot = document.getElementById(dotId);
+  if (dot) {
+    dot.classList.add('saved');
+    clearTimeout(textarea._saveTimeout);
+    textarea._saveTimeout = setTimeout(function() {}, 300);
+  }
+}
+
+/* ───── FILL-IN-THE-ROOT GAME (MORPHOLOGY) ───── */
+window._fillinDone = false;
+
+function checkFillIn() {
+  var inputs = document.querySelectorAll('.fillin-input');
+  var allCorrect = true;
+  inputs.forEach(function(inp) {
+    var answer = inp.getAttribute('data-answer').toLowerCase();
+    var val = inp.value.trim().toLowerCase();
+    if (val === answer) {
+      inp.classList.remove('wrong');
+      inp.classList.add('correct');
+      inp.disabled = true;
+    } else {
+      inp.classList.remove('correct');
+      inp.classList.add('wrong');
+      allCorrect = false;
+      setTimeout(function() { inp.classList.remove('wrong'); }, 600);
+    }
+  });
+  if (allCorrect) {
+    document.getElementById('fillinFeedback').classList.add('show');
+    window._fillinDone = true;
+  }
+}
+
+/* ───── DOWNLOAD JOURNAL AS PDF ───── */
+function downloadJournal() {
+  gatherAnswers();
+
+  var sections = [
+    { title: '📖 CHAPTER THINKING', ids: ['journal-q1','journal-q2','journal-q3'] },
+    { title: '🔤 WORD STUDY CONNECTION (MORPHOLOGY)', ids: ['journal-morph'] },
+    { title: '🪶 WRITING CONNECTION', ids: ['journal-writing'] }
+  ];
+
+  var html = '<!DOCTYPE html><html><head><meta charset="UTF-8">';
+  html += '<title>Lesson 2.1 — My Work</title>';
+  html += '<style>';
+  html += 'body{font-family:Georgia,serif;max-width:700px;margin:40px auto;padding:0 20px;color:#1a1a2e;line-height:1.7;}';
+  html += 'h1{font-size:22px;border-bottom:3px solid #5C2D91;padding-bottom:8px;margin-bottom:6px;}';
+  html += 'h2{font-size:14px;color:#7A88A8;margin-bottom:24px;}';
+  html += '.section-title{font-size:16px;font-weight:bold;color:#2A0A4A;margin:28px 0 4px;padding:8px 0 4px;border-bottom:2px solid #E2E8F4;}';
+  html += '.q-label{font-size:13px;font-weight:bold;color:#3A4A6B;margin:16px 0 2px;}';
+  html += '.q-answer{font-size:14px;color:#2A0A4A;margin:0 0 4px;padding:6px 12px;background:#f8f9fc;border-left:3px solid #D6F2FB;border-radius:4px;white-space:pre-wrap;}';
+  html += '.no-answer{color:#B0B8CC;font-style:italic;}';
+  html += '.games{margin-top:28px;padding-top:12px;border-top:2px solid #E2E8F4;}';
+  html += '.games-title{font-size:16px;font-weight:bold;color:#2A0A4A;margin-bottom:8px;}';
+  html += '.game-line{font-size:14px;margin-bottom:4px;}';
+  html += '</style></head><body>';
+  html += '<h1>📓 My Work — Lesson 18.3</h1>';
+  html += '<h2>The Whipping Boy and the Whipping Boy — Ch. 1 & 2</h2>';
+
+  sections.forEach(function(sec) {
+    html += '<div class="section-title">' + sec.title + '</div>';
+    sec.ids.forEach(function(id) {
+      var el = document.getElementById(id);
+      if (!el) return;
+      var label = el.getAttribute('data-label') || id;
+      var val = el.value.trim();
+      html += '<div class="q-label">' + label + '</div>';
+      if (val) {
+        html += '<div class="q-answer">' + val.replace(/</g, '&lt;').replace(/>/g, '&gt;') + '</div>';
+      } else {
+        html += '<div class="q-answer no-answer">(no answer)</div>';
+      }
+    });
+  });
+
+  // Mini-game results
+  html += '<div class="games"><div class="games-title">🎮 Mini-Game Results</div>';
+  html += '<div class="game-line">' + (window._fillinDone ? '✅' : '⬜') + ' Morphology Word Parts</div>';
+  html += '<div class="game-line">' + (matchCount >= 4 ? '✅' : '⬜') + ' Vocabulary Match</div>';
+  var spotDone = 0;
+  for (var i = 1; i <= 4; i++) {
+    var s = document.getElementById('spot' + i);
+    if (s && s.getAttribute('data-done') === 'true') spotDone++;
+  }
+  html += '<div class="game-line">' + (spotDone >= 4 ? '✅' : '⬜') + ' Action Verb Spotter</div>';
+  html += '<div class="game-line">' + (sortPlaced >= sortTotal ? '✅' : '⬜') + ' Spelling Word Sort</div>';
+  html += '</div>';
+
+  html += '</body></html>';
+
+  var win = window.open('', '_blank');
+  win.document.write(html);
+  win.document.close();
+  setTimeout(function() { win.print(); }, 400);
+}
+
+/* ───── STORY JOURNEY TRACKER ───── */
+const TRACKER_TOTAL = 5;
+const TRACKER_PROGRESS = 1.0;
+
+const trackerIcons = ["🏰", "🌙", "🌲", "🌊", "👑"];
+const trackerPos = [
+  { x: 8, y: 140 }, { x: 26, y: 122 }, { x: 46, y: 132 },
+  { x: 66, y: 118 }, { x: 86, y: 130 }
+];
+
+(function renderTracker() {
+  const scene = document.getElementById('scene');
+  if (!scene) return;
+  const reached = Math.floor(TRACKER_PROGRESS);
+  const frac = TRACKER_PROGRESS - reached;
+  for (let i = 0; i < TRACKER_TOTAL; i++) {
+    const n = document.createElement('div');
+    const isDone = (i + 1) <= reached;
+    const isActive = !isDone && (i === reached);
+    n.className = 'node' + (isDone ? ' done' : '') + (isActive ? ' active' : '') + (!isDone && !isActive ? ' upcoming' : '');
+    n.style.left = 'calc(' + trackerPos[i].x + '% - 15px)';
+    n.style.top = trackerPos[i].y + 'px';
+    n.innerHTML = isDone ? '✦' : trackerIcons[i];
+    scene.appendChild(n);
+  }
+  const tok = document.getElementById('characterToken');
+  if (!tok) return;
+  let tokX, tokY;
+  if (frac === 0 && reached > 0) {
+    // exactly at a stop
+    const idx = reached - 1;
+    tokX = trackerPos[idx].x;
+    tokY = trackerPos[idx].y;
+  } else if (reached === 0) {
+    // partway from start toward stop 1
+    tokX = 0 + (trackerPos[0].x - 0) * frac;
+    tokY = trackerPos[0].y;
+  } else {
+    // between stop (reached) and stop (reached+1)
+    const fromIdx = reached - 1;
+    const toIdx = reached;
+    tokX = trackerPos[fromIdx].x + (trackerPos[toIdx].x - trackerPos[fromIdx].x) * frac;
+    tokY = trackerPos[fromIdx].y + (trackerPos[toIdx].y - trackerPos[fromIdx].y) * frac;
+  }
+  tok.style.left = 'calc(' + tokX + '% - 14px)';
+  tok.style.top = (tokY - 36) + 'px';
+})();
+
+/* ───── VIDEO MANIFEST LOADER ─────
+   Loads window.VIDEO_MANIFEST from GitHub and swaps any matching
+   placeholder divs with the real OneDrive iframe.
+   The manifest is a single .js file you push to GitHub. To set it:
+   1. Push videos.js to: https://raw.githubusercontent.com/USER/REPO/main/videos.js
+   2. Edit the SCRIPT_URL below to match your repo.
+   3. In videos.js, add entries like:
+        window.VIDEO_MANIFEST = window.VIDEO_MANIFEST || {};
+        window.VIDEO_MANIFEST["1-1-welcome"] = "<iframe src='...' ...></iframe>";
+*/
+(function() {
+  // TODO: replace this with your actual GitHub raw URL once the repo is set up
+  var SCRIPT_URL = "https://raw.githubusercontent.com/optimaondemand/optima-assets/main/videos.js";
+
+  function loadVideos() {
+    if (!window.VIDEO_MANIFEST) return;
+    document.querySelectorAll('.video-placeholder').forEach(function(ph) {
+      var comment = null;
+      ph.childNodes.forEach(function(node) {
+        if (node.nodeType === 1 && node.className === 'video-placeholder-id') {
+          node.childNodes.forEach(function(c) {
+            if (c.nodeType === 8 && /slot:/.test(c.nodeValue)) {
+              comment = c.nodeValue.replace(/.*slot:\s*/, '').trim();
+            }
+          });
+        }
+      });
+      if (!comment) return;
+      var entry = window.VIDEO_MANIFEST[comment];
+      if (!entry) return;
+      // entry can be a full iframe HTML string OR just a src URL
+      var ratioWrap = ph.parentElement;
+      if (!ratioWrap) return;
+      if (entry.indexOf('<iframe') === 0 || entry.indexOf('<IFRAME') === 0) {
+        ratioWrap.innerHTML = entry;
+      } else {
+        ratioWrap.innerHTML = '<iframe src="' + entry +
+          '" style="position:absolute;top:0;left:0;width:100%;height:100%;border:none;" ' +
+          'allowfullscreen></iframe>';
+      }
+    });
+  }
+
+  var s = document.createElement('script');
+  s.src = SCRIPT_URL;
+  s.async = true;
+  s.onload = loadVideos;
+  s.onerror = function() { /* manifest not available yet — placeholders remain */ };
+  document.head.appendChild(s);
+})();
+
+</script>
+
+</body>
+</html>

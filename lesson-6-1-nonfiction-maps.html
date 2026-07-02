@@ -1,0 +1,2259 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Optima Academy Online — Lesson 6.1: What Is a Map?</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Nunito:wght@400;600;700;800;900&display=swap');
+
+*,*::before,*::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: 'Nunito', 'Century Gothic', 'Arial Rounded MT Bold', Verdana, sans-serif;
+  background: #F0F2F8;
+  color: #0E1C42;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+.page-wrap {
+  max-width: 920px;
+  margin: 0 auto;
+  background: #FFFFFF;
+  box-shadow: 0 0 40px rgba(14, 28, 66, 0.08);
+}
+
+/* ═══════════ PROGRESS BAR ═══════════ */
+.progress-wrap {
+  position: sticky;
+  top: 0;
+  z-index: 200;
+  background: #0E1C42;
+  padding: 8px 20px 10px;
+  border-bottom: none;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+.progress-label {
+  font-size: 12px;
+  color: #2B7A78;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  white-space: nowrap;
+}
+.progress-track {
+  flex: 1;
+  height: 10px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+}
+.progress-fill {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, #2B7A78, #3A9B99, #F2B134);
+  border-radius: 10px;
+  transition: width 0.4s ease;
+}
+.progress-pct {
+  font-size: 13px;
+  color: #F2B134;
+  font-weight: 800;
+  min-width: 36px;
+  text-align: right;
+}
+
+/* ═══════════ HEADER ═══════════ */
+.header {
+  background: #0E1C42;
+  border-bottom: 6px solid #2B7A78;
+  padding: 20px 28px 18px;
+  position: relative;
+  overflow: hidden;
+}
+.header::after {
+  content: '';
+  position: absolute;
+  bottom: 6px;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #2B7A78, #3A9B99, #2B7A78);
+}
+.header-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+.header-logo {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+.header-logo img { width: 48px; height: 38px; }
+.header-org { font-size: 22px; color: #fff; font-weight: 800; line-height: 1.15; }
+.header-sub { font-size: 11px; color: #2B7A78; letter-spacing: 0.5px; }
+.header-title {
+  font-family: 'Lora', Georgia, serif;
+  font-size: 28px;
+  color: #fff;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 10px;
+}
+.header-title em { color: #FFF0C8; font-style: italic; }
+.header-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(85, 200, 232, 0.15);
+  border: 1.5px solid rgba(85, 200, 232, 0.35);
+  border-radius: 28px;
+  padding: 6px 16px;
+}
+.header-badge-icon { font-size: 22px; }
+.header-badge-text { font-size: 18px; color: #fff; font-weight: 800; }
+
+/* ═══════════ INFO STRIP ═══════════ */
+.info-strip {
+  display: flex;
+  flex-wrap: wrap;
+  background: #FFFFFF;
+  border-bottom: 2px solid #E2E8F4;
+}
+.info-cell {
+  flex: 1;
+  min-width: 150px;
+  padding: 12px 16px;
+  border-right: 1px solid #E2E8F4;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.info-cell:last-child { border-right: none; }
+.info-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  flex-shrink: 0;
+}
+.info-label {
+  font-size: 10px;
+  color: #7A88A8;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: 700;
+}
+.info-value { font-size: 16px; color: #0E1C42; font-weight: 800; line-height: 1.2; }
+.info-detail { font-size: 11px; color: #3A4A6B; line-height: 1.3; }
+
+/* ═══════════ INTRO COLLAPSIBLE ═══════════ */
+.intro-section { transition: max-height 0.35s ease, padding 0.35s ease, opacity 0.25s ease; overflow: hidden; }
+.intro-section.collapsed .intro-2col,
+.intro-section.collapsed .need-strip { display: none; }
+.intro-collapsed-bar {
+  display: none;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 28px;
+  background: #FFF8F0;
+  border-bottom: 2px solid #F5E6C8;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+.intro-collapsed-bar:hover { background: #FFF3DC; }
+.intro-section.collapsed .intro-collapsed-bar { display: flex; }
+.intro-collapsed-icon { font-size: 18px; }
+.intro-collapsed-text {
+  font-size: 14px;
+  color: #5A4A3A;
+  font-weight: 700;
+  flex: 1;
+}
+.intro-collapsed-toggle {
+  font-size: 12px;
+  color: #F2B134;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* ═══════════ INTRO 2-COL ═══════════ */
+.intro-2col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  padding: 20px 28px 4px;
+}
+.intro-card {
+  background: #FFFFFF;
+  border: 2px solid #E2E8F4;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(14, 28, 66, 0.04);
+}
+.intro-card-head {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 18px;
+  border-bottom: 2px solid;
+}
+.intro-card-head-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.intro-card-head-label {
+  font-size: 10px;
+  color: #7A88A8;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  font-weight: 700;
+}
+.intro-card-head-title { font-size: 18px; color: #0E1C42; font-weight: 800; line-height: 1.2; }
+.intro-card-body { padding: 14px 18px; }
+.intro-card-body p { font-size: 15px; color: #3A4A6B; line-height: 1.65; margin-bottom: 8px; }
+.intro-card-body p:last-child { margin-bottom: 0; }
+.intro-card-body .obj-line {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  font-size: 15px;
+  color: #0E1C42;
+  line-height: 1.55;
+  margin-bottom: 8px;
+}
+.intro-card-body .obj-line:last-child { margin-bottom: 0; }
+.intro-card-body .obj-icon { flex-shrink: 0; font-size: 17px; }
+.theme-question .intro-card-head { background: #FFF3DC; border-color: #F5E6C8; }
+.theme-question .intro-card-head-icon { background: #F2B134; }
+.theme-objectives .intro-card-head { background: #E8F5F4; border-color: #C8E8E6; }
+.theme-objectives .intro-card-head-icon { background: #2B7A78; }
+
+/* ═══════════ NEED STRIP ═══════════ */
+.need-strip {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 12px 28px 18px;
+}
+.need-strip-label {
+  font-size: 13px;
+  color: #3A4A6B;
+  font-weight: 700;
+  white-space: nowrap;
+}
+.need-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  background: #E3F8ED;
+  border: 1.5px solid #B8E8CF;
+  border-radius: 20px;
+  padding: 5px 12px;
+  font-size: 13px;
+  color: #0E1C42;
+  font-weight: 700;
+}
+
+/* ═══════════ TAB BAR ═══════════ */
+.tab-bar {
+  position: sticky;
+  top: 38px;
+  z-index: 100;
+  background: #FFFFFF;
+  border-bottom: 3px solid #E2E8F4;
+  display: flex;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  box-shadow: 0 -4px 0 0 #0E1C42;
+}
+.tab-bar::-webkit-scrollbar { display: none; }
+.tab-btn {
+  flex: 1;
+  min-width: 130px;
+  padding: 12px 8px 11px;
+  background: transparent;
+  border: none;
+  border-bottom: 4px solid transparent;
+  font-family: 'Nunito', sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  color: #7A88A8;
+  cursor: pointer;
+  transition: all 0.2s;
+  white-space: nowrap;
+  line-height: 1.3;
+  text-align: center;
+}
+.tab-btn:hover { color: #0E1C42; background: #E8F5F4; }
+.tab-btn.active {
+  color: #0E1C42;
+  border-bottom-color: #2B7A78;
+  background: #FFFFFF;
+}
+.tab-btn .tab-check {
+  display: none;
+  font-size: 12px;
+  color: #34B76F;
+  margin-left: 4px;
+  font-weight: 800;
+}
+.tab-btn.visited .tab-check { display: inline; }
+.tab-panel { display: none; padding: 24px 28px 36px; }
+.tab-panel.active { display: block; }
+
+/* ═══════════ VIDEO WRAP ═══════════ */
+.video-wrap {
+  border-radius: 18px;
+  overflow: hidden;
+  border: 2px solid #E2E8F4;
+  box-shadow: 0 4px 20px rgba(14, 28, 66, 0.08);
+  background: #000;
+  margin: 0 0 22px;
+}
+.video-wrap-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 18px;
+  background: linear-gradient(135deg, #0E1C42, #1A2D5A);
+  border-bottom: 2px solid rgba(85, 200, 232, 0.2);
+}
+.video-wrap-type {
+  font-size: 10px;
+  color: #2B7A78;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-weight: 800;
+  margin-bottom: 2px;
+}
+.video-wrap-title { font-size: 16px; color: #fff; font-weight: 800; line-height: 1.2; }
+.video-ratio {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+}
+.video-placeholder {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #0E1C42, #1A2D5A);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 24px;
+}
+.video-placeholder-icon { font-size: 44px; margin-bottom: 10px; opacity: 0.55; }
+.video-placeholder-text {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.55);
+  font-weight: 600;
+  line-height: 1.5;
+  font-family: 'Nunito', sans-serif;
+}
+.video-placeholder-id {
+  font-size: 11px;
+  color: rgba(85, 200, 232, 0.4);
+  font-family: monospace;
+  margin-top: 6px;
+  letter-spacing: 0.5px;
+}
+
+/* ═══════════ ACTIVITY CARDS ═══════════ */
+.activity {
+  background: #FFFFFF;
+  border: 2px solid #E2E8F4;
+  border-radius: 18px;
+  margin-bottom: 18px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(14, 28, 66, 0.04);
+}
+.activity.bl-cyan { border-left: 6px solid #2B7A78; }
+.activity.bl-gold { border-left: 6px solid #F2B134; }
+.activity.bl-green { border-left: 6px solid #34B76F; }
+.activity.bl-purple { border-left: 6px solid #8B6FC0; }
+.activity.bl-rose { border-left: 6px solid #c7627e; }
+.activity.bl-navy { border-left: 6px solid #0E1C42; }
+.activity-head {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 20px 14px 18px;
+  border-bottom: 1.5px solid #E2E8F4;
+}
+.activity-num {
+  width: 38px;
+  height: 38px;
+  border-radius: 14px;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.activity-title { font-size: 19px; color: #0E1C42; font-weight: 800; line-height: 1.2; }
+.activity-sub { font-size: 12px; color: #7A88A8; }
+.activity-time {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 700;
+  color: #fff;
+  white-space: nowrap;
+  margin-left: auto;
+}
+.activity-body { padding: 18px 22px; }
+.activity-body p { font-size: 17px; color: #3A4A6B; line-height: 1.75; margin-bottom: 12px; }
+.activity-body p:last-child { margin-bottom: 0; }
+
+/* ═══════════ CALLOUTS ═══════════ */
+.callout {
+  border-radius: 14px;
+  padding: 16px 18px;
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+.callout:last-child { margin-bottom: 0; }
+.callout-icon { font-size: 28px; flex-shrink: 0; margin-top: 2px; }
+.callout p { font-size: 16px; color: #0E1C42; line-height: 1.65; margin: 0; }
+.callout-info { background: #E8F5F4; border: 2px solid #C8E8E6; }
+.callout-think { background: #FFF3DC; border: 2px solid #F5E6C8; }
+.callout-tip { background: #E3F8ED; border: 2px solid #B8E8CF; }
+.callout-vocab { background: #F0E8FF; border: 2px solid #D8CCF0; }
+.callout-submit { background: #FDE8F0; border: 2px solid #F0B8CA; }
+
+/* ═══════════ SOCRATIC BOX ═══════════ */
+.socratic-box {
+  background: linear-gradient(135deg, #F0E8FF 0%, #E8DCFA 100%);
+  border: 2px solid #D8CCF0;
+  border-radius: 14px;
+  padding: 16px 18px;
+  margin-bottom: 14px;
+}
+.socratic-box:last-child { margin-bottom: 0; }
+.socratic-label {
+  font-size: 12px;
+  color: #6B4FB0;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: 800;
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.socratic-q {
+  font-size: 16px;
+  color: #0E1C42;
+  line-height: 1.7;
+  font-style: italic;
+  margin-bottom: 8px;
+}
+.socratic-q:last-child { margin-bottom: 0; }
+.socratic-q strong { font-style: normal; color: #0E1C42; }
+
+/* ═══════════ DOL & PRACTICE TASKS ═══════════ */
+.task-box {
+  background: #FAFBFF;
+  border: 2px solid #E2E8F4;
+  border-radius: 14px;
+  padding: 16px 18px;
+  margin-bottom: 14px;
+}
+.task-box:last-child { margin-bottom: 0; }
+.task-label {
+  font-size: 12px;
+  color: #2B7A78;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  font-weight: 800;
+  margin-bottom: 10px;
+}
+.task-sentence {
+  background: #FFFFFF;
+  border: 1.5px solid #E2E8F4;
+  border-left: 4px solid #F2B134;
+  border-radius: 10px;
+  padding: 12px 16px;
+  font-size: 16px;
+  color: #0E1C42;
+  line-height: 1.6;
+  margin-bottom: 10px;
+  font-family: 'Lora', Georgia, serif;
+}
+.task-sentence:last-child { margin-bottom: 0; }
+.task-instruction { font-size: 15px; color: #3A4A6B; line-height: 1.6; margin-bottom: 10px; }
+
+/* ═══════════ POETRY ═══════════ */
+.poem-box {
+  background: linear-gradient(135deg, #FFF8F0 0%, #FFF3DC 100%);
+  border: 2px solid #F5E6C8;
+  border-radius: 14px;
+  padding: 18px 22px;
+  margin-bottom: 14px;
+}
+.poem-title {
+  font-family: 'Lora', Georgia, serif;
+  font-size: 18px;
+  color: #0E1C42;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+.poem-author {
+  font-size: 13px;
+  color: #7A88A8;
+  font-style: italic;
+  margin-bottom: 12px;
+}
+.poem-text {
+  font-family: 'Lora', Georgia, serif;
+  font-size: 16px;
+  color: #3A4A6B;
+  line-height: 1.8;
+  font-style: italic;
+  white-space: pre-line;
+}
+
+/* ═══════════ STORY JOURNEY TRACKER ═══════════ */
+.tracker-card {
+  background: #FFFFFF;
+  border: 2px solid #E2E8F4;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(14, 28, 66, 0.04);
+  margin-bottom: 22px;
+}
+.tracker-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 20px;
+  background: linear-gradient(135deg, #1A5C5A 0%, #2B7A78 100%);
+  border-bottom: 2px solid #237472;
+}
+.tracker-header-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.2);
+  color: #fff;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.tracker-header-label {
+  font-size: 10px;
+  color: rgba(255, 255, 255, 0.7);
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  font-weight: 700;
+}
+.tracker-header-title { font-size: 17px; color: #fff; font-weight: 800; line-height: 1.2; }
+.scene-wrap {
+  width: 100%;
+  position: relative;
+  height: 210px;
+  overflow: hidden;
+  border-bottom: 3px solid #8b6f47;
+  background: linear-gradient(180deg, #c2ddf0 0%, #d4eaf7 30%, #8CD4D1 50%, #4DB5B2 58%, #3A9B99 65%, #2B7A78 100%);
+  user-select: none;
+}
+.cloud {
+  position: absolute;
+  background: rgba(255, 255, 255, 0.55);
+  border-radius: 50%;
+  filter: blur(2px);
+}
+.hills-far {
+  position: absolute;
+  bottom: 60px;
+  left: 0;
+  right: 0;
+  height: 80px;
+  background:
+    radial-gradient(ellipse 220px 60px at 10% 100%, #8abb6d 70%, transparent 71%),
+    radial-gradient(ellipse 300px 70px at 30% 100%, #79ad58 70%, transparent 71%),
+    radial-gradient(ellipse 250px 55px at 55% 100%, #8abb6d 70%, transparent 71%),
+    radial-gradient(ellipse 280px 65px at 78% 100%, #6fa04a 70%, transparent 71%),
+    radial-gradient(ellipse 200px 50px at 95% 100%, #8abb6d 70%, transparent 71%);
+}
+.path-svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+.tree, .house, .flower {
+  position: absolute;
+  pointer-events: none;
+  z-index: 1;
+  filter: drop-shadow(0 2px 2px rgba(0, 0, 0, 0.15));
+}
+.flower { filter: none; font-size: 12px; z-index: 2; }
+.lake {
+  position: absolute;
+  background: linear-gradient(180deg, rgba(135, 188, 222, 0.5), rgba(135, 188, 222, 0.3));
+  border-radius: 50%;
+  filter: blur(2px);
+  z-index: 1;
+}
+.node {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  z-index: 5;
+  border: 3px solid #f5f0e6;
+  background: #fff;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.18), inset 0 -2px 0 rgba(0, 0, 0, 0.05);
+}
+.node.done {
+  background: #2B7A78;
+  border-color: #fde8a0;
+  box-shadow: 0 0 0 2px #2B7A78, 0 2px 8px rgba(74, 124, 46, 0.45);
+  color: #fff;
+}
+.node.active {
+  background: #F2B134;
+  border-color: #fde8a0;
+  box-shadow: 0 0 0 3px #F2B134, 0 0 14px rgba(199, 146, 44, 0.5);
+  transform: scale(1.15);
+  color: #fff;
+}
+.node.upcoming { opacity: 0.55; }
+.anne-token {
+  position: absolute;
+  font-size: 26px;
+  z-index: 20;
+  pointer-events: none;
+  filter: drop-shadow(0 3px 5px rgba(0, 0, 0, 0.3));
+  animation: hop 2s ease-in-out infinite;
+}
+@keyframes hop {
+  0%, 100% { transform: translateY(0) rotate(-3deg); }
+  50% { transform: translateY(-5px) rotate(3deg); }
+}
+.title-plaque {
+  position: absolute;
+  top: 8px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(253, 248, 240, 0.92);
+  border: 2px solid #c4a882;
+  border-radius: 8px;
+  padding: 3px 18px 4px;
+  z-index: 15;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  white-space: nowrap;
+}
+.title-plaque h1 {
+  font-family: 'Lora', Georgia, serif;
+  font-size: 14px;
+  font-weight: 700;
+  color: #1A5C5A;
+  line-height: 1.2;
+}
+.title-plaque h1 em { color: #c7627e; font-style: italic; }
+.tracker-chapter-label {
+  text-align: center;
+  padding: 10px 16px;
+  font-size: 13px;
+  color: #7A88A8;
+  font-weight: 600;
+  background: #FAFBFF;
+  border-top: 1px solid #E2E8F4;
+}
+.tracker-chapter-label strong { color: #F2B134; }
+
+/* ═══════════ KEY CONCEPT ═══════════ */
+.key-concept {
+  background: #FFF3DC;
+  border: 2px solid #F5E6C8;
+  border-radius: 14px;
+  padding: 16px 18px;
+  margin-bottom: 14px;
+}
+.key-concept:last-child { margin-bottom: 0; }
+.key-concept-label {
+  font-size: 12px;
+  color: #F2B134;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: 800;
+  margin-bottom: 8px;
+}
+.key-concept p { font-size: 15px; color: #0E1C42; line-height: 1.7; margin-bottom: 6px; }
+
+/* ═══════════ VOCABULARY FLIP CARDS ═══════════ */
+.vocab-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  margin: 14px 0;
+}
+.flip-card {
+  perspective: 800px;
+  height: 175px;
+  cursor: pointer;
+}
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.5s ease;
+  transform-style: preserve-3d;
+}
+.flip-card.flipped .flip-card-inner { transform: rotateY(180deg); }
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 16px;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 16px;
+  text-align: center;
+  border: 2px solid #E2E8F4;
+  box-shadow: 0 2px 10px rgba(14, 28, 66, 0.06);
+}
+.flip-card-front {
+  background: #FFFFFF;
+  border-top: 5px solid #2B7A78;
+}
+.flip-card-front .fc-emoji { font-size: 28px; margin-bottom: 6px; }
+.flip-card-front .fc-word {
+  font-family: 'Lora', Georgia, serif;
+  font-size: 17px;
+  font-weight: 700;
+  color: #0E1C42;
+  margin-bottom: 4px;
+}
+.flip-card-front .fc-tap {
+  font-size: 11px;
+  color: #7A88A8;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+}
+.flip-card-back {
+  background: linear-gradient(145deg, #0E1C42, #1A2D5A);
+  border-color: #0E1C42;
+  transform: rotateY(180deg);
+}
+.flip-card-back .fc-def {
+  font-size: 13.5px;
+  color: #fff;
+  line-height: 1.5;
+  font-weight: 600;
+}
+.flip-card-back .fc-word-back {
+  font-size: 10px;
+  color: #2B7A78;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 800;
+  margin-bottom: 6px;
+}
+
+/* ═══════════ COPYWORK ═══════════ */
+.copywork-box {
+  background: linear-gradient(135deg, #FFF8F0 0%, #FFF3DC 100%);
+  border: 2px solid #F5E6C8;
+  border-radius: 14px;
+  padding: 18px 20px;
+  margin-bottom: 14px;
+}
+.copywork-label {
+  font-size: 12px;
+  color: #F2B134;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: 800;
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.copywork-text {
+  font-family: 'Lora', Georgia, serif;
+  font-size: 17px;
+  color: #0E1C42;
+  line-height: 1.7;
+  font-style: italic;
+  margin-bottom: 8px;
+}
+.copywork-instruction { font-size: 14px; color: #3A4A6B; line-height: 1.5; }
+
+/* ═══════════ READING BOX ═══════════ */
+.reading-links {
+  background: #E8F5F4;
+  border: 2px solid #C8E8E6;
+  border-radius: 14px;
+  padding: 16px 18px;
+  margin-bottom: 16px;
+}
+.reading-links-title {
+  font-size: 14px;
+  color: #1A6B8E;
+  font-weight: 800;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+.reading-link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 14px;
+  background: #FFFFFF;
+  border: 1.5px solid #B8E0F0;
+  border-radius: 10px;
+  margin-bottom: 8px;
+  font-size: 15px;
+  color: #0E1C42;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.15s, border-color 0.15s;
+}
+.reading-link:last-child { margin-bottom: 0; }
+.reading-link:hover { background: #E8F5F4; border-color: #2B7A78; }
+.reading-link-icon { font-size: 20px; }
+
+/* ═══════════ RWM ═══════════ */
+.rwm-box {
+  background: #FFFFFF;
+  border: 2px solid #E2E8F4;
+  border-radius: 14px;
+  overflow: hidden;
+  margin-bottom: 14px;
+}
+.rwm-header {
+  background: linear-gradient(135deg, #0E1C42, #1A2D5A);
+  color: #fff;
+  padding: 12px 18px;
+  font-size: 14px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+}
+.rwm-sentence {
+  background: linear-gradient(135deg, #FFF8F0 0%, #FFF3DC 100%);
+  border-bottom: 2px solid #F5E6C8;
+  padding: 16px 20px;
+  font-family: 'Lora', Georgia, serif;
+  font-size: 17px;
+  color: #0E1C42;
+  line-height: 1.7;
+  font-style: italic;
+}
+.rwm-step {
+  padding: 14px 20px;
+  border-bottom: 1.5px solid #E2E8F4;
+}
+.rwm-step:last-child { border-bottom: none; }
+.rwm-step-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  color: #2B7A78;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 8px;
+}
+.rwm-step-text { font-size: 15px; color: #3A4A6B; line-height: 1.6; }
+.rwm-frame {
+  background: #FAFBFF;
+  border: 1.5px dashed #F2B134;
+  border-radius: 8px;
+  padding: 10px 14px;
+  margin-top: 8px;
+  font-family: 'Lora', Georgia, serif;
+  font-size: 15px;
+  color: #F2B134;
+  font-style: italic;
+}
+
+/* ═══════════ FLUENCY ═══════════ */
+.fluency-passage {
+  background: linear-gradient(135deg, #FFF8F0 0%, #FFF3DC 100%);
+  border: 2px solid #F5E6C8;
+  border-left: 6px solid #F2B134;
+  border-radius: 14px;
+  padding: 20px 24px;
+  margin-bottom: 16px;
+  font-family: 'Lora', Georgia, serif;
+  font-size: 17px;
+  color: #0E1C42;
+  line-height: 1.85;
+  font-style: italic;
+}
+
+/* ═══════════ ASSIGNMENT QUESTIONS ═══════════ */
+.q-block {
+  background: #FAFBFF;
+  border: 2px solid #E2E8F4;
+  border-radius: 14px;
+  padding: 14px 18px;
+  margin-bottom: 12px;
+}
+.q-block:last-child { margin-bottom: 0; }
+.q-num {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: #2B7A78;
+  color: #fff;
+  font-weight: 800;
+  font-size: 14px;
+  margin-right: 8px;
+  vertical-align: middle;
+}
+.q-text { font-size: 16px; color: #0E1C42; line-height: 1.65; margin-bottom: 4px; }
+.q-hint { font-size: 14px; color: #7A88A8; font-style: italic; }
+.chapter-section-title {
+  font-family: 'Lora', Georgia, serif;
+  font-size: 20px;
+  color: #0E1C42;
+  font-weight: 700;
+  margin: 18px 0 12px;
+  padding-bottom: 6px;
+  border-bottom: 2px solid #2B7A78;
+}
+.chapter-section-title:first-child { margin-top: 6px; }
+
+/* ═══════════ TURN-IN CHECKLIST ═══════════ */
+.turn-in-card {
+  background: #FFFFFF;
+  border: 2px solid #E2E8F4;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(14, 28, 66, 0.04);
+  margin-top: 18px;
+}
+.turn-in-header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  background: #E8F5F4;
+  padding: 18px 22px;
+  border-bottom: 2px solid #C8E8E6;
+}
+.turn-in-header-icon { font-size: 36px; line-height: 1; flex-shrink: 0; }
+.turn-in-header-label {
+  font-size: 11px;
+  color: #1A6B8E;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 3px;
+}
+.turn-in-header-title {
+  font-family: 'Lora', Georgia, serif;
+  font-size: 22px;
+  color: #0E1C42;
+  font-weight: 700;
+  line-height: 1.15;
+}
+.turn-in-body { padding: 18px 22px 20px; }
+.turn-in-intro { font-size: 15px; color: #3A4A6B; margin-bottom: 16px; line-height: 1.55; }
+.turn-in-checklist { display: flex; flex-direction: column; gap: 10px; }
+.turn-in-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 12px 16px;
+  background: #FAFBFF;
+  border: 1.5px solid #E2E8F4;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background 0.2s, border-color 0.2s;
+}
+.turn-in-item:hover { background: #E8F5F4; border-color: #B8E0F0; }
+.turn-in-item.checked { background: #E3F8ED; border-color: #B8E8CF; }
+.turn-in-item .turn-in-check {
+  width: 26px;
+  height: 26px;
+  border-radius: 8px;
+  border: 2px solid #B8E0F0;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  font-size: 16px;
+  line-height: 1;
+  transition: background 0.2s, border-color 0.2s;
+}
+.turn-in-item.checked .turn-in-check { background: #34B76F; border-color: #34B76F; }
+.turn-in-item-text { font-size: 15px; color: #0E1C42; font-weight: 600; line-height: 1.55; flex: 1; }
+.turn-in-item.checked .turn-in-item-text { color: #3A4A6B; }
+
+/* ═══════════ QUOTE STRIP ═══════════ */
+.quote-strip {
+  background: linear-gradient(135deg, #FFF8F0 0%, #FFF3DC 100%);
+  border-bottom: 2px solid #F5E6C8;
+  padding: 14px 28px;
+  text-align: center;
+}
+.quote-strip-text {
+  font-family: 'Lora', Georgia, serif;
+  font-size: 16px;
+  font-style: italic;
+  color: #5A4A3A;
+  line-height: 1.6;
+}
+.quote-strip-attr {
+  font-family: 'Nunito', sans-serif;
+  font-size: 11px;
+  color: #7A88A8;
+  font-weight: 700;
+  margin-top: 4px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* ═══════════ NARRATIVE TRANSITION ═══════════ */
+.tab-next-wrap { text-align: center; padding: 24px 0 8px; }
+.tab-transition-voice {
+  font-family: 'Lora', Georgia, serif;
+  font-size: 15px;
+  font-style: italic;
+  color: #5A4A3A;
+  margin-bottom: 12px;
+  line-height: 1.6;
+}
+
+/* ═══════════ OPEN BOOK CARD ═══════════ */
+.open-book-wrap {
+  position: relative;
+  margin-bottom: 22px;
+  padding: 10px 6px 6px;
+}
+/* The hard cover behind everything */
+.open-book-cover {
+  position: absolute;
+  top: 0;
+  left: 2px;
+  right: 2px;
+  bottom: 0;
+  background: linear-gradient(145deg, #8B4060, #A85070, #C7627E);
+  border-radius: 6px 20px 20px 6px;
+  box-shadow: 0 4px 20px rgba(90, 50, 60, 0.2);
+}
+/* Thick spine strip — the bound center */
+.open-book-spine {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 22px;
+  height: 100%;
+  background: linear-gradient(90deg, #6B3048, #7A3855, #8B4060, #7A3855, #6B3048);
+  border-radius: 4px;
+  z-index: 1;
+  box-shadow: inset 0 0 6px rgba(0,0,0,0.2);
+}
+/* Page layer 3 (deepest) */
+.open-book-pages-3 {
+  position: absolute;
+  top: 3px;
+  left: 14px;
+  right: 14px;
+  bottom: 3px;
+  background: #E8E0D4;
+  border-radius: 3px 12px 12px 3px;
+  z-index: 2;
+}
+/* Page layer 2 */
+.open-book-pages-2 {
+  position: absolute;
+  top: 5px;
+  left: 16px;
+  right: 16px;
+  bottom: 4px;
+  background: #F0E8DC;
+  border-radius: 3px 10px 10px 3px;
+  z-index: 3;
+}
+/* Page layer 1 (just behind the main pages) */
+.open-book-pages-1 {
+  position: absolute;
+  top: 7px;
+  left: 18px;
+  right: 18px;
+  bottom: 5px;
+  background: #F5EEE4;
+  border-radius: 3px 8px 8px 3px;
+  z-index: 4;
+}
+/* The main open pages (content goes here) */
+.open-book {
+  position: relative;
+  background: linear-gradient(170deg, #FFFDF8 0%, #FFF8F0 40%, #FFFDF8 100%);
+  border: none;
+  border-radius: 3px 6px 6px 3px;
+  padding: 0;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 160px;
+  z-index: 5;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+}
+/* Center fold / gutter shadow */
+.open-book::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 24px;
+  height: 100%;
+  background: linear-gradient(90deg,
+    transparent 0%,
+    rgba(0,0,0,0.04) 20%,
+    rgba(0,0,0,0.07) 40%,
+    rgba(90,70,50,0.10) 50%,
+    rgba(0,0,0,0.07) 60%,
+    rgba(0,0,0,0.04) 80%,
+    transparent 100%
+  );
+  z-index: 6;
+  pointer-events: none;
+}
+/* Subtle page edge lines on the left side (stacked pages effect) */
+.open-book::after {
+  content: '';
+  position: absolute;
+  top: 8px;
+  bottom: 8px;
+  right: 0;
+  width: 4px;
+  background: repeating-linear-gradient(180deg,
+    transparent 0px,
+    transparent 3px,
+    rgba(200,185,165,0.3) 3px,
+    rgba(200,185,165,0.3) 4px
+  );
+  border-radius: 0 4px 4px 0;
+  z-index: 6;
+  pointer-events: none;
+}
+.open-book-left {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  opacity: 0.3;
+  position: relative;
+}
+/* Page edge lines on the left outer side too */
+.open-book-left::before {
+  content: '';
+  position: absolute;
+  top: 8px;
+  bottom: 8px;
+  left: 0;
+  width: 4px;
+  background: repeating-linear-gradient(180deg,
+    transparent 0px,
+    transparent 3px,
+    rgba(200,185,165,0.3) 3px,
+    rgba(200,185,165,0.3) 4px
+  );
+  border-radius: 4px 0 0 4px;
+}
+.open-book-left-deco {
+  font-size: 48px;
+  filter: grayscale(30%);
+}
+.open-book-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 24px 28px 24px 20px;
+}
+.open-book-title {
+  font-family: 'Lora', Georgia, serif;
+  font-size: 22px;
+  font-weight: 700;
+  color: #0E1C42;
+  margin-bottom: 4px;
+}
+.open-book-title em { color: #c7627e; }
+.open-book-chapter {
+  font-family: 'Lora', Georgia, serif;
+  font-size: 16px;
+  color: #5A4A3A;
+  font-style: italic;
+  margin-bottom: 14px;
+}
+.open-book-prompt {
+  font-size: 14px;
+  color: #7A88A8;
+  font-weight: 600;
+}
+
+/* ═══════════ TAB NEXT BUTTON ═══════════ */
+.tab-next-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 13px 30px;
+  background: linear-gradient(135deg, #2B7A78, #3A9B99);
+  color: #0E1C42;
+  border: none;
+  border-radius: 28px;
+  font-family: 'Nunito', sans-serif;
+  font-size: 16px;
+  font-weight: 800;
+  cursor: pointer;
+  box-shadow: 0 4px 16px rgba(85, 200, 232, 0.3);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.tab-next-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 22px rgba(85, 200, 232, 0.4);
+}
+
+/* ═══════════ BACK TO TOP ═══════════ */
+.back-to-top {
+  position: fixed;
+  bottom: 28px;
+  right: 28px;
+  height: 44px;
+  padding: 0 18px 0 14px;
+  border-radius: 22px;
+  background: linear-gradient(135deg, #0E1C42, #1A2D5A);
+  color: #fff;
+  border: 2px solid #2B7A78;
+  font-size: 14px;
+  font-weight: 800;
+  font-family: 'Nunito', sans-serif;
+  cursor: pointer;
+  box-shadow: 0 4px 18px rgba(14, 28, 66, 0.35);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(20px);
+  transition: opacity 0.3s, visibility 0.3s, transform 0.3s, box-shadow 0.2s;
+  z-index: 500;
+  letter-spacing: 0.3px;
+}
+.back-to-top.show { opacity: 1; visibility: visible; transform: translateY(0); }
+.back-to-top:hover {
+  box-shadow: 0 6px 24px rgba(14, 28, 66, 0.5);
+  transform: translateY(-3px);
+}
+
+/* ═══════════ CONFETTI ═══════════ */
+#confettiCanvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 10000;
+}
+
+/* ═══════════ GATHERED ANSWERS REVIEW ═══════════ */
+.gathered-card {
+  background: #FFFFFF;
+  border: 2px solid #E2E8F4;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(14, 28, 66, 0.04);
+  margin-top: 22px;
+}
+.gathered-header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  background: linear-gradient(135deg, #0E1C42, #1A2D5A);
+  padding: 16px 22px;
+  border-bottom: 2px solid rgba(85, 200, 232, 0.2);
+}
+.gathered-header-icon { font-size: 28px; line-height: 1; }
+.gathered-header-label {
+  font-size: 11px;
+  color: #2B7A78;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 2px;
+}
+.gathered-header-title {
+  font-family: 'Lora', Georgia, serif;
+  font-size: 20px;
+  color: #fff;
+  font-weight: 700;
+}
+.gathered-body { padding: 18px 22px 20px; }
+.gathered-intro { font-size: 15px; color: #3A4A6B; margin-bottom: 14px; line-height: 1.55; }
+.gathered-output {
+  width: 100%;
+  min-height: 300px;
+  padding: 16px 18px;
+  border: 2px solid #E2E8F4;
+  border-radius: 12px;
+  font-family: 'Nunito', sans-serif;
+  font-size: 14px;
+  color: #0E1C42;
+  line-height: 1.65;
+  background: #FAFBFF;
+  resize: vertical;
+  white-space: pre-wrap;
+}
+.gathered-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 14px;
+  flex-wrap: wrap;
+}
+.gathered-btn {
+  flex: 1;
+  min-width: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 14px 20px;
+  border: none;
+  border-radius: 14px;
+  font-family: 'Nunito', sans-serif;
+  font-size: 15px;
+  font-weight: 800;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.gathered-btn:hover { transform: translateY(-2px); }
+.gathered-btn-copy {
+  background: linear-gradient(135deg, #2B7A78, #3A9B99);
+  color: #0E1C42;
+  box-shadow: 0 4px 14px rgba(85, 200, 232, 0.25);
+}
+.gathered-btn-pdf {
+  background: linear-gradient(135deg, #0E1C42, #1A2D5A);
+  color: #fff;
+  border: 2px solid #2B7A78;
+  box-shadow: 0 4px 14px rgba(14, 28, 66, 0.25);
+}
+.gathered-copied {
+  text-align: center;
+  font-size: 14px;
+  font-weight: 700;
+  color: #34B76F;
+  margin-top: 8px;
+  display: none;
+}
+.gathered-copied.show { display: block; }
+
+/* ═══════════ FOOTER ═══════════ */
+.footer {
+  background: #0E1C42;
+  border-top: 4px solid #2B7A78;
+  padding: 18px 28px;
+  text-align: center;
+}
+.footer-main { font-size: 14px; color: #fff; margin-bottom: 4px; }
+.footer-main span { color: #2B7A78; font-weight: 700; }
+.footer-sub { font-size: 12px; color: rgba(255, 255, 255, 0.5); margin-bottom: 2px; }
+.footer-copy { font-size: 11px; color: rgba(255, 255, 255, 0.3); }
+
+/* ═══════════ PAUSE & THINK SIDE BY SIDE ═══════════ */
+.pause-columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin: 14px 0;
+}
+.pause-col {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+@media (max-width: 620px) {
+  .pause-columns { grid-template-columns: 1fr; }
+}
+
+/* ═══════════ FILL-IN-BLANK GAME ═══════════ */
+.fillin-game { margin: 14px 0; }
+.fillin-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 14px;
+  background: #FFFFFF;
+  border: 2px solid #E2E8F4;
+  border-radius: 12px;
+  margin-bottom: 10px;
+  font-size: 16px;
+  color: #0E1C42;
+  flex-wrap: wrap;
+}
+.fillin-item:last-child { margin-bottom: 0; }
+.fillin-input {
+  display: inline-block;
+  width: 120px;
+  padding: 4px 10px;
+  border: 2px dashed #8B6FC0;
+  border-radius: 8px;
+  font-family: 'Lora', Georgia, serif;
+  font-size: 15px;
+  font-weight: 700;
+  color: #8B6FC0;
+  text-align: center;
+  background: #FAFBFF;
+  outline: none;
+  transition: border-color 0.2s, background 0.2s;
+}
+.fillin-input:focus { border-color: #2B7A78; background: #fff; }
+.fillin-input.correct { border-color: #34B76F; background: #E3F8ED; color: #1a5c2e; border-style: solid; }
+.fillin-input.wrong { border-color: #E8636B; background: #FFF0EC; animation: shake 0.4s ease; }
+.fillin-check-btn {
+  display: block;
+  margin: 14px auto 0;
+  padding: 10px 24px;
+  background: linear-gradient(135deg, #8B6FC0, #a88ad4);
+  color: #fff;
+  border: none;
+  border-radius: 24px;
+  font-family: 'Nunito', sans-serif;
+  font-size: 15px;
+  font-weight: 800;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+.fillin-check-btn:hover { transform: translateY(-2px); }
+.fillin-feedback {
+  text-align: center;
+  padding: 10px;
+  font-size: 15px;
+  font-weight: 700;
+  color: #34B76F;
+  display: none;
+}
+.fillin-feedback.show { display: block; }
+
+/* ═══════════ SHOW WHAT YOU KNOW (graded response) ═══════════ */
+.swyk {
+  background: linear-gradient(135deg, #FFF8F0 0%, #FFF3DC 100%);
+  border: 2px solid #F5E6C8;
+  border-left: 6px solid #F2B134;
+  border-radius: 14px;
+  padding: 16px 18px;
+  margin-top: 16px;
+}
+.swyk-label {
+  font-size: 12px;
+  color: #F2B134;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  font-weight: 800;
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.swyk-prompt {
+  font-size: 15px;
+  color: #0E1C42;
+  line-height: 1.6;
+  margin-bottom: 8px;
+}
+
+/* ═══════════ JOURNAL TEXT BOXES ═══════════ */
+.journal-box {
+  width: 100%;
+  min-height: 70px;
+  padding: 12px 14px;
+  border: 2px solid #E2E8F4;
+  border-radius: 12px;
+  font-family: 'Nunito', sans-serif;
+  font-size: 15px;
+  color: #0E1C42;
+  line-height: 1.6;
+  resize: vertical;
+  background: #FAFBFF;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  margin-top: 10px;
+}
+.journal-box:focus {
+  outline: none;
+  border-color: #2B7A78;
+  box-shadow: 0 0 0 3px rgba(85, 200, 232, 0.15);
+  background: #fff;
+}
+.journal-box::placeholder { color: #B0B8CC; font-style: italic; }
+.journal-label {
+  font-size: 12px;
+  color: #7A88A8;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-top: 12px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.journal-label .saved-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #B0B8CC;
+  transition: background 0.3s;
+}
+.journal-label .saved-dot.saved { background: #34B76F; }
+
+/* ═══════════ ROOT MATCH GAME ═══════════ */
+.root-match-game { margin: 14px 0; }
+.root-match-prompt {
+  font-size: 15px;
+  color: #3A4A6B;
+  margin-bottom: 12px;
+  line-height: 1.6;
+}
+.root-match-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+.root-match-item {
+  padding: 12px 16px;
+  background: #FFFFFF;
+  border: 2px solid #E2E8F4;
+  border-radius: 12px;
+  font-size: 15px;
+  color: #0E1C42;
+  font-weight: 600;
+  cursor: pointer;
+  text-align: center;
+  transition: background 0.15s, border-color 0.2s, transform 0.15s;
+  user-select: none;
+}
+.root-match-item:hover { transform: translateY(-1px); border-color: #8B6FC0; }
+.root-match-item.selected { background: #F0E8FF; border-color: #8B6FC0; box-shadow: 0 0 0 3px rgba(139, 111, 192, 0.2); }
+.root-match-item.matched { background: #E3F8ED; border-color: #34B76F; pointer-events: none; opacity: 0.85; }
+.root-match-item.wrong-flash { background: #FFF0EC; border-color: #E8636B; animation: shake 0.4s ease; }
+.root-match-item.is-word { font-weight: 800; font-family: 'Lora', Georgia, serif; font-size: 16px; color: #8B6FC0; }
+.root-match-feedback {
+  text-align: center;
+  padding: 10px;
+  font-size: 15px;
+  font-weight: 700;
+  color: #34B76F;
+  display: none;
+}
+.root-match-feedback.show { display: block; }
+
+/* ═══════════ DOWNLOAD BUTTON ═══════════ */
+.download-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  padding: 16px 24px;
+  background: linear-gradient(135deg, #0E1C42, #1A2D5A);
+  color: #fff;
+  border: 2px solid #2B7A78;
+  border-radius: 16px;
+  font-family: 'Nunito', sans-serif;
+  font-size: 17px;
+  font-weight: 800;
+  cursor: pointer;
+  margin-top: 18px;
+  transition: transform 0.2s, box-shadow 0.2s;
+  box-shadow: 0 4px 16px rgba(14, 28, 66, 0.25);
+}
+.download-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 24px rgba(14, 28, 66, 0.35);
+}
+.download-btn-icon { font-size: 22px; }
+.download-btn-sub {
+  font-size: 12px;
+  color: rgba(255,255,255,0.6);
+  font-weight: 600;
+  text-align: center;
+  margin-top: 6px;
+}
+
+/* ═══════════ WORD SORT GAME ═══════════ */
+.sort-game { margin: 14px 0; }
+.sort-bank {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 14px;
+  background: #FAFBFF;
+  border: 2px dashed #C8E8E6;
+  border-radius: 14px;
+  margin-bottom: 14px;
+  min-height: 52px;
+  justify-content: center;
+}
+.sort-chip {
+  display: inline-flex;
+  align-items: center;
+  padding: 8px 16px;
+  background: #FFFFFF;
+  border: 2px solid #E2E8F4;
+  border-radius: 24px;
+  font-size: 15px;
+  font-weight: 700;
+  color: #0E1C42;
+  cursor: grab;
+  user-select: none;
+  transition: transform 0.15s, box-shadow 0.15s, background 0.2s, border-color 0.2s;
+}
+.sort-chip:hover { transform: translateY(-2px); box-shadow: 0 4px 12px rgba(14,28,66,0.12); }
+.sort-chip.placed { opacity: 0.4; pointer-events: none; }
+.sort-chip.correct { background: #E3F8ED; border-color: #34B76F; color: #1a5c2e; }
+.sort-chip.wrong { background: #FFF0EC; border-color: #E8636B; color: #8a3030; animation: shake 0.4s ease; }
+@keyframes shake { 0%,100%{transform:translateX(0)} 25%{transform:translateX(-6px)} 75%{transform:translateX(6px)} }
+.sort-columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+.sort-col {
+  background: #FFFFFF;
+  border: 2px solid #E2E8F4;
+  border-radius: 14px;
+  overflow: hidden;
+  min-height: 160px;
+}
+.sort-col-header {
+  padding: 10px 14px;
+  font-size: 15px;
+  font-weight: 800;
+  color: #fff;
+  text-align: center;
+}
+.sort-col-drop {
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-height: 120px;
+}
+.sort-col-drop .sort-chip { cursor: pointer; }
+.sort-col-drop .sort-chip:hover { transform: none; box-shadow: none; }
+.sort-score {
+  text-align: center;
+  padding: 10px;
+  font-size: 14px;
+  font-weight: 700;
+  color: #34B76F;
+  display: none;
+}
+.sort-score.show { display: block; }
+.sort-check-btn {
+  display: block;
+  margin: 14px auto 0;
+  padding: 10px 24px;
+  background: linear-gradient(135deg, #2B7A78, #3A9B99);
+  color: #0E1C42;
+  border: none;
+  border-radius: 24px;
+  font-family: 'Nunito', sans-serif;
+  font-size: 15px;
+  font-weight: 800;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+.sort-check-btn:hover { transform: translateY(-2px); }
+
+/* ═══════════ INTERJECTION SPOTTER GAME ═══════════ */
+.spotter-game { margin: 14px 0; }
+.spotter-sentence {
+  background: #FFFFFF;
+  border: 2px solid #E2E8F4;
+  border-radius: 12px;
+  padding: 14px 16px;
+  margin-bottom: 10px;
+  line-height: 1.8;
+  font-size: 16px;
+  color: #0E1C42;
+}
+.spotter-word {
+  display: inline;
+  padding: 2px 6px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s;
+  border: 2px solid transparent;
+}
+.spotter-word:hover { background: #E8F5F4; border-color: #2B7A78; }
+.spotter-word.selected { background: #FFF3DC; border-color: #F2B134; font-weight: 700; }
+.spotter-word.correct-reveal { background: #E3F8ED; border-color: #34B76F; color: #1a5c2e; font-weight: 700; }
+.spotter-word.wrong-reveal { background: #FFF0EC; border-color: #E8636B; text-decoration: line-through; }
+.spotter-result {
+  font-size: 14px;
+  font-weight: 700;
+  padding: 8px 14px;
+  border-radius: 10px;
+  margin-top: 6px;
+  display: none;
+}
+.spotter-result.show { display: block; }
+.spotter-result.win { background: #E3F8ED; color: #1a5c2e; }
+.spotter-result.miss { background: #FFF3DC; color: #F2B134; }
+
+/* ═══════════ SENTENCE BUILDER ═══════════ */
+.builder-game { margin: 14px 0; }
+.builder-slots {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  padding: 14px;
+  background: #FAFBFF;
+  border: 2px solid #E2E8F4;
+  border-radius: 14px;
+  margin-bottom: 12px;
+  min-height: 52px;
+}
+.builder-slot {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 60px;
+  padding: 8px 12px;
+  background: #FFFFFF;
+  border: 2px dashed #C8E8E6;
+  border-radius: 10px;
+  font-size: 15px;
+  color: #7A88A8;
+  font-weight: 600;
+  min-height: 40px;
+  transition: border-color 0.2s;
+}
+.builder-slot.filled {
+  border-style: solid;
+  border-color: #2B7A78;
+  color: #0E1C42;
+  font-weight: 700;
+  background: #E8F5F4;
+  cursor: pointer;
+}
+.builder-bank {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+}
+.builder-word {
+  display: inline-flex;
+  align-items: center;
+  padding: 8px 14px;
+  background: #FFFFFF;
+  border: 2px solid #E2E8F4;
+  border-radius: 24px;
+  font-size: 15px;
+  font-weight: 700;
+  color: #0E1C42;
+  cursor: pointer;
+  user-select: none;
+  transition: transform 0.15s, box-shadow 0.15s;
+}
+.builder-word:hover { transform: translateY(-2px); box-shadow: 0 4px 12px rgba(14,28,66,0.12); }
+.builder-word.used { opacity: 0.35; pointer-events: none; }
+.builder-result {
+  text-align: center;
+  padding: 10px;
+  font-size: 15px;
+  font-weight: 700;
+  border-radius: 10px;
+  margin-top: 12px;
+  display: none;
+}
+.builder-result.show { display: block; }
+.builder-result.correct { background: #E3F8ED; color: #1a5c2e; }
+.builder-result.incorrect { background: #FFF0EC; color: #8a3030; }
+
+/* ═══════════ VOCAB MATCH GAME ═══════════ */
+.match-game { margin: 14px 0; }
+.match-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+.match-item {
+  padding: 12px 14px;
+  background: #FFFFFF;
+  border: 2px solid #E2E8F4;
+  border-radius: 12px;
+  font-size: 14px;
+  color: #0E1C42;
+  font-weight: 600;
+  cursor: pointer;
+  text-align: center;
+  line-height: 1.5;
+  transition: background 0.15s, border-color 0.2s, transform 0.15s;
+  user-select: none;
+}
+.match-item:hover { transform: translateY(-1px); border-color: #2B7A78; }
+.match-item.selected { background: #E8F5F4; border-color: #2B7A78; box-shadow: 0 0 0 3px rgba(85,200,232,0.25); }
+.match-item.matched { background: #E3F8ED; border-color: #34B76F; pointer-events: none; opacity: 0.8; }
+.match-item.wrong-flash { background: #FFF0EC; border-color: #E8636B; animation: shake 0.4s ease; }
+.match-item.is-word { font-weight: 800; font-family: 'Lora', Georgia, serif; font-size: 16px; }
+.match-feedback {
+  text-align: center;
+  padding: 10px;
+  font-size: 15px;
+  font-weight: 700;
+  color: #34B76F;
+  display: none;
+}
+.match-feedback.show { display: block; }
+
+/* ═══════════ DOL CHECKER ═══════════ */
+.dol-check-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 18px;
+  background: linear-gradient(135deg, #8B6FC0, #a88ad4);
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+  font-family: 'Nunito', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: transform 0.15s;
+}
+.dol-check-btn:hover { transform: translateY(-2px); }
+.dol-answer {
+  display: none;
+  margin-top: 10px;
+  padding: 12px 16px;
+  background: #E3F8ED;
+  border: 2px solid #B8E8CF;
+  border-left: 4px solid #34B76F;
+  border-radius: 10px;
+  font-size: 15px;
+  color: #0E1C42;
+  line-height: 1.65;
+}
+.dol-answer.show { display: block; }
+
+/* ═══════════ RESPONSIVE ═══════════ */
+@media (max-width: 620px) {
+  .intro-2col { grid-template-columns: 1fr; }
+  .vocab-grid { grid-template-columns: 1fr; }
+  .flip-card { height: 165px; }
+  .header-title { font-size: 22px; }
+  .tab-btn { min-width: 100px; font-size: 11px; padding: 10px 6px 9px; }
+}
+</style>
+<style>
+.decode-steps{margin:14px 0}.decode-step{display:flex;gap:14px;margin-bottom:16px;align-items:flex-start}.decode-step:last-child{margin-bottom:0}.decode-step-num{width:36px;height:36px;border-radius:50%;color:#fff;font-size:18px;font-weight:800;display:flex;align-items:center;justify-content:center;flex-shrink:0}.decode-step-content{flex:1}.decode-step-title{font-size:16px;font-weight:800;color:#0E1C42;margin-bottom:4px}.decode-step-text{font-size:15px;color:#3A4A6B;line-height:1.6;margin-bottom:8px}.decode-sentence{background:#FFF8F0;border:2px solid #F5E6C8;border-left:4px solid #F2B134;border-radius:10px;padding:12px 16px;font-family:"Lora",Georgia,serif;font-size:16px;color:#0E1C42;line-height:1.6;font-style:italic;margin-bottom:10px}.decode-word-parts{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin:8px 0}.decode-part{display:inline-flex;padding:6px 14px;border-radius:8px;font-family:"Lora",Georgia,serif;font-size:16px;font-weight:700}.decode-part-root{background:#F0E8FF;color:#8B6FC0;border:1.5px solid #D8CCF0}.decode-part-affix{background:#E8F5F4;color:#1A6B8E;border:1.5px solid #C8E8E6}.decode-part-plus{color:#B0B8CC;font-size:12px;font-weight:800}.decode-reveal{display:none;background:#E3F8ED;border:2px solid #B8E8CF;border-left:4px solid #34B76F;border-radius:10px;padding:12px 16px;font-size:15px;color:#0E1C42;line-height:1.5;margin-top:8px}.decode-reveal.show{display:block}.vocab-decode-item{margin-bottom:14px}.textbox-prompt{font-size:15px;color:#3A4A6B;line-height:1.6;margin-bottom:8px;padding:10px 14px;background:#FAFBFF;border:1.5px solid #E2E8F4;border-radius:10px}
+.nf-passage{background:#FAFBFF;border:2px solid #E2E8F4;border-left:6px solid #2B7A78;border-radius:14px;padding:20px 24px;margin-bottom:18px;font-family:"Lora",Georgia,serif;font-size:16px;color:#0E1C42;line-height:1.85}.nf-passage-title{font-family:"Nunito",sans-serif;font-size:13px;font-weight:800;color:#2B7A78;letter-spacing:.06em;text-transform:uppercase;margin-bottom:10px}.nf-features{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}.nf-feature-chip{background:#E8F5F4;color:#2B7A78;border:1.5px solid #C8E8E6;border-radius:20px;padding:4px 14px;font-size:13px;font-weight:700}
+.callout-submit{background:#E8F1E8;border:1.5px solid #A8C8A8;border-radius:10px;padding:12px 16px;display:flex;align-items:flex-start;gap:10px;margin-bottom:12px}
+</style>
+</head>
+<body>
+<div id="pageTop"></div>
+<canvas id="confettiCanvas" style="position:fixed;top:0;left:0;width:100%;height:100%;pointer-events:none;z-index:9999;"></canvas>
+<button id="backToTop" class="back-to-top" title="Back to top">↑</button>
+<div class="page-wrap">
+<div class="progress-wrap"><span class="progress-label">Lesson Progress</span>
+<div class="progress-track"><div class="progress-fill" id="progressFill"></div></div>
+<span class="progress-pct" id="progressPct">25%</span></div>
+<div class="header">
+<div class="header-brand"><div class="header-logo"><div style="font-size:28px;">🗺️</div></div>
+<div><div class="header-org">Optima Academy Online</div><div class="header-sub">3rd Grade ELA</div></div></div>
+<div class="header-title">Nonfiction Extension &mdash; Lesson 6.1</div>
+<div class="header-badge"><span class="header-badge-icon">📖</span>
+<span class="header-badge-text">Day 1: Define</span></div>
+</div>
+<div class="info-strip">
+<div class="info-cell"><div class="info-icon" style="background:#E8F5F4;">📚</div>
+<div><div class="info-label">Unit</div><div class="info-value">Nonfiction</div><div class="info-detail">Extension Weeks</div></div></div>
+<div class="info-cell"><div class="info-icon" style="background:#E8F5F4;">📅</div>
+<div><div class="info-label">Week</div><div class="info-value">Week 6</div><div class="info-detail">Lesson 6.1 of 4</div></div></div>
+<div class="info-cell"><div class="info-icon" style="background:#FFF8E8;">📰</div>
+<div><div class="info-label">Reading</div><div class="info-value">Nonfiction Text 1</div><div class="info-detail">What Is a Map?</div></div></div>
+<div class="info-cell"><div class="info-icon" style="background:#F0E8FF;">✏️</div>
+<div><div class="info-label">Focus</div><div class="info-value">Common and proper nouns review</div><div class="info-detail">Compound words</div></div></div>
+</div>
+<div class="quote-strip">
+<div class="quote-strip-text">&ldquo;Maps help us understand our world.&rdquo;</div>
+<div class="quote-strip-attr">&mdash; <em>What Is a Map?</em></div></div>
+<div class="intro-section" id="introSection">
+<div class="intro-collapsed-bar" onclick="expandIntro()"><span class="intro-collapsed-icon">❓</span>
+<span class="intro-collapsed-text">Today's Wonder &amp; Objectives</span>
+<span class="intro-collapsed-toggle">▼ Expand</span></div>
+<div class="intro-2col">
+<div class="intro-card theme-question"><div class="intro-card-head"><div class="intro-card-head-icon">❓</div>
+<div><div class="intro-card-head-label">Big Question</div><div class="intro-card-head-title">Today's Wonder</div></div></div>
+<div class="intro-card-body"><p>How do maps help people find their way and understand the world around them?</p></div></div>
+<div class="intro-card theme-objectives"><div class="intro-card-head"><div class="intro-card-head-icon">🎯</div>
+<div><div class="intro-card-head-label">Today's Objectives</div><div class="intro-card-head-title">By the end of this lesson&hellip;</div></div></div>
+<div class="intro-card-body">
+<div class="obj-line"><span class="obj-icon">📰</span><span><strong>Reading:</strong> Today we read our first nonfiction text: <em>What Is a Map?</em> This is informational writing &mdash; it gives us facts and explains ideas instead of telling a story.</span></div>
+<div class="obj-line"><span class="obj-icon">✏️</span><span><strong>Grammar:</strong> I will <em>define</em> common and proper nouns review.</span></div>
+<div class="obj-line"><span class="obj-icon">🔤</span><span><strong>Spelling:</strong> I will practice compound words.</span></div>
+</div></div></div>
+<div class="need-strip"><span class="need-strip-label">You'll need:</span>
+<span class="need-chip">📓 Reading Journal</span><span class="need-chip">✏️ Pencil</span><span class="need-chip">📰 Your Text</span></div></div>
+<div class="tab-bar" id="tabBar">
+<button class="tab-btn active" data-tab="warmup" onclick="switchTab('warmup')">🌅 Warm-Up<span class="tab-check">✓</span></button>
+<button class="tab-btn" data-tab="words" onclick="switchTab('words')">🔤 Word Study<span class="tab-check">✓</span></button>
+<button class="tab-btn" data-tab="reading" onclick="switchTab('reading')">📰 Reading<span class="tab-check">✓</span></button>
+<button class="tab-btn" data-tab="assignment" onclick="switchTab('assignment')">📬 Assignment<span class="tab-check">✓</span></button>
+</div>
+<div class="tab-panel active" id="tab-warmup">
+<div class="video-wrap"><div class="video-wrap-header"><span style="font-size:20px;">🎬</span><div><div class="video-wrap-type">Welcome · Day 1 of 4</div><div class="video-wrap-title">Welcome to Lesson 6.1!</div></div></div>
+<div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text">Teacher welcome video</div><div class="video-placeholder-id"><!-- slot: 6-1-welcome --></div></div></div></div>
+<div class="activity bl-purple">
+<div class="activity-head"><div class="activity-num" style="background:#8B6FC0;">1</div><div style="flex:1;"><div class="activity-title">📚 What Good Readers Do</div><div class="activity-sub">Identify central idea and supporting details.</div></div></div>
+<div class="activity-body">
+<p>Good nonfiction readers <strong>look for the central idea</strong> as they read. The central idea is the most important point the author wants you to understand. Supporting details back it up.</p>
+<div class="socratic-box"><div class="socratic-label">🧠 Think about this</div>
+<p class="socratic-q">How do maps help people find their way and understand the world around them?</p></div>
+<div class="journal-label">📓 Your thoughts <span class="saved-dot" id="dot-wgrd"></span></div>
+<textarea class="journal-box" id="journal-wgrd" data-label="What Good Readers Do" placeholder="I think..." oninput="autoSave(this,'dot-wgrd')"></textarea>
+</div></div>
+<div class="activity bl-cyan">
+<div class="activity-head"><div class="activity-num" style="background:#2B7A78;">2</div><div style="flex:1;"><div class="activity-title">✏️ Daily Oral Language</div><div class="activity-sub">Study the model, then fix the sentence.</div></div></div>
+<div class="activity-body">
+<p>Read the <strong>model sentence</strong> carefully — notice what is correct. Then fix the <strong>fix-it sentence</strong>.</p>
+<div class="task-box" style="background:#E3F8ED;border-color:#B8E8CF;">
+<div class="task-label" style="color:#34B76F;">✅ Model Sentence — Study What's Right</div>
+<div class="task-sentence" style="border-left-color:#34B76F;">A compass rose shows the directions north, south, east, and west.</div>
+<p style="font-size:14px;color:#3A4A6B;line-height:1.6;margin-top:8px;">Notice: commas separate the four directions in a list. A period ends the sentence. <em>North</em>, <em>south</em>, <em>east</em>, and <em>west</em> are common nouns &mdash; they do not need capitals when used in a list.</p>
+</div>
+<div class="task-box">
+<div class="task-label" style="color:#c7627e;">🔧 Fix-It Sentence — Now You Try</div>
+<div class="task-sentence" style="border-left-color:#c7627e;">the key on a map is sometimes called a legend it explains all the symbols on the map</div>
+<div class="journal-label">📓 Write the corrected sentence <span class="saved-dot" id="dot-dol"></span></div>
+<textarea class="journal-box" id="journal-dol" data-label="DOL: Corrected sentence" placeholder="Write the corrected sentence here..." oninput="autoSave(this,'dot-dol')" style="min-height:70px;"></textarea>
+<button class="dol-check-btn" onclick="document.getElementById('dolAns').classList.toggle('show')">🔍 Check My Work</button>
+<div class="dol-answer" id="dolAns">
+<p style="margin-bottom:6px;"><strong>Corrected:</strong></p><p><strong>The</strong> key on a map is sometimes called a legend<strong>.</strong> <strong>It</strong> explains all the symbols on the map<strong>.</strong></p>
+</div></div>
+</div></div>
+<div class="activity bl-rose">
+<div class="activity-head"><div class="activity-num" style="background:#c7627e;">3</div><div style="flex:1;"><div class="activity-title">🪶 Copywork</div><div class="activity-sub">A sentence worth copying carefully</div></div></div>
+<div class="activity-body"><div class="copywork-box">
+<div class="copywork-label">📜 From the text</div>
+<div class="copywork-text">Maps help people find where they are, where they want to go, and how far away things are.</div>
+<div class="copywork-instruction">This sentence has three things in a list. Notice the commas between each item in the list.</div>
+</div></div></div>
+<div class="tab-next-wrap"><p class="tab-transition-voice">Warmed up! Time to sharpen your word skills.</p>
+<button class="tab-next-btn" onclick="switchTab('words')">Continue to 🔤 Word Study →</button></div>
+</div><!-- /tab-warmup -->
+<div class="tab-panel" id="tab-words">
+<div class="activity bl-purple">
+<div class="activity-head"><div class="activity-num" style="background:#8B6FC0;">1</div><div style="flex:1;"><div class="activity-title">🌱 Morphology: Prefix mis- means wrong</div><div class="activity-sub">Define the skill</div></div></div>
+<div class="activity-body">
+<div class="video-wrap" style="margin-bottom:14px;"><div class="video-wrap-header"><span style="font-size:20px;">🌱</span><div><div class="video-wrap-type">Morphology</div><div class="video-wrap-title">Prefix mis- means wrong</div></div></div>
+<div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🌱</div><div class="video-placeholder-text">Teacher introduces morphology focus</div><div class="video-placeholder-id"><!-- slot: 6-1-morphology --></div></div></div></div>
+<div class="key-concept"><div class="key-concept-label">📌 Examples</div>
+<p><strong>mis- + spell = misspell</strong> &mdash; to spell <em>wrong</em></p>
+<p><strong>mis- + understand = misunderstand</strong> &mdash; to understand <em>wrong</em></p>
+<p><strong>mis- + place = misplace</strong> &mdash; to place something in the <em>wrong</em> spot</p>
+</div>
+<div class="callout callout-info"><span class="callout-icon">🧩</span><p><strong>Practice: Fill in the blank!</strong></p></div>
+<div class="fillin-game" id="fillinGame">
+<div class="fillin-item">mis- + read = <input class="fillin-input" id="fill1" data-answer="misread" maxlength="16" placeholder="______"></div>
+<div class="fillin-item">mis- + use = <input class="fillin-input" id="fill2" data-answer="misuse" maxlength="16" placeholder="______"></div>
+<div class="fillin-item">mis- + take = <input class="fillin-input" id="fill3" data-answer="mistake" maxlength="16" placeholder="______"></div>
+<div class="fillin-item">mis- + match = <input class="fillin-input" id="fill4" data-answer="mismatch" maxlength="16" placeholder="______"></div>
+<button class="fillin-check-btn" onclick="checkFillIn()">Check My Answers</button>
+<div class="fillin-feedback" id="fillinFeedback">🌱 All correct!</div></div>
+<div class="swyk"><div class="swyk-label">🪶 Show What You Know</div>
+<div class="swyk-prompt">In your own words, explain: Prefix mis- means wrong. Give two examples using words from today&rsquo;s reading.</div>
+<div class="journal-label">📓 Your answer <span class="saved-dot" id="dot-swyk"></span></div>
+<textarea class="journal-box" id="journal-swyk" data-label="SWYK: Prefix mis- means wrong" placeholder="I know that..." oninput="autoSave(this,'dot-swyk')"></textarea></div>
+</div></div>
+<div class="activity bl-cyan">
+<div class="activity-head"><div class="activity-num" style="background:#2B7A78;">2</div><div style="flex:1;"><div class="activity-title">🔤 Vocabulary: This Week&rsquo;s Words</div><div class="activity-sub">Decode &amp; Discover</div></div></div>
+<div class="activity-body">
+<div class="video-wrap" style="margin-bottom:14px;"><div class="video-wrap-header"><span style="font-size:20px;">🔤</span><div><div class="video-wrap-type">Vocabulary</div><div class="video-wrap-title">How to Figure Out Unfamiliar Words</div></div></div>
+<div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🔤</div><div class="video-placeholder-text">Teacher models the 3-step decode strategy</div><div class="video-placeholder-id"><!-- slot: 6-1-vocabulary --></div></div></div></div>
+<p>When you meet a word you don't know in nonfiction, use these three steps:</p>
+<div class="key-concept"><div class="key-concept-label">📌 Let's try it together: &ldquo;scale&rdquo;</div></div>
+<div class="decode-steps">
+<div class="decode-step"><div class="decode-step-num" style="background:#2B7A78;">1</div><div class="decode-step-content"><div class="decode-step-title">Read the Sentence</div><div class="decode-step-text">Find the word in the text. What clues does the sentence give?</div><div class="decode-sentence">The <em>scale</em> helps you measure real distances on a map.</div><div class="decode-step-text">A map is a drawing of a real place, but it is much smaller than the real thing. So a <strong>scale</strong> must be a way to figure out how big things really are.</div></div></div>
+<div class="decode-step"><div class="decode-step-num" style="background:#8B6FC0;">2</div><div class="decode-step-content"><div class="decode-step-title">Look at the Word Parts</div><div class="decode-step-text">Do you see a root, prefix, or suffix you recognize?</div>
+<div class="decode-word-parts">
+<span class="decode-part decode-part-affix">scale</span>
+</div>
+<div class="decode-step-text">This is a familiar word used in a new way. On a map, <em>scale</em> means the relationship between the drawing and the real world.</div></div></div>
+<div class="decode-step"><div class="decode-step-num" style="background:#34B76F;">3</div><div class="decode-step-content"><div class="decode-step-title">Confirm</div><div class="decode-step-text">Were we close?</div><div class="decode-reveal show">✅ <strong>scale</strong> means a line on a map that shows how distances on paper compare to real distances.</div></div></div>
+</div>
+<div class="callout callout-info" style="margin-top:16px;"><span class="callout-icon">🎯</span><p><strong>Your turn!</strong> Each word below has its sentence from the text. Read the sentence, think about the meaning, then tap to check.</p></div>
+<div class="vocab-grid">
+<div class="vocab-decode-item">
+<div class="decode-sentence" style="margin-bottom:10px;">A <strong>map</strong> is a drawing that shows what a place looks like from above.</div>
+<div class="flip-card" onclick="this.classList.toggle('flipped')"><div class="flip-card-inner"><div class="flip-card-front"><div class="fc-emoji">🗺️</div><div class="fc-word">map</div><div class="fc-tap">think first, then tap</div></div><div class="flip-card-back"><div class="fc-word-back">map</div><div class="fc-def">A drawing that shows what a place looks like from above.</div></div></div></div></div>
+<div class="vocab-decode-item">
+<div class="decode-sentence" style="margin-bottom:10px;">The <strong>compass rose</strong> shows the directions north, south, east, and west.</div>
+<div class="flip-card" onclick="this.classList.toggle('flipped')"><div class="flip-card-inner"><div class="flip-card-front"><div class="fc-emoji">🧭</div><div class="fc-word">compass rose</div><div class="fc-tap">think first, then tap</div></div><div class="flip-card-back"><div class="fc-word-back">compass rose</div><div class="fc-def">A symbol on a map that shows directions: north, south, east, west.</div></div></div></div></div>
+<div class="vocab-decode-item">
+<div class="decode-sentence" style="margin-bottom:10px;">The <strong>scale</strong> helps you measure real distances on a map.</div>
+<div class="flip-card" onclick="this.classList.toggle('flipped')"><div class="flip-card-inner"><div class="flip-card-front"><div class="fc-emoji">📏</div><div class="fc-word">scale</div><div class="fc-tap">think first, then tap</div></div><div class="flip-card-back"><div class="fc-word-back">scale</div><div class="fc-def">A line on a map that helps you measure real distances.</div></div></div></div></div>
+<div class="vocab-decode-item">
+<div class="decode-sentence" style="margin-bottom:10px;">The <strong>key</strong> explains what the symbols on the map mean.</div>
+<div class="flip-card" onclick="this.classList.toggle('flipped')"><div class="flip-card-inner"><div class="flip-card-front"><div class="fc-emoji">🔑</div><div class="fc-word">key</div><div class="fc-tap">think first, then tap</div></div><div class="flip-card-back"><div class="fc-word-back">key</div><div class="fc-def">A box on a map that explains what the symbols mean.</div></div></div></div></div>
+</div>
+<div class="callout callout-info" style="margin-top:16px;"><span class="callout-icon">🎯</span><p><strong>Quick Match:</strong> Tap a word, then tap its meaning.</p></div>
+<div class="match-game" id="vocabMatch"><div class="match-grid" id="vocabGrid">
+<div class="match-item is-word" data-match="A" onclick="vocabClick(this)">map</div>
+<div class="match-item" data-match="A" onclick="vocabClick(this)">A drawing that shows what a place looks like from above.</div>
+<div class="match-item is-word" data-match="B" onclick="vocabClick(this)">compass rose</div>
+<div class="match-item" data-match="B" onclick="vocabClick(this)">A symbol on a map that shows directions: north, south, east, west.</div>
+<div class="match-item is-word" data-match="C" onclick="vocabClick(this)">scale</div>
+<div class="match-item" data-match="C" onclick="vocabClick(this)">A line on a map that helps you measure real distances.</div>
+<div class="match-item is-word" data-match="D" onclick="vocabClick(this)">key</div>
+<div class="match-item" data-match="D" onclick="vocabClick(this)">A box on a map that explains what the symbols mean.</div>
+</div><div class="match-feedback" id="vocabFeedback">✨ All matched!</div></div>
+</div></div>
+<div class="activity bl-gold">
+<div class="activity-head"><div class="activity-num" style="background:#F2B134;">3</div><div style="flex:1;"><div class="activity-title">✏️ Grammar: Common and proper nouns review</div><div class="activity-sub">Define the skill</div></div></div>
+<div class="activity-body">
+<div class="video-wrap" style="margin-bottom:14px;"><div class="video-wrap-header"><span style="font-size:20px;">✏️</span><div><div class="video-wrap-type">Grammar</div><div class="video-wrap-title">Common and proper nouns review</div></div></div>
+<div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">✏️</div><div class="video-placeholder-text">Teacher introduces grammar skill</div><div class="video-placeholder-id"><!-- slot: 6-1-grammar --></div></div></div></div>
+<div class="task-box" style="background:#FFF8E8;border-color:#F5E6C8;"><div class="task-label" style="color:#F2B134;">👉 Example</div>
+<div class="task-sentence">map (common) vs. United States (proper)</div>
+<p style="font-size:15px;color:#3A4A6B;line-height:1.6;margin-top:8px;">Common nouns name any person, place, or thing. Proper nouns name a specific one and are capitalized.</p></div>
+<div class="task-box" style="background:#FFF8E8;border-color:#F5E6C8;"><div class="task-label" style="color:#F2B134;">👉 Example</div>
+<div class="task-sentence">city (common) vs. California (proper)</div>
+<p style="font-size:15px;color:#3A4A6B;line-height:1.6;margin-top:8px;"><em>City</em> could be any city. <em>California</em> names one specific state.</p></div>
+<div class="callout callout-info" style="margin-top:14px;"><span class="callout-icon">🎯</span><p><strong>Practice!</strong></p></div>
+<div class="spotter-game" id="grammarGame">
+<div class="spotter-sentence" id="gram1"><span style="font-size:15px;color:#0E1C42;">map</span>
+<button style="margin-left:10px;background:#F2B134;color:#fff;border:none;border-radius:6px;padding:3px 10px;font-size:12px;cursor:pointer;" onclick="document.getElementById('gr1res').textContent='common';document.getElementById('gr1res').style.display='inline'">Check</button>
+<span id="gr1res" style="display:none;margin-left:8px;font-size:13px;font-weight:700;color:#2B7A78;">→ common</span>
+</div>
+<div class="spotter-sentence" id="gram2"><span style="font-size:15px;color:#0E1C42;">Arizona</span>
+<button style="margin-left:10px;background:#F2B134;color:#fff;border:none;border-radius:6px;padding:3px 10px;font-size:12px;cursor:pointer;" onclick="document.getElementById('gr2res').textContent='proper';document.getElementById('gr2res').style.display='inline'">Check</button>
+<span id="gr2res" style="display:none;margin-left:8px;font-size:13px;font-weight:700;color:#2B7A78;">→ proper</span>
+</div>
+<div class="spotter-sentence" id="gram3"><span style="font-size:15px;color:#0E1C42;">country</span>
+<button style="margin-left:10px;background:#F2B134;color:#fff;border:none;border-radius:6px;padding:3px 10px;font-size:12px;cursor:pointer;" onclick="document.getElementById('gr3res').textContent='common';document.getElementById('gr3res').style.display='inline'">Check</button>
+<span id="gr3res" style="display:none;margin-left:8px;font-size:13px;font-weight:700;color:#2B7A78;">→ common</span>
+</div>
+<div class="spotter-sentence" id="gram4"><span style="font-size:15px;color:#0E1C42;">Pacific Ocean</span>
+<button style="margin-left:10px;background:#F2B134;color:#fff;border:none;border-radius:6px;padding:3px 10px;font-size:12px;cursor:pointer;" onclick="document.getElementById('gr4res').textContent='proper';document.getElementById('gr4res').style.display='inline'">Check</button>
+<span id="gr4res" style="display:none;margin-left:8px;font-size:13px;font-weight:700;color:#2B7A78;">→ proper</span>
+</div>
+</div>
+</div></div>
+<div class="activity bl-navy">
+<div class="activity-head"><div class="activity-num" style="background:#0E1C42;">4</div><div style="flex:1;"><div class="activity-title">🔠 Spelling: Compound words</div><div class="activity-sub">Define the pattern</div></div></div>
+<div class="activity-body">
+<div class="video-wrap" style="margin-bottom:14px;"><div class="video-wrap-header"><span style="font-size:20px;">🔠</span><div><div class="video-wrap-type">Spelling</div><div class="video-wrap-title">Compound words</div></div></div>
+<div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🔠</div><div class="video-placeholder-text">Teacher introduces spelling pattern</div><div class="video-placeholder-id"><!-- slot: 6-1-spelling --></div></div></div></div>
+<div class="callout callout-info"><span class="callout-icon">🎮</span><p><strong>Sort the Words!</strong> Tap a word, then tap the column where it belongs.</p></div>
+<div class="sort-game" id="spellSort"><div class="sort-bank" id="sortBank">
+<span class="sort-chip" data-group="compound" onclick="pickSortChip(this)">mailbox</span>
+<span class="sort-chip" data-group="compound" onclick="pickSortChip(this)">postcard</span>
+<span class="sort-chip" data-group="compound" onclick="pickSortChip(this)">compass</span>
+<span class="sort-chip" data-group="compound" onclick="pickSortChip(this)">landmark</span>
+<span class="sort-chip" data-group="compound" onclick="pickSortChip(this)">bedroom</span>
+<span class="sort-chip" data-group="compound" onclick="pickSortChip(this)">sunlight</span>
+<span class="sort-chip" data-group="compound" onclick="pickSortChip(this)">raincoat</span>
+<span class="sort-chip" data-group="compound" onclick="pickSortChip(this)">notebook</span>
+</div><div class="sort-columns">
+<div class="sort-col"><div class="sort-col-header" style="background:linear-gradient(135deg,#2B7A78,#3A9B99);">compound</div><div class="sort-col-drop" data-col="compound" onclick="dropSortChip(this,'compound')"></div></div>
+</div><div class="sort-score" id="sortScore"></div></div>
+</div></div>
+<div class="activity bl-green">
+<div class="activity-head"><div class="activity-num" style="background:#34B76F;">5</div><div style="flex:1;"><div class="activity-title">🪶 Writing Connection</div><div class="activity-sub">Connect today's reading to your own writing</div></div></div>
+<div class="activity-body">
+<p>Maps help people find places and understand distances. Write <strong>2&ndash;3 sentences</strong> about a place you have been to. How would you describe it to someone who has never been there?</p>
+<div class="journal-label">📓 Your writing <span class="saved-dot" id="dot-writing"></span></div>
+<textarea class="journal-box" id="journal-writing" data-label="Writing Connection" placeholder="I think..." oninput="autoSave(this,'dot-writing')"></textarea>
+</div></div>
+<div class="tab-next-wrap"><p class="tab-transition-voice">Words sharpened! Time to read.</p>
+<button class="tab-next-btn" onclick="switchTab('reading')">Continue to 📰 Reading →</button></div>
+</div><!-- /tab-words -->
+<div class="tab-panel" id="tab-reading">
+<div class="tracker-card">
+<div class="tracker-header"><div class="tracker-header-icon">🗺️</div>
+<div><div class="tracker-header-label">Nonfiction Explorer: Maps, Mail &amp; Letters</div>
+<div class="tracker-header-title">Week 6 — Text 1 of 4</div></div></div>
+<div style="display:flex;gap:6px;flex-wrap:wrap;padding:14px;">
+<span style="background:#2B7A78;color:#fff;padding:5px 12px;border-radius:20px;font-size:12px;font-weight:700;">✓ What Is a Map?</span>
+<span style="background:#F0F2FA;color:#7A88A8;padding:5px 12px;border-radius:20px;font-size:12px;">○ How Does a Letter Travel?</span>
+<span style="background:#F0F2FA;color:#7A88A8;padding:5px 12px;border-radius:20px;font-size:12px;">○ A Short History of Postcards</span>
+<span style="background:#F0F2FA;color:#7A88A8;padding:5px 12px;border-radius:20px;font-size:12px;">○ The Five Parts of a Friendly Letter</span>
+</div>
+<div class="tracker-chapter-label">📍 Today: <strong>What Is a Map?</strong></div></div>
+<div class="video-wrap"><div class="video-wrap-header"><span style="font-size:20px;">📰</span><div><div class="video-wrap-type">Reading · Nonfiction Text</div><div class="video-wrap-title">What Is a Map?</div></div></div>
+<div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">📰</div><div class="video-placeholder-text">Teacher introduces today's nonfiction text</div><div class="video-placeholder-id"><!-- slot: 6-1-reading --></div></div></div></div>
+<div class="activity bl-cyan">
+<div class="activity-head"><div class="activity-num" style="background:#2B7A78;">1</div><div style="flex:1;"><div class="activity-title">📰 Read: What Is a Map?</div><div class="activity-sub">Read carefully. Use what you know about text features.</div></div></div>
+<div class="activity-body">
+<p>Today we read our first nonfiction text: <em>What Is a Map?</em> This is informational writing &mdash; it gives us facts and explains ideas instead of telling a story.</p>
+<div class="nf-passage"><div class="nf-passage-title">📰 What Is a Map?</div>
+A map is a drawing that shows what a place looks like from above. Maps help people find where they are, where they want to go, and how far away things are. Most maps have four things: a title, a compass rose, a scale, and a key. The title tells you what place the map shows. The compass rose shows the directions north, south, east, and west. The scale helps you measure real distances. The key explains what the symbols on the map mean. Maps come in many kinds. A road map shows streets and highways. A physical map shows mountains and rivers. A weather map shows rain, snow, and sunshine. No matter the kind, all maps help us understand our world.
+</div>
+<div class="nf-features">
+<span style="font-size:13px;font-weight:700;color:#3A4A6B;">Key terms in this text:</span>
+<span class="nf-feature-chip">Title</span>
+<span class="nf-feature-chip">Compass rose</span>
+<span class="nf-feature-chip">Scale</span>
+<span class="nf-feature-chip">Key</span>
+</div>
+<div class="socratic-box" style="margin-top:18px;"><div class="socratic-label">⏸️ Pause &amp; Think</div>
+<p class="socratic-q">The text says all maps have four things: a title, compass rose, scale, and key. <strong>Which of these do you think is most important? Why?</strong></p></div>
+<div class="journal-label">📓 Your response <span class="saved-dot" id="dot-pause1"></span></div>
+<textarea class="journal-box" id="journal-pause1" data-label="Pause &amp; Think" placeholder="I think..." oninput="autoSave(this,'dot-pause1')"></textarea>
+</div></div>
+<div class="tab-next-wrap"><p class="tab-transition-voice">Great reading! Time to show what you know.</p>
+<button class="tab-next-btn" onclick="switchTab('assignment')">Continue to 📬 Assignment →</button></div>
+</div><!-- /tab-reading -->
+<div class="tab-panel" id="tab-assignment">
+<div class="callout callout-info" style="margin-bottom:20px;"><span class="callout-icon">📬</span>
+<p>Answer the comprehension questions in complete sentences. Use evidence from the text.</p></div>
+<div class="activity bl-cyan">
+<div class="activity-head"><div class="activity-num" style="background:#2B7A78;">📰</div><div style="flex:1;"><div class="activity-title">Reading Comprehension</div><div class="activity-sub">Answer in complete sentences. Use the text for evidence.</div></div></div>
+<div class="activity-body">
+<div class="q-block"><div class="q-text"><span class="q-num">1</span>What is the central idea of this passage? State it in one sentence.</div></div>
+<textarea class="journal-box" id="journal-q1" data-label="Q1: What is the central idea of this passage? State it in one se" placeholder="The central idea is..." oninput="autoSave(this,'dot-q1');gatherAnswers();" style="min-height:60px;"></textarea>
+<div class="q-block"><div class="q-text"><span class="q-num">2</span>Name three kinds of maps the text mentions. What is each one used for?</div></div>
+<textarea class="journal-box" id="journal-q2" data-label="Q2: Name three kinds of maps the text mentions. What is each one" placeholder="One kind of map is..." oninput="autoSave(this,'dot-q2');gatherAnswers();" style="min-height:60px;"></textarea>
+<div class="q-block"><div class="q-text"><span class="q-num">3</span>How is reading a nonfiction passage different from reading a chapter of Flat Stanley?</div></div>
+<textarea class="journal-box" id="journal-q3" data-label="Q3: How is reading a nonfiction passage different from reading a" placeholder="Reading nonfiction is different because..." oninput="autoSave(this,'dot-q3');gatherAnswers();" style="min-height:60px;"></textarea>
+</div></div>
+<div class="activity bl-gold" style="margin-top:18px;" id="writers-workshop">
+<div class="activity-head" style="background:linear-gradient(135deg,#FFF8E8,#FFF3DC);border-bottom-color:#F5E6C8;">
+<div class="activity-num" style="background:#F2B134;">✍️</div><div style="flex:1;">
+<div class="activity-title">Writer&rsquo;s Workshop: Week 6 &middot; Friendly Letters</div>
+<div class="activity-sub">Meet the friendly letter</div></div></div>
+<div class="activity-body">
+<div style="display:flex;flex-wrap:wrap;gap:4px;margin-bottom:10px;">
+<span style="background:#F2B134;color:#fff;padding:4px 8px;border-radius:6px;font-size:11px;">★ Learn the Parts</span>
+<span style="background:#FAFBFF;color:#7A88A8;padding:4px 8px;border-radius:6px;font-size:11px;">○ Practice Heading/Greeting</span>
+<span style="background:#FAFBFF;color:#7A88A8;padding:4px 8px;border-radius:6px;font-size:11px;">○ Draft the Body</span>
+<span style="background:#FAFBFF;color:#7A88A8;padding:4px 8px;border-radius:6px;font-size:11px;">○ Finish &amp; Check</span>
+</div>
+<div class="callout callout-info" style="margin:0 0 14px;padding:10px 14px;"><span class="callout-icon">🎯</span><p style="font-size:14px;"><strong>Today&rsquo;s focus:</strong> Today: <strong>INTRODUCE.</strong> This week you will learn about the five parts of a friendly letter and write one of your own.</p></div>
+<div class="key-concept" style="background:#F0F7FF;border-color:#C8DCEE;margin-bottom:14px;">
+<div class="key-concept-label" style="color:#3D5285;">📋 Today&rsquo;s Tool: The Five Parts of a Friendly Letter</div>
+<p style="font-size:13px;color:#3D5285;margin-bottom:8px;"><strong>Clara&rsquo;s example:</strong></p><div style="background:#FFF;border:1px solid #C8DCEE;border-radius:6px;padding:10px;font-size:13px;"><div style='font-family:Georgia,serif;font-size:13px;border:1px solid #F5E6C8;border-radius:8px;padding:14px;background:#FFFEF7;'>
+<div style='text-align:right;margin-bottom:8px;'><strong>Heading:</strong> 12 Oak Lane<br>Orlando, FL 32801<br>October 3, 2024</div>
+<div style='margin-bottom:8px;'><strong>Greeting:</strong> Dear Stanley,</div>
+<div style='margin-bottom:8px;'><strong>Body:</strong> I heard you traveled all the way to California inside an envelope! That must have been an amazing trip. What was it like flying through the air as a letter? I have always wanted to visit California. Maybe someday I will go &mdash; in an airplane, though, not an envelope.</div>
+<div style='margin-bottom:8px;'><strong>Closing:</strong> Your friend,</div>
+<div><strong>Signature:</strong> Clara</div></div></div>
+<p style="margin-top:12px;font-size:13px;color:#3D5285;"><strong>Your turn:</strong></p><div style="background:#FAFBFF;border:2px dashed #BFC8E0;border-radius:8px;padding:14px;margin-top:8px;font-size:13px;">Look at Clara&rsquo;s letter above. Find and label each part: heading, greeting, body, closing, signature.</div>
+</div>
+<div class="key-concept" style="background:#F0E8FF;border-color:#D8CCF0;margin-bottom:14px;">
+<div class="key-concept-label" style="color:#6B4FB0;">🪶 Sentence Frames You Can Borrow</div>
+<ul style="margin:0 0 0 18px;font-size:14px;">
+<li style="margin-bottom:4px;">&ldquo;Dear ___,&rdquo;</li>
+<li style="margin-bottom:4px;">&ldquo;I heard that ___...&rdquo;</li>
+<li style="margin-bottom:4px;">&ldquo;Your friend, ___&rdquo;</li>
+</ul></div>
+<div class="callout callout-info" style="background:#E8F1E8;border-color:#A8C8A8;margin:0 0 10px;padding:10px 14px;"><span class="callout-icon">📝</span><p style="font-size:14px;"><strong>Now you try.</strong></p></div>
+<div class="textbox-prompt">Label the five parts of Clara&rsquo;s letter in your journal. Then explain in 2&ndash;3 sentences: why does a letter need all five parts?</div>
+<textarea class="journal-box" id="journal-wp" data-label="Writer's Workshop" placeholder="My writing..." oninput="autoSave(this,'dot-wp');gatherAnswers();" style="min-height:120px;"></textarea>
+</div></div>
+<div class="gathered-card"><div class="gathered-header"><div class="gathered-header-icon">📋</div><div><div class="gathered-header-label">All Your Work</div><div class="gathered-header-title">Review, Copy, or Download</div></div></div>
+<div class="gathered-body"><p class="gathered-intro">Everything you typed is gathered below.</p>
+<textarea class="gathered-output" id="gatheredOutput" readonly></textarea>
+<div class="gathered-actions"><button class="gathered-btn gathered-btn-copy" onclick="copyGathered()">📋 Copy to Clipboard</button>
+<button class="gathered-btn gathered-btn-pdf" onclick="downloadJournal()">📄 Download as PDF</button></div>
+<div class="gathered-copied" id="gatheredCopied">✅ Copied!</div></div></div>
+<div class="turn-in-card" style="margin-top:18px;"><div class="turn-in-header"><div class="turn-in-header-icon">📬</div><div><div class="turn-in-header-label">Ready to Submit?</div><div class="turn-in-header-title">Before You Turn In</div></div></div>
+<div class="turn-in-body"><div class="turn-in-checklist">
+<div class="turn-in-item" onclick="toggleCheck(this)"><div class="turn-in-check"></div><div class="turn-in-item-text">I answered all three comprehension questions in complete sentences.</div></div>
+<div class="turn-in-item" onclick="toggleCheck(this)"><div class="turn-in-check"></div><div class="turn-in-item-text">I completed my Show What You Know and Writing Connection.</div></div>
+<div class="turn-in-item" onclick="toggleCheck(this)"><div class="turn-in-check"></div><div class="turn-in-item-text">I completed my Writer's Workshop section.</div></div>
+<div class="turn-in-item" onclick="toggleCheck(this)"><div class="turn-in-check"></div><div class="turn-in-item-text">I copied or downloaded my work and submitted it in Canvas.</div></div>
+</div></div></div>
+</div><!-- /tab-assignment -->
+<div class="footer">
+<div class="footer-main"><span>Optima Academy Online</span> · 3rd Grade ELA · Week 6 · Lesson 6.1</div>
+<div class="footer-sub">Nonfiction Extension: What Is a Map?</div>
+<div class="footer-copy">© Optima Academy Online</div></div>
+</div><!-- /page-wrap -->
+<script>
+function switchTab(tabId){document.querySelectorAll(".tab-panel").forEach(function(p){p.classList.remove("active")});document.querySelectorAll(".tab-btn").forEach(function(b){b.classList.remove("active")});document.getElementById("tab-"+tabId).classList.add("active");var btn=document.querySelector(".tab-btn[data-tab='"+tabId+"']");btn.classList.add("active");btn.classList.add("visited");updateProgress();var intro=document.getElementById("introSection");if(tabId==="warmup"){intro.classList.remove("collapsed")}else{intro.classList.add("collapsed")}if(tabId==="assignment"){gatherAnswers()}document.getElementById("pageTop").scrollIntoView({behavior:"smooth",block:"start"})}
+function expandIntro(){document.getElementById("introSection").classList.remove("collapsed")}
+function updateProgress(){const t=document.querySelectorAll(".tab-btn").length;const v=document.querySelectorAll(".tab-btn.visited").length;const p=Math.round((v/t)*100);document.getElementById("progressFill").style.width=p+"%";document.getElementById("progressPct").textContent=p+"%"}
+document.querySelector(".tab-btn.active").classList.add("visited");updateProgress();
+function gatherAnswers(){var out="";
+out+="LESSON 6.1 — What Is a Map?\n════════════════════\n\n";
+var ids=[{t:"🌅 WARM-UP",ids:["journal-wgrd","journal-dol"]},{t:"🔤 WORD STUDY",ids:["journal-swyk","journal-writing"]},{t:"📰 READING",ids:["journal-pause1"]},{t:"📬 ASSIGNMENT",ids:["journal-q1","journal-q2","journal-q3","journal-wp"]}];
+ids.forEach(function(s){out+=s.t+"\n────────────────\n";s.ids.forEach(function(id){var el=document.getElementById(id);if(!el)return;var v=el.value.trim();out+="\n"+(el.getAttribute("data-label")||id)+"\n"+(v||"(no answer)")+"\n"});out+="\n"});
+var g=document.getElementById("gatheredOutput");if(g)g.value=out}
+function copyGathered(){var g=document.getElementById("gatheredOutput");if(!g)return;navigator.clipboard.writeText(g.value).then(function(){var m=document.getElementById("gatheredCopied");m.classList.add("show");setTimeout(function(){m.classList.remove("show")},2500)}).catch(function(){g.select();document.execCommand("copy")})}
+function downloadJournal(){gatherAnswers();var t=document.getElementById("gatheredOutput").value;var h2="<!DOCTYPE html><html><head><meta charset='UTF-8'><title>Lesson 6.1</title><style>body{font-family:Georgia,serif;max-width:700px;margin:40px auto;padding:0 20px;line-height:1.7}pre{white-space:pre-wrap;font-size:14px}</style></head><body><h1>📓 My Work — Lesson 6.1</h1><pre>"+t.replace(/</g,"&lt;")+"</pre></body></html>";var w2=window.open("","_blank");w2.document.write(h2);w2.document.close();setTimeout(function(){w2.print()},400)}
+function autoSave(ta,dotId){var d=document.getElementById(dotId);if(d){d.classList.add("saved")}}
+function toggleCheck(item){item.classList.toggle("checked");var c=item.querySelector(".turn-in-check");c.textContent=item.classList.contains("checked")?"✓":"";var ct=item.closest(".turn-in-checklist");if(!ct)return;if(ct.querySelectorAll(".turn-in-item").length===ct.querySelectorAll(".turn-in-item.checked").length){fireConfetti()}}
+function fireConfetti(){var cv=document.getElementById("confettiCanvas");var ctx=cv.getContext("2d");cv.width=window.innerWidth;cv.height=window.innerHeight;var cols=["#2B7A78","#F2B134","#34B76F","#8B6FC0","#c7627e"];var ps=[];for(var i=0;i<120;i++){ps.push({x:Math.random()*cv.width,y:-20,vx:(Math.random()-0.5)*6,vy:Math.random()*4+3,sz:Math.random()*8+4,c:cols[Math.floor(Math.random()*cols.length)],r:0,vr:(Math.random()-0.5)*.2})}var f=0;function a(){ctx.clearRect(0,0,cv.width,cv.height);ps.forEach(function(p){p.x+=p.vx;p.y+=p.vy;p.vy+=.1;p.r+=p.vr;ctx.save();ctx.translate(p.x,p.y);ctx.rotate(p.r);ctx.fillStyle=p.c;ctx.fillRect(-p.sz/2,-p.sz/2,p.sz,p.sz);ctx.restore()});f++;if(f<180)requestAnimationFrame(a);else ctx.clearRect(0,0,cv.width,cv.height)}a()}
+window._fillinDone=false;function checkFillIn(){var ins=document.querySelectorAll(".fillin-input");var ok=true;ins.forEach(function(inp){var a=inp.getAttribute("data-answer").toLowerCase();var v=inp.value.trim().toLowerCase();if(v===a){inp.classList.remove("wrong");inp.classList.add("correct");inp.disabled=true}else{inp.classList.add("wrong");ok=false;setTimeout(function(){inp.classList.remove("wrong")},600)}});if(ok)document.getElementById("fillinFeedback").classList.add("show")}
+var sortSelected=null,sortPlaced=0,sortTotal=8;
+function pickSortChip(c){if(c.classList.contains("placed"))return;if(sortSelected)sortSelected.style.outline="";sortSelected=c;c.style.outline="3px solid #2B7A78";c.style.outlineOffset="2px"}
+function dropSortChip(col,colName){if(!sortSelected)return;var g=sortSelected.getAttribute("data-group");var cl=sortSelected.cloneNode(true);cl.style.outline="";cl.onclick=null;cl.style.cursor="default";if(g===colName){cl.classList.add("correct");sortSelected.classList.add("placed");col.appendChild(cl);sortPlaced++}else{cl.classList.add("wrong");col.appendChild(cl);setTimeout(function(){col.removeChild(cl)},600)}sortSelected.style.outline="";sortSelected=null;if(sortPlaced>=sortTotal){var sc=document.getElementById("sortScore");if(sc){sc.textContent="🎉 All sorted!";sc.classList.add("show")}}}
+var mf=null,mc=0;function matchClick(item){if(item.classList.contains("matched"))return;if(!mf){mf=item;item.classList.add("selected");return}if(mf===item){mf.classList.remove("selected");mf=null;return}var k1=mf.getAttribute("data-match");var k2=item.getAttribute("data-match");if(k1===k2&&mf.classList.contains("is-word")!==item.classList.contains("is-word")){mf.classList.remove("selected");mf.classList.add("matched");item.classList.add("matched");mc++;mf=null;if(mc>=4){var fb=document.getElementById("matchFeedback");if(fb)fb.classList.add("show")}}else{item.classList.add("wrong-flash");mf.classList.add("wrong-flash");var a=mf,b=item;setTimeout(function(){a.classList.remove("wrong-flash","selected");b.classList.remove("wrong-flash")},500);mf=null}}
+var vmf=null,vmc=0;function vocabClick(item){if(item.classList.contains("matched"))return;if(!vmf){vmf=item;item.classList.add("selected");return}if(vmf===item){vmf.classList.remove("selected");vmf=null;return}var k1=vmf.getAttribute("data-match");var k2=item.getAttribute("data-match");if(k1===k2&&vmf.classList.contains("is-word")!==item.classList.contains("is-word")){vmf.classList.remove("selected");vmf.classList.add("matched");item.classList.add("matched");vmc++;vmf=null;if(vmc>=4){var fb=document.getElementById("vocabFeedback");if(fb)fb.classList.add("show")}}else{item.classList.add("wrong-flash");vmf.classList.add("wrong-flash");var a=vmf,b=item;setTimeout(function(){a.classList.remove("wrong-flash","selected");b.classList.remove("wrong-flash")},500);vmf=null}}
+(function(){var btn=document.getElementById("backToTop");if(!btn)return;window.addEventListener("scroll",function(){btn.classList.toggle("show",window.pageYOffset>400)});btn.addEventListener("click",function(){document.getElementById("pageTop").scrollIntoView({behavior:"smooth"})})})()
+</script>
+</body></html>

@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Week 22 Check-In — Gulliver's Stories, Part 1</title>
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:system-ui,-apple-system,sans-serif;background:#F0F2F8;color:#0E1C42;line-height:1.6;-webkit-font-smoothing:antialiased;}
+.page-wrap{max-width:920px;margin:0 auto;background:#fff;box-shadow:0 0 40px rgba(14,28,66,.08);}
+.header{background:linear-gradient(135deg,#0E1C42 0%,#1A2D5A 60%,#243868 100%);border-bottom:6px solid #00695C;padding:20px 28px 18px;position:relative;overflow:hidden;}
+.header::after{content:'';position:absolute;bottom:6px;left:0;right:0;height:3px;background:linear-gradient(90deg,#00695C,#F9A825,#00695C);}
+.header-brand{display:flex;align-items:center;gap:12px;margin-bottom:14px;}
+.header-logo{width:52px;height:52px;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center;flex-shrink:0;box-shadow:0 2px 8px rgba(0,0,0,.15);}
+.header-logo img{width:48px;height:38px;}
+.header-org{font-size:22px;color:#fff;font-weight:800;line-height:1.15;}
+.header-sub{font-size:11px;color:#00897B;letter-spacing:.5px;}
+.header-title{font-family:Georgia,serif;font-size:28px;color:#fff;font-weight:700;line-height:1.2;margin-bottom:10px;}
+.header-title em{color:#F9A825;font-style:italic;}
+.header-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(0,105,92,.2);border:1.5px solid rgba(0,137,123,.4);border-radius:28px;padding:6px 16px;}
+.header-badge-icon{font-size:22px;}
+.header-badge-text{font-size:18px;color:#fff;font-weight:800;}
+.content{padding:28px;}
+.intro{background:linear-gradient(135deg,#FFF8F0 0%,#FFF3DC 100%);border:2px solid #F5E6C8;border-radius:18px;padding:22px 24px;margin-bottom:28px;}
+.intro p{font-size:17px;color:#5A4A3A;line-height:1.75;margin:0;}
+.section{margin-bottom:28px;}
+.section-head{display:flex;align-items:center;gap:12px;margin-bottom:16px;padding-bottom:10px;border-bottom:3px solid #E2E8F4;}
+.section-icon{width:42px;height:42px;border-radius:14px;color:#fff;font-size:20px;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.section-icon.grammar{background:#3B5998;}
+.section-icon.morph{background:#7B5EA7;}
+.section-icon.spelling{background:#00796B;}
+.section-icon.reading{background:#C7922C;}
+.section-icon.writing{background:#52B788;}
+.section-title{font-size:20px;color:#0E1C42;font-weight:800;}
+.section-pts{font-size:12px;color:#7A88A8;font-weight:700;}
+.question{background:#fff;border:2px solid #E2E8F4;border-radius:16px;padding:20px 22px;margin-bottom:16px;box-shadow:0 2px 8px rgba(14,28,66,.03);}
+.question:last-child{margin-bottom:0;}
+.q-number{display:inline-flex;align-items:center;justify-content:center;width:28px;height:28px;border-radius:50%;background:#0E1C42;color:#fff;font-size:13px;font-weight:800;margin-right:10px;flex-shrink:0;}
+.q-label{font-size:11px;color:#7A88A8;text-transform:uppercase;letter-spacing:.8px;font-weight:700;margin-bottom:8px;}
+.q-text{font-size:17px;color:#0E1C42;line-height:1.7;margin-bottom:12px;font-weight:600;}
+.options{list-style:none;margin:0;padding:0;}
+.options li{display:flex;align-items:flex-start;gap:10px;padding:10px 14px;margin-bottom:6px;border:2px solid #E2E8F4;border-radius:12px;font-size:16px;color:#3A4A6B;line-height:1.6;cursor:pointer;transition:background .15s,border-color .15s;}
+.options li:last-child{margin-bottom:0;}
+.options li:hover{background:#F5EEFF;border-color:#C8A8E8;}
+.options li.selected{background:#EEE0FF;border-color:#9B6FC0;}
+.options li.selected .opt-letter{background:#4A2C6E;color:#fff;}
+.opt-letter{width:26px;height:26px;border-radius:50%;background:#E2E8F4;color:#0E1C42;font-size:13px;font-weight:800;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px;}
+.excerpt{background:#F8F6F0;border-left:4px solid #C7922C;border-radius:0 12px 12px 0;padding:16px 20px;margin-bottom:14px;font-family:Georgia,serif;font-size:16px;color:#3A4A6B;line-height:1.75;font-style:italic;}
+.excerpt-source{font-size:11px;color:#7A88A8;font-style:normal;margin-top:8px;}
+.response-box{width:100%;min-height:80px;border:2px solid #E2E8F4;border-radius:12px;padding:14px 16px;font-family:system-ui,sans-serif;font-size:16px;color:#0E1C42;line-height:1.6;resize:vertical;background:#FAFBFE;}
+.response-box:focus{outline:none;border-color:#3B5998;box-shadow:0 0 0 3px rgba(59,89,152,.15);}
+.response-box.short{min-height:50px;}
+.rwm-model{background:linear-gradient(135deg,#E0F2F1,#F0FBF9);border:2px solid #B2DFDB;border-radius:14px;padding:16px 20px;margin-bottom:12px;}
+.rwm-model-label{font-size:11px;color:#00695C;text-transform:uppercase;letter-spacing:.8px;font-weight:800;margin-bottom:6px;}
+.rwm-model-text{font-family:Georgia,serif;font-size:17px;color:#0E1C42;line-height:1.7;font-style:italic;}
+.word-chips{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px;}
+.chip{display:inline-block;background:#E2E8F4;padding:6px 14px;border-radius:10px;font-size:16px;font-weight:700;}
+.total-bar{background:linear-gradient(135deg,#0E1C42,#1A2D5A);border-radius:18px;padding:18px 24px;display:flex;align-items:center;justify-content:space-between;margin-bottom:20px;}
+.total-label{font-size:14px;color:#00897B;text-transform:uppercase;letter-spacing:1px;font-weight:800;}
+.total-value{font-size:24px;color:#F9A825;font-weight:800;}
+.footer{background:#0E1C42;padding:16px 28px;text-align:center;}
+.footer p{font-size:12px;color:rgba(255,255,255,.4);margin:0;}
+@media(max-width:600px){.content{padding:20px 16px;}.question{padding:16px;}}
+.gathered-card{background:#fff;border:2px solid #E2E8F4;border-radius:18px;overflow:hidden;box-shadow:0 2px 10px rgba(14,28,66,.04);margin-top:28px;}
+.gathered-header{display:flex;align-items:center;gap:14px;background:linear-gradient(135deg,#1A5C38,#0D3D25);padding:16px 22px;border-bottom:2px solid rgba(100,200,150,.3);}
+.gathered-header-icon{font-size:28px;line-height:1;}
+.gathered-header-label{font-size:11px;color:#80D8A8;font-weight:800;text-transform:uppercase;letter-spacing:1px;margin-bottom:2px;}
+.gathered-header-title{font-family:Georgia,serif;font-size:20px;color:#fff;font-weight:700;}
+.gathered-body{padding:18px 22px 20px;}
+.gathered-intro{font-size:15px;color:#3A4A6B;margin-bottom:14px;line-height:1.55;}
+.gathered-output{width:100%;min-height:280px;padding:16px 18px;border:2px solid #E2E8F4;border-radius:12px;font-family:system-ui,sans-serif;font-size:14px;color:#0E1C42;line-height:1.65;background:#FAFBFF;resize:vertical;white-space:pre-wrap;}
+.gathered-actions{display:flex;gap:12px;margin-top:14px;flex-wrap:wrap;}
+.gathered-btn{flex:1;min-width:190px;display:flex;align-items:center;justify-content:center;gap:8px;padding:14px 20px;border:none;border-radius:14px;font-size:15px;font-weight:800;cursor:pointer;transition:transform .2s,box-shadow .2s;}
+.gathered-btn:hover{transform:translateY(-2px);}
+.gathered-btn-copy{background:linear-gradient(135deg,#80D8A8,#4CAF80);color:#0D3D25;box-shadow:0 4px 14px rgba(76,175,128,.3);}
+.gathered-btn-pdf{background:linear-gradient(135deg,#1A5C38,#0D3D25);color:#fff;border:2px solid #80D8A8;box-shadow:0 4px 14px rgba(26,92,56,.25);}
+.gathered-copied{text-align:center;font-size:14px;font-weight:700;color:#34B76F;margin-top:8px;display:none;}
+.gathered-copied.show{display:block;}
+</style>
+</head>
+<body>
+<div class="page-wrap">
+  <div class="header">
+    <div class="header-brand">
+      <div class="header-logo">
+        <img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy" />
+      </div>
+      <div>
+        <div class="header-org">Optima Academy Online</div>
+        <div class="header-sub">3rd Grade ELA &middot; Quarter 3</div>
+      </div>
+    </div>
+    <div class="header-title"><em>Gulliver's Stories</em> &mdash; Part 1: Lilliput</div>
+    <div class="header-badge">
+      <span class="header-badge-icon">&#128197;</span>
+      <span class="header-badge-text">Week 22 &middot; Check-In</span>
+    </div>
+  </div>
+
+  <div class="content">
+    <div class="intro">
+      <p>This week you began reading <em>Gulliver's Stories</em> and followed Gulliver as he was shipwrecked and woke up tied down by tiny people called Lilliputians. You studied commas in dates and places, the root <strong>struct</strong> (meaning "build"), and compound words. Show what you know!</p>
+    </div>
+
+    <!-- SECTION 1: Grammar -->
+    <div class="section">
+      <div class="section-head">
+        <div class="section-icon grammar">&#9998;</div>
+        <div>
+          <div class="section-title">Section 1: Grammar &mdash; Commas in Dates and Places</div>
+          <div class="section-pts">3 points</div>
+        </div>
+      </div>
+
+      <div class="question">
+        <div class="q-label"><span class="q-number">1</span> Multiple Choice</div>
+        <div class="q-text">Which sentence uses commas correctly?</div>
+        <ul class="options">
+          <li onclick="selectOption(this)" data-qid="mcq1"><span class="opt-letter">A</span> Gulliver arrived on November 5, 1699, in a tiny kingdom called Lilliput.</li>
+          <li onclick="selectOption(this)" data-qid="mcq1"><span class="opt-letter">B</span> He was found on Monday November 5 1699.</li>
+          <li onclick="selectOption(this)" data-qid="mcq1"><span class="opt-letter">C</span> The ship sailed from London England without stopping.</li>
+        </ul>
+      </div>
+
+      <div class="question">
+        <div class="q-label"><span class="q-number">2</span> Fix-It Sentence</div>
+        <div class="q-text">Rewrite the sentence below with commas in the correct places.</div>
+        <div class="excerpt" style="font-style:normal;">"Gulliver was rescued on September 15 1700 in a harbor near the island."</div>
+        <textarea class="response-box" id="resp1" data-label="Q2: Fix-It — Add commas correctly"></textarea>
+      </div>
+
+      <div class="question">
+        <div class="q-label"><span class="q-number">3</span> Write Your Own</div>
+        <div class="q-text">Write a sentence about Gulliver's journey that includes a date or a place name. Use commas correctly.</div>
+        <textarea class="response-box" id="resp2" data-label="Q3: Sentence with date or place — commas used correctly"></textarea>
+      </div>
+    </div>
+
+    <!-- SECTION 2: Morphology -->
+    <div class="section">
+      <div class="section-head">
+        <div class="section-icon morph">&#128214;</div>
+        <div>
+          <div class="section-title">Section 2: Morphology &mdash; Root <em>struct</em> (build)</div>
+          <div class="section-pts">3 points</div>
+        </div>
+      </div>
+
+      <div class="question">
+        <div class="q-label"><span class="q-number">4</span> Root Meaning</div>
+        <div class="q-text">The root <strong>struct</strong> means "build." Think about the word <strong>structure</strong>. What does structure mean? How does knowing <em>struct</em> help you figure it out?</div>
+        <textarea class="response-box" id="resp3" data-label="Q4: Root struct — meaning of 'structure' and how the root helps"></textarea>
+      </div>
+
+      <div class="question">
+        <div class="q-label"><span class="q-number">5</span> Multiple Choice &mdash; Word in Context</div>
+        <div class="excerpt">"The Lilliputians worked together to construct a tiny cart to carry Gulliver &mdash; they built it carefully using the strongest wood they could find."<div class="excerpt-source">Adapted from <em>Gulliver's Stories</em>, Part 1</div></div>
+        <div class="q-text">What does <strong>construct</strong> most likely mean?</div>
+        <ul class="options">
+          <li onclick="selectOption(this)" data-qid="mcq2"><span class="opt-letter">A</span> To destroy something completely</li>
+          <li onclick="selectOption(this)" data-qid="mcq2"><span class="opt-letter">B</span> To build or put something together</li>
+          <li onclick="selectOption(this)" data-qid="mcq2"><span class="opt-letter">C</span> To carry something over a long distance</li>
+        </ul>
+      </div>
+
+      <div class="question">
+        <div class="q-label"><span class="q-number">6</span> Apply It</div>
+        <div class="q-text">Think of one more word with the root <em>struct</em> (like <em>instruct</em>, <em>destruction</em>, or <em>obstruct</em>). Write it and explain how "build" connects to its meaning.</div>
+        <textarea class="response-box" id="resp4" data-label="Q6: Another word with struct — explain connection to 'build'"></textarea>
+      </div>
+    </div>
+
+    <!-- SECTION 3: Spelling -->
+    <div class="section">
+      <div class="section-head">
+        <div class="section-icon spelling">&#9997;</div>
+        <div>
+          <div class="section-title">Section 3: Spelling &mdash; Compound Words</div>
+          <div class="section-pts">3 points</div>
+        </div>
+      </div>
+
+      <div class="question">
+        <div class="q-label"><span class="q-number">7</span> Break It Apart</div>
+        <div class="q-text">A compound word is made from two smaller words joined together. Break each compound word into its two parts using a plus sign.</div>
+        <div class="word-chips">
+          <span class="chip">shipwreck</span>
+          <span class="chip">seashore</span>
+          <span class="chip">sunlight</span>
+          <span class="chip">footprint</span>
+        </div>
+        <textarea class="response-box" id="resp5" data-label="Q7: Break compound words into parts" placeholder="shipwreck = ship + wreck&#10;seashore = ___&#10;sunlight = ___&#10;footprint = ___"></textarea>
+      </div>
+
+      <div class="question">
+        <div class="q-label"><span class="q-number">8</span> Create Your Own</div>
+        <div class="q-text">Create two compound words of your own. Write each one and explain what you think it means based on its two parts.</div>
+        <textarea class="response-box" id="resp6" data-label="Q8: Create two compound words + explain their meanings" placeholder="Word 1: ___ = ___ + ___ — it means: ___&#10;Word 2: ___ = ___ + ___ — it means: ___"></textarea>
+      </div>
+
+      <div class="question">
+        <div class="q-label"><span class="q-number">9</span> Spot the Error</div>
+        <div class="q-text">One compound word below is spelled incorrectly. Find it and write the correct spelling.</div>
+        <div class="word-chips">
+          <span class="chip">daylight</span>
+          <span class="chip">baordwalk</span>
+          <span class="chip">raindrop</span>
+        </div>
+        <textarea class="response-box short" id="resp7" data-label="Q9: Spot the misspelled compound word + correction" placeholder="Incorrect word: ___     Correct spelling: ___"></textarea>
+      </div>
+    </div>
+
+    <!-- SECTION 4: Reading -->
+    <div class="section">
+      <div class="section-head">
+        <div class="section-icon reading">&#128218;</div>
+        <div>
+          <div class="section-title">Section 4: Reading &mdash; Identify Narrator and Adventure Problem</div>
+          <div class="section-pts">3 points</div>
+        </div>
+      </div>
+
+      <div class="excerpt">When Gulliver woke up, he could not move. Tiny ropes held his arms and legs to the ground, and when he turned his head he saw hundreds of creatures no bigger than his thumb standing all around him. They called out in a language he did not understand, and he realized he was in a completely strange place with no idea how he had gotten there.
+        <div class="excerpt-source">Adapted from <em>Gulliver's Stories</em>, Part 1</div>
+      </div>
+
+      <div class="question">
+        <div class="q-label"><span class="q-number">10</span> Narrator and Problem</div>
+        <div class="q-text">Who is the narrator of this story, and what is the main problem Gulliver faces in this passage?</div>
+        <textarea class="response-box" id="resp8" data-label="Q10: Narrator and main problem in the passage"></textarea>
+      </div>
+
+      <div class="question">
+        <div class="q-label"><span class="q-number">11</span> Author's Craft</div>
+        <div class="q-text">How does the author help you understand that Gulliver is in a very unusual situation? Use two details from the passage in your answer.</div>
+        <textarea class="response-box" id="resp9" data-label="Q11: Two details showing the unusual situation"></textarea>
+      </div>
+
+      <div class="question">
+        <div class="q-label"><span class="q-number">12</span> Make a Connection</div>
+        <div class="q-text">If you were Gulliver, what would be the hardest part of being in Lilliput? Use details from the passage to explain your thinking.</div>
+        <textarea class="response-box" id="resp10" data-label="Q12: Hardest part of being in Lilliput — personal connection"></textarea>
+      </div>
+    </div>
+
+    <!-- SECTION 5: Writing & RWM -->
+    <div class="section">
+      <div class="section-head">
+        <div class="section-icon writing">&#9999;</div>
+        <div>
+          <div class="section-title">Section 5: Writing &amp; Read-Write-Mean</div>
+          <div class="section-pts">2 points</div>
+        </div>
+      </div>
+
+      <div class="question">
+        <div class="q-label"><span class="q-number">13</span> Read-Write-Mean (RWM)</div>
+        <div class="rwm-model">
+          <div class="rwm-model-label">&#128218; Model Sentence</div>
+          <div class="rwm-model-text">"First, the tiny soldiers tied his arms; next, they bound his feet; finally, they stood in a circle and stared up at him with wide, wondering eyes."</div>
+        </div>
+        <div class="q-text">Notice how the author uses sequence words (<strong>first, next, finally</strong>) to retell events in order. Write your own 1&ndash;2 sentence retelling of something that happened in the story, using at least two sequence words.</div>
+        <textarea class="response-box" id="resp11" data-label="Q13: RWM — retelling with sequence words"></textarea>
+      </div>
+
+      <div class="question">
+        <div class="q-label"><span class="q-number">14</span> Writing Arc &mdash; Expository Introduction</div>
+        <div class="q-text">Imagine you are writing a travel report about an unusual place. Write 2&ndash;3 sentences that introduce your topic. What place will you describe, and why is it interesting?</div>
+        <textarea class="response-box" id="resp12" data-label="Q14: Writing Arc — Expository Introduction for a travel report"></textarea>
+      </div>
+    </div>
+
+    <div class="total-bar">
+      <div class="total-label">Total Points Possible</div>
+      <div class="total-value">14 pts</div>
+    </div>
+
+    <div class="gathered-card">
+      <div class="gathered-header">
+        <div class="gathered-header-icon">&#128203;</div>
+        <div>
+          <div class="gathered-header-label">Submit Your Work</div>
+          <div class="gathered-header-title">Gather &amp; Copy All Answers</div>
+        </div>
+      </div>
+      <div class="gathered-body">
+        <p class="gathered-intro">When you are finished, click <strong>Gather My Answers</strong> to collect everything in one place. Copy and paste into your assignment submission box, or use <strong>Download as PDF</strong> to save your work.</p>
+        <textarea class="gathered-output" id="gatheredOutput" readonly placeholder="Your answers will appear here after you click Gather My Answers..."></textarea>
+        <div class="gathered-actions">
+          <button class="gathered-btn gathered-btn-copy" onclick="gatherAnswers();copyGathered()">&#128203; Gather &amp; Copy Answers</button>
+          <button class="gathered-btn gathered-btn-pdf" onclick="downloadPDF()">&#128196; Download as PDF</button>
+        </div>
+        <div class="gathered-copied" id="gatheredCopied">Copied to clipboard!</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <p>Optima Academy Online &middot; 3rd Grade ELA &middot; Week 22 Check-In &middot; Gulliver's Stories</p>
+  </div>
+</div>
+
+<script>
+function gatherAnswers(){
+  var ids=["resp1","resp2","resp3","resp4","resp5","resp6","resp7","resp8","resp9","resp10","resp11","resp12"];
+  var mcGroups=[{"id":"mcq1","label":"Q1: Commas in Dates and Places (MC)"},{"id":"mcq2","label":"Q5: Meaning of 'construct' (MC)"}];
+  var lines=["Week 22 Check-In — Gulliver's Stories, Part 1","================================================",""];
+  lines.push("WRITTEN RESPONSES");lines.push("--------------------------------");
+  ids.forEach(function(id){var el=document.getElementById(id);if(!el)return;var lbl=el.getAttribute("data-label")||id;lines.push("");lines.push(lbl);lines.push(el.value.trim()||"(no answer)");});
+  lines.push("");lines.push("MULTIPLE CHOICE");lines.push("--------------------------------");
+  mcGroups.forEach(function(q){var sel=document.querySelector("[data-qid=""+q.id+""].selected");var letter=sel?sel.querySelector(".opt-letter").textContent.trim():"?";lines.push("");lines.push(q.label+": "+letter);});
+  var el=document.getElementById("gatheredOutput");if(el)el.value=lines.join("
+");
+}
+function selectOption(li){var ul=li.parentElement;ul.querySelectorAll("li").forEach(function(x){x.classList.remove("selected");});li.classList.add("selected");gatherAnswers();}
+function copyGathered(){var el=document.getElementById("gatheredOutput");if(!el)return;el.select();try{document.execCommand("copy");}catch(e){navigator.clipboard.writeText(el.value);}var note=document.getElementById("gatheredCopied");if(note){note.classList.add("show");setTimeout(function(){note.classList.remove("show");},2500);}}
+function downloadPDF(){
+  gatherAnswers();
+  var ids=["resp1","resp2","resp3","resp4","resp5","resp6","resp7","resp8","resp9","resp10","resp11","resp12"];
+  var mcGroups=[{"id":"mcq1","label":"Q1: Commas in Dates and Places (MC)"},{"id":"mcq2","label":"Q5: Meaning of 'construct' (MC)"}];
+  var css="body{font-family:Georgia,serif;max-width:680px;margin:36px auto;padding:0 24px;color:#111;line-height:1.75}h1{font-size:19px;border-bottom:3px solid #1A5C38;padding-bottom:7px;margin-bottom:4px}h2{font-size:12px;color:#888;margin-bottom:20px;font-weight:normal}.sec{margin-top:22px;padding-top:12px;border-top:2px solid #eee}.sec-title{font-size:13px;font-weight:800;color:#1A5C38;text-transform:uppercase;letter-spacing:.5px;margin-bottom:10px}.item{margin-top:14px}.item-label{font-size:11px;font-weight:700;color:#555;text-transform:uppercase;letter-spacing:.4px;margin-bottom:4px}.item-ans{font-size:14px;padding:8px 12px;background:#f8f8f8;border-left:3px solid #1A5C38;white-space:pre-wrap;min-height:24px}.empty{color:#bbb;font-style:italic}@media print{@page{margin:1.2cm}body{margin:0}}";
+  var body="<h1>Week 22 Check-In — Gulliver's Stories, Part 1</h1><h2>Student: __________________________ &nbsp;&nbsp; Date: __________</h2><div class="sec"><div class="sec-title">Written Responses</div>";
+  ids.forEach(function(id){var el=document.getElementById(id);if(!el)return;var lbl=el.getAttribute("data-label")||id;var val=el.value.trim();body+="<div class="item"><div class="item-label">"+lbl+"</div>";body+=val?"<div class="item-ans">"+val.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;")+"</div>":"<div class="item-ans empty">(no answer written)</div>";body+="</div>";});
+  body+="</div><div class="sec"><div class="sec-title">Multiple Choice Selections</div>";
+  mcGroups.forEach(function(q){var sel=document.querySelector("[data-qid=""+q.id+""].selected");var letter=sel?sel.querySelector(".opt-letter").textContent.trim():null;body+="<div class="item"><div class="item-label">"+q.label+"</div>";body+=letter?"<div class="item-ans">Selected: <strong>"+letter+"</strong></div>":"<div class="item-ans empty">(not selected)</div>";body+="</div>";});
+  body+="</div>";
+  var html="<!DOCTYPE html><html><head><meta charset="UTF-8"><title>Week 22 Check-In</title><style>"+css+"</style></head><body>"+body+"</body></html>";
+  var win=window.open("","_blank");if(!win){alert("Please allow pop-ups to download your PDF.");return;}win.document.write(html);win.document.close();setTimeout(function(){win.print();},500);
+}
+</script>
+</body>
+</html>

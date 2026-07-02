@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Week 17 Check-In — The Lion, the Witch and the Wardrobe, Ch. 1-4</title>
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:system-ui,-apple-system,sans-serif;background:#F0F2F8;color:#0E1C42;line-height:1.6;-webkit-font-smoothing:antialiased;}
+.page-wrap{max-width:920px;margin:0 auto;background:#fff;box-shadow:0 0 40px rgba(14,28,66,.08);}
+.header{background:linear-gradient(135deg,#0E1C42 0%,#1A2D5A 60%,#243868 100%);border-bottom:6px solid #00695C;padding:20px 28px 18px;position:relative;overflow:hidden;}
+.header::after{content:'';position:absolute;bottom:6px;left:0;right:0;height:3px;background:linear-gradient(90deg,#00695C,#F9A825,#00695C);}
+.header-brand{display:flex;align-items:center;gap:12px;margin-bottom:14px;}
+.header-logo{width:52px;height:52px;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center;flex-shrink:0;box-shadow:0 2px 8px rgba(0,0,0,.15);}
+.header-logo img{width:48px;height:38px;}
+.header-org{font-size:22px;color:#fff;font-weight:800;line-height:1.15;}
+.header-sub{font-size:11px;color:#00897B;letter-spacing:.5px;}
+.header-title{font-family:Georgia,serif;font-size:28px;color:#fff;font-weight:700;line-height:1.2;margin-bottom:10px;}
+.header-title em{color:#F9A825;font-style:italic;}
+.header-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(0,105,92,.2);border:1.5px solid rgba(0,137,123,.4);border-radius:28px;padding:6px 16px;}
+.header-badge-icon{font-size:22px;}
+.header-badge-text{font-size:18px;color:#fff;font-weight:800;}
+.content{padding:28px;}
+.intro{background:linear-gradient(135deg,#FFF8F0 0%,#FFF3DC 100%);border:2px solid #F5E6C8;border-radius:18px;padding:22px 24px;margin-bottom:28px;}
+.intro p{font-size:17px;color:#5A4A3A;line-height:1.75;margin:0;}
+.section{margin-bottom:28px;}
+.section-head{display:flex;align-items:center;gap:12px;margin-bottom:16px;padding-bottom:10px;border-bottom:3px solid #E2E8F4;}
+.section-icon{width:42px;height:42px;border-radius:14px;color:#fff;font-size:20px;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.section-icon.grammar{background:#3B5998;}
+.section-icon.morph{background:#7B5EA7;}
+.section-icon.spelling{background:#00796B;}
+.section-icon.reading{background:#C7922C;}
+.section-icon.writing{background:#52B788;}
+.section-title{font-size:20px;color:#0E1C42;font-weight:800;}
+.section-pts{font-size:12px;color:#7A88A8;font-weight:700;}
+.question{background:#fff;border:2px solid #E2E8F4;border-radius:16px;padding:20px 22px;margin-bottom:16px;box-shadow:0 2px 8px rgba(14,28,66,.03);}
+.question:last-child{margin-bottom:0;}
+.q-number{display:inline-flex;align-items:center;justify-content:center;width:28px;height:28px;border-radius:50%;background:#0E1C42;color:#fff;font-size:13px;font-weight:800;margin-right:10px;flex-shrink:0;}
+.q-label{font-size:11px;color:#7A88A8;text-transform:uppercase;letter-spacing:.8px;font-weight:700;margin-bottom:8px;}
+.q-text{font-size:17px;color:#0E1C42;line-height:1.7;margin-bottom:12px;font-weight:600;}
+.options{list-style:none;margin:0;padding:0;}
+.options li{display:flex;align-items:flex-start;gap:10px;padding:10px 14px;margin-bottom:6px;border:2px solid #E2E8F4;border-radius:12px;font-size:16px;color:#3A4A6B;line-height:1.6;cursor:pointer;transition:background .15s,border-color .15s;}
+.options li:last-child{margin-bottom:0;}
+.options li:hover{background:#F5EEFF;border-color:#C8A8E8;}
+.options li.selected{background:#EEE0FF;border-color:#9B6FC0;}
+.options li.selected .opt-letter{background:#4A2C6E;color:#fff;}
+.opt-letter{width:26px;height:26px;border-radius:50%;background:#E2E8F4;color:#0E1C42;font-size:13px;font-weight:800;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px;}
+.excerpt{background:#F8F6F0;border-left:4px solid #C7922C;border-radius:0 12px 12px 0;padding:16px 20px;margin-bottom:14px;font-family:Georgia,serif;font-size:16px;color:#3A4A6B;line-height:1.75;font-style:italic;}
+.excerpt-source{font-size:11px;color:#7A88A8;font-style:normal;margin-top:8px;}
+.response-box{width:100%;min-height:80px;border:2px solid #E2E8F4;border-radius:12px;padding:14px 16px;font-family:system-ui,sans-serif;font-size:16px;color:#0E1C42;line-height:1.6;resize:vertical;background:#FAFBFE;}
+.response-box:focus{outline:none;border-color:#3B5998;box-shadow:0 0 0 3px rgba(59,89,152,.15);}
+.response-box.short{min-height:50px;}
+.rwm-model{background:linear-gradient(135deg,#E0F2F1,#F0FBF9);border:2px solid #B2DFDB;border-radius:14px;padding:16px 20px;margin-bottom:12px;}
+.rwm-model-label{font-size:11px;color:#00695C;text-transform:uppercase;letter-spacing:.8px;font-weight:800;margin-bottom:6px;}
+.rwm-model-text{font-family:Georgia,serif;font-size:17px;color:#0E1C42;line-height:1.7;font-style:italic;}
+.pts{display:inline-flex;align-items:center;gap:4px;background:#E0F2F1;border:1.5px solid #B2DFDB;border-radius:20px;padding:3px 10px;font-size:12px;color:#00695C;font-weight:800;margin-left:8px;}
+.hint{font-size:14px;color:#7A88A8;font-style:italic;margin-top:8px;}
+.word-chips{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px;}
+.chip{display:inline-block;background:#E2E8F4;padding:6px 14px;border-radius:10px;font-size:16px;font-weight:700;}
+.total-bar{background:linear-gradient(135deg,#0E1C42,#1A2D5A);border-radius:18px;padding:18px 24px;display:flex;align-items:center;justify-content:space-between;margin-bottom:20px;}
+.total-label{font-size:14px;color:#00897B;text-transform:uppercase;letter-spacing:1px;font-weight:800;}
+.total-value{font-size:24px;color:#F9A825;font-weight:800;}
+.footer{background:#0E1C42;padding:16px 28px;text-align:center;}
+.footer p{font-size:12px;color:rgba(255,255,255,.4);margin:0;}
+@media(max-width:600px){.content{padding:20px 16px;}.question{padding:16px;}}
+.gathered-card{background:#fff;border:2px solid #E2E8F4;border-radius:18px;overflow:hidden;box-shadow:0 2px 10px rgba(14,28,66,.04);margin-top:28px;}
+.gathered-header{display:flex;align-items:center;gap:14px;background:linear-gradient(135deg,#1A5C38,#0D3D25);padding:16px 22px;border-bottom:2px solid rgba(100,200,150,.3);}
+.gathered-header-icon{font-size:28px;line-height:1;}
+.gathered-header-label{font-size:11px;color:#80D8A8;font-weight:800;text-transform:uppercase;letter-spacing:1px;margin-bottom:2px;}
+.gathered-header-title{font-family:Georgia,serif;font-size:20px;color:#fff;font-weight:700;}
+.gathered-body{padding:18px 22px 20px;}
+.gathered-intro{font-size:15px;color:#3A4A6B;margin-bottom:14px;line-height:1.55;}
+.gathered-output{width:100%;min-height:280px;padding:16px 18px;border:2px solid #E2E8F4;border-radius:12px;font-family:system-ui,sans-serif;font-size:14px;color:#0E1C42;line-height:1.65;background:#FAFBFF;resize:vertical;white-space:pre-wrap;}
+.gathered-actions{display:flex;gap:12px;margin-top:14px;flex-wrap:wrap;}
+.gathered-btn{flex:1;min-width:190px;display:flex;align-items:center;justify-content:center;gap:8px;padding:14px 20px;border:none;border-radius:14px;font-size:15px;font-weight:800;cursor:pointer;transition:transform .2s,box-shadow .2s;}
+.gathered-btn:hover{transform:translateY(-2px);}
+.gathered-btn-copy{background:linear-gradient(135deg,#80D8A8,#4CAF80);color:#0D3D25;box-shadow:0 4px 14px rgba(76,175,128,.3);}
+.gathered-btn-pdf{background:linear-gradient(135deg,#1A5C38,#0D3D25);color:#fff;border:2px solid #80D8A8;box-shadow:0 4px 14px rgba(26,92,56,.25);}
+.gathered-copied{text-align:center;font-size:14px;font-weight:700;color:#34B76F;margin-top:8px;display:none;}
+.gathered-copied.show{display:block;}
+.fix-it-box{background:#FFF0F0;border-left:4px solid #C7922C;border-radius:0 12px 12px 0;padding:14px 18px;margin-bottom:14px;font-size:16px;color:#3A4A6B;line-height:1.7;}
+</style>
+</head>
+<body>
+<div class="page-wrap">
+
+  <div class="header">
+    <div class="header-brand">
+      <div class="header-logo">
+        <img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy" />
+      </div>
+      <div>
+        <div class="header-org">Optima Academy Online</div>
+        <div class="header-sub">3rd Grade ELA &middot; Quarter 3</div>
+      </div>
+    </div>
+    <div class="header-title"><em>The Lion, the Witch and the Wardrobe</em> &mdash; Ch. 1&ndash;4</div>
+    <div class="header-badge">
+      <span class="header-badge-icon">&#128218;</span>
+      <span class="header-badge-text">Week 17 &middot; Check-In</span>
+    </div>
+  </div>
+
+  <div class="content">
+
+    <div class="intro">
+      <p>This week you began reading <em>The Lion, the Witch and the Wardrobe</em> and followed Lucy as she discovered a magical world through an ordinary wardrobe. You studied prepositions, the prefix <strong>sub-</strong> (meaning &ldquo;under&rdquo;), and magic-e syllables. Show what you know!</p>
+    </div>
+
+    <div class="total-bar">
+      <span class="total-label">Total Points Possible</span>
+      <span class="total-value">14 pts</span>
+    </div>
+
+    <!-- SECTION 1: Grammar -->
+    <div class="section">
+      <div class="section-head">
+        <div class="section-icon grammar">&#9997;&#65039;</div>
+        <div>
+          <div class="section-title">Section 1: Grammar &mdash; Prepositions</div>
+          <div class="section-pts">3 points</div>
+        </div>
+      </div>
+
+      <div class="question">
+        <div class="q-label"><span class="q-number">1</span> Multiple Choice &middot; 1 pt</div>
+        <div class="q-text">Which sentence uses a preposition correctly?</div>
+        <ul class="options" id="mcq1">
+          <li data-qid="mcq1" onclick="selectOption(this)"><span class="opt-letter">A</span> Lucy walked toward the wardrobe and opened the door slowly.</li>
+          <li data-qid="mcq1" onclick="selectOption(this)"><span class="opt-letter">B</span> She stepped of the cold snowy ground.</li>
+          <li data-qid="mcq1" onclick="selectOption(this)"><span class="opt-letter">C</span> The Faun lived under by the lamppost.</li>
+        </ul>
+      </div>
+
+      <div class="question">
+        <div class="q-label"><span class="q-number">2</span> Fix-It &middot; 1 pt</div>
+        <div class="q-text">This sentence has a preposition error. Rewrite it correctly on the lines below.</div>
+        <div class="fix-it-box">Fix-it sentence: &ldquo;The children hid behind of the wardrobe when they heard footsteps.&rdquo;</div>
+        <textarea class="response-box short" id="resp1" data-label="Q2: Fix-It Preposition Sentence" oninput="gatherAnswers()" placeholder="Rewrite the sentence correctly here..."></textarea>
+      </div>
+
+      <div class="question">
+        <div class="q-label"><span class="q-number">3</span> Written Response &middot; 1 pt</div>
+        <div class="q-text">Write a sentence about Lucy using a preposition. Underline or circle the preposition (or write it in ALL CAPS to show it).</div>
+        <textarea class="response-box short" id="resp2" data-label="Q3: Write a sentence with a preposition about Lucy" oninput="gatherAnswers()" placeholder="Write your sentence here..."></textarea>
+      </div>
+    </div>
+
+    <!-- SECTION 2: Morphology -->
+    <div class="section">
+      <div class="section-head">
+        <div class="section-icon morph">&#128214;</div>
+        <div>
+          <div class="section-title">Section 2: Morphology &mdash; Prefix <em>sub-</em> (under)</div>
+          <div class="section-pts">3 points</div>
+        </div>
+      </div>
+
+      <div class="question">
+        <div class="q-label"><span class="q-number">4</span> Written Response &middot; 1 pt</div>
+        <div class="q-text">The word <strong>submerge</strong> uses the prefix <em>sub-</em>. What does <em>submerge</em> mean? How does knowing <em>sub-</em> means &ldquo;under&rdquo; help you figure it out?</div>
+        <textarea class="response-box" id="resp3" data-label="Q4: Meaning of submerge + how sub- helps" oninput="gatherAnswers()" placeholder="Write your answer here..."></textarea>
+      </div>
+
+      <div class="question">
+        <div class="q-label"><span class="q-number">5</span> Multiple Choice &middot; 1 pt</div>
+        <div class="q-text">Read the sentence. What does <strong>submarine</strong> most likely mean?</div>
+        <div class="excerpt">&ldquo;The children read about a submarine that traveled deep beneath the ocean waves, moving silently under the water.&rdquo;</div>
+        <ul class="options" id="mcq2">
+          <li data-qid="mcq2" onclick="selectOption(this)"><span class="opt-letter">A</span> A kind of very fast airplane</li>
+          <li data-qid="mcq2" onclick="selectOption(this)"><span class="opt-letter">B</span> A vehicle that travels underwater</li>
+          <li data-qid="mcq2" onclick="selectOption(this)"><span class="opt-letter">C</span> A very long bridge over a river</li>
+        </ul>
+      </div>
+
+      <div class="question">
+        <div class="q-label"><span class="q-number">6</span> Written Response &middot; 1 pt</div>
+        <div class="q-text">Think of another word that starts with <em>sub-</em>. Write the word and explain what it means using what you know about <em>sub-</em> meaning &ldquo;under.&rdquo;</div>
+        <textarea class="response-box short" id="resp4" data-label="Q6: Another sub- word and its meaning" oninput="gatherAnswers()" placeholder="My sub- word: _______&#10;What it means:"></textarea>
+      </div>
+    </div>
+
+    <!-- SECTION 3: Spelling -->
+    <div class="section">
+      <div class="section-head">
+        <div class="section-icon spelling">&#128221;</div>
+        <div>
+          <div class="section-title">Section 3: Spelling &mdash; Magic-e / Silent-e Syllables</div>
+          <div class="section-pts">3 points</div>
+        </div>
+      </div>
+
+      <div class="question">
+        <div class="q-label"><span class="q-number">7</span> Word Sort &middot; 1 pt</div>
+        <div class="q-text">Sort these words by their vowel sound. Write them in two groups: <strong>Short Vowel</strong> and <strong>Long Vowel (magic-e)</strong>.</div>
+        <div class="word-chips">
+          <span class="chip">cape</span><span class="chip">cap</span><span class="chip">pine</span><span class="chip">pin</span><span class="chip">cane</span><span class="chip">can</span>
+        </div>
+        <textarea class="response-box" id="resp5" data-label="Q7: Word sort — short vowel vs. long vowel (magic-e)" oninput="gatherAnswers()" placeholder="Short Vowel words: &#10;&#10;Long Vowel (magic-e) words:"></textarea>
+      </div>
+
+      <div class="question">
+        <div class="q-label"><span class="q-number">8</span> Written Response &middot; 1 pt</div>
+        <div class="q-text">Explain the magic-e rule in your own words. What does the silent e do to the vowel before it?</div>
+        <textarea class="response-box short" id="resp6" data-label="Q8: Explain the magic-e rule in own words" oninput="gatherAnswers()" placeholder="The magic-e rule says..."></textarea>
+      </div>
+
+      <div class="question">
+        <div class="q-label"><span class="q-number">9</span> Find the Error &middot; 1 pt</div>
+        <div class="q-text">One word below is misspelled. Find it and write the correct spelling.</div>
+        <div class="word-chips">
+          <span class="chip">hopeing</span><span class="chip">bake</span><span class="chip">spine</span>
+        </div>
+        <textarea class="response-box short" id="resp7" data-label="Q9: Find and correct the misspelled word" oninput="gatherAnswers()" placeholder="The misspelled word is: ________&#10;The correct spelling is: ________"></textarea>
+      </div>
+    </div>
+
+    <!-- SECTION 4: Reading -->
+    <div class="section">
+      <div class="section-head">
+        <div class="section-icon reading">&#128066;</div>
+        <div>
+          <div class="section-title">Section 4: Reading &mdash; Orient Yourself in Fantasy Settings</div>
+          <div class="section-pts">3 points</div>
+        </div>
+      </div>
+
+      <div class="excerpt">
+        Lucy pushed through the fur coats hanging in the wardrobe. She felt cold air on her face and looked down to see snow beneath her feet. Around her stood tall trees covered in white, and in the distance glowed a single lamppost. She had stepped out of the wardrobe and into an entirely different world.
+        <div class="excerpt-source">Adapted from <em>The Lion, the Witch and the Wardrobe</em>, Ch. 1&ndash;2 &mdash; C.S. Lewis</div>
+      </div>
+
+      <div class="question">
+        <div class="q-label"><span class="q-number">10</span> Written Response &middot; 1 pt</div>
+        <div class="q-text">What details in this passage tell you Lucy has entered a fantasy world? Name at least two details.</div>
+        <textarea class="response-box" id="resp8" data-label="Q10: Details showing Lucy entered a fantasy world" oninput="gatherAnswers()" placeholder="Write your answer here..."></textarea>
+      </div>
+
+      <div class="question">
+        <div class="q-label"><span class="q-number">11</span> Written Response &middot; 1 pt</div>
+        <div class="q-text">Authors use sensory details to help readers picture a setting. What can Lucy <strong>see</strong>, <strong>feel</strong>, or <strong>hear</strong> in this passage? List the details from the text.</div>
+        <textarea class="response-box" id="resp9" data-label="Q11: Sensory details Lucy sees, feels, or hears" oninput="gatherAnswers()" placeholder="She can see: &#10;She can feel: &#10;She can hear:"></textarea>
+      </div>
+
+      <div class="question">
+        <div class="q-label"><span class="q-number">12</span> Written Response &middot; 1 pt</div>
+        <div class="q-text">How does C.S. Lewis help the reader understand that Narnia is different from the normal world? Use a detail from the passage in your answer.</div>
+        <textarea class="response-box" id="resp10" data-label="Q12: How Lewis shows Narnia is different from the normal world" oninput="gatherAnswers()" placeholder="Write your answer here..."></textarea>
+      </div>
+    </div>
+
+    <!-- SECTION 5: Writing & RWM -->
+    <div class="section">
+      <div class="section-head">
+        <div class="section-icon writing">&#9997;</div>
+        <div>
+          <div class="section-title">Section 5: Writing &amp; Read-Write-Mean</div>
+          <div class="section-pts">2 points</div>
+        </div>
+      </div>
+
+      <div class="question">
+        <div class="q-label"><span class="q-number">13</span> Read-Write-Mean &middot; 1 pt</div>
+        <div class="rwm-model">
+          <div class="rwm-model-label">&#10024; Model Sentence</div>
+          <div class="rwm-model-text">&ldquo;The snow fell silently through the dark trees, and the lamppost glowed like a tiny orange flame standing alone in the cold.&rdquo;</div>
+        </div>
+        <div class="q-text">Notice how the author uses specific details to create a picture of the fantasy world. Write your own sentence that describes an imaginary place using at least <strong>two specific details</strong>.</div>
+        <textarea class="response-box" id="resp11" data-label="Q13: RWM — My sentence describing an imaginary place with two specific details" oninput="gatherAnswers()" placeholder="Write your sentence here..."></textarea>
+      </div>
+
+      <div class="question">
+        <div class="q-label"><span class="q-number">14</span> Writing Arc &mdash; Narrative Response &middot; 1 pt</div>
+        <div class="q-text">Describe a fantasy setting in 2&ndash;3 sentences. What does it look, sound, or feel like? Use specific details, just like C.S. Lewis does.</div>
+        <textarea class="response-box" id="resp12" data-label="Q14: Writing Arc — Describe a fantasy setting in 2-3 sentences" oninput="gatherAnswers()" placeholder="Write your 2-3 sentences here..."></textarea>
+      </div>
+    </div>
+
+    <!-- Gathered Card -->
+    <div class="gathered-card">
+      <div class="gathered-header">
+        <div class="gathered-header-icon">&#128203;</div>
+        <div>
+          <div class="gathered-header-label">All Responses</div>
+          <div class="gathered-header-title">Gather &amp; Submit Your Answers</div>
+        </div>
+      </div>
+      <div class="gathered-body">
+        <div class="gathered-intro">When you are finished, click <strong>Gather &amp; Copy Answers</strong> to collect all your responses in one place. Then paste them into the assignment submission box in Canvas, or download a PDF to turn in.</div>
+        <textarea class="gathered-output" id="gatheredOutput" readonly placeholder="Your gathered answers will appear here after you click Gather &amp; Copy Answers..."></textarea>
+        <div class="gathered-actions">
+          <button class="gathered-btn gathered-btn-copy" onclick="gatherAnswers();copyGathered()">&#128203; Gather &amp; Copy Answers</button>
+          <button class="gathered-btn gathered-btn-pdf" onclick="downloadPDF()">&#128196; Download PDF</button>
+        </div>
+        <div class="gathered-copied" id="gatheredCopied">Copied to clipboard!</div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="footer">
+    <p>Optima Academy Online &middot; 3rd Grade ELA &middot; Week 17 Check-In &middot; The Lion, the Witch and the Wardrobe</p>
+  </div>
+
+</div>
+
+<script>
+function gatherAnswers() {
+  var ids = ["resp1","resp2","resp3","resp4","resp5","resp6","resp7","resp8","resp9","resp10","resp11","resp12"];
+  var mcGroups = [{"id":"mcq1","label":"Q1: Preposition Usage (MC)"},{"id":"mcq2","label":"Q5: submarine meaning (MC)"}];
+  var lines = ['Week 17 Check-In — The Lion, the Witch and the Wardrobe, Ch. 1-4','================================================',''];
+  lines.push('WRITTEN RESPONSES');lines.push('--------------------------------');
+  ids.forEach(function(id){var el=document.getElementById(id);if(!el)return;var lbl=el.getAttribute('data-label')||id;lines.push('');lines.push(lbl);lines.push(el.value.trim()||'(no answer)');});
+  lines.push('');lines.push('MULTIPLE CHOICE');lines.push('--------------------------------');
+  mcGroups.forEach(function(q){var sel=document.querySelector('[data-qid="'+q.id+'"].selected');var letter=sel?sel.querySelector('.opt-letter').textContent.trim():'?';lines.push('');lines.push(q.label+': '+letter);});
+  var el=document.getElementById('gatheredOutput');if(el)el.value=lines.join('
+');
+}
+function selectOption(li){var ul=li.parentElement;ul.querySelectorAll('li').forEach(function(x){x.classList.remove('selected');});li.classList.add('selected');gatherAnswers();}
+function copyGathered(){var el=document.getElementById('gatheredOutput');if(!el)return;el.select();try{document.execCommand('copy');}catch(e){navigator.clipboard.writeText(el.value);}var note=document.getElementById('gatheredCopied');if(note){note.classList.add('show');setTimeout(function(){note.classList.remove('show');},2500);}}
+function downloadPDF(){
+  gatherAnswers();
+  var ids=["resp1","resp2","resp3","resp4","resp5","resp6","resp7","resp8","resp9","resp10","resp11","resp12"];
+  var mcGroups=[{"id":"mcq1","label":"Q1: Preposition Usage (MC)"},{"id":"mcq2","label":"Q5: submarine meaning (MC)"}];
+  var css='body{font-family:Georgia,serif;max-width:680px;margin:36px auto;padding:0 24px;color:#111;line-height:1.75}h1{font-size:19px;border-bottom:3px solid #1A5C38;padding-bottom:7px;margin-bottom:4px}h2{font-size:12px;color:#888;margin-bottom:20px;font-weight:normal}.sec{margin-top:22px;padding-top:12px;border-top:2px solid #eee}.sec-title{font-size:13px;font-weight:800;color:#1A5C38;text-transform:uppercase;letter-spacing:.5px;margin-bottom:10px}.item{margin-top:14px}.item-label{font-size:11px;font-weight:700;color:#555;text-transform:uppercase;letter-spacing:.4px;margin-bottom:4px}.item-ans{font-size:14px;padding:8px 12px;background:#f8f8f8;border-left:3px solid #1A5C38;white-space:pre-wrap;min-height:24px}.empty{color:#bbb;font-style:italic}@media print{@page{margin:1.2cm}body{margin:0}}';
+  var body='<h1>Week 17 Check-In — The Lion, the Witch and the Wardrobe, Ch. 1-4</h1><h2>Student: __________________________ &nbsp;&nbsp; Date: __________</h2><div class="sec"><div class="sec-title">Written Responses</div>';
+  ids.forEach(function(id){var el=document.getElementById(id);if(!el)return;var lbl=el.getAttribute('data-label')||id;var val=el.value.trim();body+='<div class="item"><div class="item-label">'+lbl+'</div>';body+=val?'<div class="item-ans">'+val.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;')+'</div>':'<div class="item-ans empty">(no answer written)</div>';body+='</div>';});
+  body+='</div><div class="sec"><div class="sec-title">Multiple Choice Selections</div>';
+  mcGroups.forEach(function(q){var sel=document.querySelector('[data-qid="'+q.id+'"].selected');var letter=sel?sel.querySelector('.opt-letter').textContent.trim():null;body+='<div class="item"><div class="item-label">'+q.label+'</div>';body+=letter?'<div class="item-ans">Selected: <strong>'+letter+'</strong></div>':'<div class="item-ans empty">(not selected)</div>';body+='</div>';});
+  body+='</div>';
+  var html='<!DOCTYPE html><html><head><meta charset="UTF-8"><title>Week 17 Check-In</title><style>'+css+'</style></head><body>'+body+'</body></html>';
+  var win=window.open('','_blank');if(!win){alert('Please allow pop-ups to download your PDF.');return;}win.document.write(html);win.document.close();setTimeout(function(){win.print();},500);
+}
+</script>
+</body>
+</html>
