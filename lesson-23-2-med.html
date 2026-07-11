@@ -2411,43 +2411,15 @@ body {
         </div>
       </div>
 
-      <div class="callout callout-info" style="margin-top:16px;"><span class="callout-icon">🎯</span><p><strong>Your turn!</strong> Each word below has its actual sentence from the book above it. Read the sentence, look for word parts, and guess what the word means. Then tap the card to check.</p></div>
-
-      <div class="vocab-grid" style="grid-template-columns:1fr 1fr;">
-        <div class="vocab-decode-item">
-          <div class="flip-card" onclick="this.classList.toggle('flipped')" style="height:150px;">
-            <div class="flip-card-inner">
-              <div class="flip-card-front"><div class="fc-emoji">🔨</div><div class="fc-word">apprentice</div><div class="fc-tap">tap to flip</div></div>
-              <div class="flip-card-back"><div class="fc-word-back">apprentice</div><div class="fc-def">A person learning a trade by working under an expert.</div></div>
-            </div>
-          </div>
-        </div>
-        <div class="vocab-decode-item">
-          <div class="flip-card" onclick="this.classList.toggle('flipped')" style="height:150px;">
-            <div class="flip-card-inner">
-              <div class="flip-card-front"><div class="fc-emoji">⚒️</div><div class="fc-word">craftsman</div><div class="fc-tap">tap to flip</div></div>
-              <div class="flip-card-back"><div class="fc-word-back">craftsman</div><div class="fc-def">A skilled worker who makes things by hand.</div></div>
-            </div>
-          </div>
-        </div>
-        <div class="vocab-decode-item">
-          <div class="flip-card" onclick="this.classList.toggle('flipped')" style="height:150px;">
-            <div class="flip-card-inner">
-              <div class="flip-card-front"><div class="fc-emoji">🌾</div><div class="fc-word">pottage</div><div class="fc-tap">tap to flip</div></div>
-              <div class="flip-card-back"><div class="fc-word-back">pottage</div><div class="fc-def">A thick soup of vegetables and grains eaten by poor medieval people.</div></div>
-            </div>
-          </div>
-        </div>
-        <div class="vocab-decode-item">
-          <div class="flip-card" onclick="this.classList.toggle('flipped')" style="height:150px;">
-            <div class="flip-card-inner">
-              <div class="flip-card-front"><div class="fc-emoji">🧵</div><div class="fc-word">embroider</div><div class="fc-tap">tap to flip</div></div>
-              <div class="flip-card-back"><div class="fc-word-back">embroider</div><div class="fc-def">To decorate fabric with needle and thread; a skill wealthy girls learned.</div></div>
-            </div>
-          </div>
-        </div>
+      <div class="callout callout-info" style="margin-top:16px;"><span class="callout-icon">📚</span><p><strong>Word bank:</strong> <strong>apprentice</strong> &middot; <strong>craftsman</strong> &middot; <strong>pottage</strong> &middot; <strong>embroider</strong></p></div>
+      <div class="fillin-game" id="vocabClozeGame">
+        <div class="fillin-item" style="font-family:Lora,Georgia,serif;font-style:italic;">The glassblower took on a young <input class="fillin-input" id="vcloze1" data-answer="apprentice" maxlength="14" placeholder="______"> who swept the floor and watched until he was ready to learn.</div>
+        <div class="fillin-item" style="font-family:Lora,Georgia,serif;font-style:italic;">Every <input class="fillin-input" id="vcloze2" data-answer="craftsman" maxlength="13" placeholder="______"> in the market guild had spent years in training before he could sell his goods.</div>
+        <div class="fillin-item" style="font-family:Lora,Georgia,serif;font-style:italic;">The peasant family ate thick <input class="fillin-input" id="vcloze3" data-answer="pottage" maxlength="11" placeholder="______"> every day &mdash; a soup of whatever vegetables they could find.</div>
+        <div class="fillin-item" style="font-family:Lora,Georgia,serif;font-style:italic;">Noblewomen were expected to <input class="fillin-input" id="vcloze4" data-answer="embroider" maxlength="13" placeholder="______"> fine cloth with silk thread to show their skill and patience.</div>
+        <button class="fillin-check-btn" onclick="checkVocabCloze()">Check My Work</button>
+        <div class="fillin-feedback" id="vocabClozeFeedback">📖 All correct!</div>
       </div>
-
       <div class="callout callout-info" style="margin-top:16px;"><span class="callout-icon">🎯</span><p><strong>Quick Match:</strong> Tap a word, then tap its meaning.</p></div>
       <div class="match-game" id="vocabMatch">
         <div class="match-grid" id="matchGrid">
@@ -3132,10 +3104,30 @@ function autoSave(textarea, dotId) {
 }
 
 /* ───── FILL-IN-THE-ROOT GAME (MORPHOLOGY) ───── */
+function checkVocabCloze() {
+  var inputs = document.querySelectorAll('#vocabClozeGame .fillin-input');
+  var allCorrect = true;
+  inputs.forEach(function(inp) {
+    var answer = inp.getAttribute('data-answer').toLowerCase();
+    var val = inp.value.trim().toLowerCase();
+    if (val === answer) {
+      inp.classList.remove('wrong');
+      inp.classList.add('correct');
+      inp.disabled = true;
+    } else {
+      inp.classList.remove('correct');
+      inp.classList.add('wrong');
+      allCorrect = false;
+      setTimeout(function() { inp.classList.remove('wrong'); }, 600);
+    }
+  });
+  if (allCorrect) { document.getElementById('vocabClozeFeedback').classList.add('show'); }
+}
+
 window._fillinDone = false;
 
 function checkFillIn() {
-  var inputs = document.querySelectorAll('.fillin-input');
+  var inputs = document.querySelectorAll('#fillinGame .fillin-input');
   var allCorrect = true;
   inputs.forEach(function(inp) {
     var answer = inp.getAttribute('data-answer').toLowerCase();

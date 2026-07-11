@@ -2399,7 +2399,36 @@ body {
             <textarea class="journal-box" id="journal-q3" data-label="Q3: reading skill" placeholder="One repeated detail is... Lewis returns to it because..." oninput="autoSave(this,'dot-journal-q3');gatherAnswers();"></textarea>
           </div>
         </div>
-  <div class="tab-next-wrap">
+  
+  <!-- RWM -->
+  <div class="rwm-box">
+    <div class="rwm-header">📖 RWM — Read like a Reader, Read like a Writer, Mimic</div>
+    <div class="rwm-sentence">&ldquo;For a moment he thought he was going to faint. Then he heard the voice of Aslan speaking — and it was like the voice of the sea itself.&rdquo;</div>
+    <div class="rwm-craft-note">📌 Craft focus: simile after a short, tense sentence — contrast in scale</div>
+    <div class="rwm-step">
+      <div class="rwm-step-label">📖 Read like a Reader</div>
+      <div class="rwm-step-text">Peter nearly faints, then hears Aslan. How does Lewis signal that something important or powerful is happening using sound? What kind of voice sounds like "the sea itself"?</div>
+      <div class="textbox-prompt">Write 1–2 sentences about what this moment reveals about the character or the story.</div>
+      <div class="journal-label">📓 Your response <span class="saved-dot" id="dot-rwm-reader"></span></div>
+      <textarea class="journal-box" id="journal-rwm-reader" data-label="RWM — Read like a Reader" placeholder="This sentence shows..." oninput="autoSave(this,'dot-rwm-reader');gatherAnswers();"></textarea>
+    </div>
+    <div class="rwm-step">
+      <div class="rwm-step-label">✏️ Read like a Writer</div>
+      <div class="rwm-step-text">Lewis puts a short, scary sentence first: <em>"he thought he was going to faint."</em> Then the next sentence is long and grand — it ends with a huge simile: <em>"like the voice of the sea itself."</em> How does the contrast between short (fear) and long (awe) create an effect?</div>
+      <div class="textbox-prompt">Write 1–2 sentences naming what the author did and why it works.</div>
+      <div class="journal-label">📓 Your response <span class="saved-dot" id="dot-rwm-writer"></span></div>
+      <textarea class="journal-box" id="journal-rwm-writer" data-label="RWM — Read like a Writer" placeholder="The author used... This works because..." oninput="autoSave(this,'dot-rwm-writer');gatherAnswers();"></textarea>
+    </div>
+    <div class="rwm-step">
+      <div class="rwm-step-label">🖊️ Mimic</div>
+      <div class="rwm-step-text">Write your own sentence using the same pattern as the author.</div>
+      <div class="rwm-frame">Sentence frame: For a moment [character] felt [frightening feeling]. Then [he/she] [heard/saw/felt something] — and it was like [grand simile].</div>
+      <div class="textbox-prompt">Write your sentence below using the same pattern as the author.</div>
+      <div class="journal-label">📓 Your sentence <span class="saved-dot" id="dot-rwm-mimic"></span></div>
+      <textarea class="journal-box" id="journal-rwm-mimic" data-label="RWM — Mimic" placeholder="Write your sentence here..." oninput="autoSave(this,'dot-rwm-mimic');gatherAnswers();"></textarea>
+    </div>
+  </div>
+<div class="tab-next-wrap">
     <p class="tab-transition-voice">Great reading work! Now bring your thinking to the assignment.</p>
     <button class="tab-next-btn" onclick="switchTab('assignment')">Continue to 📬 Assignment →</button>
   </div>
@@ -2501,6 +2530,7 @@ function gatherAnswers() {
   var output = '';
   var sections = [
     { title: '📖 CHAPTER THINKING', ids: ['journal-q1','journal-q2','journal-q3'] },
+    { title: '📖 RWM — READ LIKE A READER / WRITER / MIMIC', ids: ['journal-rwm-reader', 'journal-rwm-writer', 'journal-rwm-mimic'] },
     { title: '🔤 WORD STUDY CONNECTION (MORPHOLOGY)', ids: ['journal-morph'] },
     { title: '🪶 WRITING CONNECTION', ids: ['journal-writing'] }
   ];
@@ -2867,7 +2897,7 @@ function autoSave(textarea, dotId) {
 window._fillinDone = false;
 
 function checkFillIn() {
-  var inputs = document.querySelectorAll('.fillin-input');
+  var inputs = document.querySelectorAll('#fillinGame .fillin-input');
   var allCorrect = true;
   inputs.forEach(function(inp) {
     var answer = inp.getAttribute('data-answer').toLowerCase();
@@ -2895,6 +2925,7 @@ function downloadJournal() {
 
   var sections = [
     { title: '📖 CHAPTER THINKING', ids: ['journal-q1','journal-q2','journal-q3'] },
+    { title: '📖 RWM — READ LIKE A READER / WRITER / MIMIC', ids: ['journal-rwm-reader', 'journal-rwm-writer', 'journal-rwm-mimic'] },
     { title: '🔤 WORD STUDY CONNECTION (MORPHOLOGY)', ids: ['journal-morph'] },
     { title: '🪶 WRITING CONNECTION', ids: ['journal-writing'] }
   ];

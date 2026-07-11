@@ -2411,7 +2411,36 @@ body {
             <textarea class="journal-box" id="journal-q3" data-label="Q3: theme deepened" placeholder="Ch. 15 adds to my theme because... The new evidence is..." oninput="autoSave(this,'dot-journal-q3');gatherAnswers();"></textarea>
           </div>
         </div>
-  <div class="tab-next-wrap">
+  
+  <!-- RWM -->
+  <div class="rwm-box">
+    <div class="rwm-header">📖 RWM — Read like a Reader, Read like a Writer, Mimic</div>
+    <div class="rwm-sentence">&ldquo;"It means," said Aslan, "that though the Witch knew the Deep Magic, there is a magic deeper still which she did not know."&rdquo;</div>
+    <div class="rwm-craft-note">📌 Craft focus: split dialogue — speech interrupted by a tag for emphasis</div>
+    <div class="rwm-step">
+      <div class="rwm-step-label">📖 Read like a Reader</div>
+      <div class="rwm-step-text">Aslan reveals the Deeper Magic that the Witch didn't know about. Why do you think Lewis hid this from the reader until now? How does this moment change everything that happened before?</div>
+      <div class="textbox-prompt">Write 1–2 sentences about what this moment reveals about the character or the story.</div>
+      <div class="journal-label">📓 Your response <span class="saved-dot" id="dot-rwm-reader"></span></div>
+      <textarea class="journal-box" id="journal-rwm-reader" data-label="RWM — Read like a Reader" placeholder="This sentence shows..." oninput="autoSave(this,'dot-rwm-reader');gatherAnswers();"></textarea>
+    </div>
+    <div class="rwm-step">
+      <div class="rwm-step-label">✏️ Read like a Writer</div>
+      <div class="rwm-step-text">Lewis interrupts Aslan's speech with <em>"said Aslan"</em> right in the middle. Try reading it uninterrupted: <em>"There is a magic deeper still which she did not know."</em> Now add the interruption back. The pause creates a kind of drumroll. Why is that more powerful for this particular reveal?</div>
+      <div class="textbox-prompt">Write 1–2 sentences naming what the author did and why it works.</div>
+      <div class="journal-label">📓 Your response <span class="saved-dot" id="dot-rwm-writer"></span></div>
+      <textarea class="journal-box" id="journal-rwm-writer" data-label="RWM — Read like a Writer" placeholder="The author used... This works because..." oninput="autoSave(this,'dot-rwm-writer');gatherAnswers();"></textarea>
+    </div>
+    <div class="rwm-step">
+      <div class="rwm-step-label">🖊️ Mimic</div>
+      <div class="rwm-step-text">Write your own sentence using the same pattern as the author.</div>
+      <div class="rwm-frame">Sentence frame: "[First part of idea]," said [character], "[second part of idea that completes or surprises]."</div>
+      <div class="textbox-prompt">Write your sentence below using the same pattern as the author.</div>
+      <div class="journal-label">📓 Your sentence <span class="saved-dot" id="dot-rwm-mimic"></span></div>
+      <textarea class="journal-box" id="journal-rwm-mimic" data-label="RWM — Mimic" placeholder="Write your sentence here..." oninput="autoSave(this,'dot-rwm-mimic');gatherAnswers();"></textarea>
+    </div>
+  </div>
+<div class="tab-next-wrap">
     <p class="tab-transition-voice">Great reading work! Now bring your thinking to the assignment.</p>
     <button class="tab-next-btn" onclick="switchTab('assignment')">Continue to 📬 Assignment →</button>
   </div>
@@ -2514,6 +2543,7 @@ function gatherAnswers() {
   var output = '';
   var sections = [
     { title: '📖 CHAPTER THINKING', ids: ['journal-q1','journal-q2','journal-q3'] },
+    { title: '📖 RWM — READ LIKE A READER / WRITER / MIMIC', ids: ['journal-rwm-reader', 'journal-rwm-writer', 'journal-rwm-mimic'] },
     { title: '🔤 WORD STUDY CONNECTION (MORPHOLOGY)', ids: ['journal-morph'] },
     { title: '🪶 WRITING CONNECTION', ids: ['journal-writing'] }
   ];
@@ -2880,7 +2910,7 @@ function autoSave(textarea, dotId) {
 window._fillinDone = false;
 
 function checkFillIn() {
-  var inputs = document.querySelectorAll('.fillin-input');
+  var inputs = document.querySelectorAll('#fillinGame .fillin-input');
   var allCorrect = true;
   inputs.forEach(function(inp) {
     var answer = inp.getAttribute('data-answer').toLowerCase();
@@ -2908,6 +2938,7 @@ function downloadJournal() {
 
   var sections = [
     { title: '📖 CHAPTER THINKING', ids: ['journal-q1','journal-q2','journal-q3'] },
+    { title: '📖 RWM — READ LIKE A READER / WRITER / MIMIC', ids: ['journal-rwm-reader', 'journal-rwm-writer', 'journal-rwm-mimic'] },
     { title: '🔤 WORD STUDY CONNECTION (MORPHOLOGY)', ids: ['journal-morph'] },
     { title: '🪶 WRITING CONNECTION', ids: ['journal-writing'] }
   ];

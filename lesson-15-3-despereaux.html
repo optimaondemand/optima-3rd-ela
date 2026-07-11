@@ -2208,21 +2208,13 @@ body {
         </div>
       </div>
 
-      <div class="callout callout-info" style="margin-top:16px;"><span class="callout-icon">🎯</span><p><strong>Your turn!</strong> Each word below has its actual sentence from the book. Read the sentence, look for word parts, and guess what the word means. Then tap the card to check.</p></div>
-
-      <div class="vocab-grid">
-        <div class="vocab-decode-item">
-          <div class="decode-sentence" style="margin-bottom:10px;">&ldquo;He had a great wish, a longing, for the light.&rdquo;</div>
-          <div class="flip-card" onclick="this.classList.toggle('flipped')"><div class="flip-card-inner"><div class="flip-card-front"><div class="fc-emoji">💡</div><div class="fc-word">longing</div><div class="fc-tap">think first, then tap</div></div><div class="flip-card-back"><div class="fc-word-back">longing</div><div class="fc-def">A deep wish or desire for something you do not have.</div></div></div></div>
-        </div>
-        <div class="vocab-decode-item">
-          <div class="decode-sentence" style="margin-bottom:10px;">&ldquo;The dungeon smelled of despair and suffering and hopelessness.&rdquo;</div>
-          <div class="flip-card" onclick="this.classList.toggle('flipped')"><div class="flip-card-inner"><div class="flip-card-front"><div class="fc-emoji">😔</div><div class="fc-word">despair</div><div class="fc-tap">think first, then tap</div></div><div class="flip-card-back"><div class="fc-word-back">despair</div><div class="fc-def">A feeling of complete hopelessness; giving up on something getting better.</div></div></div></div>
-        </div>
-        <div class="vocab-decode-item">
-          <div class="decode-sentence" style="margin-bottom:10px;">&ldquo;Roscuro stared at the flickering light of Gregory's candle with a furious concentration.&rdquo;</div>
-          <div class="flip-card" onclick="this.classList.toggle('flipped')"><div class="flip-card-inner"><div class="flip-card-front"><div class="fc-emoji">🕯️</div><div class="fc-word">concentration</div><div class="fc-tap">think first, then tap</div></div><div class="flip-card-back"><div class="fc-word-back">concentration</div><div class="fc-def">Focused attention on something; thinking about only one thing.</div></div></div></div>
-        </div>
+      <div class="callout callout-info" style="margin-top:16px;"><span class="callout-icon">📚</span><p><strong>Word bank:</strong> <strong>longing</strong> &middot; <strong>despair</strong> &middot; <strong>concentration</strong></p></div>
+      <div class="fillin-game" id="vocabClozeGame">
+        <div class="fillin-item" style="font-family:Lora,Georgia,serif;font-style:italic;">He had a great wish, a <input class="fillin-input" id="vcloze1" data-answer="longing" maxlength="10" placeholder="______">, for the light.</div>
+        <div class="fillin-item" style="font-family:Lora,Georgia,serif;font-style:italic;">The dungeon smelled of <input class="fillin-input" id="vcloze2" data-answer="despair" maxlength="10" placeholder="______"> and suffering and hopelessness.</div>
+        <div class="fillin-item" style="font-family:Lora,Georgia,serif;font-style:italic;">Roscuro stared at the flickering candle with a furious <input class="fillin-input" id="vcloze3" data-answer="concentration" maxlength="16" placeholder="______">.</div>
+        <button class="fillin-check-btn" onclick="checkVocabCloze()">Check My Work</button>
+        <div class="fillin-feedback" id="vocabClozeFeedback">📖 All correct!</div>
       </div>
       <div class="vocab-grid">
         <div class="flip-card" onclick="this.classList.toggle('flipped')"><div class="flip-card-inner"><div class="flip-card-front"><div class="fc-emoji">😞</div><div class="fc-word">disappointment</div><div class="fc-tap">tap to flip</div></div><div class="flip-card-back"><div class="fc-word-back">disappointment</div><div class="fc-def">A feeling of sadness when something does not turn out the way you hoped.</div></div></div></div>
@@ -2439,7 +2431,33 @@ body {
     </div>
   </div>
 
-  <div class="tab-next-wrap">
+  <div class="rwm-box">
+    <div class="rwm-header">📖 RWM — Read like a Reader, Read like a Writer, Mimic</div>
+    <div class="rwm-sentence">&ldquo;He was ridiculously small.&rdquo;</div>
+    <div class="rwm-step">
+      <div class="rwm-step-label">📖 Read like a Reader</div>
+      <div class="rwm-step-text">You've now read the whole story. Rereading this sentence, does &ldquo;ridiculously small&rdquo; feel like a put-down &mdash; or does it feel like affection? Has your feeling about Despereaux changed since the very first chapter?</div>
+      <div class="textbox-prompt">Write 1&ndash;2 sentences.</div>
+      <div class="journal-label">📓 Your response <span class="saved-dot" id="dot-rwm-reader"></span></div>
+      <textarea class="journal-box" id="journal-rwm-reader" data-label="RWM — Read like a Reader" placeholder="Now that I know the whole story, "ridiculously small" feels..." oninput="autoSave(this,'dot-rwm-reader');gatherAnswers();"></textarea>
+    </div>
+    <div class="rwm-step">
+      <div class="rwm-step-label">✏️ Read like a Writer</div>
+      <div class="rwm-step-text">When we <em>reread</em>, we notice things we missed. Read it again: &ldquo;He was ridiculously small.&rdquo; Is the narrator laughing <em>at</em> Despereaux or <em>with</em> him? How does the narrator&rsquo;s tone here match the rest of the book?</div>
+      <div class="textbox-prompt">Write 1 sentence naming what the author did and why it works.</div>
+      <div class="journal-label">📓 Your response <span class="saved-dot" id="dot-rwm-writer"></span></div>
+      <textarea class="journal-box" id="journal-rwm-writer" data-label="RWM — Read like a Writer" placeholder="The narrator's tone in this sentence feels... because..." oninput="autoSave(this,'dot-rwm-writer');gatherAnswers();"></textarea>
+    </div>
+    <div class="rwm-step">
+      <div class="rwm-step-label">🖊️ Mimic</div>
+      <div class="rwm-step-text">Choose a character from the book and write your own sentence in DiCamillo&rsquo;s narrator voice: affectionate, honest, and a little wry.</div>
+      <div class="rwm-frame">Sentence frame: [Name] was ridiculously [adjective]. &mdash; or try your own in DiCamillo's voice.</div>
+      <div class="textbox-prompt">Write your own sentence using the same pattern as the author.</div>
+      <div class="journal-label">📓 Your sentence <span class="saved-dot" id="dot-rwm-mimic"></span></div>
+      <textarea class="journal-box" id="journal-rwm-mimic" data-label="RWM — Mimic" placeholder="Write your sentence here..." oninput="autoSave(this,'dot-rwm-mimic');gatherAnswers();"></textarea>
+    </div>
+  </div>
+    <div class="tab-next-wrap">
     <p class="tab-transition-voice">You&rsquo;ve read, you&rsquo;ve paused, you&rsquo;ve thought. Time to show what you know.</p>
     <button class="tab-next-btn" onclick="switchTab('assignment')">Continue to 📬 Assignment →</button>
   </div>
@@ -2628,7 +2646,7 @@ function gatherAnswers() {
   var sections = [
     { title: '🌅 WARM-UP', ids: ['journal-wgrd', 'journal-dol'] },
     { title: '🔤 WORD STUDY', ids: ['journal-morph', 'journal-vocab', 'journal-grammar', 'journal-spelling', 'journal-writing'] },
-    { title: '📖 READING — PAUSE & THINK', ids: ['journal-pause1', 'journal-pause2'] },
+    { title: '📖 READING — PAUSE & THINK', ids: ['journal-pause1', 'journal-pause2', 'journal-rwm-reader', 'journal-rwm-writer', 'journal-rwm-mimic'] },
     { title: '📬 READING COMPREHENSION', ids: ['journal-q1','journal-q2','journal-q3','journal-q4','journal-q5','journal-q6','journal-q7'] },
     { title: '✍️ WRITER\'S WORKSHOP', ids: ['journal-ww'] }
   ];
@@ -2929,10 +2947,30 @@ function autoSave(textarea, dotId) {
 }
 
 /* ───── FILL-IN-THE-ROOT GAME (MORPHOLOGY) ───── */
+function checkVocabCloze() {
+  var inputs = document.querySelectorAll('#vocabClozeGame .fillin-input');
+  var allCorrect = true;
+  inputs.forEach(function(inp) {
+    var answer = inp.getAttribute('data-answer').toLowerCase();
+    var val = inp.value.trim().toLowerCase();
+    if (val === answer) {
+      inp.classList.remove('wrong');
+      inp.classList.add('correct');
+      inp.disabled = true;
+    } else {
+      inp.classList.remove('correct');
+      inp.classList.add('wrong');
+      allCorrect = false;
+      setTimeout(function() { inp.classList.remove('wrong'); }, 600);
+    }
+  });
+  if (allCorrect) { document.getElementById('vocabClozeFeedback').classList.add('show'); }
+}
+
 window._fillinDone = false;
 
 function checkFillIn() {
-  var inputs = document.querySelectorAll('.fillin-input');
+  var inputs = document.querySelectorAll('#fillinGame .fillin-input');
   var allCorrect = true;
   inputs.forEach(function(inp) {
     var answer = inp.getAttribute('data-answer').toLowerCase();

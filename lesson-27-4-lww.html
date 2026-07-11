@@ -2399,7 +2399,36 @@ body {
             <textarea class="journal-box" id="journal-q3" data-label="Q3: reading skill" placeholder="It matters to understand different perspectives because..." oninput="autoSave(this,'dot-journal-q3');gatherAnswers();"></textarea>
           </div>
         </div>
-  <div class="tab-next-wrap">
+  
+  <!-- RWM -->
+  <div class="rwm-box">
+    <div class="rwm-header">📖 RWM — Read like a Reader, Read like a Writer, Mimic</div>
+    <div class="rwm-sentence">&ldquo;Edmund had been thinking, as they all had, only of the cold and the wet and the danger. He had not been thinking at all about what Narnia really meant.&rdquo;</div>
+    <div class="rwm-craft-note">📌 Craft focus: contrast — what the character was thinking vs. what they were missing</div>
+    <div class="rwm-step">
+      <div class="rwm-step-label">📖 Read like a Reader</div>
+      <div class="rwm-step-text">Edmund has been focused on survival. But the author suggests he'd been missing something bigger. What do you think Narnia "really meant" at this point in the story? What had he overlooked?</div>
+      <div class="textbox-prompt">Write 1–2 sentences about what this moment reveals about the character or the story.</div>
+      <div class="journal-label">📓 Your response <span class="saved-dot" id="dot-rwm-reader"></span></div>
+      <textarea class="journal-box" id="journal-rwm-reader" data-label="RWM — Read like a Reader" placeholder="This sentence shows..." oninput="autoSave(this,'dot-rwm-reader');gatherAnswers();"></textarea>
+    </div>
+    <div class="rwm-step">
+      <div class="rwm-step-label">✏️ Read like a Writer</div>
+      <div class="rwm-step-text">Lewis tells us what Edmund was thinking about, then tells us what he was NOT thinking about. This two-part structure — what happened vs. what was missed — creates a sense of something important being overlooked. Try it yourself with a moment of distraction.</div>
+      <div class="textbox-prompt">Write 1–2 sentences naming what the author did and why it works.</div>
+      <div class="journal-label">📓 Your response <span class="saved-dot" id="dot-rwm-writer"></span></div>
+      <textarea class="journal-box" id="journal-rwm-writer" data-label="RWM — Read like a Writer" placeholder="The author used... This works because..." oninput="autoSave(this,'dot-rwm-writer');gatherAnswers();"></textarea>
+    </div>
+    <div class="rwm-step">
+      <div class="rwm-step-label">🖊️ Mimic</div>
+      <div class="rwm-step-text">Write your own sentence using the same pattern as the author.</div>
+      <div class="rwm-frame">Sentence frame: [Character] had been thinking only of [immediate problem]. [He/She] had not been thinking at all about [the bigger thing].</div>
+      <div class="textbox-prompt">Write your sentence below using the same pattern as the author.</div>
+      <div class="journal-label">📓 Your sentence <span class="saved-dot" id="dot-rwm-mimic"></span></div>
+      <textarea class="journal-box" id="journal-rwm-mimic" data-label="RWM — Mimic" placeholder="Write your sentence here..." oninput="autoSave(this,'dot-rwm-mimic');gatherAnswers();"></textarea>
+    </div>
+  </div>
+<div class="tab-next-wrap">
     <p class="tab-transition-voice">Great reading work! Now bring your thinking to the assignment.</p>
     <button class="tab-next-btn" onclick="switchTab('assignment')">Continue to 📬 Assignment →</button>
   </div>
@@ -2501,6 +2530,7 @@ function gatherAnswers() {
   var output = '';
   var sections = [
     { title: '📖 CHAPTER THINKING', ids: ['journal-q1','journal-q2','journal-q3'] },
+    { title: '📖 RWM — READ LIKE A READER / WRITER / MIMIC', ids: ['journal-rwm-reader', 'journal-rwm-writer', 'journal-rwm-mimic'] },
     { title: '🔤 WORD STUDY CONNECTION (MORPHOLOGY)', ids: ['journal-morph'] },
     { title: '🪶 WRITING CONNECTION', ids: ['journal-writing'] }
   ];
@@ -2867,7 +2897,7 @@ function autoSave(textarea, dotId) {
 window._fillinDone = false;
 
 function checkFillIn() {
-  var inputs = document.querySelectorAll('.fillin-input');
+  var inputs = document.querySelectorAll('#fillinGame .fillin-input');
   var allCorrect = true;
   inputs.forEach(function(inp) {
     var answer = inp.getAttribute('data-answer').toLowerCase();
@@ -2895,6 +2925,7 @@ function downloadJournal() {
 
   var sections = [
     { title: '📖 CHAPTER THINKING', ids: ['journal-q1','journal-q2','journal-q3'] },
+    { title: '📖 RWM — READ LIKE A READER / WRITER / MIMIC', ids: ['journal-rwm-reader', 'journal-rwm-writer', 'journal-rwm-mimic'] },
     { title: '🔤 WORD STUDY CONNECTION (MORPHOLOGY)', ids: ['journal-morph'] },
     { title: '🪶 WRITING CONNECTION', ids: ['journal-writing'] }
   ];

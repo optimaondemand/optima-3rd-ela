@@ -2152,6 +2152,32 @@ Inside a paper, sailing ship!</div>
 <textarea class="journal-box" id="journal-pause1" data-label="Pause &amp; Think" placeholder="I think..." oninput="autoSave(this,'dot-pause1')"></textarea>
 </div></div>
 </div></div>
+<div class="rwm-box">
+<div class="rwm-header">📖 RWM — Read like a Reader, Read like a Writer, Mimic</div>
+<div class="rwm-sentence">&ldquo;Arthur thought having a flat brother was stupid.&rdquo;</div>
+<div class="rwm-step">
+<div class="rwm-step-label">📖 Read like a Reader</div>
+<div class="rwm-step-text">This one sentence tells us a lot about how Arthur feels. What does it show about his character? Do you think he&rsquo;s being honest, or is there something else going on?</div>
+<div class="textbox-prompt">Write 1 sentence: What does this tell you about Arthur?</div>
+<div class="journal-label">📓 Your response <span class="saved-dot" id="dot-rwm-reader"></span></div>
+<textarea class="journal-box" id="journal-rwm-reader" data-label="RWM — Read like a Reader" placeholder="I think Arthur feels... because..." oninput="autoSave(this,'dot-rwm-reader');gatherAnswers();"></textarea>
+</div>
+<div class="rwm-step">
+<div class="rwm-step-label">✏️ Read like a Writer</div>
+<div class="rwm-step-text">The author used the word <strong>&ldquo;stupid&rdquo;</strong> &mdash; a very kid-sounding word. Why do you think Jeff Brown chose that word instead of something fancier like &ldquo;embarrassing&rdquo; or &ldquo;ridiculous&rdquo;?</div>
+<div class="textbox-prompt">Write 1 sentence: What does the word choice tell you?</div>
+<div class="journal-label">📓 Your response <span class="saved-dot" id="dot-rwm-writer"></span></div>
+<textarea class="journal-box" id="journal-rwm-writer" data-label="RWM — Read like a Writer" placeholder="I think the author used 'stupid' because..." oninput="autoSave(this,'dot-rwm-writer');gatherAnswers();"></textarea>
+</div>
+<div class="rwm-step">
+<div class="rwm-step-label">🖊️ Mimic</div>
+<div class="rwm-step-text">Write a sentence about what a character or real person thinks about something, using the same pattern as the author.</div>
+<div class="rwm-frame">Sentence frame: [Name] thought [having / being / doing something] was [adjective].</div>
+<div class="textbox-prompt">Write your own sentence using the same pattern as the author.</div>
+<div class="journal-label">📓 Your sentence <span class="saved-dot" id="dot-rwm-mimic"></span></div>
+<textarea class="journal-box" id="journal-rwm-mimic" data-label="RWM — Mimic" placeholder="Write your sentence here..." oninput="autoSave(this,'dot-rwm-mimic');gatherAnswers();"></textarea>
+</div>
+</div>
 <div class="tab-next-wrap">
 <p class="tab-transition-voice">You&rsquo;ve read and thought carefully. Time to show what you know!</p>
 <button class="tab-next-btn" onclick="switchTab('assignment')">Continue to 📬 Assignment →</button>
@@ -2222,7 +2248,7 @@ function expandIntro(){document.getElementById("introSection").classList.remove(
 function gatherAnswers(){var output="";var sections=[
 {title:"🌅 WARM-UP",ids:["journal-wgrd","journal-dol"]},
 {title:"🔤 WORD STUDY",ids:["journal-swyk","journal-writing"]},
-{title:"📖 READING",ids:["journal-pause1"]},
+{title:"📖 READING",ids:["journal-pause1","journal-rwm-reader","journal-rwm-writer","journal-rwm-mimic"]},
 {title:"📬 COMPREHENSION",ids:["journal-q1","journal-q2","journal-q3","journal-wp"]}
 ];
 output+="LESSON 2.4 — Flat Stanley, Review &amp; Fluency\n";

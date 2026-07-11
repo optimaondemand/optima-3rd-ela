@@ -2411,43 +2411,15 @@ body {
         </div>
       </div>
 
-      <div class="callout callout-info" style="margin-top:16px;"><span class="callout-icon">🎯</span><p><strong>Your turn!</strong> Each word below has its actual sentence from the book above it. Read the sentence, look for word parts, and guess what the word means. Then tap the card to check.</p></div>
-
-      <div class="vocab-grid" style="grid-template-columns:1fr 1fr;">
-        <div class="vocab-decode-item">
-          <div class="flip-card" onclick="this.classList.toggle('flipped')" style="height:150px;">
-            <div class="flip-card-inner">
-              <div class="flip-card-front"><div class="fc-emoji">💭</div><div class="fc-word">reflect</div><div class="fc-tap">tap to flip</div></div>
-              <div class="flip-card-back"><div class="fc-word-back">reflect</div><div class="fc-def">To think carefully and deeply about something you've experienced.</div></div>
-            </div>
-          </div>
-        </div>
-        <div class="vocab-decode-item">
-          <div class="flip-card" onclick="this.classList.toggle('flipped')" style="height:150px;">
-            <div class="flip-card-inner">
-              <div class="flip-card-front"><div class="fc-emoji">🎉</div><div class="fc-word">celebrate</div><div class="fc-tap">tap to flip</div></div>
-              <div class="flip-card-back"><div class="fc-word-back">celebrate</div><div class="fc-def">To honor something with joy; to mark an achievement.</div></div>
-            </div>
-          </div>
-        </div>
-        <div class="vocab-decode-item">
-          <div class="flip-card" onclick="this.classList.toggle('flipped')" style="height:150px;">
-            <div class="flip-card-inner">
-              <div class="flip-card-front"><div class="fc-emoji">📘</div><div class="fc-word">novel</div><div class="fc-tap">tap to flip</div></div>
-              <div class="flip-card-back"><div class="fc-word-back">novel</div><div class="fc-def">A long work of fiction with characters, plot, and theme.</div></div>
-            </div>
-          </div>
-        </div>
-        <div class="vocab-decode-item">
-          <div class="flip-card" onclick="this.classList.toggle('flipped')" style="height:150px;">
-            <div class="flip-card-inner">
-              <div class="flip-card-front"><div class="fc-emoji">✨</div><div class="fc-word">memorable</div><div class="fc-tap">tap to flip</div></div>
-              <div class="flip-card-back"><div class="fc-word-back">memorable</div><div class="fc-def">Worth remembering; leaving a lasting impression.</div></div>
-            </div>
-          </div>
-        </div>
+      <div class="callout callout-info" style="margin-top:16px;"><span class="callout-icon">📚</span><p><strong>Word bank:</strong> <strong>reflect</strong> &middot; <strong>celebrate</strong> &middot; <strong>novel</strong> &middot; <strong>memorable</strong></p></div>
+      <div class="fillin-game" id="vocabClozeGame">
+        <div class="fillin-item" style="font-family:Lora,Georgia,serif;font-style:italic;">Take a moment to <input class="fillin-input" id="vcloze1" data-answer="reflect" maxlength="11" placeholder="______"> on which character changed most from the beginning to the end.</div>
+        <div class="fillin-item" style="font-family:Lora,Georgia,serif;font-style:italic;">Finishing a whole book together is worth stopping to <input class="fillin-input" id="vcloze2" data-answer="celebrate" maxlength="13" placeholder="______"> as a class.</div>
+        <div class="fillin-item" style="font-family:Lora,Georgia,serif;font-style:italic;">The Whipping Boy is a short <input class="fillin-input" id="vcloze3" data-answer="novel" maxlength="9" placeholder="______"> that packs surprising depth into just a few chapters.</div>
+        <div class="fillin-item" style="font-family:Lora,Georgia,serif;font-style:italic;">The moment Jemmy decided to go back was the most <input class="fillin-input" id="vcloze4" data-answer="memorable" maxlength="13" placeholder="______"> part of the whole story.</div>
+        <button class="fillin-check-btn" onclick="checkVocabCloze()">Check My Work</button>
+        <div class="fillin-feedback" id="vocabClozeFeedback">📖 All correct!</div>
       </div>
-
       <div class="callout callout-info" style="margin-top:16px;"><span class="callout-icon">🎯</span><p><strong>Quick Match:</strong> Tap a word, then tap its meaning.</p></div>
       <div class="match-game" id="vocabMatch">
         <div class="match-grid" id="matchGrid">
@@ -2676,7 +2648,36 @@ body {
     </div>
   </div>
 
-  <div class="tab-next-wrap">
+  
+  <!-- RWM -->
+  <div class="rwm-box">
+    <div class="rwm-header">📖 RWM — Read like a Reader, Read like a Writer, Mimic</div>
+    <div class="rwm-sentence">&ldquo;Some stories end. Some stories only seem to.&rdquo;</div>
+    <div class="rwm-craft-note">📌 Craft focus: two-sentence contrast — parallel structure with a twist</div>
+    <div class="rwm-step">
+      <div class="rwm-step-label">📖 Read like a Reader</div>
+      <div class="rwm-step-text">Fleischman ends by suggesting the story isn't really over. Do you agree? What in the story feels unfinished — or finished in a way that will last beyond the last page?</div>
+      <div class="textbox-prompt">Write 1–2 sentences about what this moment reveals about the character or the story.</div>
+      <div class="journal-label">📓 Your response <span class="saved-dot" id="dot-rwm-reader"></span></div>
+      <textarea class="journal-box" id="journal-rwm-reader" data-label="RWM — Read like a Reader" placeholder="This sentence shows..." oninput="autoSave(this,'dot-rwm-reader');gatherAnswers();"></textarea>
+    </div>
+    <div class="rwm-step">
+      <div class="rwm-step-label">✏️ Read like a Writer</div>
+      <div class="rwm-step-text">Two sentences. Both start with <em>"Some stories."</em> The second corrects the first with just four more words: <em>"only seem to."</em> How does using the exact same opening — and then twisting the ending — make the idea land harder than if he had written it as one sentence?</div>
+      <div class="textbox-prompt">Write 1–2 sentences naming what the author did and why it works.</div>
+      <div class="journal-label">📓 Your response <span class="saved-dot" id="dot-rwm-writer"></span></div>
+      <textarea class="journal-box" id="journal-rwm-writer" data-label="RWM — Read like a Writer" placeholder="The author used... This works because..." oninput="autoSave(this,'dot-rwm-writer');gatherAnswers();"></textarea>
+    </div>
+    <div class="rwm-step">
+      <div class="rwm-step-label">🖊️ Mimic</div>
+      <div class="rwm-step-text">Write your own sentence using the same pattern as the author.</div>
+      <div class="rwm-frame">Sentence frame: Some [things] [do something]. Some [things] only seem to.</div>
+      <div class="textbox-prompt">Write your sentence below using the same pattern as the author.</div>
+      <div class="journal-label">📓 Your sentence <span class="saved-dot" id="dot-rwm-mimic"></span></div>
+      <textarea class="journal-box" id="journal-rwm-mimic" data-label="RWM — Mimic" placeholder="Write your sentence here..." oninput="autoSave(this,'dot-rwm-mimic');gatherAnswers();"></textarea>
+    </div>
+  </div>
+<div class="tab-next-wrap">
     <p class="tab-transition-voice">You&rsquo;ve read and noticed. Now answer the questions and submit your work.</p>
     <button class="tab-next-btn" onclick="switchTab('assignment')">Continue to 📬 Assignment →</button>
   </div>
@@ -2859,6 +2860,7 @@ function gatherAnswers() {
   var output = '';
   var sections = [
     { title: '📖 CHAPTER THINKING', ids: ['journal-q1','journal-q2','journal-q3'] },
+    { title: '📖 RWM — READ LIKE A READER / WRITER / MIMIC', ids: ['journal-rwm-reader', 'journal-rwm-writer', 'journal-rwm-mimic'] },
     { title: '🔤 WORD STUDY CONNECTION (MORPHOLOGY)', ids: ['journal-morph'] },
     { title: '🪶 WRITING CONNECTION', ids: ['journal-writing'] }
   ];
@@ -3222,10 +3224,30 @@ function autoSave(textarea, dotId) {
 }
 
 /* ───── FILL-IN-THE-ROOT GAME (MORPHOLOGY) ───── */
+function checkVocabCloze() {
+  var inputs = document.querySelectorAll('#vocabClozeGame .fillin-input');
+  var allCorrect = true;
+  inputs.forEach(function(inp) {
+    var answer = inp.getAttribute('data-answer').toLowerCase();
+    var val = inp.value.trim().toLowerCase();
+    if (val === answer) {
+      inp.classList.remove('wrong');
+      inp.classList.add('correct');
+      inp.disabled = true;
+    } else {
+      inp.classList.remove('correct');
+      inp.classList.add('wrong');
+      allCorrect = false;
+      setTimeout(function() { inp.classList.remove('wrong'); }, 600);
+    }
+  });
+  if (allCorrect) { document.getElementById('vocabClozeFeedback').classList.add('show'); }
+}
+
 window._fillinDone = false;
 
 function checkFillIn() {
-  var inputs = document.querySelectorAll('.fillin-input');
+  var inputs = document.querySelectorAll('#fillinGame .fillin-input');
   var allCorrect = true;
   inputs.forEach(function(inp) {
     var answer = inp.getAttribute('data-answer').toLowerCase();
@@ -3253,6 +3275,7 @@ function downloadJournal() {
 
   var sections = [
     { title: '📖 CHAPTER THINKING', ids: ['journal-q1','journal-q2','journal-q3'] },
+    { title: '📖 RWM — READ LIKE A READER / WRITER / MIMIC', ids: ['journal-rwm-reader', 'journal-rwm-writer', 'journal-rwm-mimic'] },
     { title: '🔤 WORD STUDY CONNECTION (MORPHOLOGY)', ids: ['journal-morph'] },
     { title: '🪶 WRITING CONNECTION', ids: ['journal-writing'] }
   ];

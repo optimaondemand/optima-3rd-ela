@@ -2411,43 +2411,15 @@ body {
         </div>
       </div>
 
-      <div class="callout callout-info" style="margin-top:16px;"><span class="callout-icon">🎯</span><p><strong>Your turn!</strong> Each word below has its actual sentence from the book above it. Read the sentence, look for word parts, and guess what the word means. Then tap the card to check.</p></div>
-
-      <div class="vocab-grid" style="grid-template-columns:1fr 1fr;">
-        <div class="vocab-decode-item">
-          <div class="flip-card" onclick="this.classList.toggle('flipped')" style="height:150px;">
-            <div class="flip-card-inner">
-              <div class="flip-card-front"><div class="fc-emoji">🏰</div><div class="fc-word">fortress</div><div class="fc-tap">tap to flip</div></div>
-              <div class="flip-card-back"><div class="fc-word-back">fortress</div><div class="fc-def">A large, strong building built to resist attack.</div></div>
-            </div>
-          </div>
-        </div>
-        <div class="vocab-decode-item">
-          <div class="flip-card" onclick="this.classList.toggle('flipped')" style="height:150px;">
-            <div class="flip-card-inner">
-              <div class="flip-card-front"><div class="fc-emoji">🗝️</div><div class="fc-word">keep</div><div class="fc-tap">tap to flip</div></div>
-              <div class="flip-card-back"><div class="fc-word-back">keep</div><div class="fc-def">The strongest, innermost tower of a castle where the lord lived.</div></div>
-            </div>
-          </div>
-        </div>
-        <div class="vocab-decode-item">
-          <div class="flip-card" onclick="this.classList.toggle('flipped')" style="height:150px;">
-            <div class="flip-card-inner">
-              <div class="flip-card-front"><div class="fc-emoji">🧹</div><div class="fc-word">servant</div><div class="fc-tap">tap to flip</div></div>
-              <div class="flip-card-back"><div class="fc-word-back">servant</div><div class="fc-def">A person who works in another's household, doing domestic tasks.</div></div>
-            </div>
-          </div>
-        </div>
-        <div class="vocab-decode-item">
-          <div class="flip-card" onclick="this.classList.toggle('flipped')" style="height:150px;">
-            <div class="flip-card-inner">
-              <div class="flip-card-front"><div class="fc-emoji">⚔️</div><div class="fc-word">page</div><div class="fc-tap">tap to flip</div></div>
-              <div class="flip-card-back"><div class="fc-word-back">page</div><div class="fc-def">A young boy in training at a noble household, learning to become a knight.</div></div>
-            </div>
-          </div>
-        </div>
+      <div class="callout callout-info" style="margin-top:16px;"><span class="callout-icon">📚</span><p><strong>Word bank:</strong> <strong>fortress</strong> &middot; <strong>keep</strong> &middot; <strong>servant</strong> &middot; <strong>page</strong></p></div>
+      <div class="fillin-game" id="vocabClozeGame">
+        <div class="fillin-item" style="font-family:Lora,Georgia,serif;font-style:italic;">A great <input class="fillin-input" id="vcloze1" data-answer="fortress" maxlength="12" placeholder="______"> was built on the hilltop to protect the kingdom from enemy attacks.</div>
+        <div class="fillin-item" style="font-family:Lora,Georgia,serif;font-style:italic;">When danger came, the lord retreated into the innermost tower &mdash; the <input class="fillin-input" id="vcloze2" data-answer="keep" maxlength="8" placeholder="______"> &mdash; and barred the door.</div>
+        <div class="fillin-item" style="font-family:Lora,Georgia,serif;font-style:italic;">Every wealthy household employed many <input class="fillin-input" id="vcloze3" data-answer="servant" maxlength="11" placeholder="______"> to cook, clean, and care for the family.</div>
+        <div class="fillin-item" style="font-family:Lora,Georgia,serif;font-style:italic;">A boy who wished to become a knight first spent years as a <input class="fillin-input" id="vcloze4" data-answer="page" maxlength="8" placeholder="______"> in a noble household.</div>
+        <button class="fillin-check-btn" onclick="checkVocabCloze()">Check My Work</button>
+        <div class="fillin-feedback" id="vocabClozeFeedback">📖 All correct!</div>
       </div>
-
       <div class="callout callout-info" style="margin-top:16px;"><span class="callout-icon">🎯</span><p><strong>Quick Match:</strong> Tap a word, then tap its meaning.</p></div>
       <div class="match-game" id="vocabMatch">
         <div class="match-grid" id="matchGrid">
@@ -3128,10 +3100,30 @@ function autoSave(textarea, dotId) {
 }
 
 /* ───── FILL-IN-THE-ROOT GAME (MORPHOLOGY) ───── */
+function checkVocabCloze() {
+  var inputs = document.querySelectorAll('#vocabClozeGame .fillin-input');
+  var allCorrect = true;
+  inputs.forEach(function(inp) {
+    var answer = inp.getAttribute('data-answer').toLowerCase();
+    var val = inp.value.trim().toLowerCase();
+    if (val === answer) {
+      inp.classList.remove('wrong');
+      inp.classList.add('correct');
+      inp.disabled = true;
+    } else {
+      inp.classList.remove('correct');
+      inp.classList.add('wrong');
+      allCorrect = false;
+      setTimeout(function() { inp.classList.remove('wrong'); }, 600);
+    }
+  });
+  if (allCorrect) { document.getElementById('vocabClozeFeedback').classList.add('show'); }
+}
+
 window._fillinDone = false;
 
 function checkFillIn() {
-  var inputs = document.querySelectorAll('.fillin-input');
+  var inputs = document.querySelectorAll('#fillinGame .fillin-input');
   var allCorrect = true;
   inputs.forEach(function(inp) {
     var answer = inp.getAttribute('data-answer').toLowerCase();

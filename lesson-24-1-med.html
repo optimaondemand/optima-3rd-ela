@@ -2411,43 +2411,15 @@ body {
         </div>
       </div>
 
-      <div class="callout callout-info" style="margin-top:16px;"><span class="callout-icon">🎯</span><p><strong>Your turn!</strong> Each word below has its actual sentence from the book above it. Read the sentence, look for word parts, and guess what the word means. Then tap the card to check.</p></div>
-
-      <div class="vocab-grid" style="grid-template-columns:1fr 1fr;">
-        <div class="vocab-decode-item">
-          <div class="flip-card" onclick="this.classList.toggle('flipped')" style="height:150px;">
-            <div class="flip-card-inner">
-              <div class="flip-card-front"><div class="fc-emoji">🌊</div><div class="fc-word">moat</div><div class="fc-tap">tap to flip</div></div>
-              <div class="flip-card-back"><div class="fc-word-back">moat</div><div class="fc-def">A deep water-filled ditch surrounding a castle for defense.</div></div>
-            </div>
-          </div>
-        </div>
-        <div class="vocab-decode-item">
-          <div class="flip-card" onclick="this.classList.toggle('flipped')" style="height:150px;">
-            <div class="flip-card-inner">
-              <div class="flip-card-front"><div class="fc-emoji">🪨</div><div class="fc-word">stonemason</div><div class="fc-tap">tap to flip</div></div>
-              <div class="flip-card-back"><div class="fc-word-back">stonemason</div><div class="fc-def">A skilled worker who cuts and builds with stone.</div></div>
-            </div>
-          </div>
-        </div>
-        <div class="vocab-decode-item">
-          <div class="flip-card" onclick="this.classList.toggle('flipped')" style="height:150px;">
-            <div class="flip-card-inner">
-              <div class="flip-card-front"><div class="fc-emoji">🌉</div><div class="fc-word">drawbridge</div><div class="fc-tap">tap to flip</div></div>
-              <div class="flip-card-back"><div class="fc-word-back">drawbridge</div><div class="fc-def">A bridge over a moat that can be raised to block entrance.</div></div>
-            </div>
-          </div>
-        </div>
-        <div class="vocab-decode-item">
-          <div class="flip-card" onclick="this.classList.toggle('flipped')" style="height:150px;">
-            <div class="flip-card-inner">
-              <div class="flip-card-front"><div class="fc-emoji">🏰</div><div class="fc-word">keep</div><div class="fc-tap">tap to flip</div></div>
-              <div class="flip-card-back"><div class="fc-word-back">keep</div><div class="fc-def">The strongest inner tower of a castle, used as a last defense.</div></div>
-            </div>
-          </div>
-        </div>
+      <div class="callout callout-info" style="margin-top:16px;"><span class="callout-icon">📚</span><p><strong>Word bank:</strong> <strong>moat</strong> &middot; <strong>stonemason</strong> &middot; <strong>drawbridge</strong> &middot; <strong>keep</strong></p></div>
+      <div class="fillin-game" id="vocabClozeGame">
+        <div class="fillin-item" style="font-family:Lora,Georgia,serif;font-style:italic;">A wide <input class="fillin-input" id="vcloze1" data-answer="moat" maxlength="8" placeholder="______"> filled with water surrounded the castle walls, making it nearly impossible to attack on foot.</div>
+        <div class="fillin-item" style="font-family:Lora,Georgia,serif;font-style:italic;">It took hundreds of skilled <input class="fillin-input" id="vcloze2" data-answer="stonemason" maxlength="14" placeholder="______"> workers many years to cut and place each block of stone.</div>
+        <div class="fillin-item" style="font-family:Lora,Georgia,serif;font-style:italic;">When the enemy was spotted, soldiers raised the <input class="fillin-input" id="vcloze3" data-answer="drawbridge" maxlength="14" placeholder="______"> so that no one could cross the moat.</div>
+        <div class="fillin-item" style="font-family:Lora,Georgia,serif;font-style:italic;">Even if the outer walls were breached, soldiers could retreat to the massive central <input class="fillin-input" id="vcloze4" data-answer="keep" maxlength="8" placeholder="______"> and keep fighting.</div>
+        <button class="fillin-check-btn" onclick="checkVocabCloze()">Check My Work</button>
+        <div class="fillin-feedback" id="vocabClozeFeedback">📖 All correct!</div>
       </div>
-
       <div class="callout callout-info" style="margin-top:16px;"><span class="callout-icon">🎯</span><p><strong>Quick Match:</strong> Tap a word, then tap its meaning.</p></div>
       <div class="match-game" id="vocabMatch">
         <div class="match-grid" id="matchGrid">
@@ -3135,10 +3107,30 @@ function autoSave(textarea, dotId) {
 }
 
 /* ───── FILL-IN-THE-ROOT GAME (MORPHOLOGY) ───── */
+function checkVocabCloze() {
+  var inputs = document.querySelectorAll('#vocabClozeGame .fillin-input');
+  var allCorrect = true;
+  inputs.forEach(function(inp) {
+    var answer = inp.getAttribute('data-answer').toLowerCase();
+    var val = inp.value.trim().toLowerCase();
+    if (val === answer) {
+      inp.classList.remove('wrong');
+      inp.classList.add('correct');
+      inp.disabled = true;
+    } else {
+      inp.classList.remove('correct');
+      inp.classList.add('wrong');
+      allCorrect = false;
+      setTimeout(function() { inp.classList.remove('wrong'); }, 600);
+    }
+  });
+  if (allCorrect) { document.getElementById('vocabClozeFeedback').classList.add('show'); }
+}
+
 window._fillinDone = false;
 
 function checkFillIn() {
-  var inputs = document.querySelectorAll('.fillin-input');
+  var inputs = document.querySelectorAll('#fillinGame .fillin-input');
   var allCorrect = true;
   inputs.forEach(function(inp) {
     var answer = inp.getAttribute('data-answer').toLowerCase();

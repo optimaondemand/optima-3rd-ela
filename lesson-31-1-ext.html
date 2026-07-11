@@ -2364,44 +2364,14 @@ body {
         </div>
       </div>
     </div>
-    <div class="callout callout-info" style="margin-top:16px;"><span class="callout-icon">🎯</span><p><strong>Your turn!</strong> Each word below has its actual sentence from the book above it. Read, think, then tap to check.</p></div>
-    <div class="vocab-grid" style="display:grid;grid-template-columns:1fr;gap:18px;margin:14px 0;">
-            <div class="vocab-decode-item" style="display:grid;grid-template-columns:1fr auto;gap:16px;align-items:center;background:#fff;border:2px solid #E2E8F4;border-radius:14px;padding:16px 18px;">
-              <div style="min-width:0;">
-                <div class="decode-sentence" style="margin-bottom:6px;font-size:15px;">&ldquo;Every character we read this year faced a courageous moment.&rdquo;</div>
-                <div style="font-size:13px;color:#7A88A8;font-style:italic;">tap the card to reveal the meaning →</div>
-              </div>
-              <div class="flip-card" style="width:160px;flex-shrink:0;" onclick="this.classList.toggle('flipped')">
-                <div class="flip-card-inner">
-                  <div class="flip-card-front"><div class="fc-emoji">🦁</div><div class="fc-word">courageous</div><div class="fc-tap">think first, then tap</div></div>
-                  <div class="flip-card-back"><div class="fc-word-back">courageous</div><div class="fc-def">Having or showing courage; willing to act despite fear.</div></div>
-                </div>
-              </div>
-            </div>
-            <div class="vocab-decode-item" style="display:grid;grid-template-columns:1fr auto;gap:16px;align-items:center;background:#fff;border:2px solid #E2E8F4;border-radius:14px;padding:16px 18px;">
-              <div style="min-width:0;">
-                <div class="decode-sentence" style="margin-bottom:6px;font-size:15px;">&ldquo;Despereaux showed perseverance when he refused to give up.&rdquo;</div>
-                <div style="font-size:13px;color:#7A88A8;font-style:italic;">tap the card to reveal the meaning →</div>
-              </div>
-              <div class="flip-card" style="width:160px;flex-shrink:0;" onclick="this.classList.toggle('flipped')">
-                <div class="flip-card-inner">
-                  <div class="flip-card-front"><div class="fc-emoji">🏃</div><div class="fc-word">perseverance</div><div class="fc-tap">think first, then tap</div></div>
-                  <div class="flip-card-back"><div class="fc-word-back">perseverance</div><div class="fc-def">Continuing to try even when things are hard or discouraging.</div></div>
-                </div>
-              </div>
-            </div>
-            <div class="vocab-decode-item" style="display:grid;grid-template-columns:1fr auto;gap:16px;align-items:center;background:#fff;border:2px solid #E2E8F4;border-radius:14px;padding:16px 18px;">
-              <div style="min-width:0;">
-                <div class="decode-sentence" style="margin-bottom:6px;font-size:15px;">&ldquo;Courage is one of the great virtues a person can develop.&rdquo;</div>
-                <div style="font-size:13px;color:#7A88A8;font-style:italic;">tap the card to reveal the meaning →</div>
-              </div>
-              <div class="flip-card" style="width:160px;flex-shrink:0;" onclick="this.classList.toggle('flipped')">
-                <div class="flip-card-inner">
-                  <div class="flip-card-front"><div class="fc-emoji">⭐</div><div class="fc-word">virtue</div><div class="fc-tap">think first, then tap</div></div>
-                  <div class="flip-card-back"><div class="fc-word-back">virtue</div><div class="fc-def">A quality that shows good character and moral strength.</div></div>
-                </div>
-              </div>
-            </div></div>
+    <div class="callout callout-info" style="margin-top:16px;"><span class="callout-icon">📚</span><p><strong>Word bank:</strong> <strong>courageous</strong> &middot; <strong>perseverance</strong> &middot; <strong>virtue</strong></p></div>
+    <div class="fillin-game" id="vocabClozeGame">
+      <div class="fillin-item" style="font-family:Lora,Georgia,serif;font-style:italic;">It takes a <input class="fillin-input" id="vcloze1" data-answer="courageous" maxlength="14" placeholder="______"> choice to do what is right when everything around you says to stay silent.</div>
+      <div class="fillin-item" style="font-family:Lora,Georgia,serif;font-style:italic;">Desper&eacute;aux&rsquo;s <input class="fillin-input" id="vcloze2" data-answer="perseverance" maxlength="16" placeholder="______"> showed in every chapter &mdash; he kept going even when the dungeon seemed endless.</div>
+      <div class="fillin-item" style="font-family:Lora,Georgia,serif;font-style:italic;">Ancient philosophers agreed that courage is not just a skill but a <input class="fillin-input" id="vcloze3" data-answer="virtue" maxlength="10" placeholder="______"> &mdash; something built through practice over time.</div>
+      <button class="fillin-check-btn" onclick="checkVocabCloze()">Check My Work</button>
+      <div class="fillin-feedback" id="vocabClozeFeedback">📖 All correct!</div>
+    </div>
     <div class="callout callout-info" style="margin-top:16px;"><span class="callout-icon">🎯</span><p><strong>Quick Match:</strong> Tap a word, then tap its meaning.</p></div>
     <div class="match-game" id="vocabMatch"><div class="match-grid" id="matchGrid" style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:8px;"><div class="match-item is-word" data-match="A" onclick="matchClick(this)">courageous</div><div class="match-item" data-match="A" onclick="matchClick(this)">Having or showing courage; willing to act despite fear.</div><div class="match-item is-word" data-match="B" onclick="matchClick(this)">perseverance</div><div class="match-item" data-match="B" onclick="matchClick(this)">Continuing to try even when things are hard or discouraging.</div><div class="match-item is-word" data-match="C" onclick="matchClick(this)">virtue</div><div class="match-item" data-match="C" onclick="matchClick(this)">A quality that shows good character and moral strength.</div></div><div class="match-feedback" id="matchFeedback">✨ All matched! Well done.</div></div>
   </div>
@@ -2970,10 +2940,30 @@ function autoSave(textarea, dotId) {
 }
 
 /* ───── FILL-IN-THE-ROOT GAME (MORPHOLOGY) ───── */
+function checkVocabCloze() {
+  var inputs = document.querySelectorAll('#vocabClozeGame .fillin-input');
+  var allCorrect = true;
+  inputs.forEach(function(inp) {
+    var answer = inp.getAttribute('data-answer').toLowerCase();
+    var val = inp.value.trim().toLowerCase();
+    if (val === answer) {
+      inp.classList.remove('wrong');
+      inp.classList.add('correct');
+      inp.disabled = true;
+    } else {
+      inp.classList.remove('correct');
+      inp.classList.add('wrong');
+      allCorrect = false;
+      setTimeout(function() { inp.classList.remove('wrong'); }, 600);
+    }
+  });
+  if (allCorrect) { document.getElementById('vocabClozeFeedback').classList.add('show'); }
+}
+
 window._fillinDone = false;
 
 function checkFillIn() {
-  var inputs = document.querySelectorAll('.fillin-input');
+  var inputs = document.querySelectorAll('#fillinGame .fillin-input');
   var allCorrect = true;
   inputs.forEach(function(inp) {
     var answer = inp.getAttribute('data-answer').toLowerCase();

@@ -2411,43 +2411,15 @@ body {
         </div>
       </div>
 
-      <div class="callout callout-info" style="margin-top:16px;"><span class="callout-icon">🎯</span><p><strong>Your turn!</strong> Each word below has its actual sentence from the book above it. Read the sentence, look for word parts, and guess what the word means. Then tap the card to check.</p></div>
-
-      <div class="vocab-grid" style="grid-template-columns:1fr 1fr;">
-        <div class="vocab-decode-item">
-          <div class="flip-card" onclick="this.classList.toggle('flipped')" style="height:150px;">
-            <div class="flip-card-inner">
-              <div class="flip-card-front"><div class="fc-emoji">😶</div><div class="fc-word">dumfounded</div><div class="fc-tap">tap to flip</div></div>
-              <div class="flip-card-back"><div class="fc-word-back">dumfounded</div><div class="fc-def">So shocked that you cannot speak or think.</div></div>
-            </div>
-          </div>
-        </div>
-        <div class="vocab-decode-item">
-          <div class="flip-card" onclick="this.classList.toggle('flipped')" style="height:150px;">
-            <div class="flip-card-inner">
-              <div class="flip-card-front"><div class="fc-emoji">⚓</div><div class="fc-word">convict</div><div class="fc-tap">tap to flip</div></div>
-              <div class="flip-card-back"><div class="fc-word-back">convict</div><div class="fc-def">A prisoner being transported for a crime.</div></div>
-            </div>
-          </div>
-        </div>
-        <div class="vocab-decode-item">
-          <div class="flip-card" onclick="this.classList.toggle('flipped')" style="height:150px;">
-            <div class="flip-card-inner">
-              <div class="flip-card-front"><div class="fc-emoji">👑</div><div class="fc-word">decree</div><div class="fc-tap">tap to flip</div></div>
-              <div class="flip-card-back"><div class="fc-word-back">decree</div><div class="fc-def">An official order given by a ruler.</div></div>
-            </div>
-          </div>
-        </div>
-        <div class="vocab-decode-item">
-          <div class="flip-card" onclick="this.classList.toggle('flipped')" style="height:150px;">
-            <div class="flip-card-inner">
-              <div class="flip-card-front"><div class="fc-emoji">🤝</div><div class="fc-word">protection</div><div class="fc-tap">tap to flip</div></div>
-              <div class="flip-card-back"><div class="fc-word-back">protection</div><div class="fc-def">A promise to keep someone safe from harm.</div></div>
-            </div>
-          </div>
-        </div>
+      <div class="callout callout-info" style="margin-top:16px;"><span class="callout-icon">📚</span><p><strong>Word bank:</strong> <strong>dumfounded</strong> &middot; <strong>convict</strong> &middot; <strong>decree</strong> &middot; <strong>protection</strong></p></div>
+      <div class="fillin-game" id="vocabClozeGame">
+        <div class="fillin-item" style="font-family:Lora,Georgia,serif;font-style:italic;">The prince was <input class="fillin-input" id="vcloze1" data-answer="dumfounded" maxlength="14" placeholder="______"> &mdash; he had never heard anyone speak to him that way before.</div>
+        <div class="fillin-item" style="font-family:Lora,Georgia,serif;font-style:italic;">The outlaws were afraid of being caught and transported across the sea like a <input class="fillin-input" id="vcloze2" data-answer="convict" maxlength="11" placeholder="______">.</div>
+        <div class="fillin-item" style="font-family:Lora,Georgia,serif;font-style:italic;">The king&rsquo;s <input class="fillin-input" id="vcloze3" data-answer="decree" maxlength="10" placeholder="______"> made it official: the whipping boy would be punished no more.</div>
+        <div class="fillin-item" style="font-family:Lora,Georgia,serif;font-style:italic;">Jemmy offered the prince his <input class="fillin-input" id="vcloze4" data-answer="protection" maxlength="14" placeholder="______">, knowing the streets were more dangerous than the castle.</div>
+        <button class="fillin-check-btn" onclick="checkVocabCloze()">Check My Work</button>
+        <div class="fillin-feedback" id="vocabClozeFeedback">📖 All correct!</div>
       </div>
-
       <div class="callout callout-info" style="margin-top:16px;"><span class="callout-icon">🎯</span><p><strong>Quick Match:</strong> Tap a word, then tap its meaning.</p></div>
       <div class="match-game" id="vocabMatch">
         <div class="match-grid" id="matchGrid">
@@ -2676,7 +2648,36 @@ body {
     </div>
   </div>
 
-  <div class="tab-next-wrap">
+  
+  <!-- RWM -->
+  <div class="rwm-box">
+    <div class="rwm-header">📖 RWM — Read like a Reader, Read like a Writer, Mimic</div>
+    <div class="rwm-sentence">&ldquo;The prince had expected to feel triumph. Instead, he felt a strange new thing: gratitude.&rdquo;</div>
+    <div class="rwm-craft-note">📌 Craft focus: <strong>Instead</strong> as pivot; colon to name the unexpected</div>
+    <div class="rwm-step">
+      <div class="rwm-step-label">📖 Read like a Reader</div>
+      <div class="rwm-step-text">By the end of the story, the prince feels grateful — not victorious. What changed in him? Do you think he is a better person than he was at the start? What caused the change?</div>
+      <div class="textbox-prompt">Write 1–2 sentences about what this moment reveals about the character or the story.</div>
+      <div class="journal-label">📓 Your response <span class="saved-dot" id="dot-rwm-reader"></span></div>
+      <textarea class="journal-box" id="journal-rwm-reader" data-label="RWM — Read like a Reader" placeholder="This sentence shows..." oninput="autoSave(this,'dot-rwm-reader');gatherAnswers();"></textarea>
+    </div>
+    <div class="rwm-step">
+      <div class="rwm-step-label">✏️ Read like a Writer</div>
+      <div class="rwm-step-text">The author uses <em>"Instead"</em> to pivot from expected to actual, then uses a colon to pause before naming the emotion: <em>gratitude</em>. Why is it effective to save the name of the emotion for after the colon? What does that pause accomplish?</div>
+      <div class="textbox-prompt">Write 1–2 sentences naming what the author did and why it works.</div>
+      <div class="journal-label">📓 Your response <span class="saved-dot" id="dot-rwm-writer"></span></div>
+      <textarea class="journal-box" id="journal-rwm-writer" data-label="RWM — Read like a Writer" placeholder="The author used... This works because..." oninput="autoSave(this,'dot-rwm-writer');gatherAnswers();"></textarea>
+    </div>
+    <div class="rwm-step">
+      <div class="rwm-step-label">🖊️ Mimic</div>
+      <div class="rwm-step-text">Write your own sentence using the same pattern as the author.</div>
+      <div class="rwm-frame">Sentence frame: [Character] had expected to feel [expected emotion]. Instead, [he/she] felt a strange new thing: [surprising emotion].</div>
+      <div class="textbox-prompt">Write your sentence below using the same pattern as the author.</div>
+      <div class="journal-label">📓 Your sentence <span class="saved-dot" id="dot-rwm-mimic"></span></div>
+      <textarea class="journal-box" id="journal-rwm-mimic" data-label="RWM — Mimic" placeholder="Write your sentence here..." oninput="autoSave(this,'dot-rwm-mimic');gatherAnswers();"></textarea>
+    </div>
+  </div>
+<div class="tab-next-wrap">
     <p class="tab-transition-voice">You&rsquo;ve read and noticed. Now answer the questions and submit your work.</p>
     <button class="tab-next-btn" onclick="switchTab('assignment')">Continue to 📬 Assignment →</button>
   </div>
@@ -2855,6 +2856,7 @@ function gatherAnswers() {
   var output = '';
   var sections = [
     { title: '📖 CHAPTER THINKING', ids: ['journal-q1','journal-q2','journal-q3'] },
+    { title: '📖 RWM — READ LIKE A READER / WRITER / MIMIC', ids: ['journal-rwm-reader', 'journal-rwm-writer', 'journal-rwm-mimic'] },
     { title: '🔤 WORD STUDY CONNECTION (MORPHOLOGY)', ids: ['journal-morph'] },
     { title: '🪶 WRITING CONNECTION', ids: ['journal-writing'] }
   ];
@@ -3218,10 +3220,30 @@ function autoSave(textarea, dotId) {
 }
 
 /* ───── FILL-IN-THE-ROOT GAME (MORPHOLOGY) ───── */
+function checkVocabCloze() {
+  var inputs = document.querySelectorAll('#vocabClozeGame .fillin-input');
+  var allCorrect = true;
+  inputs.forEach(function(inp) {
+    var answer = inp.getAttribute('data-answer').toLowerCase();
+    var val = inp.value.trim().toLowerCase();
+    if (val === answer) {
+      inp.classList.remove('wrong');
+      inp.classList.add('correct');
+      inp.disabled = true;
+    } else {
+      inp.classList.remove('correct');
+      inp.classList.add('wrong');
+      allCorrect = false;
+      setTimeout(function() { inp.classList.remove('wrong'); }, 600);
+    }
+  });
+  if (allCorrect) { document.getElementById('vocabClozeFeedback').classList.add('show'); }
+}
+
 window._fillinDone = false;
 
 function checkFillIn() {
-  var inputs = document.querySelectorAll('.fillin-input');
+  var inputs = document.querySelectorAll('#fillinGame .fillin-input');
   var allCorrect = true;
   inputs.forEach(function(inp) {
     var answer = inp.getAttribute('data-answer').toLowerCase();
@@ -3249,6 +3271,7 @@ function downloadJournal() {
 
   var sections = [
     { title: '📖 CHAPTER THINKING', ids: ['journal-q1','journal-q2','journal-q3'] },
+    { title: '📖 RWM — READ LIKE A READER / WRITER / MIMIC', ids: ['journal-rwm-reader', 'journal-rwm-writer', 'journal-rwm-mimic'] },
     { title: '🔤 WORD STUDY CONNECTION (MORPHOLOGY)', ids: ['journal-morph'] },
     { title: '🪶 WRITING CONNECTION', ids: ['journal-writing'] }
   ];

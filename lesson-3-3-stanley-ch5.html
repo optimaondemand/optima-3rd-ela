@@ -2022,32 +2022,20 @@ body {
 <div class="fillin-feedback" id="fillinFeedback">🌱 All correct!</div></div>
 </div></div>
 <div class="activity bl-cyan">
-<div class="activity-head"><div class="activity-num" style="background:#2B7A78;">2</div><div style="flex:1;"><div class="activity-title">🔤 Vocabulary: This Week's Words</div><div class="activity-sub">Context Clues</div></div></div>
+<div class="activity-head"><div class="activity-num" style="background:#2B7A78;">2</div><div style="flex:1;"><div class="activity-title">🔤 Vocabulary: Words in Context</div><div class="activity-sub">Fill in the missing word</div></div></div>
 <div class="activity-body">
 <div class="video-wrap" style="margin-bottom:14px;"><div class="video-wrap-header"><span style="font-size:20px;">🔤</span><div><div class="video-wrap-type">Vocabulary · Practice</div><div class="video-wrap-title">Words From the Novel</div></div></div>
 <div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🔤</div><div class="video-placeholder-text">Teacher reviews vocabulary words</div><div class="video-placeholder-id"><!-- slot: 3-3-vocabulary --></div></div></div></div>
-<p>These words show up in this week's reading. Tap a card to see the definition.</p>
-<div class="vocab-grid">
-<div class="vocab-decode-item"><div class="decode-sentence" style="margin-bottom:10px;">&ldquo;Stanley was beginning to feel <strong>gloomy</strong>.&rdquo;</div>
-<div class="flip-card" onclick="this.classList.toggle('flipped')"><div class="flip-card-inner"><div class="flip-card-front"><div class="fc-emoji">😢</div><div class="fc-word">gloomy</div><div class="fc-tap">tap to flip</div></div><div class="flip-card-back"><div class="fc-word-back">gloomy</div><div class="fc-def">Sad and dark, without hope.</div></div></div></div></div>
-<div class="vocab-decode-item"><div class="decode-sentence" style="margin-bottom:10px;">&ldquo;You&rsquo;re <strong>brave</strong>,&rdquo; Arthur said.&rdquo;</div>
-<div class="flip-card" onclick="this.classList.toggle('flipped')"><div class="flip-card-inner"><div class="flip-card-front"><div class="fc-emoji">💪</div><div class="fc-word">brave</div><div class="fc-tap">tap to flip</div></div><div class="flip-card-back"><div class="fc-word-back">brave</div><div class="fc-def">Ready to face something scary or hard.</div></div></div></div></div>
-<div class="vocab-decode-item"><div class="decode-sentence" style="margin-bottom:10px;">&ldquo;Arthur found the bicycle <strong>pump</strong>.&rdquo;</div>
-<div class="flip-card" onclick="this.classList.toggle('flipped')"><div class="flip-card-inner"><div class="flip-card-front"><div class="fc-emoji">🎈</div><div class="fc-word">pump</div><div class="fc-tap">tap to flip</div></div><div class="flip-card-back"><div class="fc-word-back">pump</div><div class="fc-def">A tool that pushes air into something.</div></div></div></div></div>
-<div class="vocab-decode-item"><div class="decode-sentence" style="margin-bottom:10px;">&ldquo;Mrs. Lambchop made hot chocolate to <strong>celebrate</strong>.&rdquo;</div>
-<div class="flip-card" onclick="this.classList.toggle('flipped')"><div class="flip-card-inner"><div class="flip-card-front"><div class="fc-emoji">🎉</div><div class="fc-word">celebrate</div><div class="fc-tap">tap to flip</div></div><div class="flip-card-back"><div class="fc-word-back">celebrate</div><div class="fc-def">To do something special because of good news.</div></div></div></div></div>
+<p>Each sentence below is missing one of this week's words. Use the word bank to fill it in.</p>
+<div class="callout callout-info"><span class="callout-icon">📚</span><p><strong>Word bank:</strong> <strong>gloomy</strong> &middot; <strong>brave</strong> &middot; <strong>pump</strong> &middot; <strong>celebrate</strong></p></div>
+<div class="fillin-game" id="vocabClozeGame">
+<div class="fillin-item" style="font-family:Lora,Georgia,serif;font-style:italic;">Stanley was beginning to feel <input class="fillin-input" id="vcloze1" data-answer="gloomy" maxlength="10" placeholder="______"> about being flat forever.</div>
+<div class="fillin-item" style="font-family:Lora,Georgia,serif;font-style:italic;">&ldquo;You&rsquo;ll have to be <input class="fillin-input" id="vcloze2" data-answer="brave" maxlength="10" placeholder="______">,&rdquo; Arthur told his brother.</div>
+<div class="fillin-item" style="font-family:Lora,Georgia,serif;font-style:italic;">Arthur grabbed the bicycle <input class="fillin-input" id="vcloze3" data-answer="pump" maxlength="8" placeholder="______"> and held the nozzle to Stanley&rsquo;s side.</div>
+<div class="fillin-item" style="font-family:Lora,Georgia,serif;font-style:italic;">When Stanley was round again, the whole family gathered to <input class="fillin-input" id="vcloze4" data-answer="celebrate" maxlength="12" placeholder="______">.</div>
+<button class="fillin-check-btn" onclick="checkVocabCloze()">Check My Work</button>
+<div class="fillin-feedback" id="vocabClozeFeedback">📖 All correct!</div>
 </div>
-<div class="callout callout-info" style="margin-top:16px;"><span class="callout-icon">🎯</span><p><strong>Quick Match:</strong> Tap a word, then tap its meaning.</p></div>
-<div class="match-game" id="vocabMatch"><div class="match-grid" id="matchGrid">
-<div class="match-item is-word" data-match="A" onclick="matchClick(this)">gloomy</div>
-<div class="match-item" data-match="A" onclick="matchClick(this)">Sad and dark, without hope.</div>
-<div class="match-item is-word" data-match="B" onclick="matchClick(this)">brave</div>
-<div class="match-item" data-match="B" onclick="matchClick(this)">Ready to face something scary or hard.</div>
-<div class="match-item is-word" data-match="C" onclick="matchClick(this)">pump</div>
-<div class="match-item" data-match="C" onclick="matchClick(this)">A tool that pushes air into something.</div>
-<div class="match-item is-word" data-match="D" onclick="matchClick(this)">celebrate</div>
-<div class="match-item" data-match="D" onclick="matchClick(this)">To do something special because of good news.</div>
-</div><div class="match-feedback" id="matchFeedback">✨ All matched!</div></div>
 </div></div>
 <div class="activity bl-gold">
 <div class="activity-head"><div class="activity-num" style="background:#F2B134;">3</div><div style="flex:1;"><div class="activity-title">✏️ Grammar: Subject and predicate</div><div class="activity-sub">Use / Apply the skill.</div></div></div>
@@ -2153,6 +2141,32 @@ body {
 <textarea class="journal-box" id="journal-pause1" data-label="Pause &amp; Think" placeholder="I think..." oninput="autoSave(this,'dot-pause1')"></textarea>
 </div></div>
 </div></div>
+<div class="rwm-box">
+<div class="rwm-header">📖 RWM — Read like a Reader, Read like a Writer, Mimic</div>
+<div class="rwm-sentence">&ldquo;Arthur had an idea.&rdquo;</div>
+<div class="rwm-step">
+<div class="rwm-step-label">📖 Read like a Reader</div>
+<div class="rwm-step-text">Right before this sentence, Stanley is miserable. Everything changes in three words. What do you feel when you read &ldquo;Arthur had an idea&rdquo;? Why is this moment important for the story?</div>
+<div class="textbox-prompt">Write 1 sentence: What does this moment mean for Stanley?</div>
+<div class="journal-label">📓 Your response <span class="saved-dot" id="dot-rwm-reader"></span></div>
+<textarea class="journal-box" id="journal-rwm-reader" data-label="RWM — Read like a Reader" placeholder="When Arthur had an idea, I felt... because..." oninput="autoSave(this,'dot-rwm-reader');gatherAnswers();"></textarea>
+</div>
+<div class="rwm-step">
+<div class="rwm-step-label">✏️ Read like a Writer</div>
+<div class="rwm-step-text">This is one of the shortest sentences in the whole chapter &mdash; only three words. The author could have written: <em>&ldquo;Then Arthur suddenly thought of a wonderful plan.&rdquo;</em> Why do you think the shorter sentence works better here?</div>
+<div class="textbox-prompt">Write 1 sentence: Why does a short sentence work so well in this moment?</div>
+<div class="journal-label">📓 Your response <span class="saved-dot" id="dot-rwm-writer"></span></div>
+<textarea class="journal-box" id="journal-rwm-writer" data-label="RWM — Read like a Writer" placeholder="A short sentence works here because..." oninput="autoSave(this,'dot-rwm-writer');gatherAnswers();"></textarea>
+</div>
+<div class="rwm-step">
+<div class="rwm-step-label">🖊️ Mimic</div>
+<div class="rwm-step-text">Write your own three-word (or very short) sentence that changes the mood of a story. It should feel like a turning point.</div>
+<div class="rwm-frame">Sentence frame: [Name] had [a/an] [noun]. &mdash; or try your own short, punchy turning-point sentence.</div>
+<div class="textbox-prompt">Write your own short turning-point sentence.</div>
+<div class="journal-label">📓 Your sentence <span class="saved-dot" id="dot-rwm-mimic"></span></div>
+<textarea class="journal-box" id="journal-rwm-mimic" data-label="RWM — Mimic" placeholder="Write your sentence here..." oninput="autoSave(this,'dot-rwm-mimic');gatherAnswers();"></textarea>
+</div>
+</div>
 <div class="tab-next-wrap">
 <p class="tab-transition-voice">You&rsquo;ve read and thought carefully. Time to show what you know!</p>
 <button class="tab-next-btn" onclick="switchTab('assignment')">Continue to 📬 Assignment →</button>
@@ -2230,7 +2244,7 @@ function expandIntro(){document.getElementById("introSection").classList.remove(
 function gatherAnswers(){var output="";var sections=[
 {title:"🌅 WARM-UP",ids:["journal-wgrd","journal-dol"]},
 {title:"🔤 WORD STUDY",ids:["journal-swyk","journal-writing"]},
-{title:"📖 READING",ids:["journal-pause1"]},
+{title:"📖 READING",ids:["journal-pause1","journal-rwm-reader","journal-rwm-writer","journal-rwm-mimic"]},
 {title:"📬 COMPREHENSION",ids:["journal-q1","journal-q2","journal-q3","journal-wp"]}
 ];
 output+="LESSON 3.3 — Flat Stanley, Arthur&rsquo;s Good Idea\n";
@@ -2245,7 +2259,8 @@ document.querySelector(".tab-btn.active").classList.add("visited");updateProgres
 function toggleCheck(item){item.classList.toggle("checked");var c=item.querySelector(".turn-in-check");c.textContent=item.classList.contains("checked")?"✓":"";var ct=item.closest(".turn-in-checklist");if(!ct)return;if(ct.querySelectorAll(".turn-in-item").length===ct.querySelectorAll(".turn-in-item.checked").length){fireConfetti()}}
 function fireConfetti(){var cv=document.getElementById("confettiCanvas");var ctx=cv.getContext("2d");cv.width=window.innerWidth;cv.height=window.innerHeight;var cols=["#2B7A78","#F2B134","#34B76F","#8B6FC0","#c7627e","#FFF0C8"];var ps=[];for(var i=0;i<120;i++){ps.push({x:Math.random()*cv.width,y:-20-Math.random()*100,vx:(Math.random()-0.5)*6,vy:Math.random()*4+3,sz:Math.random()*8+4,c:cols[Math.floor(Math.random()*cols.length)],r:Math.random()*Math.PI*2,vr:(Math.random()-0.5)*0.2})}var f=0;function anim(){ctx.clearRect(0,0,cv.width,cv.height);ps.forEach(function(p){p.x+=p.vx;p.y+=p.vy;p.vy+=0.1;p.r+=p.vr;ctx.save();ctx.translate(p.x,p.y);ctx.rotate(p.r);ctx.fillStyle=p.c;ctx.fillRect(-p.sz/2,-p.sz/2,p.sz,p.sz);ctx.restore()});f++;if(f<180)requestAnimationFrame(anim);else ctx.clearRect(0,0,cv.width,cv.height)}anim()}
 function autoSave(ta,dotId){var d=document.getElementById(dotId);if(d){d.classList.add("saved");clearTimeout(ta._st);ta._st=setTimeout(function(){},300)}}
-window._fillinDone=false;function checkFillIn(){var ins=document.querySelectorAll(".fillin-input");var ok=true;ins.forEach(function(inp){var a=inp.getAttribute("data-answer").toLowerCase();var v=inp.value.trim().toLowerCase();if(v===a){inp.classList.remove("wrong");inp.classList.add("correct");inp.disabled=true}else{inp.classList.remove("correct");inp.classList.add("wrong");ok=false;setTimeout(function(){inp.classList.remove("wrong")},600)}});if(ok){document.getElementById("fillinFeedback").classList.add("show");window._fillinDone=true}}
+function checkVocabCloze(){var ins=document.querySelectorAll("#vocabClozeGame .fillin-input");var ok=true;ins.forEach(function(inp){var a=inp.getAttribute("data-answer").toLowerCase();var v=inp.value.trim().toLowerCase();if(v===a){inp.classList.remove("wrong");inp.classList.add("correct");inp.disabled=true}else{inp.classList.remove("correct");inp.classList.add("wrong");ok=false;setTimeout(function(){inp.classList.remove("wrong")},600)}});if(ok){document.getElementById("vocabClozeFeedback").classList.add("show")}}
+window._fillinDone=false;function checkFillIn(){var ins=document.querySelectorAll("#fillinGame .fillin-input");var ok=true;ins.forEach(function(inp){var a=inp.getAttribute("data-answer").toLowerCase();var v=inp.value.trim().toLowerCase();if(v===a){inp.classList.remove("wrong");inp.classList.add("correct");inp.disabled=true}else{inp.classList.remove("correct");inp.classList.add("wrong");ok=false;setTimeout(function(){inp.classList.remove("wrong")},600)}});if(ok){document.getElementById("fillinFeedback").classList.add("show");window._fillinDone=true}}
 var sortSelected=null;var sortPlaced=0;var sortTotal=8;
 function pickSortChip(c){if(c.classList.contains("placed"))return;if(sortSelected)sortSelected.style.outline="";sortSelected=c;c.style.outline="3px solid #2B7A78";c.style.outlineOffset="2px"}
 function dropSortChip(col,colName){if(!sortSelected)return;var g=sortSelected.getAttribute("data-group");var cl=sortSelected.cloneNode(true);cl.style.outline="";cl.onclick=null;cl.style.cursor="default";if(g===colName){cl.classList.add("correct");sortSelected.classList.add("placed");col.appendChild(cl);sortPlaced++}else{cl.classList.add("wrong");col.appendChild(cl);setTimeout(function(){col.removeChild(cl)},600)}sortSelected.style.outline="";sortSelected=null;if(sortPlaced>=sortTotal){var sc=document.getElementById("sortScore");sc.textContent="🎉 All sorted correctly!";sc.classList.add("show")}}

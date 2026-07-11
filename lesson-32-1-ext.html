@@ -2364,44 +2364,14 @@ body {
         </div>
       </div>
     </div>
-    <div class="callout callout-info" style="margin-top:16px;"><span class="callout-icon">🎯</span><p><strong>Your turn!</strong> Each word below has its actual sentence from the book above it. Read, think, then tap to check.</p></div>
-    <div class="vocab-grid" style="display:grid;grid-template-columns:1fr;gap:18px;margin:14px 0;">
-            <div class="vocab-decode-item" style="display:grid;grid-template-columns:1fr auto;gap:16px;align-items:center;background:#fff;border:2px solid #E2E8F4;border-radius:14px;padding:16px 18px;">
-              <div style="min-width:0;">
-                <div class="decode-sentence" style="margin-bottom:6px;font-size:15px;">&ldquo;A person of integrity acts from their values, not from fear.&rdquo;</div>
-                <div style="font-size:13px;color:#7A88A8;font-style:italic;">tap the card to reveal the meaning →</div>
-              </div>
-              <div class="flip-card" style="width:160px;flex-shrink:0;" onclick="this.classList.toggle('flipped')">
-                <div class="flip-card-inner">
-                  <div class="flip-card-front"><div class="fc-emoji">⭐</div><div class="fc-word">integrity</div><div class="fc-tap">think first, then tap</div></div>
-                  <div class="flip-card-back"><div class="fc-word-back">integrity</div><div class="fc-def">Doing the right thing even when no one is watching.</div></div>
-                </div>
-              </div>
-            </div>
-            <div class="vocab-decode-item" style="display:grid;grid-template-columns:1fr auto;gap:16px;align-items:center;background:#fff;border:2px solid #E2E8F4;border-radius:14px;padding:16px 18px;">
-              <div style="min-width:0;">
-                <div class="decode-sentence" style="margin-bottom:6px;font-size:15px;">&ldquo;Despereaux showed empathy when he listened to the princess's grief.&rdquo;</div>
-                <div style="font-size:13px;color:#7A88A8;font-style:italic;">tap the card to reveal the meaning →</div>
-              </div>
-              <div class="flip-card" style="width:160px;flex-shrink:0;" onclick="this.classList.toggle('flipped')">
-                <div class="flip-card-inner">
-                  <div class="flip-card-front"><div class="fc-emoji">❤️</div><div class="fc-word">empathy</div><div class="fc-tap">think first, then tap</div></div>
-                  <div class="flip-card-back"><div class="fc-word-back">empathy</div><div class="fc-def">Understanding and sharing the feelings of another person.</div></div>
-                </div>
-              </div>
-            </div>
-            <div class="vocab-decode-item" style="display:grid;grid-template-columns:1fr auto;gap:16px;align-items:center;background:#fff;border:2px solid #E2E8F4;border-radius:14px;padding:16px 18px;">
-              <div style="min-width:0;">
-                <div class="decode-sentence" style="margin-bottom:6px;font-size:15px;">&ldquo;Jemmy showed resilience after every obstacle he faced.&rdquo;</div>
-                <div style="font-size:13px;color:#7A88A8;font-style:italic;">tap the card to reveal the meaning →</div>
-              </div>
-              <div class="flip-card" style="width:160px;flex-shrink:0;" onclick="this.classList.toggle('flipped')">
-                <div class="flip-card-inner">
-                  <div class="flip-card-front"><div class="fc-emoji">🌱</div><div class="fc-word">resilience</div><div class="fc-tap">think first, then tap</div></div>
-                  <div class="flip-card-back"><div class="fc-word-back">resilience</div><div class="fc-def">The ability to recover and keep going after difficulty or hardship.</div></div>
-                </div>
-              </div>
-            </div></div>
+    <div class="callout callout-info" style="margin-top:16px;"><span class="callout-icon">📚</span><p><strong>Word bank:</strong> <strong>integrity</strong> &middot; <strong>empathy</strong> &middot; <strong>resilience</strong></p></div>
+    <div class="fillin-game" id="vocabClozeGame">
+      <div class="fillin-item" style="font-family:Lora,Georgia,serif;font-style:italic;">A person of <input class="fillin-input" id="vcloze1" data-answer="integrity" maxlength="13" placeholder="______"> does the right thing even when no one is watching and nothing is at stake.</div>
+      <div class="fillin-item" style="font-family:Lora,Georgia,serif;font-style:italic;">Desper&eacute;aux showed <input class="fillin-input" id="vcloze2" data-answer="empathy" maxlength="11" placeholder="______"> when he stopped to listen to Princess Pea&rsquo;s grief, even in the midst of his own fear.</div>
+      <div class="fillin-item" style="font-family:Lora,Georgia,serif;font-style:italic;">Jemmy&rsquo;s <input class="fillin-input" id="vcloze3" data-answer="resilience" maxlength="14" placeholder="______"> was remarkable &mdash; each time life knocked him down, he found a way to stand back up.</div>
+      <button class="fillin-check-btn" onclick="checkVocabCloze()">Check My Work</button>
+      <div class="fillin-feedback" id="vocabClozeFeedback">📖 All correct!</div>
+    </div>
     <div class="callout callout-info" style="margin-top:16px;"><span class="callout-icon">🎯</span><p><strong>Quick Match:</strong> Tap a word, then tap its meaning.</p></div>
     <div class="match-game" id="vocabMatch"><div class="match-grid" id="matchGrid" style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:8px;"><div class="match-item is-word" data-match="A" onclick="matchClick(this)">integrity</div><div class="match-item" data-match="A" onclick="matchClick(this)">Doing the right thing even when no one is watching.</div><div class="match-item is-word" data-match="B" onclick="matchClick(this)">empathy</div><div class="match-item" data-match="B" onclick="matchClick(this)">Understanding and sharing the feelings of another person.</div><div class="match-item is-word" data-match="C" onclick="matchClick(this)">resilience</div><div class="match-item" data-match="C" onclick="matchClick(this)">The ability to recover and keep going after difficulty or hardship.</div></div><div class="match-feedback" id="matchFeedback">✨ All matched! Well done.</div></div>
   </div>
@@ -3041,10 +3011,30 @@ function autoSave(textarea, dotId) {
 }
 
 /* ───── FILL-IN-THE-ROOT GAME (MORPHOLOGY) ───── */
+function checkVocabCloze() {
+  var inputs = document.querySelectorAll('#vocabClozeGame .fillin-input');
+  var allCorrect = true;
+  inputs.forEach(function(inp) {
+    var answer = inp.getAttribute('data-answer').toLowerCase();
+    var val = inp.value.trim().toLowerCase();
+    if (val === answer) {
+      inp.classList.remove('wrong');
+      inp.classList.add('correct');
+      inp.disabled = true;
+    } else {
+      inp.classList.remove('correct');
+      inp.classList.add('wrong');
+      allCorrect = false;
+      setTimeout(function() { inp.classList.remove('wrong'); }, 600);
+    }
+  });
+  if (allCorrect) { document.getElementById('vocabClozeFeedback').classList.add('show'); }
+}
+
 window._fillinDone = false;
 
 function checkFillIn() {
-  var inputs = document.querySelectorAll('.fillin-input');
+  var inputs = document.querySelectorAll('#fillinGame .fillin-input');
   var allCorrect = true;
   inputs.forEach(function(inp) {
     var answer = inp.getAttribute('data-answer').toLowerCase();

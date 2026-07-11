@@ -2151,6 +2151,32 @@ But who you are inside the book.</div>
 <textarea class="journal-box" id="journal-pause1" data-label="Pause &amp; Think" placeholder="I think..." oninput="autoSave(this,'dot-pause1')"></textarea>
 </div></div>
 </div></div>
+<div class="rwm-box">
+<div class="rwm-header">📖 RWM — Read like a Reader, Read like a Writer, Mimic</div>
+<div class="rwm-sentence">&ldquo;Stanley did not mind much, being flat.&rdquo;</div>
+<div class="rwm-step">
+<div class="rwm-step-label">📖 Read like a Reader</div>
+<div class="rwm-step-text">Now that you&rsquo;ve read the whole book, think back. Did Stanley <em>really</em> not mind? When did he mind? When didn&rsquo;t he? What does this sentence show about who Stanley is as a character?</div>
+<div class="textbox-prompt">Write 1&ndash;2 sentences: What does this tell us about Stanley&rsquo;s character?</div>
+<div class="journal-label">📓 Your response <span class="saved-dot" id="dot-rwm-reader"></span></div>
+<textarea class="journal-box" id="journal-rwm-reader" data-label="RWM — Read like a Reader" placeholder="I think Stanley mostly... but there were times when..." oninput="autoSave(this,'dot-rwm-reader');gatherAnswers();"></textarea>
+</div>
+<div class="rwm-step">
+<div class="rwm-step-label">✏️ Read like a Writer</div>
+<div class="rwm-step-text">Notice how the author put <strong>&ldquo;being flat&rdquo;</strong> at the very end with a comma &mdash; almost like an afterthought. Compare: <em>&ldquo;Being flat didn&rsquo;t really bother Stanley.&rdquo;</em> The author&rsquo;s version tucks the most important detail at the end. How does that change how it feels?</div>
+<div class="textbox-prompt">Write 1 sentence: What does putting &ldquo;being flat&rdquo; at the end do to the sentence?</div>
+<div class="journal-label">📓 Your response <span class="saved-dot" id="dot-rwm-writer"></span></div>
+<textarea class="journal-box" id="journal-rwm-writer" data-label="RWM — Read like a Writer" placeholder="Putting 'being flat' at the end makes it feel..." oninput="autoSave(this,'dot-rwm-writer');gatherAnswers();"></textarea>
+</div>
+<div class="rwm-step">
+<div class="rwm-step-label">🖊️ Mimic</div>
+<div class="rwm-step-text">Write your own sentence about something you don&rsquo;t mind much &mdash; or something that does bother you &mdash; using the same pattern: [person] did not mind much, [doing or being something].</div>
+<div class="rwm-frame">Sentence frame: [Name] did not mind much, [being / doing / having something].</div>
+<div class="textbox-prompt">Write your own sentence using the same pattern as the author.</div>
+<div class="journal-label">📓 Your sentence <span class="saved-dot" id="dot-rwm-mimic"></span></div>
+<textarea class="journal-box" id="journal-rwm-mimic" data-label="RWM — Mimic" placeholder="Write your sentence here..." oninput="autoSave(this,'dot-rwm-mimic');gatherAnswers();"></textarea>
+</div>
+</div>
 <div class="tab-next-wrap">
 <p class="tab-transition-voice">You&rsquo;ve read and thought carefully. Time to show what you know!</p>
 <button class="tab-next-btn" onclick="switchTab('assignment')">Continue to 📬 Assignment →</button>
@@ -2234,7 +2260,7 @@ function expandIntro(){document.getElementById("introSection").classList.remove(
 function gatherAnswers(){var output="";var sections=[
 {title:"🌅 WARM-UP",ids:["journal-wgrd","journal-dol"]},
 {title:"🔤 WORD STUDY",ids:["journal-swyk","journal-writing"]},
-{title:"📖 READING",ids:["journal-pause1"]},
+{title:"📖 READING",ids:["journal-pause1","journal-rwm-reader","journal-rwm-writer","journal-rwm-mimic"]},
 {title:"📬 COMPREHENSION",ids:["journal-q1","journal-q2","journal-q3","journal-wp"]}
 ];
 output+="LESSON 3.4 — Flat Stanley, Discussion &amp; Review\n";
