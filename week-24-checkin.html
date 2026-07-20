@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Week 24 Check-In — Gulliver's Stories, Part 3</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Optima Academy Online — Week 24 Check-In: Medieval Nonfiction</title>
 <style>
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
 body{font-family:system-ui,-apple-system,sans-serif;background:#F0F2F8;color:#0E1C42;line-height:1.6;-webkit-font-smoothing:antialiased;}
@@ -53,6 +53,8 @@ body{font-family:system-ui,-apple-system,sans-serif;background:#F0F2F8;color:#0E
 .rwm-model{background:linear-gradient(135deg,#E0F2F1,#F0FBF9);border:2px solid #B2DFDB;border-radius:14px;padding:16px 20px;margin-bottom:12px;}
 .rwm-model-label{font-size:11px;color:#00695C;text-transform:uppercase;letter-spacing:.8px;font-weight:800;margin-bottom:6px;}
 .rwm-model-text{font-family:Georgia,serif;font-size:17px;color:#0E1C42;line-height:1.7;font-style:italic;}
+.pts{display:inline-flex;align-items:center;gap:4px;background:#E0F2F1;border:1.5px solid #B2DFDB;border-radius:20px;padding:3px 10px;font-size:12px;color:#00695C;font-weight:800;margin-left:8px;}
+.hint{font-size:14px;color:#7A88A8;font-style:italic;margin-top:8px;}
 .word-chips{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px;}
 .chip{display:inline-block;background:#E2E8F4;padding:6px 14px;border-radius:10px;font-size:16px;font-weight:700;}
 .total-bar{background:linear-gradient(135deg,#0E1C42,#1A2D5A);border-radius:18px;padding:18px 24px;display:flex;align-items:center;justify-content:space-between;margin-bottom:20px;}
@@ -82,250 +84,171 @@ body{font-family:system-ui,-apple-system,sans-serif;background:#F0F2F8;color:#0E
 <div class="page-wrap">
   <div class="header">
     <div class="header-brand">
-      <div class="header-logo">
-        <img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy" />
-      </div>
-      <div>
-        <div class="header-org">Optima Academy Online</div>
-        <div class="header-sub">3rd Grade ELA &middot; Quarter 3</div>
-      </div>
+      <div class="header-logo"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima"></div>
+      <div><div class="header-org">Optima Academy Online</div><div class="header-sub">3rd Grade ELA · Quarter 4</div></div>
     </div>
-    <div class="header-title"><em>Gulliver's Stories</em> &mdash; Part 3: Strange Lands</div>
-    <div class="header-badge">
-      <span class="header-badge-icon">&#128197;</span>
-      <span class="header-badge-text">Week 24 &middot; Check-In</span>
-    </div>
+    <div class="header-title">Medieval Nonfiction — How Castles Were Built</div>
+    <div class="header-badge"><span class="header-badge-icon">📋</span><span class="header-badge-text">Week 24 · Check-In</span></div>
   </div>
-
   <div class="content">
-    <div class="intro">
-      <p>This week Gulliver visited more unusual places with strange inventions and customs. You studied main idea and supporting details in paragraphs, the root <strong>script/scribe</strong> (meaning "write"), and the suffixes <strong>-ful, -less, -ness, -ly</strong>. Show what you know!</p>
-    </div>
-
-    <!-- SECTION 1: Grammar -->
+    <div class="intro"><p>This week you read about how medieval castles were constructed — the years of labor, the massive stones, and the skilled workers who built them. You practiced finding the main idea in paragraphs and the prefix <strong>sub-</strong>. Show what you know!</p></div>
     <div class="section">
       <div class="section-head">
-        <div class="section-icon grammar">&#9998;</div>
-        <div>
-          <div class="section-title">Section 1: Grammar &mdash; Main Idea and Details in Paragraphs</div>
-          <div class="section-pts">3 points</div>
-        </div>
+        <div class="section-icon grammar">📝</div>
+        <div><div class="section-title">Grammar</div><div class="section-pts">3 points — Main Idea and Details in Paragraphs</div></div>
       </div>
-
       <div class="question">
-        <div class="q-label"><span class="q-number">1</span> Multiple Choice</div>
-        <div class="q-text">Which sentence is a strong main idea sentence for a paragraph about Gulliver's unusual adventures?</div>
-        <ul class="options">
-          <li onclick="selectOption(this)" data-qid="mcq1"><span class="opt-letter">A</span> Gulliver saw a floating island.</li>
-          <li onclick="selectOption(this)" data-qid="mcq1"><span class="opt-letter">B</span> Gulliver's travels took him to many strange and unusual places that changed how he saw the world.</li>
-          <li onclick="selectOption(this)" data-qid="mcq1"><span class="opt-letter">C</span> The people on the island wore strange clothes.</li>
+        <div class="q-label"><span class="q-number">1</span>Grammar</div>
+        <div class="q-text">Read this: "Castle builders dug deep foundations. They used stone, not wood. Stone walls could last for hundreds of years." What is the main idea?</div>
+        <ul class="options" data-qid="mcq1">
+        <li onclick="selectOption(this)" data-qid="mcq1"><span class="opt-letter">A</span>Building with stone made castles strong and lasting.</li>
+        <li onclick="selectOption(this)" data-qid="mcq1"><span class="opt-letter">B</span>Castles were built near rivers.</li>
+        <li onclick="selectOption(this)" data-qid="mcq1"><span class="opt-letter">C</span>Workers dug deep holes first.</li>
         </ul>
       </div>
-
       <div class="question">
-        <div class="q-label"><span class="q-number">2</span> Fix-It Sentence</div>
-        <div class="q-text">Rewrite the sentence below so it flows more clearly and correctly.</div>
-        <div class="excerpt" style="font-style:normal;">"Gulliver visited a land where the scientists worked on silly projects they thought very important."</div>
-        <textarea class="response-box" id="resp1" data-label="Q2: Fix-It — rewrite for clarity and correctness"></textarea>
+        <div class="q-label"><span class="q-number">2</span>Grammar</div>
+        <div class="q-text">Read these details: "Workers carried stone in baskets. Teams of horses pulled heavy carts. Cranes made of wood lifted the largest blocks." Write a main idea sentence for this paragraph.</div>
+        <textarea id="resp1" data-label="Q2: Write a main idea sentence" class="response-box"></textarea>
       </div>
-
       <div class="question">
-        <div class="q-label"><span class="q-number">3</span> Write Your Own</div>
-        <div class="q-text">Write a main idea sentence for a paragraph about one place Gulliver visited. Then write one supporting detail sentence.</div>
-        <textarea class="response-box" id="resp2" data-label="Q3: Main idea + one supporting detail sentence" placeholder="Main idea: ...&#10;Supporting detail: ..."></textarea>
+        <div class="q-label"><span class="q-number">3</span>Grammar</div>
+        <div class="q-text">Write one main idea sentence and one supporting detail sentence about any topic you know well.</div>
+        <textarea id="resp2" data-label="Q3: Main idea and detail" class="response-box"></textarea>
       </div>
     </div>
-
-    <!-- SECTION 2: Morphology -->
     <div class="section">
       <div class="section-head">
-        <div class="section-icon morph">&#128214;</div>
-        <div>
-          <div class="section-title">Section 2: Morphology &mdash; Root <em>script / scribe</em> (write)</div>
-          <div class="section-pts">3 points</div>
-        </div>
+        <div class="section-icon morph">🔤</div>
+        <div><div class="section-title">Morphology</div><div class="section-pts">3 points — Prefix sub- (under)</div></div>
       </div>
-
       <div class="question">
-        <div class="q-label"><span class="q-number">4</span> Root Meaning</div>
-        <div class="q-text">The root <strong>script/scribe</strong> means "write." Think about the word <strong>describe</strong>. What does describe mean? How does knowing <em>scribe</em> help you figure it out?</div>
-        <textarea class="response-box" id="resp3" data-label="Q4: Root scribe — meaning of 'describe' and how the root helps"></textarea>
+        <div class="q-label"><span class="q-number">4</span>Morphology</div>
+        <div class="q-text">The prefix <strong>sub-</strong> means "under." Break apart the word <em>submarine</em>. What does it mean?</div>
+        <textarea id="resp3" data-label="Q4: Break apart submarine" class="response-box"></textarea>
       </div>
-
       <div class="question">
-        <div class="q-label"><span class="q-number">5</span> Multiple Choice &mdash; Word in Context</div>
-        <div class="excerpt">"Gulliver noticed an inscription carved into the stone wall &mdash; words that had been written there long ago by someone who wanted to leave a message."<div class="excerpt-source">Adapted from <em>Gulliver's Stories</em>, Part 3</div></div>
-        <div class="q-text">What does <strong>inscription</strong> most likely mean?</div>
-        <ul class="options">
-          <li onclick="selectOption(this)" data-qid="mcq2"><span class="opt-letter">A</span> A picture drawn in bright colors</li>
-          <li onclick="selectOption(this)" data-qid="mcq2"><span class="opt-letter">B</span> Words or letters written or carved onto something</li>
-          <li onclick="selectOption(this)" data-qid="mcq2"><span class="opt-letter">C</span> A type of unusual building material</li>
+        <div class="q-label"><span class="q-number">5</span>Morphology</div>
+        <div class="q-text">A <strong>subway</strong> is most likely —</div>
+        <ul class="options" data-qid="mcq2">
+        <li onclick="selectOption(this)" data-qid="mcq2"><span class="opt-letter">A</span>a train that runs underground</li>
+        <li onclick="selectOption(this)" data-qid="mcq2"><span class="opt-letter">B</span>a road that goes over a bridge</li>
+        <li onclick="selectOption(this)" data-qid="mcq2"><span class="opt-letter">C</span>a very small road</li>
         </ul>
       </div>
-
       <div class="question">
-        <div class="q-label"><span class="q-number">6</span> Apply It</div>
-        <div class="q-text">Think of one more word with the root <em>script</em> or <em>scribe</em> (like <em>manuscript</em>, <em>prescription</em>, or <em>transcript</em>). Write it and explain how "write" connects to its meaning.</div>
-        <textarea class="response-box" id="resp4" data-label="Q6: Another word with script/scribe — explain the 'write' connection"></textarea>
+        <div class="q-label"><span class="q-number">6</span>Morphology</div>
+        <div class="q-text">Choose one: <strong>submarine</strong>, <strong>subway</strong>, or <strong>submerge</strong>. Write a sentence that shows what the word means.</div>
+        <textarea id="resp4" data-label="Q6: Use a sub- word in a sentence" class="response-box"></textarea>
       </div>
     </div>
-
-    <!-- SECTION 3: Spelling -->
     <div class="section">
       <div class="section-head">
-        <div class="section-icon spelling">&#9997;</div>
-        <div>
-          <div class="section-title">Section 3: Spelling &mdash; Review Suffixes -ful, -less, -ness, -ly</div>
-          <div class="section-pts">3 points</div>
-        </div>
+        <div class="section-icon spelling">✏️</div>
+        <div><div class="section-title">Spelling</div><div class="section-pts">3 points — VCCV Syllable Division</div></div>
       </div>
-
       <div class="question">
-        <div class="q-label"><span class="q-number">7</span> Add a Suffix</div>
-        <div class="q-text">Add a suffix (-ful, -less, -ness, or -ly) to each base word to make a new word. Write the new word and its meaning.</div>
-        <ol style="font-size:16px;color:#3A4A6B;margin-left:22px;line-height:2.4;margin-bottom:10px;">
-          <li>wonder + ___ = ___</li>
-          <li>hope + ___ = ___</li>
-          <li>quick + ___ = ___</li>
-          <li>dark + ___ = ___</li>
-        </ol>
-        <textarea class="response-box" id="resp5" data-label="Q7: Add suffixes — new words and meanings" placeholder="1. wonderful — means: full of wonder&#10;2. ___&#10;3. ___&#10;4. ___"></textarea>
+        <div class="q-label"><span class="q-number">7</span>Spelling</div>
+        <div class="q-text">When a word has two consonants in the middle (VCCV), divide between the two consonants. Write each word and divide it into syllables.</div>
+      <div class="word-chips"><span class="chip">basket</span><span class="chip">kitten</span><span class="chip">pencil</span></div>
+        <textarea id="resp5" data-label="Q7: VCCV syllable division" class="response-box"></textarea>
       </div>
-
       <div class="question">
-        <div class="q-label"><span class="q-number">8</span> Explain and Apply</div>
-        <div class="q-text">Choose one suffix (-ful, -less, -ness, or -ly) and explain what it means. Then write two words that use it and use both words in sentences.</div>
-        <textarea class="response-box" id="resp6" data-label="Q8: Choose a suffix, explain it, write two words + sentences"></textarea>
+        <div class="q-label"><span class="q-number">8</span>Spelling</div>
+        <div class="q-text">Explain the VCCV syllable rule in your own words. How does it help you read a long word?</div>
+        <textarea id="resp6" data-label="Q8: Explain VCCV rule" class="response-box"></textarea>
       </div>
-
       <div class="question">
-        <div class="q-label"><span class="q-number">9</span> Spot the Error</div>
-        <div class="q-text">One word below is spelled incorrectly. Find it and write the correct spelling.</div>
-        <div class="word-chips">
-          <span class="chip">carefully</span>
-          <span class="chip">hopefull</span>
-          <span class="chip">darkness</span>
-        </div>
-        <textarea class="response-box short" id="resp7" data-label="Q9: Spot misspelled suffix word + correction" placeholder="Incorrect word: ___     Correct spelling: ___"></textarea>
+        <div class="q-label"><span class="q-number">9</span>Spelling</div>
+        <div class="q-text">One word is misspelled. Find it and write the correct spelling.</div>
+      <div class="word-chips"><span class="chip">basket</span><span class="chip">kitten</span><span class="chip">pencill</span></div>
+        <textarea id="resp7" data-label="Q9: Find the misspelling" class="response-box"></textarea>
       </div>
     </div>
-
-    <!-- SECTION 4: Reading -->
     <div class="section">
       <div class="section-head">
-        <div class="section-icon reading">&#128218;</div>
-        <div>
-          <div class="section-title">Section 4: Reading &mdash; Explain How Details Support Meaning</div>
-          <div class="section-pts">3 points</div>
-        </div>
+        <div class="section-icon reading">📖</div>
+        <div><div class="section-title">Reading</div><div class="section-pts">3 points — Informational Text Structure</div></div>
       </div>
-
-      <div class="excerpt">On one island Gulliver visited, the scientists spent all their time on strange experiments that never worked. One man tried to grow sunlight out of cucumbers, and another tried to build houses from the roof down instead of from the ground up. Gulliver watched quietly, thinking about how different their way of solving problems was from anything he had ever seen.
-        <div class="excerpt-source">Adapted from <em>Gulliver's Stories</em>, Part 3</div>
-      </div>
-
+      <div class="excerpt">Building a castle took years — sometimes decades. Workers cut massive stones from quarries miles away and dragged them to the building site. Hundreds of people worked on a single castle: stonemasons, carpenters, blacksmiths, and laborers. The outer walls of some castles were so thick that two knights on horseback could ride side by side along the top.<div class="excerpt-source">— Medieval Nonfiction Extension, Week 24</div></div>
       <div class="question">
-        <div class="q-label"><span class="q-number">10</span> Main Idea</div>
-        <div class="q-text">What is the main idea of this passage? Write it in your own words.</div>
-        <textarea class="response-box" id="resp8" data-label="Q10: Main idea of the passage — in own words"></textarea>
+        <div class="q-label"><span class="q-number">10</span>Reading</div>
+        <div class="q-text">What is the main idea of this passage? Use a detail from the text.</div>
+        <textarea id="resp8" data-label="Q10: Main idea of the passage" class="response-box"></textarea>
       </div>
-
       <div class="question">
-        <div class="q-label"><span class="q-number">11</span> Supporting Details</div>
-        <div class="q-text">What details does the author use to show that the scientists' ideas are unusual? Name at least two details from the passage.</div>
-        <textarea class="response-box" id="resp9" data-label="Q11: Two details showing the scientists' ideas are unusual"></textarea>
+        <div class="q-label"><span class="q-number">11</span>Reading</div>
+        <div class="q-text">The passage says building a castle took "years — sometimes decades." Why do you think it took so long? Use details from the passage.</div>
+        <textarea id="resp9" data-label="Q11: Why did building take so long?" class="response-box"></textarea>
       </div>
-
       <div class="question">
-        <div class="q-label"><span class="q-number">12</span> Author's Purpose</div>
-        <div class="q-text">Why do you think the author includes such absurd details about the scientists' experiments? What might the author be trying to say about how people think about problems?</div>
-        <textarea class="response-box" id="resp10" data-label="Q12: Author's purpose — what the absurd scientist details say about problem-solving"></textarea>
+        <div class="q-label"><span class="q-number">12</span>Reading</div>
+        <div class="q-text">What does the detail about knights riding along the top of the walls tell you about how massive these castles were? Explain your thinking.</div>
+        <textarea id="resp10" data-label="Q12: What the knight detail shows" class="response-box"></textarea>
       </div>
     </div>
-
-    <!-- SECTION 5: Writing & RWM -->
     <div class="section">
       <div class="section-head">
-        <div class="section-icon writing">&#9999;</div>
-        <div>
-          <div class="section-title">Section 5: Writing &amp; Read-Write-Mean</div>
-          <div class="section-pts">2 points</div>
-        </div>
+        <div class="section-icon writing">✍️</div>
+        <div><div class="section-title">Writing &amp; Read with Me</div><div class="section-pts">2 points</div></div>
       </div>
-
       <div class="question">
-        <div class="q-label"><span class="q-number">13</span> Read-Write-Mean (RWM)</div>
-        <div class="rwm-model">
-          <div class="rwm-model-label">&#128218; Model Sentence</div>
-          <div class="rwm-model-text">"Gulliver visited a land of dreamers and tinkerers &mdash; people full of clever ideas that never quite worked, but who were never hopeless enough to give up trying."</div>
-        </div>
-        <div class="q-text">Notice how the author adds facts and details to paint a vivid picture of a place or group of people. Write your own sentence describing an imaginary place or group of people using at least two specific details.</div>
-        <textarea class="response-box" id="resp11" data-label="Q13: RWM — describe an imaginary place or group with two specific details"></textarea>
+        <div class="q-label"><span class="q-number">13</span>Read with Me</div>
+        <div class="rwm-model"><div class="rwm-model-label">Model Sentence (Specific Detail Carries the Point)</div><div class="rwm-model-text">For example, the walls of Windsor Castle were so thick that two knights on horseback could ride side by side along the top.</div></div>
+        <div class="q-text">Notice how one very specific, visual detail makes the point much stronger than just saying "the walls were thick." Write your own sentence that uses one specific detail to make an idea clear.</div>
+        <textarea id="resp11" data-label="Q13: Write a sentence with a specific visual detail" class="response-box"></textarea>
       </div>
-
       <div class="question">
-        <div class="q-label"><span class="q-number">14</span> Writing Arc &mdash; Draft Body Paragraph</div>
-        <div class="q-text">Write a short paragraph (4&ndash;5 sentences) about one of Gulliver's adventures. Include: a <strong>main idea sentence</strong>, at least <strong>two supporting detail sentences</strong>, and a <strong>closing sentence</strong>. Use details from this week's reading.</div>
-        <textarea class="response-box" id="resp12" data-label="Q14: Writing Arc — Draft Body Paragraph about Gulliver's adventure" style="min-height:120px;"></textarea>
+        <div class="q-label"><span class="q-number">14</span>Writing</div>
+        <div class="q-text">Imagine you are a worker helping build a castle in the Middle Ages. Write 1–2 sentences describing what your job might be and what it would feel like.</div>
+        <textarea id="resp12" data-label="Q14: Imagine being a castle builder" class="response-box"></textarea>
       </div>
     </div>
-
-    <div class="total-bar">
-      <div class="total-label">Total Points Possible</div>
-      <div class="total-value">14 pts</div>
-    </div>
-
     <div class="gathered-card">
       <div class="gathered-header">
-        <div class="gathered-header-icon">&#128203;</div>
-        <div>
-          <div class="gathered-header-label">Submit Your Work</div>
-          <div class="gathered-header-title">Gather &amp; Copy All Answers</div>
-        </div>
+        <div class="gathered-header-icon">📋</div>
+        <div><div class="gathered-header-label">Submit Your Work</div><div class="gathered-header-title">Gather &amp; Copy All Answers</div></div>
       </div>
       <div class="gathered-body">
-        <p class="gathered-intro">When you are finished, click <strong>Gather My Answers</strong> to collect everything in one place. Copy and paste into your assignment submission box, or use <strong>Download as PDF</strong> to save your work.</p>
-        <textarea class="gathered-output" id="gatheredOutput" readonly placeholder="Your answers will appear here after you click Gather My Answers..."></textarea>
+        <p class="gathered-intro">Click <strong>Gather My Answers</strong> to collect everything you wrote into one place. Then copy and paste into your assignment submission — or print to PDF.</p>
+        <textarea id="gatheredOutput" class="gathered-output" readonly placeholder="Your answers will appear here after you click Gather My Answers..."></textarea>
         <div class="gathered-actions">
-          <button class="gathered-btn gathered-btn-copy" onclick="gatherAnswers();copyGathered()">&#128203; Gather &amp; Copy Answers</button>
-          <button class="gathered-btn gathered-btn-pdf" onclick="downloadPDF()">&#128196; Download as PDF</button>
+          <button class="gathered-btn gathered-btn-copy" onclick="gatherAnswers();copyGathered()">📋 Gather &amp; Copy Answers</button>
+          <button class="gathered-btn gathered-btn-pdf" onclick="downloadPDF()">🖨️ Print / Save as PDF</button>
         </div>
-        <div class="gathered-copied" id="gatheredCopied">Copied to clipboard!</div>
+        <div id="gatheredCopied" class="gathered-copied">Copied to clipboard!</div>
       </div>
     </div>
   </div>
-
-  <div class="footer">
-    <p>Optima Academy Online &middot; 3rd Grade ELA &middot; Week 24 Check-In &middot; Gulliver's Stories</p>
-  </div>
+  <div class="footer"><p>Optima Academy Online · 3rd Grade ELA · Week 24 Check-In · Medieval Nonfiction</p></div>
 </div>
-
 <script>
 function gatherAnswers(){
   var ids=["resp1","resp2","resp3","resp4","resp5","resp6","resp7","resp8","resp9","resp10","resp11","resp12"];
-  var mcGroups=[{"id":"mcq1","label":"Q1: Strong Main Idea Sentence (MC)"},{"id":"mcq2","label":"Q5: Meaning of 'inscription' (MC)"}];
-  var lines=["Week 24 Check-In — Gulliver's Stories, Part 3","================================================",""];
-  lines.push("WRITTEN RESPONSES");lines.push("--------------------------------");
-  ids.forEach(function(id){var el=document.getElementById(id);if(!el)return;var lbl=el.getAttribute("data-label")||id;lines.push("");lines.push(lbl);lines.push(el.value.trim()||"(no answer)");});
-  lines.push("");lines.push("MULTIPLE CHOICE");lines.push("--------------------------------");
-  mcGroups.forEach(function(q){var sel=document.querySelector("[data-qid=""+q.id+""].selected");var letter=sel?sel.querySelector(".opt-letter").textContent.trim():"?";lines.push("");lines.push(q.label+": "+letter);});
-  var el=document.getElementById("gatheredOutput");if(el)el.value=lines.join("
-");
+  var mcGroups=[{"id":"mcq1","label":"Q1: Main Idea and Details"},{"id":"mcq2","label":"Q5: Prefix sub- (under)"}];
+  var lines=['Week 24 Check-In \u2014 Medieval Nonfiction: How Castles Were Built','================================================',''];
+  lines.push('WRITTEN RESPONSES');lines.push('--------------------------------');
+  ids.forEach(function(id){var el=document.getElementById(id);if(!el)return;var lbl=el.getAttribute('data-label')||id;lines.push('');lines.push(lbl);lines.push(el.value.trim()||'(no answer)');});
+  lines.push('');lines.push('MULTIPLE CHOICE');lines.push('--------------------------------');
+  mcGroups.forEach(function(q){var sel=document.querySelector('[data-qid="'+q.id+'"].selected');var letter=sel?sel.querySelector('.opt-letter').textContent.trim():'?';lines.push('');lines.push(q.label+': '+letter);});
+  var el=document.getElementById('gatheredOutput');if(el)el.value=lines.join('\n');
 }
-function selectOption(li){var ul=li.parentElement;ul.querySelectorAll("li").forEach(function(x){x.classList.remove("selected");});li.classList.add("selected");gatherAnswers();}
-function copyGathered(){var el=document.getElementById("gatheredOutput");if(!el)return;el.select();try{document.execCommand("copy");}catch(e){navigator.clipboard.writeText(el.value);}var note=document.getElementById("gatheredCopied");if(note){note.classList.add("show");setTimeout(function(){note.classList.remove("show");},2500);}}
+function selectOption(li){var ul=li.parentElement;ul.querySelectorAll('li').forEach(function(x){x.classList.remove('selected');});li.classList.add('selected');gatherAnswers();}
+function copyGathered(){var el=document.getElementById('gatheredOutput');if(!el)return;el.select();try{document.execCommand('copy');}catch(e){navigator.clipboard.writeText(el.value);}var note=document.getElementById('gatheredCopied');if(note){note.classList.add('show');setTimeout(function(){note.classList.remove('show');},2500);}}
 function downloadPDF(){
   gatherAnswers();
   var ids=["resp1","resp2","resp3","resp4","resp5","resp6","resp7","resp8","resp9","resp10","resp11","resp12"];
-  var mcGroups=[{"id":"mcq1","label":"Q1: Strong Main Idea Sentence (MC)"},{"id":"mcq2","label":"Q5: Meaning of 'inscription' (MC)"}];
-  var css="body{font-family:Georgia,serif;max-width:680px;margin:36px auto;padding:0 24px;color:#111;line-height:1.75}h1{font-size:19px;border-bottom:3px solid #1A5C38;padding-bottom:7px;margin-bottom:4px}h2{font-size:12px;color:#888;margin-bottom:20px;font-weight:normal}.sec{margin-top:22px;padding-top:12px;border-top:2px solid #eee}.sec-title{font-size:13px;font-weight:800;color:#1A5C38;text-transform:uppercase;letter-spacing:.5px;margin-bottom:10px}.item{margin-top:14px}.item-label{font-size:11px;font-weight:700;color:#555;text-transform:uppercase;letter-spacing:.4px;margin-bottom:4px}.item-ans{font-size:14px;padding:8px 12px;background:#f8f8f8;border-left:3px solid #1A5C38;white-space:pre-wrap;min-height:24px}.empty{color:#bbb;font-style:italic}@media print{@page{margin:1.2cm}body{margin:0}}";
-  var body="<h1>Week 24 Check-In — Gulliver's Stories, Part 3</h1><h2>Student: __________________________ &nbsp;&nbsp; Date: __________</h2><div class="sec"><div class="sec-title">Written Responses</div>";
-  ids.forEach(function(id){var el=document.getElementById(id);if(!el)return;var lbl=el.getAttribute("data-label")||id;var val=el.value.trim();body+="<div class="item"><div class="item-label">"+lbl+"</div>";body+=val?"<div class="item-ans">"+val.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;")+"</div>":"<div class="item-ans empty">(no answer written)</div>";body+="</div>";});
-  body+="</div><div class="sec"><div class="sec-title">Multiple Choice Selections</div>";
-  mcGroups.forEach(function(q){var sel=document.querySelector("[data-qid=""+q.id+""].selected");var letter=sel?sel.querySelector(".opt-letter").textContent.trim():null;body+="<div class="item"><div class="item-label">"+q.label+"</div>";body+=letter?"<div class="item-ans">Selected: <strong>"+letter+"</strong></div>":"<div class="item-ans empty">(not selected)</div>";body+="</div>";});
-  body+="</div>";
-  var html="<!DOCTYPE html><html><head><meta charset="UTF-8"><title>Week 24 Check-In</title><style>"+css+"</style></head><body>"+body+"</body></html>";
-  var win=window.open("","_blank");if(!win){alert("Please allow pop-ups to download your PDF.");return;}win.document.write(html);win.document.close();setTimeout(function(){win.print();},500);
+  var mcGroups=[{"id":"mcq1","label":"Q1: Main Idea and Details"},{"id":"mcq2","label":"Q5: Prefix sub- (under)"}];
+  var css='body{font-family:Georgia,serif;max-width:680px;margin:36px auto;padding:0 24px;color:#111;line-height:1.75}h1{font-size:19px;border-bottom:3px solid #1A5C38;padding-bottom:7px;margin-bottom:4px}h2{font-size:12px;color:#888;margin-bottom:20px;font-weight:normal}.sec{margin-top:22px;padding-top:12px;border-top:2px solid #eee}.sec-title{font-size:13px;font-weight:800;color:#1A5C38;text-transform:uppercase;letter-spacing:.5px;margin-bottom:10px}.item{margin-top:14px}.item-label{font-size:11px;font-weight:700;color:#555;text-transform:uppercase;letter-spacing:.4px;margin-bottom:4px}.item-ans{font-size:14px;padding:8px 12px;background:#f8f8f8;border-left:3px solid #1A5C38;white-space:pre-wrap;min-height:24px}.empty{color:#bbb;font-style:italic}@media print{@page{margin:1.2cm}body{margin:0}}';
+  var body='<h1>Week 24 Check-In \u2014 Medieval Nonfiction: How Castles Were Built</h1><h2>Student: __________________________ &nbsp;&nbsp; Date: __________</h2>';
+  body+='<div class="sec"><div class="sec-title">Written Responses</div>';
+  ids.forEach(function(id){var el=document.getElementById(id);if(!el)return;var lbl=el.getAttribute('data-label')||id;var val=el.value.trim();body+='<div class="item"><div class="item-label">'+lbl+'</div>';body+=val?'<div class="item-ans">'+val.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;')+'</div>':'<div class="item-ans empty">(no answer written)</div>';body+='</div>';});
+  body+='</div><div class="sec"><div class="sec-title">Multiple Choice Selections</div>';
+  mcGroups.forEach(function(q){var sel=document.querySelector('[data-qid="'+q.id+'"].selected');var letter=sel?sel.querySelector('.opt-letter').textContent.trim():null;body+='<div class="item"><div class="item-label">'+q.label+'</div>';body+=letter?'<div class="item-ans">Selected: <strong>'+letter+'</strong></div>':'<div class="item-ans empty">(not selected)</div>';body+='</div>';});
+  body+='</div>';
+  var html='<!DOCTYPE html><html><head><meta charset="UTF-8"><title>Week 24 Check-In</title><style>'+css+'</style></head><body>'+body+'</body></html>';
+  var win=window.open('','_blank');if(!win){alert('Please allow pop-ups to download your PDF.');return;}
+  win.document.write(html);win.document.close();setTimeout(function(){win.print();},500);
 }
 </script>
 </body>

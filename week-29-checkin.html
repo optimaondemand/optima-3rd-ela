@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Week 29 Check-In — Joan of Arc</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Optima Academy Online — Week 29 Check-In: The Lion, the Witch and the Wardrobe</title>
 <style>
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
 body{font-family:system-ui,-apple-system,sans-serif;background:#F0F2F8;color:#0E1C42;line-height:1.6;-webkit-font-smoothing:antialiased;}
@@ -82,341 +82,173 @@ body{font-family:system-ui,-apple-system,sans-serif;background:#F0F2F8;color:#0E
 </head>
 <body>
 <div class="page-wrap">
-
-  <!-- HEADER -->
   <div class="header">
     <div class="header-brand">
-      <div class="header-logo">
-        <img src="https://www.optimaed.com/wp-content/uploads/2021/08/optimaed-logo.png" alt="Optima Academy" onerror="this.style.display='none'">
-      </div>
-      <div>
-        <div class="header-org">Optima Academy Online</div>
-        <div class="header-sub">3rd Grade ELA · Quarter 4</div>
-      </div>
+      <div class="header-logo"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima"></div>
+      <div><div class="header-org">Optima Academy Online</div><div class="header-sub">3rd Grade ELA · Quarter 4</div></div>
     </div>
-    <div class="header-title">Joan of Arc &#8212; <em>Later in the Story</em></div>
-    <div class="header-badge">
-      <span class="header-badge-icon">&#x1F4CB;</span>
-      <span class="header-badge-text">Week 29 &middot; Check-In</span>
-    </div>
+    <div class="header-title"><em>The Lion, the Witch and the Wardrobe</em> — Ch. 13–15</div>
+    <div class="header-badge"><span class="header-badge-icon">📋</span><span class="header-badge-text">Week 29 · Check-In</span></div>
   </div>
-
-  <!-- CONTENT -->
   <div class="content">
-
-    <!-- INTRO -->
-    <div class="intro">
-      <p>This week you read the later part of Joan of Arc&#8217;s biography. You studied apostrophes, the root ject, and how to find the central idea with supporting details. You also practiced elaborating &#8212; adding details to make your writing stronger. Show what you know!</p>
-    </div>
-
-    <!-- GRAMMAR SECTION -->
+    <div class="intro"><p>This week you read one of the most powerful parts of the story — Aslan's sacrifice at the Stone Table and what happened after. You reviewed dialogue punctuation and the root <strong>ject</strong> (meaning "throw"). Show what you know!</p></div>
     <div class="section">
       <div class="section-head">
-        <div class="section-icon grammar">&#x1F4DD;</div>
-        <div>
-          <div class="section-title">Grammar <span class="pts">3 pts</span></div>
-          <div class="section-pts">Apostrophes in Contractions and Possessives</div>
-        </div>
+        <div class="section-icon grammar">📝</div>
+        <div><div class="section-title">Grammar</div><div class="section-pts">3 points — Dialogue Punctuation Review</div></div>
       </div>
-
-      <!-- Q1: MC -->
       <div class="question">
-        <div class="q-label"><span class="q-number">1</span> Multiple Choice</div>
-        <div class="q-text">Which sentence uses an apostrophe correctly?</div>
-        <ul class="options">
-          <li onclick="selectOption(this)" data-qid="mcq1">
-            <span class="opt-letter">A</span>
-            Joan&#8217;s courage helped France&#8217;s army win the battle.
-          </li>
-          <li onclick="selectOption(this)" data-qid="mcq1">
-            <span class="opt-letter">B</span>
-            Joans courage helped Frances army win the battle.
-          </li>
-          <li onclick="selectOption(this)" data-qid="mcq1">
-            <span class="opt-letter">C</span>
-            Joan&#8217;s courage helped France&#8217;s army win the battel.
-          </li>
+        <div class="q-label"><span class="q-number">1</span>Grammar</div>
+        <div class="q-text">Which sentence uses dialogue punctuation correctly?</div>
+        <ul class="options" data-qid="mcq1">
+        <li onclick="selectOption(this)" data-qid="mcq1"><span class="opt-letter">A</span>"Do not grieve," said Aslan, "all will be well."</li>
+        <li onclick="selectOption(this)" data-qid="mcq1"><span class="opt-letter">B</span>"Do not grieve, said Aslan, all will be well."</li>
+        <li onclick="selectOption(this)" data-qid="mcq1"><span class="opt-letter">C</span>Do not grieve, "said Aslan," all will be well.</li>
         </ul>
       </div>
-
-      <!-- Q2: Fix-it -->
       <div class="question">
-        <div class="q-label"><span class="q-number">2</span> Fix-It</div>
-        <div class="q-text">Fix the apostrophe error in this sentence. Write the corrected sentence.</div>
-        <div class="excerpt" style="font-style:normal;font-family:system-ui,sans-serif;font-size:16px;color:#5A4A3A;border-left-color:#3B5998;">The soldiers spirit was strong because they believed in there leaders mission.</div>
-        <textarea class="response-box" id="resp1" data-label="Q2: Fix-It — Apostrophe Error" oninput="gatherAnswers()" placeholder="Write the corrected sentence here..."></textarea>
-        <div class="hint">Hint: Look for a missing apostrophe and a wrong word.</div>
+        <div class="q-label"><span class="q-number">2</span>Grammar</div>
+        <div class="q-text">Fix this sentence: <em>Susan whispered I can't look. I just can't.</em></div>
+        <textarea id="resp1" data-label="Q2: Fix the dialogue punctuation" class="response-box"></textarea>
       </div>
-
-      <!-- Q3: Application -->
       <div class="question">
-        <div class="q-label"><span class="q-number">3</span> Write It</div>
-        <div class="q-text">Write a sentence about Joan of Arc that uses BOTH a contraction and a possessive. Underline the contraction and circle the possessive.</div>
-        <textarea class="response-box" id="resp2" data-label="Q3: Application — Contraction and Possessive" oninput="gatherAnswers()" placeholder="Write your sentence here..."></textarea>
-        <div class="hint">Underline the contraction. Circle the possessive.</div>
+        <div class="q-label"><span class="q-number">3</span>Grammar</div>
+        <div class="q-text">Write a line of dialogue that Susan or Lucy might say at the Stone Table. Use correct punctuation.</div>
+        <textarea id="resp2" data-label="Q3: Write a line of dialogue" class="response-box"></textarea>
       </div>
     </div>
-
-    <!-- MORPHOLOGY SECTION -->
     <div class="section">
       <div class="section-head">
-        <div class="section-icon morph">&#x1F524;</div>
-        <div>
-          <div class="section-title">Morphology <span class="pts">3 pts</span></div>
-          <div class="section-pts">Root ject (throw)</div>
-        </div>
+        <div class="section-icon morph">🔤</div>
+        <div><div class="section-title">Morphology</div><div class="section-pts">3 points — Root ject (throw)</div></div>
       </div>
-
-      <!-- Q4: Word-part breakdown -->
       <div class="question">
-        <div class="q-label"><span class="q-number">4</span> Word-Part Breakdown</div>
-        <div class="q-text">The root <strong>ject</strong> means &#8220;throw.&#8221; Look at the word <strong>reject</strong>. The prefix re- means &#8220;back.&#8221; What does reject mean? Use both word parts in your explanation.</div>
-        <textarea class="response-box" id="resp3" data-label="Q4: Morphology — Reject Meaning" oninput="gatherAnswers()" placeholder="Reject means... because re- means ___ and ject means ___..."></textarea>
+        <div class="q-label"><span class="q-number">4</span>Morphology</div>
+        <div class="q-text">The root <strong>ject</strong> means "throw." Break apart the word <em>reject</em>. What does it mean? (re- = back, ject = throw)</div>
+        <textarea id="resp3" data-label="Q4: Break apart reject" class="response-box"></textarea>
       </div>
-
-      <!-- Q5: MC -->
       <div class="question">
-        <div class="q-label"><span class="q-number">5</span> Multiple Choice</div>
-        <div class="q-text">Which sentence uses the word <strong>project</strong> in a way that shows the root ject (throw)?</div>
-        <ul class="options">
-          <li onclick="selectOption(this)" data-qid="mcq2">
-            <span class="opt-letter">A</span>
-            The scientist would project images onto the wall, throwing light across the room.
-          </li>
-          <li onclick="selectOption(this)" data-qid="mcq2">
-            <span class="opt-letter">B</span>
-            The scientist had a project to finish by Friday.
-          </li>
-          <li onclick="selectOption(this)" data-qid="mcq2">
-            <span class="opt-letter">C</span>
-            The scientist forgot to project the assignment into the calendar.
-          </li>
+        <div class="q-label"><span class="q-number">5</span>Morphology</div>
+        <div class="q-text">The word <strong>project</strong> most likely means —</div>
+        <ul class="options" data-qid="mcq2">
+        <li onclick="selectOption(this)" data-qid="mcq2"><span class="opt-letter">A</span>to throw forward or put forward</li>
+        <li onclick="selectOption(this)" data-qid="mcq2"><span class="opt-letter">B</span>to throw away</li>
+        <li onclick="selectOption(this)" data-qid="mcq2"><span class="opt-letter">C</span>to throw backwards</li>
         </ul>
       </div>
-
-      <!-- Q6: Use it -->
       <div class="question">
-        <div class="q-label"><span class="q-number">6</span> Use It</div>
-        <div class="q-text">Choose ONE of these words. Write what the root ject (throw) adds to the word&#8217;s meaning. Then use it in a sentence.</div>
-        <div class="word-chips">
-          <span class="chip">eject</span>
-          <span class="chip">inject</span>
-          <span class="chip">project</span>
-        </div>
-        <textarea class="response-box" id="resp4" data-label="Q6: Morphology — Use ject Word" oninput="gatherAnswers()" placeholder="Word chosen: ___     What ject adds to the meaning: ___     Sentence: ___"></textarea>
+        <div class="q-label"><span class="q-number">6</span>Morphology</div>
+        <div class="q-text">Choose one: <strong>eject</strong>, <strong>inject</strong>, or <strong>project</strong>. Write a sentence that shows what the word means.</div>
+        <textarea id="resp4" data-label="Q6: Use a ject word in a sentence" class="response-box"></textarea>
       </div>
     </div>
-
-    <!-- SPELLING SECTION -->
     <div class="section">
       <div class="section-head">
-        <div class="section-icon spelling">&#x270F;&#xFE0F;</div>
-        <div>
-          <div class="section-title">Spelling <span class="pts">3 pts</span></div>
-          <div class="section-pts">Review Roots and Affixes in Biography Vocabulary</div>
-        </div>
+        <div class="section-icon spelling">✏️</div>
+        <div><div class="section-title">Spelling</div><div class="section-pts">3 points — Root-and-Affix Decoding</div></div>
       </div>
-
-      <!-- Q7: Sort -->
       <div class="question">
-        <div class="q-label"><span class="q-number">7</span> Word Part Breakdown</div>
-        <div class="q-text">Each word below has a root or affix you have studied. Break each word into parts (prefix + root or root + suffix) and write the meaning.</div>
-        <div class="word-chips">
-          <span class="chip">unkind</span>
-          <span class="chip">reform</span>
-          <span class="chip">hopeful</span>
-        </div>
-        <textarea class="response-box" id="resp5" data-label="Q7: Spelling — Word Part Breakdown" oninput="gatherAnswers()" placeholder="Example: unhappy = un + happy = not happy&#10;unkind = ___ + ___ = ___&#10;reform = ___ + ___ = ___&#10;hopeful = ___ + ___ = ___"></textarea>
+        <div class="q-label"><span class="q-number">7</span>Spelling</div>
+        <div class="q-text">Write each word. Underline the root <em>ject</em>. Write what each word means using what you know about ject and its affixes.</div>
+      <div class="word-chips"><span class="chip">injected</span><span class="chip">projection</span><span class="chip">rejected</span></div>
+        <textarea id="resp5" data-label="Q7: Underline the root ject" class="response-box"></textarea>
       </div>
-
-      <!-- Q8: Explain the pattern -->
       <div class="question">
-        <div class="q-label"><span class="q-number">8</span> Explain the Pattern</div>
-        <div class="q-text">You have studied many roots and prefixes this year. Pick ONE root or prefix and explain what it means. Then give two examples of words that use it.</div>
-        <textarea class="response-box" id="resp6" data-label="Q8: Spelling — Root or Prefix Explanation" oninput="gatherAnswers()" placeholder="Root/Prefix: ___     Meaning: ___&#10;Example 1: ___&#10;Example 2: ___"></textarea>
+        <div class="q-label"><span class="q-number">8</span>Spelling</div>
+        <div class="q-text">Explain how knowing the root ject helps you understand a word you haven't seen before. Give an example.</div>
+        <textarea id="resp6" data-label="Q8: How the root ject helps" class="response-box"></textarea>
       </div>
-
-      <!-- Q9: Spelling fix -->
       <div class="question">
-        <div class="q-label"><span class="q-number">9</span> Spelling Fix</div>
-        <div class="q-text">One of these words is spelled incorrectly. Find it and write the correct spelling.</div>
-        <div class="word-chips">
-          <span class="chip">rejection</span>
-          <span class="chip">projeck</span>
-          <span class="chip">injection</span>
-        </div>
-        <textarea class="response-box short" id="resp7" data-label="Q9: Spelling Fix" oninput="gatherAnswers()" placeholder="The misspelled word is: ___     Correct spelling: ___"></textarea>
+        <div class="q-label"><span class="q-number">9</span>Spelling</div>
+        <div class="q-text">One word is misspelled. Find it and write the correct spelling.</div>
+      <div class="word-chips"><span class="chip">inject</span><span class="chip">project</span><span class="chip">ejeckt</span></div>
+        <textarea id="resp7" data-label="Q9: Find the misspelling" class="response-box"></textarea>
       </div>
     </div>
-
-    <!-- READING SECTION -->
     <div class="section">
       <div class="section-head">
-        <div class="section-icon reading">&#x1F4D6;</div>
-        <div>
-          <div class="section-title">Reading <span class="pts">3 pts</span></div>
-          <div class="section-pts">Central Idea and Supporting Details</div>
-        </div>
+        <div class="section-icon reading">📖</div>
+        <div><div class="section-title">Reading</div><div class="section-pts">3 points — Theme and Sacrifice</div></div>
       </div>
-
-      <div class="excerpt">
-        Joan of Arc did not stop fighting even after she was wounded. Her central message was that France deserved to be free. She showed this by leading soldiers into battle, by refusing to give up when things were hard, and by encouraging the French prince to take his rightful place as king. Every detail of her story points back to one main idea: she believed her purpose was to save France.
-        <div class="excerpt-source">Adapted from <em>Joan of Arc</em> by Diane Stanley</div>
-      </div>
-
-      <!-- Q10: Cite a detail -->
+      <div class="excerpt">Aslan did not struggle. He lay down on the cold stone as they shaved his mane and tied him with cords. He submitted to it all. When it was over, and the Witch had gone, a great stillness lay over the hilltop. Susan and Lucy crept close and lay their hands on the warm fur, and wept.<div class="excerpt-source">— Adapted from The Lion, the Witch and the Wardrobe, Ch. 14–15</div></div>
       <div class="question">
-        <div class="q-label"><span class="q-number">10</span> Central Idea</div>
-        <div class="q-text">What is the central idea of this passage? Write it in your own words.</div>
-        <textarea class="response-box" id="resp8" data-label="Q10: Reading — Central Idea" oninput="gatherAnswers()" placeholder="The central idea of this passage is..."></textarea>
+        <div class="q-label"><span class="q-number">10</span>Reading</div>
+        <div class="q-text">What happens to Aslan in this passage? Use two details from the text.</div>
+        <textarea id="resp8" data-label="Q10: What happens to Aslan?" class="response-box"></textarea>
       </div>
-
-      <!-- Q11: Supporting details -->
       <div class="question">
-        <div class="q-label"><span class="q-number">11</span> Supporting Details</div>
-        <div class="q-text">Choose TWO details from the passage that support the central idea. Explain how each detail connects to the main idea.</div>
-        <textarea class="response-box" id="resp9" data-label="Q11: Reading — Two Supporting Details" oninput="gatherAnswers()" placeholder="Detail 1: ___     How it connects: ___&#10;Detail 2: ___     How it connects: ___"></textarea>
+        <div class="q-label"><span class="q-number">11</span>Reading</div>
+        <div class="q-text">The passage says Aslan "did not struggle." Why do you think he chose not to fight back? What does this tell you about his character?</div>
+        <textarea id="resp9" data-label="Q11: Why didn't Aslan struggle?" class="response-box"></textarea>
       </div>
-
-      <!-- Q12: Infer -->
       <div class="question">
-        <div class="q-label"><span class="q-number">12</span> Infer</div>
-        <div class="q-text">Based on the passage, what kind of person was Joan of Arc? Use at least two details from the text to support your answer.</div>
-        <textarea class="response-box" id="resp10" data-label="Q12: Reading — Inference (Joan's Character)" oninput="gatherAnswers()" placeholder="Joan of Arc was the kind of person who..."></textarea>
+        <div class="q-label"><span class="q-number">12</span>Reading</div>
+        <div class="q-text">Why do you think Aslan sacrificed himself for Edmund? What does his choice tell us about what the story values most?</div>
+        <textarea id="resp10" data-label="Q12: Why did Aslan sacrifice himself?" class="response-box"></textarea>
       </div>
     </div>
-
-    <!-- WRITING & RWM SECTION -->
     <div class="section">
       <div class="section-head">
-        <div class="section-icon writing">&#x270D;&#xFE0F;</div>
-        <div>
-          <div class="section-title">Writing &amp; RWM <span class="pts">2 pts</span></div>
-          <div class="section-pts">Elaborating on Facts</div>
-        </div>
+        <div class="section-icon writing">✍️</div>
+        <div><div class="section-title">Writing &amp; Read with Me</div><div class="section-pts">2 points</div></div>
       </div>
-
-      <!-- Q13: RWM mimic -->
       <div class="question">
-        <div class="q-label"><span class="q-number">13</span> Read &middot; Write &middot; Mimic</div>
-        <div class="rwm-model">
-          <div class="rwm-model-label">Model Sentence</div>
-          <div class="rwm-model-text">&#8220;Joan did not simply say she believed in France &#8212; she showed it by leading soldiers through danger, refusing to quit, and standing beside the prince when it mattered most.&#8221;</div>
-        </div>
-        <div class="q-text">Notice how the model sentence SHOWS the reader what Joan believed through her actions. Write your own sentence that elaborates on a fact from Joan of Arc&#8217;s story. Don&#8217;t just state the fact &#8212; show WHY it matters or HOW it happened.</div>
-        <textarea class="response-box" id="resp11" data-label="Q13: RWM — Elaboration Mimic" oninput="gatherAnswers()" placeholder="Write your sentence here, showing WHY or HOW rather than just stating a fact..."></textarea>
+        <div class="q-label"><span class="q-number">13</span>Read with Me</div>
+        <div class="rwm-model"><div class="rwm-model-label">Model Sentence (Weight Through Stillness)</div><div class="rwm-model-text">Aslan did not struggle. He simply lay down on the cold stone and closed his eyes, and the night was very quiet after that.</div></div>
+        <div class="q-text">Notice how short, simple sentences create weight and sadness. Write your own short, quiet sentence about a serious moment — show what happened without explaining how to feel about it.</div>
+        <textarea id="resp11" data-label="Q13: Write a short, quiet sentence about a serious moment" class="response-box"></textarea>
       </div>
-
-      <!-- Q14: Writing arc -->
       <div class="question">
-        <div class="q-label"><span class="q-number">14</span> Writing Arc &#8212; Revise</div>
-        <div class="q-text">You are revising your research paragraph this week! Look at your draft from Week 28. Choose ONE sentence in your paragraph and add a detail to make it stronger. Write the original sentence and then your revised, more detailed version.</div>
-        <textarea class="response-box" id="resp12" data-label="Q14: Writing Arc — Revised Sentence with Detail" oninput="gatherAnswers()" style="min-height:120px;" placeholder="Original sentence: ___&#10;&#10;Revised sentence (with added detail): ___"></textarea>
+        <div class="q-label"><span class="q-number">14</span>Writing</div>
+        <div class="q-text">Write 2–3 sentences explaining why you think Aslan chose to sacrifice himself, and what this tells us about the most important values in the story.</div>
+        <textarea id="resp12" data-label="Q14: Why Aslan chose to sacrifice himself" class="response-box"></textarea>
       </div>
     </div>
-
-    <!-- GATHERED CARD -->
     <div class="gathered-card">
       <div class="gathered-header">
-        <div class="gathered-header-icon">&#x1F4CB;</div>
-        <div>
-          <div class="gathered-header-label">All Answers</div>
-          <div class="gathered-header-title">Week 29 Check-In &#8212; Joan of Arc</div>
-        </div>
+        <div class="gathered-header-icon">📋</div>
+        <div><div class="gathered-header-label">Submit Your Work</div><div class="gathered-header-title">Gather &amp; Copy All Answers</div></div>
       </div>
       <div class="gathered-body">
-        <div class="gathered-intro">All of your answers are gathered below. Click <strong>Copy All Answers</strong> to copy them, or <strong>Download as PDF</strong> to save a printable version.</div>
-        <textarea class="gathered-output" id="gatheredOutput" readonly placeholder="Your answers will appear here as you type above..."></textarea>
+        <p class="gathered-intro">Click <strong>Gather My Answers</strong> to collect everything you wrote into one place. Then copy and paste into your assignment submission — or print to PDF.</p>
+        <textarea id="gatheredOutput" class="gathered-output" readonly placeholder="Your answers will appear here after you click Gather My Answers..."></textarea>
         <div class="gathered-actions">
-          <button class="gathered-btn gathered-btn-copy" onclick="copyGathered()">&#x1F4CB; Copy All Answers</button>
-          <button class="gathered-btn gathered-btn-pdf" onclick="downloadPDF()">&#x1F4C4; Download as PDF</button>
+          <button class="gathered-btn gathered-btn-copy" onclick="gatherAnswers();copyGathered()">📋 Gather &amp; Copy Answers</button>
+          <button class="gathered-btn gathered-btn-pdf" onclick="downloadPDF()">🖨️ Print / Save as PDF</button>
         </div>
-        <div class="gathered-copied" id="gatheredCopied">Copied to clipboard!</div>
+        <div id="gatheredCopied" class="gathered-copied">Copied to clipboard!</div>
       </div>
     </div>
-
-  </div><!-- end .content -->
-
-  <!-- FOOTER -->
-  <div class="footer">
-    <p>Optima Academy Online &middot; 3rd Grade ELA &middot; Week 29 Check-In &middot; Joan of Arc</p>
   </div>
-
-</div><!-- end .page-wrap -->
-
+  <div class="footer"><p>Optima Academy Online · 3rd Grade ELA · Week 29 Check-In · The Lion, the Witch and the Wardrobe</p></div>
+</div>
 <script>
-function gatherAnswers() {
-  var ids = ["resp1","resp2","resp3","resp4","resp5","resp6","resp7","resp8","resp9","resp10","resp11","resp12"];
-  var mcGroups = [{"id":"mcq1","label":"Q1: Apostrophe Use (MC)"},{"id":"mcq2","label":"Q5: Root ject — project (MC)"}];
-  var lines = ['Week 29 Check-In — Joan of Arc: Later in the Story','================================================',''];
-  lines.push('WRITTEN RESPONSES');
-  lines.push('--------------------------------');
-  ids.forEach(function(id){
-    var el=document.getElementById(id);
-    if(!el)return;
-    var lbl=el.getAttribute('data-label')||id;
-    lines.push('');lines.push(lbl);lines.push(el.value.trim()||'(no answer)');
-  });
+function gatherAnswers(){
+  var ids=["resp1","resp2","resp3","resp4","resp5","resp6","resp7","resp8","resp9","resp10","resp11","resp12"];
+  var mcGroups=[{"id":"mcq1","label":"Q1: Dialogue Punctuation"},{"id":"mcq2","label":"Q5: Root ject (throw)"}];
+  var lines=['Week 29 Check-In \u2014 The Lion, the Witch and the Wardrobe','================================================',''];
+  lines.push('WRITTEN RESPONSES');lines.push('--------------------------------');
+  ids.forEach(function(id){var el=document.getElementById(id);if(!el)return;var lbl=el.getAttribute('data-label')||id;lines.push('');lines.push(lbl);lines.push(el.value.trim()||'(no answer)');});
   lines.push('');lines.push('MULTIPLE CHOICE');lines.push('--------------------------------');
-  mcGroups.forEach(function(q){
-    var sel=document.querySelector('[data-qid="'+q.id+'"].selected');
-    var letter=sel?sel.querySelector('.opt-letter').textContent.trim():'?';
-    lines.push('');lines.push(q.label+': '+letter);
-  });
-  var el=document.getElementById('gatheredOutput');
-  if(el)el.value=lines.join('\n');
+  mcGroups.forEach(function(q){var sel=document.querySelector('[data-qid="'+q.id+'"].selected');var letter=sel?sel.querySelector('.opt-letter').textContent.trim():'?';lines.push('');lines.push(q.label+': '+letter);});
+  var el=document.getElementById('gatheredOutput');if(el)el.value=lines.join('\n');
 }
-function selectOption(li){
-  var qid=li.getAttribute('data-qid');
-  document.querySelectorAll('[data-qid="'+qid+'"]').forEach(function(x){x.classList.remove('selected');});
-  li.classList.add('selected');
-  gatherAnswers();
-}
-function copyGathered(){
-  var el=document.getElementById('gatheredOutput');
-  if(!el)return;
-  el.select();
-  try{document.execCommand('copy');}catch(e){navigator.clipboard.writeText(el.value);}
-  var note=document.getElementById('gatheredCopied');
-  if(note){note.classList.add('show');setTimeout(function(){note.classList.remove('show');},2500);}
-}
+function selectOption(li){var ul=li.parentElement;ul.querySelectorAll('li').forEach(function(x){x.classList.remove('selected');});li.classList.add('selected');gatherAnswers();}
+function copyGathered(){var el=document.getElementById('gatheredOutput');if(!el)return;el.select();try{document.execCommand('copy');}catch(e){navigator.clipboard.writeText(el.value);}var note=document.getElementById('gatheredCopied');if(note){note.classList.add('show');setTimeout(function(){note.classList.remove('show');},2500);}}
 function downloadPDF(){
   gatherAnswers();
   var ids=["resp1","resp2","resp3","resp4","resp5","resp6","resp7","resp8","resp9","resp10","resp11","resp12"];
-  var mcGroups=[{"id":"mcq1","label":"Q1: Apostrophe Use (MC)"},{"id":"mcq2","label":"Q5: Root ject — project (MC)"}];
-  var css='body{font-family:Georgia,serif;max-width:680px;margin:36px auto;padding:0 24px;color:#111;line-height:1.75}';
-  css+='h1{font-size:19px;border-bottom:3px solid #1A5C38;padding-bottom:7px;margin-bottom:4px}';
-  css+='h2{font-size:12px;color:#888;margin-bottom:20px;font-weight:normal}';
-  css+='.sec{margin-top:22px;padding-top:12px;border-top:2px solid #eee}';
-  css+='.sec-title{font-size:13px;font-weight:800;color:#1A5C38;text-transform:uppercase;letter-spacing:.5px;margin-bottom:10px}';
-  css+='.item{margin-top:14px}.item-label{font-size:11px;font-weight:700;color:#555;text-transform:uppercase;letter-spacing:.4px;margin-bottom:4px}';
-  css+='.item-ans{font-size:14px;padding:8px 12px;background:#f8f8f8;border-left:3px solid #1A5C38;white-space:pre-wrap;min-height:24px}';
-  css+='.empty{color:#bbb;font-style:italic}@media print{@page{margin:1.2cm}body{margin:0}}';
-  var body='<h1>Week 29 Check-In — Joan of Arc: Later in the Story</h1>';
-  body+='<h2>Student: __________________________ &nbsp;&nbsp; Date: __________</h2>';
+  var mcGroups=[{"id":"mcq1","label":"Q1: Dialogue Punctuation"},{"id":"mcq2","label":"Q5: Root ject (throw)"}];
+  var css='body{font-family:Georgia,serif;max-width:680px;margin:36px auto;padding:0 24px;color:#111;line-height:1.75}h1{font-size:19px;border-bottom:3px solid #1A5C38;padding-bottom:7px;margin-bottom:4px}h2{font-size:12px;color:#888;margin-bottom:20px;font-weight:normal}.sec{margin-top:22px;padding-top:12px;border-top:2px solid #eee}.sec-title{font-size:13px;font-weight:800;color:#1A5C38;text-transform:uppercase;letter-spacing:.5px;margin-bottom:10px}.item{margin-top:14px}.item-label{font-size:11px;font-weight:700;color:#555;text-transform:uppercase;letter-spacing:.4px;margin-bottom:4px}.item-ans{font-size:14px;padding:8px 12px;background:#f8f8f8;border-left:3px solid #1A5C38;white-space:pre-wrap;min-height:24px}.empty{color:#bbb;font-style:italic}@media print{@page{margin:1.2cm}body{margin:0}}';
+  var body='<h1>Week 29 Check-In \u2014 The Lion, the Witch and the Wardrobe</h1><h2>Student: __________________________ &nbsp;&nbsp; Date: __________</h2>';
   body+='<div class="sec"><div class="sec-title">Written Responses</div>';
-  ids.forEach(function(id){
-    var el=document.getElementById(id);if(!el)return;
-    var lbl=el.getAttribute('data-label')||id;
-    var val=el.value.trim();
-    body+='<div class="item"><div class="item-label">'+lbl+'</div>';
-    body+=val?'<div class="item-ans">'+val.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;')+'</div>':'<div class="item-ans empty">(no answer written)</div>';
-    body+='</div>';
-  });
+  ids.forEach(function(id){var el=document.getElementById(id);if(!el)return;var lbl=el.getAttribute('data-label')||id;var val=el.value.trim();body+='<div class="item"><div class="item-label">'+lbl+'</div>';body+=val?'<div class="item-ans">'+val.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;')+'</div>':'<div class="item-ans empty">(no answer written)</div>';body+='</div>';});
   body+='</div><div class="sec"><div class="sec-title">Multiple Choice Selections</div>';
-  mcGroups.forEach(function(q){
-    var sel=document.querySelector('[data-qid="'+q.id+'"].selected');
-    var letter=sel?sel.querySelector('.opt-letter').textContent.trim():null;
-    body+='<div class="item"><div class="item-label">'+q.label+'</div>';
-    body+=letter?'<div class="item-ans">Selected: <strong>'+letter+'</strong></div>':'<div class="item-ans empty">(not selected)</div>';
-    body+='</div>';
-  });
+  mcGroups.forEach(function(q){var sel=document.querySelector('[data-qid="'+q.id+'"].selected');var letter=sel?sel.querySelector('.opt-letter').textContent.trim():null;body+='<div class="item"><div class="item-label">'+q.label+'</div>';body+=letter?'<div class="item-ans">Selected: <strong>'+letter+'</strong></div>':'<div class="item-ans empty">(not selected)</div>';body+='</div>';});
   body+='</div>';
   var html='<!DOCTYPE html><html><head><meta charset="UTF-8"><title>Week 29 Check-In</title><style>'+css+'</style></head><body>'+body+'</body></html>';
-  var win=window.open('','_blank');
-  if(!win){alert('Please allow pop-ups to download your PDF.');return;}
-  win.document.write(html);win.document.close();
-  setTimeout(function(){win.print();},500);
+  var win=window.open('','_blank');if(!win){alert('Please allow pop-ups to download your PDF.');return;}
+  win.document.write(html);win.document.close();setTimeout(function(){win.print();},500);
 }
 </script>
 </body>
