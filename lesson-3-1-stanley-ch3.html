@@ -2456,7 +2456,50 @@ document.querySelector(".tab-btn.active").classList.add("visited");updateProgres
 (function(){var pw=document.querySelector(".progress-wrap");var tb=document.querySelector(".tab-bar");if(pw&&tb){tb.style.top=pw.offsetHeight+"px"}})()
 function toggleCheck(item){item.classList.toggle("checked");var c=item.querySelector(".turn-in-check");c.textContent=item.classList.contains("checked")?"✓":"";var ct=item.closest(".turn-in-checklist");if(!ct)return;if(ct.querySelectorAll(".turn-in-item").length===ct.querySelectorAll(".turn-in-item.checked").length){fireConfetti()}}
 function fireConfetti(){var cv=document.getElementById("confettiCanvas");var ctx=cv.getContext("2d");cv.width=window.innerWidth;cv.height=window.innerHeight;var cols=["#55C8E8","#C7922C","#34B76F","#8B6FC0","#c7627e","#FFE9B8"];var ps=[];for(var i=0;i<120;i++){ps.push({x:Math.random()*cv.width,y:-20-Math.random()*100,vx:(Math.random()-0.5)*6,vy:Math.random()*4+3,sz:Math.random()*8+4,c:cols[Math.floor(Math.random()*cols.length)],r:Math.random()*Math.PI*2,vr:(Math.random()-0.5)*0.2})}var f=0;function anim(){ctx.clearRect(0,0,cv.width,cv.height);ps.forEach(function(p){p.x+=p.vx;p.y+=p.vy;p.vy+=0.1;p.r+=p.vr;ctx.save();ctx.translate(p.x,p.y);ctx.rotate(p.r);ctx.fillStyle=p.c;ctx.fillRect(-p.sz/2,-p.sz/2,p.sz,p.sz);ctx.restore()});f++;if(f<180)requestAnimationFrame(anim);else ctx.clearRect(0,0,cv.width,cv.height)}anim()}
-function autoSave(ta,dotId){var d=document.getElementById(dotId);if(d){d.classList.add("saved");clearTimeout(ta._st);ta._st=setTimeout(function(){},300)}}
+/* ───── AUTO-SAVE ───── */
+/* Unique key derived from the page title so each lesson's data stays separate */
+var _lessonKey = (document.title || 'ela-lesson').replace(/[^a-zA-Z0-9]+/g,'-').toLowerCase();
+
+function autoSave(el,dotId){
+  var dot=document.getElementById(dotId);
+  if(dot&&el.value.trim().length>0){dot.classList.add('saved');}
+  else if(dot){dot.classList.remove('saved');}
+  /* Actually persist to localStorage */
+  try{ localStorage.setItem(_lessonKey+'-'+el.id, el.value); }catch(e){}
+}
+
+/* Restore every saved textarea on page load */
+function restoreJournals(){
+  document.querySelectorAll('textarea.journal-box').forEach(function(t){
+    if(!t.id) return;
+    try{
+      var v = localStorage.getItem(_lessonKey+'-'+t.id);
+      if(v){ t.value = v; }
+    }catch(e){}
+    /* Re-trigger the saved dot if there's content */
+    var dotId = t.getAttribute('oninput');
+    if(dotId){
+      var m = dotId.match(/'(dot-[^']+)'/);
+      if(m){
+        var dot = document.getElementById(m[1]);
+        if(dot && t.value.trim().length>0){ dot.classList.add('saved'); }
+      }
+    }
+  });
+}
+restoreJournals();
+
+/* Warn before leaving if student has typed anything */
+window.addEventListener('beforeunload', function(e){
+  var hasWork = false;
+  document.querySelectorAll('textarea.journal-box').forEach(function(t){
+    if(t.value && t.value.trim().length > 0){ hasWork = true; }
+  });
+  if(hasWork){
+    e.preventDefault();
+    e.returnValue = '';
+  }
+});,300)}}
 window._fillinDone=false;function checkFillIn(){var ins=document.querySelectorAll(".fillin-input");var ok=true;ins.forEach(function(inp){var a=inp.getAttribute("data-answer").toLowerCase();var v=inp.value.trim().toLowerCase();if(v===a){inp.classList.remove("wrong");inp.classList.add("correct");inp.disabled=true}else{inp.classList.remove("correct");inp.classList.add("wrong");ok=false;setTimeout(function(){inp.classList.remove("wrong")},600)}});if(ok){document.getElementById("fillinFeedback").classList.add("show");window._fillinDone=true}}
 var sortSelected=null;var sortPlaced=0;var sortTotal=8;
 function pickSortChip(c){if(c.classList.contains("placed"))return;if(sortSelected)sortSelected.style.outline="";sortSelected=c;c.style.outline="3px solid #55C8E8";c.style.outlineOffset="2px"}
