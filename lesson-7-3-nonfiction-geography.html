@@ -2476,7 +2476,7 @@ window.addEventListener('beforeunload', function(e){
     e.preventDefault();
     e.returnValue = '';
   }
-});}
+});
 function toggleCheck(item){item.classList.toggle("checked");var c=item.querySelector(".turn-in-check");c.textContent=item.classList.contains("checked")?"✓":"";var ct=item.closest(".turn-in-checklist");if(!ct)return;if(ct.querySelectorAll(".turn-in-item").length===ct.querySelectorAll(".turn-in-item.checked").length){fireConfetti()}}
 function fireConfetti(){var cv=document.getElementById("confettiCanvas");var ctx=cv.getContext("2d");cv.width=window.innerWidth;cv.height=window.innerHeight;var cols=["#55C8E8","#C7922C","#34B76F","#8B6FC0","#c7627e"];var ps=[];for(var i=0;i<120;i++){ps.push({x:Math.random()*cv.width,y:-20,vx:(Math.random()-0.5)*6,vy:Math.random()*4+3,sz:Math.random()*8+4,c:cols[Math.floor(Math.random()*cols.length)],r:0,vr:(Math.random()-0.5)*.2})}var f=0;function a(){ctx.clearRect(0,0,cv.width,cv.height);ps.forEach(function(p){p.x+=p.vx;p.y+=p.vy;p.vy+=.1;p.r+=p.vr;ctx.save();ctx.translate(p.x,p.y);ctx.rotate(p.r);ctx.fillStyle=p.c;ctx.fillRect(-p.sz/2,-p.sz/2,p.sz,p.sz);ctx.restore()});f++;if(f<180)requestAnimationFrame(a);else ctx.clearRect(0,0,cv.width,cv.height)}a()}
 window._fillinDone=false;function checkFillIn(){var ins=document.querySelectorAll(".fillin-input");var ok=true;ins.forEach(function(inp){var a=inp.getAttribute("data-answer").toLowerCase();var v=inp.value.trim().toLowerCase();if(v===a){inp.classList.remove("wrong");inp.classList.add("correct");inp.disabled=true}else{inp.classList.add("wrong");ok=false;setTimeout(function(){inp.classList.remove("wrong")},600)}});if(ok)document.getElementById("fillinFeedback").classList.add("show")}

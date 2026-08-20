@@ -2486,7 +2486,7 @@ window.addEventListener('beforeunload', function(e){
     e.preventDefault();
     e.returnValue = '';
   }
-});,300)}}
+});
 window._fillinDone=false;function checkFillIn(){var ins=document.querySelectorAll(".fillin-input");var ok=true;ins.forEach(function(inp){var a=inp.getAttribute("data-answer").toLowerCase();var v=inp.value.trim().toLowerCase();if(v===a){inp.classList.remove("wrong");inp.classList.add("correct");inp.disabled=true}else{inp.classList.remove("correct");inp.classList.add("wrong");ok=false;setTimeout(function(){inp.classList.remove("wrong")},600)}});if(ok){document.getElementById("fillinFeedback").classList.add("show");window._fillinDone=true}}
 var sortSelected=null;var sortPlaced=0;var sortTotal=8;
 function pickSortChip(c){if(c.classList.contains("placed"))return;if(sortSelected)sortSelected.style.outline="";sortSelected=c;c.style.outline="3px solid #55C8E8";c.style.outlineOffset="2px"}
