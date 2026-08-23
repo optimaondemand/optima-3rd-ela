@@ -2206,15 +2206,15 @@ body {
 <div class="activity-head"><div class="activity-num" style="background:#8B6FC0;">1</div><div style="flex:1;"><div class="activity-title">🌱 Morphology: Prefix re- means again</div><div class="activity-sub">Use / Apply the skill</div></div></div>
 <div class="activity-body">
 <div class="key-concept"><div class="key-concept-label">📌 Examples</div>
-<p><strong>un- + happy = unhappy</strong> &mdash; prefix <em>un-</em> means <em>not</em></p>
-<p><strong>un- + kind = unkind</strong> &mdash; not kind</p>
+<p><strong>re- + read = reread</strong> &mdash; prefix <em>re-</em> means <em>again</em></p>
+<p><strong>re- + tell = retell</strong> &mdash; tell again</p>
 </div>
 <div class="callout callout-info"><span class="callout-icon">🧩</span><p><strong>Practice: Find the Base Word!</strong></p></div>
 <div class="fillin-game" id="fillinGame">
-<div class="fillin-item">The base word in <em>unhappy</em> is <input class="fillin-input" id="fill1" data-answer="happy" maxlength="12" placeholder="______">.</div>
-<div class="fillin-item">The base word in <em>unkind</em> is <input class="fillin-input" id="fill2" data-answer="kind" maxlength="12" placeholder="______">.</div>
-<div class="fillin-item">The base word in <em>unroll</em> is <input class="fillin-input" id="fill3" data-answer="roll" maxlength="12" placeholder="______">.</div>
-<div class="fillin-item">The base word in <em>unfair</em> is <input class="fillin-input" id="fill4" data-answer="fair" maxlength="12" placeholder="______">.</div>
+<div class="fillin-item">The base word in <em>reread</em> is <input class="fillin-input" id="fill1" data-answer="read" maxlength="12" placeholder="______">.</div>
+<div class="fillin-item">The base word in <em>retell</em> is <input class="fillin-input" id="fill2" data-answer="tell" maxlength="12" placeholder="______">.</div>
+<div class="fillin-item">The base word in <em>replay</em> is <input class="fillin-input" id="fill3" data-answer="play" maxlength="12" placeholder="______">.</div>
+<div class="fillin-item">The base word in <em>rebuild</em> is <input class="fillin-input" id="fill4" data-answer="build" maxlength="12" placeholder="______">.</div>
 <button class="fillin-check-btn" onclick="checkFillIn()">Check My Answers</button>
 <div class="fillin-feedback" id="fillinFeedback">🌱 All correct!</div></div>
 </div></div>
@@ -2235,28 +2235,32 @@ body {
 <div class="activity bl-gold">
 <div class="activity-head"><div class="activity-num" style="background:#C7922C;">3</div><div style="flex:1;"><div class="activity-title">✏️ Grammar: Nouns and verbs</div><div class="activity-sub">Use / Apply the skill.</div></div></div>
 <div class="activity-body">
+<div class="callout callout-gold" style="margin-bottom:14px;background:#FFF8E8;border:2px solid #F5E6C8;border-left:5px solid #C7922C;border-radius:10px;padding:14px 18px;"><span class="callout-icon">📖</span><p style="font-size:15px;color:#0E1C42;line-height:1.6;"><strong>Remember the Rule:</strong> <strong>Nouns</strong> name people, places, things, or ideas. <strong>Verbs</strong> show what someone does or how something is. Tip: ask &ldquo;Can I do this?&rdquo; &rarr; verb. &ldquo;Can I touch, see, or name this?&rdquo; &rarr; noun.</p></div>
+
 <div class="task-box" style="background:#FFF8E8;border-color:#F5E6C8;"><div class="task-label" style="color:#C7922C;">👉 Example</div>
 <div class="task-sentence">Stanley | was not hurt.</div>
 <p style="font-size:15px;color:#3A4A6B;line-height:1.6;margin-top:8px;">Subject: <em>Stanley</em>. Predicate: <em>was not hurt</em>.</p></div>
-<div class="callout callout-info" style="margin-top:14px;"><span class="callout-icon">🎯</span><p><strong>Practice!</strong> Identify the correct answer for each item.</p></div>
+<div class="callout callout-info" style="margin-top:14px;"><span class="callout-icon">🎯</span><p><strong>Practice!</strong> Read each sentence. Read each sentence. Is the <u>underlined</u> word a <strong>noun</strong> or a <strong>verb</strong>? Tap the sentence to check!</p></div>
 <div class="spotter-game" id="grammarGame">
 <div class="spotter-sentence" id="gram1">
-<span style="font-size:16px;color:#0E1C42;">ring → <em>noun</em></span>
+<span class="spotter-word" onclick="this.parentElement.querySelector('.spotter-result').textContent='Verb ✅ — Action word — it tells what Stanley did.';this.parentElement.querySelector('.spotter-result').classList.add('show','win')" style="cursor:pointer;font-size:16px;color:#0E1C42;">Stanley <u style="text-decoration-color:#C7922C;text-underline-offset:3px;">flew</u> like a kite in the park.</span>
 <div class="spotter-result" id="gram1-result"></div></div>
 <div class="spotter-sentence" id="gram2">
-<span style="font-size:16px;color:#0E1C42;">rolled → <em>verb</em></span>
+<span class="spotter-word" onclick="this.parentElement.querySelector('.spotter-result').textContent='Noun ✅ — It names a group of people.';this.parentElement.querySelector('.spotter-result').classList.add('show','win')" style="cursor:pointer;font-size:16px;color:#0E1C42;">The <u style="text-decoration-color:#C7922C;text-underline-offset:3px;">policemen</u> chased the sneak thieves.</span>
 <div class="spotter-result" id="gram2-result"></div></div>
 <div class="spotter-sentence" id="gram3">
-<span style="font-size:16px;color:#0E1C42;">policemen → <em>noun</em></span>
+<span class="spotter-word" onclick="this.parentElement.querySelector('.spotter-result').textContent='Verb ✅ — Action word — it tells what Stanley did.';this.parentElement.querySelector('.spotter-result').classList.add('show','win')" style="cursor:pointer;font-size:16px;color:#0E1C42;">Stanley <u style="text-decoration-color:#C7922C;text-underline-offset:3px;">rolled</u> up inside the painting.</span>
 <div class="spotter-result" id="gram3-result"></div></div>
 <div class="spotter-sentence" id="gram4">
-<span style="font-size:16px;color:#0E1C42;">apologized → <em>verb</em></span>
+<span class="spotter-word" onclick="this.parentElement.querySelector('.spotter-result').textContent='Noun ✅ — It names a thing.';this.parentElement.querySelector('.spotter-result').classList.add('show','win')" style="cursor:pointer;font-size:16px;color:#0E1C42;">Mrs. Lambchop mailed him in an <u style="text-decoration-color:#C7922C;text-underline-offset:3px;">envelope</u>.</span>
 <div class="spotter-result" id="gram4-result"></div></div>
 </div>
 </div></div>
 <div class="activity bl-navy">
 <div class="activity-head"><div class="activity-num" style="background:#0E1C42;">4</div><div style="flex:1;"><div class="activity-title">🔠 Spelling: CVC, CVCe, open/closed syllable review</div><div class="activity-sub">Use / Apply the pattern.</div></div></div>
 <div class="activity-body">
+<div class="callout callout-gold" style="margin-bottom:14px;background:#FFF8E8;border:2px solid #F5E6C8;border-left:5px solid #C7922C;border-radius:10px;padding:14px 18px;"><span class="callout-icon">📖</span><p style="font-size:15px;color:#0E1C42;line-height:1.6;"><strong>Spelling Patterns This Week:</strong> We are reviewing <strong>CVC</strong> (consonant-vowel-consonant, like <em>flat</em>), <strong>CVCe</strong> (consonant-vowel-consonant-silent <em>e</em>, like <em>name</em>), and <strong>open/closed syllables</strong>. A closed syllable has a short vowel; an open syllable or CVCe word has a long vowel.</p></div>
+
 <div class="callout callout-info"><span class="callout-icon">🎮</span><p><strong>Practice: Sort the Words!</strong> Tap a word, then tap the column where it belongs.</p></div>
 <div class="sort-game" id="spellSort"><div class="sort-bank" id="sortBank">
 <span class="sort-chip" data-group="CVC" onclick="pickSortChip(this)">flat</span>
@@ -2310,7 +2314,13 @@ body {
 <div class="activity bl-purple">
 <div class="activity-head"><div class="activity-num" style="background:#8B6FC0;">📚</div><div style="flex:1;"><div class="activity-title">📚 What Good Readers Do</div><div class="activity-sub">Identify characters, setting, and problem.</div></div></div>
 <div class="activity-body">
-<p>Identify characters, setting, and problem.</p>
+<p>This week you are learning to <strong>identify the characters, setting, and problem</strong> in a story. Today, as you read Chapter 2, use these steps:</p>
+<ol style="margin:10px 0 10px 20px;font-size:15px;color:#3A4A6B;line-height:1.8;">
+<li><strong>Characters:</strong> Who is in this chapter? Are there any new characters? Write their names and what they do.</li>
+<li><strong>Setting:</strong> Where does this chapter happen? Does Stanley go anywhere new? Describe the place.</li>
+<li><strong>Problem:</strong> What challenges does Stanley face in Chapter 2? Does being flat cause any new problems &mdash; or does it help?</li>
+</ol>
+<p style="font-size:15px;color:#3A4A6B;">Use these three questions as you read. Write your answers below.</p>
 <div class="journal-label">📓 Your thoughts <span class="saved-dot" id="dot-wgrd"></span></div>
 <textarea class="journal-box" id="journal-wgrd" data-label="What Good Readers Do" placeholder="I noticed..." oninput="autoSave(this,'dot-wgrd')"></textarea>
 </div></div>

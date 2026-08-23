@@ -2181,13 +2181,13 @@ body {
 </div>
 <div class="task-box">
 <div class="task-label" style="color:#c7627e;">🔧 Fix-It Sentence — Now You Try</div>
-<div class="task-sentence" style="border-left-color:#c7627e;">it had been a long and tiring day and very soon all the lambchops were fast asleep</div>
+<div class="task-sentence" style="border-left-color:#c7627e;">stanley i want to be round again he cried i dont want to be flat anymore</div>
 <div class="journal-label">📓 Write the corrected sentence <span class="saved-dot" id="dot-dol"></span></div>
 <textarea class="journal-box" id="journal-dol" data-label="DOL: Corrected sentence" placeholder="Write the corrected sentence here..." oninput="autoSave(this,'dot-dol')" style="min-height:70px;"></textarea>
 <button class="dol-check-btn" onclick="document.getElementById('dolAns').classList.toggle('show')">🔍 Check My Work</button>
 <div class="dol-answer" id="dolAns">
 <p style="margin-bottom:8px;"><strong>Corrected:</strong></p>
-<p><strong>It</strong> had been a long and tiring day<strong>,</strong> and very soon all the <strong>Lambchops</strong> were fast asleep<strong>.</strong></p>
+<p><strong>&ldquo;Stanley,</strong> I want to be round again<strong>,&rdquo;</strong> he cried<strong>.</strong> <strong>&ldquo;</strong>I <strong>don&rsquo;t</strong> want to be flat anymore<strong>!&rdquo;</strong></p>
 </div></div>
 </div></div>
 <div class="activity bl-rose">
@@ -2208,20 +2208,24 @@ But who you are inside the book.</div>
 <div class="activity bl-purple">
 <div class="activity-head"><div class="activity-num" style="background:#8B6FC0;">1</div><div style="flex:1;"><div class="activity-title">🌱 Morphology: Prefix un- means not</div><div class="activity-sub">Explain / Justify the skill</div></div></div>
 <div class="activity-body">
-<div class="key-concept"><div class="key-concept-label">📌 Examples</div>
-<p><strong>base word review</strong> &mdash; play, help, kind, fair, happy, roll, build, read</p>
+<div class="key-concept"><div class="key-concept-label">📌 Remember</div>
+<p><strong>un-</strong> means <strong>not</strong>. When you add <em>un-</em> to a word, it means the opposite!</p>
+<p><strong>unhappy</strong> = not happy &middot; <strong>unfair</strong> = not fair &middot; <strong>unsafe</strong> = not safe</p>
 </div>
-<div class="callout callout-info"><span class="callout-icon">🎯</span><p><strong>Practice: Match the Word to Its Base!</strong></p></div>
-<div class="match-game" id="morphMatch"><div class="match-grid" id="matchGrid">
-<div class="match-item is-word" data-match="A" onclick="matchClick(this)">unroll</div>
-<div class="match-item" data-match="A" onclick="matchClick(this)">roll</div>
-<div class="match-item is-word" data-match="B" onclick="matchClick(this)">replay</div>
-<div class="match-item" data-match="B" onclick="matchClick(this)">play</div>
-<div class="match-item is-word" data-match="C" onclick="matchClick(this)">unkind</div>
-<div class="match-item" data-match="C" onclick="matchClick(this)">kind</div>
-<div class="match-item is-word" data-match="D" onclick="matchClick(this)">rebuild</div>
-<div class="match-item" data-match="D" onclick="matchClick(this)">build</div>
-</div><div class="match-feedback" id="matchFeedback">✨ All matched!</div></div>
+<div class="callout callout-info"><span class="callout-icon">🎲</span><p><strong>Dice Roll Challenge!</strong> Roll the dice to get a word. Then explain what the un- prefix does to change its meaning.</p></div>
+<div style="text-align:center;margin:16px 0;">
+<div id="diceDisplay" style="font-size:64px;line-height:1;margin-bottom:10px;transition:transform 0.3s;">🎲</div>
+<button onclick="rollMorphDice()" id="diceBtn" style="background:linear-gradient(135deg,#8B6FC0,#A78BD6);color:#fff;border:none;border-radius:10px;padding:12px 28px;font-size:16px;font-weight:700;cursor:pointer;box-shadow:0 3px 8px rgba(139,111,192,0.3);">🎲 Roll the Dice!</button>
+</div>
+<div id="diceWordBox" style="display:none;text-align:center;margin:14px 0;">
+<div id="diceWord" style="font-size:28px;font-weight:700;color:#8B6FC0;margin-bottom:6px;"></div>
+<div id="diceTask" style="font-size:15px;color:#3A4A6B;margin-bottom:10px;"></div>
+<div class="journal-label">📓 Your explanation <span class="saved-dot" id="dot-dice"></span></div>
+<textarea class="journal-box" id="journal-dice" data-label="Morphology: Dice Roll" placeholder="This word means..." oninput="autoSave(this,'dot-dice')" style="min-height:60px;"></textarea>
+<button onclick="checkDice()" style="background:#34B76F;color:#fff;border:none;border-radius:8px;padding:8px 18px;font-size:14px;font-weight:700;cursor:pointer;margin-top:6px;">🔍 Check My Thinking</button>
+<div id="diceReveal" style="display:none;margin-top:10px;background:#E3F8ED;border:2px solid #B8E8CF;border-radius:8px;padding:10px 14px;font-size:15px;color:#1a5c2e;font-weight:600;"></div>
+</div>
+<div style="text-align:center;margin-top:10px;font-size:13px;color:#7A88A8;" id="diceCount">Roll all 6 to complete the challenge!</div>
 </div></div>
 <div class="activity bl-cyan">
 <div class="activity-head"><div class="activity-num" style="background:#55C8E8;">2</div><div style="flex:1;"><div class="activity-title">🔤 Vocabulary: This Week's Words</div><div class="activity-sub">Choice Board</div></div></div>
@@ -2256,42 +2260,60 @@ But who you are inside the book.</div>
 <div class="activity bl-gold">
 <div class="activity-head"><div class="activity-num" style="background:#C7922C;">3</div><div style="flex:1;"><div class="activity-title">✏️ Grammar: Subject and predicate</div><div class="activity-sub">Explain / Justify the skill.</div></div></div>
 <div class="activity-body">
+<div class="callout callout-gold" style="margin-bottom:14px;background:#FFF8E8;border:2px solid #F5E6C8;border-left:5px solid #C7922C;border-radius:10px;padding:14px 18px;"><span class="callout-icon">📖</span><p style="font-size:15px;color:#0E1C42;line-height:1.6;"><strong>Remember the Rule:</strong> Every sentence has two parts. The <strong>subject</strong> tells <em>who</em> or <em>what</em> the sentence is about. The <strong>predicate</strong> tells what the subject <em>does</em> or <em>is</em>.</p></div>
 <div class="task-box" style="background:#FFF8E8;border-color:#F5E6C8;"><div class="task-label" style="color:#C7922C;">👉 Example</div>
-<div class="task-sentence">Everyone was terribly excited and happy.</div>
-<p style="font-size:15px;color:#3A4A6B;line-height:1.6;margin-top:8px;">Subject + predicate = complete thought</p></div>
-<div class="callout callout-info" style="margin-top:14px;"><span class="callout-icon">🎯</span><p><strong>Practice!</strong> Identify the correct answer for each item.</p></div>
+<div class="task-sentence">Everyone | was terribly excited and happy.</div>
+<p style="font-size:15px;color:#3A4A6B;line-height:1.6;margin-top:8px;">Subject: <em>Everyone</em> (who?). Predicate: <em>was terribly excited and happy</em> (what were they?).</p></div>
+<div class="callout callout-info" style="margin-top:14px;"><span class="callout-icon">🎯</span><p><strong>Practice!</strong> Read each sentence from the book. Tap to see the subject and predicate.</p></div>
 <div class="spotter-game" id="grammarGame">
 <div class="spotter-sentence" id="gram1">
-<span style="font-size:16px;color:#0E1C42;">Everyone celebrated. → <em>Everyone / celebrated</em></span>
+<span class="spotter-word" onclick="this.parentElement.querySelector('.spotter-result').textContent='Subject: Everyone | Predicate: celebrated ✅';this.parentElement.querySelector('.spotter-result').classList.add('show','win')" style="cursor:pointer;font-size:16px;color:#0E1C42;">Everyone celebrated.</span>
 <div class="spotter-result" id="gram1-result"></div></div>
 <div class="spotter-sentence" id="gram2">
-<span style="font-size:16px;color:#0E1C42;">Mrs. Lambchop made hot chocolate. → <em>Mrs. Lambchop / made hot chocolate</em></span>
+<span class="spotter-word" onclick="this.parentElement.querySelector('.spotter-result').textContent='Subject: Mrs. Lambchop | Predicate: made hot chocolate ✅';this.parentElement.querySelector('.spotter-result').classList.add('show','win')" style="cursor:pointer;font-size:16px;color:#0E1C42;">Mrs. Lambchop made hot chocolate.</span>
 <div class="spotter-result" id="gram2-result"></div></div>
 <div class="spotter-sentence" id="gram3">
-<span style="font-size:16px;color:#0E1C42;">The boys went to bed. → <em>The boys / went to bed</em></span>
+<span class="spotter-word" onclick="this.parentElement.querySelector('.spotter-result').textContent='Subject: The boys | Predicate: went to bed ✅';this.parentElement.querySelector('.spotter-result').classList.add('show','win')" style="cursor:pointer;font-size:16px;color:#0E1C42;">The boys went to bed.</span>
 <div class="spotter-result" id="gram3-result"></div></div>
 <div class="spotter-sentence" id="gram4">
-<span style="font-size:16px;color:#0E1C42;">Stanley felt happy again. → <em>Stanley / felt happy again</em></span>
+<span class="spotter-word" onclick="this.parentElement.querySelector('.spotter-result').textContent='Subject: Stanley | Predicate: felt happy again ✅';this.parentElement.querySelector('.spotter-result').classList.add('show','win')" style="cursor:pointer;font-size:16px;color:#0E1C42;">Stanley felt happy again.</span>
 <div class="spotter-result" id="gram4-result"></div></div>
 </div>
+<div class="swyk"><div class="swyk-label">🪶 Show What You Know</div>
+<div class="swyk-prompt">Write your own sentence about <em>Flat Stanley</em>. Draw a line (|) between the subject and predicate. Then explain: <strong>How do you know which part is the subject and which is the predicate?</strong></div>
+<div class="journal-label">📓 Your answer <span class="saved-dot" id="dot-gram-swyk"></span></div>
+<textarea class="journal-box" id="journal-gram-swyk" data-label="Grammar SWYK: Subject and predicate" placeholder="My sentence: _____ | _____. I know the subject is..." oninput="autoSave(this,'dot-gram-swyk')" style="min-height:80px;"></textarea></div>
 </div></div>
 <div class="activity bl-navy">
 <div class="activity-head"><div class="activity-num" style="background:#0E1C42;">4</div><div style="flex:1;"><div class="activity-title">🔠 Spelling: Long vowels and silent-e review</div><div class="activity-sub">Explain / Justify the pattern.</div></div></div>
 <div class="activity-body">
-<div class="callout callout-info"><span class="callout-icon">🎮</span><p><strong>Practice: Sort the Words!</strong> Tap a word, then tap the column where it belongs.</p></div>
-<div class="sort-game" id="spellSort"><div class="sort-bank" id="sortBank">
-<span class="sort-chip" data-group="silent-e" onclick="pickSortChip(this)">brave</span>
-<span class="sort-chip" data-group="silent-e" onclick="pickSortChip(this)">kite</span>
-<span class="sort-chip" data-group="silent-e" onclick="pickSortChip(this)">stone</span>
-<span class="sort-chip" data-group="silent-e" onclick="pickSortChip(this)">frame</span>
-<span class="sort-chip" data-group="closed" onclick="pickSortChip(this)">jump</span>
-<span class="sort-chip" data-group="closed" onclick="pickSortChip(this)">think</span>
-<span class="sort-chip" data-group="closed" onclick="pickSortChip(this)">shelf</span>
-<span class="sort-chip" data-group="closed" onclick="pickSortChip(this)">cross</span>
-</div><div class="sort-columns">
-<div class="sort-col"><div class="sort-col-header" style="background:linear-gradient(135deg,#55C8E8,#7FD8F0);">silent-e</div><div class="sort-col-drop" data-col="silent-e" onclick="dropSortChip(this,'silent-e')"></div></div>
-<div class="sort-col"><div class="sort-col-header" style="background:linear-gradient(135deg,#55C8E8,#7FD8F0);">closed</div><div class="sort-col-drop" data-col="closed" onclick="dropSortChip(this,'closed')"></div></div>
-</div><div class="sort-score" id="sortScore"></div></div>
+<div class="callout callout-gold" style="margin-bottom:14px;background:#FFF8E8;border:2px solid #F5E6C8;border-left:5px solid #C7922C;border-radius:10px;padding:14px 18px;"><span class="callout-icon">📖</span><p style="font-size:15px;color:#0E1C42;line-height:1.6;"><strong>The Rule:</strong> When a word ends in <strong>silent <em>e</em></strong>, the vowel before it says its <strong>long sound</strong> (its name). The silent <em>e</em> is a signal &mdash; it tells the vowel to say its name!</p></div>
+<div class="callout callout-info"><span class="callout-icon">✨</span><p><strong>Magic E Transformer!</strong> Tap each word to add the magic <em>e</em> and watch the vowel sound change!</p></div>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:14px 0;" id="magicEGrid">
+<div class="magic-e-card" onclick="transformWord(this)" data-before="kit" data-after="kite" data-vowel="short i → long i" style="background:#FAFBFF;border:2px solid #C8DCEE;border-radius:10px;padding:14px;text-align:center;cursor:pointer;transition:all 0.3s;">
+<div style="font-size:28px;font-weight:700;color:#0E1C42;" class="me-word">kit</div>
+<div style="font-size:12px;color:#7A88A8;margin-top:4px;" class="me-hint">tap to add magic e!</div></div>
+<div class="magic-e-card" onclick="transformWord(this)" data-before="hop" data-after="hope" data-vowel="short o → long o" style="background:#FAFBFF;border:2px solid #C8DCEE;border-radius:10px;padding:14px;text-align:center;cursor:pointer;transition:all 0.3s;">
+<div style="font-size:28px;font-weight:700;color:#0E1C42;" class="me-word">hop</div>
+<div style="font-size:12px;color:#7A88A8;margin-top:4px;" class="me-hint">tap to add magic e!</div></div>
+<div class="magic-e-card" onclick="transformWord(this)" data-before="tap" data-after="tape" data-vowel="short a → long a" style="background:#FAFBFF;border:2px solid #C8DCEE;border-radius:10px;padding:14px;text-align:center;cursor:pointer;transition:all 0.3s;">
+<div style="font-size:28px;font-weight:700;color:#0E1C42;" class="me-word">tap</div>
+<div style="font-size:12px;color:#7A88A8;margin-top:4px;" class="me-hint">tap to add magic e!</div></div>
+<div class="magic-e-card" onclick="transformWord(this)" data-before="hid" data-after="hide" data-vowel="short i → long i" style="background:#FAFBFF;border:2px solid #C8DCEE;border-radius:10px;padding:14px;text-align:center;cursor:pointer;transition:all 0.3s;">
+<div style="font-size:28px;font-weight:700;color:#0E1C42;" class="me-word">hid</div>
+<div style="font-size:12px;color:#7A88A8;margin-top:4px;" class="me-hint">tap to add magic e!</div></div>
+<div class="magic-e-card" onclick="transformWord(this)" data-before="not" data-after="note" data-vowel="short o → long o" style="background:#FAFBFF;border:2px solid #C8DCEE;border-radius:10px;padding:14px;text-align:center;cursor:pointer;transition:all 0.3s;">
+<div style="font-size:28px;font-weight:700;color:#0E1C42;" class="me-word">not</div>
+<div style="font-size:12px;color:#7A88A8;margin-top:4px;" class="me-hint">tap to add magic e!</div></div>
+<div class="magic-e-card" onclick="transformWord(this)" data-before="cap" data-after="cape" data-vowel="short a → long a" style="background:#FAFBFF;border:2px solid #C8DCEE;border-radius:10px;padding:14px;text-align:center;cursor:pointer;transition:all 0.3s;">
+<div style="font-size:28px;font-weight:700;color:#0E1C42;" class="me-word">cap</div>
+<div style="font-size:12px;color:#7A88A8;margin-top:4px;" class="me-hint">tap to add magic e!</div></div>
+</div>
+<div id="magicEScore" style="text-align:center;font-size:15px;color:#7A88A8;margin:8px 0;"></div>
+<div class="swyk"><div class="swyk-label">🪶 Show What You Know</div>
+<div class="swyk-prompt"><strong>Explain the rule</strong> in your own words: What does a silent <em>e</em> at the end of a word do? Give two examples.</div>
+<div class="journal-label">📓 Your answer <span class="saved-dot" id="dot-spell-swyk"></span></div>
+<textarea class="journal-box" id="journal-spell-swyk" data-label="Spelling SWYK: Silent-e rule" placeholder="The silent e rule says..." oninput="autoSave(this,'dot-spell-swyk')" style="min-height:80px;"></textarea></div>
 </div></div>
 <div class="activity bl-green">
 <div class="activity-head"><div class="activity-num" style="background:#34B76F;">5</div><div style="flex:1;"><div class="activity-title">🪶 Writing Connection</div><div class="activity-sub">Connect today's reading to your own writing</div></div></div>
@@ -2320,9 +2342,18 @@ But who you are inside the book.</div>
 <div class="activity bl-purple">
 <div class="activity-head"><div class="activity-num" style="background:#8B6FC0;">📚</div><div style="flex:1;"><div class="activity-title">📚 What Good Readers Do</div><div class="activity-sub">Explain how events affect a character.</div></div></div>
 <div class="activity-body">
-<p>Explain how events affect a character.</p>
+<p>Good readers pay attention to <strong>how events affect characters</strong>. When something important happens, it changes what a character feels, thinks, or decides to do next.</p>
+<div class="key-concept" style="background:#F0F7FF;border-color:#C8DCEE;margin:10px 0;">
+<div class="key-concept-label" style="color:#3D5285;">🔍 How to Do It</div>
+<ol style="margin:6px 0 6px 20px;font-size:14px;color:#3A4A6B;line-height:1.8;">
+<li><strong>Find the event:</strong> What happened to the character?</li>
+<li><strong>Notice the reaction:</strong> How did the character feel or act after?</li>
+<li><strong>Think about why:</strong> Why did the event change the character?</li>
+</ol>
+</div>
+<div class="callout callout-info" style="margin-top:10px;"><span class="callout-icon">🎯</span><p><strong>Whole-book thinking:</strong> Now that you&rsquo;ve read ALL of <em>Flat Stanley</em>, think about the <strong>biggest events</strong> that affected Stanley. How was he different at the end than at the beginning?</p></div>
 <div class="journal-label">📓 Your thoughts <span class="saved-dot" id="dot-wgrd"></span></div>
-<textarea class="journal-box" id="journal-wgrd" data-label="What Good Readers Do" placeholder="I noticed..." oninput="autoSave(this,'dot-wgrd')"></textarea>
+<textarea class="journal-box" id="journal-wgrd" data-label="What Good Readers Do" placeholder="The biggest event that changed Stanley was... because after that, he..." oninput="autoSave(this,'dot-wgrd')"></textarea>
 </div></div>
 <div class="activity bl-cyan">
 <div class="activity-head"><div class="activity-num" style="background:#55C8E8;">1</div><div style="flex:1;"><div class="activity-title">📕 Read: Whole Book Review</div><div class="activity-sub">Read carefully. Take your time.</div></div></div>
@@ -2397,7 +2428,7 @@ But who you are inside the book.</div>
 <span style="background:#FAFBFF;color:#7A88A8;padding:4px 8px;border-radius:6px;font-size:11px;">○ Revise & Edit</span>
 <span style="background:#FAFBFF;color:#7A88A8;padding:4px 8px;border-radius:6px;font-size:11px;">○ Publish</span>
 </div>
-<div class="callout callout-info" style="margin:0 0 14px 0;padding:10px 14px;"><span class="callout-icon">🎯</span><p style="font-size:14px;"><strong>Today&rsquo;s focus:</strong> Today: <strong>EXPLAIN.</strong> Reread your draft. Use the revision checklist to explain what you did well and one thing to improve.</p></div>
+<div class="callout callout-info" style="margin:0 0 14px 0;padding:10px 14px;"><span class="callout-icon">🎯</span><p style="font-size:14px;"><strong>Today&rsquo;s focus:</strong> You are writing a <strong>personal narrative</strong> &mdash; a true story about a small moment in YOUR life. You&rsquo;ve brainstormed, planned, drafted, and started adding craft. Today: keep <strong>adding craft</strong> by putting in <strong>sensory details</strong> &mdash; what you saw, heard, felt, or smelled. These details make the reader feel like they were there with you. Soon you&rsquo;ll revise, edit, and <strong>publish</strong> your finished story!</p></div>
 <div class="key-concept" style="background:#FFFEF7;border-color:#F5E6C8;margin-bottom:14px;">
 <div class="key-concept-label" style="color:#C7922C;">👀 Watch How &mdash; Meet Clara, our example writer</div>
 <p style="font-size:14px;">Clara is a 3rd grader just like you. Watch how she works through today&rsquo;s writing step.</p>
@@ -2514,9 +2545,73 @@ function dropSortChip(col,colName){if(!sortSelected)return;var g=sortSelected.ge
 var matchFirst=null;var matchCount=0;function matchClick(item){if(item.classList.contains("matched"))return;if(!matchFirst){matchFirst=item;item.classList.add("selected");return}if(matchFirst===item){matchFirst.classList.remove("selected");matchFirst=null;return}var k1=matchFirst.getAttribute("data-match");var k2=item.getAttribute("data-match");if(k1===k2&&matchFirst.classList.contains("is-word")!==item.classList.contains("is-word")){matchFirst.classList.remove("selected");matchFirst.classList.add("matched");item.classList.add("matched");matchCount++;matchFirst=null;if(matchCount>=4){document.getElementById("matchFeedback").classList.add("show")}}else{item.classList.add("wrong-flash");matchFirst.classList.add("wrong-flash");var a=matchFirst;var b=item;setTimeout(function(){a.classList.remove("wrong-flash","selected");b.classList.remove("wrong-flash")},500);matchFirst=null}}
 (function(){var btn=document.getElementById("backToTop");if(!btn)return;var inIframe=(function(){try{return window.self!==window.top}catch(e){return true}})();btn.addEventListener("click",function(){try{window.scrollTo({top:0,behavior:"smooth"})}catch(e){}document.documentElement.scrollTop=0;document.body.scrollTop=0;var top=document.getElementById("pageTop");if(top&&top.scrollIntoView)try{top.scrollIntoView({behavior:"smooth",block:"start"})}catch(e){}});if(inIframe)setTimeout(function(){btn.classList.add("show")},1500);else window.addEventListener("scroll",function(){btn.classList.toggle("show",window.pageYOffset>400)})})()
 function downloadJournal(){gatherAnswers();var t=document.getElementById("gatheredOutput").value;var h="<!DOCTYPE html><html><head><meta charset=\"UTF-8\"><title>Lesson 3.4</title><style>body{font-family:Georgia,serif;max-width:700px;margin:40px auto;padding:0 20px;color:#1a1a2e;line-height:1.7}h1{font-size:22px;border-bottom:3px solid #55C8E8;padding-bottom:8px}pre{white-space:pre-wrap;font-family:Georgia,serif;font-size:14px}</style></head><body><h1>📓 My Work — Lesson 3.4</h1><pre>"+t.replace(/</g,"&lt;").replace(/>/g,"&gt;")+"</pre></body></html>";var w2=window.open("","_blank");w2.document.write(h);w2.document.close();setTimeout(function(){w2.print()},400)}
-const TRACKER_TOTAL=5;const TRACKER_PROGRESS=3;
+const TRACKER_TOTAL=5;const TRACKER_PROGRESS=5;
 const trackerIcons=["📋","✉️","🪁","🖼️","💨"];
 const trackerPos=[{x:10,y:140},{x:28,y:120},{x:46,y:135},{x:64,y:115},{x:82,y:130}];
 (function(){var sc=document.getElementById("scene");if(!sc)return;for(var i=0;i<TRACKER_TOTAL;i++){var n=document.createElement("div");var done=i<TRACKER_PROGRESS;var active=i===TRACKER_PROGRESS-1;n.className="node"+(done&&!active?" done":"")+(active?" active":"")+(!done&&!active?" upcoming":"");n.style.left="calc("+trackerPos[i].x+"%"+" - 15px)";n.style.top=trackerPos[i].y+"px";n.innerHTML=done?(active?trackerIcons[i]:"✦"):trackerIcons[i];sc.appendChild(n)}var anne=document.getElementById("anneToken");var idx=Math.max(0,TRACKER_PROGRESS-1);anne.style.left="calc("+trackerPos[idx].x+"% - 14px)";anne.style.top=(trackerPos[idx].y-36)+"px"})()
+
+/* ───── MORPHOLOGY DICE ROLL ───── */
+var diceWords=[
+{word:'unfair',meaning:'not fair — the opposite of fair'},
+{word:'unhappy',meaning:'not happy — feeling sad'},
+{word:'unkind',meaning:'not kind — mean or hurtful'},
+{word:'unsafe',meaning:'not safe — could be dangerous'},
+{word:'unclear',meaning:'not clear — hard to understand'},
+{word:'uncover',meaning:'not covered — to reveal or find'}
+];
+var diceRolled=new Set();
+var diceCurrentIdx=0;
+function rollMorphDice(){
+var display=document.getElementById('diceDisplay');
+var faces=['⚀','⚁','⚂','⚃','⚄','⚅'];
+var count=0;
+document.getElementById('diceReveal').style.display='none';
+var interval=setInterval(function(){
+display.textContent=faces[Math.floor(Math.random()*6)];
+display.style.transform='rotate('+(Math.random()*360)+'deg)';
+count++;
+if(count>12){
+clearInterval(interval);
+display.style.transform='rotate(0deg)';
+// Pick a word not yet rolled if possible
+var available=[];
+for(var i=0;i<diceWords.length;i++){if(!diceRolled.has(i))available.push(i)}
+if(available.length===0){diceRolled.clear();for(var i=0;i<diceWords.length;i++)available.push(i)}
+diceCurrentIdx=available[Math.floor(Math.random()*available.length)];
+diceRolled.add(diceCurrentIdx);
+display.textContent=faces[diceCurrentIdx];
+document.getElementById('diceWordBox').style.display='block';
+document.getElementById('diceWord').textContent=diceWords[diceCurrentIdx].word;
+document.getElementById('diceTask').textContent='What does "'+diceWords[diceCurrentIdx].word+'" mean? Remember: un- means "not"!';
+document.getElementById('diceCount').textContent='🎲 '+diceRolled.size+' of '+diceWords.length+' words rolled!';
+if(diceRolled.size>=diceWords.length){document.getElementById('diceCount').textContent='🎉 You rolled all '+diceWords.length+' words! Amazing!'}
+}},80)}
+function checkDice(){
+var reveal=document.getElementById('diceReveal');
+reveal.style.display='block';
+reveal.textContent='✅ '+diceWords[diceCurrentIdx].word+' = '+diceWords[diceCurrentIdx].meaning}
+
+/* ───── MAGIC E TRANSFORMER ───── */
+var magicEDone=0;
+var magicETotal=6;
+function transformWord(card){
+if(card.classList.contains('transformed'))return;
+card.classList.add('transformed');
+var after=card.getAttribute('data-after');
+var vowel=card.getAttribute('data-vowel');
+var wordEl=card.querySelector('.me-word');
+var hintEl=card.querySelector('.me-hint');
+wordEl.textContent=after;
+wordEl.style.color='#34B76F';
+hintEl.textContent=vowel;
+hintEl.style.color='#34B76F';
+hintEl.style.fontWeight='700';
+card.style.background='#E3F8ED';
+card.style.borderColor='#34B76F';
+card.style.transform='scale(1.05)';
+setTimeout(function(){card.style.transform='scale(1)'},300);
+magicEDone++;
+var score=document.getElementById('magicEScore');
+if(magicEDone>=magicETotal){score.textContent='✨ All words transformed! The magic e changes everything!';score.style.color='#34B76F';score.style.fontWeight='700'}}
 </script>
 </body></html>

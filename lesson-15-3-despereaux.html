@@ -2821,7 +2821,7 @@ function gatherAnswers() {
     { title: '✍️ WRITER\'S WORKSHOP', ids: ['journal-ww'] }
   ];
 
-  output += 'LESSON 15.3 — The Tale of Despereaux, Reader's Theater\n';
+  output += 'LESSON 15.3 — The Tale of Despereaux, Reader\'s Theater\n';
   output += '════════════════════════════════════════\n\n';
 
   sections.forEach(function(sec) {
@@ -3151,9 +3151,6 @@ window.addEventListener('beforeunload', function(e){
     e.returnValue = '';
   }
 });
-  }
-}
-
 /* ───── FILL-IN-THE-ROOT GAME (MORPHOLOGY) ───── */
 function checkVocabCloze() {
   var inputs = document.querySelectorAll('#vocabClozeGame .fillin-input');
@@ -3214,7 +3211,7 @@ function downloadJournal() {
   html += 'pre{white-space:pre-wrap;font-family:Georgia,serif;font-size:14px;line-height:1.7;}';
   html += '</style></head><body>';
   html += '<h1>📓 My Work — Lesson 15.3</h1>';
-  html += '<h2>The Tale of Despereaux — The Tale of Despereaux, Reader's Theater</h2>';
+  html += '<h2>The Tale of Despereaux — The Tale of Despereaux, Reader\'s Theater</h2>';
   html += '<pre>' + text.replace(/</g, '&lt;').replace(/>/g, '&gt;') + '</pre>';
   html += '</body></html>';
 

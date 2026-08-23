@@ -2173,7 +2173,13 @@ body {
 <div class="activity bl-purple">
 <div class="activity-head"><div class="activity-num" style="background:#8B6FC0;">1</div><div style="flex:1;"><div class="activity-title">📚 What Good Readers Do</div><div class="activity-sub">Identify characters, setting, and problem.</div></div></div>
 <div class="activity-body">
-<p>Good readers <strong>preview</strong> a book before reading. They look at the cover, chapter titles, and pictures to make predictions.</p>
+<p>This week, good readers <strong>identify the characters, setting, and problem</strong> in a story. Here is how to do it:</p>
+<ol style="margin:10px 0 10px 20px;font-size:15px;color:#3A4A6B;line-height:1.8;">
+<li><strong>Characters:</strong> Who is in the story? Write down their names and one detail about each person.</li>
+<li><strong>Setting:</strong> Where and when does the story take place? Look for clues like room names, times of day, or descriptions.</li>
+<li><strong>Problem:</strong> What goes wrong, or what challenge does the main character face?</li>
+</ol>
+<p style="font-size:15px;color:#3A4A6B;">As you read today, look for these three things and write what you find below.</p></p>
 <div class="socratic-box"><div class="socratic-label">🧠 Think about this</div>
 <p class="socratic-q">The Lambchops take Stanley to Dr. Dan. <strong>What details show you what kind of family they are?</strong></p></div>
 <div class="journal-label">📓 Your thoughts <span class="saved-dot" id="dot-wgrd"></span></div>
@@ -2262,6 +2268,7 @@ body {
 <div class="decode-sentence" style="margin-bottom:10px;">&ldquo;Stanley called out <strong>cheerfully</strong> from beneath the board.&rdquo;</div>
 <div class="flip-card" onclick="this.classList.toggle('flipped')"><div class="flip-card-inner"><div class="flip-card-front"><div class="fc-emoji">😲</div><div class="fc-word">cheerfully</div><div class="fc-tap">think first, then tap</div></div><div class="flip-card-back"><div class="fc-word-back">cheerfully</div><div class="fc-def">In a happy, bright way.</div></div></div></div></div>
 <div class="vocab-decode-item">
+<div class="decode-sentence" style="margin-bottom:10px;">If you could <strong>rewind</strong> the morning, the bulletin board would still be on the wall.</div>
 <div class="flip-card" onclick="this.classList.toggle('flipped')"><div class="flip-card-inner"><div class="flip-card-front"><div class="fc-emoji">🔁</div><div class="fc-word">rewind</div><div class="fc-tap">think first, then tap</div></div><div class="flip-card-back"><div class="fc-word-back">rewind</div><div class="fc-def">To go back to the beginning. The prefix <em>re-</em> means again.</div></div></div></div></div>
 <div class="vocab-decode-item">
 <div class="decode-sentence" style="margin-bottom:10px;">&ldquo;The nurse took Stanley&rsquo;s <strong>measurements</strong>.&rdquo;</div>
@@ -2282,31 +2289,35 @@ body {
 <div class="activity bl-gold">
 <div class="activity-head"><div class="activity-num" style="background:#C7922C;">3</div><div style="flex:1;"><div class="activity-title">✏️ Grammar: Nouns and verbs</div><div class="activity-sub">Define the skill.</div></div></div>
 <div class="activity-body">
+<div class="callout callout-gold" style="margin-bottom:14px;background:#FFF8E8;border:2px solid #F5E6C8;border-left:5px solid #C7922C;border-radius:10px;padding:14px 18px;"><span class="callout-icon">📖</span><p style="font-size:15px;color:#0E1C42;line-height:1.6;"><strong>The Rule:</strong> A <strong>noun</strong> is a word that names a person, place, thing, or idea (like <em>Stanley</em>, <em>bedroom</em>, or <em>board</em>). A <strong>verb</strong> is a word that shows action or a state of being (like <em>called</em>, <em>fell</em>, or <em>was</em>). Every sentence needs at least one noun and one verb.</p></div>
+
 <div class="task-box" style="background:#FFF8E8;border-color:#F5E6C8;"><div class="task-label" style="color:#C7922C;">👉 Example</div>
 <div class="task-sentence">Stanley (noun) was (verb) not hurt.</div>
 <p style="font-size:15px;color:#3A4A6B;line-height:1.6;margin-top:8px;"><em>Stanley</em> is a noun (person). <em>Was</em> is a verb (what happens).</p></div>
 <div class="task-box" style="background:#FFF8E8;border-color:#F5E6C8;"><div class="task-label" style="color:#C7922C;">👉 Example</div>
 <div class="task-sentence">The enormous bulletin board (all nouns)</div>
 <p style="font-size:15px;color:#3A4A6B;line-height:1.6;margin-top:8px;"><em>Board</em> is a noun (thing). <em>Enormous</em> describes it.</p></div>
-<div class="callout callout-info" style="margin-top:14px;"><span class="callout-icon">🎯</span><p><strong>Practice!</strong> Identify the correct answer for each item.</p></div>
+<div class="callout callout-info" style="margin-top:14px;"><span class="callout-icon">🎯</span><p><strong>Practice!</strong> Read each sentence below. Read each sentence. Is the <u>underlined</u> word a <strong>noun</strong> or a <strong>verb</strong>? Tap the sentence to check!</p></div>
 <div class="spotter-game" id="grammarGame">
 <div class="spotter-sentence" id="gram1">
-<span style="font-size:16px;color:#0E1C42;">Stanley → <em>noun</em></span>
+<span class="spotter-word" onclick="this.parentElement.querySelector('.spotter-result').textContent='Verb ✅ — Action word — it tells what Arthur did.';this.parentElement.querySelector('.spotter-result').classList.add('show','win')" style="cursor:pointer;font-size:16px;color:#0E1C42;">Arthur <u style="text-decoration-color:#C7922C;text-underline-offset:3px;">ran</u> to get help.</span>
 <div class="spotter-result" id="gram1-result"></div></div>
 <div class="spotter-sentence" id="gram2">
-<span style="font-size:16px;color:#0E1C42;">hurried → <em>verb</em></span>
+<span class="spotter-word" onclick="this.parentElement.querySelector('.spotter-result').textContent='Noun ✅ — It names a thing.';this.parentElement.querySelector('.spotter-result').classList.add('show','win')" style="cursor:pointer;font-size:16px;color:#0E1C42;">The bulletin <u style="text-decoration-color:#C7922C;text-underline-offset:3px;">board</u> fell on Stanley.</span>
 <div class="spotter-result" id="gram2-result"></div></div>
 <div class="spotter-sentence" id="gram3">
-<span style="font-size:16px;color:#0E1C42;">board → <em>noun</em></span>
+<span class="spotter-word" onclick="this.parentElement.querySelector('.spotter-result').textContent='Verb ✅ — Action word — it tells what Dr. Dan did.';this.parentElement.querySelector('.spotter-result').classList.add('show','win')" style="cursor:pointer;font-size:16px;color:#0E1C42;">Dr. Dan <u style="text-decoration-color:#C7922C;text-underline-offset:3px;">examined</u> him.</span>
 <div class="spotter-result" id="gram3-result"></div></div>
 <div class="spotter-sentence" id="gram4">
-<span style="font-size:16px;color:#0E1C42;">called → <em>verb</em></span>
+<span class="spotter-word" onclick="this.parentElement.querySelector('.spotter-result').textContent='Noun ✅ — It names a person.';this.parentElement.querySelector('.spotter-result').classList.add('show','win')" style="cursor:pointer;font-size:16px;color:#0E1C42;"><u style="text-decoration-color:#C7922C;text-underline-offset:3px;">Stanley</u> was only half an inch thick.</span>
 <div class="spotter-result" id="gram4-result"></div></div>
 </div>
 </div></div>
 <div class="activity bl-navy">
 <div class="activity-head"><div class="activity-num" style="background:#0E1C42;">4</div><div style="flex:1;"><div class="activity-title">🔠 Spelling: CVC, CVCe, open/closed syllable review</div><div class="activity-sub">Define the pattern.</div></div></div>
 <div class="activity-body">
+<div class="callout callout-gold" style="margin-bottom:14px;background:#FFF8E8;border:2px solid #F5E6C8;border-left:5px solid #C7922C;border-radius:10px;padding:14px 18px;"><span class="callout-icon">📖</span><p style="font-size:15px;color:#0E1C42;line-height:1.6;"><strong>Spelling Patterns This Week:</strong> We are reviewing <strong>CVC</strong> (consonant-vowel-consonant, like <em>flat</em>), <strong>CVCe</strong> (consonant-vowel-consonant-silent <em>e</em>, like <em>name</em>), and <strong>open/closed syllables</strong>. A closed syllable has a short vowel; an open syllable or CVCe word has a long vowel.</p></div>
+
 <div class="callout callout-info"><span class="callout-icon">🎮</span><p><strong>Practice: Sort the Words!</strong> Tap a word, then tap the column where it belongs.</p></div>
 <div class="sort-game" id="spellSort"><div class="sort-bank" id="sortBank">
 <span class="sort-chip" data-group="CVC" onclick="pickSortChip(this)">flat</span>

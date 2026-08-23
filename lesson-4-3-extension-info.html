@@ -2170,8 +2170,25 @@ body {
 <button class="tab-btn" data-tab="assignment" onclick="switchTab('assignment')">📬 Assignment<span class="tab-check">✓</span></button>
 </div>
 <div class="tab-panel active" id="tab-warmup">
+<div class="activity bl-purple">
+<div class="activity-head"><div class="activity-num" style="background:#8B6FC0;">1</div><div style="flex:1;"><div class="activity-title">📚 What Good Readers Do</div><div class="activity-sub">Compare a story with related informational text.</div></div></div>
+<div class="activity-body">
+<p>Good readers <strong>compare a story with related informational text</strong>. When you read a made-up story and a real article about the same topic, you can find what is the same and what is different.</p>
+<div class="key-concept" style="background:#F0F7FF;border-color:#C8DCEE;margin:10px 0;">
+<div class="key-concept-label" style="color:#3D5285;">🔍 How to Do It</div>
+<ol style="margin:6px 0 6px 20px;font-size:14px;color:#3A4A6B;line-height:1.8;">
+<li><strong>Read both texts:</strong> Read the story passage and the informational text carefully.</li>
+<li><strong>Look for similarities:</strong> What topic or ideas do both texts share?</li>
+<li><strong>Spot the differences:</strong> How does the story tell it differently from the informational text?</li>
+</ol>
+</div>
+<div class="socratic-box"><div class="socratic-label">🧠 Think about this</div>
+<p class="socratic-q">Today you&rsquo;ll compare the story&rsquo;s Famous Museum with real museums. <strong>What do you already know about museums? How might a real museum be different from the one in the story?</strong></p></div>
+<div class="journal-label">📓 Your thoughts <span class="saved-dot" id="dot-wgrd"></span></div>
+<textarea class="journal-box" id="journal-wgrd" data-label="What Good Readers Do" placeholder="I think..." oninput="autoSave(this,'dot-wgrd')"></textarea>
+</div></div>
 <div class="activity bl-cyan">
-<div class="activity-head"><div class="activity-num" style="background:#55C8E8;">1</div><div style="flex:1;"><div class="activity-title">✏️ Daily Oral Language</div><div class="activity-sub">Study the model, then fix the sentence.</div></div></div>
+<div class="activity-head"><div class="activity-num" style="background:#55C8E8;">2</div><div style="flex:1;"><div class="activity-title">✏️ Daily Oral Language</div><div class="activity-sub">Study the model, then fix the sentence.</div></div></div>
 <div class="activity-body">
 <p>First, read the <strong>model sentence</strong> carefully. Notice what the author does right. Then, fix the <strong>second sentence</strong> using the same skills.</p>
 <div class="task-box" style="background:#E3F8ED;border-color:#B8E8CF;">
@@ -2191,7 +2208,7 @@ body {
 </div></div>
 </div></div>
 <div class="activity bl-rose">
-<div class="activity-head"><div class="activity-num" style="background:#c7627e;">2</div><div style="flex:1;"><div class="activity-title">🪶 Copywork</div><div class="activity-sub">A sentence worth copying carefully</div></div></div>
+<div class="activity-head"><div class="activity-num" style="background:#c7627e;">3</div><div style="flex:1;"><div class="activity-title">🪶 Copywork</div><div class="activity-sub">A sentence worth copying carefully</div></div></div>
 <div class="activity-body"><div class="copywork-box">
 <div class="copywork-label">📜 From the novel</div>
 <div class="copywork-text">Mr. Dart took him into the main hall, where the biggest and most important paintings were hung.</div>
@@ -2210,64 +2227,52 @@ body {
 </div>
 <div class="callout callout-info"><span class="callout-icon">🧩</span><p><strong>Practice: Find the Base Word!</strong></p></div>
 <div class="fillin-game" id="fillinGame">
-<div class="fillin-item">The base word in <em>preschool</em> is <input class="fillin-input" id="fill1" data-answer="school" maxlength="12" placeholder="______">.</div>
-<div class="fillin-item">The base word in <em>preview</em> is <input class="fillin-input" id="fill2" data-answer="view" maxlength="12" placeholder="______">.</div>
-<div class="fillin-item">The base word in <em>prepay</em> is <input class="fillin-input" id="fill3" data-answer="pay" maxlength="12" placeholder="______">.</div>
-<div class="fillin-item">The base word in <em>pretest</em> is <input class="fillin-input" id="fill4" data-answer="test" maxlength="12" placeholder="______">.</div>
+<div class="fillin-item">You should ____________ the oven before baking cookies. <input class="fillin-input" id="fill1" data-answer="preheat" maxlength="12" placeholder="______"></div>
+<div class="fillin-item">We got to ____________ the movie before it came out. <input class="fillin-input" id="fill2" data-answer="preview" maxlength="12" placeholder="______"></div>
+<div class="fillin-item">You can ____________ for your lunch so you don&rsquo;t have to bring money. <input class="fillin-input" id="fill3" data-answer="prepay" maxlength="12" placeholder="______"></div>
+<div class="fillin-item">My little sister goes to ____________ because she is only four. <input class="fillin-input" id="fill4" data-answer="preschool" maxlength="12" placeholder="______"></div>
 <button class="fillin-check-btn" onclick="checkFillIn()">Check My Answers</button>
 <div class="fillin-feedback" id="fillinFeedback">🌱 All correct!</div></div>
 </div></div>
 <div class="activity bl-cyan">
-<div class="activity-head"><div class="activity-num" style="background:#55C8E8;">2</div><div style="flex:1;"><div class="activity-title">🔤 Vocabulary: This Week's Words</div><div class="activity-sub">Context Clues</div></div></div>
+<div class="activity-head"><div class="activity-num" style="background:#55C8E8;">2</div><div style="flex:1;"><div class="activity-title">🔤 Vocabulary: This Week's Words</div><div class="activity-sub">Fill in the Blank</div></div></div>
 <div class="activity-body">
-<p>These words show up in this week's reading. Tap a card to see the definition.</p>
-<div class="vocab-grid">
-<div class="vocab-decode-item"><div class="decode-sentence" style="margin-bottom:10px;">&ldquo;They put stamps on the envelope to pay for <strong>airmail</strong> and insurance.&rdquo;</div>
-<div class="flip-card" onclick="this.classList.toggle('flipped')"><div class="flip-card-inner"><div class="flip-card-front"><div class="fc-emoji">✈️</div><div class="fc-word">airmail</div><div class="fc-tap">tap to flip</div></div><div class="flip-card-back"><div class="fc-word-back">airmail</div><div class="fc-def">Mail sent by airplane.</div></div></div></div></div>
-<div class="vocab-decode-item"><div class="decode-sentence" style="margin-bottom:10px;">&ldquo;They put stamps to pay for airmail and <strong>insurance</strong>.&rdquo;</div>
-<div class="flip-card" onclick="this.classList.toggle('flipped')"><div class="flip-card-inner"><div class="flip-card-front"><div class="fc-emoji">🛡️</div><div class="fc-word">insurance</div><div class="fc-tap">tap to flip</div></div><div class="flip-card-back"><div class="fc-word-back">insurance</div><div class="fc-def">Protection in case something goes wrong.</div></div></div></div></div>
-<div class="vocab-decode-item"><div class="decode-sentence" style="margin-bottom:10px;">&ldquo;It was still much less <strong>expensive</strong> than a train ticket.&rdquo;</div>
-<div class="flip-card" onclick="this.classList.toggle('flipped')"><div class="flip-card-inner"><div class="flip-card-front"><div class="fc-emoji">💲</div><div class="fc-word">expensive</div><div class="fc-tap">tap to flip</div></div><div class="flip-card-back"><div class="fc-word-back">expensive</div><div class="fc-def">Costing a lot of money.</div></div></div></div></div>
-<div class="vocab-decode-item">
-<div class="flip-card" onclick="this.classList.toggle('flipped')"><div class="flip-card-inner"><div class="flip-card-front"><div class="fc-emoji">📮</div><div class="fc-word">postcard</div><div class="fc-tap">tap to flip</div></div><div class="flip-card-back"><div class="fc-word-back">postcard</div><div class="fc-def">A card with a picture, sent through the mail.</div></div></div></div></div>
-</div>
-<div class="callout callout-info" style="margin-top:16px;"><span class="callout-icon">🎯</span><p><strong>Quick Match:</strong> Tap a word, then tap its meaning.</p></div>
-<div class="match-game" id="vocabMatch"><div class="match-grid" id="matchGrid">
-<div class="match-item is-word" data-match="A" onclick="matchClick(this)">airmail</div>
-<div class="match-item" data-match="A" onclick="matchClick(this)">Mail sent by airplane.</div>
-<div class="match-item is-word" data-match="B" onclick="matchClick(this)">insurance</div>
-<div class="match-item" data-match="B" onclick="matchClick(this)">Protection in case something goes wrong.</div>
-<div class="match-item is-word" data-match="C" onclick="matchClick(this)">expensive</div>
-<div class="match-item" data-match="C" onclick="matchClick(this)">Costing a lot of money.</div>
-<div class="match-item is-word" data-match="D" onclick="matchClick(this)">postcard</div>
-<div class="match-item" data-match="D" onclick="matchClick(this)">A card with a picture, sent through the mail.</div>
-</div><div class="match-feedback" id="matchFeedback">✨ All matched!</div></div>
+<p>Use this week&rsquo;s vocabulary words to complete each sentence. Choose from: <strong>airmail, insurance, expensive, postcard</strong>.</p>
+<div class="fillin-game" id="vocabFillin">
+<div class="fillin-item">They sent the envelope by ____________ so it would arrive faster by airplane. <input class="fillin-input" id="vfill1" data-answer="airmail" maxlength="15" placeholder="______"></div>
+<div class="fillin-item">Mr. Lambchop bought ____________ in case something happened to Stanley in the mail. <input class="fillin-input" id="vfill2" data-answer="insurance" maxlength="15" placeholder="______"></div>
+<div class="fillin-item">A plane ticket to California would have been very ____________. <input class="fillin-input" id="vfill3" data-answer="expensive" maxlength="15" placeholder="______"></div>
+<div class="fillin-item">Stanley wrote a ____________ with a picture of California on the front. <input class="fillin-input" id="vfill4" data-answer="postcard" maxlength="15" placeholder="______"></div>
+<button class="fillin-check-btn" onclick="checkVocabFillIn()">Check My Answers</button>
+<div class="fillin-feedback" id="vocabFillinFeedback">🌱 All correct!</div></div>
 </div></div>
 <div class="activity bl-gold">
 <div class="activity-head"><div class="activity-num" style="background:#C7922C;">3</div><div style="flex:1;"><div class="activity-title">✏️ Grammar: Proper nouns and capitalization</div><div class="activity-sub">Use / Apply the skill.</div></div></div>
 <div class="activity-body">
+<div class="callout callout-gold" style="margin-bottom:14px;background:#FFF8E8;border:2px solid #F5E6C8;border-left:5px solid #C7922C;border-radius:10px;padding:14px 18px;"><span class="callout-icon">📖</span><p style="font-size:15px;color:#0E1C42;line-height:1.6;"><strong>Remember the Rule:</strong> A <strong>proper noun</strong> names a specific person, place, or thing and always starts with a <strong>capital letter</strong>. A <strong>common noun</strong> names any person, place, or thing and does NOT need a capital letter.</p></div>
 <div class="task-box" style="background:#FFF8E8;border-color:#F5E6C8;"><div class="task-label" style="color:#C7922C;">👉 Example</div>
-<div class="task-sentence">Famous Museum of Art (proper noun phrase)</div>
-<p style="font-size:15px;color:#3A4A6B;line-height:1.6;margin-top:8px;">Names of specific places are capitalized.</p></div>
-<div class="callout callout-info" style="margin-top:14px;"><span class="callout-icon">🎯</span><p><strong>Practice!</strong> Identify the correct answer for each item.</p></div>
+<div class="task-sentence">Famous Museum of Art | building</div>
+<p style="font-size:15px;color:#3A4A6B;line-height:1.6;margin-top:8px;"><em>Famous Museum of Art</em> is a <strong>proper noun</strong> &mdash; it names a specific museum. <em>Building</em> is a <strong>common noun</strong> &mdash; it could be any building.</p></div>
+<div class="callout callout-info" style="margin-top:14px;"><span class="callout-icon">🎯</span><p><strong>Practice!</strong> Read each sentence. Tap to see the proper and common nouns.</p></div>
 <div class="spotter-game" id="grammarGame">
 <div class="spotter-sentence" id="gram1">
-<span style="font-size:16px;color:#0E1C42;">Mr. Dart → <em>proper</em></span>
+<span class="spotter-word" onclick="this.parentElement.querySelector('.spotter-result').textContent='Mr. Dart = proper noun (specific person), director = common noun ✅';this.parentElement.querySelector('.spotter-result').classList.add('show','win')" style="cursor:pointer;font-size:16px;color:#0E1C42;">Mr. Dart, the director, was terribly upset.</span>
 <div class="spotter-result" id="gram1-result"></div></div>
 <div class="spotter-sentence" id="gram2">
-<span style="font-size:16px;color:#0E1C42;">painting → <em>common</em></span>
+<span class="spotter-word" onclick="this.parentElement.querySelector('.spotter-result').textContent='Famous Museum of Art = proper noun (specific place), painting = common noun ✅';this.parentElement.querySelector('.spotter-result').classList.add('show','win')" style="cursor:pointer;font-size:16px;color:#0E1C42;">The most valuable painting hung in the Famous Museum of Art.</span>
 <div class="spotter-result" id="gram2-result"></div></div>
 <div class="spotter-sentence" id="gram3">
-<span style="font-size:16px;color:#0E1C42;">Chief of Police → <em>proper</em></span>
+<span class="spotter-word" onclick="this.parentElement.querySelector('.spotter-result').textContent='Chief of Police = proper noun (specific title), thieves = common noun ✅';this.parentElement.querySelector('.spotter-result').classList.add('show','win')" style="cursor:pointer;font-size:16px;color:#0E1C42;">The Chief of Police wanted to catch the thieves.</span>
 <div class="spotter-result" id="gram3-result"></div></div>
 <div class="spotter-sentence" id="gram4">
-<span style="font-size:16px;color:#0E1C42;">hall → <em>common</em></span>
+<span class="spotter-word" onclick="this.parentElement.querySelector('.spotter-result').textContent='Stanley = proper noun (specific person), hall = common noun ✅';this.parentElement.querySelector('.spotter-result').classList.add('show','win')" style="cursor:pointer;font-size:16px;color:#0E1C42;">Stanley hid behind the painting in the big hall.</span>
 <div class="spotter-result" id="gram4-result"></div></div>
 </div>
 </div></div>
 <div class="activity bl-navy">
 <div class="activity-head"><div class="activity-num" style="background:#0E1C42;">4</div><div style="flex:1;"><div class="activity-title">🔠 Spelling: Vowel teams ai/ay and oa/ow</div><div class="activity-sub">Use / Apply the pattern.</div></div></div>
 <div class="activity-body">
+<div class="callout callout-gold" style="margin-bottom:14px;background:#FFF8E8;border:2px solid #F5E6C8;border-left:5px solid #C7922C;border-radius:10px;padding:14px 18px;"><span class="callout-icon">📖</span><p style="font-size:15px;color:#0E1C42;line-height:1.6;"><strong>The Rule:</strong> Vowel teams are two vowels that work together to make one sound. <strong>ai</strong> and <strong>ay</strong> both make the long <em>a</em> sound (like in <em>paint</em> and <em>tray</em>). <strong>oa</strong> and <strong>ow</strong> both make the long <em>o</em> sound (like in <em>toast</em> and <em>throw</em>). Usually <em>ai</em> comes in the middle and <em>ay</em> comes at the end. Usually <em>oa</em> comes in the middle and <em>ow</em> comes at the end.</p></div>
 <div class="callout callout-info"><span class="callout-icon">🎮</span><p><strong>Practice: Sort the Words!</strong> Tap a word, then tap the column where it belongs.</p></div>
 <div class="sort-game" id="spellSort"><div class="sort-bank" id="sortBank">
 <span class="sort-chip" data-group="ai" onclick="pickSortChip(this)">paint</span>
@@ -2281,21 +2286,12 @@ body {
 </div><div class="sort-columns">
 <div class="sort-col"><div class="sort-col-header" style="background:linear-gradient(135deg,#55C8E8,#7FD8F0);">ai</div><div class="sort-col-drop" data-col="ai" onclick="dropSortChip(this,'ai')"></div></div>
 <div class="sort-col"><div class="sort-col-header" style="background:linear-gradient(135deg,#55C8E8,#7FD8F0);">ay</div><div class="sort-col-drop" data-col="ay" onclick="dropSortChip(this,'ay')"></div></div>
+<div class="sort-col"><div class="sort-col-header" style="background:linear-gradient(135deg,#55C8E8,#7FD8F0);">oa</div><div class="sort-col-drop" data-col="oa" onclick="dropSortChip(this,'oa')"></div></div>
+<div class="sort-col"><div class="sort-col-header" style="background:linear-gradient(135deg,#55C8E8,#7FD8F0);">ow</div><div class="sort-col-drop" data-col="ow" onclick="dropSortChip(this,'ow')"></div></div>
 </div><div class="sort-score" id="sortScore"></div></div>
-<div class="swyk"><div class="swyk-label">🪶 Show What You Know</div>
-<div class="swyk-prompt">Explain the vowel teams ai/ay and oa/ow pattern in your own words. Write two example words.</div>
-<div class="journal-label">📓 Your answer <span class="saved-dot" id="dot-swyk"></span></div>
-<textarea class="journal-box" id="journal-swyk" data-label="SWYK: Vowel teams ai/ay and oa/ow" placeholder="The pattern is..." oninput="autoSave(this,'dot-swyk')"></textarea></div>
 </div></div>
 <div class="activity bl-green">
-<div class="activity-head"><div class="activity-num" style="background:#34B76F;">5</div><div style="flex:1;"><div class="activity-title">📝 Reading-Writing Connection (RWM)</div><div class="activity-sub">Writing from a character's point of view</div></div></div>
-<div class="activity-body">
-<div class="task-box"><div class="task-label">📜 Mentor Sentence</div>
-<div class="task-sentence">Suddenly, as if an electric light bulb had lit up in the air above his head, Stanley Lambchop had an idea.</div>
-<p style="font-size:15px;color:#3A4A6B;line-height:1.6;margin-top:8px;">The author uses a <em>comparison</em> (like a light bulb) to help you picture Stanley&rsquo;s excitement. This is called a <em>simile</em>.</p></div>
-</div></div>
-<div class="activity bl-green">
-<div class="activity-head"><div class="activity-num" style="background:#34B76F;">6</div><div style="flex:1;"><div class="activity-title">🪶 Writing Connection</div><div class="activity-sub">Connect today's reading to your own writing</div></div></div>
+<div class="activity-head"><div class="activity-num" style="background:#34B76F;">5</div><div style="flex:1;"><div class="activity-title">🪶 Writing Connection</div><div class="activity-sub">Connect today's reading to your own writing</div></div></div>
 <div class="activity-body">
 <p>Write <strong>a short postcard from Stanley&rsquo;s point of view</strong> (3–4 sentences) telling a friend about his night at the museum. Include one fact and one feeling.</p>
 <div class="journal-label">📓 Your writing <span class="saved-dot" id="dot-writing"></span></div>
@@ -2318,22 +2314,18 @@ body {
 <div class="anne-token" id="anneToken">📬</div>
 </div>
 <div class="tracker-chapter-label">📍 You are here: <strong>Extension Text &mdash; Museums &amp; Art</strong></div></div>
-<div class="activity bl-purple">
-<div class="activity-head"><div class="activity-num" style="background:#8B6FC0;">📚</div><div style="flex:1;"><div class="activity-title">📚 What Good Readers Do</div><div class="activity-sub">Compare a story with related informational text.</div></div></div>
-<div class="activity-body">
-<p>Compare a story with related informational text.</p>
-<div class="journal-label">📓 Your thoughts <span class="saved-dot" id="dot-wgrd"></span></div>
-<textarea class="journal-box" id="journal-wgrd" data-label="What Good Readers Do" placeholder="I noticed..." oninput="autoSave(this,'dot-wgrd')"></textarea>
-</div></div>
 <div class="activity bl-cyan">
 <div class="activity-head"><div class="activity-num" style="background:#55C8E8;">1</div><div style="flex:1;"><div class="activity-title">📕 Read: Extension Text</div><div class="activity-sub">Read carefully. Take your time.</div></div></div>
 <div class="activity-body">
 <p>Today we compare what happens in the story&rsquo;s Famous Museum with real museums.</p>
-<div class="open-book-wrap"><div class="open-book-cover"></div><div class="open-book-spine"></div><div class="open-book-pages-3"></div><div class="open-book-pages-2"></div><div class="open-book-pages-1"></div>
-<div class="open-book"><div class="open-book-left"><div class="open-book-left-deco">📬</div></div>
-<div class="open-book-right"><div class="open-book-title"><em>Flat Stanley</em></div><div style="height:10px;"></div>
-<div class="open-book-chapter" style="font-size:14px;color:#7A88A8;font-style:normal;font-family:'Nunito',sans-serif;font-weight:700;">Extension Text</div>
-<div class="open-book-prompt" style="margin-top:8px;">Open your book to the chapter listed above.</div></div></div></div>
+<div style="background:#FAFBFF;border:2px solid #C8DCEE;border-radius:12px;padding:20px;margin:14px 0;">
+<div style="font-size:18px;font-weight:800;color:#3D5285;margin-bottom:12px;">🏛️ Museums: Where Art and History Come Alive</div>
+<p style="font-size:15px;color:#0E1C42;line-height:1.8;margin-bottom:10px;">In <em>Flat Stanley</em>, Stanley visits the Famous Museum of Art and helps catch sneak thieves who are stealing valuable paintings. But what are museums really like, and why are they so important?</p>
+<p style="font-size:15px;color:#0E1C42;line-height:1.8;margin-bottom:10px;">A <strong>museum</strong> is a building where special objects are kept and displayed for people to see and learn from. There are many kinds of museums. <strong>Art museums</strong> display paintings, sculptures, and other artwork. <strong>History museums</strong> show objects from the past, like old tools, clothing, and letters. <strong>Science museums</strong> have exhibits about animals, space, the human body, and more. Some museums even let you touch things and try experiments!</p>
+<p style="font-size:15px;color:#0E1C42;line-height:1.8;margin-bottom:10px;">Art museums take very good care of their paintings and sculptures. Some artworks are <strong>hundreds of years old</strong> and worth millions of dollars. Museums use special lighting, temperature controls, and security systems to keep art safe. Guards watch the galleries, and cameras record everything — just like in Stanley&rsquo;s story!</p>
+<p style="font-size:15px;color:#0E1C42;line-height:1.8;margin-bottom:10px;">In the story, Stanley hides behind a painting because he is flat enough to fit. In a real museum, the paintings hang on walls and visitors walk through rooms called <strong>galleries</strong>. There are rules like &ldquo;no touching&rdquo; and &ldquo;no flash photography&rdquo; to protect the art. Many museums also have a gift shop where you can buy postcards, books, and small copies of famous artworks.</p>
+<p style="font-size:15px;color:#0E1C42;line-height:1.8;">Museums are places where anyone can go to learn, wonder, and be inspired. Whether you are looking at a giant dinosaur skeleton or a painting by a famous artist, museums help us understand the world and the people who came before us.</p>
+</div>
 <div class="pause-columns"><div class="pause-col">
 <div class="socratic-box" style="margin-bottom:0;"><div class="socratic-label">⏸️ Pause &amp; Think</div>
 <p class="socratic-q">In the story, the museum has a most expensive painting in the world. <strong>What makes art valuable in real life?</strong></p></div>
@@ -2341,6 +2333,32 @@ body {
 <textarea class="journal-box" id="journal-pause1" data-label="Pause &amp; Think" placeholder="I think..." oninput="autoSave(this,'dot-pause1')"></textarea>
 </div></div>
 </div></div>
+<div class="rwm-box">
+<div class="rwm-header">📖 RWM — Read like a Reader, Read like a Writer, Mimic</div>
+<div class="rwm-sentence">&ldquo;Suddenly, as if an electric light bulb had lit up in the air above his head, Stanley Lambchop had an idea.&rdquo;</div>
+<div class="rwm-step">
+<div class="rwm-step-label">📖 Read like a Reader</div>
+<div class="rwm-step-text">What idea does Stanley have? Think about why this moment is exciting &mdash; everything depends on this idea working. What was happening right before Stanley had this idea?</div>
+<div class="textbox-prompt">Write 1 sentence: What is Stanley&rsquo;s idea, and why is it important?</div>
+<div class="journal-label">📓 Your response <span class="saved-dot" id="dot-rwm-reader"></span></div>
+<textarea class="journal-box" id="journal-rwm-reader" data-label="RWM — Read like a Reader" placeholder="Stanley's idea is..." oninput="autoSave(this,'dot-rwm-reader');gatherAnswers();"></textarea>
+</div>
+<div class="rwm-step">
+<div class="rwm-step-label">✏️ Read like a Writer</div>
+<div class="rwm-step-text">The author uses a <strong>simile</strong> &mdash; &ldquo;as if an electric light bulb had lit up&rdquo; &mdash; to show how suddenly the idea came. This is <strong>writing from a character&rsquo;s point of view</strong>: we see what Stanley experiences from the inside. The comparison helps the reader feel the moment the same way Stanley does.</div>
+<div class="textbox-prompt">Write 1 sentence: How does the simile help you understand what Stanley is feeling?</div>
+<div class="journal-label">📓 Your response <span class="saved-dot" id="dot-rwm-writer"></span></div>
+<textarea class="journal-box" id="journal-rwm-writer" data-label="RWM — Read like a Writer" placeholder="The simile helps me see..." oninput="autoSave(this,'dot-rwm-writer');gatherAnswers();"></textarea>
+</div>
+<div class="rwm-step">
+<div class="rwm-step-label">🖊️ Mimic</div>
+<div class="rwm-step-text">Write your own sentence about a character having a sudden idea. Use a <strong>simile</strong> to show how it felt &mdash; compare it to something the reader can picture.</div>
+<div class="rwm-frame">Sentence frame: Suddenly, as if [comparison], [character name] had an idea.</div>
+<div class="textbox-prompt">Write your sentence using a simile to show the &ldquo;aha!&rdquo; moment.</div>
+<div class="journal-label">📓 Your sentence <span class="saved-dot" id="dot-rwm-mimic"></span></div>
+<textarea class="journal-box" id="journal-rwm-mimic" data-label="RWM — Mimic" placeholder="Write your sentence here..." oninput="autoSave(this,'dot-rwm-mimic');gatherAnswers();"></textarea>
+</div>
+</div>
 <div class="tab-next-wrap">
 <p class="tab-transition-voice">You&rsquo;ve read and thought carefully. Time to show what you know!</p>
 <button class="tab-next-btn" onclick="switchTab('assignment')">Continue to 📬 Assignment →</button>
@@ -2361,28 +2379,42 @@ body {
 <div class="activity bl-gold" style="margin-top:18px;" id="writers-workshop">
 <div class="activity-head" style="background:linear-gradient(135deg,#FFF8E8,#FFF3DC);border-bottom-color:#F5E6C8;">
 <div class="activity-num" style="background:#C7922C;">✍️</div><div style="flex:1;">
-<div class="activity-title">Writer&rsquo;s Workshop: Week 4 &middot; REVISE & EDIT</div>
-<div class="activity-sub">Edit: CUPS check</div></div></div>
+<div class="activity-title">Writer&rsquo;s Workshop: Week 4 &middot; FINAL DRAFT</div>
+<div class="activity-sub">Write your clean, publish-ready personal narrative</div></div></div>
 <div class="activity-body">
 <div style="display:flex;flex-wrap:wrap;gap:4px;justify-content:flex-start;align-items:center;margin-bottom:10px;">
 <span style="background:#E8F1E8;color:#4A7C2E;padding:4px 8px;border-radius:6px;font-size:11px;">✓ Seed Ideas</span>
 <span style="background:#E8F1E8;color:#4A7C2E;padding:4px 8px;border-radius:6px;font-size:11px;">✓ Plan</span>
 <span style="background:#E8F1E8;color:#4A7C2E;padding:4px 8px;border-radius:6px;font-size:11px;">✓ Draft</span>
 <span style="background:#E8F1E8;color:#4A7C2E;padding:4px 8px;border-radius:6px;font-size:11px;">✓ Add Craft</span>
-<span style="background:#C7922C;color:#fff;padding:4px 8px;border-radius:6px;font-size:11px;">★ Revise & Edit</span>
-<span style="background:#FAFBFF;color:#7A88A8;padding:4px 8px;border-radius:6px;font-size:11px;">○ Publish</span>
+<span style="background:#E8F1E8;color:#4A7C2E;padding:4px 8px;border-radius:6px;font-size:11px;">✓ Revise</span>
+<span style="background:#E8F1E8;color:#4A7C2E;padding:4px 8px;border-radius:6px;font-size:11px;">✓ Edit</span>
+<span style="background:#C7922C;color:#fff;padding:4px 8px;border-radius:6px;font-size:11px;">★ Final Draft</span>
 </div>
-<div class="callout callout-info" style="margin:0 0 14px 0;padding:10px 14px;"><span class="callout-icon">🎯</span><p style="font-size:14px;"><strong>Today&rsquo;s focus:</strong> Today: <strong>APPLY.</strong> Write your own friendly letter using all the parts: greeting, body, closing, signature.</p></div>
+<div class="callout callout-info" style="margin:0 0 14px 0;padding:10px 14px;"><span class="callout-icon">🎯</span><p style="font-size:14px;"><strong>Today&rsquo;s focus:</strong> You&rsquo;ve revised and edited your personal narrative. Now it&rsquo;s time to write your <strong>FINAL DRAFT</strong> &mdash; a clean, polished copy that&rsquo;s ready to publish tomorrow!</p></div>
+<div class="key-concept" style="background:#FFFEF7;border-color:#F5E6C8;margin-bottom:14px;">
+<div class="key-concept-label" style="color:#C7922C;">📋 Final Draft Tips</div>
+<div style="background:#FAFBFF;border:2px dashed #BFC8E0;border-radius:8px;padding:14px;margin-top:8px;font-size:13px;line-height:1.8;">
+📌 Write your story <strong>neatly</strong> from the beginning &mdash; this is your publish copy!<br>
+📌 Include <strong>all the improvements</strong> from revising and editing.<br>
+📌 Make sure your story has a clear <strong>beginning, middle, and end</strong>.<br>
+📌 Read it one more time when you&rsquo;re done. Does it sound like <em>you</em> telling the story?
+</div>
+</div>
 <div class="key-concept" style="background:#F0F7FF;border-color:#C8DCEE;margin-bottom:14px;">
-<div class="key-concept-label" style="color:#3D5285;">📋 Today&rsquo;s Tool: CUPS Editing Checklist</div>
-<p style="font-size:13px;color:#3D5285;margin-bottom:8px;"><strong>Clara&rsquo;s example (filled):</strong></p>
-<div style="background:#FFF;border:1px solid #C8DCEE;border-radius:6px;padding:10px;font-size:13px;font-style:italic;">Clara checked: C=Capitalization ✅ U=Usage ✅ P=Punctuation ✅ S=Spelling ✅</div>
-<p style="margin-top:12px;font-size:13px;color:#3D5285;"><strong>Your turn:</strong></p>
-<div style="background:#FAFBFF;border:2px dashed #BFC8E0;border-radius:8px;padding:14px;margin-top:8px;font-size:13px;">Read your draft ONE time for each letter:<br>☐ <strong>C</strong> &mdash; Capitals at start of sentences and names?<br>☐ <strong>U</strong> &mdash; Words used correctly?<br>☐ <strong>P</strong> &mdash; Periods, commas, quotation marks?<br>☐ <strong>S</strong> &mdash; Spelling checked?</div>
+<div class="key-concept-label" style="color:#3D5285;">👀 Sam&rsquo;s Final Draft</div>
+<div style="background:#FFF;border:2px solid #34B76F;border-radius:8px;padding:14px;margin-top:10px;font-size:14px;font-style:italic;line-height:1.7;">
+It was a sunny Saturday morning, and I was playing fetch with Bingo in the backyard. Then I saw something that made my stomach drop — the gate was wide open.<br><br>
+Bingo shot out like a rocket and took off down the sidewalk! I ran after him, my heart pounding so loud I could hear it in my ears. He was way too fast. &ldquo;Bingo, come back!&rdquo; I yelled, but he just kept running. What if he got lost and never came home?<br><br>
+I followed him all the way to Miller Park. When I finally found him, he was rolling in the mud with the biggest smile on his face. I clipped on his leash with shaking hands and hugged him, mud and all.<br><br>
+That was the day I learned to always double-check the gate. And Bingo? He got the longest bath of his life.
 </div>
-<div class="callout callout-info" style="background:#E8F1E8;border-color:#A8C8A8;margin:0 0 10px 0;padding:10px 14px;"><span class="callout-icon">📝</span><p style="font-size:14px;"><strong>Now you try.</strong> Use what Clara showed you. Borrow a sentence frame if you want.</p></div>
-<div class="textbox-prompt">Do your CUPS check. Write down 2 mistakes you found and fixed.</div>
-<textarea class="journal-box" id="journal-wp" data-label="Writer's Workshop: Revise & Edit" placeholder="My writing..." oninput="autoSave(this,'dot-wp');gatherAnswers();" style="min-height:100px;"></textarea>
+<p style="margin-top:10px;font-size:13px;color:#3A4A6B;"><strong>Notice:</strong> Sam&rsquo;s final draft has all his revisions <em>and</em> edits included. It&rsquo;s clean, clear, and ready to share!</p>
+</div>
+<div class="callout callout-info" style="background:#E8F1E8;border-color:#A8C8A8;margin:0 0 10px 0;padding:10px 14px;"><span class="callout-icon">📝</span><p style="font-size:14px;"><strong>Now you try.</strong> Write your clean final draft below. Include all your revisions and edits. This is the version you&rsquo;ll publish tomorrow!</p></div>
+<div class="textbox-prompt">Write your final, polished personal narrative.</div>
+<textarea class="journal-box" id="journal-wp" data-label="Writer's Workshop: Final Draft" placeholder="One day..." oninput="autoSave(this,'dot-wp');gatherAnswers();" style="min-height:160px;"></textarea>
+<div class="callout callout-info" style="margin-top:12px;background:#F0E8FF;border-color:#D8C8F0;"><span class="callout-icon">🎉</span><p style="font-size:14px;"><strong>Tomorrow is Publish Day!</strong> You&rsquo;ll share your finished story with the class. Great work getting your personal narrative ready!</p></div>
 </div></div>
 <div class="gathered-card"><div class="gathered-header"><div class="gathered-header-icon">📋</div><div><div class="gathered-header-label">All Your Work</div><div class="gathered-header-title">Review, Copy, or Download</div></div></div>
 <div class="gathered-body"><p class="gathered-intro">Everything you typed is gathered below.</p>
@@ -2469,14 +2501,15 @@ window.addEventListener('beforeunload', function(e){
     e.returnValue = '';
   }
 });
-window._fillinDone=false;function checkFillIn(){var ins=document.querySelectorAll(".fillin-input");var ok=true;ins.forEach(function(inp){var a=inp.getAttribute("data-answer").toLowerCase();var v=inp.value.trim().toLowerCase();if(v===a){inp.classList.remove("wrong");inp.classList.add("correct");inp.disabled=true}else{inp.classList.remove("correct");inp.classList.add("wrong");ok=false;setTimeout(function(){inp.classList.remove("wrong")},600)}});if(ok){document.getElementById("fillinFeedback").classList.add("show");window._fillinDone=true}}
+window._fillinDone=false;function checkFillIn(){var ins=document.querySelectorAll("#fillinGame .fillin-input");var ok=true;ins.forEach(function(inp){var a=inp.getAttribute("data-answer").toLowerCase();var v=inp.value.trim().toLowerCase();if(v===a){inp.classList.remove("wrong");inp.classList.add("correct");inp.disabled=true}else{inp.classList.remove("correct");inp.classList.add("wrong");ok=false;setTimeout(function(){inp.classList.remove("wrong")},600)}});if(ok){document.getElementById("fillinFeedback").classList.add("show");window._fillinDone=true}}
+function checkVocabFillIn(){var ins=document.querySelectorAll("#vocabFillin .fillin-input");var ok=true;ins.forEach(function(inp){var a=inp.getAttribute("data-answer").toLowerCase();var v=inp.value.trim().toLowerCase();if(v===a){inp.classList.remove("wrong");inp.classList.add("correct");inp.disabled=true}else{inp.classList.remove("correct");inp.classList.add("wrong");ok=false;setTimeout(function(){inp.classList.remove("wrong")},600)}});if(ok){document.getElementById("vocabFillinFeedback").classList.add("show")}}
 var sortSelected=null;var sortPlaced=0;var sortTotal=8;
 function pickSortChip(c){if(c.classList.contains("placed"))return;if(sortSelected)sortSelected.style.outline="";sortSelected=c;c.style.outline="3px solid #55C8E8";c.style.outlineOffset="2px"}
 function dropSortChip(col,colName){if(!sortSelected)return;var g=sortSelected.getAttribute("data-group");var cl=sortSelected.cloneNode(true);cl.style.outline="";cl.onclick=null;cl.style.cursor="default";if(g===colName){cl.classList.add("correct");sortSelected.classList.add("placed");col.appendChild(cl);sortPlaced++}else{cl.classList.add("wrong");col.appendChild(cl);setTimeout(function(){col.removeChild(cl)},600)}sortSelected.style.outline="";sortSelected=null;if(sortPlaced>=sortTotal){var sc=document.getElementById("sortScore");sc.textContent="🎉 All sorted correctly!";sc.classList.add("show")}}
 var matchFirst=null;var matchCount=0;function matchClick(item){if(item.classList.contains("matched"))return;if(!matchFirst){matchFirst=item;item.classList.add("selected");return}if(matchFirst===item){matchFirst.classList.remove("selected");matchFirst=null;return}var k1=matchFirst.getAttribute("data-match");var k2=item.getAttribute("data-match");if(k1===k2&&matchFirst.classList.contains("is-word")!==item.classList.contains("is-word")){matchFirst.classList.remove("selected");matchFirst.classList.add("matched");item.classList.add("matched");matchCount++;matchFirst=null;if(matchCount>=4){document.getElementById("matchFeedback").classList.add("show")}}else{item.classList.add("wrong-flash");matchFirst.classList.add("wrong-flash");var a=matchFirst;var b=item;setTimeout(function(){a.classList.remove("wrong-flash","selected");b.classList.remove("wrong-flash")},500);matchFirst=null}}
 (function(){var btn=document.getElementById("backToTop");if(!btn)return;var inIframe=(function(){try{return window.self!==window.top}catch(e){return true}})();btn.addEventListener("click",function(){try{window.scrollTo({top:0,behavior:"smooth"})}catch(e){}document.documentElement.scrollTop=0;document.body.scrollTop=0;var top=document.getElementById("pageTop");if(top&&top.scrollIntoView)try{top.scrollIntoView({behavior:"smooth",block:"start"})}catch(e){}});if(inIframe)setTimeout(function(){btn.classList.add("show")},1500);else window.addEventListener("scroll",function(){btn.classList.toggle("show",window.pageYOffset>400)})})()
 function downloadJournal(){gatherAnswers();var t=document.getElementById("gatheredOutput").value;var h="<!DOCTYPE html><html><head><meta charset=\"UTF-8\"><title>Lesson 4.3</title><style>body{font-family:Georgia,serif;max-width:700px;margin:40px auto;padding:0 20px;color:#1a1a2e;line-height:1.7}h1{font-size:22px;border-bottom:3px solid #55C8E8;padding-bottom:8px}pre{white-space:pre-wrap;font-family:Georgia,serif;font-size:14px}</style></head><body><h1>📓 My Work — Lesson 4.3</h1><pre>"+t.replace(/</g,"&lt;").replace(/>/g,"&gt;")+"</pre></body></html>";var w2=window.open("","_blank");w2.document.write(h);w2.document.close();setTimeout(function(){w2.print()},400)}
-const TRACKER_TOTAL=5;const TRACKER_PROGRESS=3;
+const TRACKER_TOTAL=5;const TRACKER_PROGRESS=5;
 const trackerIcons=["📋","✉️","🪁","🖼️","💨"];
 const trackerPos=[{x:10,y:140},{x:28,y:120},{x:46,y:135},{x:64,y:115},{x:82,y:130}];
 (function(){var sc=document.getElementById("scene");if(!sc)return;for(var i=0;i<TRACKER_TOTAL;i++){var n=document.createElement("div");var done=i<TRACKER_PROGRESS;var active=i===TRACKER_PROGRESS-1;n.className="node"+(done&&!active?" done":"")+(active?" active":"")+(!done&&!active?" upcoming":"");n.style.left="calc("+trackerPos[i].x+"%"+" - 15px)";n.style.top=trackerPos[i].y+"px";n.innerHTML=done?(active?trackerIcons[i]:"✦"):trackerIcons[i];sc.appendChild(n)}var anne=document.getElementById("anneToken");var idx=Math.max(0,TRACKER_PROGRESS-1);anne.style.left="calc("+trackerPos[idx].x+"% - 14px)";anne.style.top=(trackerPos[idx].y-36)+"px"})()

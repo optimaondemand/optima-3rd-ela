@@ -2235,22 +2235,23 @@ body {
 <div class="activity bl-gold">
 <div class="activity-head"><div class="activity-num" style="background:#C7922C;">3</div><div style="flex:1;"><div class="activity-title">✏️ Grammar: Subject and predicate</div><div class="activity-sub">Use / Apply the skill.</div></div></div>
 <div class="activity-body">
+<div class="callout callout-gold" style="margin-bottom:14px;background:#FFF8E8;border:2px solid #F5E6C8;border-left:5px solid #C7922C;border-radius:10px;padding:14px 18px;"><span class="callout-icon">📖</span><p style="font-size:15px;color:#0E1C42;line-height:1.6;"><strong>Remember the Rule:</strong> Every sentence has two parts. The <strong>subject</strong> tells <em>who</em> or <em>what</em> the sentence is about. The <strong>predicate</strong> tells what the subject <em>does</em> or <em>is</em>.</p></div>
 <div class="task-box" style="background:#FFF8E8;border-color:#F5E6C8;"><div class="task-label" style="color:#C7922C;">👉 Example</div>
 <div class="task-sentence">Arthur | had an idea.</div>
-<p style="font-size:15px;color:#3A4A6B;line-height:1.6;margin-top:8px;">Subject: <em>Arthur</em>. Predicate: <em>had an idea</em>.</p></div>
-<div class="callout callout-info" style="margin-top:14px;"><span class="callout-icon">🎯</span><p><strong>Practice!</strong> Identify the correct answer for each item.</p></div>
+<p style="font-size:15px;color:#3A4A6B;line-height:1.6;margin-top:8px;">Subject: <em>Arthur</em> (who?). Predicate: <em>had an idea</em> (what did he do?).</p></div>
+<div class="callout callout-info" style="margin-top:14px;"><span class="callout-icon">🎯</span><p><strong>Practice!</strong> Read each sentence from Chapter 5. Tap to see the subject and predicate.</p></div>
 <div class="spotter-game" id="grammarGame">
 <div class="spotter-sentence" id="gram1">
-<span style="font-size:16px;color:#0E1C42;">Arthur found the bicycle pump. → <em>Arthur / found the bicycle pump</em></span>
+<span class="spotter-word" onclick="this.parentElement.querySelector('.spotter-result').textContent='Subject: Arthur | Predicate: found the bicycle pump ✅';this.parentElement.querySelector('.spotter-result').classList.add('show','win')" style="cursor:pointer;font-size:16px;color:#0E1C42;">Arthur found the bicycle pump.</span>
 <div class="spotter-result" id="gram1-result"></div></div>
 <div class="spotter-sentence" id="gram2">
-<span style="font-size:16px;color:#0E1C42;">Stanley spread his arms. → <em>Stanley / spread his arms</em></span>
+<span class="spotter-word" onclick="this.parentElement.querySelector('.spotter-result').textContent='Subject: Stanley | Predicate: spread his arms ✅';this.parentElement.querySelector('.spotter-result').classList.add('show','win')" style="cursor:pointer;font-size:16px;color:#0E1C42;">Stanley spread his arms.</span>
 <div class="spotter-result" id="gram2-result"></div></div>
 <div class="spotter-sentence" id="gram3">
-<span style="font-size:16px;color:#0E1C42;">Mrs. Lambchop made hot chocolate. → <em>Mrs. Lambchop / made hot chocolate</em></span>
+<span class="spotter-word" onclick="this.parentElement.querySelector('.spotter-result').textContent='Subject: Mrs. Lambchop | Predicate: made hot chocolate ✅';this.parentElement.querySelector('.spotter-result').classList.add('show','win')" style="cursor:pointer;font-size:16px;color:#0E1C42;">Mrs. Lambchop made hot chocolate.</span>
 <div class="spotter-result" id="gram3-result"></div></div>
 <div class="spotter-sentence" id="gram4">
-<span style="font-size:16px;color:#0E1C42;">The brothers shook hands. → <em>The brothers / shook hands</em></span>
+<span class="spotter-word" onclick="this.parentElement.querySelector('.spotter-result').textContent='Subject: The brothers | Predicate: shook hands ✅';this.parentElement.querySelector('.spotter-result').classList.add('show','win')" style="cursor:pointer;font-size:16px;color:#0E1C42;">The brothers shook hands.</span>
 <div class="spotter-result" id="gram4-result"></div></div>
 </div>
 </div></div>
@@ -2276,13 +2277,7 @@ body {
 <div class="journal-label">📓 Your answer <span class="saved-dot" id="dot-swyk"></span></div>
 <textarea class="journal-box" id="journal-swyk" data-label="SWYK: Long vowels and silent-e review" placeholder="The pattern is..." oninput="autoSave(this,'dot-swyk')"></textarea></div>
 </div></div>
-<div class="activity bl-green">
-<div class="activity-head"><div class="activity-num" style="background:#34B76F;">5</div><div style="flex:1;"><div class="activity-title">📝 Reading-Writing Connection (RWM)</div><div class="activity-sub">Writing a clear sequence of events</div></div></div>
-<div class="activity-body">
-<div class="task-box"><div class="task-label">📜 Mentor Sentence</div>
-<div class="task-sentence">He took hold of Stanley&rsquo;s hand. The two brothers sat together in the darkness, being friends.</div>
-<p style="font-size:15px;color:#3A4A6B;line-height:1.6;margin-top:8px;">The author uses a short, clear action (<em>took hold of his hand</em>) and then a beautiful image (<em>sat together in the darkness, being friends</em>). Simple words, big feeling.</p></div>
-</div></div>
+
 <div class="activity bl-green">
 <div class="activity-head"><div class="activity-num" style="background:#34B76F;">6</div><div style="flex:1;"><div class="activity-title">🪶 Writing Connection</div><div class="activity-sub">Connect today's reading to your own writing</div></div></div>
 <div class="activity-body">
@@ -2310,9 +2305,18 @@ body {
 <div class="activity bl-purple">
 <div class="activity-head"><div class="activity-num" style="background:#8B6FC0;">📚</div><div style="flex:1;"><div class="activity-title">📚 What Good Readers Do</div><div class="activity-sub">Explain how events affect a character.</div></div></div>
 <div class="activity-body">
-<p>Explain how events affect a character.</p>
+<p>Good readers pay attention to <strong>how events affect characters</strong>. When something important happens, it changes what a character feels, thinks, or decides to do next.</p>
+<div class="key-concept" style="background:#F0F7FF;border-color:#C8DCEE;margin:10px 0;">
+<div class="key-concept-label" style="color:#3D5285;">🔍 How to Do It</div>
+<ol style="margin:6px 0 6px 20px;font-size:14px;color:#3A4A6B;line-height:1.8;">
+<li><strong>Find the event:</strong> What happened to the character?</li>
+<li><strong>Notice the reaction:</strong> How did the character feel or act after?</li>
+<li><strong>Think about why:</strong> Why did the event change the character?</li>
+</ol>
+</div>
+<div class="callout callout-info" style="margin-top:10px;"><span class="callout-icon">🎯</span><p><strong>As you read Chapter 5:</strong> Stanley is tired of being flat. Watch for the <strong>event</strong> that changes everything &mdash; and notice how it affects both Stanley and Arthur.</p></div>
 <div class="journal-label">📓 Your thoughts <span class="saved-dot" id="dot-wgrd"></span></div>
-<textarea class="journal-box" id="journal-wgrd" data-label="What Good Readers Do" placeholder="I noticed..." oninput="autoSave(this,'dot-wgrd')"></textarea>
+<textarea class="journal-box" id="journal-wgrd" data-label="What Good Readers Do" placeholder="I noticed that when _____ happened, the character..." oninput="autoSave(this,'dot-wgrd')"></textarea>
 </div></div>
 <div class="activity bl-cyan">
 <div class="activity-head"><div class="activity-num" style="background:#55C8E8;">1</div><div style="flex:1;"><div class="activity-title">📕 Read: Chapter 5</div><div class="activity-sub">Read carefully. Take your time.</div></div></div>
@@ -2332,28 +2336,28 @@ body {
 </div></div>
 <div class="rwm-box">
 <div class="rwm-header">📖 RWM — Read like a Reader, Read like a Writer, Mimic</div>
-<div class="rwm-sentence">&ldquo;Arthur had an idea.&rdquo;</div>
+<div class="rwm-sentence">&ldquo;He took hold of Stanley&rsquo;s hand. The two brothers sat together in the darkness, being friends.&rdquo;</div>
 <div class="rwm-step">
 <div class="rwm-step-label">📖 Read like a Reader</div>
-<div class="rwm-step-text">Right before this sentence, Stanley is miserable. Everything changes in three words. What do you feel when you read &ldquo;Arthur had an idea&rdquo;? Why is this moment important for the story?</div>
-<div class="textbox-prompt">Write 1 sentence: What does this moment mean for Stanley?</div>
+<div class="rwm-step-text">Think about the <strong>sequence of events</strong> that led to this moment: Stanley was miserable &rarr; he told Arthur how he felt &rarr; Arthur cried &rarr; Arthur held his hand. How does each event lead to the next? Why does this ending feel right after everything that happened?</div>
+<div class="textbox-prompt">Write 1 sentence: How did the sequence of events lead to this moment?</div>
 <div class="journal-label">📓 Your response <span class="saved-dot" id="dot-rwm-reader"></span></div>
-<textarea class="journal-box" id="journal-rwm-reader" data-label="RWM — Read like a Reader" placeholder="When Arthur had an idea, I felt... because..." oninput="autoSave(this,'dot-rwm-reader');gatherAnswers();"></textarea>
+<textarea class="journal-box" id="journal-rwm-reader" data-label="RWM — Read like a Reader" placeholder="This moment happened because first... then... and finally..." oninput="autoSave(this,'dot-rwm-reader');gatherAnswers();"></textarea>
 </div>
 <div class="rwm-step">
 <div class="rwm-step-label">✏️ Read like a Writer</div>
-<div class="rwm-step-text">This is one of the shortest sentences in the whole chapter &mdash; only three words. The author could have written: <em>&ldquo;Then Arthur suddenly thought of a wonderful plan.&rdquo;</em> Why do you think the shorter sentence works better here?</div>
-<div class="textbox-prompt">Write 1 sentence: Why does a short sentence work so well in this moment?</div>
+<div class="rwm-step-text">The author writes events in a <strong>clear sequence</strong>. Notice the order: first an action (<em>took hold of his hand</em>), then the result (<em>sat together</em>), then a feeling (<em>being friends</em>). Each part builds on the one before it. The author doesn&rsquo;t skip steps &mdash; the reader follows along naturally.</div>
+<div class="textbox-prompt">Write 1 sentence: Why is the order of these events important?</div>
 <div class="journal-label">📓 Your response <span class="saved-dot" id="dot-rwm-writer"></span></div>
-<textarea class="journal-box" id="journal-rwm-writer" data-label="RWM — Read like a Writer" placeholder="A short sentence works here because..." oninput="autoSave(this,'dot-rwm-writer');gatherAnswers();"></textarea>
+<textarea class="journal-box" id="journal-rwm-writer" data-label="RWM — Read like a Writer" placeholder="The order matters because..." oninput="autoSave(this,'dot-rwm-writer');gatherAnswers();"></textarea>
 </div>
 <div class="rwm-step">
 <div class="rwm-step-label">🖊️ Mimic</div>
-<div class="rwm-step-text">Write your own three-word (or very short) sentence that changes the mood of a story. It should feel like a turning point.</div>
-<div class="rwm-frame">Sentence frame: [Name] had [a/an] [noun]. &mdash; or try your own short, punchy turning-point sentence.</div>
-<div class="textbox-prompt">Write your own short turning-point sentence.</div>
+<div class="rwm-step-text">Write your own <strong>clear sequence of events</strong> &mdash; 2 or 3 sentences where each event leads to the next, ending with a feeling or result. Put them in order so the reader can follow along.</div>
+<div class="rwm-frame">Sentence frame: First, [action]. Then, [next event]. Finally, [feeling or result].</div>
+<div class="textbox-prompt">Write your sequence of events (2&ndash;3 sentences).</div>
 <div class="journal-label">📓 Your sentence <span class="saved-dot" id="dot-rwm-mimic"></span></div>
-<textarea class="journal-box" id="journal-rwm-mimic" data-label="RWM — Mimic" placeholder="Write your sentence here..." oninput="autoSave(this,'dot-rwm-mimic');gatherAnswers();"></textarea>
+<textarea class="journal-box" id="journal-rwm-mimic" data-label="RWM — Mimic" placeholder="First,... Then,... Finally,..." oninput="autoSave(this,'dot-rwm-mimic');gatherAnswers();"></textarea>
 </div>
 </div>
 <div class="tab-next-wrap">
@@ -2387,7 +2391,7 @@ body {
 <span style="background:#FAFBFF;color:#7A88A8;padding:4px 8px;border-radius:6px;font-size:11px;">○ Revise & Edit</span>
 <span style="background:#FAFBFF;color:#7A88A8;padding:4px 8px;border-radius:6px;font-size:11px;">○ Publish</span>
 </div>
-<div class="callout callout-info" style="margin:0 0 14px 0;padding:10px 14px;"><span class="callout-icon">🎯</span><p style="font-size:14px;"><strong>Today&rsquo;s focus:</strong> Today: <strong>DRAFT ENDING.</strong> Write how your small moment ends. How did you feel? What changed?</p></div>
+<div class="callout callout-info" style="margin:0 0 14px 0;padding:10px 14px;"><span class="callout-icon">🎯</span><p style="font-size:14px;"><strong>Today&rsquo;s focus:</strong> You are writing a <strong>personal narrative</strong> &mdash; a true story about a small moment in YOUR life. You&rsquo;ve brainstormed, planned, and drafted. Now it&rsquo;s time to <strong>ADD CRAFT</strong> &mdash; that means going back into your draft and making your writing stronger. Today you&rsquo;ll swap weak verbs for strong ones so the reader can <em>see</em> and <em>feel</em> what happened. This is how you get your story ready to <strong>publish</strong>!</p></div>
 <div class="key-concept" style="background:#FFFEF7;border-color:#F5E6C8;margin-bottom:14px;">
 <div class="key-concept-label" style="color:#C7922C;">👀 Watch How &mdash; Meet Clara, our example writer</div>
 <p style="font-size:14px;">Clara is a 3rd grader just like you. Watch how she works through today&rsquo;s writing step.</p>

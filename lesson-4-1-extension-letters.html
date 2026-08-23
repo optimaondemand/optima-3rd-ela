@@ -2173,9 +2173,17 @@ body {
 <div class="activity bl-purple">
 <div class="activity-head"><div class="activity-num" style="background:#8B6FC0;">1</div><div style="flex:1;"><div class="activity-title">📚 What Good Readers Do</div><div class="activity-sub">Compare a story with related informational text.</div></div></div>
 <div class="activity-body">
-<p>Good readers <strong>preview</strong> a book before reading. They look at the cover, chapter titles, and pictures to make predictions.</p>
+<p>Good readers <strong>compare a story with related informational text</strong>. When you read a made-up story and a real article about the same topic, you can find what is the same and what is different.</p>
+<div class="key-concept" style="background:#F0F7FF;border-color:#C8DCEE;margin:10px 0;">
+<div class="key-concept-label" style="color:#3D5285;">🔍 How to Do It</div>
+<ol style="margin:6px 0 6px 20px;font-size:14px;color:#3A4A6B;line-height:1.8;">
+<li><strong>Read both texts:</strong> Read the story passage and the informational text carefully.</li>
+<li><strong>Look for similarities:</strong> What topic or ideas do both texts share?</li>
+<li><strong>Spot the differences:</strong> How does the story tell it differently from the informational text?</li>
+</ol>
+</div>
 <div class="socratic-box"><div class="socratic-label">🧠 Think about this</div>
-<p class="socratic-q">Think about how Stanley traveled by mail. <strong>What is the same and different between Stanley&rsquo;s trip and how real mail travels?</strong></p></div>
+<p class="socratic-q">Today you&rsquo;ll read about how real mail travels. <strong>What do you think will be the same and different between Stanley&rsquo;s trip and how real mail is sent?</strong></p></div>
 <div class="journal-label">📓 Your thoughts <span class="saved-dot" id="dot-wgrd"></span></div>
 <textarea class="journal-box" id="journal-wgrd" data-label="What Good Readers Do" placeholder="I think..." oninput="autoSave(this,'dot-wgrd')"></textarea>
 </div></div>
@@ -2265,6 +2273,7 @@ body {
 <div class="decode-sentence" style="margin-bottom:10px;">&ldquo;It was still much less <strong>expensive</strong> than a train ticket.&rdquo;</div>
 <div class="flip-card" onclick="this.classList.toggle('flipped')"><div class="flip-card-inner"><div class="flip-card-front"><div class="fc-emoji">💲</div><div class="fc-word">expensive</div><div class="fc-tap">think first, then tap</div></div><div class="flip-card-back"><div class="fc-word-back">expensive</div><div class="fc-def">Costing a lot of money.</div></div></div></div></div>
 <div class="vocab-decode-item">
+<div class="decode-sentence" style="margin-bottom:10px;">Stanley sent a <strong>postcard</strong> to let his family know he had arrived safely.</div>
 <div class="flip-card" onclick="this.classList.toggle('flipped')"><div class="flip-card-inner"><div class="flip-card-front"><div class="fc-emoji">📮</div><div class="fc-word">postcard</div><div class="fc-tap">think first, then tap</div></div><div class="flip-card-back"><div class="fc-word-back">postcard</div><div class="fc-def">A card you mail to someone, usually with a picture on one side.</div></div></div></div></div>
 </div>
 <div class="callout callout-info" style="margin-top:16px;"><span class="callout-icon">🎯</span><p><strong>Quick Match:</strong> Tap a word, then tap its meaning.</p></div>
@@ -2282,28 +2291,30 @@ body {
 <div class="activity bl-gold">
 <div class="activity-head"><div class="activity-num" style="background:#C7922C;">3</div><div style="flex:1;"><div class="activity-title">✏️ Grammar: Proper nouns and capitalization</div><div class="activity-sub">Define the skill.</div></div></div>
 <div class="activity-body">
+<div class="callout callout-gold" style="margin-bottom:14px;background:#FFF8E8;border:2px solid #F5E6C8;border-left:5px solid #C7922C;border-radius:10px;padding:14px 18px;"><span class="callout-icon">📖</span><p style="font-size:15px;color:#0E1C42;line-height:1.6;"><strong>Remember the Rule:</strong> A <strong>proper noun</strong> names a specific person, place, or thing and always starts with a <strong>capital letter</strong>. A <strong>common noun</strong> names any person, place, or thing and does NOT need a capital letter.</p></div>
 <div class="task-box" style="background:#FFF8E8;border-color:#F5E6C8;"><div class="task-label" style="color:#C7922C;">👉 Example</div>
-<div class="task-sentence">Stanley Lambchop (proper noun) vs. boy (common noun)</div>
-<p style="font-size:15px;color:#3A4A6B;line-height:1.6;margin-top:8px;">Proper nouns name specific people, places, or things and start with a capital letter.</p></div>
-<div class="callout callout-info" style="margin-top:14px;"><span class="callout-icon">🎯</span><p><strong>Practice!</strong> Identify the correct answer for each item.</p></div>
+<div class="task-sentence">Stanley Lambchop | boy</div>
+<p style="font-size:15px;color:#3A4A6B;line-height:1.6;margin-top:8px;"><em>Stanley Lambchop</em> is a <strong>proper noun</strong> &mdash; it names a specific person and starts with capital letters. <em>Boy</em> is a <strong>common noun</strong> &mdash; it could be any boy.</p></div>
+<div class="callout callout-info" style="margin-top:14px;"><span class="callout-icon">🎯</span><p><strong>Practice!</strong> Read each sentence. Tap to see which words are proper nouns and which are common nouns.</p></div>
 <div class="spotter-game" id="grammarGame">
 <div class="spotter-sentence" id="gram1">
-<span style="font-size:16px;color:#0E1C42;">Stanley → <em>proper</em></span>
+<span class="spotter-word" onclick="this.parentElement.querySelector('.spotter-result').textContent='Stanley Lambchop = proper noun (specific person), envelope = common noun ✅';this.parentElement.querySelector('.spotter-result').classList.add('show','win')" style="cursor:pointer;font-size:16px;color:#0E1C42;">Stanley Lambchop put stamps on the envelope.</span>
 <div class="spotter-result" id="gram1-result"></div></div>
 <div class="spotter-sentence" id="gram2">
-<span style="font-size:16px;color:#0E1C42;">boy → <em>common</em></span>
+<span class="spotter-word" onclick="this.parentElement.querySelector('.spotter-result').textContent='Thomas Jeffrey = proper noun (specific person), brother = common noun ✅';this.parentElement.querySelector('.spotter-result').classList.add('show','win')" style="cursor:pointer;font-size:16px;color:#0E1C42;">Thomas Jeffrey helped his brother.</span>
 <div class="spotter-result" id="gram2-result"></div></div>
 <div class="spotter-sentence" id="gram3">
-<span style="font-size:16px;color:#0E1C42;">California → <em>proper</em></span>
+<span class="spotter-word" onclick="this.parentElement.querySelector('.spotter-result').textContent='California = proper noun (specific place), airplane = common noun ✅';this.parentElement.querySelector('.spotter-result').classList.add('show','win')" style="cursor:pointer;font-size:16px;color:#0E1C42;">The airplane flew to California.</span>
 <div class="spotter-result" id="gram3-result"></div></div>
 <div class="spotter-sentence" id="gram4">
-<span style="font-size:16px;color:#0E1C42;">envelope → <em>common</em></span>
+<span class="spotter-word" onclick="this.parentElement.querySelector('.spotter-result').textContent='Mrs. Lambchop = proper noun (specific person), stamps = common noun ✅';this.parentElement.querySelector('.spotter-result').classList.add('show','win')" style="cursor:pointer;font-size:16px;color:#0E1C42;">Mrs. Lambchop bought stamps at the post office.</span>
 <div class="spotter-result" id="gram4-result"></div></div>
 </div>
 </div></div>
 <div class="activity bl-navy">
 <div class="activity-head"><div class="activity-num" style="background:#0E1C42;">4</div><div style="flex:1;"><div class="activity-title">🔠 Spelling: Vowel teams ai/ay and oa/ow</div><div class="activity-sub">Define the pattern.</div></div></div>
 <div class="activity-body">
+<div class="callout callout-gold" style="margin-bottom:14px;background:#FFF8E8;border:2px solid #F5E6C8;border-left:5px solid #C7922C;border-radius:10px;padding:14px 18px;"><span class="callout-icon">📖</span><p style="font-size:15px;color:#0E1C42;line-height:1.6;"><strong>The Rule:</strong> Vowel teams are two vowels that work together to make one sound. <strong>ai</strong> and <strong>ay</strong> both make the long <em>a</em> sound (like in <em>mail</em> and <em>play</em>). <strong>oa</strong> and <strong>ow</strong> both make the long <em>o</em> sound (like in <em>boat</em> and <em>grow</em>). Usually <em>ai</em> comes in the middle and <em>ay</em> comes at the end. Usually <em>oa</em> comes in the middle and <em>ow</em> comes at the end.</p></div>
 <div class="callout callout-info"><span class="callout-icon">🎮</span><p><strong>Practice: Sort the Words!</strong> Tap a word, then tap the column where it belongs.</p></div>
 <div class="sort-game" id="spellSort"><div class="sort-bank" id="sortBank">
 <span class="sort-chip" data-group="ai" onclick="pickSortChip(this)">mail</span>
@@ -2314,9 +2325,15 @@ body {
 <span class="sort-chip" data-group="ay" onclick="pickSortChip(this)">away</span>
 <span class="sort-chip" data-group="oa" onclick="pickSortChip(this)">boat</span>
 <span class="sort-chip" data-group="oa" onclick="pickSortChip(this)">road</span>
+<span class="sort-chip" data-group="oa" onclick="pickSortChip(this)">coat</span>
+<span class="sort-chip" data-group="ow" onclick="pickSortChip(this)">grow</span>
+<span class="sort-chip" data-group="ow" onclick="pickSortChip(this)">show</span>
+<span class="sort-chip" data-group="ow" onclick="pickSortChip(this)">slow</span>
 </div><div class="sort-columns">
 <div class="sort-col"><div class="sort-col-header" style="background:linear-gradient(135deg,#55C8E8,#7FD8F0);">ai</div><div class="sort-col-drop" data-col="ai" onclick="dropSortChip(this,'ai')"></div></div>
 <div class="sort-col"><div class="sort-col-header" style="background:linear-gradient(135deg,#55C8E8,#7FD8F0);">ay</div><div class="sort-col-drop" data-col="ay" onclick="dropSortChip(this,'ay')"></div></div>
+<div class="sort-col"><div class="sort-col-header" style="background:linear-gradient(135deg,#55C8E8,#7FD8F0);">oa</div><div class="sort-col-drop" data-col="oa" onclick="dropSortChip(this,'oa')"></div></div>
+<div class="sort-col"><div class="sort-col-header" style="background:linear-gradient(135deg,#55C8E8,#7FD8F0);">ow</div><div class="sort-col-drop" data-col="ow" onclick="dropSortChip(this,'ow')"></div></div>
 </div><div class="sort-score" id="sortScore"></div></div>
 </div></div>
 <div class="activity bl-green">
@@ -2347,11 +2364,14 @@ body {
 <div class="activity-head"><div class="activity-num" style="background:#55C8E8;">1</div><div style="flex:1;"><div class="activity-title">📕 Read: Extension Text</div><div class="activity-sub">Read carefully. Take your time.</div></div></div>
 <div class="activity-body">
 <p>Today we compare the <em>Flat Stanley</em> story with real informational text about mail and letters.</p>
-<div class="open-book-wrap"><div class="open-book-cover"></div><div class="open-book-spine"></div><div class="open-book-pages-3"></div><div class="open-book-pages-2"></div><div class="open-book-pages-1"></div>
-<div class="open-book"><div class="open-book-left"><div class="open-book-left-deco">📬</div></div>
-<div class="open-book-right"><div class="open-book-title"><em>Flat Stanley</em></div><div style="height:10px;"></div>
-<div class="open-book-chapter" style="font-size:14px;color:#7A88A8;font-style:normal;font-family:'Nunito',sans-serif;font-weight:700;">Extension Text</div>
-<div class="open-book-prompt" style="margin-top:8px;">Open your book to the chapter listed above.</div></div></div></div>
+<div style="background:#FAFBFF;border:2px solid #C8DCEE;border-radius:12px;padding:20px;margin:14px 0;">
+<div style="font-size:18px;font-weight:800;color:#3D5285;margin-bottom:12px;">📬 How Does Mail Really Travel?</div>
+<p style="font-size:15px;color:#0E1C42;line-height:1.8;margin-bottom:10px;">In <em>Flat Stanley</em>, Stanley gets mailed inside an envelope to visit his friend Thomas Jeffrey in California. His parents roll him up, put stamps on the envelope, and drop it in the mailbox. It sounds simple — but how does real mail actually travel?</p>
+<p style="font-size:15px;color:#0E1C42;line-height:1.8;margin-bottom:10px;">When you drop a letter in a mailbox, a mail carrier picks it up and takes it to a <strong>post office</strong>. At the post office, machines sort the mail by zip code. Your zip code tells the post office what city and neighborhood your letter is going to. A letter going from one state to another might travel by truck, train, or even airplane!</p>
+<p style="font-size:15px;color:#0E1C42;line-height:1.8;margin-bottom:10px;">The United States Postal Service (USPS) delivers about <strong>318 million pieces of mail every day</strong>. That is a lot of letters, packages, and postcards! Mail carriers walk, drive trucks, and even use boats and mules to deliver mail to places that are hard to reach.</p>
+<p style="font-size:15px;color:#0E1C42;line-height:1.8;margin-bottom:10px;">Of course, people do NOT travel by mail like Stanley does! In real life, an envelope holds flat things like letters, cards, and photos. Packages can hold bigger items, but they still have weight and size limits. Stanley could only be mailed because he was flat enough to fit inside a large envelope.</p>
+<p style="font-size:15px;color:#0E1C42;line-height:1.8;">People have been sending letters for <strong>thousands of years</strong>. Before there were post offices, messengers carried letters by hand or on horseback. Today, many people send emails and text messages instead of paper letters. But getting a real letter in the mail still feels special!</p>
+</div>
 <div class="pause-columns"><div class="pause-col">
 <div class="socratic-box" style="margin-bottom:0;"><div class="socratic-label">⏸️ Pause &amp; Think</div>
 <p class="socratic-q">Think about how Stanley traveled by mail. <strong>What is the same and different between Stanley&rsquo;s trip and how real mail travels?</strong></p></div>
@@ -2379,28 +2399,48 @@ body {
 <div class="activity bl-gold" style="margin-top:18px;" id="writers-workshop">
 <div class="activity-head" style="background:linear-gradient(135deg,#FFF8E8,#FFF3DC);border-bottom-color:#F5E6C8;">
 <div class="activity-num" style="background:#C7922C;">✍️</div><div style="flex:1;">
-<div class="activity-title">Writer&rsquo;s Workshop: Week 4 &middot; REVISE & EDIT</div>
-<div class="activity-sub">Revise for organization</div></div></div>
+<div class="activity-title">Writer&rsquo;s Workshop: Week 4 &middot; REVISE</div>
+<div class="activity-sub">Reread and improve your personal narrative</div></div></div>
 <div class="activity-body">
 <div style="display:flex;flex-wrap:wrap;gap:4px;justify-content:flex-start;align-items:center;margin-bottom:10px;">
 <span style="background:#E8F1E8;color:#4A7C2E;padding:4px 8px;border-radius:6px;font-size:11px;">✓ Seed Ideas</span>
 <span style="background:#E8F1E8;color:#4A7C2E;padding:4px 8px;border-radius:6px;font-size:11px;">✓ Plan</span>
 <span style="background:#E8F1E8;color:#4A7C2E;padding:4px 8px;border-radius:6px;font-size:11px;">✓ Draft</span>
 <span style="background:#E8F1E8;color:#4A7C2E;padding:4px 8px;border-radius:6px;font-size:11px;">✓ Add Craft</span>
-<span style="background:#C7922C;color:#fff;padding:4px 8px;border-radius:6px;font-size:11px;">★ Revise & Edit</span>
+<span style="background:#C7922C;color:#fff;padding:4px 8px;border-radius:6px;font-size:11px;">★ Revise</span>
+<span style="background:#FAFBFF;color:#7A88A8;padding:4px 8px;border-radius:6px;font-size:11px;">○ Edit</span>
 <span style="background:#FAFBFF;color:#7A88A8;padding:4px 8px;border-radius:6px;font-size:11px;">○ Publish</span>
 </div>
-<div class="callout callout-info" style="margin:0 0 14px 0;padding:10px 14px;"><span class="callout-icon">🎯</span><p style="font-size:14px;"><strong>Today&rsquo;s focus:</strong> Today: <strong>DEFINE.</strong> A letter has parts: greeting, body, closing, signature. Today, learn the parts of a friendly letter.</p></div>
-<div class="key-concept" style="background:#F0F7FF;border-color:#C8DCEE;margin-bottom:14px;">
-<div class="key-concept-label" style="color:#3D5285;">📋 Today&rsquo;s Tool: Organization Check</div>
-<p style="font-size:13px;color:#3D5285;margin-bottom:8px;"><strong>Clara&rsquo;s example (filled):</strong></p>
-<div style="background:#FFF;border:1px solid #C8DCEE;border-radius:6px;padding:10px;font-size:13px;font-style:italic;">Clara read her whole draft and made sure: Beginning → Middle → End, all in order.</div>
-<p style="margin-top:12px;font-size:13px;color:#3D5285;"><strong>Your turn:</strong></p>
-<div style="background:#FAFBFF;border:2px dashed #BFC8E0;border-radius:8px;padding:14px;margin-top:8px;font-size:13px;">☐ Does your beginning hook the reader?<br>☐ Are your middle events in order?<br>☐ Does your ending close the story?</div>
+<div class="callout callout-info" style="margin:0 0 14px 0;padding:10px 14px;"><span class="callout-icon">🎯</span><p style="font-size:14px;"><strong>Today&rsquo;s focus:</strong> You&rsquo;ve been working on your <strong>personal narrative</strong> for several weeks. You&rsquo;ve brainstormed, planned, drafted, and added craft. Now it&rsquo;s time to <strong>REVISE</strong> &mdash; reread your story and make it even better!</p></div>
+<div class="key-concept" style="background:#FFFEF7;border-color:#F5E6C8;margin-bottom:14px;">
+<div class="key-concept-label" style="color:#C7922C;">🔍 What Does &ldquo;Revise&rdquo; Mean?</div>
+<p style="font-size:14px;margin-top:6px;"><strong>Revise</strong> means to <strong>re-see</strong> your writing. You&rsquo;re not fixing spelling yet &mdash; you&rsquo;re making your <em>ideas</em> stronger and clearer.</p>
+<div style="background:#FAFBFF;border:2px dashed #BFC8E0;border-radius:8px;padding:14px;margin-top:8px;font-size:13px;">
+<strong>Ask yourself:</strong><br>
+📌 Does my story make sense from beginning to end?<br>
+📌 Did I include enough details so my reader can picture what happened?<br>
+📌 Does it sound like <em>me</em> telling the story?<br>
+📌 Is there a part that&rsquo;s confusing or needs more detail?<br>
+📌 Does each sentence add something important to my story?
 </div>
-<div class="callout callout-info" style="background:#E8F1E8;border-color:#A8C8A8;margin:0 0 10px 0;padding:10px 14px;"><span class="callout-icon">📝</span><p style="font-size:14px;"><strong>Now you try.</strong> Use what Clara showed you. Borrow a sentence frame if you want.</p></div>
-<div class="textbox-prompt">Read your full draft. Is everything in order? Write one thing you want to move or change, and why.</div>
-<textarea class="journal-box" id="journal-wp" data-label="Writer's Workshop: Revise & Edit" placeholder="My writing..." oninput="autoSave(this,'dot-wp');gatherAnswers();" style="min-height:100px;"></textarea>
+</div>
+<div class="key-concept" style="background:#F0F7FF;border-color:#C8DCEE;margin-bottom:14px;">
+<div class="key-concept-label" style="color:#3D5285;">👀 Sam&rsquo;s Revision: Before &amp; After</div>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:10px;">
+<div style="background:#FFF0F0;border:1px solid #E8C8C8;border-radius:8px;padding:10px;font-size:13px;">
+<div style="font-weight:700;color:#c7627e;margin-bottom:4px;">Before (Draft + Craft)</div>
+<p style="font-style:italic;">I was playing in the yard when I saw Bingo run out the gate. I ran after him. He was fast. I was scared he would get lost. I finally caught him at the park.</p>
+</div>
+<div style="background:#E3F8ED;border:1px solid #B8E8CF;border-radius:8px;padding:10px;font-size:13px;">
+<div style="font-weight:700;color:#34B76F;margin-bottom:4px;">After (Revised)</div>
+<p style="font-style:italic;">I was playing in the yard when I saw the gate swing open. Bingo <strong>shot out like a rocket</strong> and took off down the sidewalk! I ran after him, <strong>my heart pounding so loud I could hear it in my ears.</strong> He was way too fast. <strong>What if he got lost and never came home?</strong> I finally spotted him at the park, <strong>rolling in the mud with the biggest smile on his face.</strong></p>
+</div>
+</div>
+<p style="margin-top:10px;font-size:13px;color:#3A4A6B;"><strong>Notice:</strong> Sam didn&rsquo;t fix spelling &mdash; he added <strong>specific details</strong> and <strong>stronger descriptions</strong> to make his reader feel like they were right there with him.</p>
+</div>
+<div class="callout callout-info" style="background:#E8F1E8;border-color:#A8C8A8;margin:0 0 10px 0;padding:10px 14px;"><span class="callout-icon">📝</span><p style="font-size:14px;"><strong>Now you try.</strong> Reread your personal narrative draft from last week. Find at least <strong>two places</strong> where you can add more detail, a stronger word, or a clearer sentence. Write your revised story below.</p></div>
+<div class="textbox-prompt">Write your revised personal narrative. Add more detail and stronger descriptions.</div>
+<textarea class="journal-box" id="journal-wp" data-label="Writer's Workshop: Revise" placeholder="One day..." oninput="autoSave(this,'dot-wp');gatherAnswers();" style="min-height:140px;"></textarea>
 </div></div>
 <div class="gathered-card"><div class="gathered-header"><div class="gathered-header-icon">📋</div><div><div class="gathered-header-label">All Your Work</div><div class="gathered-header-title">Review, Copy, or Download</div></div></div>
 <div class="gathered-body"><p class="gathered-intro">Everything you typed is gathered below.</p>
@@ -2494,7 +2534,7 @@ function dropSortChip(col,colName){if(!sortSelected)return;var g=sortSelected.ge
 var matchFirst=null;var matchCount=0;function matchClick(item){if(item.classList.contains("matched"))return;if(!matchFirst){matchFirst=item;item.classList.add("selected");return}if(matchFirst===item){matchFirst.classList.remove("selected");matchFirst=null;return}var k1=matchFirst.getAttribute("data-match");var k2=item.getAttribute("data-match");if(k1===k2&&matchFirst.classList.contains("is-word")!==item.classList.contains("is-word")){matchFirst.classList.remove("selected");matchFirst.classList.add("matched");item.classList.add("matched");matchCount++;matchFirst=null;if(matchCount>=4){document.getElementById("matchFeedback").classList.add("show")}}else{item.classList.add("wrong-flash");matchFirst.classList.add("wrong-flash");var a=matchFirst;var b=item;setTimeout(function(){a.classList.remove("wrong-flash","selected");b.classList.remove("wrong-flash")},500);matchFirst=null}}
 (function(){var btn=document.getElementById("backToTop");if(!btn)return;var inIframe=(function(){try{return window.self!==window.top}catch(e){return true}})();btn.addEventListener("click",function(){try{window.scrollTo({top:0,behavior:"smooth"})}catch(e){}document.documentElement.scrollTop=0;document.body.scrollTop=0;var top=document.getElementById("pageTop");if(top&&top.scrollIntoView)try{top.scrollIntoView({behavior:"smooth",block:"start"})}catch(e){}});if(inIframe)setTimeout(function(){btn.classList.add("show")},1500);else window.addEventListener("scroll",function(){btn.classList.toggle("show",window.pageYOffset>400)})})()
 function downloadJournal(){gatherAnswers();var t=document.getElementById("gatheredOutput").value;var h="<!DOCTYPE html><html><head><meta charset=\"UTF-8\"><title>Lesson 4.1</title><style>body{font-family:Georgia,serif;max-width:700px;margin:40px auto;padding:0 20px;color:#1a1a2e;line-height:1.7}h1{font-size:22px;border-bottom:3px solid #55C8E8;padding-bottom:8px}pre{white-space:pre-wrap;font-family:Georgia,serif;font-size:14px}</style></head><body><h1>📓 My Work — Lesson 4.1</h1><pre>"+t.replace(/</g,"&lt;").replace(/>/g,"&gt;")+"</pre></body></html>";var w2=window.open("","_blank");w2.document.write(h);w2.document.close();setTimeout(function(){w2.print()},400)}
-const TRACKER_TOTAL=5;const TRACKER_PROGRESS=3;
+const TRACKER_TOTAL=5;const TRACKER_PROGRESS=5;
 const trackerIcons=["📋","✉️","🪁","🖼️","💨"];
 const trackerPos=[{x:10,y:140},{x:28,y:120},{x:46,y:135},{x:64,y:115},{x:82,y:130}];
 (function(){var sc=document.getElementById("scene");if(!sc)return;for(var i=0;i<TRACKER_TOTAL;i++){var n=document.createElement("div");var done=i<TRACKER_PROGRESS;var active=i===TRACKER_PROGRESS-1;n.className="node"+(done&&!active?" done":"")+(active?" active":"")+(!done&&!active?" upcoming":"");n.style.left="calc("+trackerPos[i].x+"%"+" - 15px)";n.style.top=trackerPos[i].y+"px";n.innerHTML=done?(active?trackerIcons[i]:"✦"):trackerIcons[i];sc.appendChild(n)}var anne=document.getElementById("anneToken");var idx=Math.max(0,TRACKER_PROGRESS-1);anne.style.left="calc("+trackerPos[idx].x+"% - 14px)";anne.style.top=(trackerPos[idx].y-36)+"px"})()
