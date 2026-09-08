@@ -24,7 +24,16 @@ TITLE_KEYS = [
     ('✏️', 'Grammar', 'gram'),
     ('🔠', 'Spelling', 'spell'),
     ('🪶', 'Writing Connection', 'writeconn'),
-    ('📕', 'Read', 'reading'),
+    # The reading slot. Order matters and the needles are deliberately specific:
+    # a bare 'Read' also matches 'Reading Comprehension' and "Reader's Theater",
+    # which is how W5 D2-4 once reported ch_range='Reading Comprehension'.
+    # Writing/synthesis days carry no reading assignment and are titled for the
+    # real work, so they are matched explicitly here.
+    ('📕', 'Looking Back', 'reading'),
+    ('✍️', 'Revise:', 'reading'),
+    ('✍️', 'Edit:', 'reading'),
+    ('✍️', 'Publish:', 'reading'),
+    ('📕', 'Read:', 'reading'),
 ]
 
 def activities(s):
@@ -53,8 +62,19 @@ def extract(path, week, day):
     t = lambda k: A.get(k, {}).get('title', '')
 
     # ── reading / chapter range ───────────────────────────────────────────
-    d['ch_range'] = re.sub(r'^📕\s*Read:\s*', '', t('reading')).strip()
-    d['pause_qs'] = [cl(x) for x in re.findall(r'class="socratic-q"[^>]*>(.*?)</p>', s, re.S)][:3]
+    # strip any leading section emoji and the 'Read:' / 'Looking Back:' label
+    d['ch_range'] = re.sub(r'^(?:📕|📰|✍️|✍)\s*(?:Read:|Looking Back:)?\s*', '', t('reading')).strip()
+    # Pause & Think prompts: key on the ⏸️ label, not on position or activity.
+    # A document-order scan of socratic-q picks up morphology/spelling boxes that
+    # sit earlier in the page (that is how W22 decks showed the VCCV spelling
+    # prompt under "PAUSE & THINK"), and activity scoping fails for W23-24, whose
+    # reading block is titled with the article name ("Life in a Medieval Castle").
+    # Every unit marks its real pause boxes with ⏸️, so match that.
+    d['pause_qs'] = [cl(x) for x in re.findall(
+        r'socratic-label">\s*⏸️.*?</div>\s*<p class="socratic-q"[^>]*>(.*?)</p>', s, re.S)][:3]
+    if not d['pause_qs']:
+        d['pause_qs'] = [cl(x) for x in re.findall(
+            r'class="socratic-q"[^>]*>(.*?)</p>', g('reading'), re.S)][:3]
     bq = re.search(r'class="big-question"[^>]*>(.*?)</', s, re.S) or re.search(r'class="socratic-q"[^>]*>(.*?)</p>', s, re.S)
     d['big_question'] = cl(bq.group(1)) if bq else ''
 
