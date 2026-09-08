@@ -1,3 +1,22 @@
 
 # local backups from the poetry-corner batch edit
 *.pcbak
+
+# leftover backups from the poetry-corner batch edit
+*.bak-poetry
+
+# Novel source material — full copyrighted texts, kept LOCAL ONLY.
+# tools/verify_quotes.py reads these from Planning docs/; they are
+# deliberately not in the repo. Named explicitly rather than by glob so a
+# future planning PDF is not ignored by accident.
+Planning docs/Narnia.pdf
+Planning docs/stanley.pdf
+Planning docs/tale of despereaux text.pdf
+Planning docs/despereaux_ocr.txt
+Planning docs/despereaux_chapter_index.txt
+Planning docs/whipping_boy_ocr.txt
+Planning docs/whipping_boy_chapter_index.txt
+Planning docs/flat_stanley_text.txt
+Planning docs/flat_stanley_book1_text.txt
+Planning docs/narnia_text.txt
+Planning docs/lww_text.txt

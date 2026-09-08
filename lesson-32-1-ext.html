@@ -2148,6 +2148,8 @@ body {
 .header-badge { background:rgba(27,122,78,0.18); border-color:rgba(27,122,78,0.4); }
 .wp-step.current { border-color:#D4AF37; box-shadow:0 0 0 3px rgba(212,175,55,0.25); }
 .wp-step.done { border-color:#1B7A4E; }
+.sort-columns { grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); }
+@media (max-width: 620px){ .sort-columns { grid-template-columns: 1fr; } }
 </style>
 
 </head>
@@ -2559,7 +2561,14 @@ body {
           <div class="sort-columns">
             <div class="sort-col"><div class="sort-col-header" style="background:linear-gradient(135deg,#1B7A4E,#2EA863);">Has a prefix</div><div class="sort-col-drop" data-col="prefix_trans" onclick="dropSortChip(this,'prefix_trans')"></div></div>
             <div class="sort-col"><div class="sort-col-header" style="background:linear-gradient(135deg,#8B6914,#a87f1f);">Has a suffix</div><div class="sort-col-drop" data-col="suffix_ous" onclick="dropSortChip(this,'suffix_ous')"></div></div>
-          </div>
+          
+          <div class="sort-col"><div class="sort-col-header" style="background:linear-gradient(135deg,#C7922C,#C7922C);">Suffix -y</div><div class="sort-col-drop" data-col="suffix_y" onclick="dropSortChip(this,'suffix_y')"></div></div>
+          <div class="sort-col"><div class="sort-col-header" style="background:linear-gradient(135deg,#34B76F,#34B76F);">Prefix un-</div><div class="sort-col-drop" data-col="prefix_un" onclick="dropSortChip(this,'prefix_un')"></div></div>
+          <div class="sort-col"><div class="sort-col-header" style="background:linear-gradient(135deg,#c7627e,#c7627e);">Prefix re-</div><div class="sort-col-drop" data-col="prefix_re" onclick="dropSortChip(this,'prefix_re')"></div></div>
+          <div class="sort-col"><div class="sort-col-header" style="background:linear-gradient(135deg,#0E1C42,#0E1C42);">Suffix -less</div><div class="sort-col-drop" data-col="suffix_less" onclick="dropSortChip(this,'suffix_less')"></div></div>
+          <div class="sort-col"><div class="sort-col-header" style="background:linear-gradient(135deg,#2A9BC0,#2A9BC0);">Suffix -ance</div><div class="sort-col-drop" data-col="suffix_ance" onclick="dropSortChip(this,'suffix_ance')"></div></div>
+          <div class="sort-col"><div class="sort-col-header" style="background:linear-gradient(135deg,#55C8E8,#55C8E8);">Suffix -ful</div><div class="sort-col-drop" data-col="suffix_ful" onclick="dropSortChip(this,'suffix_ful')"></div></div>
+        </div>
           <div class="sort-score" id="sortScore"></div>
         </div></div>
 </div>
@@ -3024,7 +3033,7 @@ function fireConfetti() {
 /* ───── WORD SORT GAME ───── */
 var sortSelected = null;
 var sortPlaced = 0;
-var sortTotal = 6;
+var sortTotal = 8;
 
 function pickSortChip(chip) {
   if (chip.classList.contains('placed')) return;

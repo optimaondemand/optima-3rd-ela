@@ -2148,6 +2148,8 @@ body {
 .header-badge { background:rgba(27,122,78,0.18); border-color:rgba(27,122,78,0.4); }
 .wp-step.current { border-color:#D4AF37; box-shadow:0 0 0 3px rgba(212,175,55,0.25); }
 .wp-step.done { border-color:#1B7A4E; }
+.sort-columns { grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); }
+@media (max-width: 620px){ .sort-columns { grid-template-columns: 1fr; } }
 </style>
 
 </head>
@@ -2501,7 +2503,7 @@ body {
         <div class="decode-step-content">
           <div class="decode-step-title">Read the Sentence</div>
           <div class="decode-step-text">Find the word in context. What clues does the sentence give?</div>
-          <div class="decode-sentence">&ldquo;You have a traitor there, said the White Witch, pointing at Edmund.&rdquo;</div>
+          <div class="decode-sentence">&ldquo;You have a traitor there, Aslan,&rdquo; said the Witch.</div>
           <div class="decode-step-text">The Witch points at Edmund and calls him a traitor. Edmund gave away his family's secrets to her. Traitor probably means someone who is disloyal and works against the people who trusted them.</div>
         </div>
       </div>
@@ -2559,7 +2561,9 @@ body {
           <div class="sort-columns">
             <div class="sort-col"><div class="sort-col-header" style="background:linear-gradient(135deg,#1B7A4E,#2EA863);">Root: ject (throw)</div><div class="sort-col-drop" data-col="scribe" onclick="dropSortChip(this,'scribe')"></div></div>
             <div class="sort-col"><div class="sort-col-header" style="background:linear-gradient(135deg,#8B6914,#a87f1f);">Root: script/scribe (write)</div><div class="sort-col-drop" data-col="ject" onclick="dropSortChip(this,'ject')"></div></div>
-          </div>
+          
+          <div class="sort-col"><div class="sort-col-header" style="background:linear-gradient(135deg,#C7922C,#C7922C);">Script</div><div class="sort-col-drop" data-col="script" onclick="dropSortChip(this,'script')"></div></div>
+        </div>
           <div class="sort-score" id="sortScore"></div>
         </div></div>
 </div>
@@ -2944,7 +2948,7 @@ function fireConfetti() {
 /* ───── WORD SORT GAME ───── */
 var sortSelected = null;
 var sortPlaced = 0;
-var sortTotal = 6;
+var sortTotal = 8;
 
 function pickSortChip(chip) {
   if (chip.classList.contains('placed')) return;

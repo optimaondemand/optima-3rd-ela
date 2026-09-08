@@ -1640,8 +1640,11 @@ body {
 @keyframes shake { 0%,100%{transform:translateX(0)} 25%{transform:translateX(-6px)} 75%{transform:translateX(6px)} }
 .sort-columns {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 14px;
+}
+@media (max-width: 640px) {
+  .sort-columns { grid-template-columns: 1fr; }
 }
 .sort-col {
   background: #FFFFFF;
@@ -1874,6 +1877,8 @@ body {
   .header-title { font-size: 22px; }
   .tab-btn { min-width: 100px; font-size: 11px; padding: 10px 6px 9px; }
 }
+.sort-columns { grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); }
+@media (max-width: 620px){ .sort-columns { grid-template-columns: 1fr; } }
 </style>
 <style>
 .decode-steps{margin:14px 0}.decode-step{display:flex;gap:14px;margin-bottom:16px;align-items:flex-start}.decode-step:last-child{margin-bottom:0}.decode-step-num{width:36px;height:36px;border-radius:50%;color:#fff;font-size:18px;font-weight:800;display:flex;align-items:center;justify-content:center;flex-shrink:0}.decode-step-content{flex:1}.decode-step-title{font-size:16px;font-weight:800;color:#0E1C42;margin-bottom:4px}.decode-step-text{font-size:15px;color:#3A4A6B;line-height:1.6;margin-bottom:8px}.decode-sentence{background:#FFF8F0;border:2px solid #F5E6C8;border-left:4px solid #C7922C;border-radius:10px;padding:12px 16px;font-family:"Lora",Georgia,serif;font-size:16px;color:#0E1C42;line-height:1.6;font-style:italic;margin-bottom:10px}.decode-word-parts{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin:8px 0}.decode-part{display:inline-flex;padding:6px 14px;border-radius:8px;font-family:"Lora",Georgia,serif;font-size:16px;font-weight:700}.decode-part-root{background:#F0E8FF;color:#8B6FC0;border:1.5px solid #D8CCF0}.decode-part-affix{background:#EAF8FD;color:#1A6B8E;border:1.5px solid #D6F2FB}.decode-part-plus{color:#B0B8CC;font-size:12px;font-weight:800}.decode-reveal{display:none;background:#E3F8ED;border:2px solid #B8E8CF;border-left:4px solid #34B76F;border-radius:10px;padding:12px 16px;font-size:15px;color:#0E1C42;line-height:1.5;margin-top:8px}.decode-reveal.show{display:block}.vocab-decode-item{margin-bottom:14px}.fluency-passage{background:linear-gradient(135deg,#FFF8F0 0%,#FFF3DC 100%);border:2px solid #F5E6C8;border-left:6px solid #C7922C;border-radius:14px;padding:20px 24px;margin-bottom:16px;font-family:"Lora",Georgia,serif;font-size:17px;color:#0E1C42;line-height:1.85;font-style:italic}.textbox-prompt{font-size:15px;color:#3A4A6B;line-height:1.6;margin-bottom:8px;padding:10px 14px;background:#FAFBFF;border:1.5px solid #E2E8F4;border-radius:10px}
@@ -2199,52 +2204,56 @@ body {
 <div class="fillin-feedback" id="fillinFeedback">🌱 All correct!</div></div>
 </div></div>
 <div class="activity bl-cyan">
-<div class="activity-head"><div class="activity-num" style="background:#55C8E8;">2</div><div style="flex:1;"><div class="activity-title">🔤 Vocabulary: This Week's Words</div><div class="activity-sub">Context Clues</div></div></div>
+<div class="activity-head"><div class="activity-num" style="background:#55C8E8;">2</div><div style="flex:1;"><div class="activity-title">🔤 Vocabulary: Words We've Met Before</div><div class="activity-sub">Weeks 1&ndash;4 review &mdash; use the sentence to check yourself</div></div></div>
 <div class="activity-body">
-<p>These words show up in this week's reading. Tap a card to see the definition.</p>
+<p>All four words come back from Weeks 1&ndash;4 &mdash; one from each week. Try to say each meaning before you tap the card.</p>
 <div class="vocab-grid">
-<div class="vocab-decode-item"><div class="decode-sentence" style="margin-bottom:10px;">&ldquo;Across it lay the enormous <strong>bulletin</strong> board.&rdquo;</div>
-<div class="flip-card" onclick="this.classList.toggle('flipped')"><div class="flip-card-inner"><div class="flip-card-front"><div class="fc-emoji">📋</div><div class="fc-word">bulletin</div><div class="fc-tap">tap to flip</div></div><div class="flip-card-back"><div class="fc-word-back">bulletin</div><div class="fc-def">A board where you pin up messages and pictures.</div></div></div></div></div>
-<div class="vocab-decode-item"><div class="decode-sentence" style="margin-bottom:10px;">&ldquo;Dr. Dan <strong>examined</strong> Stanley all over.&rdquo;</div>
-<div class="flip-card" onclick="this.classList.toggle('flipped')"><div class="flip-card-inner"><div class="flip-card-front"><div class="fc-emoji">🏥</div><div class="fc-word">examined</div><div class="fc-tap">tap to flip</div></div><div class="flip-card-back"><div class="fc-word-back">examined</div><div class="fc-def">Looked at very carefully.</div></div></div></div></div>
-<div class="vocab-decode-item"><div class="decode-sentence" style="margin-bottom:10px;">&ldquo;At bedtime he was still <strong>cross</strong>.&rdquo;</div>
-<div class="flip-card" onclick="this.classList.toggle('flipped')"><div class="flip-card-inner"><div class="flip-card-front"><div class="fc-emoji">😤</div><div class="fc-word">cross</div><div class="fc-tap">tap to flip</div></div><div class="flip-card-back"><div class="fc-word-back">cross</div><div class="fc-def">Angry or annoyed.</div></div></div></div></div>
-<div class="vocab-decode-item"><div class="decode-sentence" style="margin-bottom:10px;">&ldquo;Mrs. Lambchop made hot chocolate to <strong>celebrate</strong>.&rdquo;</div>
-<div class="flip-card" onclick="this.classList.toggle('flipped')"><div class="flip-card-inner"><div class="flip-card-front"><div class="fc-emoji">🎉</div><div class="fc-word">celebrate</div><div class="fc-tap">tap to flip</div></div><div class="flip-card-back"><div class="fc-word-back">celebrate</div><div class="fc-def">To do something special because of good news.</div></div></div></div></div>
+<div class="vocab-decode-item">
+<div style="font-size:12px;font-weight:700;color:#8B6FC0;letter-spacing:.5px;margin-bottom:4px;">FROM Week 1</div>
+<div class="decode-sentence" style="margin-bottom:10px;">&ldquo;Sometimes we doctors, despite all our years of training and experience, can only <strong>marvel</strong> at how little we really know.&rdquo;</div>
+<div class="flip-card" onclick="this.classList.toggle('flipped')"><div class="flip-card-inner"><div class="flip-card-front"><div class="fc-emoji">😲</div><div class="fc-word">marvel</div><div class="fc-tap">think first, then tap</div></div><div class="flip-card-back"><div class="fc-word-back">marvel</div><div class="fc-def">To be amazed or surprised by something.</div></div></div></div></div>
+<div class="vocab-decode-item">
+<div style="font-size:12px;font-weight:700;color:#8B6FC0;letter-spacing:.5px;margin-bottom:4px;">FROM Week 2</div>
+<div class="decode-sentence" style="margin-bottom:10px;">&ldquo;Mrs. Lambchop said she thought Stanley&rsquo;s clothes would have to be altered by the tailor now, so Dr. Dan told his nurse to take Stanley&rsquo;s <strong>measurements</strong>.&rdquo;</div>
+<div class="flip-card" onclick="this.classList.toggle('flipped')"><div class="flip-card-inner"><div class="flip-card-front"><div class="fc-emoji">📐</div><div class="fc-word">measurements</div><div class="fc-tap">think first, then tap</div></div><div class="flip-card-back"><div class="fc-word-back">measurements</div><div class="fc-def">The size of something &mdash; how tall, wide, or thick.</div></div></div></div></div>
+<div class="vocab-decode-item">
+<div style="font-size:12px;font-weight:700;color:#8B6FC0;letter-spacing:.5px;margin-bottom:4px;">FROM Week 3</div>
+<div class="decode-sentence" style="margin-bottom:10px;">&ldquo;Arthur got <strong>jealous</strong> and tried to slide under a door, but he just banged his head.&rdquo;</div>
+<div class="flip-card" onclick="this.classList.toggle('flipped')"><div class="flip-card-inner"><div class="flip-card-front"><div class="fc-emoji">🫣</div><div class="fc-word">jealous</div><div class="fc-tap">think first, then tap</div></div><div class="flip-card-back"><div class="fc-word-back">jealous</div><div class="fc-def">Wanting what someone else has.</div></div></div></div></div>
+<div class="vocab-decode-item">
+<div style="font-size:12px;font-weight:700;color:#8B6FC0;letter-spacing:.5px;margin-bottom:4px;">FROM Week 4</div>
+<div class="decode-sentence" style="margin-bottom:10px;">&ldquo;A round-trip train or airplane ticket to California is very <strong>expensive</strong>,&rdquo; he said.</div>
+<div class="flip-card" onclick="this.classList.toggle('flipped')"><div class="flip-card-inner"><div class="flip-card-front"><div class="fc-emoji">💲</div><div class="fc-word">expensive</div><div class="fc-tap">think first, then tap</div></div><div class="flip-card-back"><div class="fc-word-back">expensive</div><div class="fc-def">Costing a lot of money.</div></div></div></div></div>
 </div>
 <div class="callout callout-info" style="margin-top:16px;"><span class="callout-icon">🎯</span><p><strong>Quick Match:</strong> Tap a word, then tap its meaning.</p></div>
 <div class="match-game" id="vocabMatch"><div class="match-grid" id="matchGrid">
-<div class="match-item is-word" data-match="A" onclick="matchClick(this)">bulletin</div>
-<div class="match-item" data-match="A" onclick="matchClick(this)">A board where you pin up messages and pictures.</div>
-<div class="match-item is-word" data-match="B" onclick="matchClick(this)">examined</div>
-<div class="match-item" data-match="B" onclick="matchClick(this)">Looked at very carefully.</div>
-<div class="match-item is-word" data-match="C" onclick="matchClick(this)">cross</div>
-<div class="match-item" data-match="C" onclick="matchClick(this)">Angry or annoyed.</div>
-<div class="match-item is-word" data-match="D" onclick="matchClick(this)">celebrate</div>
-<div class="match-item" data-match="D" onclick="matchClick(this)">To do something special because of good news.</div>
+<div class="match-item is-word" data-match="A" onclick="matchClick(this)">marvel</div>
+<div class="match-item" data-match="A" onclick="matchClick(this)">To be amazed or surprised by something.</div>
+<div class="match-item is-word" data-match="B" onclick="matchClick(this)">measurements</div>
+<div class="match-item" data-match="B" onclick="matchClick(this)">The size of something &mdash; how tall, wide, or thick.</div>
+<div class="match-item is-word" data-match="C" onclick="matchClick(this)">jealous</div>
+<div class="match-item" data-match="C" onclick="matchClick(this)">Wanting what someone else has.</div>
+<div class="match-item is-word" data-match="D" onclick="matchClick(this)">expensive</div>
+<div class="match-item" data-match="D" onclick="matchClick(this)">Costing a lot of money.</div>
 </div><div class="match-feedback" id="matchFeedback">✨ All matched!</div></div>
 </div></div>
 <div class="activity bl-gold">
-<div class="activity-head"><div class="activity-num" style="background:#C7922C;">3</div><div style="flex:1;"><div class="activity-title">✏️ Grammar: Past-tense verbs</div><div class="activity-sub">Use / Apply the skill.</div></div></div>
+<div class="activity-head"><div class="activity-num" style="background:#C7922C;">3</div><div style="flex:1;"><div class="activity-title">✏️ Grammar: Past-tense verbs</div><div class="activity-sub">Fix the verb that slipped into the wrong tense.</div></div></div>
 <div class="activity-body">
 <div class="task-box" style="background:#FFF8E8;border-color:#F5E6C8;"><div class="task-label" style="color:#C7922C;">👉 Example</div>
-<div class="task-sentence">Stanley walked / Stanley walks — past vs. present</div>
-<p style="font-size:15px;color:#3A4A6B;line-height:1.6;margin-top:8px;">Use past tense in narratives about things that already happened</p></div>
-<div class="callout callout-info" style="margin-top:14px;"><span class="callout-icon">🎯</span><p><strong>Practice!</strong> Identify the correct answer for each item.</p></div>
+<div class="task-sentence">Yesterday I <strong>pack</strong> my bag. &rarr; Yesterday I <strong>packed</strong> my bag.</div>
+<p style="font-size:15px;color:#3A4A6B;line-height:1.6;margin-top:8px;">A narrative about something that already happened stays in <strong>past tense</strong> the whole way through.</p></div>
+<div class="callout callout-info" style="margin-top:14px;"><span class="callout-icon">🎯</span><p><strong>Your turn.</strong> Each sentence tells about the past, but <strong>one verb is still in the present tense</strong>. Tap that verb. Tap a word to check your answer. If it turns green, you got it.</p></div>
 <div class="spotter-game" id="grammarGame">
-<div class="spotter-sentence" id="gram1">
-<span style="font-size:16px;color:#0E1C42;">flattened → <em>past</em></span>
-<div class="spotter-result" id="gram1-result"></div></div>
-<div class="spotter-sentence" id="gram2">
-<span style="font-size:16px;color:#0E1C42;">catches → <em>present</em></span>
-<div class="spotter-result" id="gram2-result"></div></div>
-<div class="spotter-sentence" id="gram3">
-<span style="font-size:16px;color:#0E1C42;">pumped → <em>past</em></span>
-<div class="spotter-result" id="gram3-result"></div></div>
-<div class="spotter-sentence" id="gram4">
-<span style="font-size:16px;color:#0E1C42;">celebrates → <em>present</em></span>
-<div class="spotter-result" id="gram4-result"></div></div>
+<div class="spotter-sentence" id="gram1"><span class="spotter-word" onclick="spotterPick(this,'gram1')" data-correct="false">Yesterday</span> <span class="spotter-word" onclick="spotterPick(this,'gram1')" data-correct="false">I</span> <span class="spotter-word" onclick="spotterPick(this,'gram1')" data-correct="true">pack</span> <span class="spotter-word" onclick="spotterPick(this,'gram1')" data-correct="false">my</span> <span class="spotter-word" onclick="spotterPick(this,'gram1')" data-correct="false">bag</span> <span class="spotter-word" onclick="spotterPick(this,'gram1')" data-correct="false">and</span> <span class="spotter-word" onclick="spotterPick(this,'gram1')" data-correct="false">walked</span> <span class="spotter-word" onclick="spotterPick(this,'gram1')" data-correct="false">to</span> <span class="spotter-word" onclick="spotterPick(this,'gram1')" data-correct="false">school.</span><div class="spotter-result" id="gram1-result"></div></div>
+<div class="spotter-sentence" id="gram2"><span class="spotter-word" onclick="spotterPick(this,'gram2')" data-correct="false">Stanley</span> <span class="spotter-word" onclick="spotterPick(this,'gram2')" data-correct="false">folded</span> <span class="spotter-word" onclick="spotterPick(this,'gram2')" data-correct="false">the</span> <span class="spotter-word" onclick="spotterPick(this,'gram2')" data-correct="false">letter</span> <span class="spotter-word" onclick="spotterPick(this,'gram2')" data-correct="false">and</span> <span class="spotter-word" onclick="spotterPick(this,'gram2')" data-correct="true">mails</span> <span class="spotter-word" onclick="spotterPick(this,'gram2')" data-correct="false">it.</span><div class="spotter-result" id="gram2-result"></div></div>
+<div class="spotter-sentence" id="gram3"><span class="spotter-word" onclick="spotterPick(this,'gram3')" data-correct="false">We</span> <span class="spotter-word" onclick="spotterPick(this,'gram3')" data-correct="false">planned</span> <span class="spotter-word" onclick="spotterPick(this,'gram3')" data-correct="false">the</span> <span class="spotter-word" onclick="spotterPick(this,'gram3')" data-correct="false">trip</span> <span class="spotter-word" onclick="spotterPick(this,'gram3')" data-correct="false">and</span> <span class="spotter-word" onclick="spotterPick(this,'gram3')" data-correct="true">pick</span> <span class="spotter-word" onclick="spotterPick(this,'gram3')" data-correct="false">a</span> <span class="spotter-word" onclick="spotterPick(this,'gram3')" data-correct="false">date.</span><div class="spotter-result" id="gram3-result"></div></div>
+<div class="spotter-sentence" id="gram4"><span class="spotter-word" onclick="spotterPick(this,'gram4')" data-correct="false">She</span> <span class="spotter-word" onclick="spotterPick(this,'gram4')" data-correct="true">smiles</span> <span class="spotter-word" onclick="spotterPick(this,'gram4')" data-correct="false">when</span> <span class="spotter-word" onclick="spotterPick(this,'gram4')" data-correct="false">she</span> <span class="spotter-word" onclick="spotterPick(this,'gram4')" data-correct="false">opened</span> <span class="spotter-word" onclick="spotterPick(this,'gram4')" data-correct="false">the</span> <span class="spotter-word" onclick="spotterPick(this,'gram4')" data-correct="false">box.</span><div class="spotter-result" id="gram4-result"></div></div>
 </div>
+<div class="swyk" style="margin-top:16px;"><div class="swyk-label">✏️ Grammar in your own words</div>
+<div class="swyk-prompt">Copy one sentence from your narrative that uses a past-tense verb. Then explain how you know it is past tense.</div>
+<div class="journal-label">📓 Your answer <span class="saved-dot" id="dot-gram"></span></div>
+<textarea class="journal-box" id="journal-gram" data-label="Grammar: Past tense in my own writing" placeholder="One sentence from my narrative is..." oninput="autoSave(this,'dot-gram')"></textarea></div>
 </div></div>
 <div class="activity bl-navy">
 <div class="activity-head"><div class="activity-num" style="background:#0E1C42;">4</div><div style="flex:1;"><div class="activity-title">🔠 Spelling: Three sounds of -ed</div><div class="activity-sub">Use / Apply the pattern.</div></div></div>
@@ -2262,6 +2271,8 @@ body {
 </div><div class="sort-columns">
 <div class="sort-col"><div class="sort-col-header" style="background:linear-gradient(135deg,#55C8E8,#7FD8F0);">ed=/d/</div><div class="sort-col-drop" data-col="ed=/d/" onclick="dropSortChip(this,'ed=/d/')"></div></div>
 <div class="sort-col"><div class="sort-col-header" style="background:linear-gradient(135deg,#55C8E8,#7FD8F0);">ed=/t/</div><div class="sort-col-drop" data-col="ed=/t/" onclick="dropSortChip(this,'ed=/t/')"></div></div>
+
+<div class="sort-col"><div class="sort-col-header" style="background:linear-gradient(135deg,#55C8E8,#7FD8F0);">ed=/ĕd/</div><div class="sort-col-drop" data-col="ed=/ĕd/" onclick="dropSortChip(this,'ed=/ĕd/')"></div></div>
 </div><div class="sort-score" id="sortScore"></div></div>
 <div class="swyk"><div class="swyk-label">🪶 Show What You Know</div>
 <div class="swyk-prompt">Explain the three sounds of -ed pattern in your own words. Write two example words.</div>
@@ -2300,9 +2311,12 @@ body {
 </div>
 <div class="tracker-chapter-label">📍 You are here: <strong>Selected Excerpts &mdash; Editing Focus</strong></div></div>
 <div class="activity bl-purple">
-<div class="activity-head"><div class="activity-num" style="background:#8B6FC0;">📚</div><div style="flex:1;"><div class="activity-title">📚 What Good Readers Do</div><div class="activity-sub">Summarize the most important events.</div></div></div>
+<div class="activity-head"><div class="activity-num" style="background:#8B6FC0;">1</div><div style="flex:1;"><div class="activity-title">📚 What Good Readers Do</div><div class="activity-sub">Summarize the most important events.</div></div></div>
 <div class="activity-body">
-<p>Summarize the most important events.</p>
+<p>Good readers <strong>summarize</strong> before they polish. Knowing the most important events of a piece tells you which sentences are doing real work &mdash; and which ones are just taking up space.</p>
+<p>As you read today's excerpts, notice how clean, correct sentences make the important events easier to follow.</p>
+<div class="socratic-box"><div class="socratic-label">🧠 Think about this</div>
+<p class="socratic-q">If a sentence in your story disappeared, would your summary change? <strong>What does that tell you about the sentence?</strong></p></div>
 <div class="journal-label">📓 Your thoughts <span class="saved-dot" id="dot-wgrd"></span></div>
 <textarea class="journal-box" id="journal-wgrd" data-label="What Good Readers Do" placeholder="I noticed..." oninput="autoSave(this,'dot-wgrd')"></textarea>
 </div></div>
@@ -2384,7 +2398,7 @@ function switchTab(tabId){document.querySelectorAll(".tab-panel").forEach(functi
 function expandIntro(){document.getElementById("introSection").classList.remove("collapsed")}
 function gatherAnswers(){var output="";var sections=[
 {title:"🌅 WARM-UP",ids:["journal-wgrd","journal-dol"]},
-{title:"🔤 WORD STUDY",ids:["journal-swyk","journal-writing"]},
+{title:"🔤 WORD STUDY",ids:["journal-swyk","journal-gram","journal-writing"]},
 {title:"📖 READING",ids:["journal-pause1"]},
 {title:"📬 COMPREHENSION",ids:["journal-q1","journal-q2","journal-q3","journal-wp"]}
 ];
@@ -2404,6 +2418,27 @@ function fireConfetti(){var cv=document.getElementById("confettiCanvas");var ctx
 /* ───── AUTO-SAVE ───── */
 /* Unique key derived from the page title so each lesson's data stays separate */
 var _lessonKey = (document.title || 'ela-lesson').replace(/[^a-zA-Z0-9]+/g,'-').toLowerCase();
+
+
+/* ───── SPOTTER (tap-to-choose) ───── */
+function spotterPick(word, sentenceId) {
+  var sentence = document.getElementById(sentenceId);
+  if (!sentence || sentence.getAttribute('data-done') === 'true') return;
+  sentence.querySelectorAll('.spotter-word').forEach(function(w){ w.classList.remove('selected'); });
+  var result = document.getElementById(sentenceId + '-result');
+  var isCorrect = word.getAttribute('data-correct') === 'true';
+  if (isCorrect) {
+    word.classList.add('correct-reveal');
+    result.textContent = '\u2705 Correct!';
+    result.className = 'spotter-result show win';
+    sentence.setAttribute('data-done', 'true');
+  } else {
+    word.classList.add('wrong-reveal');
+    result.textContent = '\ud83e\udd14 Not quite \u2014 try again!';
+    result.className = 'spotter-result show miss';
+    setTimeout(function(){ word.classList.remove('wrong-reveal'); result.classList.remove('show'); }, 1500);
+  }
+}
 
 function autoSave(el,dotId){
   var dot=document.getElementById(dotId);
@@ -2446,7 +2481,7 @@ window.addEventListener('beforeunload', function(e){
   }
 });
 window._fillinDone=false;function checkFillIn(){var ins=document.querySelectorAll(".fillin-input");var ok=true;ins.forEach(function(inp){var a=inp.getAttribute("data-answer").toLowerCase();var v=inp.value.trim().toLowerCase();if(v===a){inp.classList.remove("wrong");inp.classList.add("correct");inp.disabled=true}else{inp.classList.remove("correct");inp.classList.add("wrong");ok=false;setTimeout(function(){inp.classList.remove("wrong")},600)}});if(ok){document.getElementById("fillinFeedback").classList.add("show");window._fillinDone=true}}
-var sortSelected=null;var sortPlaced=0;var sortTotal=8;
+var sortSelected=null;var sortPlaced=0;var sortTotal = 8;
 function pickSortChip(c){if(c.classList.contains("placed"))return;if(sortSelected)sortSelected.style.outline="";sortSelected=c;c.style.outline="3px solid #55C8E8";c.style.outlineOffset="2px"}
 function dropSortChip(col,colName){if(!sortSelected)return;var g=sortSelected.getAttribute("data-group");var cl=sortSelected.cloneNode(true);cl.style.outline="";cl.onclick=null;cl.style.cursor="default";if(g===colName){cl.classList.add("correct");sortSelected.classList.add("placed");col.appendChild(cl);sortPlaced++}else{cl.classList.add("wrong");col.appendChild(cl);setTimeout(function(){col.removeChild(cl)},600)}sortSelected.style.outline="";sortSelected=null;if(sortPlaced>=sortTotal){var sc=document.getElementById("sortScore");sc.textContent="🎉 All sorted correctly!";sc.classList.add("show")}}
 var matchFirst=null;var matchCount=0;function matchClick(item){if(item.classList.contains("matched"))return;if(!matchFirst){matchFirst=item;item.classList.add("selected");return}if(matchFirst===item){matchFirst.classList.remove("selected");matchFirst=null;return}var k1=matchFirst.getAttribute("data-match");var k2=item.getAttribute("data-match");if(k1===k2&&matchFirst.classList.contains("is-word")!==item.classList.contains("is-word")){matchFirst.classList.remove("selected");matchFirst.classList.add("matched");item.classList.add("matched");matchCount++;matchFirst=null;if(matchCount>=4){document.getElementById("matchFeedback").classList.add("show")}}else{item.classList.add("wrong-flash");matchFirst.classList.add("wrong-flash");var a=matchFirst;var b=item;setTimeout(function(){a.classList.remove("wrong-flash","selected");b.classList.remove("wrong-flash")},500);matchFirst=null}}

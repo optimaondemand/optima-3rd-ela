@@ -2148,6 +2148,8 @@ body {
 .header-badge { background:rgba(27,122,78,0.18); border-color:rgba(27,122,78,0.4); }
 .wp-step.current { border-color:#D4AF37; box-shadow:0 0 0 3px rgba(212,175,55,0.25); }
 .wp-step.done { border-color:#1B7A4E; }
+.sort-columns { grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); }
+@media (max-width: 620px){ .sort-columns { grid-template-columns: 1fr; } }
 </style>
 
 </head>
@@ -2501,7 +2503,7 @@ body {
         <div class="decode-step-content">
           <div class="decode-step-title">Read the Sentence</div>
           <div class="decode-step-text">Find the word in context. What clues does the sentence give?</div>
-          <div class="decode-sentence">&ldquo;They were the rightful sovereign rulers of Narnia, and all the creatures bowed before them.&rdquo;</div>
+          <div class="decode-sentence">&ldquo;Once a king or queen in Narnia, always a king or queen.&rdquo;</div>
           <div class="decode-step-text">The children are crowned as kings and queens with full authority over Narnia. Sovereign probably means the highest ruler — someone with complete authority over a land.</div>
         </div>
       </div>
@@ -2559,7 +2561,9 @@ body {
           <div class="sort-columns">
             <div class="sort-col"><div class="sort-col-header" style="background:linear-gradient(135deg,#1B7A4E,#2EA863);">Magic-e or vowel team</div><div class="sort-col-drop" data-col="vowel_team" onclick="dropSortChip(this,'vowel_team')"></div></div>
             <div class="sort-col"><div class="sort-col-header" style="background:linear-gradient(135deg,#8B6914,#a87f1f);">Prefix + base word</div><div class="sort-col-drop" data-col="magic_e" onclick="dropSortChip(this,'magic_e')"></div></div>
-          </div>
+          
+          <div class="sort-col"><div class="sort-col-header" style="background:linear-gradient(135deg,#C7922C,#C7922C);">Prefix base-</div><div class="sort-col-drop" data-col="prefix_base" onclick="dropSortChip(this,'prefix_base')"></div></div>
+        </div>
           <div class="sort-score" id="sortScore"></div>
         </div></div>
 </div>
@@ -2943,7 +2947,7 @@ function fireConfetti() {
 /* ───── WORD SORT GAME ───── */
 var sortSelected = null;
 var sortPlaced = 0;
-var sortTotal = 6;
+var sortTotal = 9;
 
 function pickSortChip(chip) {
   if (chip.classList.contains('placed')) return;

@@ -1910,6 +1910,8 @@ body {
   .header-title { font-size: 22px; }
   .tab-btn { min-width: 100px; font-size: 11px; padding: 10px 6px 9px; }
 }
+.sort-columns { grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); }
+@media (max-width: 620px){ .sort-columns { grid-template-columns: 1fr; } }
 </style>
 </head>
 <body>
@@ -2275,8 +2277,8 @@ body {
     <div class="activity-body">
       <div class="copywork-box">
         <div class="copywork-label">📜 From the novel</div>
-        <div class="copywork-text">He had been born with large ears and open eyes and a love for music and a human princess. He had been told, all his life, that these were mistakes. He had believed, at last, that they were not.</div>
-        <div class="copywork-instruction">Copy this passage. The three sentences follow the same pattern. Sentence 3 resolves what sentences 1 and 2 set up. Try writing three parallel sentences about your own character: what they were told, what they had, and what they discovered.</div>
+        <div class="copywork-text">The April sun, weak but determined, shone through a castle window and from there squeezed itself through a small hole in the wall and placed one golden finger on the little mouse.</div>
+        <div class="copywork-instruction">Copy the sentence the book opens with. One finger of light reaches a mouse who should not have his eyes open. Notice how much of the whole story is already here.</div>
       </div>
     </div>
   </div>
@@ -2309,35 +2311,30 @@ Could not follow it in its flight.</div>
 <div class="tab-panel" id="tab-words">
 
   <!-- ═══ MORPHOLOGY ═══ -->
-  <div class="activity bl-purple">
-    <div class="activity-head"><div class="activity-num" style="background:#8B6FC0;">1</div><div style="flex:1;"><div class="activity-title">🌱 Morphology: The Suffix <em>-ness</em></div><div class="activity-sub">A suffix that turns an adjective into a noun</div></div></div>
+  <div class="activity bl-green">
+    <div class="activity-head"><div class="activity-num" style="background:#34B76F;">1</div><div style="flex:1;"><div class="activity-title">🌱 Morphology: base + suffix</div><div class="activity-sub">Day 4: Review &mdash; Pull it all together and explain it.</div></div></div>
     <div class="activity-body">
-            <p>When we add <strong>-ness</strong> to an adjective, it becomes a noun that names a quality or state. Kate DiCamillo uses -ness words throughout <em>The Tale of Despereaux</em> to describe emotions and places.</p>
-      <div class="key-concept">
-        <div class="key-concept-label">📌 Examples from the Novel</div>
-        <p><strong>dark<u>ness</u></strong> &mdash; base word <em>dark</em> + -ness = the state of being dark</p>
-        <p><strong>sad<u>ness</u></strong> &mdash; base word <em>sad</em> + -ness = the quality of being sad</p>
-        <p><strong>kind<u>ness</u></strong> &mdash; base word <em>kind</em> + -ness = the state of being kind</p>
-        <p><strong>bright<u>ness</u></strong> &mdash; base word <em>bright</em> + -ness = the quality of being bright</p>
-      </div>
-
-      <!-- Learn & Practice (ungraded) -->
-      <div class="callout callout-info"><span class="callout-icon">🧩</span><p><strong>Practice: Build It!</strong> Type the base word that makes each -ing word.</p></div>
+      <p>This week&rsquo;s word part was <strong>base + suffix</strong>, meaning <em>putting the pieces together</em>.</p>
+      <div class="key-concept"><div class="key-concept-label">📌 The week in one place</div>
+        <p><strong>hopeful</strong> &mdash; base word <em>hope</em> = full of hope</p>
+        <p><strong>hopeless</strong> &mdash; base word <em>hope</em> = without hope</p>
+        <p><strong>hopelessness</strong> &mdash; base word <em>hope</em> = the state of being without hope</p>
+        <p><strong>hopelessly</strong> &mdash; base word <em>hope</em> = in a hopeless way</p>
+        </div>
+      <div class="callout callout-info" style="margin-top:14px;"><span class="callout-icon">🧩</span><p><strong>Review: Build it one more time.</strong></p></div>
       <div class="fillin-game" id="fillinGame">
-        <div class="fillin-item"><input class="fillin-input" id="fill1" data-answer="shine" maxlength="8" placeholder="______"> → shin<strong>ing</strong> (the sun was shining)</div>
-        <div class="fillin-item"><input class="fillin-input" id="fill2" data-answer="stare" maxlength="8" placeholder="______"> → star<strong>ing</strong> (he was staring at the light)</div>
-        <div class="fillin-item"><input class="fillin-input" id="fill3" data-answer="sniff" maxlength="8" placeholder="______"> → sniff<strong>ing</strong> (she was sniffing)</div>
-        <div class="fillin-item"><input class="fillin-input" id="fill4" data-answer="hold" maxlength="8" placeholder="______"> → hold<strong>ing</strong> (he was holding a handkerchief)</div>
+        <div class="fillin-item"><input class="fillin-input" id="fill1" data-answer="hope" maxlength="12" placeholder="______"> &rarr; <strong>hopeless</strong></div>
+        <div class="fillin-item"><input class="fillin-input" id="fill2" data-answer="dark" maxlength="12" placeholder="______"> &rarr; <strong>darkness</strong></div>
+        <div class="fillin-item"><input class="fillin-input" id="fill3" data-answer="brave" maxlength="12" placeholder="______"> &rarr; <strong>bravely</strong></div>
+        <div class="fillin-item"><input class="fillin-input" id="fill4" data-answer="possible" maxlength="12" placeholder="______"> &rarr; <strong>impossible</strong></div>
         <button class="fillin-check-btn" onclick="checkFillIn()">Check My Words</button>
         <div class="fillin-feedback" id="fillinFeedback">🌱 All base words correct!</div>
       </div>
-
-      <!-- Show What You Know (graded) -->
       <div class="swyk">
         <div class="swyk-label">🪶 Show What You Know</div>
-        <div class="swyk-prompt">The word <em>darkness</em> appears many times in Book Two. What is the base word? What does the suffix -ness add to its meaning? Why do you think the author chose this word so often?</div>
+        <div class="swyk-prompt">Teach <strong>base + suffix</strong> to someone who has never seen it. Explain what it means and give two examples.</div>
         <div class="journal-label">📓 Your answer <span class="saved-dot" id="dot-morph"></span></div>
-        <textarea class="journal-box" id="journal-morph" data-label="Morphology: The Suffix <em>-ness</em>" placeholder="The suffix The means..." oninput="autoSave(this,'dot-morph')"></textarea>
+        <textarea class="journal-box" id="journal-morph" data-label="Morphology: base + suffix" placeholder="The word part base + suffix means..." oninput="autoSave(this,'dot-morph')"></textarea>
       </div>
     </div>
   </div>
@@ -2345,12 +2342,11 @@ Could not follow it in its flight.</div>
   <!-- ═══ VOCABULARY ═══ -->
   <div class="activity bl-cyan">
     <div class="activity-head"><div class="activity-num" style="background:#55C8E8;">2</div><div style="flex:1;"><div class="activity-title">🔤 Vocabulary</div><div class="activity-sub">Words from this week's chapters.</div></div></div>
-    <div class="activity-body">
-            <p>When you meet a word you don&rsquo;t know, use these three steps <em>in order</em>:</p>
+        <div class="activity-body">
+      <p>Every word below comes from the chapters you are reading this week, in the author&rsquo;s own sentence. When you meet a word you don&rsquo;t know, use these three steps <em>in order</em>:</p>
 
-      <!-- MODELED WORD -->
       <div class="key-concept">
-        <div class="key-concept-label">📌 Let&rsquo;s try it together: &ldquo;chiaroscuro&rdquo;</div>
+        <div class="key-concept-label">📌 Let&rsquo;s try it together: &ldquo;sacred&rdquo;</div>
       </div>
 
       <div class="decode-steps">
@@ -2359,8 +2355,8 @@ Could not follow it in its flight.</div>
           <div class="decode-step-content">
             <div class="decode-step-title">Read the Sentence</div>
             <div class="decode-step-text">Find the word in the book. What clues does the sentence give you?</div>
-            <div class="decode-sentence">&ldquo;The rat's name was Chiaroscuro. "Chiaroscuro" is a word that means the arrangement of light and dark.&rdquo;</div>
-            <div class="decode-step-text">The author actually <em>tells</em> us what this word means right in the text. Roscuro's full name, Chiaroscuro, comes from Italian art: it means the contrast of light and shadow. This fits perfectly for a rat caught between darkness and light.</div>
+            <div class="decode-sentence">&ldquo;Do you, Despereaux Tilling, understand the sacred, never-to-be-broken rules of conduct for being a mouse?&rdquo;</div>
+            <div class="decode-step-text">The words right after it &mdash; <em>never-to-be-broken</em> &mdash; tell you what sacred means. Something sacred is so important that breaking it is unthinkable.</div>
           </div>
         </div>
         <div class="decode-step">
@@ -2368,12 +2364,7 @@ Could not follow it in its flight.</div>
           <div class="decode-step-content">
             <div class="decode-step-title">Look at the Word Parts</div>
             <div class="decode-step-text">Do you see a root, prefix, or suffix you recognize?</div>
-            <div class="decode-word-parts">
-              <span class="decode-part decode-part-root">obscene</span>
-              <span class="decode-part-plus">+</span>
-              <span class="decode-part decode-part-affix">-ly</span>
-            </div>
-            <div class="decode-step-text"></div>
+            <div class="decode-word-parts"><span class="decode-part decode-part-root">sacred</span></div>
           </div>
         </div>
         <div class="decode-step">
@@ -2381,116 +2372,111 @@ Could not follow it in its flight.</div>
           <div class="decode-step-content">
             <div class="decode-step-title">Confirm</div>
             <div class="decode-step-text">Were we close?</div>
-            <div class="decode-reveal show" style="display:block;">✅ <strong>Chiaroscuro</strong> is an art term meaning the contrast of light and dark. The author chose it deliberately for Roscuro.</div>
+            <div class="decode-reveal show" style="display:block;">✅ Read the sentence again with your meaning in place. Does it still make sense?</div>
           </div>
         </div>
       </div>
 
-      <div class="callout callout-info" style="margin-top:16px;"><span class="callout-icon">🎯</span><p><strong>Your turn!</strong> Each word below has its actual sentence from the book. Read the sentence, look for word parts, and guess what the word means. Then tap the card to check.</p></div>
+      <div class="callout callout-info" style="margin-top:16px;"><span class="callout-icon">🎯</span><p><strong>Your turn.</strong> Each word below sits in its real sentence from this week&rsquo;s chapters. Read the sentence, look for word parts, decide what the word means &mdash; then tap the card to check.</p></div>
 
       <div class="vocab-grid">
         <div class="vocab-decode-item">
-          <div class="decode-sentence" style="margin-bottom:10px;">&ldquo;He had a great wish, a longing, for the light.&rdquo;</div>
-          <div class="flip-card" onclick="this.classList.toggle('flipped')"><div class="flip-card-inner"><div class="flip-card-front"><div class="fc-emoji">💡</div><div class="fc-word">longing</div><div class="fc-tap">think first, then tap</div></div><div class="flip-card-back"><div class="fc-word-back">longing</div><div class="fc-def">A deep wish or desire for something you do not have.</div></div></div></div>
+          <div class="decode-sentence" style="margin-bottom:10px;">&ldquo;Straight to the dungeon with him.&rdquo;</div>
+          <div class="flip-card" onclick="this.classList.toggle('flipped')"><div class="flip-card-inner"><div class="flip-card-front"><div class="fc-emoji">🔒</div><div class="fc-word">dungeon</div><div class="fc-tap">think first, then tap</div></div><div class="flip-card-back"><div class="fc-word-back">dungeon</div><div class="fc-def">A dark prison room, usually underground.</div></div></div></div>
         </div>
         <div class="vocab-decode-item">
-          <div class="decode-sentence" style="margin-bottom:10px;">&ldquo;The dungeon smelled of despair and suffering and hopelessness.&rdquo;</div>
-          <div class="flip-card" onclick="this.classList.toggle('flipped')"><div class="flip-card-inner"><div class="flip-card-front"><div class="fc-emoji">😔</div><div class="fc-word">despair</div><div class="fc-tap">think first, then tap</div></div><div class="flip-card-back"><div class="fc-word-back">despair</div><div class="fc-def">A feeling of complete hopelessness; giving up on something getting better.</div></div></div></div>
+          <div class="decode-sentence" style="margin-bottom:10px;">&ldquo;The rat&rsquo;s soul was set afire, and because of this, he journeyed upstairs, seeking the light.&rdquo;</div>
+          <div class="flip-card" onclick="this.classList.toggle('flipped')"><div class="flip-card-inner"><div class="flip-card-front"><div class="fc-emoji">✨</div><div class="fc-word">soul</div><div class="fc-tap">think first, then tap</div></div><div class="flip-card-back"><div class="fc-word-back">soul</div><div class="fc-def">The deepest part of a person &mdash; who they really are inside.</div></div></div></div>
         </div>
         <div class="vocab-decode-item">
-          <div class="decode-sentence" style="margin-bottom:10px;">&ldquo;Roscuro stared at the flickering light of Gregory's candle with a furious concentration.&rdquo;</div>
-          <div class="flip-card" onclick="this.classList.toggle('flipped')"><div class="flip-card-inner"><div class="flip-card-front"><div class="fc-emoji">🕯️</div><div class="fc-word">concentration</div><div class="fc-tap">think first, then tap</div></div><div class="flip-card-back"><div class="fc-word-back">concentration</div><div class="fc-def">Focused attention on something; thinking about only one thing.</div></div></div></div>
+          <div class="decode-sentence" style="margin-bottom:10px;">&ldquo;There is no knight in shining armor; it&rsquo;s all just make-believe, like happily ever after.&rdquo;</div>
+          <div class="flip-card" onclick="this.classList.toggle('flipped')"><div class="flip-card-inner"><div class="flip-card-front"><div class="fc-emoji">🛡️</div><div class="fc-word">armor</div><div class="fc-tap">think first, then tap</div></div><div class="flip-card-back"><div class="fc-word-back">armor</div><div class="fc-def">Metal covering worn to protect the body in battle.</div></div></div></div>
         </div>
-      </div>
-      <div class="vocab-grid">
-        <div class="flip-card" onclick="this.classList.toggle('flipped')"><div class="flip-card-inner"><div class="flip-card-front"><div class="fc-emoji">😞</div><div class="fc-word">disappointment</div><div class="fc-tap">tap to flip</div></div><div class="flip-card-back"><div class="fc-word-back">disappointment</div><div class="fc-def">A feeling of sadness when something does not turn out the way you hoped.</div></div></div></div>
-        <div class="flip-card" onclick="this.classList.toggle('flipped')"><div class="flip-card-inner"><div class="flip-card-front"><div class="fc-emoji">🔎</div><div class="fc-word">obscenely</div><div class="fc-tap">tap to flip</div></div><div class="flip-card-back"><div class="fc-word-back">obscenely</div><div class="fc-def">In a way that is shockingly large or extreme; far beyond what is normal.</div></div></div></div>
-        <div class="flip-card" onclick="this.classList.toggle('flipped')"><div class="flip-card-inner"><div class="flip-card-front"><div class="fc-emoji">📣</div><div class="fc-word">proclaimed</div><div class="fc-tap">tap to flip</div></div><div class="flip-card-back"><div class="fc-word-back">proclaimed</div><div class="fc-def">Announced something in a loud, official, or important way.</div></div></div></div>
-        <div class="flip-card" onclick="this.classList.toggle('flipped')"><div class="flip-card-inner"><div class="flip-card-front"><div class="fc-emoji">🐭</div><div class="fc-word">ridiculously</div><div class="fc-tap">tap to flip</div></div><div class="flip-card-back"><div class="fc-word-back">ridiculously</div><div class="fc-def">In a way that seems silly or unbelievable; so much that it is hard to take seriously.</div></div></div></div>
+        <div class="vocab-decode-item">
+          <div class="decode-sentence" style="margin-bottom:10px;">&ldquo;He was crying, reader, because he had been forgiven.&rdquo;</div>
+          <div class="flip-card" onclick="this.classList.toggle('flipped')"><div class="flip-card-inner"><div class="flip-card-front"><div class="fc-emoji">💛</div><div class="fc-word">forgiven</div><div class="fc-tap">think first, then tap</div></div><div class="flip-card-back"><div class="fc-word-back">forgiven</div><div class="fc-def">No longer blamed for something you did wrong.</div></div></div></div>
+        </div>
       </div>
 
-      <!-- Learn & Practice (ungraded) -->
-      </div>
+      <div class="callout callout-info" style="margin-top:16px;"><span class="callout-icon">🎯</span><p><strong>Quick Match:</strong> Tap a word, then tap its meaning.</p></div>
+      <div class="match-game" id="vocabMatch"><div class="match-grid" id="matchGrid">
+        <div class="match-item is-word" data-match="A" onclick="matchClick(this)">dungeon</div>
+        <div class="match-item" data-match="A" onclick="matchClick(this)">A dark prison room, usually underground.</div>
+        <div class="match-item is-word" data-match="B" onclick="matchClick(this)">soul</div>
+        <div class="match-item" data-match="B" onclick="matchClick(this)">The deepest part of a person &mdash; who they really are inside.</div>
+        <div class="match-item is-word" data-match="C" onclick="matchClick(this)">armor</div>
+        <div class="match-item" data-match="C" onclick="matchClick(this)">Metal covering worn to protect the body in battle.</div>
+        <div class="match-item is-word" data-match="D" onclick="matchClick(this)">forgiven</div>
+        <div class="match-item" data-match="D" onclick="matchClick(this)">No longer blamed for something you did wrong.</div>
+      </div><div class="match-feedback" id="matchFeedback">✨ All matched!</div></div>
     </div>
   </div>
 
-  <!-- ═══ GRAMMAR ═══ -->
+<!-- ═══ GRAMMAR ═══ -->
   <div class="activity bl-gold">
-    <div class="activity-head"><div class="activity-num" style="background:#C7922C;">3</div><div style="flex:1;"><div class="activity-title">✏️ Grammar: Pronouns: He, She, It, They</div><div class="activity-sub">Learn it, spot it, explain it.</div></div></div>
+    <div class="activity-head"><div class="activity-num" style="background:#C7922C;">3</div><div style="flex:1;"><div class="activity-title">✏️ Grammar: Review: nouns and pronouns</div><div class="activity-sub">Day 4: Review &mdash; Pull it all together and explain it.</div></div></div>
     <div class="activity-body">
-            <p>A <strong>pronoun</strong> takes the place of a noun so we do not have to repeat the same word over and over. The pronouns <em>he, she, it, they</em> replace nouns in a sentence.</p>
+      <p>Everything from the first half of the unit at once: singular and plural nouns, possessive nouns with their apostrophes, and subject and object pronouns.</p>
       <div class="task-box" style="background:#FFF8F0;border-color:#F5E6C8;">
         <div class="task-label" style="color:#C7922C;">👉 From the novel</div>
-        <div class="task-sentence" style="border-left-color:#55C8E8;">The <strong>mouse</strong> <strong>mother</strong>, whose <strong>name</strong> was <strong>Antoinette</strong>, looked at her reflection.</div>
-        <p style="font-size:15px;color:#3A4A6B;line-height:1.6;margin-top:8px;"><em>He</em> = Roscuro (replaces the noun so we do not say "Roscuro" again)</p>
+        <div class="task-sentence" style="border-left-color:#55C8E8;">Despereaux&rsquo;s brothers and sisters stepped back, away from the new mouse.</div>
+        <p style="font-size:15px;color:#3A4A6B;line-height:1.6;margin-top:8px;">A possessive, two plurals and a singular in one sentence.</p>
       </div>
       <div class="task-box" style="background:#FFF8F0;border-color:#F5E6C8;">
-        <div class="task-label" style="color:#C7922C;">👉 Another example</div>
-        <div class="task-sentence" style="border-left-color:#55C8E8;">His <strong>sister</strong> <strong>Merlot</strong> and his <strong>brother</strong> <strong>Furlough</strong> stared at <strong>Despereaux</strong>.</div>
-        <p style="font-size:15px;color:#3A4A6B;line-height:1.6;margin-top:8px;"><em>She</em> = the Princess Pea; <em>they</em> = Roscuro and Gregory; <em>it</em> = the candle</p>
+        <div class="task-label" style="color:#C7922C;">👉 From the novel</div>
+        <div class="task-sentence" style="border-left-color:#55C8E8;">She pointed her finger right at Roscuro.</div>
+        <p style="font-size:15px;color:#3A4A6B;line-height:1.6;margin-top:8px;">A subject pronoun, a possessive pronoun, and a proper noun.</p>
       </div>
-
-      <!-- Learn & Practice (ungraded) -->
-      <div class="callout callout-info" style="margin-top:14px;"><span class="callout-icon">🎯</span><p><strong>Practice: Spot the Proper Noun!</strong> Tap the proper noun in each sentence.</p></div>
-      <div class="spotter-game" id="spotterGame">
-        <div class="spotter-sentence" id="spot1"><span class="spotter-word" onclick="spotterPick(this,'spot1')" data-correct="true">He</span> <span class="spotter-word" onclick="spotterPick(this,'spot1')" data-correct="false">looked</span> <span class="spotter-word" onclick="spotterPick(this,'spot1')" data-correct="false">up</span> <span class="spotter-word" onclick="spotterPick(this,'spot1')" data-correct="false">at</span> <span class="spotter-word" onclick="spotterPick(this,'spot1')" data-correct="false">the</span> <span class="spotter-word" onclick="spotterPick(this,'spot1')" data-correct="false">light.</span><div class="spotter-result" id="spot1-result"></div></div>
-        <div class="spotter-sentence" id="spot2"><span class="spotter-word" onclick="spotterPick(this,'spot2')" data-correct="false">Gregory</span> <span class="spotter-word" onclick="spotterPick(this,'spot2')" data-correct="false">held</span> <span class="spotter-word" onclick="spotterPick(this,'spot2')" data-correct="true">it</span> <span class="spotter-word" onclick="spotterPick(this,'spot2')" data-correct="false">up</span> <span class="spotter-word" onclick="spotterPick(this,'spot2')" data-correct="false">high.</span><div class="spotter-result" id="spot2-result"></div></div>
-        <div class="spotter-sentence" id="spot3"><span class="spotter-word" onclick="spotterPick(this,'spot3')" data-correct="false">The</span> <span class="spotter-word" onclick="spotterPick(this,'spot3')" data-correct="false">princess</span> <span class="spotter-word" onclick="spotterPick(this,'spot3')" data-correct="true">she</span> <span class="spotter-word" onclick="spotterPick(this,'spot3')" data-correct="false">did</span> <span class="spotter-word" onclick="spotterPick(this,'spot3')" data-correct="false">not</span> <span class="spotter-word" onclick="spotterPick(this,'spot3')" data-correct="false">know.</span><div class="spotter-result" id="spot3-result"></div></div>
-        <div class="spotter-sentence" id="spot4"><span class="spotter-word" onclick="spotterPick(this,'spot4')" data-correct="false">The</span> <span class="spotter-word" onclick="spotterPick(this,'spot4')" data-correct="false">rats</span> <span class="spotter-word" onclick="spotterPick(this,'spot4')" data-correct="true">they</span> <span class="spotter-word" onclick="spotterPick(this,'spot4')" data-correct="false">lived</span> <span class="spotter-word" onclick="spotterPick(this,'spot4')" data-correct="false">in</span> <span class="spotter-word" onclick="spotterPick(this,'spot4')" data-correct="false">darkness.</span><div class="spotter-result" id="spot4-result"></div></div>
+            <div class="callout callout-info" style="margin-top:14px;"><span class="callout-icon">🎯</span><p><strong>Your turn.</strong> Name what kind of word you tapped, and how you knew. Tap a word to check &mdash; green means you got it.</p></div>
+      <div class="spotter-game" id="grammarGame">
+        <div class="spotter-sentence" id="gspot1"><span class="spotter-word" onclick="spotterPick(this,'gspot1')" data-correct="false">Gregory</span> <span class="spotter-word" onclick="spotterPick(this,'gspot1')" data-correct="false">held</span> <span class="spotter-word" onclick="spotterPick(this,'gspot1')" data-correct="true">it</span> <span class="spotter-word" onclick="spotterPick(this,'gspot1')" data-correct="false">up</span> <span class="spotter-word" onclick="spotterPick(this,'gspot1')" data-correct="false">high.</span><div class="spotter-result" id="gspot1-result"></div></div>
+        <div class="spotter-sentence" id="gspot2"><span class="spotter-word" onclick="spotterPick(this,'gspot2')" data-correct="true">She</span> <span class="spotter-word" onclick="spotterPick(this,'gspot2')" data-correct="false">pointed</span> <span class="spotter-word" onclick="spotterPick(this,'gspot2')" data-correct="false">her</span> <span class="spotter-word" onclick="spotterPick(this,'gspot2')" data-correct="false">finger</span> <span class="spotter-word" onclick="spotterPick(this,'gspot2')" data-correct="false">at</span> <span class="spotter-word" onclick="spotterPick(this,'gspot2')" data-correct="false">the</span> <span class="spotter-word" onclick="spotterPick(this,'gspot2')" data-correct="false">rat.</span><div class="spotter-result" id="gspot2-result"></div></div>
+        <div class="spotter-sentence" id="gspot3"><span class="spotter-word" onclick="spotterPick(this,'gspot3')" data-correct="false">The</span> <span class="spotter-word" onclick="spotterPick(this,'gspot3')" data-correct="true">mice</span> <span class="spotter-word" onclick="spotterPick(this,'gspot3')" data-correct="false">gathered</span> <span class="spotter-word" onclick="spotterPick(this,'gspot3')" data-correct="false">in</span> <span class="spotter-word" onclick="spotterPick(this,'gspot3')" data-correct="false">the</span> <span class="spotter-word" onclick="spotterPick(this,'gspot3')" data-correct="false">hall.</span><div class="spotter-result" id="gspot3-result"></div></div>
+        <div class="spotter-sentence" id="gspot4"><span class="spotter-word" onclick="spotterPick(this,'gspot4')" data-correct="true">Despereaux's</span> <span class="spotter-word" onclick="spotterPick(this,'gspot4')" data-correct="false">brothers</span> <span class="spotter-word" onclick="spotterPick(this,'gspot4')" data-correct="false">stepped</span> <span class="spotter-word" onclick="spotterPick(this,'gspot4')" data-correct="false">back.</span><div class="spotter-result" id="gspot4-result"></div></div>
       </div>
-
-      <!-- Show What You Know (graded) -->
       <div class="swyk">
         <div class="swyk-label">🪶 Show What You Know</div>
-        <div class="swyk-prompt">In your own words, explain the grammar rule you learned today. Give one example from the novel.</div>
-        <div class="journal-label">📓 Your definition <span class="saved-dot" id="dot-grammar"></span></div>
-        <textarea class="journal-box" id="journal-grammar" data-label="Grammar: Pronouns: He, She, It, They" placeholder="Today I learned..." oninput="autoSave(this,'dot-grammar')"></textarea>
+        <div class="swyk-prompt">Name what kind of word you tapped, and how you knew.</div>
+        <div class="journal-label">📓 Your answer <span class="saved-dot" id="dot-grammar"></span></div>
+        <textarea class="journal-box" id="journal-grammar" data-label="Grammar: Review: nouns and pronouns" placeholder="Today I learned..." oninput="autoSave(this,'dot-grammar')"></textarea>
       </div>
     </div>
   </div>
 
   <!-- ═══ SPELLING ═══ -->
   <div class="activity bl-navy">
-    <div class="activity-head"><div class="activity-num" style="background:#0E1C42;">4</div><div style="flex:1;"><div class="activity-title">🔠 Spelling: "au" vs. "aw"</div><div class="activity-sub">Learn the rule, sort the words, explain it.</div></div></div>
+    <div class="activity-head"><div class="activity-num" style="background:#0E1C42;">4</div><div style="flex:1;"><div class="activity-title">🔠 Spelling: Review: endings that change the base</div><div class="activity-sub">Day 4: Review &mdash; Pull it all together and explain it.</div></div></div>
     <div class="activity-body">
-            <p>Both "au" and "aw" make the /ô/ sound. Here's the pattern:</p>
-      <div class="key-concept">
-        <div class="key-concept-label">📌 The Rule</div>
-        <p><strong>"au"</strong> usually appears in the <em>middle</em> of a word: pause, August, fault, automobile</p>
-        <p><strong>"aw"</strong> usually appears at the <em>end</em> or before <strong>n</strong> or <strong>l</strong>: flaw, straw, law, lawn, hawk</p>
-      </div>
-
-      <!-- Learn & Practice (ungraded) -->
-      <div class="callout callout-info" style="margin-top:14px;"><span class="callout-icon">🎮</span><p><strong>Practice: Quick Sort!</strong> Tap each word, then tap the rule it follows.</p></div>
+      <p>Three rules change the base word before the ending goes on: <strong>double</strong> the consonant, <strong>drop</strong> the silent e, or change <strong>y to i</strong>.</p>
+        <p>Sort each word by which rule was used to build it.</p>
+              <div class="callout callout-info" style="margin-top:14px;"><span class="callout-icon">🎮</span><p><strong>Practice: Sort the words.</strong> Tap a word, then tap the column it belongs in.</p></div>
       <div class="sort-game" id="spellSort">
         <div class="sort-bank" id="sortBank">
-          <span class="sort-chip" data-group="drop-e" onclick="pickSortChip(this)">shining</span>
-          <span class="sort-chip" data-group="double" onclick="pickSortChip(this)">snapped</span>
-          <span class="sort-chip" data-group="drop-e" onclick="pickSortChip(this)">staring</span>
-          <span class="sort-chip" data-group="double" onclick="pickSortChip(this)">stopped</span>
-          <span class="sort-chip" data-group="drop-e" onclick="pickSortChip(this)">named</span>
-          <span class="sort-chip" data-group="double" onclick="pickSortChip(this)">wrapped</span>
           <span class="sort-chip" data-group="drop-e" onclick="pickSortChip(this)">waved</span>
+          <span class="sort-chip" data-group="double" onclick="pickSortChip(this)">wrapped</span>
+          <span class="sort-chip" data-group="y-to-i" onclick="pickSortChip(this)">cried</span>
+          <span class="sort-chip" data-group="y-to-i" onclick="pickSortChip(this)">hurried</span>
+          <span class="sort-chip" data-group="drop-e" onclick="pickSortChip(this)">named</span>
+          <span class="sort-chip" data-group="drop-e" onclick="pickSortChip(this)">shining</span>
           <span class="sort-chip" data-group="double" onclick="pickSortChip(this)">nodding</span>
+          <span class="sort-chip" data-group="double" onclick="pickSortChip(this)">stopped</span>
         </div>
         <div class="sort-columns">
-          <div class="sort-col"><div class="sort-col-header" style="background:linear-gradient(135deg,#C7922C,#d4a843);">Spelled with "aw"</div><div class="sort-col-drop" data-col="aw" onclick="dropSortChip(this,'aw')"></div></div>
-          <div class="sort-col"><div class="sort-col-header" style="background:linear-gradient(135deg,#8B6FC0,#a88ad4);">Spelled with "au"</div><div class="sort-col-drop" data-col="au" onclick="dropSortChip(this,'au')"></div></div>
+          <div class="sort-col"><div class="sort-col-header" style="background:linear-gradient(135deg,#55C8E8,#55C8E8);">Doubled</div><div class="sort-col-drop" data-col="double" onclick="dropSortChip(this,'double')"></div></div>
+          <div class="sort-col"><div class="sort-col-header" style="background:linear-gradient(135deg,#8B6FC0,#8B6FC0);">Dropped the e</div><div class="sort-col-drop" data-col="drop-e" onclick="dropSortChip(this,'drop-e')"></div></div>
+          <div class="sort-col"><div class="sort-col-header" style="background:linear-gradient(135deg,#C7922C,#C7922C);">y &rarr; i</div><div class="sort-col-drop" data-col="y-to-i" onclick="dropSortChip(this,'y-to-i')"></div></div>
         </div>
         <div class="sort-score" id="sortScore"></div>
       </div>
-
-      <!-- Show What You Know (graded) -->
       <div class="swyk">
         <div class="swyk-label">🪶 Show What You Know</div>
-        <div class="swyk-prompt">In your own words, explain when to use "au" and when to use "aw" in words with the /ô/ sound.</div>
+        <div class="swyk-prompt">Explain the rule to someone who has never seen it, and give one word that follows it and one that does not.</div>
         <div class="journal-label">📓 Your explanation <span class="saved-dot" id="dot-spelling"></span></div>
-        <textarea class="journal-box" id="journal-spelling" data-label="Spelling: Vowel Teams: ea and ee" placeholder="The rule is..." oninput="autoSave(this,'dot-spelling')"></textarea>
+        <textarea class="journal-box" id="journal-spelling" data-label="Spelling: Review: endings that change the base" placeholder="The rule is..." oninput="autoSave(this,'dot-spelling')"></textarea>
       </div>
     </div>
   </div>
 
-  <!-- ═══ WRITING CONNECTION ═══ -->
   <div class="activity bl-green">
     <div class="activity-head"><div class="activity-num" style="background:#34B76F;">5</div><div style="flex:1;"><div class="activity-title">🪶 Writing Connection</div><div class="activity-sub">One sentence about today's reading</div></div></div>
     <div class="activity-body">

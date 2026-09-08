@@ -1874,6 +1874,8 @@ body {
   .header-title { font-size: 22px; }
   .tab-btn { min-width: 100px; font-size: 11px; padding: 10px 6px 9px; }
 }
+.sort-columns { grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); }
+@media (max-width: 620px){ .sort-columns { grid-template-columns: 1fr; } }
 </style>
 <style>
 .decode-steps{margin:14px 0}.decode-step{display:flex;gap:14px;margin-bottom:16px;align-items:flex-start}.decode-step:last-child{margin-bottom:0}.decode-step-num{width:36px;height:36px;border-radius:50%;color:#fff;font-size:18px;font-weight:800;display:flex;align-items:center;justify-content:center;flex-shrink:0}.decode-step-content{flex:1}.decode-step-title{font-size:16px;font-weight:800;color:#0E1C42;margin-bottom:4px}.decode-step-text{font-size:15px;color:#3A4A6B;line-height:1.6;margin-bottom:8px}.decode-sentence{background:#FFF8F0;border:2px solid #F5E6C8;border-left:4px solid #C7922C;border-radius:10px;padding:12px 16px;font-family:"Lora",Georgia,serif;font-size:16px;color:#0E1C42;line-height:1.6;font-style:italic;margin-bottom:10px}.decode-word-parts{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin:8px 0}.decode-part{display:inline-flex;padding:6px 14px;border-radius:8px;font-family:"Lora",Georgia,serif;font-size:16px;font-weight:700}.decode-part-root{background:#F0E8FF;color:#8B6FC0;border:1.5px solid #D8CCF0}.decode-part-affix{background:#EAF8FD;color:#1A6B8E;border:1.5px solid #D6F2FB}.decode-part-plus{color:#B0B8CC;font-size:12px;font-weight:800}.decode-reveal{display:none;background:#E3F8ED;border:2px solid #B8E8CF;border-left:4px solid #34B76F;border-radius:10px;padding:12px 16px;font-size:15px;color:#0E1C42;line-height:1.5;margin-top:8px}.decode-reveal.show{display:block}.vocab-decode-item{margin-bottom:14px}.fluency-passage{background:linear-gradient(135deg,#FFF8F0 0%,#FFF3DC 100%);border:2px solid #F5E6C8;border-left:6px solid #C7922C;border-radius:14px;padding:20px 24px;margin-bottom:16px;font-family:"Lora",Georgia,serif;font-size:17px;color:#0E1C42;line-height:1.85;font-style:italic}.textbox-prompt{font-size:15px;color:#3A4A6B;line-height:1.6;margin-bottom:8px;padding:10px 14px;background:#FAFBFF;border:1.5px solid #E2E8F4;border-radius:10px}
@@ -2251,11 +2253,11 @@ body {
 <div class="decode-sentence" style="margin-bottom:10px;">&ldquo;They put stamps to pay for airmail and <strong>insurance</strong>.&rdquo;</div>
 <div class="flip-card" onclick="this.classList.toggle('flipped')"><div class="flip-card-inner"><div class="flip-card-front"><div class="fc-emoji">🛡️</div><div class="fc-word">insurance</div><div class="fc-tap">think first, then tap</div></div><div class="flip-card-back"><div class="fc-word-back">insurance</div><div class="fc-def">A way to protect something in case it gets lost or broken.</div></div></div></div></div>
 <div class="vocab-decode-item">
-<div class="decode-sentence" style="margin-bottom:10px;">&ldquo;It was still much less <strong>expensive</strong> than a train ticket.&rdquo;</div>
+<div class="decode-sentence" style="margin-bottom:10px;">&ldquo;A round-trip train or airplane ticket to California is very <strong>expensive</strong>,&rdquo; he said.</div>
 <div class="flip-card" onclick="this.classList.toggle('flipped')"><div class="flip-card-inner"><div class="flip-card-front"><div class="fc-emoji">💲</div><div class="fc-word">expensive</div><div class="fc-tap">think first, then tap</div></div><div class="flip-card-back"><div class="fc-word-back">expensive</div><div class="fc-def">Costing a lot of money.</div></div></div></div></div>
 <div class="vocab-decode-item">
-<div class="decode-sentence" style="margin-bottom:10px;">Stanley sent a <strong>postcard</strong> to let his family know he had arrived safely.</div>
-<div class="flip-card" onclick="this.classList.toggle('flipped')"><div class="flip-card-inner"><div class="flip-card-front"><div class="fc-emoji">📮</div><div class="fc-word">postcard</div><div class="fc-tap">think first, then tap</div></div><div class="flip-card-back"><div class="fc-word-back">postcard</div><div class="fc-def">A card you mail to someone, usually with a picture on one side.</div></div></div></div></div>
+<div class="decode-sentence" style="margin-bottom:10px;">&ldquo;When Mr. Lambchop came home from the office that evening, he brought with him an enormous brown-paper <strong>envelope</strong>.&rdquo;</div>
+<div class="flip-card" onclick="this.classList.toggle('flipped')"><div class="flip-card-inner"><div class="flip-card-front"><div class="fc-emoji">📮</div><div class="fc-word">envelope</div><div class="fc-tap">think first, then tap</div></div><div class="flip-card-back"><div class="fc-word-back">envelope</div><div class="fc-def">A paper cover for sending mail &mdash; here, big enough to mail Stanley.</div></div></div></div></div>
 </div>
 <div class="callout callout-info" style="margin-top:16px;"><span class="callout-icon">🎯</span><p><strong>Quick Match:</strong> Tap a word, then tap its meaning.</p></div>
 <div class="match-game" id="vocabMatch"><div class="match-grid" id="matchGrid">
@@ -2265,33 +2267,31 @@ body {
 <div class="match-item" data-match="B" onclick="matchClick(this)">A way to protect something in case it gets lost or broken.</div>
 <div class="match-item is-word" data-match="C" onclick="matchClick(this)">expensive</div>
 <div class="match-item" data-match="C" onclick="matchClick(this)">Costing a lot of money.</div>
-<div class="match-item is-word" data-match="D" onclick="matchClick(this)">postcard</div>
+<div class="match-item is-word" data-match="D" onclick="matchClick(this)">envelope</div>
 <div class="match-item" data-match="D" onclick="matchClick(this)">A card you mail to someone, usually with a picture on one side.</div>
 </div><div class="match-feedback" id="matchFeedback">✨ All matched!</div></div>
 </div></div>
 <div class="activity bl-gold">
-<div class="activity-head"><div class="activity-num" style="background:#C7922C;">3</div><div style="flex:1;"><div class="activity-title">✏️ Grammar: Proper nouns and capitalization</div><div class="activity-sub">Define the skill.</div></div></div>
+<div class="activity-head"><div class="activity-num" style="background:#C7922C;">3</div><div style="flex:1;"><div class="activity-title">✏️ Grammar: Proper nouns and capitalization</div><div class="activity-sub">Day 1: Define — learn the rule and put it in your own words.</div></div></div>
 <div class="activity-body">
 <div class="callout callout-gold" style="margin-bottom:14px;background:#FFF8E8;border:2px solid #F5E6C8;border-left:5px solid #C7922C;border-radius:10px;padding:14px 18px;"><span class="callout-icon">📖</span><p style="font-size:15px;color:#0E1C42;line-height:1.6;"><strong>Remember the Rule:</strong> A <strong>proper noun</strong> names a specific person, place, or thing and always starts with a <strong>capital letter</strong>. A <strong>common noun</strong> names any person, place, or thing and does NOT need a capital letter.</p></div>
 <div class="task-box" style="background:#FFF8E8;border-color:#F5E6C8;"><div class="task-label" style="color:#C7922C;">👉 Example</div>
 <div class="task-sentence">Stanley Lambchop | boy</div>
 <p style="font-size:15px;color:#3A4A6B;line-height:1.6;margin-top:8px;"><em>Stanley Lambchop</em> is a <strong>proper noun</strong> &mdash; it names a specific person and starts with capital letters. <em>Boy</em> is a <strong>common noun</strong> &mdash; it could be any boy.</p></div>
-<div class="callout callout-info" style="margin-top:14px;"><span class="callout-icon">🎯</span><p><strong>Practice!</strong> Read each sentence. Tap to see which words are proper nouns and which are common nouns.</p></div>
+<div class="callout callout-info" style="margin-top:14px;"><span class="callout-icon">🎯</span><p><strong>Your turn.</strong> Tap the <strong>proper noun</strong> &mdash; the one that names a specific person or place and begins with a capital letter. Tap to check &mdash; green means you got it.</p></div>
 <div class="spotter-game" id="grammarGame">
-<div class="spotter-sentence" id="gram1">
-<span class="spotter-word" onclick="this.parentElement.querySelector('.spotter-result').textContent='Stanley Lambchop = proper noun (specific person), envelope = common noun ✅';this.parentElement.querySelector('.spotter-result').classList.add('show','win')" style="cursor:pointer;font-size:16px;color:#0E1C42;">Stanley Lambchop put stamps on the envelope.</span>
-<div class="spotter-result" id="gram1-result"></div></div>
-<div class="spotter-sentence" id="gram2">
-<span class="spotter-word" onclick="this.parentElement.querySelector('.spotter-result').textContent='Thomas Jeffrey = proper noun (specific person), brother = common noun ✅';this.parentElement.querySelector('.spotter-result').classList.add('show','win')" style="cursor:pointer;font-size:16px;color:#0E1C42;">Thomas Jeffrey helped his brother.</span>
-<div class="spotter-result" id="gram2-result"></div></div>
-<div class="spotter-sentence" id="gram3">
-<span class="spotter-word" onclick="this.parentElement.querySelector('.spotter-result').textContent='California = proper noun (specific place), airplane = common noun ✅';this.parentElement.querySelector('.spotter-result').classList.add('show','win')" style="cursor:pointer;font-size:16px;color:#0E1C42;">The airplane flew to California.</span>
-<div class="spotter-result" id="gram3-result"></div></div>
-<div class="spotter-sentence" id="gram4">
-<span class="spotter-word" onclick="this.parentElement.querySelector('.spotter-result').textContent='Mrs. Lambchop = proper noun (specific person), stamps = common noun ✅';this.parentElement.querySelector('.spotter-result').classList.add('show','win')" style="cursor:pointer;font-size:16px;color:#0E1C42;">Mrs. Lambchop bought stamps at the post office.</span>
-<div class="spotter-result" id="gram4-result"></div></div>
+<div class="spotter-sentence" id="gspot1"><span class="spotter-word" onclick="spotterPick(this,'gspot1')" data-correct="false">The</span> <span class="spotter-word" onclick="spotterPick(this,'gspot1')" data-correct="false">letter</span> <span class="spotter-word" onclick="spotterPick(this,'gspot1')" data-correct="false">went</span> <span class="spotter-word" onclick="spotterPick(this,'gspot1')" data-correct="false">to</span> <span class="spotter-word" onclick="spotterPick(this,'gspot1')" data-correct="true">California</span> <span class="spotter-word" onclick="spotterPick(this,'gspot1')" data-correct="false">by</span> <span class="spotter-word" onclick="spotterPick(this,'gspot1')" data-correct="false">airmail.</span><div class="spotter-result" id="gspot1-result"></div></div>
+<div class="spotter-sentence" id="gspot2"><span class="spotter-word" onclick="spotterPick(this,'gspot2')" data-correct="true">Every</span> <span class="spotter-word" onclick="spotterPick(this,'gspot2')" data-correct="false">boy</span> <span class="spotter-word" onclick="spotterPick(this,'gspot2')" data-correct="false">in</span> <span class="spotter-word" onclick="spotterPick(this,'gspot2')" data-correct="false">the</span> <span class="spotter-word" onclick="spotterPick(this,'gspot2')" data-correct="false">family</span> <span class="spotter-word" onclick="spotterPick(this,'gspot2')" data-correct="false">helped.</span><div class="spotter-result" id="gspot2-result"></div></div>
+<div class="spotter-sentence" id="gspot3"><span class="spotter-word" onclick="spotterPick(this,'gspot3')" data-correct="true">Stanley</span> <span class="spotter-word" onclick="spotterPick(this,'gspot3')" data-correct="false">folded</span> <span class="spotter-word" onclick="spotterPick(this,'gspot3')" data-correct="false">himself</span> <span class="spotter-word" onclick="spotterPick(this,'gspot3')" data-correct="false">up</span> <span class="spotter-word" onclick="spotterPick(this,'gspot3')" data-correct="false">carefully.</span><div class="spotter-result" id="gspot3-result"></div></div>
+<div class="spotter-sentence" id="gspot4"><span class="spotter-word" onclick="spotterPick(this,'gspot4')" data-correct="true">The</span> <span class="spotter-word" onclick="spotterPick(this,'gspot4')" data-correct="false">museum</span> <span class="spotter-word" onclick="spotterPick(this,'gspot4')" data-correct="false">in</span> <span class="spotter-word" onclick="spotterPick(this,'gspot4')" data-correct="false">the</span> <span class="spotter-word" onclick="spotterPick(this,'gspot4')" data-correct="false">city</span> <span class="spotter-word" onclick="spotterPick(this,'gspot4')" data-correct="false">was</span> <span class="spotter-word" onclick="spotterPick(this,'gspot4')" data-correct="false">famous.</span><div class="spotter-result" id="gspot4-result"></div></div>
 </div>
-</div></div>
+<div class="swyk"><div class="swyk-label">🪶 Show What You Know</div>
+<div class="swyk-prompt">In your own words, what is the difference between a common noun and a proper noun? Give one of each.</div>
+<div class="journal-label">📓 Your answer <span class="saved-dot" id="dot-grammar"></span></div>
+<textarea class="journal-box" id="journal-grammar" data-label="Grammar response" placeholder="Today I learned..." oninput="autoSave(this,'dot-grammar')"></textarea></div>
+
+</div>
+</div>
 <div class="activity bl-navy">
 <div class="activity-head"><div class="activity-num" style="background:#0E1C42;">4</div><div style="flex:1;"><div class="activity-title">🔠 Spelling: Vowel teams ai/ay and oa/ow</div><div class="activity-sub">Define the pattern.</div></div></div>
 <div class="activity-body">
@@ -2449,7 +2449,7 @@ function switchTab(tabId){document.querySelectorAll(".tab-panel").forEach(functi
 function expandIntro(){document.getElementById("introSection").classList.remove("collapsed")}
 function gatherAnswers(){var output="";var sections=[
 {title:"🌅 WARM-UP",ids:["journal-wgrd","journal-dol"]},
-{title:"🔤 WORD STUDY",ids:["journal-swyk","journal-writing"]},
+{title:"🔤 WORD STUDY",ids:["journal-swyk","journal-grammar","journal-writing"]},
 {title:"📖 READING",ids:["journal-pause1"]},
 {title:"📬 COMPREHENSION",ids:["journal-q1","journal-q2","journal-q3","journal-wp"]}
 ];
@@ -2469,6 +2469,27 @@ function fireConfetti(){var cv=document.getElementById("confettiCanvas");var ctx
 /* ───── AUTO-SAVE ───── */
 /* Unique key derived from the page title so each lesson's data stays separate */
 var _lessonKey = (document.title || 'ela-lesson').replace(/[^a-zA-Z0-9]+/g,'-').toLowerCase();
+
+
+/* ───── SPOTTER (tap-to-choose) ───── */
+function spotterPick(word, sentenceId) {
+  var sentence = document.getElementById(sentenceId);
+  if (!sentence || sentence.getAttribute('data-done') === 'true') return;
+  sentence.querySelectorAll('.spotter-word').forEach(function(w){ w.classList.remove('selected'); });
+  var result = document.getElementById(sentenceId + '-result');
+  var isCorrect = word.getAttribute('data-correct') === 'true';
+  if (isCorrect) {
+    word.classList.add('correct-reveal');
+    result.textContent = '\u2705 Correct!';
+    result.className = 'spotter-result show win';
+    sentence.setAttribute('data-done', 'true');
+  } else {
+    word.classList.add('wrong-reveal');
+    result.textContent = '\ud83e\udd14 Not quite \u2014 try again!';
+    result.className = 'spotter-result show miss';
+    setTimeout(function(){ word.classList.remove('wrong-reveal'); result.classList.remove('show'); }, 1500);
+  }
+}
 
 function autoSave(el,dotId){
   var dot=document.getElementById(dotId);
@@ -2511,7 +2532,7 @@ window.addEventListener('beforeunload', function(e){
   }
 });
 window._fillinDone=false;function checkFillIn(){var ins=document.querySelectorAll(".fillin-input");var ok=true;ins.forEach(function(inp){var a=inp.getAttribute("data-answer").toLowerCase();var v=inp.value.trim().toLowerCase();if(v===a){inp.classList.remove("wrong");inp.classList.add("correct");inp.disabled=true}else{inp.classList.remove("correct");inp.classList.add("wrong");ok=false;setTimeout(function(){inp.classList.remove("wrong")},600)}});if(ok){document.getElementById("fillinFeedback").classList.add("show");window._fillinDone=true}}
-var sortSelected=null;var sortPlaced=0;var sortTotal=8;
+var sortSelected=null;var sortPlaced=0;var sortTotal = 12;
 function pickSortChip(c){if(c.classList.contains("placed"))return;if(sortSelected)sortSelected.style.outline="";sortSelected=c;c.style.outline="3px solid #55C8E8";c.style.outlineOffset="2px"}
 function dropSortChip(col,colName){if(!sortSelected)return;var g=sortSelected.getAttribute("data-group");var cl=sortSelected.cloneNode(true);cl.style.outline="";cl.onclick=null;cl.style.cursor="default";if(g===colName){cl.classList.add("correct");sortSelected.classList.add("placed");col.appendChild(cl);sortPlaced++}else{cl.classList.add("wrong");col.appendChild(cl);setTimeout(function(){col.removeChild(cl)},600)}sortSelected.style.outline="";sortSelected=null;if(sortPlaced>=sortTotal){var sc=document.getElementById("sortScore");sc.textContent="🎉 All sorted correctly!";sc.classList.add("show")}}
 var matchFirst=null;var matchCount=0;function matchClick(item){if(item.classList.contains("matched"))return;if(!matchFirst){matchFirst=item;item.classList.add("selected");return}if(matchFirst===item){matchFirst.classList.remove("selected");matchFirst=null;return}var k1=matchFirst.getAttribute("data-match");var k2=item.getAttribute("data-match");if(k1===k2&&matchFirst.classList.contains("is-word")!==item.classList.contains("is-word")){matchFirst.classList.remove("selected");matchFirst.classList.add("matched");item.classList.add("matched");matchCount++;matchFirst=null;if(matchCount>=4){document.getElementById("matchFeedback").classList.add("show")}}else{item.classList.add("wrong-flash");matchFirst.classList.add("wrong-flash");var a=matchFirst;var b=item;setTimeout(function(){a.classList.remove("wrong-flash","selected");b.classList.remove("wrong-flash")},500);matchFirst=null}}

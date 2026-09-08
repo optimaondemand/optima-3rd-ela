@@ -2228,7 +2228,7 @@ And see what lies in store.</div>
 <p><strong>jumping</strong> &mdash; base word = <em>jump</em></p>
 </div>
 <div class="callout callout-info"><span class="callout-icon">🎯</span><p><strong>Practice: Match the Word to Its Base!</strong></p></div>
-<div class="match-game" id="morphMatch"><div class="match-grid" id="matchGrid">
+<div class="match-game" id="morphMatch"><div class="match-grid" id="morphMatchGrid">
 <div class="match-item is-word" data-match="A" onclick="matchClick(this)">playing</div>
 <div class="match-item" data-match="A" onclick="matchClick(this)">play</div>
 <div class="match-item is-word" data-match="B" onclick="matchClick(this)">unhappy</div>
@@ -2237,7 +2237,7 @@ And see what lies in store.</div>
 <div class="match-item" data-match="C" onclick="matchClick(this)">jump</div>
 <div class="match-item is-word" data-match="D" onclick="matchClick(this)">redo</div>
 <div class="match-item" data-match="D" onclick="matchClick(this)">do</div>
-</div><div class="match-feedback" id="matchFeedback">✨ All matched!</div></div>
+</div><div class="match-feedback" id="morphMatchFeedback">✨ All matched!</div></div>
 </div></div>
 <div class="activity bl-cyan">
 <div class="activity-head"><div class="activity-num" style="background:#55C8E8;">2</div><div style="flex:1;"><div class="activity-title">🔤 Vocabulary: This Week's Words</div><div class="activity-sub">Quick Sort</div></div></div>
@@ -2256,7 +2256,7 @@ And see what lies in store.</div>
 </div><div class="match-feedback" id="matchFeedback">&#10024; All matched!</div></div>
 </div></div>
 <div class="activity bl-gold">
-<div class="activity-head"><div class="activity-num" style="background:#C7922C;">3</div><div style="flex:1;"><div class="activity-title">✏️ Grammar: Complete sentences</div><div class="activity-sub">Identify the skill.</div></div></div>
+<div class="activity-head"><div class="activity-num" style="background:#C7922C;">3</div><div style="flex:1;"><div class="activity-title">✏️ Grammar: Complete sentences</div><div class="activity-sub">Day 2: Identify — spot it at work in the reading.</div></div></div>
 <div class="activity-body">
 <div class="callout callout-gold" style="margin-bottom:14px;background:#FFF8E8;border:2px solid #F5E6C8;border-left:5px solid #C7922C;border-radius:10px;padding:14px 18px;"><span class="callout-icon">📖</span><p style="font-size:15px;color:#0E1C42;line-height:1.6;"><strong>Remember the Rule:</strong> A <strong>complete sentence</strong> has a <em>subject</em> (who or what) and a <em>predicate</em> (what happened). Both parts must be there, or it is <strong>not a complete sentence</strong>.</p></div>
 
@@ -2266,25 +2266,17 @@ And see what lies in store.</div>
 <div class="task-box" style="background:#FFF8E8;border-color:#F5E6C8;"><div class="task-label" style="color:#C7922C;">👉 Example</div>
 <div class="task-sentence">Across the bed.</div>
 <p style="font-size:15px;color:#3A4A6B;line-height:1.6;margin-top:8px;">Not complete — no subject</p></div>
-<div class="callout callout-info" style="margin-top:14px;"><span class="callout-icon">🎯</span><p><strong>Practice!</strong> Read each group of words. Tap it to check: does it have <strong>both</strong> a subject and a predicate? If yes, it is a complete sentence. If not, it is incomplete.</p></div>
+<div class="callout callout-info" style="margin-top:14px;"><span class="callout-icon">🎯</span><p><strong>Your turn.</strong> One choice in each row is <strong>not a complete sentence</strong>. Tap the one that is missing a part. Tap to check &mdash; green means you got it.</p></div>
 <div class="spotter-game" id="grammarGame">
-<div class="spotter-sentence" id="gram1">
-<span class="spotter-word" onclick="this.parentElement.querySelector('.spotter-result').textContent='Complete ✅';this.parentElement.querySelector('.spotter-result').classList.add('show','win')" style="cursor:pointer;">Mrs. Lambchop hurried to help.</span>
-<div class="spotter-result" id="gram1-result"></div></div>
-<div class="spotter-sentence" id="gram2">
-<span class="spotter-word" onclick="this.parentElement.querySelector('.spotter-result').textContent='Not complete ❌';this.parentElement.querySelector('.spotter-result').classList.add('show','win')" style="cursor:pointer;">The big board on top.</span>
-<div class="spotter-result" id="gram2-result"></div></div>
-<div class="spotter-sentence" id="gram3">
-<span class="spotter-word" onclick="this.parentElement.querySelector('.spotter-result').textContent='Complete ✅';this.parentElement.querySelector('.spotter-result').classList.add('show','win')" style="cursor:pointer;">Stanley called out cheerfully.</span>
-<div class="spotter-result" id="gram3-result"></div></div>
-<div class="spotter-sentence" id="gram4">
-<span class="spotter-word" onclick="this.parentElement.querySelector('.spotter-result').textContent='Not complete ❌';this.parentElement.querySelector('.spotter-result').classList.add('show','win')" style="cursor:pointer;">Flat and very thin.</span>
-<div class="spotter-result" id="gram4-result"></div></div>
+<div class="spotter-sentence" id="gspot1"><span class="spotter-word" onclick="spotterPick(this,'gspot1')" data-correct="true">Flat and half an inch thick.</span> <span class="spotter-word" onclick="spotterPick(this,'gspot1')" data-correct="false">Stanley was half an inch thick.</span><div class="spotter-result" id="gspot1-result"></div></div>
+<div class="spotter-sentence" id="gspot2"><span class="spotter-word" onclick="spotterPick(this,'gspot2')" data-correct="false">The doctor examined Stanley.</span> <span class="spotter-word" onclick="spotterPick(this,'gspot2')" data-correct="true">The doctor in his office.</span><div class="spotter-result" id="gspot2-result"></div></div>
+<div class="spotter-sentence" id="gspot3"><span class="spotter-word" onclick="spotterPick(this,'gspot3')" data-correct="true">A kite in the park.</span> <span class="spotter-word" onclick="spotterPick(this,'gspot3')" data-correct="false">Stanley flew like a kite.</span><div class="spotter-result" id="gspot3-result"></div></div>
+<div class="spotter-sentence" id="gspot4"><span class="spotter-word" onclick="spotterPick(this,'gspot4')" data-correct="false">Arthur blew his brother up.</span> <span class="spotter-word" onclick="spotterPick(this,'gspot4')" data-correct="true">Arthur with the bicycle pump.</span><div class="spotter-result" id="gspot4-result"></div></div>
 </div>
 <div class="swyk"><div class="swyk-label">🪶 Show What You Know</div>
-<div class="swyk-prompt">Write one sentence explaining complete sentences in your own words. Give an example from the story.</div>
-<div class="journal-label">📓 Your answer <span class="saved-dot" id="dot-swyk"></span></div>
-<textarea class="journal-box" id="journal-swyk" data-label="SWYK: Complete sentences" placeholder="I know that..." oninput="autoSave(this,'dot-swyk')"></textarea></div>
+<div class="swyk-prompt">Pick one row above. Write the incomplete group of words, then add what it needs to make it a sentence.</div>
+<div class="journal-label">📓 Your answer <span class="saved-dot" id="dot-grammar"></span></div>
+<textarea class="journal-box" id="journal-grammar" data-label="Grammar response" placeholder="Today I learned..." oninput="autoSave(this,'dot-grammar')"></textarea></div>
 </div></div>
 <div class="activity bl-navy">
 <div class="activity-head"><div class="activity-num" style="background:#0E1C42;">4</div><div style="flex:1;"><div class="activity-title">🔠 Spelling: Closed syllables and short vowels review</div><div class="activity-sub">Identify the pattern.</div></div></div>
@@ -2436,7 +2428,7 @@ function switchTab(tabId){document.querySelectorAll(".tab-panel").forEach(functi
 function expandIntro(){document.getElementById("introSection").classList.remove("collapsed")}
 function gatherAnswers(){var output="";var sections=[
 {title:"🌅 WARM-UP",ids:["journal-wgrd","journal-dol"]},
-{title:"🔤 WORD STUDY",ids:["journal-swyk","journal-writing"]},
+{title:"🔤 WORD STUDY",ids:["journal-swyk","journal-grammar","journal-writing"]},
 {title:"📖 READING",ids:["journal-pause1"]},
 {title:"📬 COMPREHENSION",ids:["journal-q1","journal-q2","journal-q3","journal-wp"]}
 ];
@@ -2456,6 +2448,27 @@ function fireConfetti(){var cv=document.getElementById("confettiCanvas");var ctx
 /* ───── AUTO-SAVE ───── */
 /* Unique key derived from the page title so each lesson's data stays separate */
 var _lessonKey = (document.title || 'ela-lesson').replace(/[^a-zA-Z0-9]+/g,'-').toLowerCase();
+
+
+/* ───── SPOTTER (tap-to-choose) ───── */
+function spotterPick(word, sentenceId) {
+  var sentence = document.getElementById(sentenceId);
+  if (!sentence || sentence.getAttribute('data-done') === 'true') return;
+  sentence.querySelectorAll('.spotter-word').forEach(function(w){ w.classList.remove('selected'); });
+  var result = document.getElementById(sentenceId + '-result');
+  var isCorrect = word.getAttribute('data-correct') === 'true';
+  if (isCorrect) {
+    word.classList.add('correct-reveal');
+    result.textContent = '\u2705 Correct!';
+    result.className = 'spotter-result show win';
+    sentence.setAttribute('data-done', 'true');
+  } else {
+    word.classList.add('wrong-reveal');
+    result.textContent = '\ud83e\udd14 Not quite \u2014 try again!';
+    result.className = 'spotter-result show miss';
+    setTimeout(function(){ word.classList.remove('wrong-reveal'); result.classList.remove('show'); }, 1500);
+  }
+}
 
 function autoSave(el,dotId){
   var dot=document.getElementById(dotId);
@@ -2498,7 +2511,7 @@ window.addEventListener('beforeunload', function(e){
   }
 });
 window._fillinDone=false;function checkFillIn(){var ins=document.querySelectorAll(".fillin-input");var ok=true;ins.forEach(function(inp){var a=inp.getAttribute("data-answer").toLowerCase();var v=inp.value.trim().toLowerCase();if(v===a){inp.classList.remove("wrong");inp.classList.add("correct");inp.disabled=true}else{inp.classList.remove("correct");inp.classList.add("wrong");ok=false;setTimeout(function(){inp.classList.remove("wrong")},600)}});if(ok){document.getElementById("fillinFeedback").classList.add("show");window._fillinDone=true}}
-var sortSelected=null;var sortPlaced=0;var sortTotal=8;
+var sortSelected=null;var sortPlaced=0;var sortTotal = 8;
 function pickSortChip(c){if(c.classList.contains("placed"))return;if(sortSelected)sortSelected.style.outline="";sortSelected=c;c.style.outline="3px solid #55C8E8";c.style.outlineOffset="2px"}
 function dropSortChip(col,colName){if(!sortSelected)return;var g=sortSelected.getAttribute("data-group");var cl=sortSelected.cloneNode(true);cl.style.outline="";cl.onclick=null;cl.style.cursor="default";if(g===colName){cl.classList.add("correct");sortSelected.classList.add("placed");col.appendChild(cl);sortPlaced++}else{cl.classList.add("wrong");col.appendChild(cl);setTimeout(function(){col.removeChild(cl)},600)}sortSelected.style.outline="";sortSelected=null;if(sortPlaced>=sortTotal){var sc=document.getElementById("sortScore");sc.textContent="🎉 All sorted correctly!";sc.classList.add("show")}}
 var matchFirst=null;var matchCount=0;function matchClick(item){if(item.classList.contains("matched"))return;if(!matchFirst){matchFirst=item;item.classList.add("selected");return}if(matchFirst===item){matchFirst.classList.remove("selected");matchFirst=null;return}var k1=matchFirst.getAttribute("data-match");var k2=item.getAttribute("data-match");if(k1===k2&&matchFirst.classList.contains("is-word")!==item.classList.contains("is-word")){matchFirst.classList.remove("selected");matchFirst.classList.add("matched");item.classList.add("matched");matchCount++;matchFirst=null;if(matchCount>=4){document.getElementById("matchFeedback").classList.add("show")}}else{item.classList.add("wrong-flash");matchFirst.classList.add("wrong-flash");var a=matchFirst;var b=item;setTimeout(function(){a.classList.remove("wrong-flash","selected");b.classList.remove("wrong-flash")},500);matchFirst=null}}
