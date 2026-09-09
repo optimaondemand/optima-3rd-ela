@@ -29,10 +29,12 @@ TITLE_KEYS = [
     # which is how W5 D2-4 once reported ch_range='Reading Comprehension'.
     # Writing/synthesis days carry no reading assignment and are titled for the
     # real work, so they are matched explicitly here.
+    # The reading slot. Writing/synthesis days carry no reading assignment and are
+    # titled for the real work, so they are matched by their ✍️ marker rather than
+    # by wording - naming specific verbs here broke twice as titles were reworded.
     ('📕', 'Looking Back', 'reading'),
-    ('✍️', 'Revise:', 'reading'),
-    ('✍️', 'Edit:', 'reading'),
-    ('✍️', 'Publish:', 'reading'),
+    ('✍️', '✍️', 'reading'),
+    ('&#9997;', '&#9997;', 'reading'),
     ('📕', 'Read:', 'reading'),
 ]
 
@@ -46,8 +48,10 @@ def activities(s):
         m = re.search(r'activity-title"[^>]*>(.*?)</div>', blk, re.S)
         if not m: continue
         title = cl(m.group(1))
+        raw = m.group(1)
         for emoji, needle, key in TITLE_KEYS:
-            if needle.lower() in title.lower() and key not in out:
+            hay = (raw if needle.startswith(('✍', '&#')) else title).lower()
+            if needle.lower() in hay and key not in out:
                 out[key] = {'title': title, 'html': blk,
                             'sub': cl((re.search(r'activity-sub"[^>]*>(.*?)</div>', blk, re.S) or [None,''])[1]
                                       if re.search(r'activity-sub"[^>]*>(.*?)</div>', blk, re.S) else '')}
