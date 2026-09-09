@@ -484,12 +484,12 @@
     "embed": ""
   },
   "g3ela-5-1": {
-    "status": "pending",
-    "embed": ""
+    "status": "ready",
+    "embed": "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/Pc5kzZmv3Zg?si=bw5BIHdxmjzdNxaa\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>"
   },
   "g3ela-5-2": {
-    "status": "pending",
-    "embed": ""
+    "status": "ready",
+    "embed": "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/EciICyWR5Us?si=0p0yZYQ9-N8z2Qgv\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>"
   },
   "g3ela-5-3": {
     "status": "pending",
