@@ -2438,27 +2438,43 @@ The wind is passing by.</div>
 
   <!-- ═══ SPELLING ═══ -->
   <div class="activity bl-navy">
-    <div class="activity-head"><div class="activity-num" style="background:#0E1C42;">4</div><div style="flex:1;"><div class="activity-title">🔠 Spelling: Possessives and plurals</div><div class="activity-sub">Day 2: Identify &mdash; Spot it at work in the reading.</div></div></div>
+    <div class="activity-head"><div class="activity-num" style="background:#0E1C42;">4</div><div style="flex:1;"><div class="activity-title">🔠 Spelling: Possessives and plurals</div><div class="activity-sub">Identify the pattern by ear.</div></div></div>
     <div class="activity-body">
+<div class="callout callout-gold" style="margin-bottom:14px;background:#FFF8E8;border:2px solid #F5E6C8;border-left:5px solid #C7922C;border-radius:10px;padding:14px 18px;"><span class="callout-icon">📖</span><p style="font-size:15px;color:#0E1C42;line-height:1.6;"><strong>The Rule:</strong> Plain <strong>-s</strong> means <em>more than one</em>: three <strong>kings</strong>. An <strong>apostrophe + s</strong> means <em>something belongs to</em>: the <strong>king’s</strong> crown. If a plural already ends in s, add the apostrophe only: the <strong>girls’</strong> room.</p></div>
       <p>Same rule as Day 1 &mdash; possessives and plurals. Sort them again, and this time notice <em>why</em> each one landed where it did.</p>
               <div class="callout callout-info" style="margin-top:14px;"><span class="callout-icon">🎮</span><p><strong>Practice: Sort the words.</strong> Tap a word, then tap the column it belongs in.</p></div>
-      <div class="sort-game" id="spellSort">
-        <div class="sort-bank" id="sortBank">
-          <span class="sort-chip" data-group="plural" onclick="pickSortChip(this)">mice</span>
-          <span class="sort-chip" data-group="plural" onclick="pickSortChip(this)">spoons</span>
-          <span class="sort-chip" data-group="plural" onclick="pickSortChip(this)">rats</span>
-          <span class="sort-chip" data-group="possessive" onclick="pickSortChip(this)">mice's</span>
-          <span class="sort-chip" data-group="possessive" onclick="pickSortChip(this)">mouse's</span>
-          <span class="sort-chip" data-group="possessive" onclick="pickSortChip(this)">king's</span>
-          <span class="sort-chip" data-group="possessive" onclick="pickSortChip(this)">princess's</span>
-          <span class="sort-chip" data-group="plural" onclick="pickSortChip(this)">candles</span>
-        </div>
-        <div class="sort-columns">
-          <div class="sort-col"><div class="sort-col-header" style="background:linear-gradient(135deg,#55C8E8,#55C8E8);">Plural (more than one)</div><div class="sort-col-drop" data-col="plural" onclick="dropSortChip(this,'plural')"></div></div>
-          <div class="sort-col"><div class="sort-col-header" style="background:linear-gradient(135deg,#8B6FC0,#8B6FC0);">Possessive (belongs to)</div><div class="sort-col-drop" data-col="possessive" onclick="dropSortChip(this,'possessive')"></div></div>
-        </div>
-        <div class="sort-score" id="sortScore"></div>
-      </div>
+      <div class="callout callout-info"><span class="callout-icon">🔎</span><p><strong>Sound Detective!</strong> Look for the apostrophe. Only one word in each row shows belonging.</p></div>
+<div class="spotter-game" id="spellGame">
+<p style="font-size:14px;color:#3A4A6B;margin:10px 0 4px;">Tap the word that shows something <strong>belongs</strong> to someone.</p>
+<div class="spotter-sentence" id="spell1">
+<span class="spotter-word" onclick="spotterPick(this,'spell1')" data-correct="true">Stanley’s</span>
+<span class="spotter-word" onclick="spotterPick(this,'spell1')" data-correct="false">brothers</span>
+<span class="spotter-word" onclick="spotterPick(this,'spell1')" data-correct="false">letters</span>
+<span class="spotter-word" onclick="spotterPick(this,'spell1')" data-correct="false">maps</span>
+<div class="spotter-result" id="spell1-result"></div></div>
+<p style="font-size:14px;color:#3A4A6B;margin:10px 0 4px;">Tap the word that shows something <strong>belongs</strong> to someone.</p>
+<div class="spotter-sentence" id="spell2">
+<span class="spotter-word" onclick="spotterPick(this,'spell2')" data-correct="false">mice</span>
+<span class="spotter-word" onclick="spotterPick(this,'spell2')" data-correct="true">mouse’s</span>
+<span class="spotter-word" onclick="spotterPick(this,'spell2')" data-correct="false">houses</span>
+<span class="spotter-word" onclick="spotterPick(this,'spell2')" data-correct="false">boxes</span>
+<div class="spotter-result" id="spell2-result"></div></div>
+<p style="font-size:14px;color:#3A4A6B;margin:10px 0 4px;">Tap the word that shows something <strong>belongs</strong> to someone.</p>
+<div class="spotter-sentence" id="spell3">
+<span class="spotter-word" onclick="spotterPick(this,'spell3')" data-correct="false">kings</span>
+<span class="spotter-word" onclick="spotterPick(this,'spell3')" data-correct="false">rings</span>
+<span class="spotter-word" onclick="spotterPick(this,'spell3')" data-correct="true">king’s</span>
+<span class="spotter-word" onclick="spotterPick(this,'spell3')" data-correct="false">wings</span>
+<div class="spotter-result" id="spell3-result"></div></div>
+<p style="font-size:14px;color:#3A4A6B;margin:10px 0 4px;">Tap the word that shows something <strong>belongs</strong> to someone.</p>
+<div class="spotter-sentence" id="spell4">
+<span class="spotter-word" onclick="spotterPick(this,'spell4')" data-correct="false">princesses</span>
+<span class="spotter-word" onclick="spotterPick(this,'spell4')" data-correct="false">dresses</span>
+<span class="spotter-word" onclick="spotterPick(this,'spell4')" data-correct="false">glasses</span>
+<span class="spotter-word" onclick="spotterPick(this,'spell4')" data-correct="true">princess’s</span>
+<div class="spotter-result" id="spell4-result"></div></div>
+</div>
+
       <div class="swyk">
         <div class="swyk-label">🪶 Show What You Know</div>
         <div class="swyk-prompt">Find one word in today&rsquo;s reading that follows this rule. Write it, and say which part changed.</div>

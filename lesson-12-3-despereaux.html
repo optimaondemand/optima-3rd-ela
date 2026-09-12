@@ -2415,27 +2415,52 @@ body {
 
   <!-- ═══ SPELLING ═══ -->
   <div class="activity bl-navy">
-    <div class="activity-head"><div class="activity-num" style="background:#0E1C42;">4</div><div style="flex:1;"><div class="activity-title">🔠 Spelling: Possessives and plurals</div><div class="activity-sub">Day 3: Apply &mdash; Use it in a sentence of your own.</div></div></div>
+    <div class="activity-head"><div class="activity-num" style="background:#0E1C42;">4</div><div style="flex:1;"><div class="activity-title">🔠 Spelling: Possessives and plurals</div><div class="activity-sub">Apply the pattern &mdash; proofread it.</div></div></div>
     <div class="activity-body">
+<div class="callout callout-gold" style="margin-bottom:14px;background:#FFF8E8;border:2px solid #F5E6C8;border-left:5px solid #C7922C;border-radius:10px;padding:14px 18px;"><span class="callout-icon">📖</span><p style="font-size:15px;color:#0E1C42;line-height:1.6;"><strong>The Rule:</strong> Plain <strong>-s</strong> means <em>more than one</em>: three <strong>kings</strong>. An <strong>apostrophe + s</strong> means <em>something belongs to</em>: the <strong>king’s</strong> crown. If a plural already ends in s, add the apostrophe only: the <strong>girls’</strong> room.</p></div>
       <p>Same rule as Day 1 &mdash; possessives and plurals. Sort them again, and this time notice <em>why</em> each one landed where it did.</p>
               <div class="callout callout-info" style="margin-top:14px;"><span class="callout-icon">🎮</span><p><strong>Practice: Sort the words.</strong> Tap a word, then tap the column it belongs in.</p></div>
-      <div class="sort-game" id="spellSort">
-        <div class="sort-bank" id="sortBank">
-          <span class="sort-chip" data-group="plural" onclick="pickSortChip(this)">candles</span>
-          <span class="sort-chip" data-group="possessive" onclick="pickSortChip(this)">princess's</span>
-          <span class="sort-chip" data-group="possessive" onclick="pickSortChip(this)">king's</span>
-          <span class="sort-chip" data-group="possessive" onclick="pickSortChip(this)">mouse's</span>
-          <span class="sort-chip" data-group="possessive" onclick="pickSortChip(this)">mice's</span>
-          <span class="sort-chip" data-group="plural" onclick="pickSortChip(this)">rats</span>
-          <span class="sort-chip" data-group="plural" onclick="pickSortChip(this)">spoons</span>
-          <span class="sort-chip" data-group="plural" onclick="pickSortChip(this)">mice</span>
-        </div>
-        <div class="sort-columns">
-          <div class="sort-col"><div class="sort-col-header" style="background:linear-gradient(135deg,#55C8E8,#55C8E8);">Plural (more than one)</div><div class="sort-col-drop" data-col="plural" onclick="dropSortChip(this,'plural')"></div></div>
-          <div class="sort-col"><div class="sort-col-header" style="background:linear-gradient(135deg,#8B6FC0,#8B6FC0);">Possessive (belongs to)</div><div class="sort-col-drop" data-col="possessive" onclick="dropSortChip(this,'possessive')"></div></div>
-        </div>
-        <div class="sort-score" id="sortScore"></div>
-      </div>
+      <div class="callout callout-info"><span class="callout-icon">🔍</span><p><strong>Proofreader!</strong> Apostrophes are the easiest thing in the world to get wrong. Each sentence has <strong>two</strong> misspelled words. Tap any word you want to check.</p></div>
+<div id="proofGame" style="margin:14px 0;">
+<div style="background:#FAFBFF;border:2px solid #C8DCEE;border-radius:10px;padding:14px;margin-bottom:10px;font-size:17px;line-height:2.2;color:#0E1C42;">
+<span onclick="proofPick(this)" data-good="The" data-why="" data-ok="1" style="cursor:pointer;border-bottom:2px dotted #B9C4DC;padding:0 3px;">The</span>
+<span onclick="proofPick(this)" data-good="two" data-why="" data-ok="1" style="cursor:pointer;border-bottom:2px dotted #B9C4DC;padding:0 3px;">two</span>
+<span onclick="proofPick(this)" data-good="boys" data-why="more than one boy &mdash; no apostrophe" style="cursor:pointer;border-bottom:2px dotted #B9C4DC;padding:0 3px;">boy&rsquo;s</span>
+<span onclick="proofPick(this)" data-good="ran" data-why="" data-ok="1" style="cursor:pointer;border-bottom:2px dotted #B9C4DC;padding:0 3px;">ran</span>
+<span onclick="proofPick(this)" data-good="to" data-why="" data-ok="1" style="cursor:pointer;border-bottom:2px dotted #B9C4DC;padding:0 3px;">to</span>
+<span onclick="proofPick(this)" data-good="the" data-why="" data-ok="1" style="cursor:pointer;border-bottom:2px dotted #B9C4DC;padding:0 3px;">the</span>
+<span onclick="proofPick(this)" data-good="king&rsquo;s" data-why="the castle belongs to the king" style="cursor:pointer;border-bottom:2px dotted #B9C4DC;padding:0 3px;">kings</span>
+<span onclick="proofPick(this)" data-good="castle." data-why="" data-ok="1" style="cursor:pointer;border-bottom:2px dotted #B9C4DC;padding:0 3px;">castle.</span>
+<div class="spotter-result" style="margin-top:8px;"></div></div>
+<div style="background:#FAFBFF;border:2px solid #C8DCEE;border-radius:10px;padding:14px;margin-bottom:10px;font-size:17px;line-height:2.2;color:#0E1C42;">
+<span onclick="proofPick(this)" data-good="My" data-why="" data-ok="1" style="cursor:pointer;border-bottom:2px dotted #B9C4DC;padding:0 3px;">My</span>
+<span onclick="proofPick(this)" data-good="sister&rsquo;s" data-why="the bike belongs to one sister" style="cursor:pointer;border-bottom:2px dotted #B9C4DC;padding:0 3px;">sisters</span>
+<span onclick="proofPick(this)" data-good="bike" data-why="" data-ok="1" style="cursor:pointer;border-bottom:2px dotted #B9C4DC;padding:0 3px;">bike</span>
+<span onclick="proofPick(this)" data-good="has" data-why="" data-ok="1" style="cursor:pointer;border-bottom:2px dotted #B9C4DC;padding:0 3px;">has</span>
+<span onclick="proofPick(this)" data-good="three" data-why="" data-ok="1" style="cursor:pointer;border-bottom:2px dotted #B9C4DC;padding:0 3px;">three</span>
+<span onclick="proofPick(this)" data-good="new" data-why="" data-ok="1" style="cursor:pointer;border-bottom:2px dotted #B9C4DC;padding:0 3px;">new</span>
+<span onclick="proofPick(this)" data-good="tires" data-why="more than one tire &mdash; no apostrophe" style="cursor:pointer;border-bottom:2px dotted #B9C4DC;padding:0 3px;">tire&rsquo;s</span>
+<span onclick="proofPick(this)" data-good="." data-why="" data-ok="1" style="cursor:pointer;border-bottom:2px dotted #B9C4DC;padding:0 3px;">.</span>
+<div class="spotter-result" style="margin-top:8px;"></div></div>
+<div style="background:#FAFBFF;border:2px solid #C8DCEE;border-radius:10px;padding:14px;margin-bottom:10px;font-size:17px;line-height:2.2;color:#0E1C42;">
+<span onclick="proofPick(this)" data-good="The" data-why="" data-ok="1" style="cursor:pointer;border-bottom:2px dotted #B9C4DC;padding:0 3px;">The</span>
+<span onclick="proofPick(this)" data-good="mouse&rsquo;s" data-why="the tail belongs to the mouse" style="cursor:pointer;border-bottom:2px dotted #B9C4DC;padding:0 3px;">mouses</span>
+<span onclick="proofPick(this)" data-good="tail" data-why="" data-ok="1" style="cursor:pointer;border-bottom:2px dotted #B9C4DC;padding:0 3px;">tail</span>
+<span onclick="proofPick(this)" data-good="was" data-why="" data-ok="1" style="cursor:pointer;border-bottom:2px dotted #B9C4DC;padding:0 3px;">was</span>
+<span onclick="proofPick(this)" data-good="caught" data-why="" data-ok="1" style="cursor:pointer;border-bottom:2px dotted #B9C4DC;padding:0 3px;">caught</span>
+<span onclick="proofPick(this)" data-good="between" data-why="" data-ok="1" style="cursor:pointer;border-bottom:2px dotted #B9C4DC;padding:0 3px;">between</span>
+<span onclick="proofPick(this)" data-good="the" data-why="" data-ok="1" style="cursor:pointer;border-bottom:2px dotted #B9C4DC;padding:0 3px;">the</span>
+<span onclick="proofPick(this)" data-good="two" data-why="" data-ok="1" style="cursor:pointer;border-bottom:2px dotted #B9C4DC;padding:0 3px;">two</span>
+<span onclick="proofPick(this)" data-good="doors" data-why="more than one door, and nothing belongs to them" style="cursor:pointer;border-bottom:2px dotted #B9C4DC;padding:0 3px;">doors&rsquo;</span>
+<span onclick="proofPick(this)" data-good="." data-why="" data-ok="1" style="cursor:pointer;border-bottom:2px dotted #B9C4DC;padding:0 3px;">.</span>
+<div class="spotter-result" style="margin-top:8px;"></div></div>
+</div>
+<div class="sort-score" id="proofScore"></div>
+<script>
+function proofPick(el){if(el.dataset.done)return;el.dataset.done="1";var box=el.parentElement.querySelector(".spotter-result");if(el.dataset.ok){el.style.borderBottom="2px solid #7A88A8";el.style.cursor="default";if(box){box.innerHTML+=(box.innerHTML?"<br>":"")+"\u2714 \u201c"+el.dataset.good+"\u201d is spelled correctly.";box.className="spotter-result show";}return;}el.textContent=el.dataset.good;el.style.color="#34B76F";el.style.fontWeight="700";el.style.borderBottom="2px solid #34B76F";el.style.cursor="default";if(box){box.innerHTML+=(box.innerHTML?"<br>":"")+"\u2705 "+el.dataset.good+" \u2014 "+el.dataset.why;box.className="spotter-result show win";}var all=document.querySelectorAll("#proofGame [data-good]:not([data-ok])");var d=document.querySelectorAll("#proofGame [data-good]:not([data-ok])[data-done]");var sc=document.getElementById("proofScore");if(!sc)return;sc.textContent=d.length===all.length?"Every misspelling found. That is what proofreading feels like.":d.length+"/"+all.length+" misspellings found";}
+</script>
+
+
       <div class="swyk">
         <div class="swyk-label">🪶 Show What You Know</div>
         <div class="swyk-prompt">Write two sentences about today&rsquo;s chapters using words that follow this rule.</div>

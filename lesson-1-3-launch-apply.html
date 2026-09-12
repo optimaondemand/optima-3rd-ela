@@ -2202,6 +2202,7 @@ body {
 <button class="tab-next-btn" onclick="switchTab('words')">Continue to 🔤 Word Study →</button>
 </div></div><!-- /tab-warmup -->
 <div class="tab-panel" id="tab-words">
+<!-- MORPHOLOGY -->
 <div class="activity bl-purple">
 <div class="activity-head"><div class="activity-num" style="background:#8B6FC0;">1</div><div style="flex:1;"><div class="activity-title">🌱 Morphology: What is a base word?</div><div class="activity-sub">Use / Apply the skill</div></div></div>
 <div class="activity-body">
@@ -2218,6 +2219,7 @@ body {
 <button class="fillin-check-btn" onclick="checkFillIn()">Check My Answers</button>
 <div class="fillin-feedback" id="fillinFeedback">🌱 All correct!</div></div>
 </div></div>
+<!-- VOCABULARY -->
 <div class="activity bl-cyan">
 <div class="activity-head"><div class="activity-num" style="background:#55C8E8;">2</div><div style="flex:1;"><div class="activity-title">🔤 Vocabulary: This Week's Words</div><div class="activity-sub">Fill in the Blank</div></div></div>
 <div class="activity-body">
@@ -2232,6 +2234,7 @@ body {
 <div class="fillin-feedback" id="vocabClozeFeedback">&#128214; All correct!</div>
 </div>
 </div></div>
+<!-- GRAMMAR -->
 <div class="activity bl-gold">
 <div class="activity-head"><div class="activity-num" style="background:#C7922C;">3</div><div style="flex:1;"><div class="activity-title">✏️ Grammar: Complete sentences</div><div class="activity-sub">Day 3: Apply — use it in a sentence of your own.</div></div></div>
 <div class="activity-body">
@@ -2254,25 +2257,38 @@ body {
 
 </div>
 </div>
+<!-- SPELLING -->
 <div class="activity bl-navy">
-<div class="activity-head"><div class="activity-num" style="background:#0E1C42;">4</div><div style="flex:1;"><div class="activity-title">🔠 Spelling: Closed syllables and short vowels review</div><div class="activity-sub">Use / Apply the pattern.</div></div></div>
+<div class="activity-head"><div class="activity-num" style="background:#0E1C42;">4</div><div style="flex:1;"><div class="activity-title">🔠 Spelling: Closed syllables and short vowels review</div><div class="activity-sub">Apply the pattern &mdash; split the words.</div></div></div>
 <div class="activity-body">
 <div class="callout callout-gold" style="margin-bottom:14px;background:#FFF8E8;border:2px solid #F5E6C8;border-left:5px solid #C7922C;border-radius:10px;padding:14px 18px;"><span class="callout-icon">📖</span><p style="font-size:15px;color:#0E1C42;line-height:1.6;"><strong>Remember the Rule:</strong> A <strong>closed syllable</strong> ends with a consonant and makes a <strong>short vowel sound</strong>. Listen: <em>flat</em> (short <em>a</em>), <em>desk</em> (short <em>e</em>), <em>jump</em> (short <em>u</em>). If the syllable ends with a vowel or silent <em>e</em>, the vowel sound is <strong>long</strong>.</p></div>
 
-<div class="callout callout-info"><span class="callout-icon">🎮</span><p><strong>Practice: Sort the Words!</strong> Tap a word, then tap the column where it belongs.</p></div>
-<div class="sort-game" id="spellSort"><div class="sort-bank" id="sortBank">
-<span class="sort-chip" data-group="closed" onclick="pickSortChip(this)">shut</span>
-<span class="sort-chip" data-group="closed" onclick="pickSortChip(this)">help</span>
-<span class="sort-chip" data-group="closed" onclick="pickSortChip(this)">lost</span>
-<span class="sort-chip" data-group="closed" onclick="pickSortChip(this)">trap</span>
-<span class="sort-chip" data-group="not closed" onclick="pickSortChip(this)">made</span>
-<span class="sort-chip" data-group="not closed" onclick="pickSortChip(this)">ride</span>
-<span class="sort-chip" data-group="not closed" onclick="pickSortChip(this)">bone</span>
-<span class="sort-chip" data-group="not closed" onclick="pickSortChip(this)">tube</span>
-</div><div class="sort-columns">
-<div class="sort-col"><div class="sort-col-header" style="background:linear-gradient(135deg,#55C8E8,#7FD8F0);">closed</div><div class="sort-col-drop" data-col="closed" onclick="dropSortChip(this,'closed')"></div></div>
-<div class="sort-col"><div class="sort-col-header" style="background:linear-gradient(135deg,#55C8E8,#7FD8F0);">not closed</div><div class="sort-col-drop" data-col="not closed" onclick="dropSortChip(this,'not closed')"></div></div>
-</div><div class="sort-score" id="sortScore"></div></div>
+<div class="callout callout-info"><span class="callout-icon">✨</span><p><strong>Syllable Splitter!</strong> Say each word slowly and listen for the two beats. Tap to see where it splits.</p></div>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:14px 0;" id="spellGrid">
+<div class="rv-card" onclick="spellReveal(this)" data-after="nap &middot; kin" data-hint="two closed syllables &rarr; both vowels stay short" style="background:#FAFBFF;border:2px solid #C8DCEE;border-radius:10px;padding:14px;text-align:center;cursor:pointer;transition:all 0.3s;">
+<div style="font-size:26px;font-weight:700;color:#0E1C42;" class="rv-word">napkin</div>
+<div style="font-size:12px;color:#7A88A8;margin-top:4px;" class="rv-hint">tap to split it!</div></div>
+<div class="rv-card" onclick="spellReveal(this)" data-after="pic &middot; nic" data-hint="two closed syllables &rarr; both vowels stay short" style="background:#FAFBFF;border:2px solid #C8DCEE;border-radius:10px;padding:14px;text-align:center;cursor:pointer;transition:all 0.3s;">
+<div style="font-size:26px;font-weight:700;color:#0E1C42;" class="rv-word">picnic</div>
+<div style="font-size:12px;color:#7A88A8;margin-top:4px;" class="rv-hint">tap to split it!</div></div>
+<div class="rv-card" onclick="spellReveal(this)" data-after="sun &middot; set" data-hint="two closed syllables &rarr; both vowels stay short" style="background:#FAFBFF;border:2px solid #C8DCEE;border-radius:10px;padding:14px;text-align:center;cursor:pointer;transition:all 0.3s;">
+<div style="font-size:26px;font-weight:700;color:#0E1C42;" class="rv-word">sunset</div>
+<div style="font-size:12px;color:#7A88A8;margin-top:4px;" class="rv-hint">tap to split it!</div></div>
+<div class="rv-card" onclick="spellReveal(this)" data-after="rab &middot; bit" data-hint="split between the double letters" style="background:#FAFBFF;border:2px solid #C8DCEE;border-radius:10px;padding:14px;text-align:center;cursor:pointer;transition:all 0.3s;">
+<div style="font-size:26px;font-weight:700;color:#0E1C42;" class="rv-word">rabbit</div>
+<div style="font-size:12px;color:#7A88A8;margin-top:4px;" class="rv-hint">tap to split it!</div></div>
+<div class="rv-card" onclick="spellReveal(this)" data-after="hel &middot; met" data-hint="two closed syllables &rarr; both vowels stay short" style="background:#FAFBFF;border:2px solid #C8DCEE;border-radius:10px;padding:14px;text-align:center;cursor:pointer;transition:all 0.3s;">
+<div style="font-size:26px;font-weight:700;color:#0E1C42;" class="rv-word">helmet</div>
+<div style="font-size:12px;color:#7A88A8;margin-top:4px;" class="rv-hint">tap to split it!</div></div>
+<div class="rv-card" onclick="spellReveal(this)" data-after="bas &middot; ket" data-hint="split between the two middle consonants" style="background:#FAFBFF;border:2px solid #C8DCEE;border-radius:10px;padding:14px;text-align:center;cursor:pointer;transition:all 0.3s;">
+<div style="font-size:26px;font-weight:700;color:#0E1C42;" class="rv-word">basket</div>
+<div style="font-size:12px;color:#7A88A8;margin-top:4px;" class="rv-hint">tap to split it!</div></div>
+</div>
+<div class="sort-score" id="spellScore"></div>
+<script>
+function spellReveal(c){if(c.classList.contains("done"))return;c.classList.add("done");c.querySelector(".rv-word").innerHTML=c.dataset.after;var h=c.querySelector(".rv-hint");h.innerHTML=c.dataset.hint;h.style.color="#34B76F";h.style.fontWeight="700";c.style.background="#E3F8ED";c.style.borderColor="#34B76F";var all=document.querySelectorAll(".rv-card"),d=document.querySelectorAll(".rv-card.done");var sc=document.getElementById("spellScore");if(!sc)return;sc.textContent=d.length===all.length?"All split! Every syllable closed, every vowel short.":d.length+"/"+all.length+" done";}
+</script>
+
 <div class="swyk"><div class="swyk-label">🪶 Show What You Know</div>
 <div class="swyk-prompt">Explain the closed syllables and short vowels review pattern in your own words. Write two example words.</div>
 <div class="journal-label">📓 Your answer <span class="saved-dot" id="dot-swyk"></span></div>

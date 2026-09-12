@@ -2669,8 +2669,9 @@ No one lifts a spoon.</div>
 
   <!-- SPELLING -->
   <div class="activity bl-navy">
-    <div class="activity-head"><div class="activity-num" style="background:#2A0A4A;">4</div><div><div class="activity-title">🔠 Spelling: Closed Syllables (Day 2: Identify)</div><div class="activity-sub">Discover the pattern.</div></div></div>
+    <div class="activity-head"><div class="activity-num" style="background:#2A0A4A;">4</div><div><div class="activity-title">🔠 Spelling: Closed Syllables (Day 2: Identify)</div><div class="activity-sub">Identify the pattern by ear.</div></div></div>
     <div class="activity-body">
+<div class="callout callout-gold" style="margin-bottom:14px;background:#FFF8E8;border:2px solid #F5E6C8;border-left:5px solid #C7922C;border-radius:10px;padding:14px 18px;"><span class="callout-icon">📖</span><p style="font-size:15px;color:#0E1C42;line-height:1.6;"><strong>The Rule:</strong> A <strong>closed syllable</strong> ends in a consonant, and that consonant shuts the vowel in so it stays <strong>short</strong>: <em>nap</em>, <em>kin</em>. Long words are often just two closed syllables stuck together: <strong>nap&middot;kin</strong>.</p></div>
             <p>Find the closed syllable in each word. Look for: short vowel + consonant at the end of the syllable.</p>
 
       <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:14px 0;">
@@ -2695,14 +2696,38 @@ No one lifts a spoon.</div>
       <div class="dol-answer" id="spellReveal"><p>When a word has the <strong>VCCV</strong> pattern (vowel–consonant–consonant–vowel), you divide it <em>between the two consonants</em>.</p><p>This helps you read long words like <em>tunnel</em> (<strong>tun·nel</strong>) and <em>basket</em> (<strong>bas·ket</strong>).</p></div>
 
       <div class="callout callout-info" style="margin-top:16px;"><span class="callout-icon">🎮</span><p><strong>Practice:</strong> Sort these words using the pattern you discovered.</p></div>
-      <div class="sort-game" id="spellSort">
-  <div class="sort-bank" id="sortBank"><span class="sort-chip" data-group="a" onclick="pickSortChip(this)">happen</span><span class="sort-chip" data-group="b" onclick="pickSortChip(this)">pencil</span><span class="sort-chip" data-group="a" onclick="pickSortChip(this)">goblin</span><span class="sort-chip" data-group="a" onclick="pickSortChip(this)">muffin</span><span class="sort-chip" data-group="a" onclick="pickSortChip(this)">sudden</span><span class="sort-chip" data-group="b" onclick="pickSortChip(this)">perfect</span></div>
-  <div class="sort-columns">
-    <div class="sort-col"><div class="sort-col-header" style="background:linear-gradient(135deg,#3D1A6B,#5C2D91);">Closed 1st syllable</div><div class="sort-col-drop" data-col="a" onclick="dropSortChip(this,'a')"></div></div>
-    <div class="sort-col"><div class="sort-col-header" style="background:linear-gradient(135deg,#B8860B,#7A45C4);">Closed 2nd syllable</div><div class="sort-col-drop" data-col="b" onclick="dropSortChip(this,'b')"></div></div>
-  </div>
-  <div class="sort-score" id="sortScore"></div>
+      <div class="callout callout-info"><span class="callout-icon">🔎</span><p><strong>Sound Detective!</strong> One word in each row is two closed syllables. Say them out loud and listen for two short vowels.</p></div>
+<div class="spotter-game" id="spellGame">
+<p style="font-size:14px;color:#3A4A6B;margin:10px 0 4px;">Tap the word with <strong>two closed syllables</strong>.</p>
+<div class="spotter-sentence" id="spell1">
+<span class="spotter-word" onclick="spotterPick(this,'spell1')" data-correct="true">napkin</span>
+<span class="spotter-word" onclick="spotterPick(this,'spell1')" data-correct="false">table</span>
+<span class="spotter-word" onclick="spotterPick(this,'spell1')" data-correct="false">paper</span>
+<span class="spotter-word" onclick="spotterPick(this,'spell1')" data-correct="false">tiger</span>
+<div class="spotter-result" id="spell1-result"></div></div>
+<p style="font-size:14px;color:#3A4A6B;margin:10px 0 4px;">Tap the word with <strong>two closed syllables</strong>.</p>
+<div class="spotter-sentence" id="spell2">
+<span class="spotter-word" onclick="spotterPick(this,'spell2')" data-correct="false">open</span>
+<span class="spotter-word" onclick="spotterPick(this,'spell2')" data-correct="true">rabbit</span>
+<span class="spotter-word" onclick="spotterPick(this,'spell2')" data-correct="false">baby</span>
+<span class="spotter-word" onclick="spotterPick(this,'spell2')" data-correct="false">music</span>
+<div class="spotter-result" id="spell2-result"></div></div>
+<p style="font-size:14px;color:#3A4A6B;margin:10px 0 4px;">Tap the word with <strong>two closed syllables</strong>.</p>
+<div class="spotter-sentence" id="spell3">
+<span class="spotter-word" onclick="spotterPick(this,'spell3')" data-correct="false">robot</span>
+<span class="spotter-word" onclick="spotterPick(this,'spell3')" data-correct="false">final</span>
+<span class="spotter-word" onclick="spotterPick(this,'spell3')" data-correct="true">basket</span>
+<span class="spotter-word" onclick="spotterPick(this,'spell3')" data-correct="false">lion</span>
+<div class="spotter-result" id="spell3-result"></div></div>
+<p style="font-size:14px;color:#3A4A6B;margin:10px 0 4px;">Tap the word with <strong>two closed syllables</strong>.</p>
+<div class="spotter-sentence" id="spell4">
+<span class="spotter-word" onclick="spotterPick(this,'spell4')" data-correct="false">silent</span>
+<span class="spotter-word" onclick="spotterPick(this,'spell4')" data-correct="false">pilot</span>
+<span class="spotter-word" onclick="spotterPick(this,'spell4')" data-correct="false">crazy</span>
+<span class="spotter-word" onclick="spotterPick(this,'spell4')" data-correct="true">contest</span>
+<div class="spotter-result" id="spell4-result"></div></div>
 </div>
+
       
     </div>
   </div>

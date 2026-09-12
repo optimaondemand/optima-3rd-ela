@@ -2192,6 +2192,7 @@ A story that belongs to you.</div>
 <button class="tab-next-btn" onclick="switchTab('words')">Continue to 🔤 Word Study →</button>
 </div></div><!-- /tab-warmup -->
 <div class="tab-panel" id="tab-words">
+<!-- MORPHOLOGY -->
 <div class="activity bl-purple">
 <div class="activity-head"><div class="activity-num" style="background:#8B6FC0;">1</div><div style="flex:1;"><div class="activity-title">🌱 Morphology: Suffix -ed shows past action</div><div class="activity-sub">Explain / Justify the skill</div></div></div>
 <div class="activity-body">
@@ -2210,6 +2211,7 @@ A story that belongs to you.</div>
 <div class="match-item" data-match="D" onclick="matchClick(this)">walk</div>
 </div><div class="match-feedback" id="morphMatchFeedback">✨ All matched!</div></div>
 </div></div>
+<!-- VOCABULARY -->
 <div class="activity bl-cyan">
 <div class="activity-head"><div class="activity-num" style="background:#55C8E8;">2</div><div style="flex:1;"><div class="activity-title">🔤 Vocabulary: Words We've Met Before</div><div class="activity-sub">Weeks 1&ndash;4 review &mdash; choose how you show these words</div></div></div>
 <div class="activity-body">
@@ -2248,6 +2250,7 @@ A story that belongs to you.</div>
 <div class="journal-label">📓 Your word <span class="saved-dot" id="dot-swyk"></span></div>
 <textarea class="journal-box" id="journal-swyk" data-label="SWYK: Vocabulary" placeholder="Word:&#10;Definition:&#10;My sentence:" oninput="autoSave(this,'dot-swyk')" style="min-height:90px;"></textarea></div>
 </div></div>
+<!-- GRAMMAR -->
 <div class="activity bl-gold">
 <div class="activity-head"><div class="activity-num" style="background:#C7922C;">3</div><div style="flex:1;"><div class="activity-title">✏️ Grammar: Past-tense verbs</div><div class="activity-sub">Review: past-tense verbs and proper nouns.</div></div></div>
 <div class="activity-body">
@@ -2266,25 +2269,30 @@ A story that belongs to you.</div>
 <div class="journal-label">📓 Your answer <span class="saved-dot" id="dot-gram"></span></div>
 <textarea class="journal-box" id="journal-gram" data-label="Grammar: Why past tense?" placeholder="Writers use past tense because..." oninput="autoSave(this,'dot-gram')"></textarea></div>
 </div></div>
+<!-- SPELLING -->
 <div class="activity bl-navy">
-<div class="activity-head"><div class="activity-num" style="background:#0E1C42;">4</div><div style="flex:1;"><div class="activity-title">🔠 Spelling: Three sounds of -ed</div><div class="activity-sub">Explain / Justify the pattern.</div></div></div>
+<div class="activity-head"><div class="activity-num" style="background:#0E1C42;">4</div><div style="flex:1;"><div class="activity-title">🔠 Spelling: Three sounds of -ed</div><div class="activity-sub">Explain / justify the pattern.</div></div></div>
 <div class="activity-body">
-<div class="callout callout-info"><span class="callout-icon">🎮</span><p><strong>Practice: Sort the Words!</strong> Tap a word, then tap the column where it belongs.</p></div>
-<div class="sort-game" id="spellSort"><div class="sort-bank" id="sortBank">
-<span class="sort-chip" data-group="ed=/t/" onclick="pickSortChip(this)">walked</span>
-<span class="sort-chip" data-group="ed=/d/" onclick="pickSortChip(this)">called</span>
-<span class="sort-chip" data-group="ed=/ĕd/" onclick="pickSortChip(this)">started</span>
-<span class="sort-chip" data-group="ed=/t/" onclick="pickSortChip(this)">helped</span>
-<span class="sort-chip" data-group="ed=/d/" onclick="pickSortChip(this)">mailed</span>
-<span class="sort-chip" data-group="ed=/ĕd/" onclick="pickSortChip(this)">wanted</span>
-<span class="sort-chip" data-group="ed=/d/" onclick="pickSortChip(this)">played</span>
-<span class="sort-chip" data-group="ed=/t/" onclick="pickSortChip(this)">crashed</span>
-</div><div class="sort-columns">
-<div class="sort-col"><div class="sort-col-header" style="background:linear-gradient(135deg,#55C8E8,#7FD8F0);">ed=/t/</div><div class="sort-col-drop" data-col="ed=/t/" onclick="dropSortChip(this,'ed=/t/')"></div></div>
-<div class="sort-col"><div class="sort-col-header" style="background:linear-gradient(135deg,#55C8E8,#7FD8F0);">ed=/d/</div><div class="sort-col-drop" data-col="ed=/d/" onclick="dropSortChip(this,'ed=/d/')"></div></div>
+<div class="callout callout-gold" style="margin-bottom:14px;background:#FFF8E8;border:2px solid #F5E6C8;border-left:5px solid #C7922C;border-radius:10px;padding:14px 18px;"><span class="callout-icon">📖</span><p style="font-size:15px;color:#0E1C42;line-height:1.6;"><strong>The Rule:</strong> The ending <strong>-ed</strong> is always spelled the same, but it makes <strong>three different sounds</strong>. After a <em>t</em> or <em>d</em> sound you hear a whole extra beat: <strong>/&#x115;d/</strong> (want &rarr; want<strong>ed</strong>). After a quiet, breathy sound it says <strong>/t/</strong> (walk &rarr; walk<strong>ed</strong>). After a noisy sound it says <strong>/d/</strong> (mail &rarr; mail<strong>ed</strong>). Say the word out loud &mdash; your ears decide, not your eyes.</p></div>
+<div class="callout callout-info"><span class="callout-icon">🎲</span><p><strong>-ed Sound Dice!</strong> Roll a word from <em>Flat Stanley</em>. Say it out loud and decide which sound the <em>-ed</em> makes &mdash; then tap to check yourself.</p></div>
+<div style="text-align:center;margin:14px 0;">
+<div id="edDie" style="font-size:44px;line-height:1;">🎲</div>
+<button class="fillin-check-btn" id="edRollBtn" onclick="rollEdDice()" style="margin-top:10px;">Roll the dice</button>
+<div id="edCount" style="font-size:13px;color:#7A88A8;margin-top:6px;">0/6 words rolled</div>
+</div>
+<div id="edBox" style="display:none;background:#FAFBFF;border:2px solid #C8DCEE;border-radius:10px;padding:16px;text-align:center;">
+<div id="edWord" style="font-size:30px;font-weight:700;color:#0E1C42;"></div>
+<p style="font-size:14px;color:#3A4A6B;margin-top:6px;">Say it out loud. Does <em>-ed</em> say /t/, /d/, or /&#x115;d/?</p>
+<button class="dol-check-btn" onclick="checkEdDice()" style="margin-top:10px;">Check my answer</button>
+<div id="edReveal" style="display:none;margin-top:10px;font-size:17px;font-weight:700;color:#34B76F;"></div>
+</div>
+<script>
+var edDiceWords=[{w:"flattened",s:"/d/"},{w:"pumped",s:"/t/"},{w:"celebrated",s:"/&#x115;d/"},{w:"mailed",s:"/d/"},{w:"crashed",s:"/t/"},{w:"started",s:"/&#x115;d/"}];var edUsed=[];
+function rollEdDice(){var avail=edDiceWords.filter(function(x){return edUsed.indexOf(x.w)===-1});if(avail.length===0)return;var d=document.getElementById("edDie");var faces=["⚀","⚁","⚂","⚃","⚄","⚅"];var n=0;
+var spin=setInterval(function(){d.textContent=faces[Math.floor(Math.random()*6)];n++;if(n>10){clearInterval(spin);var pick=avail[Math.floor(Math.random()*avail.length)];edUsed.push(pick.w);document.getElementById("edWord").textContent=pick.w;document.getElementById("edBox").style.display="block";document.getElementById("edReveal").style.display="none";document.getElementById("edCount").textContent=edUsed.length+"/"+edDiceWords.length+" words rolled";if(edUsed.length===edDiceWords.length){document.getElementById("edRollBtn").disabled=true;document.getElementById("edCount").textContent="You rolled all six!";}}},90);}
+function checkEdDice(){var w=document.getElementById("edWord").textContent;for(var i=0;i<edDiceWords.length;i++){if(edDiceWords[i].w===w){var r=document.getElementById("edReveal");r.innerHTML=w+" &mdash; -ed says "+edDiceWords[i].s;r.style.display="block";return;}}}
+</script>
 
-<div class="sort-col"><div class="sort-col-header" style="background:linear-gradient(135deg,#55C8E8,#7FD8F0);">ed=/ĕd/</div><div class="sort-col-drop" data-col="ed=/ĕd/" onclick="dropSortChip(this,'ed=/ĕd/')"></div></div>
-</div><div class="sort-score" id="sortScore"></div></div>
 </div></div>
 <div class="activity bl-green">
 <div class="activity-head"><div class="activity-num" style="background:#34B76F;">5</div><div style="flex:1;"><div class="activity-title">🪶 Writing Connection</div><div class="activity-sub">Connect today's reading to your own writing</div></div></div>

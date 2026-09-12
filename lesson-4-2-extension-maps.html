@@ -2206,6 +2206,7 @@ Maps can help a reader know.</div>
 <button class="tab-next-btn" onclick="switchTab('words')">Continue to 🔤 Word Study →</button>
 </div></div><!-- /tab-warmup -->
 <div class="tab-panel" id="tab-words">
+<!-- MORPHOLOGY -->
 <div class="activity bl-purple">
 <div class="activity-head"><div class="activity-num" style="background:#8B6FC0;">1</div><div style="flex:1;"><div class="activity-title">🌱 Morphology: Prefix pre- means before</div><div class="activity-sub">Identify the skill</div></div></div>
 <div class="activity-body">
@@ -2225,6 +2226,7 @@ Maps can help a reader know.</div>
 <div class="match-item" data-match="D" onclick="matchClick(this)">before school</div>
 </div><div class="match-feedback" id="morphMatchFeedback">✨ All matched!</div></div>
 </div></div>
+<!-- VOCABULARY -->
 <div class="activity bl-cyan">
 <div class="activity-head"><div class="activity-num" style="background:#55C8E8;">2</div><div style="flex:1;"><div class="activity-title">🔤 Vocabulary: This Week's Words</div><div class="activity-sub">Context Detective</div></div></div>
 <div class="activity-body">
@@ -2259,6 +2261,7 @@ Maps can help a reader know.</div>
 <div class="match-item" data-match="D" onclick="matchClick(this)">A card with a picture, sent through the mail.</div>
 </div><div class="match-feedback" id="matchFeedback">✨ All matched!</div></div>
 </div></div>
+<!-- GRAMMAR -->
 <div class="activity bl-gold">
 <div class="activity-head"><div class="activity-num" style="background:#C7922C;">3</div><div style="flex:1;"><div class="activity-title">✏️ Grammar: Proper nouns and capitalization</div><div class="activity-sub">Day 2: Identify — spot it at work in the reading.</div></div></div>
 <div class="activity-body">
@@ -2280,26 +2283,43 @@ Maps can help a reader know.</div>
 
 </div>
 </div>
+<!-- SPELLING -->
 <div class="activity bl-navy">
-<div class="activity-head"><div class="activity-num" style="background:#0E1C42;">4</div><div style="flex:1;"><div class="activity-title">🔠 Spelling: Vowel teams ai/ay and oa/ow</div><div class="activity-sub">Identify the pattern.</div></div></div>
+<div class="activity-head"><div class="activity-num" style="background:#0E1C42;">4</div><div style="flex:1;"><div class="activity-title">🔠 Spelling: Vowel teams ai/ay and oa/ow</div><div class="activity-sub">Identify the vowel teams.</div></div></div>
 <div class="activity-body">
 <div class="callout callout-gold" style="margin-bottom:14px;background:#FFF8E8;border:2px solid #F5E6C8;border-left:5px solid #C7922C;border-radius:10px;padding:14px 18px;"><span class="callout-icon">📖</span><p style="font-size:15px;color:#0E1C42;line-height:1.6;"><strong>The Rule:</strong> Vowel teams are two vowels that work together to make one sound. <strong>ai</strong> and <strong>ay</strong> both make the long <em>a</em> sound (like in <em>rain</em> and <em>day</em>). <strong>oa</strong> and <strong>ow</strong> both make the long <em>o</em> sound (like in <em>coat</em> and <em>show</em>). Usually <em>ai</em> comes in the middle and <em>ay</em> comes at the end. Usually <em>oa</em> comes in the middle and <em>ow</em> comes at the end.</p></div>
-<div class="callout callout-info"><span class="callout-icon">🎮</span><p><strong>Practice: Sort the Words!</strong> Tap a word, then tap the column where it belongs.</p></div>
-<div class="sort-game" id="spellSort"><div class="sort-bank" id="sortBank">
-<span class="sort-chip" data-group="ai" onclick="pickSortChip(this)">wait</span>
-<span class="sort-chip" data-group="ai" onclick="pickSortChip(this)">rain</span>
-<span class="sort-chip" data-group="ay" onclick="pickSortChip(this)">day</span>
-<span class="sort-chip" data-group="ay" onclick="pickSortChip(this)">stay</span>
-<span class="sort-chip" data-group="oa" onclick="pickSortChip(this)">coat</span>
-<span class="sort-chip" data-group="oa" onclick="pickSortChip(this)">float</span>
-<span class="sort-chip" data-group="ow" onclick="pickSortChip(this)">grow</span>
-<span class="sort-chip" data-group="ow" onclick="pickSortChip(this)">show</span>
-</div><div class="sort-columns">
-<div class="sort-col"><div class="sort-col-header" style="background:linear-gradient(135deg,#55C8E8,#7FD8F0);">ai</div><div class="sort-col-drop" data-col="ai" onclick="dropSortChip(this,'ai')"></div></div>
-<div class="sort-col"><div class="sort-col-header" style="background:linear-gradient(135deg,#55C8E8,#7FD8F0);">ay</div><div class="sort-col-drop" data-col="ay" onclick="dropSortChip(this,'ay')"></div></div>
-<div class="sort-col"><div class="sort-col-header" style="background:linear-gradient(135deg,#55C8E8,#7FD8F0);">oa</div><div class="sort-col-drop" data-col="oa" onclick="dropSortChip(this,'oa')"></div></div>
-<div class="sort-col"><div class="sort-col-header" style="background:linear-gradient(135deg,#55C8E8,#7FD8F0);">ow</div><div class="sort-col-drop" data-col="ow" onclick="dropSortChip(this,'ow')"></div></div>
-</div><div class="sort-score" id="sortScore"></div></div>
+<div class="callout callout-info"><span class="callout-icon">🔎</span><p><strong>Sound Detective!</strong> All four words in a row share the same long vowel sound. Look at how each one is spelled.</p></div>
+<div class="spotter-game" id="spellGame">
+<p style="font-size:14px;color:#3A4A6B;margin:10px 0 4px;">Tap the word that spells long <em>a</em> with <strong>ai</strong>.</p>
+<div class="spotter-sentence" id="spell1">
+<span class="spotter-word" onclick="spotterPick(this,'spell1')" data-correct="false">play</span>
+<span class="spotter-word" onclick="spotterPick(this,'spell1')" data-correct="false">stay</span>
+<span class="spotter-word" onclick="spotterPick(this,'spell1')" data-correct="true">rain</span>
+<span class="spotter-word" onclick="spotterPick(this,'spell1')" data-correct="false">away</span>
+<div class="spotter-result" id="spell1-result"></div></div>
+<p style="font-size:14px;color:#3A4A6B;margin:10px 0 4px;">Tap the word that spells long <em>a</em> with <strong>ay</strong> at the end.</p>
+<div class="spotter-sentence" id="spell2">
+<span class="spotter-word" onclick="spotterPick(this,'spell2')" data-correct="false">mail</span>
+<span class="spotter-word" onclick="spotterPick(this,'spell2')" data-correct="false">train</span>
+<span class="spotter-word" onclick="spotterPick(this,'spell2')" data-correct="false">paid</span>
+<span class="spotter-word" onclick="spotterPick(this,'spell2')" data-correct="true">stay</span>
+<div class="spotter-result" id="spell2-result"></div></div>
+<p style="font-size:14px;color:#3A4A6B;margin:10px 0 4px;">Tap the word that spells long <em>o</em> with <strong>oa</strong>.</p>
+<div class="spotter-sentence" id="spell3">
+<span class="spotter-word" onclick="spotterPick(this,'spell3')" data-correct="false">grow</span>
+<span class="spotter-word" onclick="spotterPick(this,'spell3')" data-correct="false">show</span>
+<span class="spotter-word" onclick="spotterPick(this,'spell3')" data-correct="true">boat</span>
+<span class="spotter-word" onclick="spotterPick(this,'spell3')" data-correct="false">slow</span>
+<div class="spotter-result" id="spell3-result"></div></div>
+<p style="font-size:14px;color:#3A4A6B;margin:10px 0 4px;">Tap the word that spells long <em>o</em> with <strong>ow</strong> at the end.</p>
+<div class="spotter-sentence" id="spell4">
+<span class="spotter-word" onclick="spotterPick(this,'spell4')" data-correct="false">coat</span>
+<span class="spotter-word" onclick="spotterPick(this,'spell4')" data-correct="false">float</span>
+<span class="spotter-word" onclick="spotterPick(this,'spell4')" data-correct="false">groan</span>
+<span class="spotter-word" onclick="spotterPick(this,'spell4')" data-correct="true">snow</span>
+<div class="spotter-result" id="spell4-result"></div></div>
+</div>
+
 </div></div>
 <div class="activity bl-green">
 <div class="activity-head"><div class="activity-num" style="background:#34B76F;">5</div><div style="flex:1;"><div class="activity-title">🪶 Writing Connection</div><div class="activity-sub">Connect today's reading to your own writing</div></div></div>

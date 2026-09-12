@@ -2202,6 +2202,7 @@ Again — and make a better book.</div>
 <button class="tab-next-btn" onclick="switchTab('words')">Continue to 🔤 Word Study →</button>
 </div></div><!-- /tab-warmup -->
 <div class="tab-panel" id="tab-words">
+<!-- MORPHOLOGY -->
 <div class="activity bl-purple">
 <div class="activity-head"><div class="activity-num" style="background:#8B6FC0;">1</div><div style="flex:1;"><div class="activity-title">🌱 Morphology: Suffix -ed shows past action</div><div class="activity-sub">Identify the skill</div></div></div>
 <div class="activity-body">
@@ -2220,6 +2221,7 @@ Again — and make a better book.</div>
 <div class="match-item" data-match="D" onclick="matchClick(this)">want</div>
 </div><div class="match-feedback" id="morphMatchFeedback">✨ All matched!</div></div>
 </div></div>
+<!-- VOCABULARY -->
 <div class="activity bl-cyan">
 <div class="activity-head"><div class="activity-num" style="background:#55C8E8;">2</div><div style="flex:1;"><div class="activity-title">🔤 Vocabulary: Words We've Met Before</div><div class="activity-sub">Weeks 1&ndash;4 review &mdash; sort what you already know</div></div></div>
 <div class="activity-body">
@@ -2254,6 +2256,7 @@ Again — and make a better book.</div>
 <div class="match-item" data-match="D" onclick="matchClick(this)">Costing a lot of money.</div>
 </div><div class="match-feedback" id="matchFeedback">✨ All matched!</div></div>
 </div></div>
+<!-- GRAMMAR -->
 <div class="activity bl-gold">
 <div class="activity-head"><div class="activity-num" style="background:#C7922C;">3</div><div style="flex:1;"><div class="activity-title">✏️ Grammar: Past-tense verbs</div><div class="activity-sub">Find the past-tense verb in each sentence.</div></div></div>
 <div class="activity-body">
@@ -2269,25 +2272,43 @@ Again — and make a better book.</div>
 </div>
 
 </div></div>
+<!-- SPELLING -->
 <div class="activity bl-navy">
-<div class="activity-head"><div class="activity-num" style="background:#0E1C42;">4</div><div style="flex:1;"><div class="activity-title">🔠 Spelling: Three sounds of -ed</div><div class="activity-sub">Identify the pattern.</div></div></div>
+<div class="activity-head"><div class="activity-num" style="background:#0E1C42;">4</div><div style="flex:1;"><div class="activity-title">🔠 Spelling: Three sounds of -ed</div><div class="activity-sub">Identify the three sounds by ear.</div></div></div>
 <div class="activity-body">
-<div class="callout callout-info"><span class="callout-icon">🎮</span><p><strong>Practice: Sort the Words!</strong> Tap a word, then tap the column where it belongs.</p></div>
-<div class="sort-game" id="spellSort"><div class="sort-bank" id="sortBank">
-<span class="sort-chip" data-group="ed=/t/" onclick="pickSortChip(this)">wished</span>
-<span class="sort-chip" data-group="ed=/d/" onclick="pickSortChip(this)">pulled</span>
-<span class="sort-chip" data-group="ed=/ĕd/" onclick="pickSortChip(this)">shouted</span>
-<span class="sort-chip" data-group="ed=/t/" onclick="pickSortChip(this)">asked</span>
-<span class="sort-chip" data-group="ed=/d/" onclick="pickSortChip(this)">smiled</span>
-<span class="sort-chip" data-group="ed=/ĕd/" onclick="pickSortChip(this)">painted</span>
-<span class="sort-chip" data-group="ed=/t/" onclick="pickSortChip(this)">pushed</span>
-<span class="sort-chip" data-group="ed=/d/" onclick="pickSortChip(this)">yelled</span>
-</div><div class="sort-columns">
-<div class="sort-col"><div class="sort-col-header" style="background:linear-gradient(135deg,#55C8E8,#7FD8F0);">ed=/t/</div><div class="sort-col-drop" data-col="ed=/t/" onclick="dropSortChip(this,'ed=/t/')"></div></div>
-<div class="sort-col"><div class="sort-col-header" style="background:linear-gradient(135deg,#55C8E8,#7FD8F0);">ed=/d/</div><div class="sort-col-drop" data-col="ed=/d/" onclick="dropSortChip(this,'ed=/d/')"></div></div>
+<div class="callout callout-gold" style="margin-bottom:14px;background:#FFF8E8;border:2px solid #F5E6C8;border-left:5px solid #C7922C;border-radius:10px;padding:14px 18px;"><span class="callout-icon">📖</span><p style="font-size:15px;color:#0E1C42;line-height:1.6;"><strong>The Rule:</strong> The ending <strong>-ed</strong> is always spelled the same, but it makes <strong>three different sounds</strong>. After a <em>t</em> or <em>d</em> sound you hear a whole extra beat: <strong>/&#x115;d/</strong> (want &rarr; want<strong>ed</strong>). After a quiet, breathy sound it says <strong>/t/</strong> (walk &rarr; walk<strong>ed</strong>). After a noisy sound it says <strong>/d/</strong> (mail &rarr; mail<strong>ed</strong>). Say the word out loud &mdash; your ears decide, not your eyes.</p></div>
+<div class="callout callout-info"><span class="callout-icon">🔎</span><p><strong>Sound Detective!</strong> Say all four words out loud before you tap. Your ears will find the odd one.</p></div>
+<div class="spotter-game" id="spellGame">
+<p style="font-size:14px;color:#3A4A6B;margin:10px 0 4px;">Tap the word where <strong>-ed</strong> adds a whole extra beat &mdash; /&#x115;d/.</p>
+<div class="spotter-sentence" id="spell1">
+<span class="spotter-word" onclick="spotterPick(this,'spell1')" data-correct="false">walked</span>
+<span class="spotter-word" onclick="spotterPick(this,'spell1')" data-correct="false">mailed</span>
+<span class="spotter-word" onclick="spotterPick(this,'spell1')" data-correct="false">pumped</span>
+<span class="spotter-word" onclick="spotterPick(this,'spell1')" data-correct="true">wanted</span>
+<div class="spotter-result" id="spell1-result"></div></div>
+<p style="font-size:14px;color:#3A4A6B;margin:10px 0 4px;">Tap the word where <strong>-ed</strong> says <strong>/t/</strong>.</p>
+<div class="spotter-sentence" id="spell2">
+<span class="spotter-word" onclick="spotterPick(this,'spell2')" data-correct="false">closed</span>
+<span class="spotter-word" onclick="spotterPick(this,'spell2')" data-correct="false">returned</span>
+<span class="spotter-word" onclick="spotterPick(this,'spell2')" data-correct="false">landed</span>
+<span class="spotter-word" onclick="spotterPick(this,'spell2')" data-correct="true">crashed</span>
+<div class="spotter-result" id="spell2-result"></div></div>
+<p style="font-size:14px;color:#3A4A6B;margin:10px 0 4px;">Tap the word where <strong>-ed</strong> says <strong>/d/</strong>.</p>
+<div class="spotter-sentence" id="spell3">
+<span class="spotter-word" onclick="spotterPick(this,'spell3')" data-correct="false">wished</span>
+<span class="spotter-word" onclick="spotterPick(this,'spell3')" data-correct="false">started</span>
+<span class="spotter-word" onclick="spotterPick(this,'spell3')" data-correct="false">helped</span>
+<span class="spotter-word" onclick="spotterPick(this,'spell3')" data-correct="true">flattened</span>
+<div class="spotter-result" id="spell3-result"></div></div>
+<p style="font-size:14px;color:#3A4A6B;margin:10px 0 4px;">Tap the word where <strong>-ed</strong> adds a whole extra beat &mdash; /&#x115;d/.</p>
+<div class="spotter-sentence" id="spell4">
+<span class="spotter-word" onclick="spotterPick(this,'spell4')" data-correct="false">called</span>
+<span class="spotter-word" onclick="spotterPick(this,'spell4')" data-correct="false">packed</span>
+<span class="spotter-word" onclick="spotterPick(this,'spell4')" data-correct="false">smiled</span>
+<span class="spotter-word" onclick="spotterPick(this,'spell4')" data-correct="true">celebrated</span>
+<div class="spotter-result" id="spell4-result"></div></div>
+</div>
 
-<div class="sort-col"><div class="sort-col-header" style="background:linear-gradient(135deg,#55C8E8,#7FD8F0);">ed=/ĕd/</div><div class="sort-col-drop" data-col="ed=/ĕd/" onclick="dropSortChip(this,'ed=/ĕd/')"></div></div>
-</div><div class="sort-score" id="sortScore"></div></div>
 </div></div>
 <div class="activity bl-green">
 <div class="activity-head"><div class="activity-num" style="background:#34B76F;">5</div><div style="flex:1;"><div class="activity-title">📝 Reading-Writing Connection (RWM)</div><div class="activity-sub">Endings should close the event or lesson.</div></div></div>

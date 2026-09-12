@@ -2619,8 +2619,9 @@ body {
 
   <!-- SPELLING -->
   <div class="activity bl-navy">
-    <div class="activity-head"><div class="activity-num" style="background:#2A0A4A;">4</div><div><div class="activity-title">🔠 Spelling: Syllable Review (Day 3: All four types)</div><div class="activity-sub">Discover the pattern.</div></div></div>
+    <div class="activity-head"><div class="activity-num" style="background:#2A0A4A;">4</div><div><div class="activity-title">🔠 Spelling: Syllable Review (Day 3: All four types)</div><div class="activity-sub">Apply the pattern &mdash; build the words.</div></div></div>
     <div class="activity-body">
+<div class="callout callout-gold" style="margin-bottom:14px;background:#FFF8E8;border:2px solid #F5E6C8;border-left:5px solid #C7922C;border-radius:10px;padding:14px 18px;"><span class="callout-icon">📖</span><p style="font-size:15px;color:#0E1C42;line-height:1.6;"><strong>The Rule:</strong> Four syllable types, four different jobs: <strong>closed</strong> ends in a consonant and keeps the vowel short (nap), <strong>open</strong> ends in a vowel and lets it say its name (ti), <strong>r-controlled</strong> hands the vowel over to the r (gar), and <strong>silent-e</strong> reaches back to make the vowel long (pete). Name the type and the word decodes itself.</p></div>
             <p>Sort these words: closed, open, r-controlled, or silent-e?</p>
 
       <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:14px 0;">
@@ -2645,14 +2646,32 @@ body {
       <div class="dol-answer" id="spellReveal"><p>When a word has the <strong>VCCV</strong> pattern (vowel–consonant–consonant–vowel), you divide it <em>between the two consonants</em>.</p><p>This helps you read long words like <em>tunnel</em> (<strong>tun·nel</strong>) and <em>basket</em> (<strong>bas·ket</strong>).</p></div>
 
       <div class="callout callout-info" style="margin-top:16px;"><span class="callout-icon">🎮</span><p><strong>Practice:</strong> Sort these words using the pattern you discovered.</p></div>
-      <div class="sort-game" id="spellSort">
-  <div class="sort-bank" id="sortBank"><span class="sort-chip" data-group="b" onclick="pickSortChip(this)">spoken</span><span class="sort-chip" data-group="a" onclick="pickSortChip(this)">farmer</span><span class="sort-chip" data-group="a" onclick="pickSortChip(this)">kitten</span><span class="sort-chip" data-group="b" onclick="pickSortChip(this)">stone</span><span class="sort-chip" data-group="b" onclick="pickSortChip(this)">broken</span><span class="sort-chip" data-group="a" onclick="pickSortChip(this)">corner</span></div>
-  <div class="sort-columns">
-    <div class="sort-col"><div class="sort-col-header" style="background:linear-gradient(135deg,#3D1A6B,#5C2D91);">Closed or r-controlled</div><div class="sort-col-drop" data-col="a" onclick="dropSortChip(this,'a')"></div></div>
-    <div class="sort-col"><div class="sort-col-header" style="background:linear-gradient(135deg,#B8860B,#7A45C4);">Open or silent-e</div><div class="sort-col-drop" data-col="b" onclick="dropSortChip(this,'b')"></div></div>
-  </div>
-  <div class="sort-score" id="sortScore"></div>
+      <div class="callout callout-info"><span class="callout-icon">✨</span><p><strong>Name That Syllable!</strong> Split the word in your head, then tap to check both syllables.</p></div>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:14px 0;" id="spellGrid">
+<div class="rv-card" onclick="spellReveal(this)" data-after="com &middot; pete" data-hint="closed + silent-e" style="background:#FAFBFF;border:2px solid #C8DCEE;border-radius:10px;padding:14px;text-align:center;cursor:pointer;transition:all 0.3s;">
+<div style="font-size:26px;font-weight:700;color:#0E1C42;" class="rv-word">compete</div>
+<div style="font-size:12px;color:#7A88A8;margin-top:4px;" class="rv-hint">tap to split it!</div></div>
+<div class="rv-card" onclick="spellReveal(this)" data-after="gar &middot; den" data-hint="r-controlled + closed" style="background:#FAFBFF;border:2px solid #C8DCEE;border-radius:10px;padding:14px;text-align:center;cursor:pointer;transition:all 0.3s;">
+<div style="font-size:26px;font-weight:700;color:#0E1C42;" class="rv-word">garden</div>
+<div style="font-size:12px;color:#7A88A8;margin-top:4px;" class="rv-hint">tap to split it!</div></div>
+<div class="rv-card" onclick="spellReveal(this)" data-after="ti &middot; ger" data-hint="open + closed" style="background:#FAFBFF;border:2px solid #C8DCEE;border-radius:10px;padding:14px;text-align:center;cursor:pointer;transition:all 0.3s;">
+<div style="font-size:26px;font-weight:700;color:#0E1C42;" class="rv-word">tiger</div>
+<div style="font-size:12px;color:#7A88A8;margin-top:4px;" class="rv-hint">tap to split it!</div></div>
+<div class="rv-card" onclick="spellReveal(this)" data-after="nap &middot; kin" data-hint="closed + closed" style="background:#FAFBFF;border:2px solid #C8DCEE;border-radius:10px;padding:14px;text-align:center;cursor:pointer;transition:all 0.3s;">
+<div style="font-size:26px;font-weight:700;color:#0E1C42;" class="rv-word">napkin</div>
+<div style="font-size:12px;color:#7A88A8;margin-top:4px;" class="rv-hint">tap to split it!</div></div>
+<div class="rv-card" onclick="spellReveal(this)" data-after="in &middot; vite" data-hint="closed + silent-e" style="background:#FAFBFF;border:2px solid #C8DCEE;border-radius:10px;padding:14px;text-align:center;cursor:pointer;transition:all 0.3s;">
+<div style="font-size:26px;font-weight:700;color:#0E1C42;" class="rv-word">invite</div>
+<div style="font-size:12px;color:#7A88A8;margin-top:4px;" class="rv-hint">tap to split it!</div></div>
+<div class="rv-card" onclick="spellReveal(this)" data-after="cor &middot; ner" data-hint="r-controlled + r-controlled" style="background:#FAFBFF;border:2px solid #C8DCEE;border-radius:10px;padding:14px;text-align:center;cursor:pointer;transition:all 0.3s;">
+<div style="font-size:26px;font-weight:700;color:#0E1C42;" class="rv-word">corner</div>
+<div style="font-size:12px;color:#7A88A8;margin-top:4px;" class="rv-hint">tap to split it!</div></div>
 </div>
+<div class="sort-score" id="spellScore"></div>
+<script>
+function spellReveal(c){if(c.classList.contains("done"))return;c.classList.add("done");c.querySelector(".rv-word").innerHTML=c.dataset.after;var h=c.querySelector(".rv-hint");h.innerHTML=c.dataset.hint;h.style.color="#34B76F";h.style.fontWeight="700";c.style.background="#E3F8ED";c.style.borderColor="#34B76F";var all=document.querySelectorAll(".rv-card"),d=document.querySelectorAll(".rv-card.done");var sc=document.getElementById("spellScore");if(!sc)return;sc.textContent=d.length===all.length?"All four types, all split correctly.":d.length+"/"+all.length+" done";}
+</script>
+
       
     </div>
   </div>

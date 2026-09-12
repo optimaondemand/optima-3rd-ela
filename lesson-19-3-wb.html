@@ -2619,8 +2619,9 @@ body {
 
   <!-- SPELLING -->
   <div class="activity bl-navy">
-    <div class="activity-head"><div class="activity-num" style="background:#2A0A4A;">4</div><div><div class="activity-title">🔠 Spelling: Open Syllables (Day 3: Apply)</div><div class="activity-sub">Discover the pattern.</div></div></div>
+    <div class="activity-head"><div class="activity-num" style="background:#2A0A4A;">4</div><div><div class="activity-title">🔠 Spelling: Open Syllables (Day 3: Apply)</div><div class="activity-sub">Apply the pattern &mdash; build the words.</div></div></div>
     <div class="activity-body">
+<div class="callout callout-gold" style="margin-bottom:14px;background:#FFF8E8;border:2px solid #F5E6C8;border-left:5px solid #C7922C;border-radius:10px;padding:14px 18px;"><span class="callout-icon">📖</span><p style="font-size:15px;color:#0E1C42;line-height:1.6;"><strong>The Rule:</strong> An <strong>open syllable</strong> ends in a vowel, so nothing shuts the vowel in and it says its <strong>name</strong>: <em>ti</em> in <strong>ti&middot;ger</strong>, <em>mu</em> in <strong>mu&middot;sic</strong>. Closed syllable, short vowel. Open syllable, long vowel.</p></div>
             <p>Divide these words into syllables and mark the open syllable (long vowel at end).</p>
 
       <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:14px 0;">
@@ -2645,14 +2646,32 @@ body {
       <div class="dol-answer" id="spellReveal"><p>When a word has the <strong>VCCV</strong> pattern (vowel–consonant–consonant–vowel), you divide it <em>between the two consonants</em>.</p><p>This helps you read long words like <em>tunnel</em> (<strong>tun·nel</strong>) and <em>basket</em> (<strong>bas·ket</strong>).</p></div>
 
       <div class="callout callout-info" style="margin-top:16px;"><span class="callout-icon">🎮</span><p><strong>Practice:</strong> Sort these words using the pattern you discovered.</p></div>
-      <div class="sort-game" id="spellSort">
-  <div class="sort-bank" id="sortBank"><span class="sort-chip" data-group="a" onclick="pickSortChip(this)">opened</span><span class="sort-chip" data-group="a" onclick="pickSortChip(this)">bacon</span><span class="sort-chip" data-group="a" onclick="pickSortChip(this)">lady</span><span class="sort-chip" data-group="a" onclick="pickSortChip(this)">over</span><span class="sort-chip" data-group="a" onclick="pickSortChip(this)">fever</span><span class="sort-chip" data-group="a" onclick="pickSortChip(this)">spoken</span></div>
-  <div class="sort-columns">
-    <div class="sort-col"><div class="sort-col-header" style="background:linear-gradient(135deg,#3D1A6B,#5C2D91);">Open 1st syllable</div><div class="sort-col-drop" data-col="a" onclick="dropSortChip(this,'a')"></div></div>
-    <div class="sort-col"><div class="sort-col-header" style="background:linear-gradient(135deg,#B8860B,#7A45C4);">Open 2nd syllable</div><div class="sort-col-drop" data-col="b" onclick="dropSortChip(this,'b')"></div></div>
-  </div>
-  <div class="sort-score" id="sortScore"></div>
+      <div class="callout callout-info"><span class="callout-icon">✨</span><p><strong>Open Syllable Splitter!</strong> Say the first beat on its own. Does the vowel say its name? Tap to check.</p></div>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:14px 0;" id="spellGrid">
+<div class="rv-card" onclick="spellReveal(this)" data-after="ti &middot; ger" data-hint="open + closed &rarr; long i" style="background:#FAFBFF;border:2px solid #C8DCEE;border-radius:10px;padding:14px;text-align:center;cursor:pointer;transition:all 0.3s;">
+<div style="font-size:26px;font-weight:700;color:#0E1C42;" class="rv-word">tiger</div>
+<div style="font-size:12px;color:#7A88A8;margin-top:4px;" class="rv-hint">tap to split it!</div></div>
+<div class="rv-card" onclick="spellReveal(this)" data-after="pa &middot; per" data-hint="open &rarr; long a" style="background:#FAFBFF;border:2px solid #C8DCEE;border-radius:10px;padding:14px;text-align:center;cursor:pointer;transition:all 0.3s;">
+<div style="font-size:26px;font-weight:700;color:#0E1C42;" class="rv-word">paper</div>
+<div style="font-size:12px;color:#7A88A8;margin-top:4px;" class="rv-hint">tap to split it!</div></div>
+<div class="rv-card" onclick="spellReveal(this)" data-after="mu &middot; sic" data-hint="open &rarr; long u" style="background:#FAFBFF;border:2px solid #C8DCEE;border-radius:10px;padding:14px;text-align:center;cursor:pointer;transition:all 0.3s;">
+<div style="font-size:26px;font-weight:700;color:#0E1C42;" class="rv-word">music</div>
+<div style="font-size:12px;color:#7A88A8;margin-top:4px;" class="rv-hint">tap to split it!</div></div>
+<div class="rv-card" onclick="spellReveal(this)" data-after="ro &middot; bot" data-hint="open &rarr; long o" style="background:#FAFBFF;border:2px solid #C8DCEE;border-radius:10px;padding:14px;text-align:center;cursor:pointer;transition:all 0.3s;">
+<div style="font-size:26px;font-weight:700;color:#0E1C42;" class="rv-word">robot</div>
+<div style="font-size:12px;color:#7A88A8;margin-top:4px;" class="rv-hint">tap to split it!</div></div>
+<div class="rv-card" onclick="spellReveal(this)" data-after="si &middot; lent" data-hint="open &rarr; long i" style="background:#FAFBFF;border:2px solid #C8DCEE;border-radius:10px;padding:14px;text-align:center;cursor:pointer;transition:all 0.3s;">
+<div style="font-size:26px;font-weight:700;color:#0E1C42;" class="rv-word">silent</div>
+<div style="font-size:12px;color:#7A88A8;margin-top:4px;" class="rv-hint">tap to split it!</div></div>
+<div class="rv-card" onclick="spellReveal(this)" data-after="pi &middot; lot" data-hint="open &rarr; long i" style="background:#FAFBFF;border:2px solid #C8DCEE;border-radius:10px;padding:14px;text-align:center;cursor:pointer;transition:all 0.3s;">
+<div style="font-size:26px;font-weight:700;color:#0E1C42;" class="rv-word">pilot</div>
+<div style="font-size:12px;color:#7A88A8;margin-top:4px;" class="rv-hint">tap to split it!</div></div>
 </div>
+<div class="sort-score" id="spellScore"></div>
+<script>
+function spellReveal(c){if(c.classList.contains("done"))return;c.classList.add("done");c.querySelector(".rv-word").innerHTML=c.dataset.after;var h=c.querySelector(".rv-hint");h.innerHTML=c.dataset.hint;h.style.color="#34B76F";h.style.fontWeight="700";c.style.background="#E3F8ED";c.style.borderColor="#34B76F";var all=document.querySelectorAll(".rv-card"),d=document.querySelectorAll(".rv-card.done");var sc=document.getElementById("spellScore");if(!sc)return;sc.textContent=d.length===all.length?"All split! An open syllable lets the vowel say its name.":d.length+"/"+all.length+" done";}
+</script>
+
       
     </div>
   </div>

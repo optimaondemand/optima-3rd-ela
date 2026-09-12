@@ -2415,27 +2415,41 @@ body {
 
   <!-- ═══ SPELLING ═══ -->
   <div class="activity bl-navy">
-    <div class="activity-head"><div class="activity-num" style="background:#0E1C42;">4</div><div style="flex:1;"><div class="activity-title">🔠 Spelling: Dropping the final e</div><div class="activity-sub">Day 3: Apply &mdash; Use it in a sentence of your own.</div></div></div>
+    <div class="activity-head"><div class="activity-num" style="background:#0E1C42;">4</div><div style="flex:1;"><div class="activity-title">🔠 Spelling: Dropping the final e</div><div class="activity-sub">Apply the pattern &mdash; climb the ladder.</div></div></div>
     <div class="activity-body">
+<div class="callout callout-gold" style="margin-bottom:14px;background:#FFF8E8;border:2px solid #F5E6C8;border-left:5px solid #C7922C;border-radius:10px;padding:14px 18px;"><span class="callout-icon">📖</span><p style="font-size:15px;color:#0E1C42;line-height:1.6;"><strong>The Rule:</strong> When a base word ends in a <strong>silent e</strong> and the ending starts with a <strong>vowel</strong>, drop the e: <em>hope</em> + <em>-ing</em> = <strong>hoping</strong>. If the ending starts with a consonant, keep it: <em>hope</em> + <em>-ful</em> = <strong>hopeful</strong>.</p></div>
       <p>Same rule as Day 1 &mdash; dropping the final e. Sort them again, and this time notice <em>why</em> each one landed where it did.</p>
               <div class="callout callout-info" style="margin-top:14px;"><span class="callout-icon">🎮</span><p><strong>Practice: Sort the words.</strong> Tap a word, then tap the column it belongs in.</p></div>
-      <div class="sort-game" id="spellSort">
-        <div class="sort-bank" id="sortBank">
-          <span class="sort-chip" data-group="keep-e" onclick="pickSortChip(this)">bravely</span>
-          <span class="sort-chip" data-group="keep-e" onclick="pickSortChip(this)">useless</span>
-          <span class="sort-chip" data-group="keep-e" onclick="pickSortChip(this)">careful</span>
-          <span class="sort-chip" data-group="keep-e" onclick="pickSortChip(this)">hopeful</span>
-          <span class="sort-chip" data-group="drop-e" onclick="pickSortChip(this)">waved</span>
-          <span class="sort-chip" data-group="drop-e" onclick="pickSortChip(this)">named</span>
-          <span class="sort-chip" data-group="drop-e" onclick="pickSortChip(this)">staring</span>
-          <span class="sort-chip" data-group="drop-e" onclick="pickSortChip(this)">shining</span>
-        </div>
-        <div class="sort-columns">
-          <div class="sort-col"><div class="sort-col-header" style="background:linear-gradient(135deg,#55C8E8,#55C8E8);">Dropped the e</div><div class="sort-col-drop" data-col="drop-e" onclick="dropSortChip(this,'drop-e')"></div></div>
-          <div class="sort-col"><div class="sort-col-header" style="background:linear-gradient(135deg,#8B6FC0,#8B6FC0);">Kept the e</div><div class="sort-col-drop" data-col="keep-e" onclick="dropSortChip(this,'keep-e')"></div></div>
-        </div>
-        <div class="sort-score" id="sortScore"></div>
-      </div>
+      <div class="callout callout-info"><span class="callout-icon">🪜</span><p><strong>Word Ladder!</strong> Watch the silent e disappear and come back as the endings change. Read the change, say the new word in your head, <em>then</em> tap the rung to check.</p></div>
+<div id="ladderGame" style="margin:14px 0;">
+<div style="background:#E3F8ED;border:2px solid #34B76F;border-radius:10px;padding:12px;text-align:center;font-size:24px;font-weight:700;color:#0E1C42;margin-bottom:8px;">shine</div>
+<div style="text-align:center;color:#7A88A8;font-size:18px;line-height:1;">&darr;</div>
+<div class="ladder-rung" onclick="ladderTap(this)" data-word="shining" style="background:#FAFBFF;border:2px solid #C8DCEE;border-radius:10px;padding:12px;text-align:center;cursor:pointer;margin-bottom:8px;transition:all 0.3s;">
+<div class="lr-word" style="font-size:22px;font-weight:700;color:#0E1C42;">?</div>
+<div style="font-size:13px;color:#3A4A6B;margin-top:4px;">add <em>-ing</em> &mdash; what happens to the e?</div></div>
+<div style="text-align:center;color:#7A88A8;font-size:18px;line-height:1;">&darr;</div>
+<div class="ladder-rung" onclick="ladderTap(this)" data-word="dining" style="background:#FAFBFF;border:2px solid #C8DCEE;border-radius:10px;padding:12px;text-align:center;cursor:pointer;margin-bottom:8px;transition:all 0.3s;">
+<div class="lr-word" style="font-size:22px;font-weight:700;color:#0E1C42;">?</div>
+<div style="font-size:13px;color:#3A4A6B;margin-top:4px;">change <em>sh</em> to <em>d</em></div></div>
+<div style="text-align:center;color:#7A88A8;font-size:18px;line-height:1;">&darr;</div>
+<div class="ladder-rung" onclick="ladderTap(this)" data-word="dined" style="background:#FAFBFF;border:2px solid #C8DCEE;border-radius:10px;padding:12px;text-align:center;cursor:pointer;margin-bottom:8px;transition:all 0.3s;">
+<div class="lr-word" style="font-size:22px;font-weight:700;color:#0E1C42;">?</div>
+<div style="font-size:13px;color:#3A4A6B;margin-top:4px;">swap <em>-ing</em> for <em>-ed</em></div></div>
+<div style="text-align:center;color:#7A88A8;font-size:18px;line-height:1;">&darr;</div>
+<div class="ladder-rung" onclick="ladderTap(this)" data-word="dine" style="background:#FAFBFF;border:2px solid #C8DCEE;border-radius:10px;padding:12px;text-align:center;cursor:pointer;margin-bottom:8px;transition:all 0.3s;">
+<div class="lr-word" style="font-size:22px;font-weight:700;color:#0E1C42;">?</div>
+<div style="font-size:13px;color:#3A4A6B;margin-top:4px;">take the ending off &mdash; the e comes back</div></div>
+<div style="text-align:center;color:#7A88A8;font-size:18px;line-height:1;">&darr;</div>
+<div class="ladder-rung" onclick="ladderTap(this)" data-word="vine" style="background:#FAFBFF;border:2px solid #C8DCEE;border-radius:10px;padding:12px;text-align:center;cursor:pointer;margin-bottom:8px;transition:all 0.3s;">
+<div class="lr-word" style="font-size:22px;font-weight:700;color:#0E1C42;">?</div>
+<div style="font-size:13px;color:#3A4A6B;margin-top:4px;">change the <em>d</em> to <em>v</em></div></div>
+</div>
+<div class="sort-score" id="ladderScore"></div>
+<script>
+function ladderTap(el){if(el.dataset.done)return;el.dataset.done="1";el.querySelector(".lr-word").textContent=el.dataset.word;el.style.background="#E3F8ED";el.style.borderColor="#34B76F";el.style.cursor="default";var all=document.querySelectorAll(".ladder-rung"),d=document.querySelectorAll(".ladder-rung[data-done]");var sc=document.getElementById("ladderScore");if(!sc)return;sc.textContent=d.length===all.length?"Top of the ladder! One small change at a time.":d.length+"/"+all.length+" rungs climbed";}
+</script>
+
+
       <div class="swyk">
         <div class="swyk-label">🪶 Show What You Know</div>
         <div class="swyk-prompt">Write two sentences about today&rsquo;s chapters using words that follow this rule.</div>

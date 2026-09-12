@@ -2619,8 +2619,9 @@ body {
 
   <!-- SPELLING -->
   <div class="activity bl-navy">
-    <div class="activity-head"><div class="activity-num" style="background:#2A0A4A;">4</div><div><div class="activity-title">🔠 Spelling: VCCV Syllable Division (Day 3: Apply to longer words)</div><div class="activity-sub">Discover the pattern by listening.</div></div></div>
+    <div class="activity-head"><div class="activity-num" style="background:#2A0A4A;">4</div><div><div class="activity-title">🔠 Spelling: VCCV Syllable Division (Day 3: Apply to longer words)</div><div class="activity-sub">Apply the pattern &mdash; build the words.</div></div></div>
     <div class="activity-body">
+<div class="callout callout-gold" style="margin-bottom:14px;background:#FFF8E8;border:2px solid #F5E6C8;border-left:5px solid #C7922C;border-radius:10px;padding:14px 18px;"><span class="callout-icon">📖</span><p style="font-size:15px;color:#0E1C42;line-height:1.6;"><strong>The Rule:</strong> <strong>VCCV</strong> means vowel&ndash;consonant&ndash;consonant&ndash;vowel. When you see that pattern, <strong>split between the two consonants</strong>: <em>nap&middot;kin</em>, <em>bas&middot;ket</em>. Both syllables usually end up closed, so both vowels stay short. Digraphs like <em>ph</em> and <em>th</em> stay together.</p></div>
             <p>Apply the VCCV rule to these longer medieval words. Divide, then read each syllable aloud.</p>
 
       <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:14px 0;">
@@ -2645,7 +2646,32 @@ body {
       <div class="dol-answer" id="spellReveal"><p>When a word has the <strong>VCCV</strong> pattern (vowel–consonant–consonant–vowel), you divide it <em>between the two consonants</em>.</p><p>This helps you read long words like <em>tunnel</em> (<strong>tun·nel</strong>) and <em>basket</em> (<strong>bas·ket</strong>).</p></div>
 
       <div class="callout callout-info" style="margin-top:16px;"><span class="callout-icon">🎮</span><p><strong>Practice:</strong> Sort these words using the pattern you discovered.</p></div>
-      <div class="sort-game" id="spellSort"><div class="sort-bank" id="sortBank"><span class="sort-chip" data-group="a" onclick="pickSortChip(this)">market</span><span class="sort-chip" data-group="a" onclick="pickSortChip(this)">merchant</span><span class="sort-chip" data-group="a" onclick="pickSortChip(this)">servant</span><span class="sort-chip" data-group="a" onclick="pickSortChip(this)">quarrel</span><span class="sort-chip" data-group="a" onclick="pickSortChip(this)">pilgrim</span><span class="sort-chip" data-group="a" onclick="pickSortChip(this)">trumpet</span><span class="sort-chip" data-group="a" onclick="pickSortChip(this)">festive</span><span class="sort-chip" data-group="a" onclick="pickSortChip(this)">turmoil</span></div><div class="sort-columns"><div class="sort-col"><div class="sort-col-header" style="background:linear-gradient(135deg,#3D1A6B,#5C2D91);">VCCV pattern (divide between CC)</div><div class="sort-col-drop" data-col="a" onclick="dropSortChip(this,'a')"></div></div><div class="sort-col"><div class="sort-col-header" style="background:linear-gradient(135deg,#B8860B,#7A45C4);">Other</div><div class="sort-col-drop" data-col="b" onclick="dropSortChip(this,'b')"></div></div></div><div class="sort-score" id="sortScore"></div></div>
+      <div class="callout callout-info"><span class="callout-icon">✨</span><p><strong>VCCV Splitter!</strong> Find the two consonants in the middle, then tap to split between them.</p></div>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:14px 0;" id="spellGrid">
+<div class="rv-card" onclick="spellReveal(this)" data-after="nap &middot; kin" data-hint="split between p and k" style="background:#FAFBFF;border:2px solid #C8DCEE;border-radius:10px;padding:14px;text-align:center;cursor:pointer;transition:all 0.3s;">
+<div style="font-size:26px;font-weight:700;color:#0E1C42;" class="rv-word">napkin</div>
+<div style="font-size:12px;color:#7A88A8;margin-top:4px;" class="rv-hint">tap to split it!</div></div>
+<div class="rv-card" onclick="spellReveal(this)" data-after="bas &middot; ket" data-hint="split between s and k" style="background:#FAFBFF;border:2px solid #C8DCEE;border-radius:10px;padding:14px;text-align:center;cursor:pointer;transition:all 0.3s;">
+<div style="font-size:26px;font-weight:700;color:#0E1C42;" class="rv-word">basket</div>
+<div style="font-size:12px;color:#7A88A8;margin-top:4px;" class="rv-hint">tap to split it!</div></div>
+<div class="rv-card" onclick="spellReveal(this)" data-after="sud &middot; den" data-hint="split the double d" style="background:#FAFBFF;border:2px solid #C8DCEE;border-radius:10px;padding:14px;text-align:center;cursor:pointer;transition:all 0.3s;">
+<div style="font-size:26px;font-weight:700;color:#0E1C42;" class="rv-word">sudden</div>
+<div style="font-size:12px;color:#7A88A8;margin-top:4px;" class="rv-hint">tap to split it!</div></div>
+<div class="rv-card" onclick="spellReveal(this)" data-after="con &middot; test" data-hint="split between n and t" style="background:#FAFBFF;border:2px solid #C8DCEE;border-radius:10px;padding:14px;text-align:center;cursor:pointer;transition:all 0.3s;">
+<div style="font-size:26px;font-weight:700;color:#0E1C42;" class="rv-word">contest</div>
+<div style="font-size:12px;color:#7A88A8;margin-top:4px;" class="rv-hint">tap to split it!</div></div>
+<div class="rv-card" onclick="spellReveal(this)" data-after="rab &middot; bit" data-hint="split the double b" style="background:#FAFBFF;border:2px solid #C8DCEE;border-radius:10px;padding:14px;text-align:center;cursor:pointer;transition:all 0.3s;">
+<div style="font-size:26px;font-weight:700;color:#0E1C42;" class="rv-word">rabbit</div>
+<div style="font-size:12px;color:#7A88A8;margin-top:4px;" class="rv-hint">tap to split it!</div></div>
+<div class="rv-card" onclick="spellReveal(this)" data-after="prob &middot; lem" data-hint="split between b and l" style="background:#FAFBFF;border:2px solid #C8DCEE;border-radius:10px;padding:14px;text-align:center;cursor:pointer;transition:all 0.3s;">
+<div style="font-size:26px;font-weight:700;color:#0E1C42;" class="rv-word">problem</div>
+<div style="font-size:12px;color:#7A88A8;margin-top:4px;" class="rv-hint">tap to split it!</div></div>
+</div>
+<div class="sort-score" id="spellScore"></div>
+<script>
+function spellReveal(c){if(c.classList.contains("done"))return;c.classList.add("done");c.querySelector(".rv-word").innerHTML=c.dataset.after;var h=c.querySelector(".rv-hint");h.innerHTML=c.dataset.hint;h.style.color="#34B76F";h.style.fontWeight="700";c.style.background="#E3F8ED";c.style.borderColor="#34B76F";var all=document.querySelectorAll(".rv-card"),d=document.querySelectorAll(".rv-card.done");var sc=document.getElementById("spellScore");if(!sc)return;sc.textContent=d.length===all.length?"All split! Two consonants in the middle, one split between them.":d.length+"/"+all.length+" done";}
+</script>
+
       
     </div>
   </div>

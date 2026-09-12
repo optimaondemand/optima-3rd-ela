@@ -2634,8 +2634,9 @@ He climbed on the rocks.</div>
 
   <!-- SPELLING -->
   <div class="activity bl-navy">
-    <div class="activity-head"><div class="activity-num" style="background:#2A0A4A;">4</div><div><div class="activity-title">🔠 Spelling: r-Controlled Syllables (Day 4: Review + Explain)</div><div class="activity-sub">Discover the pattern.</div></div></div>
+    <div class="activity-head"><div class="activity-num" style="background:#2A0A4A;">4</div><div><div class="activity-title">🔠 Spelling: r-Controlled Syllables (Day 4: Review + Explain)</div><div class="activity-sub">Explain / justify the pattern.</div></div></div>
     <div class="activity-body">
+<div class="callout callout-gold" style="margin-bottom:14px;background:#FFF8E8;border:2px solid #F5E6C8;border-left:5px solid #C7922C;border-radius:10px;padding:14px 18px;"><span class="callout-icon">📖</span><p style="font-size:15px;color:#0E1C42;line-height:1.6;"><strong>The Rule:</strong> When a vowel is followed by <strong>r</strong>, the r takes over and the vowel says neither its short nor its long sound: <em>ar</em> (car), <em>or</em> (corn), and <em>er, ir, ur</em>, which all say the same thing. That is an <strong>r-controlled syllable</strong>.</p></div>
             <p>Sort and then write: explain the r-controlled pattern in your own words.</p>
 
       <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:14px 0;">
@@ -2660,14 +2661,24 @@ He climbed on the rocks.</div>
       <div class="dol-answer" id="spellReveal"><p>When a word has the <strong>VCCV</strong> pattern (vowel–consonant–consonant–vowel), you divide it <em>between the two consonants</em>.</p><p>This helps you read long words like <em>tunnel</em> (<strong>tun·nel</strong>) and <em>basket</em> (<strong>bas·ket</strong>).</p></div>
 
       <div class="callout callout-info" style="margin-top:16px;"><span class="callout-icon">🎮</span><p><strong>Practice:</strong> Sort these words using the pattern you discovered.</p></div>
-      <div class="sort-game" id="spellSort">
-  <div class="sort-bank" id="sortBank"><span class="sort-chip" data-group="a" onclick="pickSortChip(this)">market</span><span class="sort-chip" data-group="b" onclick="pickSortChip(this)">circle</span><span class="sort-chip" data-group="a" onclick="pickSortChip(this)">morning</span><span class="sort-chip" data-group="b" onclick="pickSortChip(this)">birch</span><span class="sort-chip" data-group="b" onclick="pickSortChip(this)">hurdle</span><span class="sort-chip" data-group="a" onclick="pickSortChip(this)">pardon</span></div>
-  <div class="sort-columns">
-    <div class="sort-col"><div class="sort-col-header" style="background:linear-gradient(135deg,#3D1A6B,#5C2D91);">ar or or</div><div class="sort-col-drop" data-col="a" onclick="dropSortChip(this,'a')"></div></div>
-    <div class="sort-col"><div class="sort-col-header" style="background:linear-gradient(135deg,#B8860B,#7A45C4);">er, ir, or ur</div><div class="sort-col-drop" data-col="b" onclick="dropSortChip(this,'b')"></div></div>
-  </div>
-  <div class="sort-score" id="sortScore"></div>
+      <div class="callout callout-info"><span class="callout-icon">🎲</span><p><strong>r-Controlled Dice!</strong> Roll a word, say it out loud, decide &mdash; then tap to check yourself.</p></div>
+<div style="text-align:center;margin:14px 0;">
+<div id="spellDie" style="font-size:44px;line-height:1;">🎲</div>
+<button class="fillin-check-btn" id="spellRollBtn" onclick="rollSpellDice()" style="margin-top:10px;">Roll the dice</button>
+<div id="spellCount" style="font-size:13px;color:#7A88A8;margin-top:6px;">0/6 words rolled</div>
 </div>
+<div id="spellBox" style="display:none;background:#FAFBFF;border:2px solid #C8DCEE;border-radius:10px;padding:16px;text-align:center;">
+<div id="spellWord" style="font-size:30px;font-weight:700;color:#0E1C42;"></div>
+<p style="font-size:14px;color:#3A4A6B;margin-top:6px;">Split it &mdash; which syllable does the r control?</p>
+<button class="dol-check-btn" onclick="checkSpellDice()" style="margin-top:10px;">Check my answer</button>
+<div id="spellReveal" style="display:none;margin-top:10px;font-size:17px;font-weight:700;color:#34B76F;"></div>
+</div>
+<script>
+var spellDice=[{w:"harbor",s:"har &middot; bor &mdash; ar and or, both r-controlled"},{w:"winter",s:"win &middot; ter &mdash; er in the second syllable"},{w:"circus",s:"cir &middot; cus &mdash; ir"},{w:"forest",s:"for &middot; est &mdash; or"},{w:"turnip",s:"tur &middot; nip &mdash; ur"},{w:"barber",s:"bar &middot; ber &mdash; ar and er"}];var spellUsed=[];
+function rollSpellDice(){var av=spellDice.filter(function(x){return spellUsed.indexOf(x.w)===-1});if(!av.length)return;var d=document.getElementById("spellDie"),f=["⚀","⚁","⚂","⚃","⚄","⚅"],n=0;var sp=setInterval(function(){d.textContent=f[Math.floor(Math.random()*6)];n++;if(n>10){clearInterval(sp);var p=av[Math.floor(Math.random()*av.length)];spellUsed.push(p.w);document.getElementById("spellWord").textContent=p.w;document.getElementById("spellBox").style.display="block";document.getElementById("spellReveal").style.display="none";document.getElementById("spellCount").textContent=spellUsed.length+"/"+spellDice.length+" words rolled";if(spellUsed.length===spellDice.length){document.getElementById("spellRollBtn").disabled=true;document.getElementById("spellCount").textContent="You rolled them all!";}}},90);}
+function checkSpellDice(){var w=document.getElementById("spellWord").textContent;for(var i=0;i<spellDice.length;i++){if(spellDice[i].w===w){var r=document.getElementById("spellReveal");r.innerHTML=w+" &mdash; "+spellDice[i].s;r.style.display="block";return;}}}
+</script>
+
       
     </div>
   </div>

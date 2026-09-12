@@ -2196,6 +2196,7 @@ Beneath a lamp at night.</div>
 <button class="tab-next-btn" onclick="switchTab('words')">Continue to 🔤 Word Study →</button></div>
 </div><!-- /tab-warmup -->
 <div class="tab-panel" id="tab-words">
+<!-- MORPHOLOGY -->
 <div class="activity bl-purple">
 <div class="activity-head"><div class="activity-num" style="background:#8B6FC0;">1</div><div style="flex:1;"><div class="activity-title">🌱 Morphology: Suffix -ing shows action happening</div><div class="activity-sub">Identify the skill</div></div></div>
 <div class="activity-body">
@@ -2215,6 +2216,7 @@ Beneath a lamp at night.</div>
 <div class="match-item" data-match="D" onclick="matchClick(this)">send</div>
 </div><div class="match-feedback" id="matchFeedback">✨ All matched!</div></div>
 </div></div>
+<!-- VOCABULARY -->
 <div class="activity bl-cyan">
 <div class="activity-head"><div class="activity-num" style="background:#55C8E8;">2</div><div style="flex:1;"><div class="activity-title">🔤 Vocabulary: This Week&rsquo;s Words</div><div class="activity-sub">Practice &amp; Apply</div></div></div>
 <div class="activity-body">
@@ -2241,6 +2243,7 @@ Beneath a lamp at night.</div>
 <div class="match-item" data-match="D" onclick="vocabClick(this)">A list of important words and their definitions.</div>
 </div><div class="match-feedback" id="vocabFeedback">✨ All matched!</div></div>
 </div></div>
+<!-- GRAMMAR -->
 <div class="activity bl-gold">
 <div class="activity-head"><div class="activity-num" style="background:#C7922C;">3</div><div style="flex:1;"><div class="activity-title">✏️ Grammar: Commas in dates and places</div><div class="activity-sub">Day 2: Identify — spot it at work in the reading.</div></div></div>
 <div class="activity-body">
@@ -2259,23 +2262,43 @@ Beneath a lamp at night.</div>
 <div class="journal-label">📓 Your answer <span class="saved-dot" id="dot-grammar"></span></div>
 <textarea class="journal-box" id="journal-grammar" data-label="Grammar response" placeholder="Today I learned..." oninput="autoSave(this,'dot-grammar')"></textarea></div>
 </div></div>
+<!-- SPELLING -->
 <div class="activity bl-navy">
-<div class="activity-head"><div class="activity-num" style="background:#0E1C42;">4</div><div style="flex:1;"><div class="activity-title">🔠 Spelling: Adding -ed and -ing to base words</div><div class="activity-sub">Identify the pattern</div></div></div>
+<div class="activity-head"><div class="activity-num" style="background:#0E1C42;">4</div><div style="flex:1;"><div class="activity-title">🔠 Spelling: Adding -ed and -ing to base words</div><div class="activity-sub">Identify the pattern by ear.</div></div></div>
 <div class="activity-body">
-<div class="callout callout-info"><span class="callout-icon">🎮</span><p><strong>Sort the Words!</strong> Tap a word, then tap the column where it belongs.</p></div>
-<div class="sort-game" id="spellSort"><div class="sort-bank" id="sortBank">
-<span class="sort-chip" data-group="add -ed" onclick="pickSortChip(this)">mailed</span>
-<span class="sort-chip" data-group="add -ed" onclick="pickSortChip(this)">traveled</span>
-<span class="sort-chip" data-group="add -ed" onclick="pickSortChip(this)">signaled</span>
-<span class="sort-chip" data-group="add -ed" onclick="pickSortChip(this)">sorted</span>
-<span class="sort-chip" data-group="double + -ing" onclick="pickSortChip(this)">running</span>
-<span class="sort-chip" data-group="double + -ing" onclick="pickSortChip(this)">sitting</span>
-<span class="sort-chip" data-group="double + -ing" onclick="pickSortChip(this)">mapping</span>
-<span class="sort-chip" data-group="double + -ing" onclick="pickSortChip(this)">stopping</span>
-</div><div class="sort-columns">
-<div class="sort-col"><div class="sort-col-header" style="background:linear-gradient(135deg,#55C8E8,#7FD8F0);">add -ed</div><div class="sort-col-drop" data-col="add -ed" onclick="dropSortChip(this,'add -ed')"></div></div>
-<div class="sort-col"><div class="sort-col-header" style="background:linear-gradient(135deg,#55C8E8,#7FD8F0);">double + -ing</div><div class="sort-col-drop" data-col="double + -ing" onclick="dropSortChip(this,'double + -ing')"></div></div>
-</div><div class="sort-score" id="sortScore"></div></div>
+<div class="callout callout-gold" style="margin-bottom:14px;background:#FFF8E8;border:2px solid #F5E6C8;border-left:5px solid #C7922C;border-radius:10px;padding:14px 18px;"><span class="callout-icon">📖</span><p style="font-size:15px;color:#0E1C42;line-height:1.6;"><strong>The Rule:</strong> Before you add <strong>-ed</strong> or <strong>-ing</strong>, look at the base word. Ends in silent <em>e</em>? <strong>Drop it</strong> (hope &rarr; hoping). One short vowel and one final consonant? <strong>Double it</strong> (run &rarr; running). Anything else? <strong>Just add the ending</strong> (walk &rarr; walked).</p></div>
+<div class="callout callout-info"><span class="callout-icon">🔎</span><p><strong>Sound Detective!</strong> Each row has one word whose base had to change before the ending went on.</p></div>
+<div class="spotter-game" id="spellGame">
+<p style="font-size:14px;color:#3A4A6B;margin:10px 0 4px;">Tap the word whose base <strong>dropped a silent e</strong>.</p>
+<div class="spotter-sentence" id="spell1">
+<span class="spotter-word" onclick="spotterPick(this,'spell1')" data-correct="false">jumped</span>
+<span class="spotter-word" onclick="spotterPick(this,'spell1')" data-correct="true">smiled</span>
+<span class="spotter-word" onclick="spotterPick(this,'spell1')" data-correct="false">walked</span>
+<span class="spotter-word" onclick="spotterPick(this,'spell1')" data-correct="false">helped</span>
+<div class="spotter-result" id="spell1-result"></div></div>
+<p style="font-size:14px;color:#3A4A6B;margin:10px 0 4px;">Tap the word whose base <strong>doubled its last letter</strong>.</p>
+<div class="spotter-sentence" id="spell2">
+<span class="spotter-word" onclick="spotterPick(this,'spell2')" data-correct="true">running</span>
+<span class="spotter-word" onclick="spotterPick(this,'spell2')" data-correct="false">reading</span>
+<span class="spotter-word" onclick="spotterPick(this,'spell2')" data-correct="false">painting</span>
+<span class="spotter-word" onclick="spotterPick(this,'spell2')" data-correct="false">mailing</span>
+<div class="spotter-result" id="spell2-result"></div></div>
+<p style="font-size:14px;color:#3A4A6B;margin:10px 0 4px;">Tap the word whose base <strong>dropped a silent e</strong>.</p>
+<div class="spotter-sentence" id="spell3">
+<span class="spotter-word" onclick="spotterPick(this,'spell3')" data-correct="false">helping</span>
+<span class="spotter-word" onclick="spotterPick(this,'spell3')" data-correct="true">hoping</span>
+<span class="spotter-word" onclick="spotterPick(this,'spell3')" data-correct="false">shouting</span>
+<span class="spotter-word" onclick="spotterPick(this,'spell3')" data-correct="false">landing</span>
+<div class="spotter-result" id="spell3-result"></div></div>
+<p style="font-size:14px;color:#3A4A6B;margin:10px 0 4px;">Tap the word whose base <strong>doubled its last letter</strong>.</p>
+<div class="spotter-sentence" id="spell4">
+<span class="spotter-word" onclick="spotterPick(this,'spell4')" data-correct="false">asked</span>
+<span class="spotter-word" onclick="spotterPick(this,'spell4')" data-correct="false">played</span>
+<span class="spotter-word" onclick="spotterPick(this,'spell4')" data-correct="true">stopped</span>
+<span class="spotter-word" onclick="spotterPick(this,'spell4')" data-correct="false">wanted</span>
+<div class="spotter-result" id="spell4-result"></div></div>
+</div>
+
 </div></div>
 <div class="activity bl-green">
 <div class="activity-head"><div class="activity-num" style="background:#34B76F;">5</div><div style="flex:1;"><div class="activity-title">📝 Reading-Writing Connection (RWM)</div><div class="activity-sub">Using headings, captions, and details in writing.</div></div></div>

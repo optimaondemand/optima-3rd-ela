@@ -2203,6 +2203,7 @@ body {
 <button class="tab-next-btn" onclick="switchTab('words')">Continue to 🔤 Word Study →</button>
 </div></div><!-- /tab-warmup -->
 <div class="tab-panel" id="tab-words">
+<!-- MORPHOLOGY -->
 <div class="activity bl-purple">
 <div class="activity-head"><div class="activity-num" style="background:#8B6FC0;">1</div><div style="flex:1;"><div class="activity-title">🌱 Morphology: Prefix pre- means before</div><div class="activity-sub">Use / Apply the skill</div></div></div>
 <div class="activity-body">
@@ -2218,6 +2219,7 @@ body {
 <button class="fillin-check-btn" onclick="checkFillIn()">Check My Answers</button>
 <div class="fillin-feedback" id="fillinFeedback">🌱 All correct!</div></div>
 </div></div>
+<!-- VOCABULARY -->
 <div class="activity bl-cyan">
 <div class="activity-head"><div class="activity-num" style="background:#55C8E8;">2</div><div style="flex:1;"><div class="activity-title">🔤 Vocabulary: This Week's Words</div><div class="activity-sub">Fill in the Blank</div></div></div>
 <div class="activity-body">
@@ -2230,6 +2232,7 @@ body {
 <button class="fillin-check-btn" onclick="checkVocabFillIn()">Check My Answers</button>
 <div class="fillin-feedback" id="vocabFillinFeedback">🌱 All correct!</div></div>
 </div></div>
+<!-- GRAMMAR -->
 <div class="activity bl-gold">
 <div class="activity-head"><div class="activity-num" style="background:#C7922C;">3</div><div style="flex:1;"><div class="activity-title">✏️ Grammar: Proper nouns and capitalization</div><div class="activity-sub">Day 3: Apply — use it in a sentence of your own.</div></div></div>
 <div class="activity-body">
@@ -2251,26 +2254,29 @@ body {
 
 </div>
 </div>
+<!-- SPELLING -->
 <div class="activity bl-navy">
-<div class="activity-head"><div class="activity-num" style="background:#0E1C42;">4</div><div style="flex:1;"><div class="activity-title">🔠 Spelling: Vowel teams ai/ay and oa/ow</div><div class="activity-sub">Use / Apply the pattern.</div></div></div>
+<div class="activity-head"><div class="activity-num" style="background:#0E1C42;">4</div><div style="flex:1;"><div class="activity-title">🔠 Spelling: Vowel teams ai/ay and oa/ow</div><div class="activity-sub">Apply the pattern &mdash; name the team.</div></div></div>
 <div class="activity-body">
 <div class="callout callout-gold" style="margin-bottom:14px;background:#FFF8E8;border:2px solid #F5E6C8;border-left:5px solid #C7922C;border-radius:10px;padding:14px 18px;"><span class="callout-icon">📖</span><p style="font-size:15px;color:#0E1C42;line-height:1.6;"><strong>The Rule:</strong> Vowel teams are two vowels that work together to make one sound. <strong>ai</strong> and <strong>ay</strong> both make the long <em>a</em> sound (like in <em>paint</em> and <em>tray</em>). <strong>oa</strong> and <strong>ow</strong> both make the long <em>o</em> sound (like in <em>toast</em> and <em>throw</em>). Usually <em>ai</em> comes in the middle and <em>ay</em> comes at the end. Usually <em>oa</em> comes in the middle and <em>ow</em> comes at the end.</p></div>
-<div class="callout callout-info"><span class="callout-icon">🎮</span><p><strong>Practice: Sort the Words!</strong> Tap a word, then tap the column where it belongs.</p></div>
-<div class="sort-game" id="spellSort"><div class="sort-bank" id="sortBank">
-<span class="sort-chip" data-group="ai" onclick="pickSortChip(this)">paint</span>
-<span class="sort-chip" data-group="ai" onclick="pickSortChip(this)">stain</span>
-<span class="sort-chip" data-group="ay" onclick="pickSortChip(this)">tray</span>
-<span class="sort-chip" data-group="ay" onclick="pickSortChip(this)">spray</span>
-<span class="sort-chip" data-group="oa" onclick="pickSortChip(this)">toast</span>
-<span class="sort-chip" data-group="oa" onclick="pickSortChip(this)">groan</span>
-<span class="sort-chip" data-group="ow" onclick="pickSortChip(this)">slow</span>
-<span class="sort-chip" data-group="ow" onclick="pickSortChip(this)">throw</span>
-</div><div class="sort-columns">
-<div class="sort-col"><div class="sort-col-header" style="background:linear-gradient(135deg,#55C8E8,#7FD8F0);">ai</div><div class="sort-col-drop" data-col="ai" onclick="dropSortChip(this,'ai')"></div></div>
-<div class="sort-col"><div class="sort-col-header" style="background:linear-gradient(135deg,#55C8E8,#7FD8F0);">ay</div><div class="sort-col-drop" data-col="ay" onclick="dropSortChip(this,'ay')"></div></div>
-<div class="sort-col"><div class="sort-col-header" style="background:linear-gradient(135deg,#55C8E8,#7FD8F0);">oa</div><div class="sort-col-drop" data-col="oa" onclick="dropSortChip(this,'oa')"></div></div>
-<div class="sort-col"><div class="sort-col-header" style="background:linear-gradient(135deg,#55C8E8,#7FD8F0);">ow</div><div class="sort-col-drop" data-col="ow" onclick="dropSortChip(this,'ow')"></div></div>
-</div><div class="sort-score" id="sortScore"></div></div>
+<div class="callout callout-info"><span class="callout-icon">🎲</span><p><strong>Vowel Team Dice!</strong> Roll a word, say it out loud, decide &mdash; then tap to check yourself.</p></div>
+<div style="text-align:center;margin:14px 0;">
+<div id="spellDie" style="font-size:44px;line-height:1;">🎲</div>
+<button class="fillin-check-btn" id="spellRollBtn" onclick="rollSpellDice()" style="margin-top:10px;">Roll the dice</button>
+<div id="spellCount" style="font-size:13px;color:#7A88A8;margin-top:6px;">0/6 words rolled</div>
+</div>
+<div id="spellBox" style="display:none;background:#FAFBFF;border:2px solid #C8DCEE;border-radius:10px;padding:16px;text-align:center;">
+<div id="spellWord" style="font-size:30px;font-weight:700;color:#0E1C42;"></div>
+<p style="font-size:14px;color:#3A4A6B;margin-top:6px;">Which vowel team spells the long sound &mdash; and where does it sit in the word?</p>
+<button class="dol-check-btn" onclick="checkSpellDice()" style="margin-top:10px;">Check my answer</button>
+<div id="spellReveal" style="display:none;margin-top:10px;font-size:17px;font-weight:700;color:#34B76F;"></div>
+</div>
+<script>
+var spellDice=[{w:"paint",s:"<strong>ai</strong> &middot; in the middle"},{w:"spray",s:"<strong>ay</strong> &middot; at the end"},{w:"toast",s:"<strong>oa</strong> &middot; in the middle"},{w:"throw",s:"<strong>ow</strong> &middot; at the end"},{w:"train",s:"<strong>ai</strong> &middot; in the middle"},{w:"slow",s:"<strong>ow</strong> &middot; at the end"}];var spellUsed=[];
+function rollSpellDice(){var av=spellDice.filter(function(x){return spellUsed.indexOf(x.w)===-1});if(!av.length)return;var d=document.getElementById("spellDie"),f=["⚀","⚁","⚂","⚃","⚄","⚅"],n=0;var sp=setInterval(function(){d.textContent=f[Math.floor(Math.random()*6)];n++;if(n>10){clearInterval(sp);var p=av[Math.floor(Math.random()*av.length)];spellUsed.push(p.w);document.getElementById("spellWord").textContent=p.w;document.getElementById("spellBox").style.display="block";document.getElementById("spellReveal").style.display="none";document.getElementById("spellCount").textContent=spellUsed.length+"/"+spellDice.length+" words rolled";if(spellUsed.length===spellDice.length){document.getElementById("spellRollBtn").disabled=true;document.getElementById("spellCount").textContent="You rolled them all!";}}},90);}
+function checkSpellDice(){var w=document.getElementById("spellWord").textContent;for(var i=0;i<spellDice.length;i++){if(spellDice[i].w===w){var r=document.getElementById("spellReveal");r.innerHTML=w+" &mdash; "+spellDice[i].s;r.style.display="block";return;}}}
+</script>
+
 </div></div>
 <div class="activity bl-green">
 <div class="activity-head"><div class="activity-num" style="background:#34B76F;">5</div><div style="flex:1;"><div class="activity-title">🪶 Writing Connection</div><div class="activity-sub">Connect today's reading to your own writing</div></div></div>

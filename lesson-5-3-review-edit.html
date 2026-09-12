@@ -2189,6 +2189,7 @@ body {
 <button class="tab-next-btn" onclick="switchTab('words')">Continue to 🔤 Word Study →</button>
 </div></div><!-- /tab-warmup -->
 <div class="tab-panel" id="tab-words">
+<!-- MORPHOLOGY -->
 <div class="activity bl-purple">
 <div class="activity-head"><div class="activity-num" style="background:#8B6FC0;">1</div><div style="flex:1;"><div class="activity-title">🌱 Morphology: Suffix -ed shows past action</div><div class="activity-sub">Use / Apply the skill</div></div></div>
 <div class="activity-body">
@@ -2204,6 +2205,7 @@ body {
 <button class="fillin-check-btn" onclick="checkFillIn()">Check My Answers</button>
 <div class="fillin-feedback" id="fillinFeedback">🌱 All correct!</div></div>
 </div></div>
+<!-- VOCABULARY -->
 <div class="activity bl-cyan">
 <div class="activity-head"><div class="activity-num" style="background:#55C8E8;">2</div><div style="flex:1;"><div class="activity-title">🔤 Vocabulary: Words We've Met Before</div><div class="activity-sub">Weeks 1&ndash;4 review &mdash; use the sentence to check yourself</div></div></div>
 <div class="activity-body">
@@ -2238,6 +2240,7 @@ body {
 <div class="match-item" data-match="D" onclick="matchClick(this)">Costing a lot of money.</div>
 </div><div class="match-feedback" id="matchFeedback">✨ All matched!</div></div>
 </div></div>
+<!-- GRAMMAR -->
 <div class="activity bl-gold">
 <div class="activity-head"><div class="activity-num" style="background:#C7922C;">3</div><div style="flex:1;"><div class="activity-title">✏️ Grammar: Past-tense verbs</div><div class="activity-sub">Fix the verb that slipped into the wrong tense.</div></div></div>
 <div class="activity-body">
@@ -2256,25 +2259,37 @@ body {
 <div class="journal-label">📓 Your answer <span class="saved-dot" id="dot-gram"></span></div>
 <textarea class="journal-box" id="journal-gram" data-label="Grammar: Past tense in my own writing" placeholder="One sentence from my narrative is..." oninput="autoSave(this,'dot-gram')"></textarea></div>
 </div></div>
+<!-- SPELLING -->
 <div class="activity bl-navy">
-<div class="activity-head"><div class="activity-num" style="background:#0E1C42;">4</div><div style="flex:1;"><div class="activity-title">🔠 Spelling: Three sounds of -ed</div><div class="activity-sub">Use / Apply the pattern.</div></div></div>
+<div class="activity-head"><div class="activity-num" style="background:#0E1C42;">4</div><div style="flex:1;"><div class="activity-title">🔠 Spelling: Three sounds of -ed</div><div class="activity-sub">Apply the pattern &mdash; build the words.</div></div></div>
 <div class="activity-body">
-<div class="callout callout-info"><span class="callout-icon">🎮</span><p><strong>Practice: Sort the Words!</strong> Tap a word, then tap the column where it belongs.</p></div>
-<div class="sort-game" id="spellSort"><div class="sort-bank" id="sortBank">
-<span class="sort-chip" data-group="ed=/d/" onclick="pickSortChip(this)">flattened</span>
-<span class="sort-chip" data-group="ed=/t/" onclick="pickSortChip(this)">pumped</span>
-<span class="sort-chip" data-group="ed=/ĕd/" onclick="pickSortChip(this)">celebrated</span>
-<span class="sort-chip" data-group="ed=/d/" onclick="pickSortChip(this)">returned</span>
-<span class="sort-chip" data-group="ed=/d/" onclick="pickSortChip(this)">mailed</span>
-<span class="sort-chip" data-group="ed=/t/" onclick="pickSortChip(this)">crashed</span>
-<span class="sort-chip" data-group="ed=/ĕd/" onclick="pickSortChip(this)">started</span>
-<span class="sort-chip" data-group="ed=/d/" onclick="pickSortChip(this)">closed</span>
-</div><div class="sort-columns">
-<div class="sort-col"><div class="sort-col-header" style="background:linear-gradient(135deg,#55C8E8,#7FD8F0);">ed=/d/</div><div class="sort-col-drop" data-col="ed=/d/" onclick="dropSortChip(this,'ed=/d/')"></div></div>
-<div class="sort-col"><div class="sort-col-header" style="background:linear-gradient(135deg,#55C8E8,#7FD8F0);">ed=/t/</div><div class="sort-col-drop" data-col="ed=/t/" onclick="dropSortChip(this,'ed=/t/')"></div></div>
+<div class="callout callout-gold" style="margin-bottom:14px;background:#FFF8E8;border:2px solid #F5E6C8;border-left:5px solid #C7922C;border-radius:10px;padding:14px 18px;"><span class="callout-icon">📖</span><p style="font-size:15px;color:#0E1C42;line-height:1.6;"><strong>The Rule:</strong> The ending <strong>-ed</strong> is always spelled the same, but it makes <strong>three different sounds</strong>. After a <em>t</em> or <em>d</em> sound you hear a whole extra beat: <strong>/&#x115;d/</strong> (want &rarr; want<strong>ed</strong>). After a quiet, breathy sound it says <strong>/t/</strong> (walk &rarr; walk<strong>ed</strong>). After a noisy sound it says <strong>/d/</strong> (mail &rarr; mail<strong>ed</strong>). Say the word out loud &mdash; your ears decide, not your eyes.</p></div>
+<div class="callout callout-info"><span class="callout-icon">✨</span><p><strong>-ed Word Builder!</strong> Say each base word, then tap it to add <em>-ed</em>. Watch the spelling &mdash; and listen to the sound you get.</p></div>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:14px 0;" id="edGrid">
+<div class="ed-card" onclick="buildEd(this)" data-after="walked" data-sound="-ed says /t/" style="background:#FAFBFF;border:2px solid #C8DCEE;border-radius:10px;padding:14px;text-align:center;cursor:pointer;transition:all 0.3s;">
+<div style="font-size:26px;font-weight:700;color:#0E1C42;" class="ed-word">walk</div>
+<div style="font-size:12px;color:#7A88A8;margin-top:4px;" class="ed-hint">tap to add -ed!</div></div>
+<div class="ed-card" onclick="buildEd(this)" data-after="mailed" data-sound="-ed says /d/" style="background:#FAFBFF;border:2px solid #C8DCEE;border-radius:10px;padding:14px;text-align:center;cursor:pointer;transition:all 0.3s;">
+<div style="font-size:26px;font-weight:700;color:#0E1C42;" class="ed-word">mail</div>
+<div style="font-size:12px;color:#7A88A8;margin-top:4px;" class="ed-hint">tap to add -ed!</div></div>
+<div class="ed-card" onclick="buildEd(this)" data-after="wanted" data-sound="-ed says /&#x115;d/ &mdash; an extra beat" style="background:#FAFBFF;border:2px solid #C8DCEE;border-radius:10px;padding:14px;text-align:center;cursor:pointer;transition:all 0.3s;">
+<div style="font-size:26px;font-weight:700;color:#0E1C42;" class="ed-word">want</div>
+<div style="font-size:12px;color:#7A88A8;margin-top:4px;" class="ed-hint">tap to add -ed!</div></div>
+<div class="ed-card" onclick="buildEd(this)" data-after="pumped" data-sound="-ed says /t/" style="background:#FAFBFF;border:2px solid #C8DCEE;border-radius:10px;padding:14px;text-align:center;cursor:pointer;transition:all 0.3s;">
+<div style="font-size:26px;font-weight:700;color:#0E1C42;" class="ed-word">pump</div>
+<div style="font-size:12px;color:#7A88A8;margin-top:4px;" class="ed-hint">tap to add -ed!</div></div>
+<div class="ed-card" onclick="buildEd(this)" data-after="closed" data-sound="drop the e &middot; -ed says /d/" style="background:#FAFBFF;border:2px solid #C8DCEE;border-radius:10px;padding:14px;text-align:center;cursor:pointer;transition:all 0.3s;">
+<div style="font-size:26px;font-weight:700;color:#0E1C42;" class="ed-word">close</div>
+<div style="font-size:12px;color:#7A88A8;margin-top:4px;" class="ed-hint">tap to add -ed!</div></div>
+<div class="ed-card" onclick="buildEd(this)" data-after="hopped" data-sound="double the p &middot; -ed says /t/" style="background:#FAFBFF;border:2px solid #C8DCEE;border-radius:10px;padding:14px;text-align:center;cursor:pointer;transition:all 0.3s;">
+<div style="font-size:26px;font-weight:700;color:#0E1C42;" class="ed-word">hop</div>
+<div style="font-size:12px;color:#7A88A8;margin-top:4px;" class="ed-hint">tap to add -ed!</div></div>
+</div>
+<div class="sort-score" id="edScore"></div>
+<script>
+function buildEd(card){if(card.classList.contains("built"))return;card.classList.add("built");var w=card.querySelector(".ed-word");var h=card.querySelector(".ed-hint");w.textContent=card.dataset.after;h.innerHTML=card.dataset.sound;h.style.color="#34B76F";h.style.fontWeight="700";card.style.background="#E3F8ED";card.style.borderColor="#34B76F";var all=document.querySelectorAll(".ed-card");var done=document.querySelectorAll(".ed-card.built");var sc=document.getElementById("edScore");if(!sc)return;sc.textContent=done.length===all.length?"All six built! Same ending, three different sounds.":done.length+"/"+all.length+" built";}
+</script>
 
-<div class="sort-col"><div class="sort-col-header" style="background:linear-gradient(135deg,#55C8E8,#7FD8F0);">ed=/ĕd/</div><div class="sort-col-drop" data-col="ed=/ĕd/" onclick="dropSortChip(this,'ed=/ĕd/')"></div></div>
-</div><div class="sort-score" id="sortScore"></div></div>
 <div class="swyk"><div class="swyk-label">🪶 Show What You Know</div>
 <div class="swyk-prompt">Explain the three sounds of -ed pattern in your own words. Write two example words.</div>
 <div class="journal-label">📓 Your answer <span class="saved-dot" id="dot-swyk"></span></div>

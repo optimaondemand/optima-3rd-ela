@@ -2433,27 +2433,43 @@ Of prancing poetry.</div>
 
   <!-- ═══ SPELLING ═══ -->
   <div class="activity bl-navy">
-    <div class="activity-head"><div class="activity-num" style="background:#0E1C42;">4</div><div style="flex:1;"><div class="activity-title">🔠 Spelling: Longer words with familiar suffixes</div><div class="activity-sub">Day 2: Identify &mdash; Spot it at work in the reading.</div></div></div>
+    <div class="activity-head"><div class="activity-num" style="background:#0E1C42;">4</div><div style="flex:1;"><div class="activity-title">🔠 Spelling: Longer words with familiar suffixes</div><div class="activity-sub">Identify the pattern by ear.</div></div></div>
     <div class="activity-body">
+<div class="callout callout-gold" style="margin-bottom:14px;background:#FFF8E8;border:2px solid #F5E6C8;border-left:5px solid #C7922C;border-radius:10px;padding:14px 18px;"><span class="callout-icon">📖</span><p style="font-size:15px;color:#0E1C42;line-height:1.6;"><strong>The Rule:</strong> Long words get short fast when you find the <strong>base word</strong> first, then peel off the suffix: <em>darkness</em> = <strong>dark</strong> + <strong>-ness</strong>. Suffixes that start with a consonant (-ful, -less, -ly, -ness) usually leave the base alone.</p></div>
       <p>Same rule as Day 1 &mdash; longer words with familiar suffixes. Sort them again, and this time notice <em>why</em> each one landed where it did.</p>
               <div class="callout callout-info" style="margin-top:14px;"><span class="callout-icon">🎮</span><p><strong>Practice: Sort the words.</strong> Tap a word, then tap the column it belongs in.</p></div>
-      <div class="sort-game" id="spellSort">
-        <div class="sort-bank" id="sortBank">
-          <span class="sort-chip" data-group="three-parts" onclick="pickSortChip(this)">hopelessness</span>
-          <span class="sort-chip" data-group="three-parts" onclick="pickSortChip(this)">thoughtfulness</span>
-          <span class="sort-chip" data-group="three-parts" onclick="pickSortChip(this)">fearlessly</span>
-          <span class="sort-chip" data-group="three-parts" onclick="pickSortChip(this)">impatiently</span>
-          <span class="sort-chip" data-group="two-parts" onclick="pickSortChip(this)">darkness</span>
-          <span class="sort-chip" data-group="two-parts" onclick="pickSortChip(this)">hopeful</span>
-          <span class="sort-chip" data-group="two-parts" onclick="pickSortChip(this)">quickly</span>
-          <span class="sort-chip" data-group="two-parts" onclick="pickSortChip(this)">disagree</span>
-        </div>
-        <div class="sort-columns">
-          <div class="sort-col"><div class="sort-col-header" style="background:linear-gradient(135deg,#55C8E8,#55C8E8);">Base + two endings</div><div class="sort-col-drop" data-col="three-parts" onclick="dropSortChip(this,'three-parts')"></div></div>
-          <div class="sort-col"><div class="sort-col-header" style="background:linear-gradient(135deg,#8B6FC0,#8B6FC0);">Base + one ending</div><div class="sort-col-drop" data-col="two-parts" onclick="dropSortChip(this,'two-parts')"></div></div>
-        </div>
-        <div class="sort-score" id="sortScore"></div>
-      </div>
+      <div class="callout callout-info"><span class="callout-icon">🔎</span><p><strong>Sound Detective!</strong> Every word in the row shares a base. Find the one with the suffix named.</p></div>
+<div class="spotter-game" id="spellGame">
+<p style="font-size:14px;color:#3A4A6B;margin:10px 0 4px;">Tap the word that ends with the suffix <strong>-ness</strong>.</p>
+<div class="spotter-sentence" id="spell1">
+<span class="spotter-word" onclick="spotterPick(this,'spell1')" data-correct="true">darkness</span>
+<span class="spotter-word" onclick="spotterPick(this,'spell1')" data-correct="false">darker</span>
+<span class="spotter-word" onclick="spotterPick(this,'spell1')" data-correct="false">darkly</span>
+<span class="spotter-word" onclick="spotterPick(this,'spell1')" data-correct="false">dark</span>
+<div class="spotter-result" id="spell1-result"></div></div>
+<p style="font-size:14px;color:#3A4A6B;margin:10px 0 4px;">Tap the word that ends with the suffix <strong>-ful</strong>.</p>
+<div class="spotter-sentence" id="spell2">
+<span class="spotter-word" onclick="spotterPick(this,'spell2')" data-correct="false">hoping</span>
+<span class="spotter-word" onclick="spotterPick(this,'spell2')" data-correct="true">hopeful</span>
+<span class="spotter-word" onclick="spotterPick(this,'spell2')" data-correct="false">hoped</span>
+<span class="spotter-word" onclick="spotterPick(this,'spell2')" data-correct="false">hope</span>
+<div class="spotter-result" id="spell2-result"></div></div>
+<p style="font-size:14px;color:#3A4A6B;margin:10px 0 4px;">Tap the word that ends with the suffix <strong>-less</strong>.</p>
+<div class="spotter-sentence" id="spell3">
+<span class="spotter-word" onclick="spotterPick(this,'spell3')" data-correct="false">caring</span>
+<span class="spotter-word" onclick="spotterPick(this,'spell3')" data-correct="false">cared</span>
+<span class="spotter-word" onclick="spotterPick(this,'spell3')" data-correct="true">careless</span>
+<span class="spotter-word" onclick="spotterPick(this,'spell3')" data-correct="false">care</span>
+<div class="spotter-result" id="spell3-result"></div></div>
+<p style="font-size:14px;color:#3A4A6B;margin:10px 0 4px;">Tap the word that ends with the suffix <strong>-ly</strong>.</p>
+<div class="spotter-sentence" id="spell4">
+<span class="spotter-word" onclick="spotterPick(this,'spell4')" data-correct="false">quicker</span>
+<span class="spotter-word" onclick="spotterPick(this,'spell4')" data-correct="false">quickest</span>
+<span class="spotter-word" onclick="spotterPick(this,'spell4')" data-correct="false">quick</span>
+<span class="spotter-word" onclick="spotterPick(this,'spell4')" data-correct="true">quickly</span>
+<div class="spotter-result" id="spell4-result"></div></div>
+</div>
+
       <div class="swyk">
         <div class="swyk-label">🪶 Show What You Know</div>
         <div class="swyk-prompt">Find one word in today&rsquo;s reading that follows this rule. Write it, and say which part changed.</div>

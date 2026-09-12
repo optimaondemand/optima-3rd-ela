@@ -2474,6 +2474,7 @@ body {
 <!-- TAB 2: WORD STUDY -->
 <div class="tab-panel" id="tab-words">
 
+<!-- MORPHOLOGY -->
 <div class="activity bl-purple">
   <div class="activity-head"><div class="activity-num" style="background:#8B6FC0;">1</div><div><div class="activity-title">🌱 Morphology: Morphology reflection: word parts I know</div><div class="activity-sub">Revise — Polish and Prepare — build your word knowledge</div></div></div>
   <div class="activity-body">
@@ -2482,6 +2483,7 @@ body {
         <div class="swyk"><div class="swyk-label">🪶 Show What You Know</div><div class="swyk-prompt">Pick one word from above. Write a sentence using that word in your own words.</div>
         <textarea class="journal-box" id="journal-morph" data-label="Morphology Apply" placeholder="I chose the word... It means... In a sentence:..." oninput="autoSave(this,'dot-morph');gatherAnswers();"></textarea></div></div>
 </div>
+<!-- VOCABULARY -->
 <div class="activity bl-cyan">
   <div class="activity-head"><div class="activity-num" style="background:#1B7A4E;">2</div><div><div class="activity-title">🔤 Vocabulary: Use the Words</div><div class="activity-sub">Choose the correct word to complete each sentence.</div></div></div>
   <div class="activity-body">
@@ -2501,15 +2503,60 @@ body {
             </div>
   </div>
 </div>
+<!-- GRAMMAR -->
 <div class="activity bl-gold">
   <div class="activity-head"><div class="activity-num" style="background:#C7922C;">3</div><div><div class="activity-title">✏️ Grammar: Final editing review</div><div class="activity-sub">Revise — Polish and Prepare — practice the convention</div></div></div>
   <div class="activity-body"><p><strong>This week:</strong> Final editing review</p>
             <div class="callout callout-info" style="margin-top:14px;"><span class="callout-icon">🔧</span><p>Edit each sentence for all errors.</p></div>
             <div style="padding:12px 16px;background:#fff;border:2px solid #E2E8F4;border-radius:12px;margin-bottom:10px;"><div style="font-size:13px;color:#C7922C;font-weight:700;margin-bottom:4px;">Fix this:</div><div style="font-family:Lora,serif;font-size:15px;color:#0E1C42;margin-bottom:8px;">edmund shows responsibility when he apologises to his siblings and he doesnt make excuses</div><div style="font-size:13px;color:#1B7A4E;font-weight:700;margin-bottom:4px;">✅ Corrected:</div><div style="font-family:Lora,serif;font-size:15px;color:#0E1C42;">Edmund shows responsibility when he apologizes to his siblings, and he doesn't make excuses.</div></div><div style="padding:12px 16px;background:#fff;border:2px solid #E2E8F4;border-radius:12px;margin-bottom:10px;"><div style="font-size:13px;color:#C7922C;font-weight:700;margin-bottom:4px;">Fix this:</div><div style="font-family:Lora,serif;font-size:15px;color:#0E1C42;margin-bottom:8px;">despereaux persevered throughout the tale of despereaux because he believed his quest was worth it</div><div style="font-size:13px;color:#1B7A4E;font-weight:700;margin-bottom:4px;">✅ Corrected:</div><div style="font-family:Lora,serif;font-size:15px;color:#0E1C42;">Despereaux persevered throughout The Tale of Despereaux because he believed his quest was worth it.</div></div></div>
 </div>
+<!-- SPELLING -->
 <div class="activity bl-navy">
-  <div class="activity-head"><div class="activity-num" style="background:#0E1C42;">4</div><div><div class="activity-title">🔠 Spelling: Final spelling and conventions review</div><div class="activity-sub">Revise — Polish and Prepare — master the pattern</div></div></div>
-  <div class="activity-body"><p><strong>This week:</strong> Final spelling and conventions review</p></div>
+  <div class="activity-head"><div class="activity-num" style="background:#0E1C42;">4</div><div><div class="activity-title">🔠 Spelling: Final spelling and conventions review</div><div class="activity-sub">Apply the rules &mdash; proofread it.</div></div></div>
+  <div class="activity-body"><p><strong>This week:</strong> Final spelling and conventions review</p>
+<div class="callout callout-gold" style="margin-bottom:14px;background:#FFF8E8;border:2px solid #F5E6C8;border-left:5px solid #C7922C;border-radius:10px;padding:14px 18px;"><span class="callout-icon">📖</span><p style="font-size:15px;color:#0E1C42;line-height:1.6;"><strong>The Rule:</strong> The last check of the year. Find the <strong>base word</strong> first, then look at what is stuck on it: drop the silent e, double the consonant, change y to i, add -s or -es, or add a prefix. The base word tells you which rule you need.</p></div>
+<div class="callout callout-info"><span class="callout-icon">🔍</span><p><strong>Proofreader!</strong> Last proofread of the year &mdash; every rule is fair game. Each sentence has <strong>two</strong> misspelled words. Tap any word you want to check.</p></div>
+<div id="proofGame" style="margin:14px 0;">
+<div style="background:#FAFBFF;border:2px solid #C8DCEE;border-radius:10px;padding:14px;margin-bottom:10px;font-size:17px;line-height:2.2;color:#0E1C42;">
+<span onclick="proofPick(this)" data-good="She" data-why="" data-ok="1" style="cursor:pointer;border-bottom:2px dotted #B9C4DC;padding:0 3px;">She</span>
+<span onclick="proofPick(this)" data-good="smiled" data-why="drop the e from smile" style="cursor:pointer;border-bottom:2px dotted #B9C4DC;padding:0 3px;">smileed</span>
+<span onclick="proofPick(this)" data-good="at" data-why="" data-ok="1" style="cursor:pointer;border-bottom:2px dotted #B9C4DC;padding:0 3px;">at</span>
+<span onclick="proofPick(this)" data-good="the" data-why="" data-ok="1" style="cursor:pointer;border-bottom:2px dotted #B9C4DC;padding:0 3px;">the</span>
+<span onclick="proofPick(this)" data-good="babies" data-why="y becomes i, then add -es" style="cursor:pointer;border-bottom:2px dotted #B9C4DC;padding:0 3px;">babys</span>
+<span onclick="proofPick(this)" data-good="in" data-why="" data-ok="1" style="cursor:pointer;border-bottom:2px dotted #B9C4DC;padding:0 3px;">in</span>
+<span onclick="proofPick(this)" data-good="the" data-why="" data-ok="1" style="cursor:pointer;border-bottom:2px dotted #B9C4DC;padding:0 3px;">the</span>
+<span onclick="proofPick(this)" data-good="garden." data-why="" data-ok="1" style="cursor:pointer;border-bottom:2px dotted #B9C4DC;padding:0 3px;">garden.</span>
+<div class="spotter-result" style="margin-top:8px;"></div></div>
+<div style="background:#FAFBFF;border:2px solid #C8DCEE;border-radius:10px;padding:14px;margin-bottom:10px;font-size:17px;line-height:2.2;color:#0E1C42;">
+<span onclick="proofPick(this)" data-good="We" data-why="" data-ok="1" style="cursor:pointer;border-bottom:2px dotted #B9C4DC;padding:0 3px;">We</span>
+<span onclick="proofPick(this)" data-good="watched" data-why="watch needs its t &mdash; say it slowly" style="cursor:pointer;border-bottom:2px dotted #B9C4DC;padding:0 3px;">wached</span>
+<span onclick="proofPick(this)" data-good="the" data-why="" data-ok="1" style="cursor:pointer;border-bottom:2px dotted #B9C4DC;padding:0 3px;">the</span>
+<span onclick="proofPick(this)" data-good="dishes" data-why="add -es after sh" style="cursor:pointer;border-bottom:2px dotted #B9C4DC;padding:0 3px;">dishs</span>
+<span onclick="proofPick(this)" data-good="pile" data-why="" data-ok="1" style="cursor:pointer;border-bottom:2px dotted #B9C4DC;padding:0 3px;">pile</span>
+<span onclick="proofPick(this)" data-good="up" data-why="" data-ok="1" style="cursor:pointer;border-bottom:2px dotted #B9C4DC;padding:0 3px;">up</span>
+<span onclick="proofPick(this)" data-good="in" data-why="" data-ok="1" style="cursor:pointer;border-bottom:2px dotted #B9C4DC;padding:0 3px;">in</span>
+<span onclick="proofPick(this)" data-good="the" data-why="" data-ok="1" style="cursor:pointer;border-bottom:2px dotted #B9C4DC;padding:0 3px;">the</span>
+<span onclick="proofPick(this)" data-good="sink." data-why="" data-ok="1" style="cursor:pointer;border-bottom:2px dotted #B9C4DC;padding:0 3px;">sink.</span>
+<div class="spotter-result" style="margin-top:8px;"></div></div>
+<div style="background:#FAFBFF;border:2px solid #C8DCEE;border-radius:10px;padding:14px;margin-bottom:10px;font-size:17px;line-height:2.2;color:#0E1C42;">
+<span onclick="proofPick(this)" data-good="He" data-why="" data-ok="1" style="cursor:pointer;border-bottom:2px dotted #B9C4DC;padding:0 3px;">He</span>
+<span onclick="proofPick(this)" data-good="unlocked" data-why="" data-ok="1" style="cursor:pointer;border-bottom:2px dotted #B9C4DC;padding:0 3px;">unlocked</span>
+<span onclick="proofPick(this)" data-good="the" data-why="" data-ok="1" style="cursor:pointer;border-bottom:2px dotted #B9C4DC;padding:0 3px;">the</span>
+<span onclick="proofPick(this)" data-good="door" data-why="" data-ok="1" style="cursor:pointer;border-bottom:2px dotted #B9C4DC;padding:0 3px;">door</span>
+<span onclick="proofPick(this)" data-good="and" data-why="" data-ok="1" style="cursor:pointer;border-bottom:2px dotted #B9C4DC;padding:0 3px;">and</span>
+<span onclick="proofPick(this)" data-good="stopped" data-why="double the p in stop" style="cursor:pointer;border-bottom:2px dotted #B9C4DC;padding:0 3px;">stoped</span>
+<span onclick="proofPick(this)" data-good="to" data-why="" data-ok="1" style="cursor:pointer;border-bottom:2px dotted #B9C4DC;padding:0 3px;">to</span>
+<span onclick="proofPick(this)" data-good="listen" data-why="" data-ok="1" style="cursor:pointer;border-bottom:2px dotted #B9C4DC;padding:0 3px;">listen</span>
+<span onclick="proofPick(this)" data-good="carefully" data-why="careful + -ly keeps both l&rsquo;s" style="cursor:pointer;border-bottom:2px dotted #B9C4DC;padding:0 3px;">carefuly</span>
+<span onclick="proofPick(this)" data-good="." data-why="" data-ok="1" style="cursor:pointer;border-bottom:2px dotted #B9C4DC;padding:0 3px;">.</span>
+<div class="spotter-result" style="margin-top:8px;"></div></div>
+</div>
+<div class="sort-score" id="proofScore"></div>
+<script>
+function proofPick(el){if(el.dataset.done)return;el.dataset.done="1";var box=el.parentElement.querySelector(".spotter-result");if(el.dataset.ok){el.style.borderBottom="2px solid #7A88A8";el.style.cursor="default";if(box){box.innerHTML+=(box.innerHTML?"<br>":"")+"\u2714 \u201c"+el.dataset.good+"\u201d is spelled correctly.";box.className="spotter-result show";}return;}el.textContent=el.dataset.good;el.style.color="#34B76F";el.style.fontWeight="700";el.style.borderBottom="2px solid #34B76F";el.style.cursor="default";if(box){box.innerHTML+=(box.innerHTML?"<br>":"")+"\u2705 "+el.dataset.good+" \u2014 "+el.dataset.why;box.className="spotter-result show win";}var all=document.querySelectorAll("#proofGame [data-good]:not([data-ok])");var d=document.querySelectorAll("#proofGame [data-good]:not([data-ok])[data-done]");var sc=document.getElementById("proofScore");if(!sc)return;sc.textContent=d.length===all.length?"Every misspelling found. That is what proofreading feels like.":d.length+"/"+all.length+" misspellings found";}
+</script>
+
+</div>
 </div>
   <div class="tab-next-wrap"><p class="tab-transition-voice">Words and skills sharpened. Time to open the book.</p><button class="tab-next-btn" onclick="switchTab('reading')">Continue to 📖 Reading →</button></div>
 </div><!-- /tab-words -->

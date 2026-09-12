@@ -2474,6 +2474,7 @@ body {
 <!-- TAB 2: WORD STUDY -->
 <div class="tab-panel" id="tab-words">
 
+<!-- MORPHOLOGY -->
 <div class="activity bl-purple">
   <div class="activity-head"><div class="activity-num" style="background:#8B6FC0;">1</div><div><div class="activity-title">🌱 Morphology: Root/base: script/scribe means write</div><div class="activity-sub">Use / Apply — build your word knowledge</div></div></div>
   <div class="activity-body">
@@ -2482,6 +2483,7 @@ body {
         <div class="swyk"><div class="swyk-label">🪶 Show What You Know</div><div class="swyk-prompt">Pick one word from above. Write a sentence using that word in your own words.</div>
         <textarea class="journal-box" id="journal-morph" data-label="Morphology Apply" placeholder="I chose the word... It means... In a sentence:..." oninput="autoSave(this,'dot-morph');gatherAnswers();"></textarea></div></div>
 </div>
+<!-- VOCABULARY -->
 <div class="activity bl-cyan">
   <div class="activity-head"><div class="activity-num" style="background:#1B7A4E;">2</div><div><div class="activity-title">🔤 Vocabulary: Use the Words</div><div class="activity-sub">Choose the correct word to complete each sentence.</div></div></div>
   <div class="activity-body">
@@ -2501,15 +2503,44 @@ body {
             </div>
   </div>
 </div>
+<!-- GRAMMAR -->
 <div class="activity bl-gold">
   <div class="activity-head"><div class="activity-num" style="background:#C7922C;">3</div><div><div class="activity-title">✏️ Grammar: Apostrophes in contractions and possessives</div><div class="activity-sub">Use / Apply — practice the convention</div></div></div>
   <div class="activity-body"><p><strong>This week:</strong> Apostrophes in contractions and possessives</p>
             <div class="callout callout-info" style="margin-top:14px;"><span class="callout-icon">🔧</span><p>Add the correct apostrophe — contraction or possessive — to each word in brackets.</p></div>
             <div style="padding:12px 16px;background:#fff;border:2px solid #E2E8F4;border-radius:12px;margin-bottom:10px;"><div style="font-size:13px;color:#C7922C;font-weight:700;margin-bottom:4px;">Fix this:</div><div style="font-family:Lora,serif;font-size:15px;color:#0E1C42;margin-bottom:8px;">[Aslan] roar shook every tree in the forest.</div><div style="font-size:13px;color:#1B7A4E;font-weight:700;margin-bottom:4px;">✅ Corrected:</div><div style="font-family:Lora,serif;font-size:15px;color:#0E1C42;">Aslan's — possessive</div></div><div style="padding:12px 16px;background:#fff;border:2px solid #E2E8F4;border-radius:12px;margin-bottom:10px;"><div style="font-size:13px;color:#C7922C;font-weight:700;margin-bottom:4px;">Fix this:</div><div style="font-family:Lora,serif;font-size:15px;color:#0E1C42;margin-bottom:8px;">[wasnt] it surprising that Peter fought so bravely?</div><div style="font-size:13px;color:#1B7A4E;font-weight:700;margin-bottom:4px;">✅ Corrected:</div><div style="font-family:Lora,serif;font-size:15px;color:#0E1C42;">wasn't — contraction</div></div><div style="padding:12px 16px;background:#fff;border:2px solid #E2E8F4;border-radius:12px;margin-bottom:10px;"><div style="font-size:13px;color:#C7922C;font-weight:700;margin-bottom:4px;">Fix this:</div><div style="font-family:Lora,serif;font-size:15px;color:#0E1C42;margin-bottom:8px;">The [Witchs] wand was raised high above her head.</div><div style="font-size:13px;color:#1B7A4E;font-weight:700;margin-bottom:4px;">✅ Corrected:</div><div style="font-family:Lora,serif;font-size:15px;color:#0E1C42;">Witch's — possessive</div></div><div style="padding:12px 16px;background:#fff;border:2px solid #E2E8F4;border-radius:12px;margin-bottom:10px;"><div style="font-size:13px;color:#C7922C;font-weight:700;margin-bottom:4px;">Fix this:</div><div style="font-family:Lora,serif;font-size:15px;color:#0E1C42;margin-bottom:8px;">[Couldnt] the children see that Aslan was already near?</div><div style="font-size:13px;color:#1B7A4E;font-weight:700;margin-bottom:4px;">✅ Corrected:</div><div style="font-family:Lora,serif;font-size:15px;color:#0E1C42;">Couldn't — contraction</div></div></div>
 </div>
+<!-- SPELLING -->
 <div class="activity bl-navy">
   <div class="activity-head"><div class="activity-num" style="background:#0E1C42;">4</div><div><div class="activity-title">🔠 Spelling: Schwa sound in longer words</div><div class="activity-sub">Use / Apply — master the pattern</div></div></div>
-  <div class="activity-body"><p><strong>This week:</strong> Schwa sound in longer words</p></div>
+  <div class="activity-body"><p><strong>This week:</strong> Schwa sound in longer words</p>
+<div class="callout callout-gold" style="margin-bottom:14px;background:#FFF8E8;border:2px solid #F5E6C8;border-left:5px solid #C7922C;border-radius:10px;padding:14px 18px;"><span class="callout-icon">📖</span><p style="font-size:15px;color:#0E1C42;line-height:1.6;"><strong>The Rule:</strong> In a long word, one syllable gets less stress and its vowel blurs into a lazy <strong>/uh/</strong> sound. That is the <strong>schwa</strong>. Any vowel letter can make it: the a in <em>a&middot;bout</em>, the o in <em>les&middot;son</em>. That is why long words are hard to spell by ear.</p></div>
+<div class="callout callout-info"><span class="callout-icon">✨</span><p><strong>Find the Schwa!</strong> Say the word the lazy way you really say it, then tap to see which vowel blurred.</p></div>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:14px 0;" id="spellGrid">
+<div class="rv-card" onclick="spellReveal(this)" data-after="a &middot; bout" data-hint="the a blurs to /uh/" style="background:#FAFBFF;border:2px solid #C8DCEE;border-radius:10px;padding:14px;text-align:center;cursor:pointer;transition:all 0.3s;">
+<div style="font-size:26px;font-weight:700;color:#0E1C42;" class="rv-word">about</div>
+<div style="font-size:12px;color:#7A88A8;margin-top:4px;" class="rv-hint">tap to find the schwa!</div></div>
+<div class="rv-card" onclick="spellReveal(this)" data-after="les &middot; son" data-hint="the o blurs" style="background:#FAFBFF;border:2px solid #C8DCEE;border-radius:10px;padding:14px;text-align:center;cursor:pointer;transition:all 0.3s;">
+<div style="font-size:26px;font-weight:700;color:#0E1C42;" class="rv-word">lesson</div>
+<div style="font-size:12px;color:#7A88A8;margin-top:4px;" class="rv-hint">tap to find the schwa!</div></div>
+<div class="rv-card" onclick="spellReveal(this)" data-after="pen &middot; cil" data-hint="the i blurs" style="background:#FAFBFF;border:2px solid #C8DCEE;border-radius:10px;padding:14px;text-align:center;cursor:pointer;transition:all 0.3s;">
+<div style="font-size:26px;font-weight:700;color:#0E1C42;" class="rv-word">pencil</div>
+<div style="font-size:12px;color:#7A88A8;margin-top:4px;" class="rv-hint">tap to find the schwa!</div></div>
+<div class="rv-card" onclick="spellReveal(this)" data-after="prob &middot; lem" data-hint="the e blurs" style="background:#FAFBFF;border:2px solid #C8DCEE;border-radius:10px;padding:14px;text-align:center;cursor:pointer;transition:all 0.3s;">
+<div style="font-size:26px;font-weight:700;color:#0E1C42;" class="rv-word">problem</div>
+<div style="font-size:12px;color:#7A88A8;margin-top:4px;" class="rv-hint">tap to find the schwa!</div></div>
+<div class="rv-card" onclick="spellReveal(this)" data-after="cir &middot; cus" data-hint="the u blurs" style="background:#FAFBFF;border:2px solid #C8DCEE;border-radius:10px;padding:14px;text-align:center;cursor:pointer;transition:all 0.3s;">
+<div style="font-size:26px;font-weight:700;color:#0E1C42;" class="rv-word">circus</div>
+<div style="font-size:12px;color:#7A88A8;margin-top:4px;" class="rv-hint">tap to find the schwa!</div></div>
+<div class="rv-card" onclick="spellReveal(this)" data-after="ba &middot; nan &middot; a" data-hint="the first and last a blur" style="background:#FAFBFF;border:2px solid #C8DCEE;border-radius:10px;padding:14px;text-align:center;cursor:pointer;transition:all 0.3s;">
+<div style="font-size:26px;font-weight:700;color:#0E1C42;" class="rv-word">banana</div>
+<div style="font-size:12px;color:#7A88A8;margin-top:4px;" class="rv-hint">tap to find the schwa!</div></div>
+</div>
+<div class="sort-score" id="spellScore"></div>
+<script>
+function spellReveal(c){if(c.classList.contains("done"))return;c.classList.add("done");c.querySelector(".rv-word").innerHTML=c.dataset.after;var h=c.querySelector(".rv-hint");h.innerHTML=c.dataset.hint;h.style.color="#34B76F";h.style.fontWeight="700";c.style.background="#E3F8ED";c.style.borderColor="#34B76F";var all=document.querySelectorAll(".rv-card"),d=document.querySelectorAll(".rv-card.done");var sc=document.getElementById("spellScore");if(!sc)return;sc.textContent=d.length===all.length?"All found! The blurry vowel is the one to double-check when you spell.":d.length+"/"+all.length+" done";}
+</script>
+</div>
 </div>
   <div class="tab-next-wrap"><p class="tab-transition-voice">Words and skills sharpened. Time to open the book.</p><button class="tab-next-btn" onclick="switchTab('reading')">Continue to 📖 Reading →</button></div>
 </div><!-- /tab-words -->

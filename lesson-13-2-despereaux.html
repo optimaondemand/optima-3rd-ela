@@ -2436,27 +2436,43 @@ and then moves on.</div>
 
   <!-- ═══ SPELLING ═══ -->
   <div class="activity bl-navy">
-    <div class="activity-head"><div class="activity-num" style="background:#0E1C42;">4</div><div style="flex:1;"><div class="activity-title">🔠 Spelling: Soft c and soft g</div><div class="activity-sub">Day 2: Identify &mdash; Spot it at work in the reading.</div></div></div>
+    <div class="activity-head"><div class="activity-num" style="background:#0E1C42;">4</div><div style="flex:1;"><div class="activity-title">🔠 Spelling: Soft c and soft g</div><div class="activity-sub">Identify the pattern by ear.</div></div></div>
     <div class="activity-body">
+<div class="callout callout-gold" style="margin-bottom:14px;background:#FFF8E8;border:2px solid #F5E6C8;border-left:5px solid #C7922C;border-radius:10px;padding:14px 18px;"><span class="callout-icon">📖</span><p style="font-size:15px;color:#0E1C42;line-height:1.6;"><strong>The Rule:</strong> The letters <strong>c</strong> and <strong>g</strong> have two voices. Before <strong>e, i,</strong> or <strong>y</strong> they go soft: c says <strong>/s/</strong> (city) and g says <strong>/j/</strong> (giant). Before any other letter they stay hard: <em>cave</em>, <em>goat</em>.</p></div>
       <p>Same rule as Day 1 &mdash; soft c and soft g. Sort them again, and this time notice <em>why</em> each one landed where it did.</p>
               <div class="callout callout-info" style="margin-top:14px;"><span class="callout-icon">🎮</span><p><strong>Practice: Sort the words.</strong> Tap a word, then tap the column it belongs in.</p></div>
-      <div class="sort-game" id="spellSort">
-        <div class="sort-bank" id="sortBank">
-          <span class="sort-chip" data-group="soft" onclick="pickSortChip(this)">mice</span>
-          <span class="sort-chip" data-group="soft" onclick="pickSortChip(this)">prince</span>
-          <span class="sort-chip" data-group="soft" onclick="pickSortChip(this)">magic</span>
-          <span class="sort-chip" data-group="soft" onclick="pickSortChip(this)">gentle</span>
-          <span class="sort-chip" data-group="hard" onclick="pickSortChip(this)">Cook</span>
-          <span class="sort-chip" data-group="hard" onclick="pickSortChip(this)">candle</span>
-          <span class="sort-chip" data-group="hard" onclick="pickSortChip(this)">gold</span>
-          <span class="sort-chip" data-group="hard" onclick="pickSortChip(this)">garlic</span>
-        </div>
-        <div class="sort-columns">
-          <div class="sort-col"><div class="sort-col-header" style="background:linear-gradient(135deg,#55C8E8,#55C8E8);">Soft (/s/ or /j/)</div><div class="sort-col-drop" data-col="soft" onclick="dropSortChip(this,'soft')"></div></div>
-          <div class="sort-col"><div class="sort-col-header" style="background:linear-gradient(135deg,#8B6FC0,#8B6FC0);">Hard (/k/ or /g/)</div><div class="sort-col-drop" data-col="hard" onclick="dropSortChip(this,'hard')"></div></div>
-        </div>
-        <div class="sort-score" id="sortScore"></div>
-      </div>
+      <div class="callout callout-info"><span class="callout-icon">🔎</span><p><strong>Sound Detective!</strong> Check the letter that comes right after the c or the g.</p></div>
+<div class="spotter-game" id="spellGame">
+<p style="font-size:14px;color:#3A4A6B;margin:10px 0 4px;">Tap the word with the <strong>soft c</strong>.</p>
+<div class="spotter-sentence" id="spell1">
+<span class="spotter-word" onclick="spotterPick(this,'spell1')" data-correct="true">city</span>
+<span class="spotter-word" onclick="spotterPick(this,'spell1')" data-correct="false">cat</span>
+<span class="spotter-word" onclick="spotterPick(this,'spell1')" data-correct="false">cup</span>
+<span class="spotter-word" onclick="spotterPick(this,'spell1')" data-correct="false">cold</span>
+<div class="spotter-result" id="spell1-result"></div></div>
+<p style="font-size:14px;color:#3A4A6B;margin:10px 0 4px;">Tap the word with the <strong>soft c</strong>.</p>
+<div class="spotter-sentence" id="spell2">
+<span class="spotter-word" onclick="spotterPick(this,'spell2')" data-correct="false">cave</span>
+<span class="spotter-word" onclick="spotterPick(this,'spell2')" data-correct="true">mice</span>
+<span class="spotter-word" onclick="spotterPick(this,'spell2')" data-correct="false">corn</span>
+<span class="spotter-word" onclick="spotterPick(this,'spell2')" data-correct="false">crust</span>
+<div class="spotter-result" id="spell2-result"></div></div>
+<p style="font-size:14px;color:#3A4A6B;margin:10px 0 4px;">Tap the word with the <strong>soft g</strong>.</p>
+<div class="spotter-sentence" id="spell3">
+<span class="spotter-word" onclick="spotterPick(this,'spell3')" data-correct="false">goat</span>
+<span class="spotter-word" onclick="spotterPick(this,'spell3')" data-correct="false">gate</span>
+<span class="spotter-word" onclick="spotterPick(this,'spell3')" data-correct="true">giant</span>
+<span class="spotter-word" onclick="spotterPick(this,'spell3')" data-correct="false">gum</span>
+<div class="spotter-result" id="spell3-result"></div></div>
+<p style="font-size:14px;color:#3A4A6B;margin:10px 0 4px;">Tap the word with the <strong>soft g</strong>.</p>
+<div class="spotter-sentence" id="spell4">
+<span class="spotter-word" onclick="spotterPick(this,'spell4')" data-correct="false">garden</span>
+<span class="spotter-word" onclick="spotterPick(this,'spell4')" data-correct="true">cage</span>
+<span class="spotter-word" onclick="spotterPick(this,'spell4')" data-correct="false">gold</span>
+<span class="spotter-word" onclick="spotterPick(this,'spell4')" data-correct="false">grass</span>
+<div class="spotter-result" id="spell4-result"></div></div>
+</div>
+
       <div class="swyk">
         <div class="swyk-label">🪶 Show What You Know</div>
         <div class="swyk-prompt">Find one word in today&rsquo;s reading that follows this rule. Write it, and say which part changed.</div>

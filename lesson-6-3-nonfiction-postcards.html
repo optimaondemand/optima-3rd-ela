@@ -2179,6 +2179,7 @@ body {
 <button class="tab-next-btn" onclick="switchTab('words')">Continue to 🔤 Word Study →</button></div>
 </div><!-- /tab-warmup -->
 <div class="tab-panel" id="tab-words">
+<!-- MORPHOLOGY -->
 <div class="activity bl-purple">
 <div class="activity-head"><div class="activity-num" style="background:#8B6FC0;">1</div><div style="flex:1;"><div class="activity-title">🌱 Morphology: Prefix mis- means wrong</div><div class="activity-sub">Use / Apply the skill</div></div></div>
 <div class="activity-body">
@@ -2195,6 +2196,7 @@ body {
 <button class="fillin-check-btn" onclick="checkFillIn()">Check My Answers</button>
 <div class="fillin-feedback" id="fillinFeedback">🌱 All correct!</div></div>
 </div></div>
+<!-- VOCABULARY -->
 <div class="activity bl-cyan">
 <div class="activity-head"><div class="activity-num" style="background:#55C8E8;">2</div><div style="flex:1;"><div class="activity-title">🔤 Vocabulary: This Week&rsquo;s Words</div><div class="activity-sub">Practice &amp; Apply</div></div></div>
 <div class="activity-body">
@@ -2225,6 +2227,7 @@ body {
 <div class="match-item" data-match="D" onclick="vocabClick(this)">Made available officially, especially by a government.</div>
 </div><div class="match-feedback" id="vocabFeedback">✨ All matched!</div></div>
 </div></div>
+<!-- GRAMMAR -->
 <div class="activity bl-gold">
 <div class="activity-head"><div class="activity-num" style="background:#C7922C;">3</div><div style="flex:1;"><div class="activity-title">✏️ Grammar: Common and proper nouns review</div><div class="activity-sub">Day 3: Apply — use it in a sentence of your own.</div></div></div>
 <div class="activity-body">
@@ -2243,23 +2246,37 @@ body {
 <div class="journal-label">📓 Your answer <span class="saved-dot" id="dot-grammar"></span></div>
 <textarea class="journal-box" id="journal-grammar" data-label="Grammar response" placeholder="Today I learned..." oninput="autoSave(this,'dot-grammar')"></textarea></div>
 </div></div>
+<!-- SPELLING -->
 <div class="activity bl-navy">
-<div class="activity-head"><div class="activity-num" style="background:#0E1C42;">4</div><div style="flex:1;"><div class="activity-title">🔠 Spelling: Compound words</div><div class="activity-sub">Use / Apply the pattern</div></div></div>
+<div class="activity-head"><div class="activity-num" style="background:#0E1C42;">4</div><div style="flex:1;"><div class="activity-title">🔠 Spelling: Compound words</div><div class="activity-sub">Apply the pattern &mdash; build the words.</div></div></div>
 <div class="activity-body">
-<div class="callout callout-info"><span class="callout-icon">🎮</span><p><strong>Sort the Words!</strong> Tap a word, then tap the column where it belongs.</p></div>
-<div class="sort-game" id="spellSort"><div class="sort-bank" id="sortBank">
-<span class="sort-chip" data-group="not-compound" onclick="pickSortChip(this)">letter</span>
-<span class="sort-chip" data-group="not-compound" onclick="pickSortChip(this)">journey</span>
-<span class="sort-chip" data-group="not-compound" onclick="pickSortChip(this)">envelope</span>
-<span class="sort-chip" data-group="not-compound" onclick="pickSortChip(this)">compass</span>
-<span class="sort-chip" data-group="compound" onclick="pickSortChip(this)">notebook</span>
-<span class="sort-chip" data-group="compound" onclick="pickSortChip(this)">landmark</span>
-<span class="sort-chip" data-group="compound" onclick="pickSortChip(this)">postcard</span>
-<span class="sort-chip" data-group="compound" onclick="pickSortChip(this)">mailbox</span>
-</div><div class="sort-columns">
-<div class="sort-col"><div class="sort-col-header" style="background:linear-gradient(135deg,#55C8E8,#55C8E8);">Compound word</div><div class="sort-col-drop" data-col="compound" onclick="dropSortChip(this,'compound')"></div></div>
-<div class="sort-col"><div class="sort-col-header" style="background:linear-gradient(135deg,#8B6FC0,#8B6FC0);">Not a compound word</div><div class="sort-col-drop" data-col="not-compound" onclick="dropSortChip(this,'not-compound')"></div></div>
-</div><div class="sort-score" id="sortScore"></div></div>
+<div class="callout callout-gold" style="margin-bottom:14px;background:#FFF8E8;border:2px solid #F5E6C8;border-left:5px solid #C7922C;border-radius:10px;padding:14px 18px;"><span class="callout-icon">📖</span><p style="font-size:15px;color:#0E1C42;line-height:1.6;"><strong>The Rule:</strong> A <strong>compound word</strong> is two smaller words joined into one. Read each part on its own, then blend them: <em>mail</em> + <em>box</em> = <strong>mailbox</strong>. The new word usually keeps a piece of both meanings.</p></div>
+<div class="callout callout-info"><span class="callout-icon">✨</span><p><strong>Compound Builder!</strong> Read both small words, then tap to join them.</p></div>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:14px 0;" id="spellGrid">
+<div class="rv-card" onclick="spellReveal(this)" data-after="mailbox" data-hint="a box for mail" style="background:#FAFBFF;border:2px solid #C8DCEE;border-radius:10px;padding:14px;text-align:center;cursor:pointer;transition:all 0.3s;">
+<div style="font-size:26px;font-weight:700;color:#0E1C42;" class="rv-word">mail + box</div>
+<div style="font-size:12px;color:#7A88A8;margin-top:4px;" class="rv-hint">tap to join them!</div></div>
+<div class="rv-card" onclick="spellReveal(this)" data-after="postcard" data-hint="a card you post" style="background:#FAFBFF;border:2px solid #C8DCEE;border-radius:10px;padding:14px;text-align:center;cursor:pointer;transition:all 0.3s;">
+<div style="font-size:26px;font-weight:700;color:#0E1C42;" class="rv-word">post + card</div>
+<div style="font-size:12px;color:#7A88A8;margin-top:4px;" class="rv-hint">tap to join them!</div></div>
+<div class="rv-card" onclick="spellReveal(this)" data-after="sunset" data-hint="when the sun sets" style="background:#FAFBFF;border:2px solid #C8DCEE;border-radius:10px;padding:14px;text-align:center;cursor:pointer;transition:all 0.3s;">
+<div style="font-size:26px;font-weight:700;color:#0E1C42;" class="rv-word">sun + set</div>
+<div style="font-size:12px;color:#7A88A8;margin-top:4px;" class="rv-hint">tap to join them!</div></div>
+<div class="rv-card" onclick="spellReveal(this)" data-after="railroad" data-hint="a road of rails" style="background:#FAFBFF;border:2px solid #C8DCEE;border-radius:10px;padding:14px;text-align:center;cursor:pointer;transition:all 0.3s;">
+<div style="font-size:26px;font-weight:700;color:#0E1C42;" class="rv-word">rail + road</div>
+<div style="font-size:12px;color:#7A88A8;margin-top:4px;" class="rv-hint">tap to join them!</div></div>
+<div class="rv-card" onclick="spellReveal(this)" data-after="daylight" data-hint="the light of day" style="background:#FAFBFF;border:2px solid #C8DCEE;border-radius:10px;padding:14px;text-align:center;cursor:pointer;transition:all 0.3s;">
+<div style="font-size:26px;font-weight:700;color:#0E1C42;" class="rv-word">day + light</div>
+<div style="font-size:12px;color:#7A88A8;margin-top:4px;" class="rv-hint">tap to join them!</div></div>
+<div class="rv-card" onclick="spellReveal(this)" data-after="classroom" data-hint="a room for class" style="background:#FAFBFF;border:2px solid #C8DCEE;border-radius:10px;padding:14px;text-align:center;cursor:pointer;transition:all 0.3s;">
+<div style="font-size:26px;font-weight:700;color:#0E1C42;" class="rv-word">class + room</div>
+<div style="font-size:12px;color:#7A88A8;margin-top:4px;" class="rv-hint">tap to join them!</div></div>
+</div>
+<div class="sort-score" id="spellScore"></div>
+<script>
+function spellReveal(c){if(c.classList.contains("done"))return;c.classList.add("done");c.querySelector(".rv-word").innerHTML=c.dataset.after;var h=c.querySelector(".rv-hint");h.innerHTML=c.dataset.hint;h.style.color="#34B76F";h.style.fontWeight="700";c.style.background="#E3F8ED";c.style.borderColor="#34B76F";var all=document.querySelectorAll(".rv-card"),d=document.querySelectorAll(".rv-card.done");var sc=document.getElementById("spellScore");if(!sc)return;sc.textContent=d.length===all.length?"All joined! Two words, one new meaning.":d.length+"/"+all.length+" done";}
+</script>
+
 <div class="swyk"><div class="swyk-label">🪶 Show What You Know</div>
 <div class="swyk-prompt">Explain the compound words pattern in your own words. Write two example words.</div>
 <div class="journal-label">📓 Your answer <span class="saved-dot" id="dot-swyk"></span></div>

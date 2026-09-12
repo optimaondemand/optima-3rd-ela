@@ -2199,6 +2199,7 @@ body {
 <button class="tab-next-btn" onclick="switchTab('words')">Continue to 🔤 Word Study →</button>
 </div></div><!-- /tab-warmup -->
 <div class="tab-panel" id="tab-words">
+<!-- MORPHOLOGY -->
 <div class="activity bl-purple">
 <div class="activity-head"><div class="activity-num" style="background:#8B6FC0;">1</div><div style="flex:1;"><div class="activity-title">🌱 Morphology: Suffix -ed shows past action</div><div class="activity-sub">Define the skill</div></div></div>
 <div class="activity-body">
@@ -2219,6 +2220,7 @@ body {
 <div class="journal-label">📓 Your answer <span class="saved-dot" id="dot-swyk"></span></div>
 <textarea class="journal-box" id="journal-swyk" data-label="SWYK: Suffix -ed shows past action" placeholder="I know that..." oninput="autoSave(this,'dot-swyk')"></textarea></div>
 </div></div>
+<!-- VOCABULARY -->
 <div class="activity bl-cyan">
 <div class="activity-head"><div class="activity-num" style="background:#55C8E8;">2</div><div style="flex:1;"><div class="activity-title">🔤 Vocabulary: Words We've Met Before</div><div class="activity-sub">Weeks 1&ndash;4 review &mdash; one word from each week</div></div></div>
 <div class="activity-body">
@@ -2269,6 +2271,7 @@ body {
 <div class="match-item" data-match="D" onclick="matchClick(this)">Costing a lot of money.</div>
 </div><div class="match-feedback" id="matchFeedback">✨ All matched!</div></div>
 </div></div>
+<!-- GRAMMAR -->
 <div class="activity bl-gold">
 <div class="activity-head"><div class="activity-num" style="background:#C7922C;">3</div><div style="flex:1;"><div class="activity-title">✏️ Grammar: Past-tense verbs</div><div class="activity-sub">Define past-tense verbs, then find them.</div></div></div>
 <div class="activity-body">
@@ -2287,9 +2290,11 @@ body {
 <div class="journal-label">📓 Your answer <span class="saved-dot" id="dot-gram"></span></div>
 <textarea class="journal-box" id="journal-gram" data-label="Grammar: Define past-tense verbs" placeholder="A past-tense verb is..." oninput="autoSave(this,'dot-gram')"></textarea></div>
 </div></div>
+<!-- SPELLING -->
 <div class="activity bl-navy">
 <div class="activity-head"><div class="activity-num" style="background:#0E1C42;">4</div><div style="flex:1;"><div class="activity-title">🔠 Spelling: Three sounds of -ed</div><div class="activity-sub">Define the pattern.</div></div></div>
 <div class="activity-body">
+<div class="callout callout-gold" style="margin-bottom:14px;background:#FFF8E8;border:2px solid #F5E6C8;border-left:5px solid #C7922C;border-radius:10px;padding:14px 18px;"><span class="callout-icon">📖</span><p style="font-size:15px;color:#0E1C42;line-height:1.6;"><strong>The Rule:</strong> The ending <strong>-ed</strong> is always spelled the same, but it makes <strong>three different sounds</strong>. After a <em>t</em> or <em>d</em> sound you hear a whole extra beat: <strong>/&#x115;d/</strong> (want &rarr; want<strong>ed</strong>). After a quiet, breathy sound it says <strong>/t/</strong> (walk &rarr; walk<strong>ed</strong>). After a noisy sound it says <strong>/d/</strong> (mail &rarr; mail<strong>ed</strong>). Say the word out loud &mdash; your ears decide, not your eyes.</p></div>
 <div class="callout callout-info"><span class="callout-icon">🎮</span><p><strong>Practice: Sort the Words!</strong> Tap a word, then tap the column where it belongs.</p></div>
 <div class="sort-game" id="spellSort"><div class="sort-bank" id="sortBank">
 <span class="sort-chip" data-group="ed=/t/" onclick="pickSortChip(this)">walked</span>

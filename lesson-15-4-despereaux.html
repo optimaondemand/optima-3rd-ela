@@ -2446,29 +2446,30 @@ Could not follow it in its flight.</div>
 
   <!-- ═══ SPELLING ═══ -->
   <div class="activity bl-navy">
-    <div class="activity-head"><div class="activity-num" style="background:#0E1C42;">4</div><div style="flex:1;"><div class="activity-title">🔠 Spelling: Review: endings that change the base</div><div class="activity-sub">Day 4: Review &mdash; Pull it all together and explain it.</div></div></div>
+    <div class="activity-head"><div class="activity-num" style="background:#0E1C42;">4</div><div style="flex:1;"><div class="activity-title">🔠 Spelling: Review: endings that change the base</div><div class="activity-sub">Explain / justify the pattern.</div></div></div>
     <div class="activity-body">
+<div class="callout callout-gold" style="margin-bottom:14px;background:#FFF8E8;border:2px solid #F5E6C8;border-left:5px solid #C7922C;border-radius:10px;padding:14px 18px;"><span class="callout-icon">📖</span><p style="font-size:15px;color:#0E1C42;line-height:1.6;"><strong>The Rule:</strong> Three endings change the base word before they go on: <strong>drop the silent e</strong> (hope &rarr; hoping), <strong>double the final consonant</strong> after a short vowel (run &rarr; running), and <strong>change y to i</strong> after a consonant (carry &rarr; carried). Everything else just takes the ending.</p></div>
       <p>Three rules change the base word before the ending goes on: <strong>double</strong> the consonant, <strong>drop</strong> the silent e, or change <strong>y to i</strong>.</p>
         <p>Sort each word by which rule was used to build it.</p>
               <div class="callout callout-info" style="margin-top:14px;"><span class="callout-icon">🎮</span><p><strong>Practice: Sort the words.</strong> Tap a word, then tap the column it belongs in.</p></div>
-      <div class="sort-game" id="spellSort">
-        <div class="sort-bank" id="sortBank">
-          <span class="sort-chip" data-group="drop-e" onclick="pickSortChip(this)">waved</span>
-          <span class="sort-chip" data-group="double" onclick="pickSortChip(this)">wrapped</span>
-          <span class="sort-chip" data-group="y-to-i" onclick="pickSortChip(this)">cried</span>
-          <span class="sort-chip" data-group="y-to-i" onclick="pickSortChip(this)">hurried</span>
-          <span class="sort-chip" data-group="drop-e" onclick="pickSortChip(this)">named</span>
-          <span class="sort-chip" data-group="drop-e" onclick="pickSortChip(this)">shining</span>
-          <span class="sort-chip" data-group="double" onclick="pickSortChip(this)">nodding</span>
-          <span class="sort-chip" data-group="double" onclick="pickSortChip(this)">stopped</span>
-        </div>
-        <div class="sort-columns">
-          <div class="sort-col"><div class="sort-col-header" style="background:linear-gradient(135deg,#55C8E8,#55C8E8);">Doubled</div><div class="sort-col-drop" data-col="double" onclick="dropSortChip(this,'double')"></div></div>
-          <div class="sort-col"><div class="sort-col-header" style="background:linear-gradient(135deg,#8B6FC0,#8B6FC0);">Dropped the e</div><div class="sort-col-drop" data-col="drop-e" onclick="dropSortChip(this,'drop-e')"></div></div>
-          <div class="sort-col"><div class="sort-col-header" style="background:linear-gradient(135deg,#C7922C,#C7922C);">y &rarr; i</div><div class="sort-col-drop" data-col="y-to-i" onclick="dropSortChip(this,'y-to-i')"></div></div>
-        </div>
-        <div class="sort-score" id="sortScore"></div>
-      </div>
+      <div class="callout callout-info"><span class="callout-icon">🎲</span><p><strong>Which Change Dice!</strong> Roll a word, say it out loud, decide &mdash; then tap to check yourself.</p></div>
+<div style="text-align:center;margin:14px 0;">
+<div id="spellDie" style="font-size:44px;line-height:1;">🎲</div>
+<button class="fillin-check-btn" id="spellRollBtn" onclick="rollSpellDice()" style="margin-top:10px;">Roll the dice</button>
+<div id="spellCount" style="font-size:13px;color:#7A88A8;margin-top:6px;">0/6 words rolled</div>
+</div>
+<div id="spellBox" style="display:none;background:#FAFBFF;border:2px solid #C8DCEE;border-radius:10px;padding:16px;text-align:center;">
+<div id="spellWord" style="font-size:30px;font-weight:700;color:#0E1C42;"></div>
+<p style="font-size:14px;color:#3A4A6B;margin-top:6px;">Which change does this one need &mdash; or none at all?</p>
+<button class="dol-check-btn" onclick="checkSpellDice()" style="margin-top:10px;">Check my answer</button>
+<div id="spellReveal" style="display:none;margin-top:10px;font-size:17px;font-weight:700;color:#34B76F;"></div>
+</div>
+<script>
+var spellDice=[{w:"shop + ing",s:"shopping &mdash; double the p"},{w:"smile + ing",s:"smiling &mdash; drop the e"},{w:"cry + ed",s:"cried &mdash; y becomes i"},{w:"jump + ed",s:"jumped &mdash; no change needed"},{w:"brave + est",s:"bravest &mdash; drop the e"},{w:"baby + es",s:"babies &mdash; y becomes i"}];var spellUsed=[];
+function rollSpellDice(){var av=spellDice.filter(function(x){return spellUsed.indexOf(x.w)===-1});if(!av.length)return;var d=document.getElementById("spellDie"),f=["⚀","⚁","⚂","⚃","⚄","⚅"],n=0;var sp=setInterval(function(){d.textContent=f[Math.floor(Math.random()*6)];n++;if(n>10){clearInterval(sp);var p=av[Math.floor(Math.random()*av.length)];spellUsed.push(p.w);document.getElementById("spellWord").textContent=p.w;document.getElementById("spellBox").style.display="block";document.getElementById("spellReveal").style.display="none";document.getElementById("spellCount").textContent=spellUsed.length+"/"+spellDice.length+" words rolled";if(spellUsed.length===spellDice.length){document.getElementById("spellRollBtn").disabled=true;document.getElementById("spellCount").textContent="You rolled them all!";}}},90);}
+function checkSpellDice(){var w=document.getElementById("spellWord").textContent;for(var i=0;i<spellDice.length;i++){if(spellDice[i].w===w){var r=document.getElementById("spellReveal");r.innerHTML=w+" &mdash; "+spellDice[i].s;r.style.display="block";return;}}}
+</script>
+
       <div class="swyk">
         <div class="swyk-label">🪶 Show What You Know</div>
         <div class="swyk-prompt">Explain the rule to someone who has never seen it, and give one word that follows it and one that does not.</div>

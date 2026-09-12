@@ -2665,8 +2665,9 @@ And like a thunderbolt he falls.</div>
 
   <!-- SPELLING -->
   <div class="activity bl-navy">
-    <div class="activity-head"><div class="activity-num" style="background:#2A0A4A;">4</div><div><div class="activity-title">🔠 Spelling: Syllable Review (Day 2: r-controlled + silent-e)</div><div class="activity-sub">Discover the pattern.</div></div></div>
+    <div class="activity-head"><div class="activity-num" style="background:#2A0A4A;">4</div><div><div class="activity-title">🔠 Spelling: Syllable Review (Day 2: r-controlled + silent-e)</div><div class="activity-sub">Identify the pattern by ear.</div></div></div>
     <div class="activity-body">
+<div class="callout callout-gold" style="margin-bottom:14px;background:#FFF8E8;border:2px solid #F5E6C8;border-left:5px solid #C7922C;border-radius:10px;padding:14px 18px;"><span class="callout-icon">📖</span><p style="font-size:15px;color:#0E1C42;line-height:1.6;"><strong>The Rule:</strong> Four syllable types, four different jobs: <strong>closed</strong> ends in a consonant and keeps the vowel short (nap), <strong>open</strong> ends in a vowel and lets it say its name (ti), <strong>r-controlled</strong> hands the vowel over to the r (gar), and <strong>silent-e</strong> reaches back to make the vowel long (pete). Name the type and the word decodes itself.</p></div>
             <p>Silent-e syllables: vowel + consonant + e. The vowel says its long name; the e is silent.</p>
 
       <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:14px 0;">
@@ -2691,14 +2692,38 @@ And like a thunderbolt he falls.</div>
       <div class="dol-answer" id="spellReveal"><p>When a word has the <strong>VCCV</strong> pattern (vowel–consonant–consonant–vowel), you divide it <em>between the two consonants</em>.</p><p>This helps you read long words like <em>tunnel</em> (<strong>tun·nel</strong>) and <em>basket</em> (<strong>bas·ket</strong>).</p></div>
 
       <div class="callout callout-info" style="margin-top:16px;"><span class="callout-icon">🎮</span><p><strong>Practice:</strong> Sort these words using the pattern you discovered.</p></div>
-      <div class="sort-game" id="spellSort">
-  <div class="sort-bank" id="sortBank"><span class="sort-chip" data-group="a" onclick="pickSortChip(this)">stone</span><span class="sort-chip" data-group="b" onclick="pickSortChip(this)">corner</span><span class="sort-chip" data-group="b" onclick="pickSortChip(this)">bottle</span><span class="sort-chip" data-group="a" onclick="pickSortChip(this)">fire</span><span class="sort-chip" data-group="b" onclick="pickSortChip(this)">purple</span><span class="sort-chip" data-group="a" onclick="pickSortChip(this)">stripe</span></div>
-  <div class="sort-columns">
-    <div class="sort-col"><div class="sort-col-header" style="background:linear-gradient(135deg,#3D1A6B,#5C2D91);">Silent-e (long vowel + silent e)</div><div class="sort-col-drop" data-col="a" onclick="dropSortChip(this,'a')"></div></div>
-    <div class="sort-col"><div class="sort-col-header" style="background:linear-gradient(135deg,#B8860B,#7A45C4);">r-controlled</div><div class="sort-col-drop" data-col="b" onclick="dropSortChip(this,'b')"></div></div>
-  </div>
-  <div class="sort-score" id="sortScore"></div>
+      <div class="callout callout-info"><span class="callout-icon">🔎</span><p><strong>Sound Detective!</strong> Each row asks for a different syllable type, so read the question every time.</p></div>
+<div class="spotter-game" id="spellGame">
+<p style="font-size:14px;color:#3A4A6B;margin:10px 0 4px;">Tap the word with an <strong>r-controlled</strong> syllable.</p>
+<div class="spotter-sentence" id="spell1">
+<span class="spotter-word" onclick="spotterPick(this,'spell1')" data-correct="true">garden</span>
+<span class="spotter-word" onclick="spotterPick(this,'spell1')" data-correct="false">napkin</span>
+<span class="spotter-word" onclick="spotterPick(this,'spell1')" data-correct="false">tiger</span>
+<span class="spotter-word" onclick="spotterPick(this,'spell1')" data-correct="false">basket</span>
+<div class="spotter-result" id="spell1-result"></div></div>
+<p style="font-size:14px;color:#3A4A6B;margin:10px 0 4px;">Tap the word with an <strong>open</strong> syllable.</p>
+<div class="spotter-sentence" id="spell2">
+<span class="spotter-word" onclick="spotterPick(this,'spell2')" data-correct="false">contest</span>
+<span class="spotter-word" onclick="spotterPick(this,'spell2')" data-correct="false">velvet</span>
+<span class="spotter-word" onclick="spotterPick(this,'spell2')" data-correct="true">music</span>
+<span class="spotter-word" onclick="spotterPick(this,'spell2')" data-correct="false">harbor</span>
+<div class="spotter-result" id="spell2-result"></div></div>
+<p style="font-size:14px;color:#3A4A6B;margin:10px 0 4px;">Tap the word with a <strong>silent-e</strong> syllable.</p>
+<div class="spotter-sentence" id="spell3">
+<span class="spotter-word" onclick="spotterPick(this,'spell3')" data-correct="true">compete</span>
+<span class="spotter-word" onclick="spotterPick(this,'spell3')" data-correct="false">rabbit</span>
+<span class="spotter-word" onclick="spotterPick(this,'spell3')" data-correct="false">market</span>
+<span class="spotter-word" onclick="spotterPick(this,'spell3')" data-correct="false">picnic</span>
+<div class="spotter-result" id="spell3-result"></div></div>
+<p style="font-size:14px;color:#3A4A6B;margin:10px 0 4px;">Tap the word with <strong>two closed</strong> syllables.</p>
+<div class="spotter-sentence" id="spell4">
+<span class="spotter-word" onclick="spotterPick(this,'spell4')" data-correct="false">paper</span>
+<span class="spotter-word" onclick="spotterPick(this,'spell4')" data-correct="true">sudden</span>
+<span class="spotter-word" onclick="spotterPick(this,'spell4')" data-correct="false">corner</span>
+<span class="spotter-word" onclick="spotterPick(this,'spell4')" data-correct="false">invite</span>
+<div class="spotter-result" id="spell4-result"></div></div>
 </div>
+
       
     </div>
   </div>

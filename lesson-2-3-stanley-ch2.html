@@ -2184,6 +2184,7 @@ body {
 <button class="tab-next-btn" onclick="switchTab('words')">Continue to 🔤 Word Study →</button>
 </div></div><!-- /tab-warmup -->
 <div class="tab-panel" id="tab-words">
+<!-- MORPHOLOGY -->
 <div class="activity bl-purple">
 <div class="activity-head"><div class="activity-num" style="background:#8B6FC0;">1</div><div style="flex:1;"><div class="activity-title">🌱 Morphology: Prefix re- means again</div><div class="activity-sub">Use / Apply the skill</div></div></div>
 <div class="activity-body">
@@ -2200,6 +2201,7 @@ body {
 <button class="fillin-check-btn" onclick="checkFillIn()">Check My Answers</button>
 <div class="fillin-feedback" id="fillinFeedback">🌱 All correct!</div></div>
 </div></div>
+<!-- VOCABULARY -->
 <div class="activity bl-cyan">
 <div class="activity-head"><div class="activity-num" style="background:#55C8E8;">2</div><div style="flex:1;"><div class="activity-title">🔤 Vocabulary: Words in Context</div><div class="activity-sub">Fill in the missing word</div></div></div>
 <div class="activity-body">
@@ -2214,6 +2216,7 @@ body {
 <div class="fillin-feedback" id="vocabClozeFeedback">📖 All correct!</div>
 </div>
 </div></div>
+<!-- GRAMMAR -->
 <div class="activity bl-gold">
 <div class="activity-head"><div class="activity-num" style="background:#C7922C;">3</div><div style="flex:1;"><div class="activity-title">✏️ Grammar: Nouns and verbs</div><div class="activity-sub">Day 3: Apply — use it in a sentence of your own.</div></div></div>
 <div class="activity-body">
@@ -2236,25 +2239,42 @@ body {
 
 </div>
 </div>
+<!-- SPELLING -->
 <div class="activity bl-navy">
-<div class="activity-head"><div class="activity-num" style="background:#0E1C42;">4</div><div style="flex:1;"><div class="activity-title">🔠 Spelling: CVC, CVCe, open/closed syllable review</div><div class="activity-sub">Use / Apply the pattern.</div></div></div>
+<div class="activity-head"><div class="activity-num" style="background:#0E1C42;">4</div><div style="flex:1;"><div class="activity-title">🔠 Spelling: CVC, CVCe, open/closed syllable review</div><div class="activity-sub">Apply the pattern &mdash; climb the ladder.</div></div></div>
 <div class="activity-body">
 <div class="callout callout-gold" style="margin-bottom:14px;background:#FFF8E8;border:2px solid #F5E6C8;border-left:5px solid #C7922C;border-radius:10px;padding:14px 18px;"><span class="callout-icon">📖</span><p style="font-size:15px;color:#0E1C42;line-height:1.6;"><strong>Spelling Patterns This Week:</strong> We are reviewing <strong>CVC</strong> (consonant-vowel-consonant, like <em>flat</em>), <strong>CVCe</strong> (consonant-vowel-consonant-silent <em>e</em>, like <em>name</em>), and <strong>open/closed syllables</strong>. A closed syllable has a short vowel; an open syllable or CVCe word has a long vowel.</p></div>
 
-<div class="callout callout-info"><span class="callout-icon">🎮</span><p><strong>Practice: Sort the Words!</strong> Tap a word, then tap the column where it belongs.</p></div>
-<div class="sort-game" id="spellSort"><div class="sort-bank" id="sortBank">
-<span class="sort-chip" data-group="CVC" onclick="pickSortChip(this)">flat</span>
-<span class="sort-chip" data-group="CVC" onclick="pickSortChip(this)">trip</span>
-<span class="sort-chip" data-group="CVC" onclick="pickSortChip(this)">left</span>
-<span class="sort-chip" data-group="CVC" onclick="pickSortChip(this)">held</span>
-<span class="sort-chip" data-group="CVCe" onclick="pickSortChip(this)">slide</span>
-<span class="sort-chip" data-group="CVCe" onclick="pickSortChip(this)">joke</span>
-<span class="sort-chip" data-group="CVCe" onclick="pickSortChip(this)">make</span>
-<span class="sort-chip" data-group="CVCe" onclick="pickSortChip(this)">fine</span>
-</div><div class="sort-columns">
-<div class="sort-col"><div class="sort-col-header" style="background:linear-gradient(135deg,#55C8E8,#7FD8F0);">CVC</div><div class="sort-col-drop" data-col="CVC" onclick="dropSortChip(this,'CVC')"></div></div>
-<div class="sort-col"><div class="sort-col-header" style="background:linear-gradient(135deg,#55C8E8,#7FD8F0);">CVCe</div><div class="sort-col-drop" data-col="CVCe" onclick="dropSortChip(this,'CVCe')"></div></div>
-</div><div class="sort-score" id="sortScore"></div></div>
+<div class="callout callout-info"><span class="callout-icon">🪜</span><p><strong>Word Ladder!</strong> One letter changes at a time &mdash; and listen to what the silent e does on the way up and back down. Read the change, say the new word in your head, <em>then</em> tap the rung to check.</p></div>
+<div id="ladderGame" style="margin:14px 0;">
+<div style="background:#E3F8ED;border:2px solid #34B76F;border-radius:10px;padding:12px;text-align:center;font-size:24px;font-weight:700;color:#0E1C42;margin-bottom:8px;">tap</div>
+<div style="text-align:center;color:#7A88A8;font-size:18px;line-height:1;">&darr;</div>
+<div class="ladder-rung" onclick="ladderTap(this)" data-word="tape" style="background:#FAFBFF;border:2px solid #C8DCEE;border-radius:10px;padding:12px;text-align:center;cursor:pointer;margin-bottom:8px;transition:all 0.3s;">
+<div class="lr-word" style="font-size:22px;font-weight:700;color:#0E1C42;">?</div>
+<div style="font-size:13px;color:#3A4A6B;margin-top:4px;">add a silent <em>e</em></div></div>
+<div style="text-align:center;color:#7A88A8;font-size:18px;line-height:1;">&darr;</div>
+<div class="ladder-rung" onclick="ladderTap(this)" data-word="cape" style="background:#FAFBFF;border:2px solid #C8DCEE;border-radius:10px;padding:12px;text-align:center;cursor:pointer;margin-bottom:8px;transition:all 0.3s;">
+<div class="lr-word" style="font-size:22px;font-weight:700;color:#0E1C42;">?</div>
+<div style="font-size:13px;color:#3A4A6B;margin-top:4px;">change the <em>t</em> to <em>c</em></div></div>
+<div style="text-align:center;color:#7A88A8;font-size:18px;line-height:1;">&darr;</div>
+<div class="ladder-rung" onclick="ladderTap(this)" data-word="gape" style="background:#FAFBFF;border:2px solid #C8DCEE;border-radius:10px;padding:12px;text-align:center;cursor:pointer;margin-bottom:8px;transition:all 0.3s;">
+<div class="lr-word" style="font-size:22px;font-weight:700;color:#0E1C42;">?</div>
+<div style="font-size:13px;color:#3A4A6B;margin-top:4px;">change the <em>c</em> to <em>g</em></div></div>
+<div style="text-align:center;color:#7A88A8;font-size:18px;line-height:1;">&darr;</div>
+<div class="ladder-rung" onclick="ladderTap(this)" data-word="gap" style="background:#FAFBFF;border:2px solid #C8DCEE;border-radius:10px;padding:12px;text-align:center;cursor:pointer;margin-bottom:8px;transition:all 0.3s;">
+<div class="lr-word" style="font-size:22px;font-weight:700;color:#0E1C42;">?</div>
+<div style="font-size:13px;color:#3A4A6B;margin-top:4px;">take the silent <em>e</em> away</div></div>
+<div style="text-align:center;color:#7A88A8;font-size:18px;line-height:1;">&darr;</div>
+<div class="ladder-rung" onclick="ladderTap(this)" data-word="map" style="background:#FAFBFF;border:2px solid #C8DCEE;border-radius:10px;padding:12px;text-align:center;cursor:pointer;margin-bottom:8px;transition:all 0.3s;">
+<div class="lr-word" style="font-size:22px;font-weight:700;color:#0E1C42;">?</div>
+<div style="font-size:13px;color:#3A4A6B;margin-top:4px;">change the <em>g</em> to <em>m</em></div></div>
+</div>
+<div class="sort-score" id="ladderScore"></div>
+<script>
+function ladderTap(el){if(el.dataset.done)return;el.dataset.done="1";el.querySelector(".lr-word").textContent=el.dataset.word;el.style.background="#E3F8ED";el.style.borderColor="#34B76F";el.style.cursor="default";var all=document.querySelectorAll(".ladder-rung"),d=document.querySelectorAll(".ladder-rung[data-done]");var sc=document.getElementById("ladderScore");if(!sc)return;sc.textContent=d.length===all.length?"Top of the ladder! One small change at a time.":d.length+"/"+all.length+" rungs climbed";}
+</script>
+
+
 <div class="swyk"><div class="swyk-label">🪶 Show What You Know</div>
 <div class="swyk-prompt">Explain the cvc, cvce, open/closed syllable review pattern in your own words. Write two example words.</div>
 <div class="journal-label">📓 Your answer <span class="saved-dot" id="dot-swyk"></span></div>

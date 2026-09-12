@@ -2179,6 +2179,7 @@ body {
 <button class="tab-next-btn" onclick="switchTab('words')">Continue to 🔤 Word Study →</button></div>
 </div><!-- /tab-warmup -->
 <div class="tab-panel" id="tab-words">
+<!-- MORPHOLOGY -->
 <div class="activity bl-purple">
 <div class="activity-head"><div class="activity-num" style="background:#8B6FC0;">1</div><div style="flex:1;"><div class="activity-title">🌱 Morphology: Suffix -ing shows action happening</div><div class="activity-sub">Use / Apply the skill</div></div></div>
 <div class="activity-body">
@@ -2195,6 +2196,7 @@ body {
 <button class="fillin-check-btn" onclick="checkFillIn()">Check My Answers</button>
 <div class="fillin-feedback" id="fillinFeedback">🌱 All correct!</div></div>
 </div></div>
+<!-- VOCABULARY -->
 <div class="activity bl-cyan">
 <div class="activity-head"><div class="activity-num" style="background:#55C8E8;">2</div><div style="flex:1;"><div class="activity-title">🔤 Vocabulary: This Week&rsquo;s Words</div><div class="activity-sub">Practice &amp; Apply</div></div></div>
 <div class="activity-body">
@@ -2225,6 +2227,7 @@ body {
 <div class="match-item" data-match="D" onclick="vocabClick(this)">A well-known place or object that helps people find their way.</div>
 </div><div class="match-feedback" id="vocabFeedback">✨ All matched!</div></div>
 </div></div>
+<!-- GRAMMAR -->
 <div class="activity bl-gold">
 <div class="activity-head"><div class="activity-num" style="background:#C7922C;">3</div><div style="flex:1;"><div class="activity-title">✏️ Grammar: Commas in dates and places</div><div class="activity-sub">Day 3: Apply — use it in a sentence of your own.</div></div></div>
 <div class="activity-body">
@@ -2246,23 +2249,53 @@ body {
 <div class="journal-label">📓 Your answer <span class="saved-dot" id="dot-grammar"></span></div>
 <textarea class="journal-box" id="journal-grammar" data-label="Grammar response" placeholder="Today I learned..." oninput="autoSave(this,'dot-grammar')"></textarea></div>
 </div></div>
+<!-- SPELLING -->
 <div class="activity bl-navy">
-<div class="activity-head"><div class="activity-num" style="background:#0E1C42;">4</div><div style="flex:1;"><div class="activity-title">🔠 Spelling: Adding -ed and -ing to base words</div><div class="activity-sub">Use / Apply the pattern</div></div></div>
+<div class="activity-head"><div class="activity-num" style="background:#0E1C42;">4</div><div style="flex:1;"><div class="activity-title">🔠 Spelling: Adding -ed and -ing to base words</div><div class="activity-sub">Apply the pattern &mdash; proofread it.</div></div></div>
 <div class="activity-body">
-<div class="callout callout-info"><span class="callout-icon">🎮</span><p><strong>Sort the Words!</strong> Tap a word, then tap the column where it belongs.</p></div>
-<div class="sort-game" id="spellSort"><div class="sort-bank" id="sortBank">
-<span class="sort-chip" data-group="double + -ed" onclick="pickSortChip(this)">dropped</span>
-<span class="sort-chip" data-group="double + -ed" onclick="pickSortChip(this)">planned</span>
-<span class="sort-chip" data-group="double + -ed" onclick="pickSortChip(this)">mapped</span>
-<span class="sort-chip" data-group="double + -ed" onclick="pickSortChip(this)">stopped</span>
-<span class="sort-chip" data-group="add -ed" onclick="pickSortChip(this)">traveled</span>
-<span class="sort-chip" data-group="add -ed" onclick="pickSortChip(this)">mailed</span>
-<span class="sort-chip" data-group="add -ed" onclick="pickSortChip(this)">sorted</span>
-<span class="sort-chip" data-group="add -ed" onclick="pickSortChip(this)">visited</span>
-</div><div class="sort-columns">
-<div class="sort-col"><div class="sort-col-header" style="background:linear-gradient(135deg,#55C8E8,#7FD8F0);">double + -ed</div><div class="sort-col-drop" data-col="double + -ed" onclick="dropSortChip(this,'double + -ed')"></div></div>
-<div class="sort-col"><div class="sort-col-header" style="background:linear-gradient(135deg,#55C8E8,#7FD8F0);">add -ed</div><div class="sort-col-drop" data-col="add -ed" onclick="dropSortChip(this,'add -ed')"></div></div>
-</div><div class="sort-score" id="sortScore"></div></div>
+<div class="callout callout-gold" style="margin-bottom:14px;background:#FFF8E8;border:2px solid #F5E6C8;border-left:5px solid #C7922C;border-radius:10px;padding:14px 18px;"><span class="callout-icon">📖</span><p style="font-size:15px;color:#0E1C42;line-height:1.6;"><strong>The Rule:</strong> Before you add <strong>-ed</strong> or <strong>-ing</strong>, look at the base word. Ends in silent <em>e</em>? <strong>Drop it</strong> (hope &rarr; hoping). One short vowel and one final consonant? <strong>Double it</strong> (run &rarr; running). Anything else? <strong>Just add the ending</strong> (walk &rarr; walked).</p></div>
+<div class="callout callout-info"><span class="callout-icon">🔍</span><p><strong>Proofreader!</strong> You are the editor now. Each sentence has <strong>two</strong> misspelled words. Tap any word you want to check.</p></div>
+<div id="proofGame" style="margin:14px 0;">
+<div style="background:#FAFBFF;border:2px solid #C8DCEE;border-radius:10px;padding:14px;margin-bottom:10px;font-size:17px;line-height:2.2;color:#0E1C42;">
+<span onclick="proofPick(this)" data-good="We" data-why="" data-ok="1" style="cursor:pointer;border-bottom:2px dotted #B9C4DC;padding:0 3px;">We</span>
+<span onclick="proofPick(this)" data-good="were" data-why="" data-ok="1" style="cursor:pointer;border-bottom:2px dotted #B9C4DC;padding:0 3px;">were</span>
+<span onclick="proofPick(this)" data-good="hoping" data-why="the base is hope &mdash; drop the e before -ing" style="cursor:pointer;border-bottom:2px dotted #B9C4DC;padding:0 3px;">hopeing</span>
+<span onclick="proofPick(this)" data-good="for" data-why="" data-ok="1" style="cursor:pointer;border-bottom:2px dotted #B9C4DC;padding:0 3px;">for</span>
+<span onclick="proofPick(this)" data-good="snow," data-why="" data-ok="1" style="cursor:pointer;border-bottom:2px dotted #B9C4DC;padding:0 3px;">snow,</span>
+<span onclick="proofPick(this)" data-good="so" data-why="" data-ok="1" style="cursor:pointer;border-bottom:2px dotted #B9C4DC;padding:0 3px;">so</span>
+<span onclick="proofPick(this)" data-good="we" data-why="" data-ok="1" style="cursor:pointer;border-bottom:2px dotted #B9C4DC;padding:0 3px;">we</span>
+<span onclick="proofPick(this)" data-good="stayed" data-why="a vowel comes before the y, so nothing doubles" style="cursor:pointer;border-bottom:2px dotted #B9C4DC;padding:0 3px;">stayyed</span>
+<span onclick="proofPick(this)" data-good="home." data-why="" data-ok="1" style="cursor:pointer;border-bottom:2px dotted #B9C4DC;padding:0 3px;">home.</span>
+<div class="spotter-result" style="margin-top:8px;"></div></div>
+<div style="background:#FAFBFF;border:2px solid #C8DCEE;border-radius:10px;padding:14px;margin-bottom:10px;font-size:17px;line-height:2.2;color:#0E1C42;">
+<span onclick="proofPick(this)" data-good="He" data-why="" data-ok="1" style="cursor:pointer;border-bottom:2px dotted #B9C4DC;padding:0 3px;">He</span>
+<span onclick="proofPick(this)" data-good="dropped" data-why="short vowel + one consonant &rarr; double the p" style="cursor:pointer;border-bottom:2px dotted #B9C4DC;padding:0 3px;">droped</span>
+<span onclick="proofPick(this)" data-good="the" data-why="" data-ok="1" style="cursor:pointer;border-bottom:2px dotted #B9C4DC;padding:0 3px;">the</span>
+<span onclick="proofPick(this)" data-good="map" data-why="" data-ok="1" style="cursor:pointer;border-bottom:2px dotted #B9C4DC;padding:0 3px;">map</span>
+<span onclick="proofPick(this)" data-good="and" data-why="" data-ok="1" style="cursor:pointer;border-bottom:2px dotted #B9C4DC;padding:0 3px;">and</span>
+<span onclick="proofPick(this)" data-good="jumped" data-why="jump ends in two consonants, so nothing doubles" style="cursor:pointer;border-bottom:2px dotted #B9C4DC;padding:0 3px;">jumpped</span>
+<span onclick="proofPick(this)" data-good="over" data-why="" data-ok="1" style="cursor:pointer;border-bottom:2px dotted #B9C4DC;padding:0 3px;">over</span>
+<span onclick="proofPick(this)" data-good="the" data-why="" data-ok="1" style="cursor:pointer;border-bottom:2px dotted #B9C4DC;padding:0 3px;">the</span>
+<span onclick="proofPick(this)" data-good="puddle." data-why="" data-ok="1" style="cursor:pointer;border-bottom:2px dotted #B9C4DC;padding:0 3px;">puddle.</span>
+<div class="spotter-result" style="margin-top:8px;"></div></div>
+<div style="background:#FAFBFF;border:2px solid #C8DCEE;border-radius:10px;padding:14px;margin-bottom:10px;font-size:17px;line-height:2.2;color:#0E1C42;">
+<span onclick="proofPick(this)" data-good="The" data-why="" data-ok="1" style="cursor:pointer;border-bottom:2px dotted #B9C4DC;padding:0 3px;">The</span>
+<span onclick="proofPick(this)" data-good="wind" data-why="" data-ok="1" style="cursor:pointer;border-bottom:2px dotted #B9C4DC;padding:0 3px;">wind</span>
+<span onclick="proofPick(this)" data-good="was" data-why="" data-ok="1" style="cursor:pointer;border-bottom:2px dotted #B9C4DC;padding:0 3px;">was</span>
+<span onclick="proofPick(this)" data-good="blowing" data-why="blow ends in a vowel team, so nothing doubles" style="cursor:pointer;border-bottom:2px dotted #B9C4DC;padding:0 3px;">blowwing</span>
+<span onclick="proofPick(this)" data-good="while" data-why="" data-ok="1" style="cursor:pointer;border-bottom:2px dotted #B9C4DC;padding:0 3px;">while</span>
+<span onclick="proofPick(this)" data-good="we" data-why="" data-ok="1" style="cursor:pointer;border-bottom:2px dotted #B9C4DC;padding:0 3px;">we</span>
+<span onclick="proofPick(this)" data-good="planned" data-why="plan needs a double n &mdash; planed is a different word" style="cursor:pointer;border-bottom:2px dotted #B9C4DC;padding:0 3px;">planed</span>
+<span onclick="proofPick(this)" data-good="our" data-why="" data-ok="1" style="cursor:pointer;border-bottom:2px dotted #B9C4DC;padding:0 3px;">our</span>
+<span onclick="proofPick(this)" data-good="trip." data-why="" data-ok="1" style="cursor:pointer;border-bottom:2px dotted #B9C4DC;padding:0 3px;">trip.</span>
+<div class="spotter-result" style="margin-top:8px;"></div></div>
+</div>
+<div class="sort-score" id="proofScore"></div>
+<script>
+function proofPick(el){if(el.dataset.done)return;el.dataset.done="1";var box=el.parentElement.querySelector(".spotter-result");if(el.dataset.ok){el.style.borderBottom="2px solid #7A88A8";el.style.cursor="default";if(box){box.innerHTML+=(box.innerHTML?"<br>":"")+"\u2714 \u201c"+el.dataset.good+"\u201d is spelled correctly.";box.className="spotter-result show";}return;}el.textContent=el.dataset.good;el.style.color="#34B76F";el.style.fontWeight="700";el.style.borderBottom="2px solid #34B76F";el.style.cursor="default";if(box){box.innerHTML+=(box.innerHTML?"<br>":"")+"\u2705 "+el.dataset.good+" \u2014 "+el.dataset.why;box.className="spotter-result show win";}var all=document.querySelectorAll("#proofGame [data-good]:not([data-ok])");var d=document.querySelectorAll("#proofGame [data-good]:not([data-ok])[data-done]");var sc=document.getElementById("proofScore");if(!sc)return;sc.textContent=d.length===all.length?"Every misspelling found. That is what proofreading feels like.":d.length+"/"+all.length+" misspellings found";}
+</script>
+
+
 <div class="swyk"><div class="swyk-label">🪶 Show What You Know</div>
 <div class="swyk-prompt">Explain the adding -ed and -ing to base words pattern in your own words. Write two example words.</div>
 <div class="journal-label">📓 Your answer <span class="saved-dot" id="dot-swyk"></span></div>

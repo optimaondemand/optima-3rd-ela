@@ -2474,6 +2474,7 @@ body {
 <!-- TAB 2: WORD STUDY -->
 <div class="tab-panel" id="tab-words">
 
+<!-- MORPHOLOGY -->
 <div class="activity bl-purple">
   <div class="activity-head"><div class="activity-num" style="background:#8B6FC0;">1</div><div><div class="activity-title">🌱 Morphology: Prefix inter- means between</div><div class="activity-sub">Use / Apply — build your word knowledge</div></div></div>
   <div class="activity-body">
@@ -2482,6 +2483,7 @@ body {
         <div class="swyk"><div class="swyk-label">🪶 Show What You Know</div><div class="swyk-prompt">Pick one word from above. Write a sentence using that word in your own words.</div>
         <textarea class="journal-box" id="journal-morph" data-label="Morphology Apply" placeholder="I chose the word... It means... In a sentence:..." oninput="autoSave(this,'dot-morph');gatherAnswers();"></textarea></div></div>
 </div>
+<!-- VOCABULARY -->
 <div class="activity bl-cyan">
   <div class="activity-head"><div class="activity-num" style="background:#1B7A4E;">2</div><div><div class="activity-title">🔤 Vocabulary: Use the Words</div><div class="activity-sub">Choose the correct word to complete each sentence.</div></div></div>
   <div class="activity-body">
@@ -2501,6 +2503,7 @@ body {
             </div>
   </div>
 </div>
+<!-- GRAMMAR -->
 <div class="activity bl-gold">
   <div class="activity-head"><div class="activity-num" style="background:#C7922C;">3</div><div><div class="activity-title">✏️ Grammar: Complex sentences intro</div><div class="activity-sub">Use / Apply — practice the convention</div></div></div>
   <div class="activity-body"><p><strong>This week:</strong> Complex sentences intro</p>
@@ -2509,9 +2512,47 @@ body {
             <div class="textbox-prompt">Write your complex sentence here:</div>
             <textarea class="journal-box" id="journal-gram" data-label="Grammar: Write a Complex Sentence" placeholder="Write a complex sentence using when, because, although, or if..." oninput="autoSave(this,'dot-gram');gatherAnswers();"></textarea></div>
 </div>
+<!-- SPELLING -->
 <div class="activity bl-navy">
-  <div class="activity-head"><div class="activity-num" style="background:#0E1C42;">4</div><div><div class="activity-title">🔠 Spelling: Magic-e / silent-e syllables</div><div class="activity-sub">Use / Apply — master the pattern</div></div></div>
-  <div class="activity-body"><p><strong>This week:</strong> Magic-e / silent-e syllables</p></div>
+  <div class="activity-head"><div class="activity-num" style="background:#0E1C42;">4</div><div><div class="activity-title">🔠 Spelling: Magic-e / silent-e syllables</div><div class="activity-sub">Apply the pattern &mdash; build the words.</div></div></div>
+  <div class="activity-body"><p><strong>This week:</strong> Magic-e / silent-e syllables</p>
+<div class="callout callout-gold" style="margin-bottom:14px;background:#FFF8E8;border:2px solid #F5E6C8;border-left:5px solid #C7922C;border-radius:10px;padding:14px 18px;"><span class="callout-icon">📖</span><p style="font-size:15px;color:#0E1C42;line-height:1.6;"><strong>The Rule:</strong> A <strong>silent-e syllable</strong> works the same way inside a long word as it does in a short one: the e at the end reaches back and makes the vowel say its <strong>name</strong>. <em>com&middot;pete</em>, <em>in&middot;vite</em>, <em>es&middot;cape</em>.</p></div>
+<div class="callout callout-info"><span class="callout-icon">🧩</span><p><strong>Syllable Tiles!</strong> The second chunk in every one of these is a silent-e syllable &mdash; so its vowel says its name. Tap the chunks <strong>in order</strong> to build the word. A chunk in the wrong place will not stick.</p></div>
+<div id="tileGame" style="margin:14px 0;">
+<div class="tile-word" data-next="0" data-total="2" data-whole="compete" style="background:#FAFBFF;border:2px solid #C8DCEE;border-radius:10px;padding:14px;margin-bottom:10px;">
+<div class="tw-slots" style="min-height:34px;font-size:24px;font-weight:700;color:#0E1C42;text-align:center;letter-spacing:1px;">&nbsp;</div>
+<div style="display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-top:10px;">
+<span class="tw-tile" onclick="tileTap(this)" data-pos="1" style="background:#FFF;border:2px solid #8B6FC0;border-radius:8px;padding:6px 14px;font-size:18px;font-weight:700;color:#3D5285;cursor:pointer;">pete</span>
+<span class="tw-tile" onclick="tileTap(this)" data-pos="0" style="background:#FFF;border:2px solid #8B6FC0;border-radius:8px;padding:6px 14px;font-size:18px;font-weight:700;color:#3D5285;cursor:pointer;">com</span>
+</div>
+<div class="spotter-result" style="margin-top:8px;"></div></div>
+<div class="tile-word" data-next="0" data-total="2" data-whole="invite" style="background:#FAFBFF;border:2px solid #C8DCEE;border-radius:10px;padding:14px;margin-bottom:10px;">
+<div class="tw-slots" style="min-height:34px;font-size:24px;font-weight:700;color:#0E1C42;text-align:center;letter-spacing:1px;">&nbsp;</div>
+<div style="display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-top:10px;">
+<span class="tw-tile" onclick="tileTap(this)" data-pos="1" style="background:#FFF;border:2px solid #8B6FC0;border-radius:8px;padding:6px 14px;font-size:18px;font-weight:700;color:#3D5285;cursor:pointer;">vite</span>
+<span class="tw-tile" onclick="tileTap(this)" data-pos="0" style="background:#FFF;border:2px solid #8B6FC0;border-radius:8px;padding:6px 14px;font-size:18px;font-weight:700;color:#3D5285;cursor:pointer;">in</span>
+</div>
+<div class="spotter-result" style="margin-top:8px;"></div></div>
+<div class="tile-word" data-next="0" data-total="2" data-whole="escape" style="background:#FAFBFF;border:2px solid #C8DCEE;border-radius:10px;padding:14px;margin-bottom:10px;">
+<div class="tw-slots" style="min-height:34px;font-size:24px;font-weight:700;color:#0E1C42;text-align:center;letter-spacing:1px;">&nbsp;</div>
+<div style="display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-top:10px;">
+<span class="tw-tile" onclick="tileTap(this)" data-pos="1" style="background:#FFF;border:2px solid #8B6FC0;border-radius:8px;padding:6px 14px;font-size:18px;font-weight:700;color:#3D5285;cursor:pointer;">cape</span>
+<span class="tw-tile" onclick="tileTap(this)" data-pos="0" style="background:#FFF;border:2px solid #8B6FC0;border-radius:8px;padding:6px 14px;font-size:18px;font-weight:700;color:#3D5285;cursor:pointer;">es</span>
+</div>
+<div class="spotter-result" style="margin-top:8px;"></div></div>
+<div class="tile-word" data-next="0" data-total="2" data-whole="mistake" style="background:#FAFBFF;border:2px solid #C8DCEE;border-radius:10px;padding:14px;margin-bottom:10px;">
+<div class="tw-slots" style="min-height:34px;font-size:24px;font-weight:700;color:#0E1C42;text-align:center;letter-spacing:1px;">&nbsp;</div>
+<div style="display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-top:10px;">
+<span class="tw-tile" onclick="tileTap(this)" data-pos="1" style="background:#FFF;border:2px solid #8B6FC0;border-radius:8px;padding:6px 14px;font-size:18px;font-weight:700;color:#3D5285;cursor:pointer;">take</span>
+<span class="tw-tile" onclick="tileTap(this)" data-pos="0" style="background:#FFF;border:2px solid #8B6FC0;border-radius:8px;padding:6px 14px;font-size:18px;font-weight:700;color:#3D5285;cursor:pointer;">mis</span>
+</div>
+<div class="spotter-result" style="margin-top:8px;"></div></div>
+</div>
+<div class="sort-score" id="tileScore"></div>
+<script>
+function tileTap(el){var box=el.closest(".tile-word");if(!box||el.dataset.used)return;var want=parseInt(box.dataset.next,10);var res=box.querySelector(".spotter-result");if(parseInt(el.dataset.pos,10)!==want){el.style.borderColor="#c7627e";setTimeout(function(){el.style.borderColor="#8B6FC0";},500);if(res){res.textContent="Not that chunk yet \u2014 say the word slowly and listen for the next beat.";res.className="spotter-result show";}return;}el.dataset.used="1";el.style.background="#E3F8ED";el.style.borderColor="#34B76F";el.style.cursor="default";var slots=box.querySelector(".tw-slots");slots.textContent=(want===0?"":slots.textContent+" \u00b7 ")+el.textContent;box.dataset.next=want+1;if(want+1===parseInt(box.dataset.total,10)&&res){res.textContent="\u2705 "+box.dataset.whole;res.className="spotter-result show win";}var all=document.querySelectorAll(".tile-word"),d=0;all.forEach(function(b){if(b.dataset.next===b.dataset.total)d++;});var sc=document.getElementById("tileScore");if(!sc)return;sc.textContent=d===all.length?"Every word built. Chunk by chunk is how long words work.":d+"/"+all.length+" words built";}
+</script>
+</div>
 </div>
   <div class="tab-next-wrap"><p class="tab-transition-voice">Words and skills sharpened. Time to open the book.</p><button class="tab-next-btn" onclick="switchTab('reading')">Continue to 📖 Reading →</button></div>
 </div><!-- /tab-words -->

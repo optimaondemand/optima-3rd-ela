@@ -2415,27 +2415,41 @@ body {
 
   <!-- ═══ SPELLING ═══ -->
   <div class="activity bl-navy">
-    <div class="activity-head"><div class="activity-num" style="background:#0E1C42;">4</div><div style="flex:1;"><div class="activity-title">🔠 Spelling: Longer words with familiar suffixes</div><div class="activity-sub">Day 3: Apply &mdash; Use it in a sentence of your own.</div></div></div>
+    <div class="activity-head"><div class="activity-num" style="background:#0E1C42;">4</div><div style="flex:1;"><div class="activity-title">🔠 Spelling: Longer words with familiar suffixes</div><div class="activity-sub">Apply the pattern &mdash; climb the ladder.</div></div></div>
     <div class="activity-body">
+<div class="callout callout-gold" style="margin-bottom:14px;background:#FFF8E8;border:2px solid #F5E6C8;border-left:5px solid #C7922C;border-radius:10px;padding:14px 18px;"><span class="callout-icon">📖</span><p style="font-size:15px;color:#0E1C42;line-height:1.6;"><strong>The Rule:</strong> Long words get short fast when you find the <strong>base word</strong> first, then peel off the suffix: <em>darkness</em> = <strong>dark</strong> + <strong>-ness</strong>. Suffixes that start with a consonant (-ful, -less, -ly, -ness) usually leave the base alone.</p></div>
       <p>Same rule as Day 1 &mdash; longer words with familiar suffixes. Sort them again, and this time notice <em>why</em> each one landed where it did.</p>
               <div class="callout callout-info" style="margin-top:14px;"><span class="callout-icon">🎮</span><p><strong>Practice: Sort the words.</strong> Tap a word, then tap the column it belongs in.</p></div>
-      <div class="sort-game" id="spellSort">
-        <div class="sort-bank" id="sortBank">
-          <span class="sort-chip" data-group="two-parts" onclick="pickSortChip(this)">disagree</span>
-          <span class="sort-chip" data-group="two-parts" onclick="pickSortChip(this)">quickly</span>
-          <span class="sort-chip" data-group="two-parts" onclick="pickSortChip(this)">hopeful</span>
-          <span class="sort-chip" data-group="two-parts" onclick="pickSortChip(this)">darkness</span>
-          <span class="sort-chip" data-group="three-parts" onclick="pickSortChip(this)">impatiently</span>
-          <span class="sort-chip" data-group="three-parts" onclick="pickSortChip(this)">fearlessly</span>
-          <span class="sort-chip" data-group="three-parts" onclick="pickSortChip(this)">thoughtfulness</span>
-          <span class="sort-chip" data-group="three-parts" onclick="pickSortChip(this)">hopelessness</span>
-        </div>
-        <div class="sort-columns">
-          <div class="sort-col"><div class="sort-col-header" style="background:linear-gradient(135deg,#55C8E8,#55C8E8);">Base + two endings</div><div class="sort-col-drop" data-col="three-parts" onclick="dropSortChip(this,'three-parts')"></div></div>
-          <div class="sort-col"><div class="sort-col-header" style="background:linear-gradient(135deg,#8B6FC0,#8B6FC0);">Base + one ending</div><div class="sort-col-drop" data-col="two-parts" onclick="dropSortChip(this,'two-parts')"></div></div>
-        </div>
-        <div class="sort-score" id="sortScore"></div>
-      </div>
+      <div class="callout callout-info"><span class="callout-icon">🪜</span><p><strong>Word Ladder!</strong> The base word never changes on this ladder. Only the suffix does. Read the change, say the new word in your head, <em>then</em> tap the rung to check.</p></div>
+<div id="ladderGame" style="margin:14px 0;">
+<div style="background:#E3F8ED;border:2px solid #34B76F;border-radius:10px;padding:12px;text-align:center;font-size:24px;font-weight:700;color:#0E1C42;margin-bottom:8px;">dark</div>
+<div style="text-align:center;color:#7A88A8;font-size:18px;line-height:1;">&darr;</div>
+<div class="ladder-rung" onclick="ladderTap(this)" data-word="darker" style="background:#FAFBFF;border:2px solid #C8DCEE;border-radius:10px;padding:12px;text-align:center;cursor:pointer;margin-bottom:8px;transition:all 0.3s;">
+<div class="lr-word" style="font-size:22px;font-weight:700;color:#0E1C42;">?</div>
+<div style="font-size:13px;color:#3A4A6B;margin-top:4px;">add <em>-er</em></div></div>
+<div style="text-align:center;color:#7A88A8;font-size:18px;line-height:1;">&darr;</div>
+<div class="ladder-rung" onclick="ladderTap(this)" data-word="darkest" style="background:#FAFBFF;border:2px solid #C8DCEE;border-radius:10px;padding:12px;text-align:center;cursor:pointer;margin-bottom:8px;transition:all 0.3s;">
+<div class="lr-word" style="font-size:22px;font-weight:700;color:#0E1C42;">?</div>
+<div style="font-size:13px;color:#3A4A6B;margin-top:4px;">swap <em>-er</em> for <em>-est</em></div></div>
+<div style="text-align:center;color:#7A88A8;font-size:18px;line-height:1;">&darr;</div>
+<div class="ladder-rung" onclick="ladderTap(this)" data-word="darkness" style="background:#FAFBFF;border:2px solid #C8DCEE;border-radius:10px;padding:12px;text-align:center;cursor:pointer;margin-bottom:8px;transition:all 0.3s;">
+<div class="lr-word" style="font-size:22px;font-weight:700;color:#0E1C42;">?</div>
+<div style="font-size:13px;color:#3A4A6B;margin-top:4px;">swap <em>-est</em> for <em>-ness</em></div></div>
+<div style="text-align:center;color:#7A88A8;font-size:18px;line-height:1;">&darr;</div>
+<div class="ladder-rung" onclick="ladderTap(this)" data-word="darkly" style="background:#FAFBFF;border:2px solid #C8DCEE;border-radius:10px;padding:12px;text-align:center;cursor:pointer;margin-bottom:8px;transition:all 0.3s;">
+<div class="lr-word" style="font-size:22px;font-weight:700;color:#0E1C42;">?</div>
+<div style="font-size:13px;color:#3A4A6B;margin-top:4px;">swap <em>-ness</em> for <em>-ly</em></div></div>
+<div style="text-align:center;color:#7A88A8;font-size:18px;line-height:1;">&darr;</div>
+<div class="ladder-rung" onclick="ladderTap(this)" data-word="dark" style="background:#FAFBFF;border:2px solid #C8DCEE;border-radius:10px;padding:12px;text-align:center;cursor:pointer;margin-bottom:8px;transition:all 0.3s;">
+<div class="lr-word" style="font-size:22px;font-weight:700;color:#0E1C42;">?</div>
+<div style="font-size:13px;color:#3A4A6B;margin-top:4px;">take the suffix off &mdash; what is left?</div></div>
+</div>
+<div class="sort-score" id="ladderScore"></div>
+<script>
+function ladderTap(el){if(el.dataset.done)return;el.dataset.done="1";el.querySelector(".lr-word").textContent=el.dataset.word;el.style.background="#E3F8ED";el.style.borderColor="#34B76F";el.style.cursor="default";var all=document.querySelectorAll(".ladder-rung"),d=document.querySelectorAll(".ladder-rung[data-done]");var sc=document.getElementById("ladderScore");if(!sc)return;sc.textContent=d.length===all.length?"Top of the ladder! One small change at a time.":d.length+"/"+all.length+" rungs climbed";}
+</script>
+
+
       <div class="swyk">
         <div class="swyk-label">🪶 Show What You Know</div>
         <div class="swyk-prompt">Write two sentences about today&rsquo;s chapters using words that follow this rule.</div>

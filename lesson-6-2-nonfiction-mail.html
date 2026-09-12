@@ -2196,6 +2196,7 @@ I&rsquo;ve traveled far today.</div>
 <button class="tab-next-btn" onclick="switchTab('words')">Continue to 🔤 Word Study →</button></div>
 </div><!-- /tab-warmup -->
 <div class="tab-panel" id="tab-words">
+<!-- MORPHOLOGY -->
 <div class="activity bl-purple">
 <div class="activity-head"><div class="activity-num" style="background:#8B6FC0;">1</div><div style="flex:1;"><div class="activity-title">🌱 Morphology: Prefix mis- means wrong</div><div class="activity-sub">Identify the skill</div></div></div>
 <div class="activity-body">
@@ -2215,6 +2216,7 @@ I&rsquo;ve traveled far today.</div>
 <div class="match-item" data-match="D" onclick="matchClick(this)">lead</div>
 </div><div class="match-feedback" id="matchFeedback">✨ All matched!</div></div>
 </div></div>
+<!-- VOCABULARY -->
 <div class="activity bl-cyan">
 <div class="activity-head"><div class="activity-num" style="background:#55C8E8;">2</div><div style="flex:1;"><div class="activity-title">🔤 Vocabulary: This Week&rsquo;s Words</div><div class="activity-sub">Practice &amp; Apply</div></div></div>
 <div class="activity-body">
@@ -2241,6 +2243,7 @@ I&rsquo;ve traveled far today.</div>
 <div class="match-item" data-match="D" onclick="vocabClick(this)">A box that explains symbols on a map.</div>
 </div><div class="match-feedback" id="vocabFeedback">✨ All matched!</div></div>
 </div></div>
+<!-- GRAMMAR -->
 <div class="activity bl-gold">
 <div class="activity-head"><div class="activity-num" style="background:#C7922C;">3</div><div style="flex:1;"><div class="activity-title">✏️ Grammar: Common and proper nouns review</div><div class="activity-sub">Day 2: Identify — spot it at work in the reading.</div></div></div>
 <div class="activity-body">
@@ -2259,23 +2262,43 @@ I&rsquo;ve traveled far today.</div>
 <div class="journal-label">📓 Your answer <span class="saved-dot" id="dot-grammar"></span></div>
 <textarea class="journal-box" id="journal-grammar" data-label="Grammar response" placeholder="Today I learned..." oninput="autoSave(this,'dot-grammar')"></textarea></div>
 </div></div>
+<!-- SPELLING -->
 <div class="activity bl-navy">
-<div class="activity-head"><div class="activity-num" style="background:#0E1C42;">4</div><div style="flex:1;"><div class="activity-title">🔠 Spelling: Compound words</div><div class="activity-sub">Identify the pattern</div></div></div>
+<div class="activity-head"><div class="activity-num" style="background:#0E1C42;">4</div><div style="flex:1;"><div class="activity-title">🔠 Spelling: Compound words</div><div class="activity-sub">Identify the pattern by ear.</div></div></div>
 <div class="activity-body">
-<div class="callout callout-info"><span class="callout-icon">🎮</span><p><strong>Sort the Words!</strong> Tap a word, then tap the column where it belongs.</p></div>
-<div class="sort-game" id="spellSort"><div class="sort-bank" id="sortBank">
-<span class="sort-chip" data-group="compound" onclick="pickSortChip(this)">mailbox</span>
-<span class="sort-chip" data-group="compound" onclick="pickSortChip(this)">postcard</span>
-<span class="sort-chip" data-group="compound" onclick="pickSortChip(this)">landmark</span>
-<span class="sort-chip" data-group="compound" onclick="pickSortChip(this)">notebook</span>
-<span class="sort-chip" data-group="not-compound" onclick="pickSortChip(this)">compass</span>
-<span class="sort-chip" data-group="not-compound" onclick="pickSortChip(this)">envelope</span>
-<span class="sort-chip" data-group="not-compound" onclick="pickSortChip(this)">journey</span>
-<span class="sort-chip" data-group="not-compound" onclick="pickSortChip(this)">letter</span>
-</div><div class="sort-columns">
-<div class="sort-col"><div class="sort-col-header" style="background:linear-gradient(135deg,#55C8E8,#55C8E8);">Compound word</div><div class="sort-col-drop" data-col="compound" onclick="dropSortChip(this,'compound')"></div></div>
-<div class="sort-col"><div class="sort-col-header" style="background:linear-gradient(135deg,#8B6FC0,#8B6FC0);">Not a compound word</div><div class="sort-col-drop" data-col="not-compound" onclick="dropSortChip(this,'not-compound')"></div></div>
-</div><div class="sort-score" id="sortScore"></div></div>
+<div class="callout callout-gold" style="margin-bottom:14px;background:#FFF8E8;border:2px solid #F5E6C8;border-left:5px solid #C7922C;border-radius:10px;padding:14px 18px;"><span class="callout-icon">📖</span><p style="font-size:15px;color:#0E1C42;line-height:1.6;"><strong>The Rule:</strong> A <strong>compound word</strong> is two smaller words joined into one. Read each part on its own, then blend them: <em>mail</em> + <em>box</em> = <strong>mailbox</strong>. The new word usually keeps a piece of both meanings.</p></div>
+<div class="callout callout-info"><span class="callout-icon">🔎</span><p><strong>Sound Detective!</strong> Three of these are one word all the way through. One is two words joined together.</p></div>
+<div class="spotter-game" id="spellGame">
+<p style="font-size:14px;color:#3A4A6B;margin:10px 0 4px;">Tap the <strong>compound</strong> word.</p>
+<div class="spotter-sentence" id="spell1">
+<span class="spotter-word" onclick="spotterPick(this,'spell1')" data-correct="true">mailbox</span>
+<span class="spotter-word" onclick="spotterPick(this,'spell1')" data-correct="false">basket</span>
+<span class="spotter-word" onclick="spotterPick(this,'spell1')" data-correct="false">pencil</span>
+<span class="spotter-word" onclick="spotterPick(this,'spell1')" data-correct="false">winter</span>
+<div class="spotter-result" id="spell1-result"></div></div>
+<p style="font-size:14px;color:#3A4A6B;margin:10px 0 4px;">Tap the <strong>compound</strong> word.</p>
+<div class="spotter-sentence" id="spell2">
+<span class="spotter-word" onclick="spotterPick(this,'spell2')" data-correct="false">summer</span>
+<span class="spotter-word" onclick="spotterPick(this,'spell2')" data-correct="true">birthday</span>
+<span class="spotter-word" onclick="spotterPick(this,'spell2')" data-correct="false">rocket</span>
+<span class="spotter-word" onclick="spotterPick(this,'spell2')" data-correct="false">candle</span>
+<div class="spotter-result" id="spell2-result"></div></div>
+<p style="font-size:14px;color:#3A4A6B;margin:10px 0 4px;">Tap the <strong>compound</strong> word.</p>
+<div class="spotter-sentence" id="spell3">
+<span class="spotter-word" onclick="spotterPick(this,'spell3')" data-correct="false">garden</span>
+<span class="spotter-word" onclick="spotterPick(this,'spell3')" data-correct="false">silver</span>
+<span class="spotter-word" onclick="spotterPick(this,'spell3')" data-correct="true">sidewalk</span>
+<span class="spotter-word" onclick="spotterPick(this,'spell3')" data-correct="false">letter</span>
+<div class="spotter-result" id="spell3-result"></div></div>
+<p style="font-size:14px;color:#3A4A6B;margin:10px 0 4px;">Tap the <strong>compound</strong> word.</p>
+<div class="spotter-sentence" id="spell4">
+<span class="spotter-word" onclick="spotterPick(this,'spell4')" data-correct="false">market</span>
+<span class="spotter-word" onclick="spotterPick(this,'spell4')" data-correct="false">ribbon</span>
+<span class="spotter-word" onclick="spotterPick(this,'spell4')" data-correct="false">puddle</span>
+<span class="spotter-word" onclick="spotterPick(this,'spell4')" data-correct="true">airplane</span>
+<div class="spotter-result" id="spell4-result"></div></div>
+</div>
+
 </div></div>
 <div class="activity bl-green">
 <div class="activity-head"><div class="activity-num" style="background:#34B76F;">5</div><div style="flex:1;"><div class="activity-title">📝 Reading-Writing Connection (RWM)</div><div class="activity-sub">Turning facts into organized sentences.</div></div></div>

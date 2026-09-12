@@ -2415,27 +2415,37 @@ body {
 
   <!-- ═══ SPELLING ═══ -->
   <div class="activity bl-navy">
-    <div class="activity-head"><div class="activity-num" style="background:#0E1C42;">4</div><div style="flex:1;"><div class="activity-title">🔠 Spelling: Doubling the final consonant</div><div class="activity-sub">Day 3: Apply &mdash; Use it in a sentence of your own.</div></div></div>
+    <div class="activity-head"><div class="activity-num" style="background:#0E1C42;">4</div><div style="flex:1;"><div class="activity-title">🔠 Spelling: Doubling the final consonant</div><div class="activity-sub">Apply the pattern &mdash; build the words.</div></div></div>
     <div class="activity-body">
+<div class="callout callout-gold" style="margin-bottom:14px;background:#FFF8E8;border:2px solid #F5E6C8;border-left:5px solid #C7922C;border-radius:10px;padding:14px 18px;"><span class="callout-icon">📖</span><p style="font-size:15px;color:#0E1C42;line-height:1.6;"><strong>The Rule:</strong> When a base word has <strong>one short vowel</strong> and ends in <strong>one consonant</strong>, double that consonant before an ending that starts with a vowel: <em>hop</em> &rarr; <strong>hopped</strong>. Two consonants at the end, or a long vowel, and you double nothing: <em>jump</em> &rarr; <strong>jumped</strong>.</p></div>
       <p>Same rule as Day 1 &mdash; doubling the final consonant. Sort them again, and this time notice <em>why</em> each one landed where it did.</p>
               <div class="callout callout-info" style="margin-top:14px;"><span class="callout-icon">🎮</span><p><strong>Practice: Sort the words.</strong> Tap a word, then tap the column it belongs in.</p></div>
-      <div class="sort-game" id="spellSort">
-        <div class="sort-bank" id="sortBank">
-          <span class="sort-chip" data-group="no-double" onclick="pickSortChip(this)">wanted</span>
-          <span class="sort-chip" data-group="no-double" onclick="pickSortChip(this)">looked</span>
-          <span class="sort-chip" data-group="no-double" onclick="pickSortChip(this)">shouted</span>
-          <span class="sort-chip" data-group="no-double" onclick="pickSortChip(this)">jumped</span>
-          <span class="sort-chip" data-group="double" onclick="pickSortChip(this)">nodding</span>
-          <span class="sort-chip" data-group="double" onclick="pickSortChip(this)">wrapped</span>
-          <span class="sort-chip" data-group="double" onclick="pickSortChip(this)">snapped</span>
-          <span class="sort-chip" data-group="double" onclick="pickSortChip(this)">stopped</span>
-        </div>
-        <div class="sort-columns">
-          <div class="sort-col"><div class="sort-col-header" style="background:linear-gradient(135deg,#55C8E8,#55C8E8);">Doubled the consonant</div><div class="sort-col-drop" data-col="double" onclick="dropSortChip(this,'double')"></div></div>
-          <div class="sort-col"><div class="sort-col-header" style="background:linear-gradient(135deg,#8B6FC0,#8B6FC0);">Did not double</div><div class="sort-col-drop" data-col="no-double" onclick="dropSortChip(this,'no-double')"></div></div>
-        </div>
-        <div class="sort-score" id="sortScore"></div>
-      </div>
+      <div class="callout callout-info"><span class="callout-icon">✨</span><p><strong>Double It Builder!</strong> Check the vowel and the ending, then tap to build the word.</p></div>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:14px 0;" id="spellGrid">
+<div class="rv-card" onclick="spellReveal(this)" data-after="hopped" data-hint="short vowel + one consonant" style="background:#FAFBFF;border:2px solid #C8DCEE;border-radius:10px;padding:14px;text-align:center;cursor:pointer;transition:all 0.3s;">
+<div style="font-size:26px;font-weight:700;color:#0E1C42;" class="rv-word">hop + ed</div>
+<div style="font-size:12px;color:#7A88A8;margin-top:4px;" class="rv-hint">tap to build it!</div></div>
+<div class="rv-card" onclick="spellReveal(this)" data-after="sitting" data-hint="double the t" style="background:#FAFBFF;border:2px solid #C8DCEE;border-radius:10px;padding:14px;text-align:center;cursor:pointer;transition:all 0.3s;">
+<div style="font-size:26px;font-weight:700;color:#0E1C42;" class="rv-word">sit + ing</div>
+<div style="font-size:12px;color:#7A88A8;margin-top:4px;" class="rv-hint">tap to build it!</div></div>
+<div class="rv-card" onclick="spellReveal(this)" data-after="bigger" data-hint="double the g" style="background:#FAFBFF;border:2px solid #C8DCEE;border-radius:10px;padding:14px;text-align:center;cursor:pointer;transition:all 0.3s;">
+<div style="font-size:26px;font-weight:700;color:#0E1C42;" class="rv-word">big + er</div>
+<div style="font-size:12px;color:#7A88A8;margin-top:4px;" class="rv-hint">tap to build it!</div></div>
+<div class="rv-card" onclick="spellReveal(this)" data-after="grabbed" data-hint="double the b" style="background:#FAFBFF;border:2px solid #C8DCEE;border-radius:10px;padding:14px;text-align:center;cursor:pointer;transition:all 0.3s;">
+<div style="font-size:26px;font-weight:700;color:#0E1C42;" class="rv-word">grab + ed</div>
+<div style="font-size:12px;color:#7A88A8;margin-top:4px;" class="rv-hint">tap to build it!</div></div>
+<div class="rv-card" onclick="spellReveal(this)" data-after="runner" data-hint="double the n" style="background:#FAFBFF;border:2px solid #C8DCEE;border-radius:10px;padding:14px;text-align:center;cursor:pointer;transition:all 0.3s;">
+<div style="font-size:26px;font-weight:700;color:#0E1C42;" class="rv-word">run + er</div>
+<div style="font-size:12px;color:#7A88A8;margin-top:4px;" class="rv-hint">tap to build it!</div></div>
+<div class="rv-card" onclick="spellReveal(this)" data-after="stopping" data-hint="double the p" style="background:#FAFBFF;border:2px solid #C8DCEE;border-radius:10px;padding:14px;text-align:center;cursor:pointer;transition:all 0.3s;">
+<div style="font-size:26px;font-weight:700;color:#0E1C42;" class="rv-word">stop + ing</div>
+<div style="font-size:12px;color:#7A88A8;margin-top:4px;" class="rv-hint">tap to build it!</div></div>
+</div>
+<div class="sort-score" id="spellScore"></div>
+<script>
+function spellReveal(c){if(c.classList.contains("done"))return;c.classList.add("done");c.querySelector(".rv-word").innerHTML=c.dataset.after;var h=c.querySelector(".rv-hint");h.innerHTML=c.dataset.hint;h.style.color="#34B76F";h.style.fontWeight="700";c.style.background="#E3F8ED";c.style.borderColor="#34B76F";var all=document.querySelectorAll(".rv-card"),d=document.querySelectorAll(".rv-card.done");var sc=document.getElementById("spellScore");if(!sc)return;sc.textContent=d.length===all.length?"All built! Short vowel plus one consonant means double.":d.length+"/"+all.length+" done";}
+</script>
+
       <div class="swyk">
         <div class="swyk-label">🪶 Show What You Know</div>
         <div class="swyk-prompt">Write two sentences about today&rsquo;s chapters using words that follow this rule.</div>

@@ -2433,27 +2433,43 @@ As she passes over them.</div>
 
   <!-- ═══ SPELLING ═══ -->
   <div class="activity bl-navy">
-    <div class="activity-head"><div class="activity-num" style="background:#0E1C42;">4</div><div style="flex:1;"><div class="activity-title">🔠 Spelling: Dropping the final e</div><div class="activity-sub">Day 2: Identify &mdash; Spot it at work in the reading.</div></div></div>
+    <div class="activity-head"><div class="activity-num" style="background:#0E1C42;">4</div><div style="flex:1;"><div class="activity-title">🔠 Spelling: Dropping the final e</div><div class="activity-sub">Identify the pattern by ear.</div></div></div>
     <div class="activity-body">
+<div class="callout callout-gold" style="margin-bottom:14px;background:#FFF8E8;border:2px solid #F5E6C8;border-left:5px solid #C7922C;border-radius:10px;padding:14px 18px;"><span class="callout-icon">📖</span><p style="font-size:15px;color:#0E1C42;line-height:1.6;"><strong>The Rule:</strong> When a base word ends in a <strong>silent e</strong> and the ending starts with a <strong>vowel</strong>, drop the e: <em>hope</em> + <em>-ing</em> = <strong>hoping</strong>. If the ending starts with a consonant, keep it: <em>hope</em> + <em>-ful</em> = <strong>hopeful</strong>.</p></div>
       <p>Same rule as Day 1 &mdash; dropping the final e. Sort them again, and this time notice <em>why</em> each one landed where it did.</p>
               <div class="callout callout-info" style="margin-top:14px;"><span class="callout-icon">🎮</span><p><strong>Practice: Sort the words.</strong> Tap a word, then tap the column it belongs in.</p></div>
-      <div class="sort-game" id="spellSort">
-        <div class="sort-bank" id="sortBank">
-          <span class="sort-chip" data-group="drop-e" onclick="pickSortChip(this)">shining</span>
-          <span class="sort-chip" data-group="drop-e" onclick="pickSortChip(this)">staring</span>
-          <span class="sort-chip" data-group="drop-e" onclick="pickSortChip(this)">named</span>
-          <span class="sort-chip" data-group="drop-e" onclick="pickSortChip(this)">waved</span>
-          <span class="sort-chip" data-group="keep-e" onclick="pickSortChip(this)">hopeful</span>
-          <span class="sort-chip" data-group="keep-e" onclick="pickSortChip(this)">careful</span>
-          <span class="sort-chip" data-group="keep-e" onclick="pickSortChip(this)">useless</span>
-          <span class="sort-chip" data-group="keep-e" onclick="pickSortChip(this)">bravely</span>
-        </div>
-        <div class="sort-columns">
-          <div class="sort-col"><div class="sort-col-header" style="background:linear-gradient(135deg,#55C8E8,#55C8E8);">Dropped the e</div><div class="sort-col-drop" data-col="drop-e" onclick="dropSortChip(this,'drop-e')"></div></div>
-          <div class="sort-col"><div class="sort-col-header" style="background:linear-gradient(135deg,#8B6FC0,#8B6FC0);">Kept the e</div><div class="sort-col-drop" data-col="keep-e" onclick="dropSortChip(this,'keep-e')"></div></div>
-        </div>
-        <div class="sort-score" id="sortScore"></div>
-      </div>
+      <div class="callout callout-info"><span class="callout-icon">🔎</span><p><strong>Sound Detective!</strong> One word in each row lost a silent e before the ending went on.</p></div>
+<div class="spotter-game" id="spellGame">
+<p style="font-size:14px;color:#3A4A6B;margin:10px 0 4px;">Tap the word whose base ended in a <strong>silent e</strong>.</p>
+<div class="spotter-sentence" id="spell1">
+<span class="spotter-word" onclick="spotterPick(this,'spell1')" data-correct="true">smiled</span>
+<span class="spotter-word" onclick="spotterPick(this,'spell1')" data-correct="false">walked</span>
+<span class="spotter-word" onclick="spotterPick(this,'spell1')" data-correct="false">jumped</span>
+<span class="spotter-word" onclick="spotterPick(this,'spell1')" data-correct="false">shouted</span>
+<div class="spotter-result" id="spell1-result"></div></div>
+<p style="font-size:14px;color:#3A4A6B;margin:10px 0 4px;">Tap the word whose base ended in a <strong>silent e</strong>.</p>
+<div class="spotter-sentence" id="spell2">
+<span class="spotter-word" onclick="spotterPick(this,'spell2')" data-correct="false">helping</span>
+<span class="spotter-word" onclick="spotterPick(this,'spell2')" data-correct="true">hoping</span>
+<span class="spotter-word" onclick="spotterPick(this,'spell2')" data-correct="false">landing</span>
+<span class="spotter-word" onclick="spotterPick(this,'spell2')" data-correct="false">shouting</span>
+<div class="spotter-result" id="spell2-result"></div></div>
+<p style="font-size:14px;color:#3A4A6B;margin:10px 0 4px;">Tap the word whose base ended in a <strong>silent e</strong>.</p>
+<div class="spotter-sentence" id="spell3">
+<span class="spotter-word" onclick="spotterPick(this,'spell3')" data-correct="false">sitting</span>
+<span class="spotter-word" onclick="spotterPick(this,'spell3')" data-correct="false">running</span>
+<span class="spotter-word" onclick="spotterPick(this,'spell3')" data-correct="true">shining</span>
+<span class="spotter-word" onclick="spotterPick(this,'spell3')" data-correct="false">spelling</span>
+<div class="spotter-result" id="spell3-result"></div></div>
+<p style="font-size:14px;color:#3A4A6B;margin:10px 0 4px;">Tap the word whose base ended in a <strong>silent e</strong>.</p>
+<div class="spotter-sentence" id="spell4">
+<span class="spotter-word" onclick="spotterPick(this,'spell4')" data-correct="false">packed</span>
+<span class="spotter-word" onclick="spotterPick(this,'spell4')" data-correct="false">wished</span>
+<span class="spotter-word" onclick="spotterPick(this,'spell4')" data-correct="false">yelled</span>
+<span class="spotter-word" onclick="spotterPick(this,'spell4')" data-correct="true">braved</span>
+<div class="spotter-result" id="spell4-result"></div></div>
+</div>
+
       <div class="swyk">
         <div class="swyk-label">🪶 Show What You Know</div>
         <div class="swyk-prompt">Find one word in today&rsquo;s reading that follows this rule. Write it, and say which part changed.</div>

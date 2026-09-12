@@ -2490,6 +2490,7 @@ Have all built their nests in my beard!&rdquo;</div>
 <!-- TAB 2: WORD STUDY -->
 <div class="tab-panel" id="tab-words">
 
+<!-- MORPHOLOGY -->
 <div class="activity bl-purple">
   <div class="activity-head"><div class="activity-num" style="background:#8B6FC0;">1</div><div><div class="activity-title">🌱 Morphology: Root/base: script/scribe means write</div><div class="activity-sub">Explain / Justify — build your word knowledge</div></div></div>
   <div class="activity-body">
@@ -2498,6 +2499,7 @@ Have all built their nests in my beard!&rdquo;</div>
         <div class="swyk"><div class="swyk-label">🪶 Show What You Know</div><div class="swyk-prompt">In your own words: what does script/scribe mean, and how does knowing it help you figure out new words?</div>
         <textarea class="journal-box" id="journal-morph" data-label="Morphology Explain" placeholder="The word part script/scribe means... Knowing it helps me because..." oninput="autoSave(this,'dot-morph');gatherAnswers();"></textarea></div></div>
 </div>
+<!-- VOCABULARY -->
 <div class="activity bl-cyan">
   <div class="activity-head"><div class="activity-num" style="background:#1B7A4E;">2</div><div><div class="activity-title">🔤 Vocabulary: Justify Your Choice</div><div class="activity-sub">Connect a word to the story.</div></div></div>
   <div class="activity-body">
@@ -2507,13 +2509,34 @@ Have all built their nests in my beard!&rdquo;</div>
     <textarea class="journal-box" id="journal-vocab" data-label="Vocabulary: Justify" placeholder="I chose the word... In the story..." oninput="autoSave(this,'dot-vocab');gatherAnswers();"></textarea>
   </div>
 </div>
+<!-- GRAMMAR -->
 <div class="activity bl-gold">
   <div class="activity-head"><div class="activity-num" style="background:#C7922C;">3</div><div><div class="activity-title">✏️ Grammar: Apostrophes in contractions and possessives</div><div class="activity-sub">Explain / Justify — practice the convention</div></div></div>
   <div class="activity-body"><p><strong>This week:</strong> Apostrophes in contractions and possessives</p><div class="callout callout-info" style="margin-top:14px;"><span class="callout-icon">✏️</span><p>Study these revisions. What changed? Try one revision of your own in your notebook.</p></div><div style="padding:12px 16px;background:#fff;border:2px solid #E2E8F4;border-radius:12px;margin-bottom:10px;"><div style="font-size:13px;color:#C7922C;font-weight:700;margin-bottom:4px;">Original:</div><div style="font-family:Lora,serif;font-size:15px;color:#0E1C42;margin-bottom:8px;">The wolves jaws snapped near Susans arm.</div><div style="font-size:13px;color:#1B7A4E;font-weight:700;margin-bottom:4px;">✅ Revised:</div><div style="font-family:Lora,serif;font-size:15px;color:#0E1C42;">The wolf's jaws snapped near Susan's arm.</div></div><div style="padding:12px 16px;background:#fff;border:2px solid #E2E8F4;border-radius:12px;margin-bottom:10px;"><div style="font-size:13px;color:#C7922C;font-weight:700;margin-bottom:4px;">Original:</div><div style="font-family:Lora,serif;font-size:15px;color:#0E1C42;margin-bottom:8px;">Peter wasnt sure he could do what Aslan needed.</div><div style="font-size:13px;color:#1B7A4E;font-weight:700;margin-bottom:4px;">✅ Revised:</div><div style="font-family:Lora,serif;font-size:15px;color:#0E1C42;">Peter wasn't sure he could do what Aslan needed.</div></div></div>
 </div>
+<!-- SPELLING -->
 <div class="activity bl-navy">
   <div class="activity-head"><div class="activity-num" style="background:#0E1C42;">4</div><div><div class="activity-title">🔠 Spelling: Schwa sound in longer words</div><div class="activity-sub">Explain / Justify — master the pattern</div></div></div>
-  <div class="activity-body"><p><strong>This week:</strong> Schwa sound in longer words</p></div>
+  <div class="activity-body"><p><strong>This week:</strong> Schwa sound in longer words</p>
+<div class="callout callout-gold" style="margin-bottom:14px;background:#FFF8E8;border:2px solid #F5E6C8;border-left:5px solid #C7922C;border-radius:10px;padding:14px 18px;"><span class="callout-icon">📖</span><p style="font-size:15px;color:#0E1C42;line-height:1.6;"><strong>The Rule:</strong> In a long word, one syllable gets less stress and its vowel blurs into a lazy <strong>/uh/</strong> sound. That is the <strong>schwa</strong>. Any vowel letter can make it: the a in <em>a&middot;bout</em>, the o in <em>les&middot;son</em>. That is why long words are hard to spell by ear.</p></div>
+<div class="callout callout-info"><span class="callout-icon">🎲</span><p><strong>Schwa Dice!</strong> Roll a word, say it out loud, decide &mdash; then tap to check yourself.</p></div>
+<div style="text-align:center;margin:14px 0;">
+<div id="spellDie" style="font-size:44px;line-height:1;">🎲</div>
+<button class="fillin-check-btn" id="spellRollBtn" onclick="rollSpellDice()" style="margin-top:10px;">Roll the dice</button>
+<div id="spellCount" style="font-size:13px;color:#7A88A8;margin-top:6px;">0/6 words rolled</div>
+</div>
+<div id="spellBox" style="display:none;background:#FAFBFF;border:2px solid #C8DCEE;border-radius:10px;padding:16px;text-align:center;">
+<div id="spellWord" style="font-size:30px;font-weight:700;color:#0E1C42;"></div>
+<p style="font-size:14px;color:#3A4A6B;margin-top:6px;">Which syllable is unstressed &mdash; and which vowel blurs?</p>
+<button class="dol-check-btn" onclick="checkSpellDice()" style="margin-top:10px;">Check my answer</button>
+<div id="spellReveal" style="display:none;margin-top:10px;font-size:17px;font-weight:700;color:#34B76F;"></div>
+</div>
+<script>
+var spellDice=[{w:"alone",s:"a &middot; lone &mdash; the first a blurs to /uh/"},{w:"button",s:"but &middot; ton &mdash; the o blurs"},{w:"family",s:"fam &middot; i &middot; ly &mdash; the middle i blurs"},{w:"travel",s:"trav &middot; el &mdash; the e blurs"},{w:"wagon",s:"wag &middot; on &mdash; the o blurs"},{w:"animal",s:"an &middot; i &middot; mal &mdash; the i and the a blur"}];var spellUsed=[];
+function rollSpellDice(){var av=spellDice.filter(function(x){return spellUsed.indexOf(x.w)===-1});if(!av.length)return;var d=document.getElementById("spellDie"),f=["⚀","⚁","⚂","⚃","⚄","⚅"],n=0;var sp=setInterval(function(){d.textContent=f[Math.floor(Math.random()*6)];n++;if(n>10){clearInterval(sp);var p=av[Math.floor(Math.random()*av.length)];spellUsed.push(p.w);document.getElementById("spellWord").textContent=p.w;document.getElementById("spellBox").style.display="block";document.getElementById("spellReveal").style.display="none";document.getElementById("spellCount").textContent=spellUsed.length+"/"+spellDice.length+" words rolled";if(spellUsed.length===spellDice.length){document.getElementById("spellRollBtn").disabled=true;document.getElementById("spellCount").textContent="You rolled them all!";}}},90);}
+function checkSpellDice(){var w=document.getElementById("spellWord").textContent;for(var i=0;i<spellDice.length;i++){if(spellDice[i].w===w){var r=document.getElementById("spellReveal");r.innerHTML=w+" &mdash; "+spellDice[i].s;r.style.display="block";return;}}}
+</script>
+</div>
 </div>
   <div class="tab-next-wrap"><p class="tab-transition-voice">Words and skills sharpened. Time to open the book.</p><button class="tab-next-btn" onclick="switchTab('reading')">Continue to 📖 Reading →</button></div>
 </div><!-- /tab-words -->

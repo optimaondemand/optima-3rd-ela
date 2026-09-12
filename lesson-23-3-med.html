@@ -2619,8 +2619,9 @@ body {
 
   <!-- SPELLING -->
   <div class="activity bl-navy">
-    <div class="activity-head"><div class="activity-num" style="background:#2A0A4A;">4</div><div><div class="activity-title">🔠 Spelling: Consonant-le Syllables (Day 3: Apply in reading)</div><div class="activity-sub">Discover the pattern by listening.</div></div></div>
+    <div class="activity-head"><div class="activity-num" style="background:#2A0A4A;">4</div><div><div class="activity-title">🔠 Spelling: Consonant-le Syllables (Day 3: Apply in reading)</div><div class="activity-sub">Apply the pattern &mdash; build the words.</div></div></div>
     <div class="activity-body">
+<div class="callout callout-gold" style="margin-bottom:14px;background:#FFF8E8;border:2px solid #F5E6C8;border-left:5px solid #C7922C;border-radius:10px;padding:14px 18px;"><span class="callout-icon">📖</span><p style="font-size:15px;color:#0E1C42;line-height:1.6;"><strong>The Rule:</strong> When a word ends in a consonant plus <strong>-le</strong>, that consonant goes <em>with</em> the -le to make the last syllable: <em>ta&middot;ble</em>, <em>lit&middot;tle</em>, <em>can&middot;dle</em>. Count back three letters from the end and you have found the split.</p></div>
             <p>Today we divide words with consonant-le syllables and practice reading them smoothly.</p>
 
       <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:14px 0;">
@@ -2645,7 +2646,43 @@ body {
       <div class="dol-answer" id="spellReveal"><p>When a word has the <strong>VCCV</strong> pattern (vowel–consonant–consonant–vowel), you divide it <em>between the two consonants</em>.</p><p>This helps you read long words like <em>tunnel</em> (<strong>tun·nel</strong>) and <em>basket</em> (<strong>bas·ket</strong>).</p></div>
 
       <div class="callout callout-info" style="margin-top:16px;"><span class="callout-icon">🎮</span><p><strong>Practice:</strong> Sort these words using the pattern you discovered.</p></div>
-      <div class="sort-game" id="spellSort"><div class="sort-bank" id="sortBank"><span class="sort-chip" data-group="a" onclick="pickSortChip(this)">noble</span><span class="sort-chip" data-group="a" onclick="pickSortChip(this)">riddle</span><span class="sort-chip" data-group="a" onclick="pickSortChip(this)">settle</span><span class="sort-chip" data-group="b" onclick="pickSortChip(this)">people</span><span class="sort-chip" data-group="a" onclick="pickSortChip(this)">handle</span><span class="sort-chip" data-group="a" onclick="pickSortChip(this)">whistle</span><span class="sort-chip" data-group="a" onclick="pickSortChip(this)">marble</span><span class="sort-chip" data-group="a" onclick="pickSortChip(this)">title</span></div><div class="sort-columns"><div class="sort-col"><div class="sort-col-header" style="background:linear-gradient(135deg,#3D1A6B,#5C2D91);">Consonant-le (divide before the C+le)</div><div class="sort-col-drop" data-col="a" onclick="dropSortChip(this,'a')"></div></div><div class="sort-col"><div class="sort-col-header" style="background:linear-gradient(135deg,#B8860B,#7A45C4);">Other pattern</div><div class="sort-col-drop" data-col="b" onclick="dropSortChip(this,'b')"></div></div></div><div class="sort-score" id="sortScore"></div></div>
+      <div class="callout callout-info"><span class="callout-icon">🧩</span><p><strong>Syllable Tiles!</strong> Notice that the consonant always travels with the <em>-le</em>. Tap the chunks <strong>in order</strong> to build the word. A chunk in the wrong place will not stick.</p></div>
+<div id="tileGame" style="margin:14px 0;">
+<div class="tile-word" data-next="0" data-total="2" data-whole="candle" style="background:#FAFBFF;border:2px solid #C8DCEE;border-radius:10px;padding:14px;margin-bottom:10px;">
+<div class="tw-slots" style="min-height:34px;font-size:24px;font-weight:700;color:#0E1C42;text-align:center;letter-spacing:1px;">&nbsp;</div>
+<div style="display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-top:10px;">
+<span class="tw-tile" onclick="tileTap(this)" data-pos="1" style="background:#FFF;border:2px solid #8B6FC0;border-radius:8px;padding:6px 14px;font-size:18px;font-weight:700;color:#3D5285;cursor:pointer;">dle</span>
+<span class="tw-tile" onclick="tileTap(this)" data-pos="0" style="background:#FFF;border:2px solid #8B6FC0;border-radius:8px;padding:6px 14px;font-size:18px;font-weight:700;color:#3D5285;cursor:pointer;">can</span>
+</div>
+<div class="spotter-result" style="margin-top:8px;"></div></div>
+<div class="tile-word" data-next="0" data-total="2" data-whole="purple" style="background:#FAFBFF;border:2px solid #C8DCEE;border-radius:10px;padding:14px;margin-bottom:10px;">
+<div class="tw-slots" style="min-height:34px;font-size:24px;font-weight:700;color:#0E1C42;text-align:center;letter-spacing:1px;">&nbsp;</div>
+<div style="display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-top:10px;">
+<span class="tw-tile" onclick="tileTap(this)" data-pos="1" style="background:#FFF;border:2px solid #8B6FC0;border-radius:8px;padding:6px 14px;font-size:18px;font-weight:700;color:#3D5285;cursor:pointer;">ple</span>
+<span class="tw-tile" onclick="tileTap(this)" data-pos="0" style="background:#FFF;border:2px solid #8B6FC0;border-radius:8px;padding:6px 14px;font-size:18px;font-weight:700;color:#3D5285;cursor:pointer;">pur</span>
+</div>
+<div class="spotter-result" style="margin-top:8px;"></div></div>
+<div class="tile-word" data-next="0" data-total="2" data-whole="simple" style="background:#FAFBFF;border:2px solid #C8DCEE;border-radius:10px;padding:14px;margin-bottom:10px;">
+<div class="tw-slots" style="min-height:34px;font-size:24px;font-weight:700;color:#0E1C42;text-align:center;letter-spacing:1px;">&nbsp;</div>
+<div style="display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-top:10px;">
+<span class="tw-tile" onclick="tileTap(this)" data-pos="1" style="background:#FFF;border:2px solid #8B6FC0;border-radius:8px;padding:6px 14px;font-size:18px;font-weight:700;color:#3D5285;cursor:pointer;">ple</span>
+<span class="tw-tile" onclick="tileTap(this)" data-pos="0" style="background:#FFF;border:2px solid #8B6FC0;border-radius:8px;padding:6px 14px;font-size:18px;font-weight:700;color:#3D5285;cursor:pointer;">sim</span>
+</div>
+<div class="spotter-result" style="margin-top:8px;"></div></div>
+<div class="tile-word" data-next="0" data-total="2" data-whole="bubble" style="background:#FAFBFF;border:2px solid #C8DCEE;border-radius:10px;padding:14px;margin-bottom:10px;">
+<div class="tw-slots" style="min-height:34px;font-size:24px;font-weight:700;color:#0E1C42;text-align:center;letter-spacing:1px;">&nbsp;</div>
+<div style="display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-top:10px;">
+<span class="tw-tile" onclick="tileTap(this)" data-pos="1" style="background:#FFF;border:2px solid #8B6FC0;border-radius:8px;padding:6px 14px;font-size:18px;font-weight:700;color:#3D5285;cursor:pointer;">ble</span>
+<span class="tw-tile" onclick="tileTap(this)" data-pos="0" style="background:#FFF;border:2px solid #8B6FC0;border-radius:8px;padding:6px 14px;font-size:18px;font-weight:700;color:#3D5285;cursor:pointer;">bub</span>
+</div>
+<div class="spotter-result" style="margin-top:8px;"></div></div>
+</div>
+<div class="sort-score" id="tileScore"></div>
+<script>
+function tileTap(el){var box=el.closest(".tile-word");if(!box||el.dataset.used)return;var want=parseInt(box.dataset.next,10);var res=box.querySelector(".spotter-result");if(parseInt(el.dataset.pos,10)!==want){el.style.borderColor="#c7627e";setTimeout(function(){el.style.borderColor="#8B6FC0";},500);if(res){res.textContent="Not that chunk yet \u2014 say the word slowly and listen for the next beat.";res.className="spotter-result show";}return;}el.dataset.used="1";el.style.background="#E3F8ED";el.style.borderColor="#34B76F";el.style.cursor="default";var slots=box.querySelector(".tw-slots");slots.textContent=(want===0?"":slots.textContent+" \u00b7 ")+el.textContent;box.dataset.next=want+1;if(want+1===parseInt(box.dataset.total,10)&&res){res.textContent="\u2705 "+box.dataset.whole;res.className="spotter-result show win";}var all=document.querySelectorAll(".tile-word"),d=0;all.forEach(function(b){if(b.dataset.next===b.dataset.total)d++;});var sc=document.getElementById("tileScore");if(!sc)return;sc.textContent=d===all.length?"Every word built. Chunk by chunk is how long words work.":d+"/"+all.length+" words built";}
+</script>
+
+
       
     </div>
   </div>
