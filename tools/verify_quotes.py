@@ -14,7 +14,13 @@ usage: verify_quotes.py <novel_ocr.txt> <lesson-glob> [more globs...]
 import re,io,sys,glob,html,difflib
 from collections import defaultdict
 
-QUOTE_CLASSES = ['decode-sentence','copywork-text','copy-sentence']
+QUOTE_CLASSES = ['decode-sentence','copywork-text','copy-sentence','quote-strip-text']
+# quote-strip-text is the header banner quote. It was left out of this list until
+# 2026-09-12, so the first clean-sweep never checked it -- 29 of 36 Despereaux banner
+# quotes were invented aphorisms credited to DiCamillo. Note the [^>]* in the regex
+# below matters here: LWW and W31-32 put inline styles on that div.
+# Banner quotes are often short (<6 words); those score 0.70-0.83 even when verbatim,
+# so grep the novel text before calling one fabricated.
 
 def norm(x, strip_tags=True):
     """strip_tags=True for lesson HTML fragments. MUST be False for the novel:
