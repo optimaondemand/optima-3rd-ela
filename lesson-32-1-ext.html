@@ -3968,4 +3968,30 @@ document.addEventListener('DOMContentLoaded', function() {
     .catch(function(err) { console.warn('Video manifest load failed:', err); });
 });
 </script>
+<!-- match-shuffle -->
+<script>
+(function(){
+  function shuffle(grid){
+    var items = [].slice.call(grid.querySelectorAll('.match-item'));
+    var words = items.filter(function(x){ return x.classList.contains('is-word'); });
+    var defs  = items.filter(function(x){ return !x.classList.contains('is-word'); });
+    if (words.length < 2 || words.length !== defs.length) return;
+    var order, tries = 0;
+    do {
+      order = defs.slice();
+      for (var i = order.length - 1; i > 0; i--) {
+        var j = Math.floor(Math.random() * (i + 1));
+        var t = order[i]; order[i] = order[j]; order[j] = t;
+      }
+      tries++;
+    } while (tries < 50 && order.some(function(d, i){
+      return d.getAttribute('data-match') === words[i].getAttribute('data-match');
+    }));
+    for (var k = 0; k < words.length; k++) { grid.appendChild(words[k]); grid.appendChild(order[k]); }
+  }
+  function init(){ [].slice.call(document.querySelectorAll('.match-grid')).forEach(shuffle); }
+  if (document.readyState === 'loading') { document.addEventListener('DOMContentLoaded', init); }
+  else { init(); }
+})();
+</script>
 </body></html>
