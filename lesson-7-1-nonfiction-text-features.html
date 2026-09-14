@@ -2198,13 +2198,31 @@ body {
 <div class="tab-panel" id="tab-words">
 <!-- MORPHOLOGY -->
 <div class="activity bl-purple">
-<div class="activity-head"><div class="activity-num" style="background:#8B6FC0;">1</div><div style="flex:1;"><div class="activity-title">🌱 Morphology: Suffix -ing shows action happening</div><div class="activity-sub">Define the skill</div></div></div>
+<div class="activity-head"><div class="activity-num" style="background:#8B6FC0;">1</div><div style="flex:1;"><div class="activity-title">🌱 Morphology: Suffix -ing shows action happening</div><div class="activity-sub">Day 1: Notice &mdash; work out the pattern before you are told it.</div></div></div>
 <div class="activity-body">
-<div class="key-concept"><div class="key-concept-label">📌 Examples</div>
-<p><strong>travel + -ing = traveling</strong> &mdash; suffix <em>-ing</em> shows action happening <em>right now</em></p>
-<p><strong>read + -ing = reading</strong> &mdash; the action is in progress</p>
-<p><strong>write + -ing = writing</strong> &mdash; drop the final <em>e</em> before adding <em>-ing</em></p>
+<!-- morph-notice-first -->
+<div class="key-concept NOTICEBOX" style="background:#EAF6EF;border-color:#BEE3CC;margin:0 0 14px;">
+<div class="key-concept-label" style="color:#1B7A4E;">&#x1F50D; Hunt the base word</div>
+<p>These words are all happening right now.</p>
 </div>
+<div class="key-concept"><div class="key-concept-label">📌 The words</div>
+<p><strong>travel + -ing = traveling</strong></p>
+<p><strong>read + -ing = reading</strong></p>
+<p><strong>write + -ing = writing</strong></p>
+</div>
+<div class="callout callout-info" style="margin-top:14px;"><span class="callout-icon">&#x1F9D0;</span><p><strong>Try these first:</strong></p>
+<ul style="margin:6px 0 0 20px;font-size:15px;color:#3A4A6B;line-height:1.8;">
+<li>What ending do all of them share?</li>
+<li>Take the ending off. What is the base word?</li>
+<li>One of them changed its spelling before the ending went on. Which, and what changed?</li>
+</ul></div>
+<button class="dol-check-btn" onclick="document.getElementById('morphNotice').classList.toggle('show')">&#x1F50D; See what was hiding</button>
+<div class="dol-answer" id="morphNotice">
+<p>uffix <em>-ing</em> shows action happening <em>right now</em></p>
+<p>the action is in progress</p>
+<p>rop the final <em>e</em> before adding <em>-ing</em></p>
+</div>
+
 <div class="callout callout-info"><span class="callout-icon">🧩</span><p><strong>Practice: Fill in the blank!</strong></p></div>
 <div class="fillin-game" id="fillinGame">
 <div class="fillin-item">send + -ing = <input class="fillin-input" id="fill1" data-answer="sending" maxlength="16" placeholder="______"></div>
@@ -2303,9 +2321,25 @@ body {
 </div></div>
 <!-- SPELLING -->
 <div class="activity bl-navy">
-<div class="activity-head"><div class="activity-num" style="background:#0E1C42;">4</div><div style="flex:1;"><div class="activity-title">🔠 Spelling: Adding -ed and -ing to base words</div><div class="activity-sub">Define the pattern</div></div></div>
+<div class="activity-head"><div class="activity-num" style="background:#0E1C42;">4</div><div style="flex:1;"><div class="activity-title">🔠 Spelling: Adding -ed and -ing to base words</div><div class="activity-sub">Day 1: Notice &mdash; work out the pattern before you are told it.</div></div></div>
 <div class="activity-body">
-<div class="callout callout-gold" style="margin-bottom:14px;background:#FFF8E8;border:2px solid #F5E6C8;border-left:5px solid #C7922C;border-radius:10px;padding:14px 18px;"><span class="callout-icon">📖</span><p style="font-size:15px;color:#0E1C42;line-height:1.6;"><strong>The Rule:</strong> Before you add <strong>-ed</strong> or <strong>-ing</strong>, look at the base word. Ends in silent <em>e</em>? <strong>Drop it</strong> (hope &rarr; hoping). One short vowel and one final consonant? <strong>Double it</strong> (run &rarr; running). Anything else? <strong>Just add the ending</strong> (walk &rarr; walked).</p></div>
+<!-- spell-notice-first -->
+<div class="key-concept NOTICEBOX" style="background:#EEF3FA;border-color:#C8D6EA;margin:0 0 14px;">
+<div class="key-concept-label" style="color:#0E1C42;">&#x1F440; Look at what changed</div>
+<p>Watch what happens to the base word when the ending arrives.</p>
+</div>
+
+<div class="callout callout-info" style="margin-top:14px;"><span class="callout-icon">&#x1F9D0;</span><p><strong>Look at the words below, then work through these:</strong></p>
+<ul style="margin:6px 0 0 20px;font-size:15px;color:#3A4A6B;line-height:1.8;">
+<li>Which base words stayed exactly the same?</li>
+<li>Which ones changed &mdash; and what changed, a letter dropped or a letter doubled?</li>
+<li>Look at the last two letters of each base word. Any pattern in which ones changed?</li>
+</ul></div>
+<button class="dol-check-btn" onclick="document.getElementById('spellNotice').classList.toggle('show')">&#x1F440; Now name the pattern</button>
+<div class="dol-answer" id="spellNotice">
+<p><strong>The Rule:</strong> Before you add <strong>-ed</strong> or <strong>-ing</strong>, look at the base word. Ends in silent <em>e</em>? <strong>Drop it</strong> (hope &rarr; hoping). One short vowel and one final consonant? <strong>Double it</strong> (run &rarr; running). Anything else? <strong>Just add the ending</strong> (walk &rarr; walked).</p>
+</div>
+
 <div class="callout callout-info"><span class="callout-icon">🎮</span><p><strong>Sort the Words!</strong> Tap a word, then tap the column where it belongs.</p></div>
 <div class="sort-game" id="spellSort"><div class="sort-bank" id="sortBank">
 <span class="sort-chip" data-group="add -ing" onclick="pickSortChip(this)">mailing</span>
