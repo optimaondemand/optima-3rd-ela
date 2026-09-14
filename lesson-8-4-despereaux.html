@@ -2550,7 +2550,30 @@ function checkSpellDice(){var w=document.getElementById("spellWord").textContent
     <div class="activity-body">
       <p>Today is a discussion and review day. You do <strong>not</strong> need to read new chapters. Look back at Chapters 1–7 and think about the big ideas.</p>
 
-      <div class="open-book-wrap">
+      
+      <!-- pause-before-reading -->
+      <div class="callout callout-info" style="margin-bottom:14px;"><span class="callout-icon">&#x23F8;&#xFE0F;</span><p><strong>Read these first.</strong> Look them over before you open your book, then stop and answer each one when you reach that part.</p></div>
+      <!-- Side-by-side Pause & Think -->
+      <div class="pause-columns">
+        <div class="pause-col">
+          <div class="socratic-box" style="margin-bottom:0;">
+            <div class="socratic-label">⏸️ Discussion Prompt 1</div>
+            <p class="socratic-q">Think about how different characters reacted to Despereaux. <strong>Which reaction surprised you the most? Why?</strong></p>
+          </div>
+          <div class="journal-label">📓 Prompt 1 <span class="saved-dot" id="dot-pause1"></span></div>
+          <textarea class="journal-box" id="journal-pause1" data-label="Discussion: Most surprising reaction — Why does his mother call him a disappointment?" placeholder="The reaction that surprised me most was..." oninput="autoSave(this,'dot-pause1')"></textarea>
+        </div>
+        <div class="pause-col">
+          <div class="socratic-box" style="margin-bottom:0;">
+            <div class="socratic-label">⏸️ Discussion Prompt 2</div>
+            <p class="socratic-q">Despereaux loves light, music, and stories instead of crumbs. <strong>Is being different a strength or a weakness for him? Explain.</strong></p>
+          </div>
+          <div class="journal-label">📓 Prompt 2 <span class="saved-dot" id="dot-pause2"></span></div>
+          <textarea class="journal-box" id="journal-pause2" data-label="Discussion: Strength or weakness — What the sweet sound tells us about Despereaux" placeholder="I think being different is a... for Despereaux because..." oninput="autoSave(this,'dot-pause2')"></textarea>
+        </div>
+      </div>
+
+<div class="open-book-wrap">
         <div class="open-book-cover"></div>
         <div class="open-book-spine"></div>
         <div class="open-book-pages-3"></div>
@@ -2571,27 +2594,7 @@ function checkSpellDice(){var w=document.getElementById("spellWord").textContent
 
       <div class="reading-links">
       </div>
-
-      <!-- Side-by-side Pause & Think -->
-      <div class="pause-columns">
-        <div class="pause-col">
-          <div class="socratic-box" style="margin-bottom:0;">
-            <div class="socratic-label">⏸️ Discussion Prompt 1</div>
-            <p class="socratic-q">Think about how different characters reacted to Despereaux. <strong>Which reaction surprised you the most? Why?</strong></p>
-          </div>
-          <div class="journal-label">📓 Prompt 1 <span class="saved-dot" id="dot-pause1"></span></div>
-          <textarea class="journal-box" id="journal-pause1" data-label="Discussion: Most surprising reaction — Why does his mother call him a disappointment?" placeholder="The reaction that surprised me most was..." oninput="autoSave(this,'dot-pause1')"></textarea>
-        </div>
-        <div class="pause-col">
-          <div class="socratic-box" style="margin-bottom:0;">
-            <div class="socratic-label">⏸️ Discussion Prompt 2</div>
-            <p class="socratic-q">Despereaux loves light, music, and stories instead of crumbs. <strong>Is being different a strength or a weakness for him? Explain.</strong></p>
-          </div>
-          <div class="journal-label">📓 Prompt 2 <span class="saved-dot" id="dot-pause2"></span></div>
-          <textarea class="journal-box" id="journal-pause2" data-label="Discussion: Strength or weakness — What the sweet sound tells us about Despereaux" placeholder="I think being different is a... for Despereaux because..." oninput="autoSave(this,'dot-pause2')"></textarea>
-        </div>
       </div>
-    </div>
   </div>
 
   

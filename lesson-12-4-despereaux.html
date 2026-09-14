@@ -2562,7 +2562,30 @@ function checkSpellDice(){var w=document.getElementById("spellWord").textContent
     <div class="activity-body">
       <p>In Chapters 37 and 38, the kingdom begins to heal. The king sees his daughter. The story ties itself together. Watch for how each character's arc reaches its end — and ask: what does each one deserve?</p>
 
-      <div class="open-book-wrap">
+      
+      <!-- pause-before-reading -->
+      <div class="callout callout-info" style="margin-bottom:14px;"><span class="callout-icon">&#x23F8;&#xFE0F;</span><p><strong>Read these first.</strong> Look them over before you open your book, then stop and answer each one when you reach that part.</p></div>
+      <!-- Side-by-side Pause & Think -->
+      <div class="pause-columns">
+        <div class="pause-col">
+          <div class="socratic-box" style="margin-bottom:0;">
+            <div class="socratic-label">⏸️ Ch. 8 — The Kingdom Heals</div>
+            <p class="socratic-q">The king sees his daughter. <strong>What does this moment represent beyond the physical reunion?</strong></p>
+          </div>
+          <div class="journal-label">📓 Ch. 8 — The Kingdom Heals <span class="saved-dot" id="dot-pause1"></span></div>
+          <textarea class="journal-box" id="journal-pause1" data-label="Pause & Think: Ch. 1 — Why does his mother call him a disappointment?" placeholder="This moment represents..." oninput="autoSave(this,'dot-pause1')"></textarea>
+        </div>
+        <div class="pause-col">
+          <div class="socratic-box" style="margin-bottom:0;">
+            <div class="socratic-label">⏸️ Ch. 38 — Threads Tied</div>
+            <p class="socratic-q">The story ties up. <strong>Who gets what they deserve — and who does not? Is that fair?</strong></p>
+          </div>
+          <div class="journal-label">📓 Ch. 38 — Threads Tied <span class="saved-dot" id="dot-pause2"></span></div>
+          <textarea class="journal-box" id="journal-pause2" data-label="Pause & Think: Ch. 38 — Threads Tied" placeholder="Gets what they deserve: ... Does not: ..." oninput="autoSave(this,'dot-pause2')"></textarea>
+        </div>
+      </div>
+
+<div class="open-book-wrap">
         <div class="open-book-cover"></div>
         <div class="open-book-spine"></div>
         <div class="open-book-pages-3"></div>
@@ -2583,27 +2606,7 @@ function checkSpellDice(){var w=document.getElementById("spellWord").textContent
 
       <div class="reading-links">
       </div>
-
-      <!-- Side-by-side Pause & Think -->
-      <div class="pause-columns">
-        <div class="pause-col">
-          <div class="socratic-box" style="margin-bottom:0;">
-            <div class="socratic-label">⏸️ Ch. 8 — The Kingdom Heals</div>
-            <p class="socratic-q">The king sees his daughter. <strong>What does this moment represent beyond the physical reunion?</strong></p>
-          </div>
-          <div class="journal-label">📓 Ch. 8 — The Kingdom Heals <span class="saved-dot" id="dot-pause1"></span></div>
-          <textarea class="journal-box" id="journal-pause1" data-label="Pause & Think: Ch. 1 — Why does his mother call him a disappointment?" placeholder="This moment represents..." oninput="autoSave(this,'dot-pause1')"></textarea>
-        </div>
-        <div class="pause-col">
-          <div class="socratic-box" style="margin-bottom:0;">
-            <div class="socratic-label">⏸️ Ch. 38 — Threads Tied</div>
-            <p class="socratic-q">The story ties up. <strong>Who gets what they deserve — and who does not? Is that fair?</strong></p>
-          </div>
-          <div class="journal-label">📓 Ch. 38 — Threads Tied <span class="saved-dot" id="dot-pause2"></span></div>
-          <textarea class="journal-box" id="journal-pause2" data-label="Pause & Think: Ch. 38 — Threads Tied" placeholder="Gets what they deserve: ... Does not: ..." oninput="autoSave(this,'dot-pause2')"></textarea>
-        </div>
       </div>
-    </div>
   </div>
 
   

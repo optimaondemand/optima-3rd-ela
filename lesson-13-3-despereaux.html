@@ -2535,7 +2535,30 @@ function spellReveal(c){if(c.classList.contains("done"))return;c.classList.add("
     <div class="activity-body">
       <p>In Chapters 43 and 44, the ripples of forgiveness spread outward. Each character moves toward some kind of peace. Watch for how the author shows change through small details rather than big announcements.</p>
 
-      <div class="open-book-wrap">
+      
+      <!-- pause-before-reading -->
+      <div class="callout callout-info" style="margin-bottom:14px;"><span class="callout-icon">&#x23F8;&#xFE0F;</span><p><strong>Read these first.</strong> Look them over before you open your book, then stop and answer each one when you reach that part.</p></div>
+      <!-- Side-by-side Pause & Think -->
+      <div class="pause-columns">
+        <div class="pause-col">
+          <div class="socratic-box" style="margin-bottom:0;">
+            <div class="socratic-label">⏸️ Ch. 8 — Forgiveness Ripples</div>
+            <p class="socratic-q">Mig is sent away from the castle. <strong>How is she treated? Does she deserve better? Does she deserve worse?</strong></p>
+          </div>
+          <div class="journal-label">📓 Ch. 8 — Forgiveness Ripples <span class="saved-dot" id="dot-pause1"></span></div>
+          <textarea class="journal-box" id="journal-pause1" data-label="Pause & Think: Ch. 1 — Why does his mother call him a disappointment?" placeholder="Mig deserves... because..." oninput="autoSave(this,'dot-pause1')"></textarea>
+        </div>
+        <div class="pause-col">
+          <div class="socratic-box" style="margin-bottom:0;">
+            <div class="socratic-label">⏸️ Ch. 44 — The Kingdom Heals</div>
+            <p class="socratic-q">The kingdom begins to feel like itself again. <strong>What specific things return? What do they represent?</strong></p>
+          </div>
+          <div class="journal-label">📓 Ch. 44 — The Kingdom Heals <span class="saved-dot" id="dot-pause2"></span></div>
+          <textarea class="journal-box" id="journal-pause2" data-label="Pause & Think: Ch. 44 — The Kingdom Heals" placeholder="What returns: ... What it represents: ..." oninput="autoSave(this,'dot-pause2')"></textarea>
+        </div>
+      </div>
+
+<div class="open-book-wrap">
         <div class="open-book-cover"></div>
         <div class="open-book-spine"></div>
         <div class="open-book-pages-3"></div>
@@ -2556,27 +2579,7 @@ function spellReveal(c){if(c.classList.contains("done"))return;c.classList.add("
 
       <div class="reading-links">
       </div>
-
-      <!-- Side-by-side Pause & Think -->
-      <div class="pause-columns">
-        <div class="pause-col">
-          <div class="socratic-box" style="margin-bottom:0;">
-            <div class="socratic-label">⏸️ Ch. 8 — Forgiveness Ripples</div>
-            <p class="socratic-q">Mig is sent away from the castle. <strong>How is she treated? Does she deserve better? Does she deserve worse?</strong></p>
-          </div>
-          <div class="journal-label">📓 Ch. 8 — Forgiveness Ripples <span class="saved-dot" id="dot-pause1"></span></div>
-          <textarea class="journal-box" id="journal-pause1" data-label="Pause & Think: Ch. 1 — Why does his mother call him a disappointment?" placeholder="Mig deserves... because..." oninput="autoSave(this,'dot-pause1')"></textarea>
-        </div>
-        <div class="pause-col">
-          <div class="socratic-box" style="margin-bottom:0;">
-            <div class="socratic-label">⏸️ Ch. 44 — The Kingdom Heals</div>
-            <p class="socratic-q">The kingdom begins to feel like itself again. <strong>What specific things return? What do they represent?</strong></p>
-          </div>
-          <div class="journal-label">📓 Ch. 44 — The Kingdom Heals <span class="saved-dot" id="dot-pause2"></span></div>
-          <textarea class="journal-box" id="journal-pause2" data-label="Pause & Think: Ch. 44 — The Kingdom Heals" placeholder="What returns: ... What it represents: ..." oninput="autoSave(this,'dot-pause2')"></textarea>
-        </div>
       </div>
-    </div>
   </div>
 
   

@@ -2550,7 +2550,30 @@ function proofPick(el){if(el.dataset.done)return;el.dataset.done="1";var box=el.
     <div class="activity-body">
       <p>In Chapters 35 and 36, Mig has a moment of understanding. Watch for what changes in her — and ask: what does it mean to truly see someone else?</p>
 
-      <div class="open-book-wrap">
+      
+      <!-- pause-before-reading -->
+      <div class="callout callout-info" style="margin-bottom:14px;"><span class="callout-icon">&#x23F8;&#xFE0F;</span><p><strong>Read these first.</strong> Look them over before you open your book, then stop and answer each one when you reach that part.</p></div>
+      <!-- Side-by-side Pause & Think -->
+      <div class="pause-columns">
+        <div class="pause-col">
+          <div class="socratic-box" style="margin-bottom:0;">
+            <div class="socratic-label">⏸️ Ch. 8 — Miggery Sees</div>
+            <p class="socratic-q">Mig begins to understand what she has done. <strong>What specifically does she understand? What helped her see this?</strong></p>
+          </div>
+          <div class="journal-label">📓 Ch. 8 — Miggery Sees <span class="saved-dot" id="dot-pause1"></span></div>
+          <textarea class="journal-box" id="journal-pause1" data-label="Pause & Think: Ch. 1 — Why does his mother call him a disappointment?" placeholder="Mig understands that..." oninput="autoSave(this,'dot-pause1')"></textarea>
+        </div>
+        <div class="pause-col">
+          <div class="socratic-box" style="margin-bottom:0;">
+            <div class="socratic-label">⏸️ Ch. 36 — The Kingdom Reacts</div>
+            <p class="socratic-q">How does the kingdom react to what has happened? <strong>What does the reaction tell us about justice?</strong></p>
+          </div>
+          <div class="journal-label">📓 Ch. 36 — The Kingdom Reacts <span class="saved-dot" id="dot-pause2"></span></div>
+          <textarea class="journal-box" id="journal-pause2" data-label="Pause & Think: Ch. 36 — The Kingdom Reacts" placeholder="The kingdom reacts by..." oninput="autoSave(this,'dot-pause2')"></textarea>
+        </div>
+      </div>
+
+<div class="open-book-wrap">
         <div class="open-book-cover"></div>
         <div class="open-book-spine"></div>
         <div class="open-book-pages-3"></div>
@@ -2571,27 +2594,7 @@ function proofPick(el){if(el.dataset.done)return;el.dataset.done="1";var box=el.
 
       <div class="reading-links">
       </div>
-
-      <!-- Side-by-side Pause & Think -->
-      <div class="pause-columns">
-        <div class="pause-col">
-          <div class="socratic-box" style="margin-bottom:0;">
-            <div class="socratic-label">⏸️ Ch. 8 — Miggery Sees</div>
-            <p class="socratic-q">Mig begins to understand what she has done. <strong>What specifically does she understand? What helped her see this?</strong></p>
-          </div>
-          <div class="journal-label">📓 Ch. 8 — Miggery Sees <span class="saved-dot" id="dot-pause1"></span></div>
-          <textarea class="journal-box" id="journal-pause1" data-label="Pause & Think: Ch. 1 — Why does his mother call him a disappointment?" placeholder="Mig understands that..." oninput="autoSave(this,'dot-pause1')"></textarea>
-        </div>
-        <div class="pause-col">
-          <div class="socratic-box" style="margin-bottom:0;">
-            <div class="socratic-label">⏸️ Ch. 36 — The Kingdom Reacts</div>
-            <p class="socratic-q">How does the kingdom react to what has happened? <strong>What does the reaction tell us about justice?</strong></p>
-          </div>
-          <div class="journal-label">📓 Ch. 36 — The Kingdom Reacts <span class="saved-dot" id="dot-pause2"></span></div>
-          <textarea class="journal-box" id="journal-pause2" data-label="Pause & Think: Ch. 36 — The Kingdom Reacts" placeholder="The kingdom reacts by..." oninput="autoSave(this,'dot-pause2')"></textarea>
-        </div>
       </div>
-    </div>
   </div>
 
   

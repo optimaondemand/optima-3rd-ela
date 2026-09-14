@@ -2559,7 +2559,30 @@ function checkSpellDice(){var w=document.getElementById("spellWord").textContent
     <div class="activity-body">
       <p>Today is the final day of Week 15. Finish and submit your performance task: a clear, well-supported explanation of how Despereaux changes from the beginning of the novel to the end.</p>
 
-      <div class="open-book-wrap">
+      
+      <!-- pause-before-reading -->
+      <div class="callout callout-info" style="margin-bottom:14px;"><span class="callout-icon">&#x23F8;&#xFE0F;</span><p><strong>Read these first.</strong> Look them over before you open your book, then stop and answer each one when you reach that part.</p></div>
+      <!-- Side-by-side Pause & Think -->
+      <div class="pause-columns">
+        <div class="pause-col">
+          <div class="socratic-box" style="margin-bottom:0;">
+            <div class="socratic-label">⏸️ Ch. 8 — Character Development</div>
+            <p class="socratic-q">In two or three sentences, describe who Despereaux is at the start of the novel. <strong>What does he believe? What does he love? What does everyone else think of him?</strong></p>
+          </div>
+          <div class="journal-label">📓 Ch. 8 — Character Development <span class="saved-dot" id="dot-pause1"></span></div>
+          <textarea class="journal-box" id="journal-pause1" data-label="Pause & Think: Ch. 1 — Why does his mother call him a disappointment?" placeholder="At the beginning, Despereaux..." oninput="autoSave(this,'dot-pause1')"></textarea>
+        </div>
+        <div class="pause-col">
+          <div class="socratic-box" style="margin-bottom:0;">
+            <div class="socratic-label">⏸️ Despereaux — End</div>
+            <p class="socratic-q">In two or three sentences, describe who Despereaux is at the end. <strong>What has he done? What has he learned? How has the world's opinion of him changed?</strong></p>
+          </div>
+          <div class="journal-label">📓 Despereaux — End <span class="saved-dot" id="dot-pause2"></span></div>
+          <textarea class="journal-box" id="journal-pause2" data-label="Pause & Think: Despereaux — End" placeholder="By the end, Despereaux..." oninput="autoSave(this,'dot-pause2')"></textarea>
+        </div>
+      </div>
+
+<div class="open-book-wrap">
         <div class="open-book-cover"></div>
         <div class="open-book-spine"></div>
         <div class="open-book-pages-3"></div>
@@ -2580,27 +2603,7 @@ function checkSpellDice(){var w=document.getElementById("spellWord").textContent
 
       <div class="reading-links">
       </div>
-
-      <!-- Side-by-side Pause & Think -->
-      <div class="pause-columns">
-        <div class="pause-col">
-          <div class="socratic-box" style="margin-bottom:0;">
-            <div class="socratic-label">⏸️ Ch. 8 — Character Development</div>
-            <p class="socratic-q">In two or three sentences, describe who Despereaux is at the start of the novel. <strong>What does he believe? What does he love? What does everyone else think of him?</strong></p>
-          </div>
-          <div class="journal-label">📓 Ch. 8 — Character Development <span class="saved-dot" id="dot-pause1"></span></div>
-          <textarea class="journal-box" id="journal-pause1" data-label="Pause & Think: Ch. 1 — Why does his mother call him a disappointment?" placeholder="At the beginning, Despereaux..." oninput="autoSave(this,'dot-pause1')"></textarea>
-        </div>
-        <div class="pause-col">
-          <div class="socratic-box" style="margin-bottom:0;">
-            <div class="socratic-label">⏸️ Despereaux — End</div>
-            <p class="socratic-q">In two or three sentences, describe who Despereaux is at the end. <strong>What has he done? What has he learned? How has the world's opinion of him changed?</strong></p>
-          </div>
-          <div class="journal-label">📓 Despereaux — End <span class="saved-dot" id="dot-pause2"></span></div>
-          <textarea class="journal-box" id="journal-pause2" data-label="Pause & Think: Despereaux — End" placeholder="By the end, Despereaux..." oninput="autoSave(this,'dot-pause2')"></textarea>
-        </div>
       </div>
-    </div>
   </div>
 
   <div class="rwm-box">

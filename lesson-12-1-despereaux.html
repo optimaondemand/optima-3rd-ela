@@ -2550,7 +2550,30 @@ body {
     <div class="activity-body">
       <p>In Chapters 31 and 32, Despereaux reaches the princess. Pay attention to the setting — what details does the author choose, and how do they affect the way you feel while reading?</p>
 
-      <div class="open-book-wrap">
+      
+      <!-- pause-before-reading -->
+      <div class="callout callout-info" style="margin-bottom:14px;"><span class="callout-icon">&#x23F8;&#xFE0F;</span><p><strong>Read these first.</strong> Look them over before you open your book, then stop and answer each one when you reach that part.</p></div>
+      <!-- Side-by-side Pause & Think -->
+      <div class="pause-columns">
+        <div class="pause-col">
+          <div class="socratic-box" style="margin-bottom:0;">
+            <div class="socratic-label">⏸️ Ch. 8 — Light Returns</div>
+            <p class="socratic-q">Despereaux reaches the dungeon. <strong>What does he see, smell, and hear? How does the author's setting description affect the mood?</strong></p>
+          </div>
+          <div class="journal-label">📓 Ch. 8 — Light Returns <span class="saved-dot" id="dot-pause1"></span></div>
+          <textarea class="journal-box" id="journal-pause1" data-label="Pause & Think: Ch. 1 — Why does his mother call him a disappointment?" placeholder="The setting makes me feel... because..." oninput="autoSave(this,'dot-pause1')"></textarea>
+        </div>
+        <div class="pause-col">
+          <div class="socratic-box" style="margin-bottom:0;">
+            <div class="socratic-label">⏸️ Ch. 32 — The Princess</div>
+            <p class="socratic-q">The princess hears Despereaux. <strong>How does she respond? What does this tell us about her character?</strong></p>
+          </div>
+          <div class="journal-label">📓 Ch. 32 — The Princess <span class="saved-dot" id="dot-pause2"></span></div>
+          <textarea class="journal-box" id="journal-pause2" data-label="Pause & Think: Ch. 32 — The Princess" placeholder="The princess responds by..." oninput="autoSave(this,'dot-pause2')"></textarea>
+        </div>
+      </div>
+
+<div class="open-book-wrap">
         <div class="open-book-cover"></div>
         <div class="open-book-spine"></div>
         <div class="open-book-pages-3"></div>
@@ -2571,27 +2594,7 @@ body {
 
       <div class="reading-links">
       </div>
-
-      <!-- Side-by-side Pause & Think -->
-      <div class="pause-columns">
-        <div class="pause-col">
-          <div class="socratic-box" style="margin-bottom:0;">
-            <div class="socratic-label">⏸️ Ch. 8 — Light Returns</div>
-            <p class="socratic-q">Despereaux reaches the dungeon. <strong>What does he see, smell, and hear? How does the author's setting description affect the mood?</strong></p>
-          </div>
-          <div class="journal-label">📓 Ch. 8 — Light Returns <span class="saved-dot" id="dot-pause1"></span></div>
-          <textarea class="journal-box" id="journal-pause1" data-label="Pause & Think: Ch. 1 — Why does his mother call him a disappointment?" placeholder="The setting makes me feel... because..." oninput="autoSave(this,'dot-pause1')"></textarea>
-        </div>
-        <div class="pause-col">
-          <div class="socratic-box" style="margin-bottom:0;">
-            <div class="socratic-label">⏸️ Ch. 32 — The Princess</div>
-            <p class="socratic-q">The princess hears Despereaux. <strong>How does she respond? What does this tell us about her character?</strong></p>
-          </div>
-          <div class="journal-label">📓 Ch. 32 — The Princess <span class="saved-dot" id="dot-pause2"></span></div>
-          <textarea class="journal-box" id="journal-pause2" data-label="Pause & Think: Ch. 32 — The Princess" placeholder="The princess responds by..." oninput="autoSave(this,'dot-pause2')"></textarea>
-        </div>
       </div>
-    </div>
   </div>
 
   <div class="tab-next-wrap">

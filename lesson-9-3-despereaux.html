@@ -2539,7 +2539,30 @@ function ladderTap(el){if(el.dataset.done)return;el.dataset.done="1";el.querySel
     <div class="activity-body">
       <p>In Chapter 12, Roscuro does something no rat is supposed to do. In Chapter 13, one accident changes the entire kingdom. Watch closely for the turning point — the author builds to it very carefully.</p>
 
-      <div class="open-book-wrap">
+      
+      <!-- pause-before-reading -->
+      <div class="callout callout-info" style="margin-bottom:14px;"><span class="callout-icon">&#x23F8;&#xFE0F;</span><p><strong>Read these first.</strong> Look them over before you open your book, then stop and answer each one when you reach that part.</p></div>
+      <!-- Side-by-side Pause & Think -->
+      <div class="pause-columns">
+        <div class="pause-col">
+          <div class="socratic-box" style="margin-bottom:0;">
+            <div class="socratic-label">⏸️ Ch. 8 — Roscuro in the Light</div>
+            <p class="socratic-q">Roscuro climbs up into the light. <strong>What is he hoping for? What clue does the author drop that this won't go well?</strong></p>
+          </div>
+          <div class="journal-label">📓 Ch. 8 — Roscuro in the Light <span class="saved-dot" id="dot-pause1"></span></div>
+          <textarea class="journal-box" id="journal-pause1" data-label="Pause & Think: Ch. 1 — Why does his mother call him a disappointment?" placeholder="Roscuro hopes for... The clue is..." oninput="autoSave(this,'dot-pause1')"></textarea>
+        </div>
+        <div class="pause-col">
+          <div class="socratic-box" style="margin-bottom:0;">
+            <div class="socratic-label">⏸️ Ch. 13 — The Consequence</div>
+            <p class="socratic-q">Something terrible happens at the queen's banquet table. <strong>What happens, and what are the consequences for the whole kingdom?</strong></p>
+          </div>
+          <div class="journal-label">📓 Ch. 13 — The Consequence <span class="saved-dot" id="dot-pause2"></span></div>
+          <textarea class="journal-box" id="journal-pause2" data-label="Pause & Think: Ch. 13 — The Consequence" placeholder="What happens is... Because of it..." oninput="autoSave(this,'dot-pause2')"></textarea>
+        </div>
+      </div>
+
+<div class="open-book-wrap">
         <div class="open-book-cover"></div>
         <div class="open-book-spine"></div>
         <div class="open-book-pages-3"></div>
@@ -2560,27 +2583,7 @@ function ladderTap(el){if(el.dataset.done)return;el.dataset.done="1";el.querySel
 
       <div class="reading-links">
       </div>
-
-      <!-- Side-by-side Pause & Think -->
-      <div class="pause-columns">
-        <div class="pause-col">
-          <div class="socratic-box" style="margin-bottom:0;">
-            <div class="socratic-label">⏸️ Ch. 8 — Roscuro in the Light</div>
-            <p class="socratic-q">Roscuro climbs up into the light. <strong>What is he hoping for? What clue does the author drop that this won't go well?</strong></p>
-          </div>
-          <div class="journal-label">📓 Ch. 8 — Roscuro in the Light <span class="saved-dot" id="dot-pause1"></span></div>
-          <textarea class="journal-box" id="journal-pause1" data-label="Pause & Think: Ch. 1 — Why does his mother call him a disappointment?" placeholder="Roscuro hopes for... The clue is..." oninput="autoSave(this,'dot-pause1')"></textarea>
-        </div>
-        <div class="pause-col">
-          <div class="socratic-box" style="margin-bottom:0;">
-            <div class="socratic-label">⏸️ Ch. 13 — The Consequence</div>
-            <p class="socratic-q">Something terrible happens at the queen's banquet table. <strong>What happens, and what are the consequences for the whole kingdom?</strong></p>
-          </div>
-          <div class="journal-label">📓 Ch. 13 — The Consequence <span class="saved-dot" id="dot-pause2"></span></div>
-          <textarea class="journal-box" id="journal-pause2" data-label="Pause & Think: Ch. 13 — The Consequence" placeholder="What happens is... Because of it..." oninput="autoSave(this,'dot-pause2')"></textarea>
-        </div>
       </div>
-    </div>
   </div>
 
   

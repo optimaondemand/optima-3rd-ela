@@ -2537,7 +2537,30 @@ function spellReveal(c){if(c.classList.contains("done"))return;c.classList.add("
     <div class="activity-body">
       <p>Today is Reader's Theater preparation and performance. Choose a scene from the novel to read aloud &mdash; to someone at home, or record yourself and listen back. Focus on expression: read the emotion, not just the words.</p>
 
-      <div class="open-book-wrap">
+      
+      <!-- pause-before-reading -->
+      <div class="callout callout-info" style="margin-bottom:14px;"><span class="callout-icon">&#x23F8;&#xFE0F;</span><p><strong>Read these first.</strong> Look them over before you open your book, then stop and answer each one when you reach that part.</p></div>
+      <!-- Side-by-side Pause & Think -->
+      <div class="pause-columns">
+        <div class="pause-col">
+          <div class="socratic-box" style="margin-bottom:0;">
+            <div class="socratic-label">⏸️ Ch. 8 — Performing the Story</div>
+            <p class="socratic-q">Choose a scene to perform. <strong>Which scene do you want to read? Why is it important?</strong></p>
+          </div>
+          <div class="journal-label">📓 Ch. 8 — Performing the Story <span class="saved-dot" id="dot-pause1"></span></div>
+          <textarea class="journal-box" id="journal-pause1" data-label="Pause & Think: Ch. 1 — Why does his mother call him a disappointment?" placeholder="I chose this scene because..." oninput="autoSave(this,'dot-pause1')"></textarea>
+        </div>
+        <div class="pause-col">
+          <div class="socratic-box" style="margin-bottom:0;">
+            <div class="socratic-label">⏸️ Performance Preparation</div>
+            <p class="socratic-q">Practice your scene. <strong>What emotion will you read into each character's lines?</strong></p>
+          </div>
+          <div class="journal-label">📓 Performance Preparation <span class="saved-dot" id="dot-pause2"></span></div>
+          <textarea class="journal-box" id="journal-pause2" data-label="Pause & Think: Performance Preparation" placeholder="[Character A] sounds ___ because... [Character B] sounds ___ because..." oninput="autoSave(this,'dot-pause2')"></textarea>
+        </div>
+      </div>
+
+<div class="open-book-wrap">
         <div class="open-book-cover"></div>
         <div class="open-book-spine"></div>
         <div class="open-book-pages-3"></div>
@@ -2558,27 +2581,7 @@ function spellReveal(c){if(c.classList.contains("done"))return;c.classList.add("
 
       <div class="reading-links">
       </div>
-
-      <!-- Side-by-side Pause & Think -->
-      <div class="pause-columns">
-        <div class="pause-col">
-          <div class="socratic-box" style="margin-bottom:0;">
-            <div class="socratic-label">⏸️ Ch. 8 — Performing the Story</div>
-            <p class="socratic-q">Choose a scene to perform. <strong>Which scene do you want to read? Why is it important?</strong></p>
-          </div>
-          <div class="journal-label">📓 Ch. 8 — Performing the Story <span class="saved-dot" id="dot-pause1"></span></div>
-          <textarea class="journal-box" id="journal-pause1" data-label="Pause & Think: Ch. 1 — Why does his mother call him a disappointment?" placeholder="I chose this scene because..." oninput="autoSave(this,'dot-pause1')"></textarea>
-        </div>
-        <div class="pause-col">
-          <div class="socratic-box" style="margin-bottom:0;">
-            <div class="socratic-label">⏸️ Performance Preparation</div>
-            <p class="socratic-q">Practice your scene. <strong>What emotion will you read into each character's lines?</strong></p>
-          </div>
-          <div class="journal-label">📓 Performance Preparation <span class="saved-dot" id="dot-pause2"></span></div>
-          <textarea class="journal-box" id="journal-pause2" data-label="Pause & Think: Performance Preparation" placeholder="[Character A] sounds ___ because... [Character B] sounds ___ because..." oninput="autoSave(this,'dot-pause2')"></textarea>
-        </div>
       </div>
-    </div>
   </div>
 
   <div class="rwm-box">

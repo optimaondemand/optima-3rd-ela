@@ -2554,7 +2554,30 @@ body {
     <div class="activity-body">
       <p>In Chapters 24 and 25, Despereaux decides to act. He has been told his whole life that he is too small and too strange. Now watch for what he does anyway — and why.</p>
 
-      <div class="open-book-wrap">
+      
+      <!-- pause-before-reading -->
+      <div class="callout callout-info" style="margin-bottom:14px;"><span class="callout-icon">&#x23F8;&#xFE0F;</span><p><strong>Read these first.</strong> Look them over before you open your book, then stop and answer each one when you reach that part.</p></div>
+      <!-- Side-by-side Pause & Think -->
+      <div class="pause-columns">
+        <div class="pause-col">
+          <div class="socratic-box" style="margin-bottom:0;">
+            <div class="socratic-label">⏸️ Ch. 8 — Despereaux Acts</div>
+            <p class="socratic-q">Despereaux makes a decision. <strong>What does he decide to do, and what gives him the courage to try?</strong></p>
+          </div>
+          <div class="journal-label">📓 Ch. 8 — Despereaux Acts <span class="saved-dot" id="dot-pause1"></span></div>
+          <textarea class="journal-box" id="journal-pause1" data-label="Pause & Think: Ch. 1 — Why does his mother call him a disappointment?" placeholder="Despereaux decides to... His courage comes from..." oninput="autoSave(this,'dot-pause1')"></textarea>
+        </div>
+        <div class="pause-col">
+          <div class="socratic-box" style="margin-bottom:0;">
+            <div class="socratic-label">⏸️ Ch. 25 — Into the Dungeon</div>
+            <p class="socratic-q">Despereaux moves toward the dungeon. <strong>What obstacles does he face, and how does he respond to each one?</strong></p>
+          </div>
+          <div class="journal-label">📓 Ch. 25 — Into the Dungeon <span class="saved-dot" id="dot-pause2"></span></div>
+          <textarea class="journal-box" id="journal-pause2" data-label="Pause & Think: Ch. 25 — Into the Dungeon" placeholder="The obstacles are... He responds by..." oninput="autoSave(this,'dot-pause2')"></textarea>
+        </div>
+      </div>
+
+<div class="open-book-wrap">
         <div class="open-book-cover"></div>
         <div class="open-book-spine"></div>
         <div class="open-book-pages-3"></div>
@@ -2575,27 +2598,7 @@ body {
 
       <div class="reading-links">
       </div>
-
-      <!-- Side-by-side Pause & Think -->
-      <div class="pause-columns">
-        <div class="pause-col">
-          <div class="socratic-box" style="margin-bottom:0;">
-            <div class="socratic-label">⏸️ Ch. 8 — Despereaux Acts</div>
-            <p class="socratic-q">Despereaux makes a decision. <strong>What does he decide to do, and what gives him the courage to try?</strong></p>
-          </div>
-          <div class="journal-label">📓 Ch. 8 — Despereaux Acts <span class="saved-dot" id="dot-pause1"></span></div>
-          <textarea class="journal-box" id="journal-pause1" data-label="Pause & Think: Ch. 1 — Why does his mother call him a disappointment?" placeholder="Despereaux decides to... His courage comes from..." oninput="autoSave(this,'dot-pause1')"></textarea>
-        </div>
-        <div class="pause-col">
-          <div class="socratic-box" style="margin-bottom:0;">
-            <div class="socratic-label">⏸️ Ch. 25 — Into the Dungeon</div>
-            <p class="socratic-q">Despereaux moves toward the dungeon. <strong>What obstacles does he face, and how does he respond to each one?</strong></p>
-          </div>
-          <div class="journal-label">📓 Ch. 25 — Into the Dungeon <span class="saved-dot" id="dot-pause2"></span></div>
-          <textarea class="journal-box" id="journal-pause2" data-label="Pause & Think: Ch. 25 — Into the Dungeon" placeholder="The obstacles are... He responds by..." oninput="autoSave(this,'dot-pause2')"></textarea>
-        </div>
       </div>
-    </div>
   </div>
 
   <div class="tab-next-wrap">

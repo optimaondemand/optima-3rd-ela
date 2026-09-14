@@ -2561,7 +2561,30 @@ function checkSpellDice(){var w=document.getElementById("spellWord").textContent
     <div class="activity-body">
       <p>Chapter 45 is the author's final word — the place where she steps back and speaks to the reader directly. Read it slowly. Notice what she chooses to say, and what she leaves unsaid.</p>
 
-      <div class="open-book-wrap">
+      
+      <!-- pause-before-reading -->
+      <div class="callout callout-info" style="margin-bottom:14px;"><span class="callout-icon">&#x23F8;&#xFE0F;</span><p><strong>Read these first.</strong> Look them over before you open your book, then stop and answer each one when you reach that part.</p></div>
+      <!-- Side-by-side Pause & Think -->
+      <div class="pause-columns">
+        <div class="pause-col">
+          <div class="socratic-box" style="margin-bottom:0;">
+            <div class="socratic-label">⏸️ Ch. 8 — Theme Crystallizes</div>
+            <p class="socratic-q">The author speaks directly to the reader. <strong>What is the most important thing she says? Why does she say it here, at the end?</strong></p>
+          </div>
+          <div class="journal-label">📓 Ch. 8 — Theme Crystallizes <span class="saved-dot" id="dot-pause1"></span></div>
+          <textarea class="journal-box" id="journal-pause1" data-label="Pause & Think: Ch. 1 — Why does his mother call him a disappointment?" placeholder="The most important thing the author says is..." oninput="autoSave(this,'dot-pause1')"></textarea>
+        </div>
+        <div class="pause-col">
+          <div class="socratic-box" style="margin-bottom:0;">
+            <div class="socratic-label">⏸️ Ch. 45 — Final Themes</div>
+            <p class="socratic-q">What is the author's final message about light, stories, and courage? <strong>Write it in your own words.</strong></p>
+          </div>
+          <div class="journal-label">📓 Ch. 45 — Final Themes <span class="saved-dot" id="dot-pause2"></span></div>
+          <textarea class="journal-box" id="journal-pause2" data-label="Pause & Think: Ch. 45 — Final Themes" placeholder="The author's final message is..." oninput="autoSave(this,'dot-pause2')"></textarea>
+        </div>
+      </div>
+
+<div class="open-book-wrap">
         <div class="open-book-cover"></div>
         <div class="open-book-spine"></div>
         <div class="open-book-pages-3"></div>
@@ -2582,27 +2605,7 @@ function checkSpellDice(){var w=document.getElementById("spellWord").textContent
 
       <div class="reading-links">
       </div>
-
-      <!-- Side-by-side Pause & Think -->
-      <div class="pause-columns">
-        <div class="pause-col">
-          <div class="socratic-box" style="margin-bottom:0;">
-            <div class="socratic-label">⏸️ Ch. 8 — Theme Crystallizes</div>
-            <p class="socratic-q">The author speaks directly to the reader. <strong>What is the most important thing she says? Why does she say it here, at the end?</strong></p>
-          </div>
-          <div class="journal-label">📓 Ch. 8 — Theme Crystallizes <span class="saved-dot" id="dot-pause1"></span></div>
-          <textarea class="journal-box" id="journal-pause1" data-label="Pause & Think: Ch. 1 — Why does his mother call him a disappointment?" placeholder="The most important thing the author says is..." oninput="autoSave(this,'dot-pause1')"></textarea>
-        </div>
-        <div class="pause-col">
-          <div class="socratic-box" style="margin-bottom:0;">
-            <div class="socratic-label">⏸️ Ch. 45 — Final Themes</div>
-            <p class="socratic-q">What is the author's final message about light, stories, and courage? <strong>Write it in your own words.</strong></p>
-          </div>
-          <div class="journal-label">📓 Ch. 45 — Final Themes <span class="saved-dot" id="dot-pause2"></span></div>
-          <textarea class="journal-box" id="journal-pause2" data-label="Pause & Think: Ch. 45 — Final Themes" placeholder="The author's final message is..." oninput="autoSave(this,'dot-pause2')"></textarea>
-        </div>
       </div>
-    </div>
   </div>
 
   

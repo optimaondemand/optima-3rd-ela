@@ -2539,7 +2539,30 @@ function ladderTap(el){if(el.dataset.done)return;el.dataset.done="1";el.querySel
     <div class="activity-body">
       <p>In Chapters 50, 51, and 52, the story moves toward its final images. Pay attention to the things the author chooses to show us last — these are the details that will linger in a reader's memory.</p>
 
-      <div class="open-book-wrap">
+      
+      <!-- pause-before-reading -->
+      <div class="callout callout-info" style="margin-bottom:14px;"><span class="callout-icon">&#x23F8;&#xFE0F;</span><p><strong>Read these first.</strong> Look them over before you open your book, then stop and answer each one when you reach that part.</p></div>
+      <!-- Side-by-side Pause & Think -->
+      <div class="pause-columns">
+        <div class="pause-col">
+          <div class="socratic-box" style="margin-bottom:0;">
+            <div class="socratic-label">⏸️ Ch. 8 — Polish and Prepare</div>
+            <p class="socratic-q">What are the last images the author gives us for each character? <strong>Why do you think she chose these particular images to end with?</strong></p>
+          </div>
+          <div class="journal-label">📓 Ch. 8 — Polish and Prepare <span class="saved-dot" id="dot-pause1"></span></div>
+          <textarea class="journal-box" id="journal-pause1" data-label="Pause & Think: Ch. 1 — Why does his mother call him a disappointment?" placeholder="The last image of [character] is... The author chose this because..." oninput="autoSave(this,'dot-pause1')"></textarea>
+        </div>
+        <div class="pause-col">
+          <div class="socratic-box" style="margin-bottom:0;">
+            <div class="socratic-label">⏸️ Ch. 52 — What Remains</div>
+            <p class="socratic-q">What feeling are you left with at the end of Chapter 52? <strong>How did the author create that feeling?</strong></p>
+          </div>
+          <div class="journal-label">📓 Ch. 52 — What Remains <span class="saved-dot" id="dot-pause2"></span></div>
+          <textarea class="journal-box" id="journal-pause2" data-label="Pause & Think: Ch. 52 — What Remains" placeholder="I am left feeling... because the author..." oninput="autoSave(this,'dot-pause2')"></textarea>
+        </div>
+      </div>
+
+<div class="open-book-wrap">
         <div class="open-book-cover"></div>
         <div class="open-book-spine"></div>
         <div class="open-book-pages-3"></div>
@@ -2560,27 +2583,7 @@ function ladderTap(el){if(el.dataset.done)return;el.dataset.done="1";el.querySel
 
       <div class="reading-links">
       </div>
-
-      <!-- Side-by-side Pause & Think -->
-      <div class="pause-columns">
-        <div class="pause-col">
-          <div class="socratic-box" style="margin-bottom:0;">
-            <div class="socratic-label">⏸️ Ch. 8 — Polish and Prepare</div>
-            <p class="socratic-q">What are the last images the author gives us for each character? <strong>Why do you think she chose these particular images to end with?</strong></p>
-          </div>
-          <div class="journal-label">📓 Ch. 8 — Polish and Prepare <span class="saved-dot" id="dot-pause1"></span></div>
-          <textarea class="journal-box" id="journal-pause1" data-label="Pause & Think: Ch. 1 — Why does his mother call him a disappointment?" placeholder="The last image of [character] is... The author chose this because..." oninput="autoSave(this,'dot-pause1')"></textarea>
-        </div>
-        <div class="pause-col">
-          <div class="socratic-box" style="margin-bottom:0;">
-            <div class="socratic-label">⏸️ Ch. 52 — What Remains</div>
-            <p class="socratic-q">What feeling are you left with at the end of Chapter 52? <strong>How did the author create that feeling?</strong></p>
-          </div>
-          <div class="journal-label">📓 Ch. 52 — What Remains <span class="saved-dot" id="dot-pause2"></span></div>
-          <textarea class="journal-box" id="journal-pause2" data-label="Pause & Think: Ch. 52 — What Remains" placeholder="I am left feeling... because the author..." oninput="autoSave(this,'dot-pause2')"></textarea>
-        </div>
       </div>
-    </div>
   </div>
 
   <div class="rwm-box">
