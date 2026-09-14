@@ -2252,22 +2252,23 @@ body {
 
   <!-- DOL -->
   <div class="activity bl-cyan">
-    <div class="activity-head"><div class="activity-num" style="background:#55C8E8;">2</div><div style="flex:1;"><div class="activity-title">✏️ Daily Oral Language</div><div class="activity-sub">Fix the sentences, then check your work.</div></div></div>
+    <div class="activity-head"><div class="activity-num" style="background:#55C8E8;">2</div><div style="flex:1;"><div class="activity-title">✏️ Daily Oral Language</div><div class="activity-sub">Study the model, then fix the sentence.</div></div></div>
     <div class="activity-body">
-      <p>Two sentences below have mistakes. Rewrite each one correctly, then check.</p>
-      <div class="task-box">
-        <div class="task-label">Try it first</div>
-        <div class="task-sentence">1. despereaux found a needle and thread and decided to rescue the princess from the dungeon below</div>
-        <div class="task-sentence">2. he was very small and very afraid but he moved forward because the princess needed his help</div>
-        <div class="journal-label">📓 Write your corrected sentences <span class="saved-dot" id="dot-dol"></span></div>
-        <textarea class="journal-box" id="journal-dol" data-label="DOL: Corrected sentences" placeholder="1. &#10;2. " oninput="autoSave(this,'dot-dol')" style="min-height:90px;"></textarea>
+      <p>First, read the <strong>model sentence</strong> carefully. Notice what the author does right. Then, fix the <strong>second sentence</strong> using the same skills.</p>
+      <div class="task-box" style="background:#E3F8ED;border-color:#B8E8CF;">
+<div class="task-label" style="color:#34B76F;">&#9989; Model Sentence &mdash; Study What&#39;s Right</div>
+<div class="task-sentence" style="border-left-color:#34B76F;">A mouse needs courage, and a very small mouse needs even more of it.</div>
+<p style="font-size:14px;color:#3A4A6B;line-height:1.6;margin-top:8px;">Notice: the singular subject <em>mouse</em> takes the verb <em>needs</em> with an -s. A comma comes before <em>and</em> because it joins two complete sentences. A period ends the sentence.</p>
+</div>
+<div class="task-box">
+<div class="task-label" style="color:#c7627e;">&#128295; Fix-It Sentence &mdash; Now You Try</div>
+<div class="task-sentence" style="border-left-color:#c7627e;">despereaux found a needle and thread and decided to rescue the princess from the dungeon below</div>
+<div class="journal-label">&#128211; Write the corrected sentence <span class="saved-dot" id="dot-dol"></span></div>
+<textarea class="journal-box" id="journal-dol" data-label="DOL: Corrected sentence" placeholder="Write the corrected sentence here..." oninput="autoSave(this,&#39;dot-dol&#39;)" style="min-height:70px;"></textarea>
         <button class="dol-check-btn" onclick="document.getElementById('dolAns').classList.toggle('show')">🔍 Check My Work</button>
         <div class="dol-answer" id="dolAns">
-          <p style="margin-bottom:8px;"><strong>Corrected sentences:</strong></p>
-          <p style="margin-bottom:6px;">1. <strong>Despereaux</strong> found a needle and thread and decided to rescue the princess from the dungeon below.</p>
-          <p>2. <strong>He</strong> was very small and very afraid<strong>,</strong> but he moved forward because the princess needed his help.</p>
-          <p style="font-size:13px;color:#7A88A8;margin-top:8px;font-style:italic;">Did you catch the proper noun (Despereaux), the pronoun (he), the comma before "but," and "because" showing cause and effect?</p>
-        </div>
+<p style="margin-bottom:6px;"><strong>Corrected:</strong></p><p><strong>Despereaux</strong> found a needle and thread and decided to rescue the princess from the dungeon below.</p>
+</div>
       </div>
           </div>
   </div>

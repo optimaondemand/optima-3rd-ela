@@ -2250,22 +2250,23 @@ body {
 
   <!-- DOL -->
   <div class="activity bl-cyan">
-    <div class="activity-head"><div class="activity-num" style="background:#55C8E8;">2</div><div style="flex:1;"><div class="activity-title">✏️ Daily Oral Language</div><div class="activity-sub">Fix the sentences, then check your work.</div></div></div>
+    <div class="activity-head"><div class="activity-num" style="background:#55C8E8;">2</div><div style="flex:1;"><div class="activity-title">✏️ Daily Oral Language</div><div class="activity-sub">Study the model, then fix the sentence.</div></div></div>
     <div class="activity-body">
-      <p>Two sentences below have mistakes. Rewrite each one correctly, then check.</p>
-      <div class="task-box">
-        <div class="task-label">Try it first</div>
-        <div class="task-sentence">1. roscuro came to miggery sow in the darkness of the kitchen and whispered his plan</div>
-        <div class="task-sentence">2. he promised her that she could be a princess if she did exactly what he asked</div>
-        <div class="journal-label">📓 Write your corrected sentences <span class="saved-dot" id="dot-dol"></span></div>
-        <textarea class="journal-box" id="journal-dol" data-label="DOL: Corrected sentences" placeholder="1. &#10;2. " oninput="autoSave(this,'dot-dol')" style="min-height:90px;"></textarea>
+      <p>First, read the <strong>model sentence</strong> carefully. Notice what the author does right. Then, fix the <strong>second sentence</strong> using the same skills.</p>
+      <div class="task-box" style="background:#E3F8ED;border-color:#B8E8CF;">
+<div class="task-label" style="color:#34B76F;">&#9989; Model Sentence &mdash; Study What&#39;s Right</div>
+<div class="task-sentence" style="border-left-color:#34B76F;">She trusted him because he told her exactly what she wanted to hear.</div>
+<p style="font-size:14px;color:#3A4A6B;line-height:1.6;margin-top:8px;">Notice: <em>She</em> and <em>he</em> are subject pronouns &mdash; they do the action. <em>Him</em> and <em>her</em> are object pronouns &mdash; they receive it. The sentence starts with a capital letter and ends with a period.</p>
+</div>
+<div class="task-box">
+<div class="task-label" style="color:#c7627e;">&#128295; Fix-It Sentence &mdash; Now You Try</div>
+<div class="task-sentence" style="border-left-color:#c7627e;">he promised her that she could be a princess if she did exactly what he asked</div>
+<div class="journal-label">&#128211; Write the corrected sentence <span class="saved-dot" id="dot-dol"></span></div>
+<textarea class="journal-box" id="journal-dol" data-label="DOL: Corrected sentence" placeholder="Write the corrected sentence here..." oninput="autoSave(this,&#39;dot-dol&#39;)" style="min-height:70px;"></textarea>
         <button class="dol-check-btn" onclick="document.getElementById('dolAns').classList.toggle('show')">🔍 Check My Work</button>
         <div class="dol-answer" id="dolAns">
-          <p style="margin-bottom:8px;"><strong>Corrected sentences:</strong></p>
-          <p style="margin-bottom:6px;">1. <strong>Roscuro</strong> came to <strong>Miggery Sow</strong> in the darkness of the kitchen and whispered his plan.</p>
-          <p>2. <strong>He</strong> promised her that she could be a princess if she did exactly what he asked.</p>
-          <p style="font-size:13px;color:#7A88A8;margin-top:8px;font-style:italic;">Did you catch the proper nouns (Roscuro, Miggery Sow), the pronoun (he), and capital letters?</p>
-        </div>
+<p style="margin-bottom:6px;"><strong>Corrected:</strong></p><p><strong>He</strong> promised her that she could be a princess if she did exactly what he asked.</p>
+</div>
       </div>
           </div>
   </div>
