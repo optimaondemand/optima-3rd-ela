@@ -3190,14 +3190,14 @@ function downloadJournal() {
   var text = document.getElementById('gatheredOutput').value;
 
   var html = '<!DOCTYPE html><html><head><meta charset="UTF-8">';
-  html += '<title>Lesson 6.3 — My Work</title>';
+  html += '<title>Lesson 8.3 &mdash; My Work</title>';
   html += '<style>';
   html += 'body{font-family:Georgia,serif;max-width:700px;margin:40px auto;padding:0 20px;color:#1a1a2e;line-height:1.7;}';
   html += 'h1{font-size:22px;border-bottom:3px solid #55C8E8;padding-bottom:8px;margin-bottom:6px;}';
   html += 'h2{font-size:14px;color:#7A88A8;margin-bottom:24px;}';
   html += 'pre{white-space:pre-wrap;font-family:Georgia,serif;font-size:14px;line-height:1.7;}';
   html += '</style></head><body>';
-  html += '<h1>📓 My Work — Lesson 6.3</h1>';
+  html += '<h1>📓 My Work — Lesson 8.3</h1>';
   html += '<h2>The Tale of Despereaux — Chapters 5–7</h2>';
   html += '<pre>' + text.replace(/</g, '&lt;').replace(/>/g, '&gt;') + '</pre>';
   html += '</body></html>';
