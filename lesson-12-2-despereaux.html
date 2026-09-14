@@ -2421,14 +2421,28 @@ The wind is passing by.</div>
 
 <!-- ═══ GRAMMAR ═══ -->
   <div class="activity bl-gold">
-    <div class="activity-head"><div class="activity-num" style="background:#C7922C;">3</div><div style="flex:1;"><div class="activity-title">✏️ Grammar: Punctuating dialogue</div><div class="activity-sub">Day 2: Identify &mdash; Spot it at work in the reading.</div></div></div>
-    <div class="activity-body">
-      <p>When a character speaks, the words they say go inside <strong>quotation marks</strong>. A comma separates the spoken words from the tag that says who spoke &mdash; and that comma goes <em>inside</em> the closing quotation mark.</p>
-      <div class="task-box" style="background:#FFF8F0;border-color:#F5E6C8;">
-        <div class="task-label" style="color:#C7922C;">👉 Example</div>
+    <div class="activity-head"><div class="activity-num" style="background:#C7922C;">3</div><div style="flex:1;"><div class="activity-title">✏️ Grammar: Punctuating dialogue</div><div class="activity-sub">Day 2: Identify &mdash; find the pattern at work in the reading.</div></div></div>
+    <div class="activity-body"><!-- grammar-notice-first -->
+            <div class="key-concept" style="background:#F0F7FF;border-color:#C8DCEE;margin:0 0 14px;">
+            <div class="key-concept-label" style="color:#3D5285;">&#x1F50E; What do you notice?</div>
+            <p>Both sentences say the same thing. The author punctuated them differently. Look at the marks, not the words.</p>
+            </div>
+
+<div class="task-box" style="background:#FFF8F0;border-color:#F5E6C8;">
+        <div class="task-label" style="color:#C7922C;">👀 Look</div>
         <div class="task-sentence" style="border-left-color:#55C8E8;">&ldquo;Straight to the dungeon with him,&rdquo; said the Head Mouse.</div>
-        <p style="font-size:15px;color:#3A4A6B;line-height:1.6;margin-top:8px;">The comma sits inside the quotation marks, and <em>said</em> is not capitalized.</p>
-      </div>
+</div>
+            <div class="callout callout-info" style="margin-top:14px;"><span class="callout-icon">&#x1F4AD;</span><p><strong>Think it through.</strong></p>
+            <ol style="margin:6px 0 0 20px;font-size:15px;color:#3A4A6B;line-height:1.8;">
+            <li>Find the comma in each sentence. Is it inside the quotation marks or outside?</li>
+            <li>One of the sentences has a lowercase word right after a quotation mark. Why is it not capitalized?</li>
+            <li>What has to change when the speaker's name moves to the front?</li>
+            </ol></div>
+            <button class="dol-check-btn" onclick="document.getElementById('gramNotice').classList.toggle('show')">&#x1F50D; Now check your thinking</button>
+            <div class="dol-answer" id="gramNotice">
+            <p>When a character speaks, the words they say go inside <strong>quotation marks</strong>. A comma separates the spoken words from the tag that says who spoke &mdash; and that comma goes <em>inside</em> the closing quotation mark.</p>
+            <p>The comma sits inside the quotation marks, and <em>said</em> is not capitalized.</p>
+            </div>
             <div class="callout callout-info" style="margin-top:14px;"><span class="callout-icon">🎯</span><p><strong>Your turn.</strong> Find the comma that separates the speech from the speaker. Tap a word to check &mdash; green means you got it.</p></div>
       <div class="spotter-game" id="grammarGame">
         <div class="spotter-sentence" id="gspot1"><span class="spotter-word" onclick="spotterPick(this,'gspot1')" data-correct="false">“Carry</span> <span class="spotter-word" onclick="spotterPick(this,'gspot1')" data-correct="false">the</span> <span class="spotter-word" onclick="spotterPick(this,'gspot1')" data-correct="true">basket,”</span> <span class="spotter-word" onclick="spotterPick(this,'gspot1')" data-correct="false">said</span> <span class="spotter-word" onclick="spotterPick(this,'gspot1')" data-correct="false">Roscuro.</span><div class="spotter-result" id="gspot1-result"></div></div>
@@ -2440,7 +2454,7 @@ The wind is passing by.</div>
         <div class="swyk-label">🪶 Show What You Know</div>
         <div class="swyk-prompt">Find one example of punctuating dialogue in today&rsquo;s reading. Write the sentence and mark it.</div>
         <div class="journal-label">📓 Your answer <span class="saved-dot" id="dot-grammar"></span></div>
-        <textarea class="journal-box" id="journal-grammar" data-label="Grammar: Punctuating dialogue" placeholder="Today I learned..." oninput="autoSave(this,'dot-grammar')"></textarea>
+        <textarea class="journal-box" id="journal-grammar" data-label="Grammar: Punctuating dialogue" placeholder="I noticed that..." oninput="autoSave(this,'dot-grammar')"></textarea>
       </div>
     </div>
   </div>

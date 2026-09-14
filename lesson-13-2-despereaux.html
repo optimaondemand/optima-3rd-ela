@@ -2419,14 +2419,28 @@ and then moves on.</div>
 
 <!-- ═══ GRAMMAR ═══ -->
   <div class="activity bl-gold">
-    <div class="activity-head"><div class="activity-num" style="background:#C7922C;">3</div><div style="flex:1;"><div class="activity-title">✏️ Grammar: Dialogue: putting it to work</div><div class="activity-sub">Day 2: Identify &mdash; Spot it at work in the reading.</div></div></div>
-    <div class="activity-body">
-      <p>Now use it. Every time a <strong>new person</strong> starts speaking, start a <strong>new paragraph</strong>. That is how a reader keeps track of who is talking without being told every time.</p>
-      <div class="task-box" style="background:#FFF8F0;border-color:#F5E6C8;">
-        <div class="task-label" style="color:#C7922C;">👉 Example</div>
+    <div class="activity-head"><div class="activity-num" style="background:#C7922C;">3</div><div style="flex:1;"><div class="activity-title">✏️ Grammar: Dialogue: putting it to work</div><div class="activity-sub">Day 2: Identify &mdash; find the pattern at work in the reading.</div></div></div>
+    <div class="activity-body"><!-- grammar-notice-first -->
+            <div class="key-concept" style="background:#F0F7FF;border-color:#C8DCEE;margin:0 0 14px;">
+            <div class="key-concept-label" style="color:#3D5285;">&#x1F50E; What do you notice?</div>
+            <p>Look at how the author handles the spoken words and the speaker together.</p>
+            </div>
+
+<div class="task-box" style="background:#FFF8F0;border-color:#F5E6C8;">
+        <div class="task-label" style="color:#C7922C;">👀 Look</div>
         <div class="task-sentence" style="border-left-color:#55C8E8;">&ldquo;Where is the princess?&rdquo; asked Despereaux.</div>
-        <p style="font-size:15px;color:#3A4A6B;line-height:1.6;margin-top:8px;">A question mark replaces the comma &mdash; but it still sits inside the quotation marks.</p>
-      </div>
+</div>
+            <div class="callout callout-info" style="margin-top:14px;"><span class="callout-icon">&#x1F4AD;</span><p><strong>Think it through.</strong></p>
+            <ol style="margin:6px 0 0 20px;font-size:15px;color:#3A4A6B;line-height:1.8;">
+            <li>Where does the punctuation sit when the quote comes first?</li>
+            <li>Where does it sit when the speaker comes first?</li>
+            <li>What tells a reader where the speaking stops and the story starts again?</li>
+            </ol></div>
+            <button class="dol-check-btn" onclick="document.getElementById('gramNotice').classList.toggle('show')">&#x1F50D; Now check your thinking</button>
+            <div class="dol-answer" id="gramNotice">
+            <p>Now use it. Every time a <strong>new person</strong> starts speaking, start a <strong>new paragraph</strong>. That is how a reader keeps track of who is talking without being told every time.</p>
+            <p>A question mark replaces the comma &mdash; but it still sits inside the quotation marks.</p>
+            </div>
             <div class="callout callout-info" style="margin-top:14px;"><span class="callout-icon">🎯</span><p><strong>Your turn.</strong> Find the punctuation mark that ends the spoken words. Tap a word to check &mdash; green means you got it.</p></div>
       <div class="spotter-game" id="grammarGame">
         <div class="spotter-sentence" id="gspot1"><span class="spotter-word" onclick="spotterPick(this,'gspot1')" data-correct="false">“Where</span> <span class="spotter-word" onclick="spotterPick(this,'gspot1')" data-correct="false">is</span> <span class="spotter-word" onclick="spotterPick(this,'gspot1')" data-correct="true">she?”</span> <span class="spotter-word" onclick="spotterPick(this,'gspot1')" data-correct="false">asked</span> <span class="spotter-word" onclick="spotterPick(this,'gspot1')" data-correct="false">Despereaux.</span><div class="spotter-result" id="gspot1-result"></div></div>
@@ -2438,7 +2452,7 @@ and then moves on.</div>
         <div class="swyk-label">🪶 Show What You Know</div>
         <div class="swyk-prompt">Find one example of dialogue: putting it to work in today&rsquo;s reading. Write the sentence and mark it.</div>
         <div class="journal-label">📓 Your answer <span class="saved-dot" id="dot-grammar"></span></div>
-        <textarea class="journal-box" id="journal-grammar" data-label="Grammar: Dialogue: putting it to work" placeholder="Today I learned..." oninput="autoSave(this,'dot-grammar')"></textarea>
+        <textarea class="journal-box" id="journal-grammar" data-label="Grammar: Dialogue: putting it to work" placeholder="I noticed that..." oninput="autoSave(this,'dot-grammar')"></textarea>
       </div>
     </div>
   </div>
