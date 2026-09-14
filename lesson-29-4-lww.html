@@ -2597,32 +2597,31 @@ function checkSpellDice(){var w=document.getElementById("spellWord").textContent
   
   <!-- RWM -->
   <div class="rwm-box">
-    <div class="rwm-header">📖 RWM — Read like a Reader, Read like a Writer, Mimic</div>
-    <div class="rwm-sentence">&ldquo;And now — what of Edmund? He was alive, but shaking with cold; and very glad that the battle was over.&rdquo;</div>
-    <div class="rwm-craft-note">📌 Craft focus: narrator's question; dash + semicolon to shift attention</div>
-    <div class="rwm-step">
-      <div class="rwm-step-label">📖 Read like a Reader</div>
-      <div class="rwm-step-text">The narrator asks about Edmund directly — <em>"what of Edmund?"</em> After everything that happened, how do you feel about him at this moment? Has your opinion of him changed since he first met the Witch?</div>
-      <div class="textbox-prompt">Write 1–2 sentences about what this moment reveals about the character or the story.</div>
-      <div class="journal-label">📓 Your response <span class="saved-dot" id="dot-rwm-reader"></span></div>
-      <textarea class="journal-box" id="journal-rwm-reader" data-label="RWM — Read like a Reader" placeholder="This sentence shows..." oninput="autoSave(this,'dot-rwm-reader');gatherAnswers();"></textarea>
-    </div>
-    <div class="rwm-step">
-      <div class="rwm-step-label">✏️ Read like a Writer</div>
-      <div class="rwm-step-text">The narrator uses a question to shift our attention: <em>"And now — what of Edmund?"</em> Then the answer is a simple, factual sentence. Why ask the question rather than just telling us? And notice <em>"but"</em> and the semicolons — what do they add?</div>
-      <div class="textbox-prompt">Write 1–2 sentences naming what the author did and why it works.</div>
-      <div class="journal-label">📓 Your response <span class="saved-dot" id="dot-rwm-writer"></span></div>
-      <textarea class="journal-box" id="journal-rwm-writer" data-label="RWM — Read like a Writer" placeholder="The author used... This works because..." oninput="autoSave(this,'dot-rwm-writer');gatherAnswers();"></textarea>
-    </div>
-    <div class="rwm-step">
-      <div class="rwm-step-label">🖊️ Mimic</div>
-      <div class="rwm-step-text">Write your own sentence using the same pattern as the author.</div>
-      <div class="rwm-frame">Sentence frame: And now — what of [character]? [He/She] was [state], but [other state]; and very [feeling] that [something] was over.</div>
-      <div class="textbox-prompt">Write your sentence below using the same pattern as the author.</div>
-      <div class="journal-label">📓 Your sentence <span class="saved-dot" id="dot-rwm-mimic"></span></div>
-      <textarea class="journal-box" id="journal-rwm-mimic" data-label="RWM — Mimic" placeholder="Write your sentence here..." oninput="autoSave(this,'dot-rwm-mimic');gatherAnswers();"></textarea>
-    </div>
-  </div>
+<div class="rwm-header">📖 RWM &mdash; Read like a Reader, Read like a Writer, Mimic</div>
+<div class="rwm-sentence">&ldquo;Her arms were bare underneath it and terribly white.&rdquo;</div>
+<div class="rwm-step">
+<div class="rwm-step-label">📖 Read like a Reader</div>
+<div class="rwm-step-text">The Witch has taken off her mantle at the Stone Table. What is about to happen, and how does this sentence make you feel about it?</div>
+<div class="textbox-prompt">Write 1 sentence: what does this moment make you expect?</div>
+<div class="journal-label">📓 Your response <span class="saved-dot" id="dot-rwm-reader"></span></div>
+<textarea class="journal-box" id="journal-rwm-reader" data-label="RWM &mdash; Read like a Reader" placeholder="This moment makes me expect..." oninput="autoSave(this,'dot-rwm-reader');gatherAnswers();"></textarea>
+</div>
+<div class="rwm-step">
+<div class="rwm-step-label">✏️ Read like a Writer</div>
+<div class="rwm-step-text">Nothing frightening is named here &mdash; only <strong>arms</strong>, <strong>bare</strong>, <strong>white</strong>. The fear is carried by one small word: <em>terribly</em>. Lewis lets a plain detail do the scaring.</div>
+<div class="textbox-prompt">Write 1 sentence: what does the word <em>terribly</em> do to a plain description?</div>
+<div class="journal-label">📓 Your response <span class="saved-dot" id="dot-rwm-writer"></span></div>
+<textarea class="journal-box" id="journal-rwm-writer" data-label="RWM &mdash; Read like a Writer" placeholder="The word terribly turns it into..." oninput="autoSave(this,'dot-rwm-writer');gatherAnswers();"></textarea>
+</div>
+<div class="rwm-step">
+<div class="rwm-step-label">🖊️ Mimic</div>
+<div class="rwm-step-text">Describe something ordinary so that it feels frightening. Use only plain words &mdash; and one word like <em>terribly</em>.</div>
+<div class="rwm-frame">Sentence frame: [The thing] was [plain detail] and terribly [plain describing word].</div>
+<div class="textbox-prompt">Write your own quietly frightening sentence.</div>
+<div class="journal-label">📓 Your sentence <span class="saved-dot" id="dot-rwm-mimic"></span></div>
+<textarea class="journal-box" id="journal-rwm-mimic" data-label="RWM &mdash; Mimic" placeholder="Write your sentence here..." oninput="autoSave(this,'dot-rwm-mimic');gatherAnswers();"></textarea>
+</div>
+</div>
 <div class="tab-next-wrap">
     <p class="tab-transition-voice">Great reading work! Now bring your thinking to the assignment.</p>
     <button class="tab-next-btn" onclick="switchTab('assignment')">Continue to 📬 Assignment →</button>

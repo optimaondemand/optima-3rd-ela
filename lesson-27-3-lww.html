@@ -2620,32 +2620,31 @@ function proofPick(el){if(el.dataset.done)return;el.dataset.done="1";var box=el.
   
   <!-- RWM -->
   <div class="rwm-box">
-    <div class="rwm-header">📖 RWM — Read like a Reader, Read like a Writer, Mimic</div>
-    <div class="rwm-sentence">&ldquo;There were statues all about — everywhere you looked, you could see them. And then you noticed they were looking back.&rdquo;</div>
-    <div class="rwm-craft-note">📌 Craft focus: reversal using <strong>And then</strong></div>
-    <div class="rwm-step">
-      <div class="rwm-step-label">📖 Read like a Reader</div>
-      <div class="rwm-step-text">Edmund walks through the Witch's castle and sees the stone statues. When did you, as a reader, realize what the statues might mean? What does it feel like when a safe-seeming setting turns frightening?</div>
-      <div class="textbox-prompt">Write 1–2 sentences about what this moment reveals about the character or the story.</div>
-      <div class="journal-label">📓 Your response <span class="saved-dot" id="dot-rwm-reader"></span></div>
-      <textarea class="journal-box" id="journal-rwm-reader" data-label="RWM — Read like a Reader" placeholder="This sentence shows..." oninput="autoSave(this,'dot-rwm-reader');gatherAnswers();"></textarea>
-    </div>
-    <div class="rwm-step">
-      <div class="rwm-step-label">✏️ Read like a Writer</div>
-      <div class="rwm-step-text">The first sentence describes statues. Then <em>"And then"</em> shifts everything — suddenly they're looking back. Lewis uses <em>And then</em> to signal a reversal. Why is this more powerful than saying it all in one sentence?</div>
-      <div class="textbox-prompt">Write 1–2 sentences naming what the author did and why it works.</div>
-      <div class="journal-label">📓 Your response <span class="saved-dot" id="dot-rwm-writer"></span></div>
-      <textarea class="journal-box" id="journal-rwm-writer" data-label="RWM — Read like a Writer" placeholder="The author used... This works because..." oninput="autoSave(this,'dot-rwm-writer');gatherAnswers();"></textarea>
-    </div>
-    <div class="rwm-step">
-      <div class="rwm-step-label">🖊️ Mimic</div>
-      <div class="rwm-step-text">Write your own sentence using the same pattern as the author.</div>
-      <div class="rwm-frame">Sentence frame: There were [things] everywhere — everywhere [you] looked. And then [you/character] noticed [the disturbing or surprising detail].</div>
-      <div class="textbox-prompt">Write your sentence below using the same pattern as the author.</div>
-      <div class="journal-label">📓 Your sentence <span class="saved-dot" id="dot-rwm-mimic"></span></div>
-      <textarea class="journal-box" id="journal-rwm-mimic" data-label="RWM — Mimic" placeholder="Write your sentence here..." oninput="autoSave(this,'dot-rwm-mimic');gatherAnswers();"></textarea>
-    </div>
-  </div>
+<div class="rwm-header">📖 RWM &mdash; Read like a Reader, Read like a Writer, Mimic</div>
+<div class="rwm-sentence">&ldquo;said Edmund, giving Peter a look which was as much as to say &ldquo;What did I tell you?&rdquo;&rdquo;</div>
+<div class="rwm-step">
+<div class="rwm-step-label">📖 Read like a Reader</div>
+<div class="rwm-step-text">The children have just met something strange in the trees. What is Edmund doing to Peter here &mdash; without saying it out loud?</div>
+<div class="textbox-prompt">Write 1 sentence: what is Edmund telling Peter with that look?</div>
+<div class="journal-label">📓 Your response <span class="saved-dot" id="dot-rwm-reader"></span></div>
+<textarea class="journal-box" id="journal-rwm-reader" data-label="RWM &mdash; Read like a Reader" placeholder="With that look, Edmund is saying..." oninput="autoSave(this,'dot-rwm-reader');gatherAnswers();"></textarea>
+</div>
+<div class="rwm-step">
+<div class="rwm-step-label">✏️ Read like a Writer</div>
+<div class="rwm-step-text">Lewis puts <strong>words inside a look</strong>. No one speaks them; Edmund just glances, and Lewis translates the glance for you. A face can carry a whole line of dialogue.</div>
+<div class="textbox-prompt">Write 1 sentence: why write the look as if it were speech?</div>
+<div class="journal-label">📓 Your response <span class="saved-dot" id="dot-rwm-writer"></span></div>
+<textarea class="journal-box" id="journal-rwm-writer" data-label="RWM &mdash; Read like a Writer" placeholder="Turning the look into words lets Lewis..." oninput="autoSave(this,'dot-rwm-writer');gatherAnswers();"></textarea>
+</div>
+<div class="rwm-step">
+<div class="rwm-step-label">🖊️ Mimic</div>
+<div class="rwm-step-text">Write about a look someone gave you, and translate it into the words it was saying.</div>
+<div class="rwm-frame">Sentence frame: [Who] gave [someone] a look which was as much as to say &ldquo;[the words].&rdquo;</div>
+<div class="textbox-prompt">Write your own talking-look sentence.</div>
+<div class="journal-label">📓 Your sentence <span class="saved-dot" id="dot-rwm-mimic"></span></div>
+<textarea class="journal-box" id="journal-rwm-mimic" data-label="RWM &mdash; Mimic" placeholder="Write your sentence here..." oninput="autoSave(this,'dot-rwm-mimic');gatherAnswers();"></textarea>
+</div>
+</div>
 <div class="tab-next-wrap">
     <p class="tab-transition-voice">Great reading work! Now bring your thinking to the assignment.</p>
     <button class="tab-next-btn" onclick="switchTab('assignment')">Continue to 📬 Assignment →</button>

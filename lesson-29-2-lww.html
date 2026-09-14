@@ -2596,7 +2596,33 @@ They&rsquo;d banish us, you know.</div>
             <textarea class="journal-box" id="journal-q3" data-label="Q3: theme evidence" placeholder="My theme is: The story shows that... Ch. 14 supports this because..." oninput="autoSave(this,'dot-journal-q3');gatherAnswers();"></textarea>
           </div>
         </div>
-  <div class="tab-next-wrap">
+  <div class="rwm-box">
+<div class="rwm-header">📖 RWM &mdash; Read like a Reader, Read like a Writer, Mimic</div>
+<div class="rwm-sentence">&ldquo;Call the Cruels, the Hags, the Spectres, and the people of the Toadstools.&rdquo;</div>
+<div class="rwm-step">
+<div class="rwm-step-label">📖 Read like a Reader</div>
+<div class="rwm-step-text">The Witch is gathering her army before the battle. Who does she send for?</div>
+<div class="textbox-prompt">Write 1 sentence: what kind of creatures answer the Witch?</div>
+<div class="journal-label">📓 Your response <span class="saved-dot" id="dot-rwm-reader"></span></div>
+<textarea class="journal-box" id="journal-rwm-reader" data-label="RWM &mdash; Read like a Reader" placeholder="The Witch calls for..." oninput="autoSave(this,'dot-rwm-reader');gatherAnswers();"></textarea>
+</div>
+<div class="rwm-step">
+<div class="rwm-step-label">✏️ Read like a Writer</div>
+<div class="rwm-step-text">Lewis mostly invents these names, and he never explains one of them. The <strong>rhythm of the list</strong> does the work &mdash; and the last one, <em>the people of the Toadstools</em>, is longer than the rest, so the list lands with a thump.</div>
+<div class="textbox-prompt">Write 1 sentence: why is the last name in the list the longest?</div>
+<div class="journal-label">📓 Your response <span class="saved-dot" id="dot-rwm-writer"></span></div>
+<textarea class="journal-box" id="journal-rwm-writer" data-label="RWM &mdash; Read like a Writer" placeholder="Making the last one longest makes the list..." oninput="autoSave(this,'dot-rwm-writer');gatherAnswers();"></textarea>
+</div>
+<div class="rwm-step">
+<div class="rwm-step-label">🖊️ Mimic</div>
+<div class="rwm-step-text">Write a summoning list of your own. Invent three short names and make the last one longer.</div>
+<div class="rwm-frame">Sentence frame: Call the [name], the [name], the [name], and the [longer name].</div>
+<div class="textbox-prompt">Write your own summoning list.</div>
+<div class="journal-label">📓 Your sentence <span class="saved-dot" id="dot-rwm-mimic"></span></div>
+<textarea class="journal-box" id="journal-rwm-mimic" data-label="RWM &mdash; Mimic" placeholder="Write your sentence here..." oninput="autoSave(this,'dot-rwm-mimic');gatherAnswers();"></textarea>
+</div>
+</div>
+<div class="tab-next-wrap">
     <p class="tab-transition-voice">Great reading work! Now bring your thinking to the assignment.</p>
     <button class="tab-next-btn" onclick="switchTab('assignment')">Continue to 📬 Assignment →</button>
   </div>
@@ -2699,6 +2725,7 @@ function gatherAnswers() {
   var output = '';
   var sections = [
     { title: '📖 CHAPTER THINKING', ids: ['journal-q1','journal-q2','journal-q3'] },
+    { title: '📖 RWM — READ LIKE A READER / WRITER / MIMIC', ids: ['journal-rwm-reader', 'journal-rwm-writer', 'journal-rwm-mimic'] },
     { title: '🔤 WORD STUDY CONNECTION (MORPHOLOGY)', ids: ['journal-morph'] },
     { title: '🪶 WRITING CONNECTION', ids: ['journal-writing'] }
   ];

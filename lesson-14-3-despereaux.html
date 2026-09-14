@@ -2570,32 +2570,32 @@ function ladderTap(el){if(el.dataset.done)return;el.dataset.done="1";el.querySel
   </div>
 
   <div class="rwm-box">
-    <div class="rwm-header">📖 RWM — Read like a Reader, Read like a Writer, Mimic</div>
-    <div class="rwm-sentence">&ldquo;He was an unlikely hero, it must be admitted.&rdquo;</div>
-    <div class="rwm-step">
-      <div class="rwm-step-label">📖 Read like a Reader</div>
-      <div class="rwm-step-text">We're near the end of the story. What makes Despereaux an &ldquo;unlikely&rdquo; hero? What has he done that a typical storybook hero wouldn't?</div>
-      <div class="textbox-prompt">Write 1&ndash;2 sentences.</div>
-      <div class="journal-label">📓 Your response <span class="saved-dot" id="dot-rwm-reader"></span></div>
-      <textarea class="journal-box" id="journal-rwm-reader" data-label="RWM — Read like a Reader" placeholder="Despereaux is an unlikely hero because..." oninput="autoSave(this,'dot-rwm-reader');gatherAnswers();"></textarea>
-    </div>
-    <div class="rwm-step">
-      <div class="rwm-step-label">✏️ Read like a Writer</div>
-      <div class="rwm-step-text">The author ends the sentence with <strong>&ldquo;it must be admitted&rdquo;</strong> &mdash; as if she's being honest with us, almost apologetically. Try reading without it: &ldquo;He was an unlikely hero.&rdquo; What does that added phrase do to the narrator&rsquo;s voice?</div>
-      <div class="textbox-prompt">Write 1 sentence naming what the author did and why it works.</div>
-      <div class="journal-label">📓 Your response <span class="saved-dot" id="dot-rwm-writer"></span></div>
-      <textarea class="journal-box" id="journal-rwm-writer" data-label="RWM — Read like a Writer" placeholder="Adding "it must be admitted" makes the narrator sound..." oninput="autoSave(this,'dot-rwm-writer');gatherAnswers();"></textarea>
-    </div>
-    <div class="rwm-step">
-      <div class="rwm-step-label">🖊️ Mimic</div>
-      <div class="rwm-step-text">Write your own sentence describing someone honestly, with a small aside tucked at the end.</div>
-      <div class="rwm-frame">Sentence frame: [Name] was [adjective] [noun], it must be admitted.</div>
-      <div class="textbox-prompt">Write your own sentence using the same pattern as the author.</div>
-      <div class="journal-label">📓 Your sentence <span class="saved-dot" id="dot-rwm-mimic"></span></div>
-      <textarea class="journal-box" id="journal-rwm-mimic" data-label="RWM — Mimic" placeholder="Write your sentence here..." oninput="autoSave(this,'dot-rwm-mimic');gatherAnswers();"></textarea>
-    </div>
-  </div>
-    <div class="tab-next-wrap">
+<div class="rwm-header">📖 RWM &mdash; Read like a Reader, Read like a Writer, Mimic</div>
+<div class="rwm-sentence">&ldquo;And so, here are the words that the princess spoke to her enemy. She said, &ldquo;Roscuro, would you like some soup?&rdquo;&rdquo;</div>
+<div class="rwm-step">
+<div class="rwm-step-label">📖 Read like a Reader</div>
+<div class="rwm-step-text">The princess is chained in the dungeon and the rat who caused everything is standing in front of her. What does she choose to do?</div>
+<div class="textbox-prompt">Write 1 sentence: what does the princess do, and why is it surprising?</div>
+<div class="journal-label">📓 Your response <span class="saved-dot" id="dot-rwm-reader"></span></div>
+<textarea class="journal-box" id="journal-rwm-reader" data-label="RWM &mdash; Read like a Reader" placeholder="The princess chooses to..." oninput="autoSave(this,'dot-rwm-reader');gatherAnswers();"></textarea>
+</div>
+<div class="rwm-step">
+<div class="rwm-step-label">✏️ Read like a Writer</div>
+<div class="rwm-step-text">DiCamillo builds it up &mdash; <strong>here are the words that the princess spoke to her enemy</strong> &mdash; so you expect something huge. Then the words are the smallest, most ordinary offer in the book. The gap between the build-up and the words is where the whole story lands.</div>
+<div class="textbox-prompt">Write 1 sentence: why announce the words first instead of just letting her say them?</div>
+<div class="journal-label">📓 Your response <span class="saved-dot" id="dot-rwm-writer"></span></div>
+<textarea class="journal-box" id="journal-rwm-writer" data-label="RWM &mdash; Read like a Writer" placeholder="The build-up matters because..." oninput="autoSave(this,'dot-rwm-writer');gatherAnswers();"></textarea>
+</div>
+<div class="rwm-step">
+<div class="rwm-step-label">🖊️ Mimic</div>
+<div class="rwm-step-text">Write about someone forgiving another person with something ordinary. Announce the words first, then let them be small.</div>
+<div class="rwm-frame">Sentence frame: And so, here are the words that [who] spoke to [whom]. [He/She] said, &ldquo;[the small, ordinary words].&rdquo;</div>
+<div class="textbox-prompt">Write your own build-up-then-small-words sentence.</div>
+<div class="journal-label">📓 Your sentence <span class="saved-dot" id="dot-rwm-mimic"></span></div>
+<textarea class="journal-box" id="journal-rwm-mimic" data-label="RWM &mdash; Mimic" placeholder="Write your sentence here..." oninput="autoSave(this,'dot-rwm-mimic');gatherAnswers();"></textarea>
+</div>
+</div>
+<div class="tab-next-wrap">
     <p class="tab-transition-voice">You&rsquo;ve read, you&rsquo;ve paused, you&rsquo;ve thought. Time to show what you know.</p>
     <button class="tab-next-btn" onclick="switchTab('assignment')">Continue to 📬 Assignment →</button>
   </div>

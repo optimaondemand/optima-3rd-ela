@@ -2596,7 +2596,33 @@ Could frame thy fearful symmetry?</div>
             <textarea class="journal-box" id="journal-q3" data-label="Q3: setting contrast" placeholder="Narnia feels... The Professor's house feels... Lewis shows this by..." oninput="autoSave(this,'dot-journal-q3');gatherAnswers();"></textarea>
           </div>
         </div>
-  <div class="tab-next-wrap">
+  <div class="rwm-box">
+<div class="rwm-header">📖 RWM &mdash; Read like a Reader, Read like a Writer, Mimic</div>
+<div class="rwm-sentence">&ldquo;It was the sort of house that you never seem to come to the end of, and it was full of unexpected places.&rdquo;</div>
+<div class="rwm-step">
+<div class="rwm-step-label">📖 Read like a Reader</div>
+<div class="rwm-step-text">The children have arrived at the Professor&rsquo;s house and are about to start exploring. What kind of house is it?</div>
+<div class="textbox-prompt">Write 1 sentence: what is the house like, and why does that matter to the story?</div>
+<div class="journal-label">📓 Your response <span class="saved-dot" id="dot-rwm-reader"></span></div>
+<textarea class="journal-box" id="journal-rwm-reader" data-label="RWM &mdash; Read like a Reader" placeholder="The house is..." oninput="autoSave(this,'dot-rwm-reader');gatherAnswers();"></textarea>
+</div>
+<div class="rwm-step">
+<div class="rwm-step-label">✏️ Read like a Writer</div>
+<div class="rwm-step-text">Lewis does not measure the house &mdash; no rooms, no doors, no size. He tells you what it feels like to be inside it: one you <strong>never seem to come to the end of</strong>. That is how you make a house feel big enough to hold a wardrobe to another world.</div>
+<div class="textbox-prompt">Write 1 sentence: why describe the feeling of the house instead of its size?</div>
+<div class="journal-label">📓 Your response <span class="saved-dot" id="dot-rwm-writer"></span></div>
+<textarea class="journal-box" id="journal-rwm-writer" data-label="RWM &mdash; Read like a Writer" placeholder="Describing the feeling works better because..." oninput="autoSave(this,'dot-rwm-writer');gatherAnswers();"></textarea>
+</div>
+<div class="rwm-step">
+<div class="rwm-step-label">🖊️ Mimic</div>
+<div class="rwm-step-text">Describe a building you know by how it feels to be in it, not by how big it is.</div>
+<div class="rwm-frame">Sentence frame: It was the sort of [place] that you never seem to [verb], and it was full of [something].</div>
+<div class="textbox-prompt">Write your own sort-of-place sentence.</div>
+<div class="journal-label">📓 Your sentence <span class="saved-dot" id="dot-rwm-mimic"></span></div>
+<textarea class="journal-box" id="journal-rwm-mimic" data-label="RWM &mdash; Mimic" placeholder="Write your sentence here..." oninput="autoSave(this,'dot-rwm-mimic');gatherAnswers();"></textarea>
+</div>
+</div>
+<div class="tab-next-wrap">
     <p class="tab-transition-voice">Great reading work! Now bring your thinking to the assignment.</p>
     <button class="tab-next-btn" onclick="switchTab('assignment')">Continue to 📬 Assignment →</button>
   </div>
@@ -2697,6 +2723,7 @@ function gatherAnswers() {
   var output = '';
   var sections = [
     { title: '📖 CHAPTER THINKING', ids: ['journal-q1','journal-q2','journal-q3'] },
+    { title: '📖 RWM — READ LIKE A READER / WRITER / MIMIC', ids: ['journal-rwm-reader', 'journal-rwm-writer', 'journal-rwm-mimic'] },
     { title: '🔤 WORD STUDY CONNECTION (MORPHOLOGY)', ids: ['journal-morph'] },
     { title: '🪶 WRITING CONNECTION', ids: ['journal-writing'] }
   ];

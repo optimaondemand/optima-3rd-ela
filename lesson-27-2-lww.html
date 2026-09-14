@@ -2603,7 +2603,33 @@ And said, &ldquo;Could you say that less loud?&rdquo;</div>
             <textarea class="journal-box" id="journal-q3" data-label="Q3: Lewis's technique" placeholder="Lewis shows this by... For example, when Edmund..." oninput="autoSave(this,'dot-journal-q3');gatherAnswers();"></textarea>
           </div>
         </div>
-  <div class="tab-next-wrap">
+  <div class="rwm-box">
+<div class="rwm-header">📖 RWM &mdash; Read like a Reader, Read like a Writer, Mimic</div>
+<div class="rwm-sentence">&ldquo;They all saw it this time, a whiskered furry face which had looked out at them from behind a tree.&rdquo;</div>
+<div class="rwm-step">
+<div class="rwm-step-label">📖 Read like a Reader</div>
+<div class="rwm-step-text">Something has been moving in the trees while the children stand and watch. What do they finally see?</div>
+<div class="textbox-prompt">Write 1 sentence: what do the children see, and how do they feel?</div>
+<div class="journal-label">📓 Your response <span class="saved-dot" id="dot-rwm-reader"></span></div>
+<textarea class="journal-box" id="journal-rwm-reader" data-label="RWM &mdash; Read like a Reader" placeholder="The children see..." oninput="autoSave(this,'dot-rwm-reader');gatherAnswers();"></textarea>
+</div>
+<div class="rwm-step">
+<div class="rwm-step-label">✏️ Read like a Writer</div>
+<div class="rwm-step-text">Notice the order. First <strong>it</strong> &mdash; a nothing-word that keeps the mystery. Only after the comma does Lewis hand over the face. Holding the noun back for a few words is how a writer makes a reader lean in.</div>
+<div class="textbox-prompt">Write 1 sentence: why say <em>it</em> first instead of naming the face straight away?</div>
+<div class="journal-label">📓 Your response <span class="saved-dot" id="dot-rwm-writer"></span></div>
+<textarea class="journal-box" id="journal-rwm-writer" data-label="RWM &mdash; Read like a Writer" placeholder="Saying it first makes the reader..." oninput="autoSave(this,'dot-rwm-writer');gatherAnswers();"></textarea>
+</div>
+<div class="rwm-step">
+<div class="rwm-step-label">🖊️ Mimic</div>
+<div class="rwm-step-text">Write about spotting something half-hidden. Say <em>it</em> first, then give the thing after a comma.</div>
+<div class="rwm-frame">Sentence frame: They all saw it this time, [the thing described] which [what it was doing].</div>
+<div class="textbox-prompt">Write your own hold-it-back sentence.</div>
+<div class="journal-label">📓 Your sentence <span class="saved-dot" id="dot-rwm-mimic"></span></div>
+<textarea class="journal-box" id="journal-rwm-mimic" data-label="RWM &mdash; Mimic" placeholder="Write your sentence here..." oninput="autoSave(this,'dot-rwm-mimic');gatherAnswers();"></textarea>
+</div>
+</div>
+<div class="tab-next-wrap">
     <p class="tab-transition-voice">Great reading work! Now bring your thinking to the assignment.</p>
     <button class="tab-next-btn" onclick="switchTab('assignment')">Continue to 📬 Assignment →</button>
   </div>
@@ -2704,6 +2730,7 @@ function gatherAnswers() {
   var output = '';
   var sections = [
     { title: '📖 CHAPTER THINKING', ids: ['journal-q1','journal-q2','journal-q3'] },
+    { title: '📖 RWM — READ LIKE A READER / WRITER / MIMIC', ids: ['journal-rwm-reader', 'journal-rwm-writer', 'journal-rwm-mimic'] },
     { title: '🔤 WORD STUDY CONNECTION (MORPHOLOGY)', ids: ['journal-morph'] },
     { title: '🪶 WRITING CONNECTION', ids: ['journal-writing'] }
   ];

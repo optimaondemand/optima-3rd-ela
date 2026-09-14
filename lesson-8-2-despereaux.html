@@ -2579,7 +2579,33 @@ and he was smiling up at the sight.</div>
     </div>
   </div>
 
-  <div class="tab-next-wrap">
+  <div class="rwm-box">
+<div class="rwm-header">📖 RWM &mdash; Read like a Reader, Read like a Writer, Mimic</div>
+<div class="rwm-sentence">&ldquo;He was staring at the light pouring in through the stained-glass windows of the castle.&rdquo;</div>
+<div class="rwm-step">
+<div class="rwm-step-label">📖 Read like a Reader</div>
+<div class="rwm-step-text">Furlough is trying to teach Despereaux how to scurry. What is Despereaux doing instead?</div>
+<div class="textbox-prompt">Write 1 sentence: what is Despereaux doing, and why does it worry his brother?</div>
+<div class="journal-label">📓 Your response <span class="saved-dot" id="dot-rwm-reader"></span></div>
+<textarea class="journal-box" id="journal-rwm-reader" data-label="RWM &mdash; Read like a Reader" placeholder="Despereaux is..." oninput="autoSave(this,'dot-rwm-reader');gatherAnswers();"></textarea>
+</div>
+<div class="rwm-step">
+<div class="rwm-step-label">✏️ Read like a Writer</div>
+<div class="rwm-step-text">The light is <strong>pouring</strong> &mdash; a word for water, not light. DiCamillo borrows it so the light seems to come in thick, like something you could stand under. One borrowed verb and you can see the whole room.</div>
+<div class="textbox-prompt">Write 1 sentence: what does <em>pouring</em> make the light seem like?</div>
+<div class="journal-label">📓 Your response <span class="saved-dot" id="dot-rwm-writer"></span></div>
+<textarea class="journal-box" id="journal-rwm-writer" data-label="RWM &mdash; Read like a Writer" placeholder="The word pouring makes the light seem..." oninput="autoSave(this,'dot-rwm-writer');gatherAnswers();"></textarea>
+</div>
+<div class="rwm-step">
+<div class="rwm-step-label">🖊️ Mimic</div>
+<div class="rwm-step-text">Write about light coming into a room. Borrow a verb from water or from something else that moves.</div>
+<div class="rwm-frame">Sentence frame: [Who] was staring at the light [water verb] in through the [something].</div>
+<div class="textbox-prompt">Write your own borrowed-verb sentence.</div>
+<div class="journal-label">📓 Your sentence <span class="saved-dot" id="dot-rwm-mimic"></span></div>
+<textarea class="journal-box" id="journal-rwm-mimic" data-label="RWM &mdash; Mimic" placeholder="Write your sentence here..." oninput="autoSave(this,'dot-rwm-mimic');gatherAnswers();"></textarea>
+</div>
+</div>
+<div class="tab-next-wrap">
     <p class="tab-transition-voice">You&rsquo;ve read, you&rsquo;ve paused, you&rsquo;ve thought. Time to show what you know.</p>
     <button class="tab-next-btn" onclick="switchTab('assignment')">Continue to 📬 Assignment →</button>
   </div>
@@ -2775,7 +2801,7 @@ function gatherAnswers() {
   var sections = [
     { title: '🌅 WARM-UP', ids: ['journal-wgrd', 'journal-dol'] },
     { title: '🔤 WORD STUDY', ids: ['journal-morph', 'journal-vocab', 'journal-grammar', 'journal-spelling', 'journal-writing'] },
-    { title: '📖 READING — PAUSE & THINK', ids: ['journal-pause1', 'journal-pause2'] },
+    { title: '📖 READING — PAUSE & THINK', ids: ['journal-pause1', 'journal-pause2', 'journal-rwm-reader', 'journal-rwm-writer', 'journal-rwm-mimic'] },
     { title: '📬 READING COMPREHENSION', ids: ['journal-q1','journal-q2','journal-q3','journal-q4','journal-q5','journal-q6','journal-q7'] },
     { title: '✍️ WRITER\'S WORKSHOP', ids: ['journal-ww'] }
   ];

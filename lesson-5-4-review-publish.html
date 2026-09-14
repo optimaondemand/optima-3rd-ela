@@ -2341,6 +2341,32 @@ function checkEdDice(){var w=document.getElementById("edWord").textContent;for(v
 <textarea class="journal-box" id="journal-pause1" data-label="Pause &amp; Think" placeholder="I think..." oninput="autoSave(this,'dot-pause1')"></textarea>
 </div></div>
 </div></div>
+<div class="rwm-box">
+<div class="rwm-header">📖 RWM &mdash; Read like a Reader, Read like a Writer, Mimic</div>
+<div class="rwm-sentence">&ldquo;It had been a long and tiring day. Very soon all the Lambchops were asleep.&rdquo;</div>
+<div class="rwm-step">
+<div class="rwm-step-label">📖 Read like a Reader</div>
+<div class="rwm-step-text">These are the last two sentences of the whole book. What is left to happen after them?</div>
+<div class="textbox-prompt">Write 1 sentence: how does the book leave the Lambchops?</div>
+<div class="journal-label">📓 Your response <span class="saved-dot" id="dot-rwm-reader"></span></div>
+<textarea class="journal-box" id="journal-rwm-reader" data-label="RWM &mdash; Read like a Reader" placeholder="At the end, the Lambchops..." oninput="autoSave(this,'dot-rwm-reader');gatherAnswers();"></textarea>
+</div>
+<div class="rwm-step">
+<div class="rwm-step-label">✏️ Read like a Writer</div>
+<div class="rwm-step-text">The author does not say &ldquo;the adventure was over&rdquo; or &ldquo;Stanley learned a lesson.&rdquo; He just puts everyone to <strong>sleep</strong>. A good ending stops the action gently instead of explaining it.</div>
+<div class="textbox-prompt">Write 1 sentence: why is falling asleep a good way to end this book?</div>
+<div class="journal-label">📓 Your response <span class="saved-dot" id="dot-rwm-writer"></span></div>
+<textarea class="journal-box" id="journal-rwm-writer" data-label="RWM &mdash; Read like a Writer" placeholder="Ending with sleep works because..." oninput="autoSave(this,'dot-rwm-writer');gatherAnswers();"></textarea>
+</div>
+<div class="rwm-step">
+<div class="rwm-step-label">🖊️ Mimic</div>
+<div class="rwm-step-text">Today you publish. Write the last two sentences of your own narrative the same way &mdash; one that says how the day felt, one that stops the action.</div>
+<div class="rwm-frame">Sentence frame: It had been a [adjective] day. Soon [who] [did the last small thing].</div>
+<div class="textbox-prompt">Write the last two sentences of your narrative.</div>
+<div class="journal-label">📓 Your sentence <span class="saved-dot" id="dot-rwm-mimic"></span></div>
+<textarea class="journal-box" id="journal-rwm-mimic" data-label="RWM &mdash; Mimic" placeholder="Write your sentence here..." oninput="autoSave(this,'dot-rwm-mimic');gatherAnswers();"></textarea>
+</div>
+</div>
 <div class="tab-next-wrap">
 <p class="tab-transition-voice">You&rsquo;ve read and thought carefully. Time to show what you know!</p>
 <button class="tab-next-btn" onclick="switchTab('assignment')">Continue to 📬 Assignment →</button>
@@ -2413,7 +2439,7 @@ function expandIntro(){document.getElementById("introSection").classList.remove(
 function gatherAnswers(){var output="";var sections=[
 {title:"🌅 WARM-UP",ids:["journal-wgrd","journal-dol"]},
 {title:"🔤 WORD STUDY",ids:["journal-swyk","journal-gram","journal-writing"]},
-{title:"📖 READING",ids:["journal-pause1"]},
+{title:"📖 READING",ids:["journal-pause1","journal-rwm-reader","journal-rwm-writer","journal-rwm-mimic"]},
 {title:"📬 COMPREHENSION",ids:["journal-q1","journal-q2","journal-q3","journal-wp"]}
 ];
 output+="LESSON 5.4 — Flat Stanley, Share Your Story\n";

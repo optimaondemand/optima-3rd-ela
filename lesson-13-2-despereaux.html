@@ -2592,7 +2592,33 @@ and then moves on.</div>
     </div>
   </div>
 
-  <div class="tab-next-wrap">
+  <div class="rwm-box">
+<div class="rwm-header">📖 RWM &mdash; Read like a Reader, Read like a Writer, Mimic</div>
+<div class="rwm-sentence">&ldquo;The king, tears still falling from his eyes, looked at the floor.&rdquo;</div>
+<div class="rwm-step">
+<div class="rwm-step-label">📖 Read like a Reader</div>
+<div class="rwm-step-text">A mouse has come to tell the king where his daughter is. What is the king doing?</div>
+<div class="textbox-prompt">Write 1 sentence: what state is the king in?</div>
+<div class="journal-label">📓 Your response <span class="saved-dot" id="dot-rwm-reader"></span></div>
+<textarea class="journal-box" id="journal-rwm-reader" data-label="RWM &mdash; Read like a Reader" placeholder="The king is..." oninput="autoSave(this,'dot-rwm-reader');gatherAnswers();"></textarea>
+</div>
+<div class="rwm-step">
+<div class="rwm-step-label">✏️ Read like a Writer</div>
+<div class="rwm-step-text">The sentence is interrupted. <strong>The king</strong> &hellip; and then, between commas, the tears &hellip; and only then what he did. Slipping a detail into the middle slows the sentence down, the way grief slows a person down.</div>
+<div class="textbox-prompt">Write 1 sentence: what does putting the tears in the middle do to the sentence?</div>
+<div class="journal-label">📓 Your response <span class="saved-dot" id="dot-rwm-writer"></span></div>
+<textarea class="journal-box" id="journal-rwm-writer" data-label="RWM &mdash; Read like a Writer" placeholder="Putting the tears in the middle makes it feel..." oninput="autoSave(this,'dot-rwm-writer');gatherAnswers();"></textarea>
+</div>
+<div class="rwm-step">
+<div class="rwm-step-label">🖊️ Mimic</div>
+<div class="rwm-step-text">Write about someone sad. Put the detail about their face in the middle, between commas.</div>
+<div class="rwm-frame">Sentence frame: [Who], [detail about them], [did something].</div>
+<div class="textbox-prompt">Write your own interrupted sentence.</div>
+<div class="journal-label">📓 Your sentence <span class="saved-dot" id="dot-rwm-mimic"></span></div>
+<textarea class="journal-box" id="journal-rwm-mimic" data-label="RWM &mdash; Mimic" placeholder="Write your sentence here..." oninput="autoSave(this,'dot-rwm-mimic');gatherAnswers();"></textarea>
+</div>
+</div>
+<div class="tab-next-wrap">
     <p class="tab-transition-voice">You&rsquo;ve read, you&rsquo;ve paused, you&rsquo;ve thought. Time to show what you know.</p>
     <button class="tab-next-btn" onclick="switchTab('assignment')">Continue to 📬 Assignment →</button>
   </div>
@@ -2781,7 +2807,7 @@ function gatherAnswers() {
   var sections = [
     { title: '🌅 WARM-UP', ids: ['journal-wgrd', 'journal-dol'] },
     { title: '🔤 WORD STUDY', ids: ['journal-morph', 'journal-vocab', 'journal-grammar', 'journal-spelling', 'journal-writing'] },
-    { title: '📖 READING — PAUSE & THINK', ids: ['journal-pause1', 'journal-pause2'] },
+    { title: '📖 READING — PAUSE & THINK', ids: ['journal-pause1', 'journal-pause2', 'journal-rwm-reader', 'journal-rwm-writer', 'journal-rwm-mimic'] },
     { title: '📬 READING COMPREHENSION', ids: ['journal-q1','journal-q2','journal-q3','journal-q4','journal-q5','journal-q6','journal-q7'] },
     { title: '✍️ WRITER\'S WORKSHOP', ids: ['journal-ww'] }
   ];

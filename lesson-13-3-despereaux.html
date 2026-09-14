@@ -2568,32 +2568,31 @@ function spellReveal(c){if(c.classList.contains("done"))return;c.classList.add("
   
   <!-- RWM -->
   <div class="rwm-box">
-    <div class="rwm-header">📖 RWM — Read like a Reader, Read like a Writer, Mimic</div>
-    <div class="rwm-sentence">&ldquo;Forgiving is not forgetting. It is choosing to do something difficult because you know it is right.&rdquo;</div>
-    <div class="rwm-craft-note">📌 Craft focus: definition by contrast — what something is NOT, then what it IS</div>
-    <div class="rwm-step">
-      <div class="rwm-step-label">📖 Read like a Reader</div>
-      <div class="rwm-step-text">By the end, Despereaux faces a choice about forgiveness. Do you think he makes the right choice? Is there a difference between forgiving someone and forgetting what they did?</div>
-      <div class="textbox-prompt">Write 1–2 sentences about what this moment reveals about the character or the story.</div>
-      <div class="journal-label">📓 Your response <span class="saved-dot" id="dot-rwm-reader"></span></div>
-      <textarea class="journal-box" id="journal-rwm-reader" data-label="RWM — Read like a Reader" placeholder="This sentence shows..." oninput="autoSave(this,'dot-rwm-reader');gatherAnswers();"></textarea>
-    </div>
-    <div class="rwm-step">
-      <div class="rwm-step-label">✏️ Read like a Writer</div>
-      <div class="rwm-step-text">The author defines forgiveness by telling us first what it is NOT — <em>"Forgiving is not forgetting."</em> Then she tells us what it IS. Why start with the negative? What does that teach us before we even hear the definition?</div>
-      <div class="textbox-prompt">Write 1–2 sentences naming what the author did and why it works.</div>
-      <div class="journal-label">📓 Your response <span class="saved-dot" id="dot-rwm-writer"></span></div>
-      <textarea class="journal-box" id="journal-rwm-writer" data-label="RWM — Read like a Writer" placeholder="The author used... This works because..." oninput="autoSave(this,'dot-rwm-writer');gatherAnswers();"></textarea>
-    </div>
-    <div class="rwm-step">
-      <div class="rwm-step-label">🖊️ Mimic</div>
-      <div class="rwm-step-text">Write your own sentence using the same pattern as the author.</div>
-      <div class="rwm-frame">Sentence frame: [Concept] is not [wrong definition]. It is [true definition that surprises].</div>
-      <div class="textbox-prompt">Write your sentence below using the same pattern as the author.</div>
-      <div class="journal-label">📓 Your sentence <span class="saved-dot" id="dot-rwm-mimic"></span></div>
-      <textarea class="journal-box" id="journal-rwm-mimic" data-label="RWM — Mimic" placeholder="Write your sentence here..." oninput="autoSave(this,'dot-rwm-mimic');gatherAnswers();"></textarea>
-    </div>
-  </div>
+<div class="rwm-header">📖 RWM &mdash; Read like a Reader, Read like a Writer, Mimic</div>
+<div class="rwm-sentence">&ldquo;Honestly, reader, what do you think the chances are of such a small mouse succeeding in his quest?&rdquo;</div>
+<div class="rwm-step">
+<div class="rwm-step-label">📖 Read like a Reader</div>
+<div class="rwm-step-text">Despereaux has gone back into the dungeon, alone, with a needle and a spool of thread. What is the narrator asking you?</div>
+<div class="textbox-prompt">Write 1 sentence: what are Despereaux&rsquo;s chances, and why?</div>
+<div class="journal-label">📓 Your response <span class="saved-dot" id="dot-rwm-reader"></span></div>
+<textarea class="journal-box" id="journal-rwm-reader" data-label="RWM &mdash; Read like a Reader" placeholder="I think his chances are..." oninput="autoSave(this,'dot-rwm-reader');gatherAnswers();"></textarea>
+</div>
+<div class="rwm-step">
+<div class="rwm-step-label">✏️ Read like a Writer</div>
+<div class="rwm-step-text">This is a <strong>question the narrator does not answer</strong>. She hands it to you and makes you do the worrying yourself. A question can pull a reader into a story in a way a statement never will.</div>
+<div class="textbox-prompt">Write 1 sentence: why ask the reader instead of just telling us it looked hopeless?</div>
+<div class="journal-label">📓 Your response <span class="saved-dot" id="dot-rwm-writer"></span></div>
+<textarea class="journal-box" id="journal-rwm-writer" data-label="RWM &mdash; Read like a Writer" placeholder="Asking me makes me..." oninput="autoSave(this,'dot-rwm-writer');gatherAnswers();"></textarea>
+</div>
+<div class="rwm-step">
+<div class="rwm-step-label">🖊️ Mimic</div>
+<div class="rwm-step-text">Write about someone attempting something very hard, and ask your reader a question instead of telling them the odds.</div>
+<div class="rwm-frame">Sentence frame: Honestly, reader, what do you think the chances are of [who] [doing the hard thing]?</div>
+<div class="textbox-prompt">Write your own question to your reader.</div>
+<div class="journal-label">📓 Your sentence <span class="saved-dot" id="dot-rwm-mimic"></span></div>
+<textarea class="journal-box" id="journal-rwm-mimic" data-label="RWM &mdash; Mimic" placeholder="Write your sentence here..." oninput="autoSave(this,'dot-rwm-mimic');gatherAnswers();"></textarea>
+</div>
+</div>
 <div class="tab-next-wrap">
     <p class="tab-transition-voice">You&rsquo;ve read, you&rsquo;ve paused, you&rsquo;ve thought. Time to show what you know.</p>
     <button class="tab-next-btn" onclick="switchTab('assignment')">Continue to 📬 Assignment →</button>

@@ -2841,7 +2841,33 @@ Nor harmless worms that creep.</div>
     </div>
   </div>
 
-  <div class="tab-next-wrap">
+  <div class="rwm-box">
+<div class="rwm-header">📖 RWM &mdash; Read like a Reader, Read like a Writer, Mimic</div>
+<div class="rwm-sentence">&ldquo;Gaw, he thought, it&rsquo;s not enough to choose my words as if I were a prince.&rdquo;</div>
+<div class="rwm-step">
+<div class="rwm-step-label">📖 Read like a Reader</div>
+<div class="rwm-step-text">You are thinking about what this whole story is really about. Jemmy is pretending to be the prince and finding it harder than he expected. What is he realising?</div>
+<div class="textbox-prompt">Write 1 sentence: what is Jemmy learning about being a prince?</div>
+<div class="journal-label">📓 Your response <span class="saved-dot" id="dot-rwm-reader"></span></div>
+<textarea class="journal-box" id="journal-rwm-reader" data-label="RWM &mdash; Read like a Reader" placeholder="Jemmy is learning that..." oninput="autoSave(this,'dot-rwm-reader');gatherAnswers();"></textarea>
+</div>
+<div class="rwm-step">
+<div class="rwm-step-label">✏️ Read like a Writer</div>
+<div class="rwm-step-text">Fleischman drops you straight into Jemmy&rsquo;s head, no quotation marks, starting with his own word: <strong>Gaw</strong>. Thoughts written this way sound like a real person thinking, not like a narrator reporting.</div>
+<div class="textbox-prompt">Write 1 sentence: why write the thought in Jemmy&rsquo;s own voice instead of explaining it?</div>
+<div class="journal-label">📓 Your response <span class="saved-dot" id="dot-rwm-writer"></span></div>
+<textarea class="journal-box" id="journal-rwm-writer" data-label="RWM &mdash; Read like a Writer" placeholder="Hearing his own voice makes it..." oninput="autoSave(this,'dot-rwm-writer');gatherAnswers();"></textarea>
+</div>
+<div class="rwm-step">
+<div class="rwm-step-label">🖊️ Mimic</div>
+<div class="rwm-step-text">Write a thought of your own the same way &mdash; your word first, then the thought, no quotation marks.</div>
+<div class="rwm-frame">Sentence frame: [Your own word], [who] thought, it&rsquo;s not enough to [do something].</div>
+<div class="textbox-prompt">Write your own thought sentence.</div>
+<div class="journal-label">📓 Your sentence <span class="saved-dot" id="dot-rwm-mimic"></span></div>
+<textarea class="journal-box" id="journal-rwm-mimic" data-label="RWM &mdash; Mimic" placeholder="Write your sentence here..." oninput="autoSave(this,'dot-rwm-mimic');gatherAnswers();"></textarea>
+</div>
+</div>
+<div class="tab-next-wrap">
     <p class="tab-transition-voice">You&rsquo;ve read and noticed. Now answer the questions and submit your work.</p>
     <button class="tab-next-btn" onclick="switchTab('assignment')">Continue to 📬 Assignment →</button>
   </div>
@@ -3016,6 +3042,7 @@ function gatherAnswers() {
   var output = '';
   var sections = [
     { title: '📖 CHAPTER THINKING', ids: ['journal-q1','journal-q2','journal-q3'] },
+    { title: '📖 RWM — READ LIKE A READER / WRITER / MIMIC', ids: ['journal-rwm-reader', 'journal-rwm-writer', 'journal-rwm-mimic'] },
     { title: '🔤 WORD STUDY CONNECTION (MORPHOLOGY)', ids: ['journal-morph'] },
     { title: '🪶 WRITING CONNECTION', ids: ['journal-writing'] }
   ];

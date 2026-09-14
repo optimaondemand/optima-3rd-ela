@@ -2588,32 +2588,31 @@ function checkSpellDice(){var w=document.getElementById("spellWord").textContent
   
   <!-- RWM -->
   <div class="rwm-box">
-    <div class="rwm-header">📖 RWM — Read like a Reader, Read like a Writer, Mimic</div>
-    <div class="rwm-sentence">&ldquo;And there, in the dungeon, the princess waited.&rdquo;</div>
-    <div class="rwm-craft-note">📌 Craft focus: short sentence after action; character placed at the end</div>
-    <div class="rwm-step">
-      <div class="rwm-step-label">📖 Read like a Reader</div>
-      <div class="rwm-step-text">The princess has been brought to the dungeon. This short sentence follows pages of action. How does the short sentence make you feel about where she is? What emotions does it bring up?</div>
-      <div class="textbox-prompt">Write 1–2 sentences about what this moment reveals about the character or the story.</div>
-      <div class="journal-label">📓 Your response <span class="saved-dot" id="dot-rwm-reader"></span></div>
-      <textarea class="journal-box" id="journal-rwm-reader" data-label="RWM — Read like a Reader" placeholder="This sentence shows..." oninput="autoSave(this,'dot-rwm-reader');gatherAnswers();"></textarea>
-    </div>
-    <div class="rwm-step">
-      <div class="rwm-step-label">✏️ Read like a Writer</div>
-      <div class="rwm-step-text">This sentence is very short — nine words. The character (the princess) comes at the <em>very end</em>. Try it the other way: <em>"The princess waited there, in the dungeon."</em> What's different? What does starting with <em>"And there"</em> do?</div>
-      <div class="textbox-prompt">Write 1–2 sentences naming what the author did and why it works.</div>
-      <div class="journal-label">📓 Your response <span class="saved-dot" id="dot-rwm-writer"></span></div>
-      <textarea class="journal-box" id="journal-rwm-writer" data-label="RWM — Read like a Writer" placeholder="The author used... This works because..." oninput="autoSave(this,'dot-rwm-writer');gatherAnswers();"></textarea>
-    </div>
-    <div class="rwm-step">
-      <div class="rwm-step-label">🖊️ Mimic</div>
-      <div class="rwm-step-text">Write your own sentence using the same pattern as the author.</div>
-      <div class="rwm-frame">Sentence frame: And there, in [place], [character] [verb].</div>
-      <div class="textbox-prompt">Write your sentence below using the same pattern as the author.</div>
-      <div class="journal-label">📓 Your sentence <span class="saved-dot" id="dot-rwm-mimic"></span></div>
-      <textarea class="journal-box" id="journal-rwm-mimic" data-label="RWM — Mimic" placeholder="Write your sentence here..." oninput="autoSave(this,'dot-rwm-mimic');gatherAnswers();"></textarea>
-    </div>
-  </div>
+<div class="rwm-header">📖 RWM &mdash; Read like a Reader, Read like a Writer, Mimic</div>
+<div class="rwm-sentence">&ldquo;There are those hearts, reader, that never mend again once they are broken.&rdquo;</div>
+<div class="rwm-step">
+<div class="rwm-step-label">📖 Read like a Reader</div>
+<div class="rwm-step-text">The princess has just looked at Roscuro with disgust and he has fallen into the soup. What has happened inside the rat?</div>
+<div class="textbox-prompt">Write 1 sentence: what has happened to Roscuro?</div>
+<div class="journal-label">📓 Your response <span class="saved-dot" id="dot-rwm-reader"></span></div>
+<textarea class="journal-box" id="journal-rwm-reader" data-label="RWM &mdash; Read like a Reader" placeholder="Something in Roscuro..." oninput="autoSave(this,'dot-rwm-reader');gatherAnswers();"></textarea>
+</div>
+<div class="rwm-step">
+<div class="rwm-step-label">✏️ Read like a Writer</div>
+<div class="rwm-step-text">DiCamillo stops the story to say <strong>reader</strong> &mdash; right in the middle of the sentence, between commas. She is turning to you, the way a storyteller leans in. Notice she does not say it is Roscuro&rsquo;s heart. She lets you work that out.</div>
+<div class="textbox-prompt">Write 1 sentence: why does she stop to speak to <em>you</em> here?</div>
+<div class="journal-label">📓 Your response <span class="saved-dot" id="dot-rwm-writer"></span></div>
+<textarea class="journal-box" id="journal-rwm-writer" data-label="RWM &mdash; Read like a Writer" placeholder="Speaking to the reader makes it feel..." oninput="autoSave(this,'dot-rwm-writer');gatherAnswers();"></textarea>
+</div>
+<div class="rwm-step">
+<div class="rwm-step-label">🖊️ Mimic</div>
+<div class="rwm-step-text">Write a sentence about something that cannot be undone, and turn to your reader in the middle of it.</div>
+<div class="rwm-frame">Sentence frame: There are those [things], reader, that never [verb] again once they are [what happened].</div>
+<div class="textbox-prompt">Write your own reader sentence.</div>
+<div class="journal-label">📓 Your sentence <span class="saved-dot" id="dot-rwm-mimic"></span></div>
+<textarea class="journal-box" id="journal-rwm-mimic" data-label="RWM &mdash; Mimic" placeholder="Write your sentence here..." oninput="autoSave(this,'dot-rwm-mimic');gatherAnswers();"></textarea>
+</div>
+</div>
 <div class="tab-next-wrap">
     <p class="tab-transition-voice">You&rsquo;ve read, you&rsquo;ve paused, you&rsquo;ve thought. Time to show what you know.</p>
     <button class="tab-next-btn" onclick="switchTab('assignment')">Continue to 📬 Assignment →</button>

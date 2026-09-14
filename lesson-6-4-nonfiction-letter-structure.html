@@ -2330,6 +2330,32 @@ A friendly letter has five parts, and each part has a job to do. The <strong>hea
 <div class="journal-label">📓 Your response <span class="saved-dot" id="dot-pause1"></span></div>
 <textarea class="journal-box" id="journal-pause1" data-label="Pause &amp; Think" placeholder="I think..." oninput="autoSave(this,'dot-pause1')"></textarea>
 </div></div>
+<div class="rwm-box">
+<div class="rwm-header">📖 RWM &mdash; Read like a Reader, Read like a Writer, Mimic</div>
+<div class="rwm-sentence">&ldquo;When all five parts are in the right place, your letter is ready to send!&rdquo;</div>
+<div class="rwm-step">
+<div class="rwm-step-label">📖 Read like a Reader</div>
+<div class="rwm-step-text">The article has just walked you through the heading, greeting, body, closing and signature. What is this last sentence doing?</div>
+<div class="textbox-prompt">Write 1 sentence: what does this sentence tell you about the five parts?</div>
+<div class="journal-label">📓 Your response <span class="saved-dot" id="dot-rwm-reader"></span></div>
+<textarea class="journal-box" id="journal-rwm-reader" data-label="RWM &mdash; Read like a Reader" placeholder="This tells me that the five parts..." oninput="autoSave(this,'dot-rwm-reader');gatherAnswers();"></textarea>
+</div>
+<div class="rwm-step">
+<div class="rwm-step-label">✏️ Read like a Writer</div>
+<div class="rwm-step-text">This is the writer&rsquo;s <strong>closing sentence</strong>, and it does two jobs at once: it sums up everything above it, and it tells you what to do next. Notice it starts with <em>When</em> &mdash; the first half sets the condition, the second half gives the result.</div>
+<div class="textbox-prompt">Write 1 sentence: what two jobs does this closing sentence do?</div>
+<div class="journal-label">📓 Your response <span class="saved-dot" id="dot-rwm-writer"></span></div>
+<textarea class="journal-box" id="journal-rwm-writer" data-label="RWM &mdash; Read like a Writer" placeholder="This sentence both..." oninput="autoSave(this,'dot-rwm-writer');gatherAnswers();"></textarea>
+</div>
+<div class="rwm-step">
+<div class="rwm-step-label">🖊️ Mimic</div>
+<div class="rwm-step-text">Write a closing sentence for something that has steps &mdash; making a sandwich, packing for a trip. Start it with <em>When</em>.</div>
+<div class="rwm-frame">Sentence frame: When [all the steps are done], your [thing] is ready to [do something]!</div>
+<div class="textbox-prompt">Write your own When&hellip; closing sentence.</div>
+<div class="journal-label">📓 Your sentence <span class="saved-dot" id="dot-rwm-mimic"></span></div>
+<textarea class="journal-box" id="journal-rwm-mimic" data-label="RWM &mdash; Mimic" placeholder="Write your sentence here..." oninput="autoSave(this,'dot-rwm-mimic');gatherAnswers();"></textarea>
+</div>
+</div>
 <div class="tab-next-wrap"><p class="tab-transition-voice">Great reading! Time to show what you know.</p>
 <button class="tab-next-btn" onclick="switchTab('assignment')">Continue to 📬 Assignment →</button></div>
 </div><!-- /tab-reading -->
@@ -2409,7 +2435,7 @@ function updateProgress(){const t=document.querySelectorAll(".tab-btn").length;c
 document.querySelector(".tab-btn.active").classList.add("visited");updateProgress();
 function gatherAnswers(){var out="";
 out+="LESSON 6.4 — The Five Parts of a Friendly Letter\n════════════════════\n\n";
-var ids=[{t:"🌅 WARM-UP",ids:["journal-wgrd","journal-dol"]},{t:"🔤 WORD STUDY",ids:["journal-swyk","journal-grammar","journal-writing"]},{t:"📰 READING",ids:["journal-pause1"]},{t:"📬 ASSIGNMENT",ids:["journal-q1","journal-q2","journal-q3","journal-wp"]}];
+var ids=[{t:"🌅 WARM-UP",ids:["journal-wgrd","journal-dol"]},{t:"🔤 WORD STUDY",ids:["journal-swyk","journal-grammar","journal-writing"]},{t:"📰 READING",ids:["journal-pause1","journal-rwm-reader","journal-rwm-writer","journal-rwm-mimic"]},{t:"📬 ASSIGNMENT",ids:["journal-q1","journal-q2","journal-q3","journal-wp"]}];
 ids.forEach(function(s){out+=s.t+"\n────────────────\n";s.ids.forEach(function(id){var el=document.getElementById(id);if(!el)return;var v=el.value.trim();out+="\n"+(el.getAttribute("data-label")||id)+"\n"+(v||"(no answer)")+"\n"});out+="\n"});
 
 

@@ -2596,7 +2596,33 @@ A man goes riding by.</div>
             <textarea class="journal-box" id="journal-q3" data-label="Q3: the Professor's logic" placeholder="The Professor argues that... He says there are only three possibilities:..." oninput="autoSave(this,'dot-journal-q3');gatherAnswers();"></textarea>
           </div>
         </div>
-  <div class="tab-next-wrap">
+  <div class="rwm-box">
+<div class="rwm-header">📖 RWM &mdash; Read like a Reader, Read like a Writer, Mimic</div>
+<div class="rwm-sentence">&ldquo;Edmund, who was tired and pretending not to be tired, which always made him bad-tempered.&rdquo;</div>
+<div class="rwm-step">
+<div class="rwm-step-label">📖 Read like a Reader</div>
+<div class="rwm-step-text">The children have just arrived and are talking before bed. What is going on with Edmund?</div>
+<div class="textbox-prompt">Write 1 sentence: what is Edmund doing, and how does it affect him?</div>
+<div class="journal-label">📓 Your response <span class="saved-dot" id="dot-rwm-reader"></span></div>
+<textarea class="journal-box" id="journal-rwm-reader" data-label="RWM &mdash; Read like a Reader" placeholder="Edmund is..." oninput="autoSave(this,'dot-rwm-reader');gatherAnswers();"></textarea>
+</div>
+<div class="rwm-step">
+<div class="rwm-step-label">✏️ Read like a Writer</div>
+<div class="rwm-step-text">Lewis explains Edmund in one long breath &mdash; tired, then hiding it, then cross about hiding it &mdash; each clause folding into the next. You learn the cause and the effect in the same sentence, before Edmund has done anything wrong at all.</div>
+<div class="textbox-prompt">Write 1 sentence: what does this sentence let you predict about Edmund?</div>
+<div class="journal-label">📓 Your response <span class="saved-dot" id="dot-rwm-writer"></span></div>
+<textarea class="journal-box" id="journal-rwm-writer" data-label="RWM &mdash; Read like a Writer" placeholder="This makes me expect that Edmund..." oninput="autoSave(this,'dot-rwm-writer');gatherAnswers();"></textarea>
+</div>
+<div class="rwm-step">
+<div class="rwm-step-label">🖊️ Mimic</div>
+<div class="rwm-step-text">Explain someone&rsquo;s mood in one sentence, adding each new piece with <em>who</em> and <em>which</em>.</div>
+<div class="rwm-frame">Sentence frame: [Name], who was [feeling] and [hiding it], which always made [him/her] [result].</div>
+<div class="textbox-prompt">Write your own folding-clause sentence.</div>
+<div class="journal-label">📓 Your sentence <span class="saved-dot" id="dot-rwm-mimic"></span></div>
+<textarea class="journal-box" id="journal-rwm-mimic" data-label="RWM &mdash; Mimic" placeholder="Write your sentence here..." oninput="autoSave(this,'dot-rwm-mimic');gatherAnswers();"></textarea>
+</div>
+</div>
+<div class="tab-next-wrap">
     <p class="tab-transition-voice">Great reading work! Now bring your thinking to the assignment.</p>
     <button class="tab-next-btn" onclick="switchTab('assignment')">Continue to 📬 Assignment →</button>
   </div>
@@ -2697,6 +2723,7 @@ function gatherAnswers() {
   var output = '';
   var sections = [
     { title: '📖 CHAPTER THINKING', ids: ['journal-q1','journal-q2','journal-q3'] },
+    { title: '📖 RWM — READ LIKE A READER / WRITER / MIMIC', ids: ['journal-rwm-reader', 'journal-rwm-writer', 'journal-rwm-mimic'] },
     { title: '🔤 WORD STUDY CONNECTION (MORPHOLOGY)', ids: ['journal-morph'] },
     { title: '🪶 WRITING CONNECTION', ids: ['journal-writing'] }
   ];

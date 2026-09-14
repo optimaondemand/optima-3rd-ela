@@ -2301,13 +2301,6 @@ Beneath a lamp at night.</div>
 
 </div></div>
 <div class="activity bl-green">
-<div class="activity-head"><div class="activity-num" style="background:#34B76F;">5</div><div style="flex:1;"><div class="activity-title">📝 Reading-Writing Connection (RWM)</div><div class="activity-sub">Using headings, captions, and details in writing.</div></div></div>
-<div class="activity-body">
-<div class="task-box"><div class="task-label">📜 Mentor Sentence</div>
-<div class="task-sentence">Each invention changed how quickly and easily people could share news.</div>
-<p style="font-size:15px;color:#3A4A6B;line-height:1.6;margin-top:8px;">The author uses two adverbs &mdash; <em>quickly</em> and <em>easily</em> &mdash; to explain exactly HOW the change happened. Adding precise adverbs makes a sentence more informative.</p></div>
-</div></div>
-<div class="activity bl-green">
 <div class="activity-head"><div class="activity-num" style="background:#34B76F;">6</div><div style="flex:1;"><div class="activity-title">🪶 Writing Connection</div><div class="activity-sub">Connect today's reading to your own writing</div></div></div>
 <div class="activity-body">
 <p>The author says each invention changed how <em>quickly</em> and <em>easily</em> people communicated. Write <strong>2&ndash;3 sentences</strong> about which invention you think was the MOST important, and why.</p>
@@ -2349,6 +2342,32 @@ Humans have always found ways to send messages across long distances. Long ago, 
 <div class="journal-label">📓 Your response <span class="saved-dot" id="dot-pause1"></span></div>
 <textarea class="journal-box" id="journal-pause1" data-label="Pause &amp; Think" placeholder="I think..." oninput="autoSave(this,'dot-pause1')"></textarea>
 </div></div>
+<div class="rwm-box">
+<div class="rwm-header">📖 RWM &mdash; Read like a Reader, Read like a Writer, Mimic</div>
+<div class="rwm-sentence">&ldquo;Each invention changed how quickly and easily people could share news.&rdquo;</div>
+<div class="rwm-step">
+<div class="rwm-step-label">📖 Read like a Reader</div>
+<div class="rwm-step-text">The article has just walked through several inventions. What is the one big idea this sentence pulls them all together into?</div>
+<div class="textbox-prompt">Write 1 sentence: what do all of those inventions have in common?</div>
+<div class="journal-label">📓 Your response <span class="saved-dot" id="dot-rwm-reader"></span></div>
+<textarea class="journal-box" id="journal-rwm-reader" data-label="RWM &mdash; Read like a Reader" placeholder="All of those inventions..." oninput="autoSave(this,'dot-rwm-reader');gatherAnswers();"></textarea>
+</div>
+<div class="rwm-step">
+<div class="rwm-step-label">✏️ Read like a Writer</div>
+<div class="rwm-step-text">This is a <strong>heading sentence</strong> doing its job in the middle of a paragraph. It does not add a new fact &mdash; it tells you what all the facts you just read <em>add up to</em>. Good informational writing stops to do that.</div>
+<div class="textbox-prompt">Write 1 sentence: what is this sentence doing that a fact sentence does not do?</div>
+<div class="journal-label">📓 Your response <span class="saved-dot" id="dot-rwm-writer"></span></div>
+<textarea class="journal-box" id="journal-rwm-writer" data-label="RWM &mdash; Read like a Writer" placeholder="This sentence is different because..." oninput="autoSave(this,'dot-rwm-writer');gatherAnswers();"></textarea>
+</div>
+<div class="rwm-step">
+<div class="rwm-step-label">🖊️ Mimic</div>
+<div class="rwm-step-text">Think of three things you know about one topic. Write the one sentence that says what they all add up to.</div>
+<div class="rwm-frame">Sentence frame: Each [thing] changed how [people did something].</div>
+<div class="textbox-prompt">Write a sentence that pulls several facts together.</div>
+<div class="journal-label">📓 Your sentence <span class="saved-dot" id="dot-rwm-mimic"></span></div>
+<textarea class="journal-box" id="journal-rwm-mimic" data-label="RWM &mdash; Mimic" placeholder="Write your sentence here..." oninput="autoSave(this,'dot-rwm-mimic');gatherAnswers();"></textarea>
+</div>
+</div>
 <div class="tab-next-wrap"><p class="tab-transition-voice">Great reading! Time to show what you know.</p>
 <button class="tab-next-btn" onclick="switchTab('assignment')">Continue to 📬 Assignment →</button></div>
 </div><!-- /tab-reading -->
@@ -2427,7 +2446,7 @@ function updateProgress(){const t=document.querySelectorAll(".tab-btn").length;c
 document.querySelector(".tab-btn.active").classList.add("visited");updateProgress();
 function gatherAnswers(){var out="";
 out+="LESSON 7.2 — How People Communicate Across Distance\n════════════════════\n\n";
-var ids=[{t:"🌅 WARM-UP",ids:["journal-wgrd","journal-dol"]},{t:"🔤 WORD STUDY",ids:["journal-swyk","journal-grammar","journal-writing"]},{t:"📰 READING",ids:["journal-pause1"]},{t:"📬 ASSIGNMENT",ids:["journal-q1","journal-q2","journal-q3","journal-wp"]}];
+var ids=[{t:"🌅 WARM-UP",ids:["journal-wgrd","journal-dol"]},{t:"🔤 WORD STUDY",ids:["journal-swyk","journal-grammar","journal-writing"]},{t:"📰 READING",ids:["journal-pause1","journal-rwm-reader","journal-rwm-writer","journal-rwm-mimic"]},{t:"📬 ASSIGNMENT",ids:["journal-q1","journal-q2","journal-q3","journal-wp"]}];
 ids.forEach(function(s){out+=s.t+"\n────────────────\n";s.ids.forEach(function(id){var el=document.getElementById(id);if(!el)return;var v=el.value.trim();out+="\n"+(el.getAttribute("data-label")||id)+"\n"+(v||"(no answer)")+"\n"});out+="\n"});
 
 

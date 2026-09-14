@@ -2591,7 +2591,33 @@ Ever a child can do!</div>
     </div>
   </div>
 
-  <div class="tab-next-wrap">
+  <div class="rwm-box">
+<div class="rwm-header">📖 RWM &mdash; Read like a Reader, Read like a Writer, Mimic</div>
+<div class="rwm-sentence">&ldquo;She thought for a moment that it was the sun.&rdquo;</div>
+<div class="rwm-step">
+<div class="rwm-step-label">📖 Read like a Reader</div>
+<div class="rwm-step-text">Mig has been sent out to her uncle&rsquo;s and has never seen anything beautiful. The royal family rides past in golden armour. What does she think she is seeing?</div>
+<div class="textbox-prompt">Write 1 sentence: what does Mig see, and what does she think it is?</div>
+<div class="journal-label">📓 Your response <span class="saved-dot" id="dot-rwm-reader"></span></div>
+<textarea class="journal-box" id="journal-rwm-reader" data-label="RWM &mdash; Read like a Reader" placeholder="Mig sees..." oninput="autoSave(this,'dot-rwm-reader');gatherAnswers();"></textarea>
+</div>
+<div class="rwm-step">
+<div class="rwm-step-label">✏️ Read like a Writer</div>
+<div class="rwm-step-text">DiCamillo gives you Mig&rsquo;s <strong>wrong guess</strong> instead of the right answer. You know it is not the sun &mdash; and knowing that tells you how small Mig&rsquo;s life has been. A mistake can say more about a character than a fact.</div>
+<div class="textbox-prompt">Write 1 sentence: what does Mig&rsquo;s mistake tell you about her life so far?</div>
+<div class="journal-label">📓 Your response <span class="saved-dot" id="dot-rwm-writer"></span></div>
+<textarea class="journal-box" id="journal-rwm-writer" data-label="RWM &mdash; Read like a Writer" placeholder="Her mistake tells me..." oninput="autoSave(this,'dot-rwm-writer');gatherAnswers();"></textarea>
+</div>
+<div class="rwm-step">
+<div class="rwm-step-label">🖊️ Mimic</div>
+<div class="rwm-step-text">Write about someone seeing something for the first time and guessing wrong about what it is.</div>
+<div class="rwm-frame">Sentence frame: [Who] thought for a moment that it was [the wrong guess].</div>
+<div class="textbox-prompt">Write your own wrong-guess sentence.</div>
+<div class="journal-label">📓 Your sentence <span class="saved-dot" id="dot-rwm-mimic"></span></div>
+<textarea class="journal-box" id="journal-rwm-mimic" data-label="RWM &mdash; Mimic" placeholder="Write your sentence here..." oninput="autoSave(this,'dot-rwm-mimic');gatherAnswers();"></textarea>
+</div>
+</div>
+<div class="tab-next-wrap">
     <p class="tab-transition-voice">You&rsquo;ve read, you&rsquo;ve paused, you&rsquo;ve thought. Time to show what you know.</p>
     <button class="tab-next-btn" onclick="switchTab('assignment')">Continue to 📬 Assignment →</button>
   </div>
@@ -2789,7 +2815,7 @@ function gatherAnswers() {
   var sections = [
     { title: '🌅 WARM-UP', ids: ['journal-wgrd', 'journal-dol'] },
     { title: '🔤 WORD STUDY', ids: ['journal-morph', 'journal-vocab', 'journal-grammar', 'journal-spelling', 'journal-writing'] },
-    { title: '📖 READING — PAUSE & THINK', ids: ['journal-pause1', 'journal-pause2'] },
+    { title: '📖 READING — PAUSE & THINK', ids: ['journal-pause1', 'journal-pause2', 'journal-rwm-reader', 'journal-rwm-writer', 'journal-rwm-mimic'] },
     { title: '📬 READING COMPREHENSION', ids: ['journal-q1','journal-q2','journal-q3','journal-q4','journal-q5','journal-q6','journal-q7'] },
     { title: '✍️ WRITER\'S WORKSHOP', ids: ['journal-ww'] }
   ];

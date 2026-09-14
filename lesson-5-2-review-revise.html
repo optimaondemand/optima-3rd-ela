@@ -2311,13 +2311,6 @@ Again — and make a better book.</div>
 
 </div></div>
 <div class="activity bl-green">
-<div class="activity-head"><div class="activity-num" style="background:#34B76F;">5</div><div style="flex:1;"><div class="activity-title">📝 Reading-Writing Connection (RWM)</div><div class="activity-sub">Endings should close the event or lesson.</div></div></div>
-<div class="activity-body">
-<div class="task-box"><div class="task-label">📜 Mentor Sentence</div>
-<div class="task-sentence">Everyone was terribly excited and happy, of course.</div>
-<p style="font-size:15px;color:#3A4A6B;line-height:1.6;margin-top:8px;">The words <em>of course</em> at the end feel like the author winking at you. Little touches like this give writing <em>voice</em>.</p></div>
-</div></div>
-<div class="activity bl-green">
 <div class="activity-head"><div class="activity-num" style="background:#34B76F;">6</div><div style="flex:1;"><div class="activity-title">🪶 Writing Connection</div><div class="activity-sub">Connect today's reading to your own writing</div></div></div>
 <div class="activity-body">
 <p>Arthur said Stanley was brave. Think about your personal narrative. Write <strong>2–3 sentences</strong> explaining what your story shows about YOU.</p>
@@ -2354,6 +2347,32 @@ Again — and make a better book.</div>
 <textarea class="journal-box" id="journal-pause1" data-label="Pause &amp; Think" placeholder="I think..." oninput="autoSave(this,'dot-pause1')"></textarea>
 </div></div>
 </div></div>
+<div class="rwm-box">
+<div class="rwm-header">📖 RWM &mdash; Read like a Reader, Read like a Writer, Mimic</div>
+<div class="rwm-sentence">&ldquo;Everyone was terribly excited and happy, of course.&rdquo;</div>
+<div class="rwm-step">
+<div class="rwm-step-label">📖 Read like a Reader</div>
+<div class="rwm-step-text">Arthur has just pumped Stanley back to his normal shape. Why is everyone so excited at this exact moment?</div>
+<div class="textbox-prompt">Write 1 sentence: what has just happened to make everyone happy?</div>
+<div class="journal-label">📓 Your response <span class="saved-dot" id="dot-rwm-reader"></span></div>
+<textarea class="journal-box" id="journal-rwm-reader" data-label="RWM &mdash; Read like a Reader" placeholder="Everyone is happy because..." oninput="autoSave(this,'dot-rwm-reader');gatherAnswers();"></textarea>
+</div>
+<div class="rwm-step">
+<div class="rwm-step-label">✏️ Read like a Writer</div>
+<div class="rwm-step-text">The words <em>of course</em> at the end are the author winking at you &mdash; as if to say, well, obviously they were. He could have stopped at <em>happy</em>. Those two extra words give the sentence a <strong>voice</strong>, and they help the story feel like it is coming to rest.</div>
+<div class="textbox-prompt">Write 1 sentence: what do the words <em>of course</em> add to the ending?</div>
+<div class="journal-label">📓 Your response <span class="saved-dot" id="dot-rwm-writer"></span></div>
+<textarea class="journal-box" id="journal-rwm-writer" data-label="RWM &mdash; Read like a Writer" placeholder="The words of course make it sound like..." oninput="autoSave(this,'dot-rwm-writer');gatherAnswers();"></textarea>
+</div>
+<div class="rwm-step">
+<div class="rwm-step-label">🖊️ Mimic</div>
+<div class="rwm-step-text">Write an ending sentence for something that turned out well for you. End it with <em>of course</em> &mdash; and hear how it closes the moment.</div>
+<div class="rwm-frame">Sentence frame: [Who] was [feeling], of course.</div>
+<div class="textbox-prompt">Write your own ending sentence using <em>of course</em>.</div>
+<div class="journal-label">📓 Your sentence <span class="saved-dot" id="dot-rwm-mimic"></span></div>
+<textarea class="journal-box" id="journal-rwm-mimic" data-label="RWM &mdash; Mimic" placeholder="Write your sentence here..." oninput="autoSave(this,'dot-rwm-mimic');gatherAnswers();"></textarea>
+</div>
+</div>
 <div class="tab-next-wrap">
 <p class="tab-transition-voice">You&rsquo;ve read and thought carefully. Time to show what you know!</p>
 <button class="tab-next-btn" onclick="switchTab('assignment')">Continue to 📬 Assignment →</button>
@@ -2438,7 +2457,7 @@ function expandIntro(){document.getElementById("introSection").classList.remove(
 function gatherAnswers(){var output="";var sections=[
 {title:"🌅 WARM-UP",ids:["journal-wgrd","journal-dol"]},
 {title:"🔤 WORD STUDY",ids:["journal-swyk","journal-writing"]},
-{title:"📖 READING",ids:["journal-pause1"]},
+{title:"📖 READING",ids:["journal-pause1","journal-rwm-reader","journal-rwm-writer","journal-rwm-mimic"]},
 {title:"📬 COMPREHENSION",ids:["journal-q1","journal-q2","journal-q3","journal-wp"]}
 ];
 output+="LESSON 5.2 — Flat Stanley, Revise &amp; Edit\n";

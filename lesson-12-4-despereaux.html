@@ -2595,32 +2595,31 @@ function checkSpellDice(){var w=document.getElementById("spellWord").textContent
   
   <!-- RWM -->
   <div class="rwm-box">
-    <div class="rwm-header">📖 RWM — Read like a Reader, Read like a Writer, Mimic</div>
-    <div class="rwm-sentence">&ldquo;The world is dark, and light is precious. Come closer, dear reader. You must trust me. I am telling you a story.&rdquo;</div>
-    <div class="rwm-craft-note">📌 Craft focus: narrator invitation — short commands that build trust</div>
-    <div class="rwm-step">
-      <div class="rwm-step-label">📖 Read like a Reader</div>
-      <div class="rwm-step-text">These sentences come near the end of the book. DiCamillo speaks to you directly. How does this feel at this point in the story — does it feel earned? Does it change how you feel about the book as a whole?</div>
-      <div class="textbox-prompt">Write 1–2 sentences about what this moment reveals about the character or the story.</div>
-      <div class="journal-label">📓 Your response <span class="saved-dot" id="dot-rwm-reader"></span></div>
-      <textarea class="journal-box" id="journal-rwm-reader" data-label="RWM — Read like a Reader" placeholder="This sentence shows..." oninput="autoSave(this,'dot-rwm-reader');gatherAnswers();"></textarea>
-    </div>
-    <div class="rwm-step">
-      <div class="rwm-step-label">✏️ Read like a Writer</div>
-      <div class="rwm-step-text">The author uses very short sentences here — many of them commands: <em>Come closer. You must trust me.</em> How do short commands create a different feeling than longer sentences? Why might she use this tone at this moment in the story?</div>
-      <div class="textbox-prompt">Write 1–2 sentences naming what the author did and why it works.</div>
-      <div class="journal-label">📓 Your response <span class="saved-dot" id="dot-rwm-writer"></span></div>
-      <textarea class="journal-box" id="journal-rwm-writer" data-label="RWM — Read like a Writer" placeholder="The author used... This works because..." oninput="autoSave(this,'dot-rwm-writer');gatherAnswers();"></textarea>
-    </div>
-    <div class="rwm-step">
-      <div class="rwm-step-label">🖊️ Mimic</div>
-      <div class="rwm-step-text">Write your own sentence using the same pattern as the author.</div>
-      <div class="rwm-frame">Sentence frame: [A truth about the world]. Come, [reader/friend/traveler]. [Short command]. [Short declaration about what you are doing together.]</div>
-      <div class="textbox-prompt">Write your sentence below using the same pattern as the author.</div>
-      <div class="journal-label">📓 Your sentence <span class="saved-dot" id="dot-rwm-mimic"></span></div>
-      <textarea class="journal-box" id="journal-rwm-mimic" data-label="RWM — Mimic" placeholder="Write your sentence here..." oninput="autoSave(this,'dot-rwm-mimic');gatherAnswers();"></textarea>
-    </div>
-  </div>
+<div class="rwm-header">📖 RWM &mdash; Read like a Reader, Read like a Writer, Mimic</div>
+<div class="rwm-sentence">&ldquo;She concentrated on containing the rage that was leaping up inside of her.&rdquo;</div>
+<div class="rwm-step">
+<div class="rwm-step-label">📖 Read like a Reader</div>
+<div class="rwm-step-text">The princess has just recognised Roscuro as the rat who fell into her mother&rsquo;s soup. What is she doing in this moment?</div>
+<div class="textbox-prompt">Write 1 sentence: what is the princess feeling, and what is she doing about it?</div>
+<div class="journal-label">📓 Your response <span class="saved-dot" id="dot-rwm-reader"></span></div>
+<textarea class="journal-box" id="journal-rwm-reader" data-label="RWM &mdash; Read like a Reader" placeholder="The princess is..." oninput="autoSave(this,'dot-rwm-reader');gatherAnswers();"></textarea>
+</div>
+<div class="rwm-step">
+<div class="rwm-step-label">✏️ Read like a Writer</div>
+<div class="rwm-step-text">The rage is <strong>leaping</strong> &mdash; a word for something alive, like a dog on a rope. And she has to <strong>contain</strong> it, which is a word for holding something in a box. Two strong verbs, and the feeling becomes a creature she is wrestling.</div>
+<div class="textbox-prompt">Write 1 sentence: what do the words <em>leaping</em> and <em>containing</em> make the rage seem like?</div>
+<div class="journal-label">📓 Your response <span class="saved-dot" id="dot-rwm-writer"></span></div>
+<textarea class="journal-box" id="journal-rwm-writer" data-label="RWM &mdash; Read like a Writer" placeholder="Those words make the rage seem like..." oninput="autoSave(this,'dot-rwm-writer');gatherAnswers();"></textarea>
+</div>
+<div class="rwm-step">
+<div class="rwm-step-label">🖊️ Mimic</div>
+<div class="rwm-step-text">Write about holding a big feeling in. Use a verb that makes the feeling sound alive.</div>
+<div class="rwm-frame">Sentence frame: [Who] concentrated on [holding it in] the [feeling] that was [alive verb] inside of [him/her].</div>
+<div class="textbox-prompt">Write your own holding-it-in sentence.</div>
+<div class="journal-label">📓 Your sentence <span class="saved-dot" id="dot-rwm-mimic"></span></div>
+<textarea class="journal-box" id="journal-rwm-mimic" data-label="RWM &mdash; Mimic" placeholder="Write your sentence here..." oninput="autoSave(this,'dot-rwm-mimic');gatherAnswers();"></textarea>
+</div>
+</div>
 <div class="tab-next-wrap">
     <p class="tab-transition-voice">You&rsquo;ve read, you&rsquo;ve paused, you&rsquo;ve thought. Time to show what you know.</p>
     <button class="tab-next-btn" onclick="switchTab('assignment')">Continue to 📬 Assignment →</button>

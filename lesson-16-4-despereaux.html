@@ -2593,32 +2593,32 @@ function checkSpellDice(){var w=document.getElementById("spellWord").textContent
   </div>
 
   <div class="rwm-box">
-    <div class="rwm-header">📖 RWM — Read like a Reader, Read like a Writer, Mimic</div>
-    <div class="rwm-sentence">&ldquo;Because that is what love does.&rdquo;</div>
-    <div class="rwm-step">
-      <div class="rwm-step-label">📖 Read like a Reader</div>
-      <div class="rwm-step-text">Looking back across the whole book: what did love actually <em>do</em>? Give one example each for Despereaux, Roscuro, and Mig. Was love always a good thing?</div>
-      <div class="textbox-prompt">Write 1&ndash;2 sentences.</div>
-      <div class="journal-label">📓 Your response <span class="saved-dot" id="dot-rwm-reader"></span></div>
-      <textarea class="journal-box" id="journal-rwm-reader" data-label="RWM — Read like a Reader" placeholder="For Despereaux, love did... For Roscuro, love did... For Mig, love did..." oninput="autoSave(this,'dot-rwm-reader');gatherAnswers();"></textarea>
-    </div>
-    <div class="rwm-step">
-      <div class="rwm-step-label">✏️ Read like a Writer</div>
-      <div class="rwm-step-text">This sentence starts with <strong>&ldquo;Because&rdquo;</strong> and stands almost alone &mdash; it answers a question we didn't ask out loud. How does it manage to feel like a complete thought even though it's technically just a fragment?</div>
-      <div class="textbox-prompt">Write 1 sentence naming what the author did and why it works.</div>
-      <div class="journal-label">📓 Your response <span class="saved-dot" id="dot-rwm-writer"></span></div>
-      <textarea class="journal-box" id="journal-rwm-writer" data-label="RWM — Read like a Writer" placeholder=""Because that is what love does" feels complete because..." oninput="autoSave(this,'dot-rwm-writer');gatherAnswers();"></textarea>
-    </div>
-    <div class="rwm-step">
-      <div class="rwm-step-label">🖊️ Mimic</div>
-      <div class="rwm-step-text">Write your own final-page-style sentence that explains why something matters, starting with &ldquo;Because.&rdquo;</div>
-      <div class="rwm-frame">Sentence frame: Because that is what [virtue / feeling] does.</div>
-      <div class="textbox-prompt">Write your own sentence using the same pattern as the author.</div>
-      <div class="journal-label">📓 Your sentence <span class="saved-dot" id="dot-rwm-mimic"></span></div>
-      <textarea class="journal-box" id="journal-rwm-mimic" data-label="RWM — Mimic" placeholder="Write your sentence here..." oninput="autoSave(this,'dot-rwm-mimic');gatherAnswers();"></textarea>
-    </div>
-  </div>
-    <div class="tab-next-wrap">
+<div class="rwm-header">📖 RWM &mdash; Read like a Reader, Read like a Writer, Mimic</div>
+<div class="rwm-sentence">&ldquo;Even in a world as strange as this one, a mouse and a princess cannot marry. But, reader, they can be friends.&rdquo;</div>
+<div class="rwm-step">
+<div class="rwm-step-label">📖 Read like a Reader</div>
+<div class="rwm-step-text">This is the last page of the book. What does DiCamillo tell you about how the story ends for Despereaux and the Pea?</div>
+<div class="textbox-prompt">Write 1 sentence: how does it end for the two of them?</div>
+<div class="journal-label">📓 Your response <span class="saved-dot" id="dot-rwm-reader"></span></div>
+<textarea class="journal-box" id="journal-rwm-reader" data-label="RWM &mdash; Read like a Reader" placeholder="In the end..." oninput="autoSave(this,'dot-rwm-reader');gatherAnswers();"></textarea>
+</div>
+<div class="rwm-step">
+<div class="rwm-step-label">✏️ Read like a Writer</div>
+<div class="rwm-step-text">She tells you the disappointing half first, then turns it with <strong>But, reader</strong> &mdash; and the word <em>friends</em> arrives at the very end of the very last page. Saving the best word for last is how an ending feels like an ending.</div>
+<div class="textbox-prompt">Write 1 sentence: why put <em>they can be friends</em> last?</div>
+<div class="journal-label">📓 Your response <span class="saved-dot" id="dot-rwm-writer"></span></div>
+<textarea class="journal-box" id="journal-rwm-writer" data-label="RWM &mdash; Read like a Writer" placeholder="Ending on the word friends makes the book feel..." oninput="autoSave(this,'dot-rwm-writer');gatherAnswers();"></textarea>
+</div>
+<div class="rwm-step">
+<div class="rwm-step-label">🖊️ Mimic</div>
+<div class="rwm-step-text">You are celebrating your finished work today. Write an ending of your own: the disappointing part first, then turn it with <em>But</em> and end on the good word.</div>
+<div class="rwm-frame">Sentence frame: Even [when something is true], [who] cannot [do the thing]. But, reader, they can [the good thing].</div>
+<div class="textbox-prompt">Write your own turning ending.</div>
+<div class="journal-label">📓 Your sentence <span class="saved-dot" id="dot-rwm-mimic"></span></div>
+<textarea class="journal-box" id="journal-rwm-mimic" data-label="RWM &mdash; Mimic" placeholder="Write your sentence here..." oninput="autoSave(this,'dot-rwm-mimic');gatherAnswers();"></textarea>
+</div>
+</div>
+<div class="tab-next-wrap">
     <p class="tab-transition-voice">You&rsquo;ve read, you&rsquo;ve paused, you&rsquo;ve thought. Time to show what you know.</p>
     <button class="tab-next-btn" onclick="switchTab('assignment')">Continue to 📬 Assignment →</button>
   </div>

@@ -2296,13 +2296,6 @@ function buildEd(card){if(card.classList.contains("built"))return;card.classList
 <textarea class="journal-box" id="journal-swyk" data-label="SWYK: Three sounds of -ed" placeholder="The pattern is..." oninput="autoSave(this,'dot-swyk')"></textarea></div>
 </div></div>
 <div class="activity bl-green">
-<div class="activity-head"><div class="activity-num" style="background:#34B76F;">5</div><div style="flex:1;"><div class="activity-title">📝 Reading-Writing Connection (RWM)</div><div class="activity-sub">Endings should close the event or lesson.</div></div></div>
-<div class="activity-body">
-<div class="task-box"><div class="task-label">📜 Mentor Sentence</div>
-<div class="task-sentence">Mrs. Lambchop made hot chocolate to celebrate the occasion.</div>
-<p style="font-size:15px;color:#3A4A6B;line-height:1.6;margin-top:8px;">This sentence shows a character&rsquo;s action (<em>made hot chocolate</em>) and tells WHY (<em>to celebrate</em>). Good writers include the reason.</p></div>
-</div></div>
-<div class="activity bl-green">
 <div class="activity-head"><div class="activity-num" style="background:#34B76F;">6</div><div style="flex:1;"><div class="activity-title">🪶 Writing Connection</div><div class="activity-sub">Connect today's reading to your own writing</div></div></div>
 <div class="activity-body">
 <p>Mrs. Lambchop says people should think twice before being rude. Write <strong>2–3 sentences</strong> about a time in your narrative where someone said something kind or unkind. How did it make you feel?</p>
@@ -2349,6 +2342,32 @@ function buildEd(card){if(card.classList.contains("built"))return;card.classList
 <textarea class="journal-box" id="journal-pause1" data-label="Pause &amp; Think" placeholder="I think..." oninput="autoSave(this,'dot-pause1')"></textarea>
 </div></div>
 </div></div>
+<div class="rwm-box">
+<div class="rwm-header">📖 RWM &mdash; Read like a Reader, Read like a Writer, Mimic</div>
+<div class="rwm-sentence">&ldquo;Mrs. Lambchop made hot chocolate to celebrate the occasion.&rdquo;</div>
+<div class="rwm-step">
+<div class="rwm-step-label">📖 Read like a Reader</div>
+<div class="rwm-step-text">The whole family is awake in the middle of the night and Stanley is round again. What kind of moment is the author leaving us in?</div>
+<div class="textbox-prompt">Write 1 sentence: what kind of feeling does this leave you with?</div>
+<div class="journal-label">📓 Your response <span class="saved-dot" id="dot-rwm-reader"></span></div>
+<textarea class="journal-box" id="journal-rwm-reader" data-label="RWM &mdash; Read like a Reader" placeholder="This leaves me feeling..." oninput="autoSave(this,'dot-rwm-reader');gatherAnswers();"></textarea>
+</div>
+<div class="rwm-step">
+<div class="rwm-step-label">✏️ Read like a Writer</div>
+<div class="rwm-step-text">A good ending does not explain the lesson &mdash; it shows one small thing happening. Not &ldquo;the family was glad,&rdquo; but <strong>hot chocolate</strong>. One specific detail, and you feel the rest yourself.</div>
+<div class="textbox-prompt">Write 1 sentence: why is hot chocolate a better ending than saying the family was glad?</div>
+<div class="journal-label">📓 Your response <span class="saved-dot" id="dot-rwm-writer"></span></div>
+<textarea class="journal-box" id="journal-rwm-writer" data-label="RWM &mdash; Read like a Writer" placeholder="Hot chocolate works better because..." oninput="autoSave(this,'dot-rwm-writer');gatherAnswers();"></textarea>
+</div>
+<div class="rwm-step">
+<div class="rwm-step-label">🖊️ Mimic</div>
+<div class="rwm-step-text">Think of the end of a good day of yours. Do not tell us it was good &mdash; write the one small thing that happened at the end of it.</div>
+<div class="rwm-frame">Sentence frame: [Who] [did one small thing] to celebrate.</div>
+<div class="textbox-prompt">Write an ending sentence that shows one small thing.</div>
+<div class="journal-label">📓 Your sentence <span class="saved-dot" id="dot-rwm-mimic"></span></div>
+<textarea class="journal-box" id="journal-rwm-mimic" data-label="RWM &mdash; Mimic" placeholder="Write your sentence here..." oninput="autoSave(this,'dot-rwm-mimic');gatherAnswers();"></textarea>
+</div>
+</div>
 <div class="tab-next-wrap">
 <p class="tab-transition-voice">You&rsquo;ve read and thought carefully. Time to show what you know!</p>
 <button class="tab-next-btn" onclick="switchTab('assignment')">Continue to 📬 Assignment →</button>
@@ -2421,7 +2440,7 @@ function expandIntro(){document.getElementById("introSection").classList.remove(
 function gatherAnswers(){var output="";var sections=[
 {title:"🌅 WARM-UP",ids:["journal-wgrd","journal-dol"]},
 {title:"🔤 WORD STUDY",ids:["journal-swyk","journal-gram","journal-writing"]},
-{title:"📖 READING",ids:["journal-pause1"]},
+{title:"📖 READING",ids:["journal-pause1","journal-rwm-reader","journal-rwm-writer","journal-rwm-mimic"]},
 {title:"📬 COMPREHENSION",ids:["journal-q1","journal-q2","journal-q3","journal-wp"]}
 ];
 output+="LESSON 5.3 — Flat Stanley, Edit &amp; Polish\n";

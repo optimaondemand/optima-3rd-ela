@@ -2807,32 +2807,31 @@ function spellReveal(c){if(c.classList.contains("done"))return;c.classList.add("
   
   <!-- RWM -->
   <div class="rwm-box">
-    <div class="rwm-header">📖 RWM — Read like a Reader, Read like a Writer, Mimic</div>
-    <div class="rwm-sentence">&ldquo;He could have run. He knew a dozen ways out of these woods. But his feet would not move.&rdquo;</div>
-    <div class="rwm-craft-note">📌 Craft focus: three short sentences building pressure; physical reaction at the end</div>
-    <div class="rwm-step">
-      <div class="rwm-step-label">📖 Read like a Reader</div>
-      <div class="rwm-step-text">Jemmy has every ability to escape. He knows how. But he doesn't go. What is stopping him — his feet, or something inside him? What do you think has changed in him by this point?</div>
-      <div class="textbox-prompt">Write 1–2 sentences about what this moment reveals about the character or the story.</div>
-      <div class="journal-label">📓 Your response <span class="saved-dot" id="dot-rwm-reader"></span></div>
-      <textarea class="journal-box" id="journal-rwm-reader" data-label="RWM — Read like a Reader" placeholder="This sentence shows..." oninput="autoSave(this,'dot-rwm-reader');gatherAnswers();"></textarea>
-    </div>
-    <div class="rwm-step">
-      <div class="rwm-step-label">✏️ Read like a Writer</div>
-      <div class="rwm-step-text">Three short sentences — all punchy, all factual. The first two tell us what he could do. Then <em>"But"</em> stops everything. And the third sentence ends with a physical reaction: his <em>feet</em> won't move. Why name the feet instead of saying <em>"he didn't want to run"</em>?</div>
-      <div class="textbox-prompt">Write 1–2 sentences naming what the author did and why it works.</div>
-      <div class="journal-label">📓 Your response <span class="saved-dot" id="dot-rwm-writer"></span></div>
-      <textarea class="journal-box" id="journal-rwm-writer" data-label="RWM — Read like a Writer" placeholder="The author used... This works because..." oninput="autoSave(this,'dot-rwm-writer');gatherAnswers();"></textarea>
-    </div>
-    <div class="rwm-step">
-      <div class="rwm-step-label">🖊️ Mimic</div>
-      <div class="rwm-step-text">Write your own sentence using the same pattern as the author.</div>
-      <div class="rwm-frame">Sentence frame: [Character] could have [done something]. [He/She] knew [how or a way]. But [physical or emotional thing] would not [cooperate].</div>
-      <div class="textbox-prompt">Write your sentence below using the same pattern as the author.</div>
-      <div class="journal-label">📓 Your sentence <span class="saved-dot" id="dot-rwm-mimic"></span></div>
-      <textarea class="journal-box" id="journal-rwm-mimic" data-label="RWM — Mimic" placeholder="Write your sentence here..." oninput="autoSave(this,'dot-rwm-mimic');gatherAnswers();"></textarea>
-    </div>
-  </div>
+<div class="rwm-header">📖 RWM &mdash; Read like a Reader, Read like a Writer, Mimic</div>
+<div class="rwm-sentence">&ldquo;Gaw, Jemmy thought, he&rsquo;s fuming like a stovepipe at being un-princed.&rdquo;</div>
+<div class="rwm-step">
+<div class="rwm-step-label">📖 Read like a Reader</div>
+<div class="rwm-step-text">The outlaws will not believe the prince is a prince, and the prince is furious. What is Jemmy noticing about him?</div>
+<div class="textbox-prompt">Write 1 sentence: what is the prince feeling, and how can Jemmy tell?</div>
+<div class="journal-label">📓 Your response <span class="saved-dot" id="dot-rwm-reader"></span></div>
+<textarea class="journal-box" id="journal-rwm-reader" data-label="RWM &mdash; Read like a Reader" placeholder="The prince is..." oninput="autoSave(this,'dot-rwm-reader');gatherAnswers();"></textarea>
+</div>
+<div class="rwm-step">
+<div class="rwm-step-label">✏️ Read like a Writer</div>
+<div class="rwm-step-text">Two things happen in this sentence. Fleischman compares anger to a <strong>stovepipe</strong> &mdash; you can almost see the smoke. Then he invents a word: <strong>un-princed</strong>. Authors are allowed to make up a word when no real one fits.</div>
+<div class="textbox-prompt">Write 1 sentence: what does the invented word <em>un-princed</em> tell you that a real word might not?</div>
+<div class="journal-label">📓 Your response <span class="saved-dot" id="dot-rwm-writer"></span></div>
+<textarea class="journal-box" id="journal-rwm-writer" data-label="RWM &mdash; Read like a Writer" placeholder="The made-up word tells me..." oninput="autoSave(this,'dot-rwm-writer');gatherAnswers();"></textarea>
+</div>
+<div class="rwm-step">
+<div class="rwm-step-label">🖊️ Mimic</div>
+<div class="rwm-step-text">Write a sentence about someone angry, using a comparison &mdash; and invent one word by sticking <em>un-</em> on the front.</div>
+<div class="rwm-frame">Sentence frame: [Name] is fuming like [a comparison] at being un-[something].</div>
+<div class="textbox-prompt">Write your own sentence with a comparison and an invented word.</div>
+<div class="journal-label">📓 Your sentence <span class="saved-dot" id="dot-rwm-mimic"></span></div>
+<textarea class="journal-box" id="journal-rwm-mimic" data-label="RWM &mdash; Mimic" placeholder="Write your sentence here..." oninput="autoSave(this,'dot-rwm-mimic');gatherAnswers();"></textarea>
+</div>
+</div>
 <div class="tab-next-wrap">
     <p class="tab-transition-voice">You&rsquo;ve read and noticed. Now answer the questions and submit your work.</p>
     <button class="tab-next-btn" onclick="switchTab('assignment')">Continue to 📬 Assignment →</button>

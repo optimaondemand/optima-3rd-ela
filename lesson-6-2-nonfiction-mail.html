@@ -2301,13 +2301,6 @@ I&rsquo;ve traveled far today.</div>
 
 </div></div>
 <div class="activity bl-green">
-<div class="activity-head"><div class="activity-num" style="background:#34B76F;">5</div><div style="flex:1;"><div class="activity-title">📝 Reading-Writing Connection (RWM)</div><div class="activity-sub">Turning facts into organized sentences.</div></div></div>
-<div class="activity-body">
-<div class="task-box"><div class="task-label">📜 Mentor Sentence</div>
-<div class="task-sentence">A mail carrier picks it up and takes it to a post office.</div>
-<p style="font-size:15px;color:#3A4A6B;line-height:1.6;margin-top:8px;">This sentence uses <em>and</em> to connect two actions. The subject (<em>A mail carrier</em>) does both things. Notice the comma is not needed here because the subject does not change.</p></div>
-</div></div>
-<div class="activity bl-green">
 <div class="activity-head"><div class="activity-num" style="background:#34B76F;">6</div><div style="flex:1;"><div class="activity-title">🪶 Writing Connection</div><div class="activity-sub">Connect today's reading to your own writing</div></div></div>
 <div class="activity-body">
 <p>The text says a handwritten letter feels special even today. Write <strong>2&ndash;3 sentences</strong> explaining why you think people still value handwritten letters even though we have email and texting.</p>
@@ -2348,6 +2341,32 @@ When you drop a letter in a mailbox, it begins a long journey. A mail carrier pi
 <div class="journal-label">📓 Your response <span class="saved-dot" id="dot-pause1"></span></div>
 <textarea class="journal-box" id="journal-pause1" data-label="Pause &amp; Think" placeholder="I think..." oninput="autoSave(this,'dot-pause1')"></textarea>
 </div></div>
+<div class="rwm-box">
+<div class="rwm-header">📖 RWM &mdash; Read like a Reader, Read like a Writer, Mimic</div>
+<div class="rwm-sentence">&ldquo;A mail carrier picks it up and takes it to a post office.&rdquo;</div>
+<div class="rwm-step">
+<div class="rwm-step-label">📖 Read like a Reader</div>
+<div class="rwm-step-text">This is one step in a much longer journey. What has already happened to the letter, and what happens next?</div>
+<div class="textbox-prompt">Write 1 sentence: where is the letter in its journey right now?</div>
+<div class="journal-label">📓 Your response <span class="saved-dot" id="dot-rwm-reader"></span></div>
+<textarea class="journal-box" id="journal-rwm-reader" data-label="RWM &mdash; Read like a Reader" placeholder="At this point the letter..." oninput="autoSave(this,'dot-rwm-reader');gatherAnswers();"></textarea>
+</div>
+<div class="rwm-step">
+<div class="rwm-step-label">✏️ Read like a Writer</div>
+<div class="rwm-step-text">Informational writing puts facts <strong>in the order they happen</strong>. The writer could have listed everything the post office does &mdash; instead they gave you one step at a time, so you can follow along.</div>
+<div class="textbox-prompt">Write 1 sentence: why does the writer give the steps one at a time?</div>
+<div class="journal-label">📓 Your response <span class="saved-dot" id="dot-rwm-writer"></span></div>
+<textarea class="journal-box" id="journal-rwm-writer" data-label="RWM &mdash; Read like a Writer" placeholder="The writer gives one step at a time because..." oninput="autoSave(this,'dot-rwm-writer');gatherAnswers();"></textarea>
+</div>
+<div class="rwm-step">
+<div class="rwm-step-label">🖊️ Mimic</div>
+<div class="rwm-step-text">Think of something you do in steps &mdash; feeding a pet, packing a bag. Write <em>one</em> step, the way this writer did.</div>
+<div class="rwm-frame">Sentence frame: [Someone] [does one thing] and [does the next thing].</div>
+<div class="textbox-prompt">Write one step of a process, in order.</div>
+<div class="journal-label">📓 Your sentence <span class="saved-dot" id="dot-rwm-mimic"></span></div>
+<textarea class="journal-box" id="journal-rwm-mimic" data-label="RWM &mdash; Mimic" placeholder="Write your sentence here..." oninput="autoSave(this,'dot-rwm-mimic');gatherAnswers();"></textarea>
+</div>
+</div>
 <div class="tab-next-wrap"><p class="tab-transition-voice">Great reading! Time to show what you know.</p>
 <button class="tab-next-btn" onclick="switchTab('assignment')">Continue to 📬 Assignment →</button></div>
 </div><!-- /tab-reading -->
@@ -2426,7 +2445,7 @@ function updateProgress(){const t=document.querySelectorAll(".tab-btn").length;c
 document.querySelector(".tab-btn.active").classList.add("visited");updateProgress();
 function gatherAnswers(){var out="";
 out+="LESSON 6.2 — How Does a Letter Travel?\n════════════════════\n\n";
-var ids=[{t:"🌅 WARM-UP",ids:["journal-wgrd","journal-dol"]},{t:"🔤 WORD STUDY",ids:["journal-swyk","journal-grammar","journal-writing"]},{t:"📰 READING",ids:["journal-pause1"]},{t:"📬 ASSIGNMENT",ids:["journal-q1","journal-q2","journal-q3","journal-wp"]}];
+var ids=[{t:"🌅 WARM-UP",ids:["journal-wgrd","journal-dol"]},{t:"🔤 WORD STUDY",ids:["journal-swyk","journal-grammar","journal-writing"]},{t:"📰 READING",ids:["journal-pause1","journal-rwm-reader","journal-rwm-writer","journal-rwm-mimic"]},{t:"📬 ASSIGNMENT",ids:["journal-q1","journal-q2","journal-q3","journal-wp"]}];
 ids.forEach(function(s){out+=s.t+"\n────────────────\n";s.ids.forEach(function(id){var el=document.getElementById(id);if(!el)return;var v=el.value.trim();out+="\n"+(el.getAttribute("data-label")||id)+"\n"+(v||"(no answer)")+"\n"});out+="\n"});
 
 

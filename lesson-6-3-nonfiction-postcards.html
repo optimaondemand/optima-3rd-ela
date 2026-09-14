@@ -2283,13 +2283,6 @@ function spellReveal(c){if(c.classList.contains("done"))return;c.classList.add("
 <textarea class="journal-box" id="journal-swyk" data-label="SWYK: Compound words" placeholder="The pattern is..." oninput="autoSave(this,'dot-swyk')"></textarea></div>
 </div></div>
 <div class="activity bl-green">
-<div class="activity-head"><div class="activity-num" style="background:#34B76F;">5</div><div style="flex:1;"><div class="activity-title">📝 Reading-Writing Connection (RWM)</div><div class="activity-sub">Turning facts into organized sentences.</div></div></div>
-<div class="activity-body">
-<div class="task-box"><div class="task-label">📜 Mentor Sentence</div>
-<div class="task-sentence">People collected them like trading cards.</div>
-<p style="font-size:15px;color:#3A4A6B;line-height:1.6;margin-top:8px;">The author uses a comparison &mdash; <em>like trading cards</em> &mdash; to help you picture how popular postcards were. This kind of comparison is called a <em>simile</em>.</p></div>
-</div></div>
-<div class="activity bl-green">
 <div class="activity-head"><div class="activity-num" style="background:#34B76F;">6</div><div style="flex:1;"><div class="activity-title">🪶 Writing Connection</div><div class="activity-sub">Connect today's reading to your own writing</div></div></div>
 <div class="activity-body">
 <p>Imagine you are visiting a place you love. Write a <strong>postcard message</strong> (3&ndash;4 sentences) to a friend or family member. Tell them where you are and one thing you have seen.</p>
@@ -2337,6 +2330,32 @@ Postcards are one of the oldest forms of quick communication. The first governme
 <div class="journal-label">📓 Your response <span class="saved-dot" id="dot-pause1"></span></div>
 <textarea class="journal-box" id="journal-pause1" data-label="Pause &amp; Think" placeholder="I think..." oninput="autoSave(this,'dot-pause1')"></textarea>
 </div></div>
+<div class="rwm-box">
+<div class="rwm-header">📖 RWM &mdash; Read like a Reader, Read like a Writer, Mimic</div>
+<div class="rwm-sentence">&ldquo;People collected them like trading cards.&rdquo;</div>
+<div class="rwm-step">
+<div class="rwm-step-label">📖 Read like a Reader</div>
+<div class="rwm-step-text">The article has been explaining what postcards were for. What does this sentence tell you about how people felt about them?</div>
+<div class="textbox-prompt">Write 1 sentence: what did postcards mean to people?</div>
+<div class="journal-label">📓 Your response <span class="saved-dot" id="dot-rwm-reader"></span></div>
+<textarea class="journal-box" id="journal-rwm-reader" data-label="RWM &mdash; Read like a Reader" placeholder="Postcards mattered to people because..." oninput="autoSave(this,'dot-rwm-reader');gatherAnswers();"></textarea>
+</div>
+<div class="rwm-step">
+<div class="rwm-step-label">✏️ Read like a Writer</div>
+<div class="rwm-step-text">The writer explains something old by <strong>comparing it to something you already know</strong>. You may never have collected postcards, but you know what collecting trading cards feels like &mdash; so now you understand.</div>
+<div class="textbox-prompt">Write 1 sentence: why does comparing postcards to trading cards help you?</div>
+<div class="journal-label">📓 Your response <span class="saved-dot" id="dot-rwm-writer"></span></div>
+<textarea class="journal-box" id="journal-rwm-writer" data-label="RWM &mdash; Read like a Writer" placeholder="The comparison helps because..." oninput="autoSave(this,'dot-rwm-writer');gatherAnswers();"></textarea>
+</div>
+<div class="rwm-step">
+<div class="rwm-step-label">🖊️ Mimic</div>
+<div class="rwm-step-text">Explain something from long ago by comparing it to something you know today.</div>
+<div class="rwm-frame">Sentence frame: People [did something] like [something you know].</div>
+<div class="textbox-prompt">Write your own comparison sentence.</div>
+<div class="journal-label">📓 Your sentence <span class="saved-dot" id="dot-rwm-mimic"></span></div>
+<textarea class="journal-box" id="journal-rwm-mimic" data-label="RWM &mdash; Mimic" placeholder="Write your sentence here..." oninput="autoSave(this,'dot-rwm-mimic');gatherAnswers();"></textarea>
+</div>
+</div>
 <div class="tab-next-wrap"><p class="tab-transition-voice">Great reading! Time to show what you know.</p>
 <button class="tab-next-btn" onclick="switchTab('assignment')">Continue to 📬 Assignment →</button></div>
 </div><!-- /tab-reading -->
@@ -2416,7 +2435,7 @@ function updateProgress(){const t=document.querySelectorAll(".tab-btn").length;c
 document.querySelector(".tab-btn.active").classList.add("visited");updateProgress();
 function gatherAnswers(){var out="";
 out+="LESSON 6.3 — A Short History of Postcards\n════════════════════\n\n";
-var ids=[{t:"🌅 WARM-UP",ids:["journal-wgrd","journal-dol"]},{t:"🔤 WORD STUDY",ids:["journal-swyk","journal-grammar","journal-writing"]},{t:"📰 READING",ids:["journal-pause1"]},{t:"📬 ASSIGNMENT",ids:["journal-q1","journal-q2","journal-q3","journal-wp"]}];
+var ids=[{t:"🌅 WARM-UP",ids:["journal-wgrd","journal-dol"]},{t:"🔤 WORD STUDY",ids:["journal-swyk","journal-grammar","journal-writing"]},{t:"📰 READING",ids:["journal-pause1","journal-rwm-reader","journal-rwm-writer","journal-rwm-mimic"]},{t:"📬 ASSIGNMENT",ids:["journal-q1","journal-q2","journal-q3","journal-wp"]}];
 ids.forEach(function(s){out+=s.t+"\n────────────────\n";s.ids.forEach(function(id){var el=document.getElementById(id);if(!el)return;var v=el.value.trim();out+="\n"+(el.getAttribute("data-label")||id)+"\n"+(v||"(no answer)")+"\n"});out+="\n"});
 
 

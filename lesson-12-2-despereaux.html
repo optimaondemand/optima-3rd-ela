@@ -2594,7 +2594,33 @@ The wind is passing by.</div>
     </div>
   </div>
 
-  <div class="tab-next-wrap">
+  <div class="rwm-box">
+<div class="rwm-header">📖 RWM &mdash; Read like a Reader, Read like a Writer, Mimic</div>
+<div class="rwm-sentence">&ldquo;We two are perfectly suited, each to the other.&rdquo;</div>
+<div class="rwm-step">
+<div class="rwm-step-label">📖 Read like a Reader</div>
+<div class="rwm-step-text">Roscuro has found Mig in the dungeon and is talking her into helping him. What is he telling her?</div>
+<div class="textbox-prompt">Write 1 sentence: what is Roscuro trying to make Mig believe?</div>
+<div class="journal-label">📓 Your response <span class="saved-dot" id="dot-rwm-reader"></span></div>
+<textarea class="journal-box" id="journal-rwm-reader" data-label="RWM &mdash; Read like a Reader" placeholder="Roscuro is telling Mig that..." oninput="autoSave(this,'dot-rwm-reader');gatherAnswers();"></textarea>
+</div>
+<div class="rwm-step">
+<div class="rwm-step-label">✏️ Read like a Writer</div>
+<div class="rwm-step-text">Read it aloud: <strong>We two &hellip; each to the other.</strong> It is old-fashioned and far too grand for a serving girl and a rat in a dungeon. DiCamillo gives Roscuro fancy words so you can hear him flattering her &mdash; and hear that he is up to something.</div>
+<div class="textbox-prompt">Write 1 sentence: what do his fancy words tell you about what Roscuro is doing?</div>
+<div class="journal-label">📓 Your response <span class="saved-dot" id="dot-rwm-writer"></span></div>
+<textarea class="journal-box" id="journal-rwm-writer" data-label="RWM &mdash; Read like a Writer" placeholder="His fancy words make me think..." oninput="autoSave(this,'dot-rwm-writer');gatherAnswers();"></textarea>
+</div>
+<div class="rwm-step">
+<div class="rwm-step-label">🖊️ Mimic</div>
+<div class="rwm-step-text">Write a line for someone who is being far too charming. Use grander words than the moment deserves.</div>
+<div class="rwm-frame">Sentence frame: We two are perfectly [grand word], each to the other.</div>
+<div class="textbox-prompt">Write your own too-charming line.</div>
+<div class="journal-label">📓 Your sentence <span class="saved-dot" id="dot-rwm-mimic"></span></div>
+<textarea class="journal-box" id="journal-rwm-mimic" data-label="RWM &mdash; Mimic" placeholder="Write your sentence here..." oninput="autoSave(this,'dot-rwm-mimic');gatherAnswers();"></textarea>
+</div>
+</div>
+<div class="tab-next-wrap">
     <p class="tab-transition-voice">You&rsquo;ve read, you&rsquo;ve paused, you&rsquo;ve thought. Time to show what you know.</p>
     <button class="tab-next-btn" onclick="switchTab('assignment')">Continue to 📬 Assignment →</button>
   </div>
@@ -2783,7 +2809,7 @@ function gatherAnswers() {
   var sections = [
     { title: '🌅 WARM-UP', ids: ['journal-wgrd', 'journal-dol'] },
     { title: '🔤 WORD STUDY', ids: ['journal-morph', 'journal-vocab', 'journal-grammar', 'journal-spelling', 'journal-writing'] },
-    { title: '📖 READING — PAUSE & THINK', ids: ['journal-pause1', 'journal-pause2'] },
+    { title: '📖 READING — PAUSE & THINK', ids: ['journal-pause1', 'journal-pause2', 'journal-rwm-reader', 'journal-rwm-writer', 'journal-rwm-mimic'] },
     { title: '📬 READING COMPREHENSION', ids: ['journal-q1','journal-q2','journal-q3','journal-q4','journal-q5','journal-q6','journal-q7'] },
     { title: '✍️ WRITER\'S WORKSHOP', ids: ['journal-ww'] }
   ];

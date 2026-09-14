@@ -2321,13 +2321,6 @@ And see what lies in store.</div>
 
 </div></div>
 <div class="activity bl-green">
-<div class="activity-head"><div class="activity-num" style="background:#34B76F;">5</div><div style="flex:1;"><div class="activity-title">📝 Reading-Writing Connection (RWM)</div><div class="activity-sub">A sentence tells a complete thought.</div></div></div>
-<div class="activity-body">
-<div class="task-box"><div class="task-label">📜 Mentor Sentence</div>
-<div class="task-sentence">Breakfast was ready.</div>
-<p style="font-size:15px;color:#3A4A6B;line-height:1.6;margin-top:8px;">This is a complete thought in just three words. Subject: <em>Breakfast</em>. Predicate: <em>was ready</em>. Short can be powerful!</p></div>
-</div></div>
-<div class="activity bl-green">
 <div class="activity-head"><div class="activity-num" style="background:#34B76F;">6</div><div style="flex:1;"><div class="activity-title">🪶 Writing Connection</div><div class="activity-sub">Connect today's reading to your own writing</div></div></div>
 <div class="activity-body">
 <p>Think about the Lambchops&rsquo; morning. Write <strong>2–3 sentences</strong> about a surprising morning in YOUR life.</p>
@@ -2367,6 +2360,32 @@ And see what lies in store.</div>
 <textarea class="journal-box" id="journal-pause1" data-label="Pause &amp; Think" placeholder="I think..." oninput="autoSave(this,'dot-pause1')"></textarea>
 </div></div>
 </div></div>
+<div class="rwm-box">
+<div class="rwm-header">📖 RWM &mdash; Read like a Reader, Read like a Writer, Mimic</div>
+<div class="rwm-sentence">&ldquo;Breakfast was ready.&rdquo;</div>
+<div class="rwm-step">
+<div class="rwm-step-label">📖 Read like a Reader</div>
+<div class="rwm-step-text">Three words, and the whole morning starts. What is happening in the Lambchop house at this moment?</div>
+<div class="textbox-prompt">Write 1 sentence: what is going on when the book opens?</div>
+<div class="journal-label">📓 Your response <span class="saved-dot" id="dot-rwm-reader"></span></div>
+<textarea class="journal-box" id="journal-rwm-reader" data-label="RWM &mdash; Read like a Reader" placeholder="When the book opens..." oninput="autoSave(this,'dot-rwm-reader');gatherAnswers();"></textarea>
+</div>
+<div class="rwm-step">
+<div class="rwm-step-label">✏️ Read like a Writer</div>
+<div class="rwm-step-text">Count the words. Even this short, it is a <strong>complete thought</strong> &mdash; it has a <em>who</em> (breakfast) and a <em>what</em> (was ready). Now read this: <em>&ldquo;When breakfast was ready.&rdquo;</em> Something is missing, isn&rsquo;t it?</div>
+<div class="textbox-prompt">Write 1 sentence: how do you know the author&rsquo;s sentence is a complete thought?</div>
+<div class="journal-label">📓 Your response <span class="saved-dot" id="dot-rwm-writer"></span></div>
+<textarea class="journal-box" id="journal-rwm-writer" data-label="RWM &mdash; Read like a Writer" placeholder="I know it is complete because..." oninput="autoSave(this,'dot-rwm-writer');gatherAnswers();"></textarea>
+</div>
+<div class="rwm-step">
+<div class="rwm-step-label">🖊️ Mimic</div>
+<div class="rwm-step-text">Write your own three-or-four word sentence about a morning in your house. Keep it short &mdash; but make it a complete thought.</div>
+<div class="rwm-frame">Sentence frame: [Something] was [something].</div>
+<div class="textbox-prompt">Write one short, complete sentence about your morning.</div>
+<div class="journal-label">📓 Your sentence <span class="saved-dot" id="dot-rwm-mimic"></span></div>
+<textarea class="journal-box" id="journal-rwm-mimic" data-label="RWM &mdash; Mimic" placeholder="Write your sentence here..." oninput="autoSave(this,'dot-rwm-mimic');gatherAnswers();"></textarea>
+</div>
+</div>
 <div class="tab-next-wrap">
 <p class="tab-transition-voice">You&rsquo;ve read and thought carefully. Time to show what you know!</p>
 <button class="tab-next-btn" onclick="switchTab('assignment')">Continue to 📬 Assignment →</button>
@@ -2451,7 +2470,7 @@ function expandIntro(){document.getElementById("introSection").classList.remove(
 function gatherAnswers(){var output="";var sections=[
 {title:"🌅 WARM-UP",ids:["journal-wgrd","journal-dol"]},
 {title:"🔤 WORD STUDY",ids:["journal-swyk","journal-grammar","journal-writing"]},
-{title:"📖 READING",ids:["journal-pause1"]},
+{title:"📖 READING",ids:["journal-pause1","journal-rwm-reader","journal-rwm-writer","journal-rwm-mimic"]},
 {title:"📬 COMPREHENSION",ids:["journal-q1","journal-q2","journal-q3","journal-wp"]}
 ];
 output+="LESSON 1.2 — Flat Stanley, The Big Bulletin Board\n";

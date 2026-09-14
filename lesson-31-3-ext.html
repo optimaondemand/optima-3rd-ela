@@ -2634,7 +2634,33 @@ function tileTap(el){var box=el.closest(".tile-word");if(!box||el.dataset.used)r
             <textarea class="journal-box" id="journal-q3" data-label="Q3: connection to the year" placeholder="I would add ___ from ___ because... For example..." oninput="autoSave(this,'dot-journal-q3');gatherAnswers();"></textarea>
           </div>
         </div>
-  <div class="tab-next-wrap">
+  <div class="rwm-box">
+<div class="rwm-header">📖 RWM &mdash; Read like a Reader, Read like a Writer, Mimic</div>
+<div class="rwm-sentence">&ldquo;It is something you practice, develop, and strengthen &mdash; one choice at a time.&rdquo;</div>
+<div class="rwm-step">
+<div class="rwm-step-label">📖 Read like a Reader</div>
+<div class="rwm-step-text">You are collecting evidence from both texts today. This is the informational text&rsquo;s big claim about courage. What is it arguing?</div>
+<div class="textbox-prompt">Write 1 sentence: what does the informational text say courage really is?</div>
+<div class="journal-label">📓 Your response <span class="saved-dot" id="dot-rwm-reader"></span></div>
+<textarea class="journal-box" id="journal-rwm-reader" data-label="RWM &mdash; Read like a Reader" placeholder="The text argues that courage is..." oninput="autoSave(this,'dot-rwm-reader');gatherAnswers();"></textarea>
+</div>
+<div class="rwm-step">
+<div class="rwm-step-label">✏️ Read like a Writer</div>
+<div class="rwm-step-text">Three verbs build up &mdash; <strong>practice, develop, strengthen</strong> &mdash; and then a dash stops everything for the last four words. The dash is a held breath. <em>One choice at a time</em> lands harder for having waited.</div>
+<div class="textbox-prompt">Write 1 sentence: why use a dash before the last few words?</div>
+<div class="journal-label">📓 Your response <span class="saved-dot" id="dot-rwm-writer"></span></div>
+<textarea class="journal-box" id="journal-rwm-writer" data-label="RWM &mdash; Read like a Writer" placeholder="The dash makes the ending..." oninput="autoSave(this,'dot-rwm-writer');gatherAnswers();"></textarea>
+</div>
+<div class="rwm-step">
+<div class="rwm-step-label">🖊️ Mimic</div>
+<div class="rwm-step-text">Write a sentence about something you get better at. Use three verbs, then a dash, then four short words.</div>
+<div class="rwm-frame">Sentence frame: It is something you [verb], [verb], and [verb] &mdash; [four short words].</div>
+<div class="textbox-prompt">Write your own dash-ending sentence.</div>
+<div class="journal-label">📓 Your sentence <span class="saved-dot" id="dot-rwm-mimic"></span></div>
+<textarea class="journal-box" id="journal-rwm-mimic" data-label="RWM &mdash; Mimic" placeholder="Write your sentence here..." oninput="autoSave(this,'dot-rwm-mimic');gatherAnswers();"></textarea>
+</div>
+</div>
+<div class="tab-next-wrap">
     <p class="tab-transition-voice">Great reading work! Now bring your thinking to the assignment.</p>
     <button class="tab-next-btn" onclick="switchTab('assignment')">Continue to 📬 Assignment →</button>
   </div>
@@ -2737,6 +2763,7 @@ function gatherAnswers() {
   var output = '';
   var sections = [
     { title: '📖 CHAPTER THINKING', ids: ['journal-q1','journal-q2','journal-q3'] },
+    { title: '📖 RWM — READ LIKE A READER / WRITER / MIMIC', ids: ['journal-rwm-reader', 'journal-rwm-writer', 'journal-rwm-mimic'] },
     { title: '🔤 WORD STUDY CONNECTION (MORPHOLOGY)', ids: ['journal-morph'] },
     { title: '🪶 WRITING CONNECTION', ids: ['journal-writing'] }
   ];

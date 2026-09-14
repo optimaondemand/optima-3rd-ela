@@ -2295,13 +2295,6 @@ function spellReveal(c){if(c.classList.contains("done"))return;c.classList.add("
 <textarea class="journal-box" id="journal-swyk" data-label="SWYK: Closed syllables and short vowels review" placeholder="The pattern is..." oninput="autoSave(this,'dot-swyk')"></textarea></div>
 </div></div>
 <div class="activity bl-green">
-<div class="activity-head"><div class="activity-num" style="background:#34B76F;">5</div><div style="flex:1;"><div class="activity-title">📝 Reading-Writing Connection (RWM)</div><div class="activity-sub">A sentence tells a complete thought.</div></div></div>
-<div class="activity-body">
-<div class="task-box"><div class="task-label">📜 Mentor Sentence</div>
-<div class="task-sentence">But Stanley was not hurt.</div>
-<p style="font-size:15px;color:#3A4A6B;line-height:1.6;margin-top:8px;">The word <em>But</em> connects this to what came before. Even with five words, it&rsquo;s a complete thought.</p></div>
-</div></div>
-<div class="activity bl-green">
 <div class="activity-head"><div class="activity-num" style="background:#34B76F;">6</div><div style="flex:1;"><div class="activity-title">🪶 Writing Connection</div><div class="activity-sub">Connect today's reading to your own writing</div></div></div>
 <div class="activity-body">
 <p>Stanley calls out cheerfully from under the board. Write <strong>2–3 sentences</strong> about a time you reacted in a way that surprised people.</p>
@@ -2353,6 +2346,32 @@ function spellReveal(c){if(c.classList.contains("done"))return;c.classList.add("
 <textarea class="journal-box" id="journal-pause1" data-label="Pause &amp; Think" placeholder="I think..." oninput="autoSave(this,'dot-pause1')"></textarea>
 </div></div>
 </div></div>
+<div class="rwm-box">
+<div class="rwm-header">📖 RWM &mdash; Read like a Reader, Read like a Writer, Mimic</div>
+<div class="rwm-sentence">&ldquo;But Stanley was not hurt.&rdquo;</div>
+<div class="rwm-step">
+<div class="rwm-step-label">📖 Read like a Reader</div>
+<div class="rwm-step-text">A huge bulletin board has just fallen on Stanley in the night. What does this sentence tell you &mdash; and what does it stop you worrying about?</div>
+<div class="textbox-prompt">Write 1 sentence: what does the author want you to know here?</div>
+<div class="journal-label">📓 Your response <span class="saved-dot" id="dot-rwm-reader"></span></div>
+<textarea class="journal-box" id="journal-rwm-reader" data-label="RWM &mdash; Read like a Reader" placeholder="The author wants me to know..." oninput="autoSave(this,'dot-rwm-reader');gatherAnswers();"></textarea>
+</div>
+<div class="rwm-step">
+<div class="rwm-step-label">✏️ Read like a Writer</div>
+<div class="rwm-step-text">The author starts with <strong>But</strong>. That one little word turns the sentence around &mdash; it tells you the bad thing you expected did <em>not</em> happen. It is still a complete thought all by itself.</div>
+<div class="textbox-prompt">Write 1 sentence: what does the word <em>but</em> do at the start?</div>
+<div class="journal-label">📓 Your response <span class="saved-dot" id="dot-rwm-writer"></span></div>
+<textarea class="journal-box" id="journal-rwm-writer" data-label="RWM &mdash; Read like a Writer" placeholder="The word but..." oninput="autoSave(this,'dot-rwm-writer');gatherAnswers();"></textarea>
+</div>
+<div class="rwm-step">
+<div class="rwm-step-label">🖊️ Mimic</div>
+<div class="rwm-step-text">Write your own sentence that starts with <em>But</em> and turns something around. Make sure it is a complete thought on its own.</div>
+<div class="rwm-frame">Sentence frame: But [who] was not [what you expected].</div>
+<div class="textbox-prompt">Write your own But&hellip; sentence.</div>
+<div class="journal-label">📓 Your sentence <span class="saved-dot" id="dot-rwm-mimic"></span></div>
+<textarea class="journal-box" id="journal-rwm-mimic" data-label="RWM &mdash; Mimic" placeholder="Write your sentence here..." oninput="autoSave(this,'dot-rwm-mimic');gatherAnswers();"></textarea>
+</div>
+</div>
 <div class="tab-next-wrap">
 <p class="tab-transition-voice">You&rsquo;ve read and thought carefully. Time to show what you know!</p>
 <button class="tab-next-btn" onclick="switchTab('assignment')">Continue to 📬 Assignment →</button>
@@ -2437,7 +2456,7 @@ function expandIntro(){document.getElementById("introSection").classList.remove(
 function gatherAnswers(){var output="";var sections=[
 {title:"🌅 WARM-UP",ids:["journal-wgrd","journal-dol"]},
 {title:"🔤 WORD STUDY",ids:["journal-swyk","journal-grammar","journal-writing"]},
-{title:"📖 READING",ids:["journal-pause1"]},
+{title:"📖 READING",ids:["journal-pause1","journal-rwm-reader","journal-rwm-writer","journal-rwm-mimic"]},
 {title:"📬 COMPREHENSION",ids:["journal-q1","journal-q2","journal-q3","journal-wp"]}
 ];
 output+="LESSON 1.3 — Flat Stanley, The Big Bulletin Board\n";

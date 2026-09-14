@@ -2313,13 +2313,6 @@ Or should I say, through thick and thin?</div>
 
 </div></div>
 <div class="activity bl-green">
-<div class="activity-head"><div class="activity-num" style="background:#34B76F;">5</div><div style="flex:1;"><div class="activity-title">📝 Reading-Writing Connection (RWM)</div><div class="activity-sub">Writers introduce characters with actions and details.</div></div></div>
-<div class="activity-body">
-<div class="task-box"><div class="task-label">📜 Mentor Sentence</div>
-<div class="task-sentence">&ldquo;Hay is for horses, Arthur, not people,&rdquo; Mr. Lambchop said.</div>
-<p style="font-size:15px;color:#3A4A6B;line-height:1.6;margin-top:8px;">The author uses dialogue to show that Mr. Lambchop cares about manners. This one sentence tells us a lot about the character!</p></div>
-</div></div>
-<div class="activity bl-green">
 <div class="activity-head"><div class="activity-num" style="background:#34B76F;">6</div><div style="flex:1;"><div class="activity-title">🪶 Writing Connection</div><div class="activity-sub">Connect today's reading to your own writing</div></div></div>
 <div class="activity-body">
 <p>The author shows Arthur is jealous by describing what he DOES (tries to slide under a door). Write <strong>2–3 sentences</strong> showing how someone in your family acts when they feel a strong emotion. Show, don&rsquo;t tell!</p>
@@ -2359,6 +2352,32 @@ Or should I say, through thick and thin?</div>
 <textarea class="journal-box" id="journal-pause1" data-label="Pause &amp; Think" placeholder="I think..." oninput="autoSave(this,'dot-pause1')"></textarea>
 </div></div>
 </div></div>
+<div class="rwm-box">
+<div class="rwm-header">📖 RWM &mdash; Read like a Reader, Read like a Writer, Mimic</div>
+<div class="rwm-sentence">&ldquo;&ldquo;Hay is for horses, Arthur, not people,&rdquo; Mr. Lambchop said.&rdquo;</div>
+<div class="rwm-step">
+<div class="rwm-step-label">📖 Read like a Reader</div>
+<div class="rwm-step-text">Arthur has just yelled &ldquo;Hey!&rdquo; down the hall. What does Mr. Lambchop&rsquo;s reply tell you about the kind of father he is?</div>
+<div class="textbox-prompt">Write 1 sentence: what kind of person is Mr. Lambchop?</div>
+<div class="journal-label">📓 Your response <span class="saved-dot" id="dot-rwm-reader"></span></div>
+<textarea class="journal-box" id="journal-rwm-reader" data-label="RWM &mdash; Read like a Reader" placeholder="Mr. Lambchop is the kind of person who..." oninput="autoSave(this,'dot-rwm-reader');gatherAnswers();"></textarea>
+</div>
+<div class="rwm-step">
+<div class="rwm-step-label">✏️ Read like a Writer</div>
+<div class="rwm-step-text">The author never says &ldquo;Mr. Lambchop cared about good manners.&rdquo; He lets you <strong>hear him say it</strong> instead. One line of speech does the work of a whole description.</div>
+<div class="textbox-prompt">Write 1 sentence: what did the author let us hear instead of telling us?</div>
+<div class="journal-label">📓 Your response <span class="saved-dot" id="dot-rwm-writer"></span></div>
+<textarea class="journal-box" id="journal-rwm-writer" data-label="RWM &mdash; Read like a Writer" placeholder="Instead of telling us, the author..." oninput="autoSave(this,'dot-rwm-writer');gatherAnswers();"></textarea>
+</div>
+<div class="rwm-step">
+<div class="rwm-step-label">🖊️ Mimic</div>
+<div class="rwm-step-text">Think of someone you know who says the same thing every time. Write one line of what they say, and add who said it.</div>
+<div class="rwm-frame">Sentence frame: &ldquo;[What they always say],&rdquo; [who] said.</div>
+<div class="textbox-prompt">Write one line of speech that shows what a person is like.</div>
+<div class="journal-label">📓 Your sentence <span class="saved-dot" id="dot-rwm-mimic"></span></div>
+<textarea class="journal-box" id="journal-rwm-mimic" data-label="RWM &mdash; Mimic" placeholder="Write your sentence here..." oninput="autoSave(this,'dot-rwm-mimic');gatherAnswers();"></textarea>
+</div>
+</div>
 <div class="tab-next-wrap">
 <p class="tab-transition-voice">You&rsquo;ve read and thought carefully. Time to show what you know!</p>
 <button class="tab-next-btn" onclick="switchTab('assignment')">Continue to 📬 Assignment →</button>
@@ -2443,7 +2462,7 @@ function expandIntro(){document.getElementById("introSection").classList.remove(
 function gatherAnswers(){var output="";var sections=[
 {title:"🌅 WARM-UP",ids:["journal-wgrd","journal-dol"]},
 {title:"🔤 WORD STUDY",ids:["journal-swyk","journal-grammar","journal-writing"]},
-{title:"📖 READING",ids:["journal-pause1"]},
+{title:"📖 READING",ids:["journal-pause1","journal-rwm-reader","journal-rwm-writer","journal-rwm-mimic"]},
 {title:"📬 COMPREHENSION",ids:["journal-q1","journal-q2","journal-q3","journal-wp"]}
 ];
 output+="LESSON 2.2 — Flat Stanley, Character Details\n";

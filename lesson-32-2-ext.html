@@ -2631,7 +2631,33 @@ Use Clara's model to see how this looks.</p></div>
             <textarea class="journal-box" id="journal-q3" data-label="Q3: two more body paragraphs" placeholder="[Character] also shows the pillar of ___. For example..." oninput="autoSave(this,'dot-journal-q3');gatherAnswers();"></textarea>
           </div>
         </div>
-  <div class="tab-next-wrap">
+  <div class="rwm-box">
+<div class="rwm-header">📖 RWM &mdash; Read like a Reader, Read like a Writer, Mimic</div>
+<div class="rwm-sentence">&ldquo;It is wrong to dislike people for their shapes. Or their religion, or the color of their skin.&rdquo;</div>
+<div class="rwm-step">
+<div class="rwm-step-label">📖 Read like a Reader</div>
+<div class="rwm-step-text">You are writing about which pillar of character matters most to your novel&rsquo;s hero. This is from <em>Flat Stanley</em>, the first book you read this year. Which pillar is it about?</div>
+<div class="textbox-prompt">Write 1 sentence: which pillar does this sentence speak to, and how do you know?</div>
+<div class="journal-label">📓 Your response <span class="saved-dot" id="dot-rwm-reader"></span></div>
+<textarea class="journal-box" id="journal-rwm-reader" data-label="RWM &mdash; Read like a Reader" placeholder="This sentence is about the pillar of..." oninput="autoSave(this,'dot-rwm-reader');gatherAnswers();"></textarea>
+</div>
+<div class="rwm-step">
+<div class="rwm-step-label">✏️ Read like a Writer</div>
+<div class="rwm-step-text">Look at the full stop in the middle. The author could have used one long sentence; instead he stops, then adds more &mdash; <strong>Or their religion, or the color of their skin.</strong> The add-on makes it sound like someone still thinking, still counting the ways.</div>
+<div class="textbox-prompt">Write 1 sentence: why break it into two sentences instead of one?</div>
+<div class="journal-label">📓 Your response <span class="saved-dot" id="dot-rwm-writer"></span></div>
+<textarea class="journal-box" id="journal-rwm-writer" data-label="RWM &mdash; Read like a Writer" placeholder="Breaking it in two makes it sound..." oninput="autoSave(this,'dot-rwm-writer');gatherAnswers();"></textarea>
+</div>
+<div class="rwm-step">
+<div class="rwm-step-label">🖊️ Mimic</div>
+<div class="rwm-step-text">Write a sentence about something you believe. Stop it early, then add more with <em>Or</em>.</div>
+<div class="rwm-frame">Sentence frame: It is [right/wrong] to [do something]. Or [another way], or [another way].</div>
+<div class="textbox-prompt">Write your own add-on sentence.</div>
+<div class="journal-label">📓 Your sentence <span class="saved-dot" id="dot-rwm-mimic"></span></div>
+<textarea class="journal-box" id="journal-rwm-mimic" data-label="RWM &mdash; Mimic" placeholder="Write your sentence here..." oninput="autoSave(this,'dot-rwm-mimic');gatherAnswers();"></textarea>
+</div>
+</div>
+<div class="tab-next-wrap">
     <p class="tab-transition-voice">Great reading work! Now bring your thinking to the assignment.</p>
     <button class="tab-next-btn" onclick="switchTab('assignment')">Continue to 📬 Assignment →</button>
   </div>
@@ -2737,6 +2763,7 @@ function gatherAnswers() {
   var output = '';
   var sections = [
     { title: '📖 CHAPTER THINKING', ids: ['journal-q1','journal-q2','journal-q3'] },
+    { title: '📖 RWM — READ LIKE A READER / WRITER / MIMIC', ids: ['journal-rwm-reader', 'journal-rwm-writer', 'journal-rwm-mimic'] },
     { title: '🔤 WORD STUDY CONNECTION (MORPHOLOGY)', ids: ['journal-morph'] },
     { title: '🪶 WRITING CONNECTION', ids: ['journal-writing'] }
   ];

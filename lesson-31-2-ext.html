@@ -2612,7 +2612,33 @@ As you read, look for: How does the author SHOW courage rather than explain it? 
             <textarea class="journal-box" id="journal-q3" data-label="Q3: technique" placeholder="I think [Text 1 / Text 2] is more powerful because... For example..." oninput="autoSave(this,'dot-journal-q3');gatherAnswers();"></textarea>
           </div>
         </div>
-  <div class="tab-next-wrap">
+  <div class="rwm-box">
+<div class="rwm-header">📖 RWM &mdash; Read like a Reader, Read like a Writer, Mimic</div>
+<div class="rwm-sentence">&ldquo;But today, a small boy she knew from her street stood frozen on the bridge, unable to move forward or back, his face white with fear.&rdquo;</div>
+<div class="rwm-step">
+<div class="rwm-step-label">📖 Read like a Reader</div>
+<div class="rwm-step-text">You have read the informational text about courage, and now the story. What is happening on the bridge?</div>
+<div class="textbox-prompt">Write 1 sentence: what does Mira see, and why does it matter to her?</div>
+<div class="journal-label">📓 Your response <span class="saved-dot" id="dot-rwm-reader"></span></div>
+<textarea class="journal-box" id="journal-rwm-reader" data-label="RWM &mdash; Read like a Reader" placeholder="Mira sees..." oninput="autoSave(this,'dot-rwm-reader');gatherAnswers();"></textarea>
+</div>
+<div class="rwm-step">
+<div class="rwm-step-label">✏️ Read like a Writer</div>
+<div class="rwm-step-text">The informational text <em>told</em> you courage involves fear. This sentence <strong>shows</strong> it: frozen, unable to move forward or back, a face gone white. Notice it never uses the word <em>afraid</em>. Fiction proves with pictures what nonfiction states with sentences.</div>
+<div class="textbox-prompt">Write 1 sentence: how does this sentence show fear without using the word?</div>
+<div class="journal-label">📓 Your response <span class="saved-dot" id="dot-rwm-writer"></span></div>
+<textarea class="journal-box" id="journal-rwm-writer" data-label="RWM &mdash; Read like a Writer" placeholder="The author shows fear by..." oninput="autoSave(this,'dot-rwm-writer');gatherAnswers();"></textarea>
+</div>
+<div class="rwm-step">
+<div class="rwm-step-label">🖊️ Mimic</div>
+<div class="rwm-step-text">Take one fact about a feeling and show it instead. Give a body, a position, and a face &mdash; no feeling words.</div>
+<div class="rwm-frame">Sentence frame: But today, [who] stood [position], unable to [do something], [his/her] [body detail].</div>
+<div class="textbox-prompt">Write your own show-do-not-tell sentence.</div>
+<div class="journal-label">📓 Your sentence <span class="saved-dot" id="dot-rwm-mimic"></span></div>
+<textarea class="journal-box" id="journal-rwm-mimic" data-label="RWM &mdash; Mimic" placeholder="Write your sentence here..." oninput="autoSave(this,'dot-rwm-mimic');gatherAnswers();"></textarea>
+</div>
+</div>
+<div class="tab-next-wrap">
     <p class="tab-transition-voice">Great reading work! Now bring your thinking to the assignment.</p>
     <button class="tab-next-btn" onclick="switchTab('assignment')">Continue to 📬 Assignment →</button>
   </div>
@@ -2713,6 +2739,7 @@ function gatherAnswers() {
   var output = '';
   var sections = [
     { title: '📖 CHAPTER THINKING', ids: ['journal-q1','journal-q2','journal-q3'] },
+    { title: '📖 RWM — READ LIKE A READER / WRITER / MIMIC', ids: ['journal-rwm-reader', 'journal-rwm-writer', 'journal-rwm-mimic'] },
     { title: '🔤 WORD STUDY CONNECTION (MORPHOLOGY)', ids: ['journal-morph'] },
     { title: '🪶 WRITING CONNECTION', ids: ['journal-writing'] }
   ];
