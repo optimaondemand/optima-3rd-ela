@@ -2479,15 +2479,6 @@ As she passes over them.</div>
     </div>
   </div>
 
-  <div class="activity bl-green">
-    <div class="activity-head"><div class="activity-num" style="background:#34B76F;">5</div><div style="flex:1;"><div class="activity-title">🪶 Writing Connection</div><div class="activity-sub">One sentence about today's reading</div></div></div>
-    <div class="activity-body">
-      <p>Gregory tells Roscuro stories in the dark. Write <strong>one sentence</strong> of dialogue for your character — something they would say to a new friend they've just met.</p>
-      <div class="journal-label">📓 Your sentence <span class="saved-dot" id="dot-writing"></span></div>
-      <textarea class="journal-box" id="journal-writing" data-label="Writing Connection: First time your character is changed" placeholder=""[Character name] looked at [friend] and said, '___.'"" oninput="autoSave(this,'dot-writing')"></textarea>
-    </div>
-  </div>
-
   <div class="tab-next-wrap">
     <p class="tab-transition-voice">Your vocabulary is ready and your skills are sharp. Time to open the book and step inside the castle walls.</p>
     <button class="tab-next-btn" onclick="switchTab('reading')">Continue to 📖 Reading →</button>
@@ -2812,7 +2803,7 @@ function gatherAnswers() {
   var output = '';
   var sections = [
     { title: '🌅 WARM-UP', ids: ['journal-wgrd', 'journal-dol'] },
-    { title: '🔤 WORD STUDY', ids: ['journal-morph', 'journal-vocab', 'journal-grammar', 'journal-spelling', 'journal-writing'] },
+    { title: '🔤 WORD STUDY', ids: ['journal-morph', 'journal-vocab', 'journal-grammar', 'journal-spelling'] },
     { title: '📖 READING — PAUSE & THINK', ids: ['journal-pause1', 'journal-pause2', 'journal-rwm-reader', 'journal-rwm-writer', 'journal-rwm-mimic'] },
     { title: '📬 READING COMPREHENSION', ids: ['journal-q1','journal-q2','journal-q3','journal-q4','journal-q5','journal-q6','journal-q7'] },
     { title: '✍️ WRITER\'S WORKSHOP', ids: ['journal-ww'] }

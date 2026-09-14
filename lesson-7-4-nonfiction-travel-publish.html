@@ -2283,13 +2283,6 @@ function checkSpellDice(){var w=document.getElementById("spellWord").textContent
 </script>
 
 </div></div>
-<div class="activity bl-green">
-<div class="activity-head"><div class="activity-num" style="background:#34B76F;">5</div><div style="flex:1;"><div class="activity-title">🪶 Writing Connection</div><div class="activity-sub">Connect today's reading to your own writing</div></div></div>
-<div class="activity-body">
-<p>The text says a good travel guide uses <em>vivid details</em>. Write <strong>2&ndash;3 sentences</strong> about your place that use vivid details &mdash; help the reader see, hear, or feel something.</p>
-<div class="journal-label">📓 Your writing <span class="saved-dot" id="dot-writing"></span></div>
-<textarea class="journal-box" id="journal-writing" data-label="Writing Connection" placeholder="I think..." oninput="autoSave(this,'dot-writing')"></textarea>
-</div></div>
 <div class="tab-next-wrap"><p class="tab-transition-voice">Words sharpened! Time to read.</p>
 <button class="tab-next-btn" onclick="switchTab('reading')">Continue to 📰 Reading →</button></div>
 </div><!-- /tab-words -->
@@ -2421,7 +2414,7 @@ function updateProgress(){const t=document.querySelectorAll(".tab-btn").length;c
 document.querySelector(".tab-btn.active").classList.add("visited");updateProgress();
 function gatherAnswers(){var out="";
 out+="LESSON 7.4 — What Is a Travel Guide?\n════════════════════\n\n";
-var ids=[{t:"🌅 WARM-UP",ids:["journal-wgrd","journal-dol"]},{t:"🔤 WORD STUDY",ids:["journal-swyk","journal-grammar","journal-writing"]},{t:"📰 READING",ids:["journal-pause1","journal-rwm-reader","journal-rwm-writer","journal-rwm-mimic"]},{t:"📬 ASSIGNMENT",ids:["journal-q1","journal-q2","journal-q3","journal-wp"]}];
+var ids=[{t:"🌅 WARM-UP",ids:["journal-wgrd","journal-dol"]},{t:"🔤 WORD STUDY",ids:["journal-swyk","journal-grammar"]},{t:"📰 READING",ids:["journal-pause1","journal-rwm-reader","journal-rwm-writer","journal-rwm-mimic"]},{t:"📬 ASSIGNMENT",ids:["journal-q1","journal-q2","journal-q3","journal-wp"]}];
 ids.forEach(function(s){out+=s.t+"\n────────────────\n";s.ids.forEach(function(id){var el=document.getElementById(id);if(!el)return;var v=el.value.trim();out+="\n"+(el.getAttribute("data-label")||id)+"\n"+(v||"(no answer)")+"\n"});out+="\n"});
 
 

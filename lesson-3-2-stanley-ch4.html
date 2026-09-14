@@ -2312,13 +2312,6 @@ Heroes come in shapes all &rsquo;round.</div>
 
 </div></div>
 
-<div class="activity bl-green">
-<div class="activity-head"><div class="activity-num" style="background:#34B76F;">5</div><div style="flex:1;"><div class="activity-title">🪶 Writing Connection</div><div class="activity-sub">Connect today's reading to your own writing</div></div></div>
-<div class="activity-body">
-<p>Stanley uses what makes him different to solve a big problem. Write <strong>2–3 sentences</strong> about a time you used something special about yourself to help with a problem.</p>
-<div class="journal-label">📓 Your writing <span class="saved-dot" id="dot-writing"></span></div>
-<textarea class="journal-box" id="journal-writing" data-label="Writing Connection" placeholder="I remember a time when..." oninput="autoSave(this,'dot-writing')"></textarea>
-</div></div>
 <div class="tab-next-wrap">
 <p class="tab-transition-voice">Words sharpened! Time to open the book.</p>
 <button class="tab-next-btn" onclick="switchTab('reading')">Continue to 📖 Reading →</button>
@@ -2462,7 +2455,7 @@ function switchTab(tabId){document.querySelectorAll(".tab-panel").forEach(functi
 function expandIntro(){document.getElementById("introSection").classList.remove("collapsed")}
 function gatherAnswers(){var output="";var sections=[
 {title:"🌅 WARM-UP",ids:["journal-wgrd","journal-dol"]},
-{title:"🔤 WORD STUDY",ids:["journal-swyk","journal-grammar","journal-writing"]},
+{title:"🔤 WORD STUDY",ids:["journal-swyk","journal-grammar"]},
 {title:"📖 READING",ids:["journal-pause1", "journal-rwm-reader", "journal-rwm-writer", "journal-rwm-mimic"]},
 {title:"📬 COMPREHENSION",ids:["journal-q1","journal-q2","journal-q3","journal-wp"]}
 ];
