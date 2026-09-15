@@ -2610,7 +2610,9 @@ body {
 
   <!-- GRAMMAR -->
   <div class="activity bl-gold">
-    <div class="activity-head"><div class="activity-num" style="background:#B8860B;">3</div><div><div class="activity-title">✏️ Grammar: Main Idea and Details in Paragraphs (Day 1: Define)</div><div class="activity-sub">Day 1: Notice &mdash; look first, then name the pattern yourself.</div></div></div>
+    <div class="activity-head"><div class="activity-num" style="background:#B8860B;">3</div><div><div class="activity-title">✏️ Grammar: Main Idea and Details in Paragraphs (Day 1: Define)</div><div class="activity-sub">Day 1: Notice &mdash; three columns this time. Sort first.</div>
+<!-- grammar-level -->
+<div style="margin-top:6px;"><span style="display:inline-block;background:#FFF8E8;color:#8A6212;border:1px solid #C7922C;border-radius:999px;padding:3px 10px;font-size:11px;font-weight:800;letter-spacing:.05em;text-transform:uppercase;">🧱 Grammar Level: Sentence Builder</span></div></div></div>
     <div class="activity-body"><!-- grammar-notice-first -->
 <div class="key-concept" style="background:#F0F7FF;border-color:#C8DCEE;margin:0 0 14px;">
 <div class="key-concept-label" style="color:#3D5285;">&#x1F50E; What do you notice?</div>
@@ -2631,25 +2633,27 @@ body {
 <div class="dol-answer" id="gramNotice">
 <p>Every well-written paragraph has a <strong>main idea</strong> (usually in the topic sentence) and <strong>supporting details</strong> that back it up. Recognizing this structure helps both reading and writing.</p>
 </div>
-<div class="spotter-game" id="gramSpot">
-<div class="spotter-sentence" id="spot1" data-done="false">
-  <span class="spotter-word" data-correct="true" onclick="spotterPick(this,'spot1')">Castles</span> <span class="spotter-word" data-correct="true" onclick="spotterPick(this,'spot1')">were</span> <span class="spotter-word" data-correct="true" onclick="spotterPick(this,'spot1')">designed</span> <span class="spotter-word" data-correct="true" onclick="spotterPick(this,'spot1')">to</span> <span class="spotter-word" data-correct="true" onclick="spotterPick(this,'spot1')">be</span> <span class="spotter-word" data-correct="true" onclick="spotterPick(this,'spot1')">difficult</span> <span class="spotter-word" data-correct="true" onclick="spotterPick(this,'spot1')">to</span> <span class="spotter-word" data-correct="true" onclick="spotterPick(this,'spot1')">attack.</span> <span class="spotter-word" data-correct="false" onclick="spotterPick(this,'spot1')">Thick</span> <span class="spotter-word" data-correct="false" onclick="spotterPick(this,'spot1')">walls,</span> <span class="spotter-word" data-correct="false" onclick="spotterPick(this,'spot1')">moats,</span> <span class="spotter-word" data-correct="false" onclick="spotterPick(this,'spot1')">and</span> <span class="spotter-word" data-correct="false" onclick="spotterPick(this,'spot1')">drawbridges</span> <span class="spotter-word" data-correct="false" onclick="spotterPick(this,'spot1')">all</span> <span class="spotter-word" data-correct="false" onclick="spotterPick(this,'spot1')">helped</span> <span class="spotter-word" data-correct="false" onclick="spotterPick(this,'spot1')">keep</span> <span class="spotter-word" data-correct="false" onclick="spotterPick(this,'spot1')">enemies</span> <span class="spotter-word" data-correct="false" onclick="spotterPick(this,'spot1')">out.</span>
-  <div class="spotter-result" id="spot1-result"></div>
+<div class="callout callout-info" style="margin-top:14px;"><span class="callout-icon">🎯</span><p><strong>Your turn.</strong> Nine sentences, three columns. A main idea covers a whole paragraph; a detail supports one; an off-topic sentence does neither.</p></div>
+<div class="sort-game" id="gramSort" data-total="9" data-placed="0"><div class="sort-bank">
+<span class="sort-chip" data-group="a" onclick="gramSortPick(this,'gramSort')">Medieval guilds trained young workers.</span>
+<span class="sort-chip" data-group="a" onclick="gramSortPick(this,'gramSort')">A castle had many jobs to fill.</span>
+<span class="sort-chip" data-group="a" onclick="gramSortPick(this,'gramSort')">Travel in the Middle Ages was slow.</span>
+<span class="sort-chip" data-group="b" onclick="gramSortPick(this,'gramSort')">Apprentices worked for seven years.</span>
+<span class="sort-chip" data-group="b" onclick="gramSortPick(this,'gramSort')">The cook rose before dawn.</span>
+<span class="sort-chip" data-group="b" onclick="gramSortPick(this,'gramSort')">A cart could manage ten miles a day.</span>
+<span class="sort-chip" data-group="c" onclick="gramSortPick(this,'gramSort')">Jemmy liked the smell of bread.</span>
+<span class="sort-chip" data-group="c" onclick="gramSortPick(this,'gramSort')">The prince had blue eyes.</span>
+<span class="sort-chip" data-group="c" onclick="gramSortPick(this,'gramSort')">It rained on Tuesday.</span>
+</div><div class="sort-columns" style="grid-template-columns:1fr 1fr 1fr;">
+<div class="sort-col"><div class="sort-col-header" style="background:linear-gradient(135deg,#55C8E8,#55C8E8);">Main idea</div><div class="sort-col-drop" data-col="a" onclick="gramSortDrop(this,'a','gramSort')"></div></div>
+<div class="sort-col"><div class="sort-col-header" style="background:linear-gradient(135deg,#8B6FC0,#8B6FC0);">Detail that fits</div><div class="sort-col-drop" data-col="b" onclick="gramSortDrop(this,'b','gramSort')"></div></div>
+<div class="sort-col"><div class="sort-col-header" style="background:linear-gradient(135deg,#C7922C,#C7922C);">Off the topic</div><div class="sort-col-drop" data-col="c" onclick="gramSortDrop(this,'c','gramSort')"></div></div>
+</div><div class="sort-score" id="gramSort-score"></div></div>
+<div class="swyk"><div class="swyk-label">🪶 Show What You Know</div>
+<div class="swyk-prompt">How can you tell a main idea from a detail? Give the test in your own words.</div>
+<div class="journal-label">📓 Your answer <span class="saved-dot" id="dot-grammar"></span></div>
+<textarea class="journal-box" id="journal-grammar" data-label="Grammar response" placeholder="I noticed that..." oninput="autoSave(this,'dot-grammar')"></textarea></div>
 </div>
-<div class="spotter-sentence" id="spot2" data-done="false">
-  <span class="spotter-word" data-correct="true" onclick="spotterPick(this,'spot2')">Medieval</span> <span class="spotter-word" data-correct="true" onclick="spotterPick(this,'spot2')">peasants</span> <span class="spotter-word" data-correct="true" onclick="spotterPick(this,'spot2')">ate</span> <span class="spotter-word" data-correct="true" onclick="spotterPick(this,'spot2')">simple</span> <span class="spotter-word" data-correct="true" onclick="spotterPick(this,'spot2')">food.</span> <span class="spotter-word" data-correct="false" onclick="spotterPick(this,'spot2')">Their</span> <span class="spotter-word" data-correct="false" onclick="spotterPick(this,'spot2')">meals</span> <span class="spotter-word" data-correct="false" onclick="spotterPick(this,'spot2')">consisted</span> <span class="spotter-word" data-correct="false" onclick="spotterPick(this,'spot2')">mainly</span> <span class="spotter-word" data-correct="false" onclick="spotterPick(this,'spot2')">of</span> <span class="spotter-word" data-correct="false" onclick="spotterPick(this,'spot2')">bread,</span> <span class="spotter-word" data-correct="false" onclick="spotterPick(this,'spot2')">pottage,</span> <span class="spotter-word" data-correct="false" onclick="spotterPick(this,'spot2')">and</span> <span class="spotter-word" data-correct="false" onclick="spotterPick(this,'spot2')">whatever</span> <span class="spotter-word" data-correct="false" onclick="spotterPick(this,'spot2')">vegetables</span> <span class="spotter-word" data-correct="false" onclick="spotterPick(this,'spot2')">they</span> <span class="spotter-word" data-correct="false" onclick="spotterPick(this,'spot2')">could</span> <span class="spotter-word" data-correct="false" onclick="spotterPick(this,'spot2')">grow.</span>
-  <div class="spotter-result" id="spot2-result"></div>
-</div>
-<div class="spotter-sentence" id="spot3" data-done="false">
-  <span class="spotter-word" data-correct="true" onclick="spotterPick(this,'spot3')">A</span> <span class="spotter-word" data-correct="true" onclick="spotterPick(this,'spot3')">page's</span> <span class="spotter-word" data-correct="true" onclick="spotterPick(this,'spot3')">life</span> <span class="spotter-word" data-correct="true" onclick="spotterPick(this,'spot3')">was</span> <span class="spotter-word" data-correct="true" onclick="spotterPick(this,'spot3')">one</span> <span class="spotter-word" data-correct="true" onclick="spotterPick(this,'spot3')">of</span> <span class="spotter-word" data-correct="true" onclick="spotterPick(this,'spot3')">training</span> <span class="spotter-word" data-correct="true" onclick="spotterPick(this,'spot3')">and</span> <span class="spotter-word" data-correct="true" onclick="spotterPick(this,'spot3')">service.</span> <span class="spotter-word" data-correct="false" onclick="spotterPick(this,'spot3')">He</span> <span class="spotter-word" data-correct="false" onclick="spotterPick(this,'spot3')">ran</span> <span class="spotter-word" data-correct="false" onclick="spotterPick(this,'spot3')">errands,</span> <span class="spotter-word" data-correct="false" onclick="spotterPick(this,'spot3')">served</span> <span class="spotter-word" data-correct="false" onclick="spotterPick(this,'spot3')">at</span> <span class="spotter-word" data-correct="false" onclick="spotterPick(this,'spot3')">table,</span> <span class="spotter-word" data-correct="true" onclick="spotterPick(this,'spot3')">and</span> <span class="spotter-word" data-correct="false" onclick="spotterPick(this,'spot3')">practiced</span> <span class="spotter-word" data-correct="false" onclick="spotterPick(this,'spot3')">with</span> <span class="spotter-word" data-correct="true" onclick="spotterPick(this,'spot3')">a</span> <span class="spotter-word" data-correct="false" onclick="spotterPick(this,'spot3')">sword</span> <span class="spotter-word" data-correct="false" onclick="spotterPick(this,'spot3')">every</span> <span class="spotter-word" data-correct="false" onclick="spotterPick(this,'spot3')">day.</span>
-  <div class="spotter-result" id="spot3-result"></div>
-</div>
-<div class="spotter-sentence" id="spot4" data-done="false">
-  <span class="spotter-word" data-correct="true" onclick="spotterPick(this,'spot4')">Towns</span> <span class="spotter-word" data-correct="true" onclick="spotterPick(this,'spot4')">grew</span> <span class="spotter-word" data-correct="true" onclick="spotterPick(this,'spot4')">wherever</span> <span class="spotter-word" data-correct="true" onclick="spotterPick(this,'spot4')">trade</span> <span class="spotter-word" data-correct="true" onclick="spotterPick(this,'spot4')">was</span> <span class="spotter-word" data-correct="true" onclick="spotterPick(this,'spot4')">possible.</span> <span class="spotter-word" data-correct="false" onclick="spotterPick(this,'spot4')">They</span> <span class="spotter-word" data-correct="false" onclick="spotterPick(this,'spot4')">appeared</span> <span class="spotter-word" data-correct="false" onclick="spotterPick(this,'spot4')">near</span> <span class="spotter-word" data-correct="false" onclick="spotterPick(this,'spot4')">rivers,</span> <span class="spotter-word" data-correct="false" onclick="spotterPick(this,'spot4')">crossroads,</span> <span class="spotter-word" data-correct="false" onclick="spotterPick(this,'spot4')">and</span> <span class="spotter-word" data-correct="false" onclick="spotterPick(this,'spot4')">cathedrals.</span>
-  <div class="spotter-result" id="spot4-result"></div>
-</div>
-      </div>
-      </div>
     </div>
   </div>
 
@@ -4068,5 +4072,63 @@ document.addEventListener('DOMContentLoaded', function() {
   if (document.readyState === 'loading') { document.addEventListener('DOMContentLoaded', init); }
   else { init(); }
 })();
+
+/* grammar-variety helpers - instance-scoped so they never clash with the
+   page-wide sort/fill handlers used by the spelling and morphology strands */
+function gramSortPick(chip,gid){if(chip.classList.contains('placed'))return;var g=document.getElementById(gid);var prev=g.querySelector('.gram-sel');if(prev){prev.classList.remove('gram-sel');prev.style.outline=''}chip.classList.add('gram-sel');chip.style.outline='3px solid #55C8E8';chip.style.outlineOffset='2px'}
+function gramSortDrop(col,colName,gid){var g=document.getElementById(gid);var sel=g.querySelector('.gram-sel');if(!sel)return;var cl=sel.cloneNode(true);cl.classList.remove('gram-sel');cl.style.outline='';cl.onclick=null;cl.style.cursor='default';if(sel.getAttribute('data-group')===colName){cl.classList.add('correct');sel.classList.add('placed');col.appendChild(cl);var n=parseInt(g.dataset.placed||'0')+1;g.dataset.placed=n;if(n>=parseInt(g.dataset.total||'8')){var sc=document.getElementById(gid+'-score');if(sc){sc.textContent='🎉 All sorted!';sc.classList.add('show')}}}else{cl.classList.add('wrong');col.appendChild(cl);setTimeout(function(){if(cl.parentNode===col)col.removeChild(cl)},600)}sel.classList.remove('gram-sel');sel.style.outline=''}
+function gramFillCheck(gid){var g=document.getElementById(gid);var ok=true;var norm=function(s){return s.trim().toLowerCase().replace(/[\u2018\u2019\u02bc]/g,"'").replace(/[\u201c\u201d]/g,'"').replace(/\s+/g,' ');};g.querySelectorAll('.fillin-input').forEach(function(inp){var a=norm(inp.getAttribute('data-answer'));var v=norm(inp.value);if(v===a){inp.classList.remove('wrong');inp.classList.add('correct');inp.disabled=true}else{inp.classList.add('wrong');ok=false;setTimeout(function(){inp.classList.remove('wrong')},600)}});if(ok){var fb=document.getElementById(gid+'-fb');if(fb)fb.classList.add('show')}}
+
+
+function gramSpotAll(word, sid){
+  var s = document.getElementById(sid);
+  if (!s || s.getAttribute('data-done') === 'true') return;
+  var res = document.getElementById(sid + '-result');
+  if (word.classList.contains('correct-reveal')) return;
+  if (word.getAttribute('data-correct') === 'true'){
+    word.classList.add('correct-reveal');
+    var need = s.querySelectorAll('.spotter-word[data-correct="true"]').length;
+    var got  = s.querySelectorAll('.spotter-word.correct-reveal').length;
+    if (got >= need){
+      res.textContent = '✅ That is all of them!';
+      res.className = 'spotter-result show win';
+      s.setAttribute('data-done', 'true');
+    } else {
+      res.textContent = '✅ One down — there is at least one more.';
+      res.className = 'spotter-result show win';
+    }
+  } else {
+    word.classList.add('wrong-reveal');
+    res.textContent = '🤔 Not quite — try again!';
+    res.className = 'spotter-result show miss';
+    setTimeout(function(){ word.classList.remove('wrong-reveal'); }, 600);
+  }
+}
+
+function gramSpotFix(word, sid){
+  var s = document.getElementById(sid);
+  if (!s || s.getAttribute('data-done') === 'true') return;
+  s.querySelectorAll('.spotter-word').forEach(function(w){ w.classList.remove('selected'); });
+  var res = document.getElementById(sid + '-result');
+  var label = word.textContent.replace(/[,!.?"“”]/g, '').trim();
+  var mode = (s.closest('.spotter-game') || s).getAttribute('data-fixmsg') || 'mistake';
+  if (word.getAttribute('data-correct') === 'true'){
+    word.classList.add('correct-reveal');
+    if (label === 'No mistake'){
+      res.textContent = '✅ Right — nothing wrong with that one.';
+    } else if (mode === 'comma'){
+      res.textContent = '✅ Found it — the comma belongs right after "' + label + '".';
+    } else {
+      res.textContent = '✅ Found it — "' + label + '" is the mistake.';
+    }
+    res.className = 'spotter-result show win';
+    s.setAttribute('data-done', 'true');
+  } else {
+    word.classList.add('wrong-reveal');
+    res.textContent = '🤔 Not that one — keep looking.';
+    res.className = 'spotter-result show miss';
+    setTimeout(function(){ word.classList.remove('wrong-reveal'); res.classList.remove('show'); }, 900);
+  }
+}
 </script>
 </body></html>
