@@ -127,7 +127,7 @@ function grammarSlide(pres,d,show){
     }
     y+=0.8;
   });
-  s.addText(show?'✅  Answers revealed':'Tap the word that fits the rule.',
+  s.addText(show?'✅  Answers revealed':(d.grammar_prompt||'Tap the word that fits the rule.'),
     {x:0.4,y:y+0.05,w:9.2,h:0.4,fontSize:15,bold:show,italic:!show,fontFace:F,color:show?C.green:C.gray,margin:0});
   s.addNotes('Answers: '+d.grammar.map(g=>g.answer).join(', '));
 }

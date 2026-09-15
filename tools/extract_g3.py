@@ -156,8 +156,8 @@ def extract_lesson(html, week, day):
         for m in re.finditer(r'class="match-item is-word"[^>]*>([^<]+)<', morph_src)
     ][:6]
 
-    mt_m = re.search(r'activity-title[^>]*>🌱[^<]*<', morph_src)
-    d['morph_title'] = cl(mt_m.group(0)) if mt_m else ''
+    mt_m = re.search(r'activity-title[^>]*>(🌱[^<]*)<', morph_src)
+    d['morph_title'] = clx(mt_m.group(1)) if mt_m else ''
 
     # ── Vocabulary (SCOPED to VOCABULARY section) ─────────────────────────
     vocab = []
@@ -204,8 +204,8 @@ def extract_lesson(html, week, day):
 
     # ── Grammar (SCOPED to GRAMMAR section) ───────────────────────────────
     gram_src = sec_gram if sec_gram else html
-    gt_m = re.search(r'activity-title[^>]*>✏️[^<]*<', gram_src)
-    d['grammar_title'] = cl(gt_m.group(0)) if gt_m else ''
+    gt_m = re.search(r'activity-title[^>]*>(✏️[^<]*)<', gram_src)
+    d['grammar_title'] = clx(gt_m.group(1)) if gt_m else ''
 
     grammar = []
     for spot in re.finditer(
@@ -221,7 +221,56 @@ def extract_lesson(html, week, day):
         sentence = ' '.join(all_words)
         if sentence:
             grammar.append({'sentence': sentence, 'answer': answer})
+    # ── Grammar, non-spotter activity types (added 2026-09-15) ───────────
+    # The week-6 rebuild gave each day of the week a different activity so the
+    # four days stop being the same tap-the-word game. Only D2 and D4 still use
+    # the spotter, so without these branches the deck lost its grammar slide on
+    # D1 (sort) and D3 (fill-in) -- the same failure the spelling strand hit.
+    gram_prompt = ''
+    if grammar:
+        gram_prompt = ('Find the one mistake in each sentence.'
+                       if re.search(r'has exactly one mistake', gram_src)
+                       else 'Tap the word that fits the rule.')
+
+    if not grammar:
+        # D1 -- word/sentence sort: one row per column, the column header is
+        # the "answer" the teacher reads off the slide.
+        g_headers = {}
+        for col_m in re.finditer(r'data-col="([^"]+)"', gram_src):
+            col_id = col_m.group(1)
+            if col_id in g_headers:
+                continue
+            hdr_pos = gram_src[:col_m.start()].rfind('sort-col-header')
+            if hdr_pos > -1:
+                hm = re.search(r'sort-col-header[^>]*>(.*?)</div>',
+                               gram_src[hdr_pos:hdr_pos+300], re.S)
+                if hm:
+                    g_headers[col_id] = clx(hm.group(1))
+        g_groups = {}
+        for chip in re.finditer(
+                r'class="sort-chip"[^>]*data-group="([^"]+)"[^>]*>([^<]+)<', gram_src):
+            grp = chip.group(1)
+            g_groups.setdefault(g_headers.get(grp, grp), []).append(chip.group(2).strip())
+        for label, words in g_groups.items():
+            grammar.append({'sentence': ', '.join(words), 'answer': label})
+        if grammar:
+            gram_prompt = 'Sort each one into the column where it belongs.'
+
+    if not grammar:
+        # D3 -- fill-in: the item text is the prompt, data-answer is the answer.
+        for fm in re.finditer(
+                r'<div class="fillin-item">(.*?)</div>', gram_src, re.S):
+            body = fm.group(1)
+            am = re.search(r'data-answer="([^"]*)"', body)
+            if not am:
+                continue
+            sentence = clx(re.sub(r'<input[^>]*>', '______', body))
+            grammar.append({'sentence': sentence, 'answer': am.group(1)})
+        if grammar:
+            gram_prompt = 'Fill in the blank.'
+
     d['grammar'] = grammar[:6]
+    d['grammar_prompt'] = gram_prompt
 
     # ── Spelling (SCOPED to SPELLING section) ─────────────────────────────
     # Prefer the SPELLING section comment; several units (W6-7 nonfiction, W25-32
@@ -239,8 +288,8 @@ def extract_lesson(html, week, day):
             spell_src = html[_si:min(_ends)] if _ends else html[_si:]
     if not spell_src:
         spell_src = html
-    st_m = re.search(r'activity-title[^>]*>🔠[^<]*<', spell_src)
-    d['spell_title'] = cl(st_m.group(0)) if st_m else ''
+    st_m = re.search(r'activity-title[^>]*>(🔠[^<]*)<', spell_src)
+    d['spell_title'] = clx(st_m.group(1)) if st_m else ''
 
     # Map data-col values to column header labels
     col_headers = {}
