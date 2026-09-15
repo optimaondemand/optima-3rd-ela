@@ -2335,7 +2335,9 @@ body {
 </div></div>
 <!-- GRAMMAR -->
 <div class="activity bl-gold">
-<div class="activity-head"><div class="activity-num" style="background:#C7922C;">3</div><div style="flex:1;"><div class="activity-title">✏️ Grammar: Complete sentences</div><div class="activity-sub">Day 1: Notice &mdash; look first, then name the pattern yourself.</div></div></div>
+<div class="activity-head"><div class="activity-num" style="background:#C7922C;">3</div><div style="flex:1;"><div class="activity-title">✏️ Grammar: Complete sentences</div><div class="activity-sub">Day 1: Notice &mdash; sort them first, then check the rule.</div>
+<!-- grammar-level -->
+<div style="margin-top:6px;"><span style="display:inline-block;background:#EAF7FC;color:#2A7E99;border:1px solid #55C8E8;border-radius:999px;padding:3px 10px;font-size:11px;font-weight:800;letter-spacing:.05em;text-transform:uppercase;">🔍 Grammar Level: Word Watcher</span></div></div></div>
 <div class="activity-body"><!-- grammar-notice-first -->
 <div class="key-concept" style="background:#F0F7FF;border-color:#C8DCEE;margin:0 0 14px;">
 <div class="key-concept-label" style="color:#3D5285;">&#x1F50E; What do you notice?</div>
@@ -2361,15 +2363,22 @@ body {
 <p>Subject: <em>Stanley</em> — Predicate: <em>was not hurt</em></p>
 <p>Not complete — tells <em>what</em> but not what happened</p>
 </div>
-<div class="callout callout-info" style="margin-top:14px;"><span class="callout-icon">🎯</span><p><strong>Your turn.</strong> Tap the group of words that is a <strong>complete sentence</strong> &mdash; it needs someone or something, and something that happened. Tap to check &mdash; green means you got it.</p></div>
-<div class="spotter-game" id="grammarGame">
-<div class="spotter-sentence" id="gspot1"><span class="spotter-word" onclick="spotterPick(this,'gspot1')" data-correct="false">The big bulletin board.</span> <span class="spotter-word" onclick="spotterPick(this,'gspot1')" data-correct="true">The big bulletin board fell.</span><div class="spotter-result" id="gspot1-result"></div></div>
-<div class="spotter-sentence" id="gspot2"><span class="spotter-word" onclick="spotterPick(this,'gspot2')" data-correct="true">Stanley slid under the door.</span> <span class="spotter-word" onclick="spotterPick(this,'gspot2')" data-correct="false">Under the closed door.</span><div class="spotter-result" id="gspot2-result"></div></div>
-<div class="spotter-sentence" id="gspot3"><span class="spotter-word" onclick="spotterPick(this,'gspot3')" data-correct="false">Arthur and his brother.</span> <span class="spotter-word" onclick="spotterPick(this,'gspot3')" data-correct="true">Arthur called to his brother.</span><div class="spotter-result" id="gspot3-result"></div></div>
-<div class="spotter-sentence" id="gspot4"><span class="spotter-word" onclick="spotterPick(this,'gspot4')" data-correct="true">Mrs. Lambchop made hot chocolate.</span> <span class="spotter-word" onclick="spotterPick(this,'gspot4')" data-correct="false">Hot chocolate in the morning.</span><div class="spotter-result" id="gspot4-result"></div></div>
-</div>
+<div class="callout callout-info" style="margin-top:14px;"><span class="callout-icon">🎯</span><p><strong>Your turn.</strong> Eight word groups. Four could stand alone on a page; four could not. Sort them.</p></div>
+<div class="sort-game" id="gramSort" data-total="8" data-placed="0"><div class="sort-bank">
+<span class="sort-chip" data-group="a" onclick="gramSortPick(this,'gramSort')">Stanley was flat.</span>
+<span class="sort-chip" data-group="a" onclick="gramSortPick(this,'gramSort')">The board fell.</span>
+<span class="sort-chip" data-group="a" onclick="gramSortPick(this,'gramSort')">Arthur laughed.</span>
+<span class="sort-chip" data-group="a" onclick="gramSortPick(this,'gramSort')">Mrs. Lambchop waited.</span>
+<span class="sort-chip" data-group="b" onclick="gramSortPick(this,'gramSort')">Under the door.</span>
+<span class="sort-chip" data-group="b" onclick="gramSortPick(this,'gramSort')">A boy as flat as paper.</span>
+<span class="sort-chip" data-group="b" onclick="gramSortPick(this,'gramSort')">Rolled up his sleeves.</span>
+<span class="sort-chip" data-group="b" onclick="gramSortPick(this,'gramSort')">Because of the board.</span>
+</div><div class="sort-columns">
+<div class="sort-col"><div class="sort-col-header" style="background:linear-gradient(135deg,#55C8E8,#55C8E8);">A whole sentence</div><div class="sort-col-drop" data-col="a" onclick="gramSortDrop(this,'a','gramSort')"></div></div>
+<div class="sort-col"><div class="sort-col-header" style="background:linear-gradient(135deg,#8B6FC0,#8B6FC0);">Not a sentence yet</div><div class="sort-col-drop" data-col="b" onclick="gramSortDrop(this,'b','gramSort')"></div></div>
+</div><div class="sort-score" id="gramSort-score"></div></div>
 <div class="swyk"><div class="swyk-label">🪶 Show What You Know</div>
-<div class="swyk-prompt">In your own words, what are the two parts every complete sentence needs? Give one example of your own.</div>
+<div class="swyk-prompt">What was missing from every group in the second column? Answer in one sentence.</div>
 <div class="journal-label">📓 Your answer <span class="saved-dot" id="dot-grammar"></span></div>
 <textarea class="journal-box" id="journal-grammar" data-label="Grammar response" placeholder="I noticed that..." oninput="autoSave(this,'dot-grammar')"></textarea></div>
 
@@ -3147,5 +3156,63 @@ const trackerPos=[{x:10,y:140},{x:28,y:120},{x:46,y:135},{x:64,y:115},{x:82,y:13
   if (document.readyState === 'loading') { document.addEventListener('DOMContentLoaded', init); }
   else { init(); }
 })();
+
+/* grammar-variety helpers - instance-scoped so they never clash with the
+   page-wide sort/fill handlers used by the spelling and morphology strands */
+function gramSortPick(chip,gid){if(chip.classList.contains('placed'))return;var g=document.getElementById(gid);var prev=g.querySelector('.gram-sel');if(prev){prev.classList.remove('gram-sel');prev.style.outline=''}chip.classList.add('gram-sel');chip.style.outline='3px solid #55C8E8';chip.style.outlineOffset='2px'}
+function gramSortDrop(col,colName,gid){var g=document.getElementById(gid);var sel=g.querySelector('.gram-sel');if(!sel)return;var cl=sel.cloneNode(true);cl.classList.remove('gram-sel');cl.style.outline='';cl.onclick=null;cl.style.cursor='default';if(sel.getAttribute('data-group')===colName){cl.classList.add('correct');sel.classList.add('placed');col.appendChild(cl);var n=parseInt(g.dataset.placed||'0')+1;g.dataset.placed=n;if(n>=parseInt(g.dataset.total||'8')){var sc=document.getElementById(gid+'-score');if(sc){sc.textContent='🎉 All sorted!';sc.classList.add('show')}}}else{cl.classList.add('wrong');col.appendChild(cl);setTimeout(function(){if(cl.parentNode===col)col.removeChild(cl)},600)}sel.classList.remove('gram-sel');sel.style.outline=''}
+function gramFillCheck(gid){var g=document.getElementById(gid);var ok=true;g.querySelectorAll('.fillin-input').forEach(function(inp){var a=inp.getAttribute('data-answer').toLowerCase();var v=inp.value.trim().toLowerCase();if(v===a){inp.classList.remove('wrong');inp.classList.add('correct');inp.disabled=true}else{inp.classList.add('wrong');ok=false;setTimeout(function(){inp.classList.remove('wrong')},600)}});if(ok){var fb=document.getElementById(gid+'-fb');if(fb)fb.classList.add('show')}}
+
+
+function gramSpotAll(word, sid){
+  var s = document.getElementById(sid);
+  if (!s || s.getAttribute('data-done') === 'true') return;
+  var res = document.getElementById(sid + '-result');
+  if (word.classList.contains('correct-reveal')) return;
+  if (word.getAttribute('data-correct') === 'true'){
+    word.classList.add('correct-reveal');
+    var need = s.querySelectorAll('.spotter-word[data-correct="true"]').length;
+    var got  = s.querySelectorAll('.spotter-word.correct-reveal').length;
+    if (got >= need){
+      res.textContent = '✅ That is all of them!';
+      res.className = 'spotter-result show win';
+      s.setAttribute('data-done', 'true');
+    } else {
+      res.textContent = '✅ One down — there is at least one more.';
+      res.className = 'spotter-result show win';
+    }
+  } else {
+    word.classList.add('wrong-reveal');
+    res.textContent = '🤔 Not quite — try again!';
+    res.className = 'spotter-result show miss';
+    setTimeout(function(){ word.classList.remove('wrong-reveal'); }, 600);
+  }
+}
+
+function gramSpotFix(word, sid){
+  var s = document.getElementById(sid);
+  if (!s || s.getAttribute('data-done') === 'true') return;
+  s.querySelectorAll('.spotter-word').forEach(function(w){ w.classList.remove('selected'); });
+  var res = document.getElementById(sid + '-result');
+  var label = word.textContent.replace(/[,!.?"“”]/g, '').trim();
+  var mode = (s.closest('.spotter-game') || s).getAttribute('data-fixmsg') || 'mistake';
+  if (word.getAttribute('data-correct') === 'true'){
+    word.classList.add('correct-reveal');
+    if (label === 'No mistake'){
+      res.textContent = '✅ Right — nothing wrong with that one.';
+    } else if (mode === 'comma'){
+      res.textContent = '✅ Found it — the comma belongs right after "' + label + '".';
+    } else {
+      res.textContent = '✅ Found it — "' + label + '" is the mistake.';
+    }
+    res.className = 'spotter-result show win';
+    s.setAttribute('data-done', 'true');
+  } else {
+    word.classList.add('wrong-reveal');
+    res.textContent = '🤔 Not that one — keep looking.';
+    res.className = 'spotter-result show miss';
+    setTimeout(function(){ word.classList.remove('wrong-reveal'); res.classList.remove('show'); }, 900);
+  }
+}
 </script>
 </body></html>

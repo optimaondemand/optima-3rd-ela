@@ -2429,7 +2429,9 @@ body {
 
 <!-- ═══ GRAMMAR ═══ -->
   <div class="activity bl-gold">
-    <div class="activity-head"><div class="activity-num" style="background:#C7922C;">3</div><div style="flex:1;"><div class="activity-title">✏️ Grammar: Singular and plural nouns</div><div class="activity-sub">Day 1: Notice &mdash; look first, then name the pattern yourself.</div></div></div>
+    <div class="activity-head"><div class="activity-num" style="background:#C7922C;">3</div><div style="flex:1;"><div class="activity-title">✏️ Grammar: Singular and plural nouns</div><div class="activity-sub">Day 1: Notice &mdash; sort them first, then check the rule.</div>
+<!-- grammar-level -->
+<div style="margin-top:6px;"><span style="display:inline-block;background:#EAF7FC;color:#2A7E99;border:1px solid #55C8E8;border-radius:999px;padding:3px 10px;font-size:11px;font-weight:800;letter-spacing:.05em;text-transform:uppercase;">🔍 Grammar Level: Word Watcher</span></div></div></div>
     <div class="activity-body"><!-- grammar-notice-first -->
             <div class="key-concept" style="background:#F0F7FF;border-color:#C8DCEE;margin:0 0 14px;">
             <div class="key-concept-label" style="color:#3D5285;">&#x1F50E; What do you notice?</div>
@@ -2456,16 +2458,23 @@ body {
             <p><em>brothers</em> and <em>sisters</em> are plural; <em>mouse</em> is singular.</p>
             <p><em>palm</em> is singular; <em>ears</em> is plural.</p>
             </div>
-            <div class="callout callout-info" style="margin-top:14px;"><span class="callout-icon">🎯</span><p><strong>Your turn.</strong> Find the spotter word that is plural. Tap a word to check &mdash; green means you got it.</p></div>
-      <div class="spotter-game" id="grammarGame">
-        <div class="spotter-sentence" id="gspot1"><span class="spotter-word" onclick="spotterPick(this,'gspot1')" data-correct="false">The</span> <span class="spotter-word" onclick="spotterPick(this,'gspot1')" data-correct="true">mice</span> <span class="spotter-word" onclick="spotterPick(this,'gspot1')" data-correct="false">of</span> <span class="spotter-word" onclick="spotterPick(this,'gspot1')" data-correct="false">the</span> <span class="spotter-word" onclick="spotterPick(this,'gspot1')" data-correct="false">castle</span> <span class="spotter-word" onclick="spotterPick(this,'gspot1')" data-correct="false">feared</span> <span class="spotter-word" onclick="spotterPick(this,'gspot1')" data-correct="false">the</span> <span class="spotter-word" onclick="spotterPick(this,'gspot1')" data-correct="false">dungeon.</span><div class="spotter-result" id="gspot1-result"></div></div>
-        <div class="spotter-sentence" id="gspot2"><span class="spotter-word" onclick="spotterPick(this,'gspot2')" data-correct="false">Despereaux</span> <span class="spotter-word" onclick="spotterPick(this,'gspot2')" data-correct="false">had</span> <span class="spotter-word" onclick="spotterPick(this,'gspot2')" data-correct="false">two</span> <span class="spotter-word" onclick="spotterPick(this,'gspot2')" data-correct="true">brothers</span> <span class="spotter-word" onclick="spotterPick(this,'gspot2')" data-correct="false">and</span> <span class="spotter-word" onclick="spotterPick(this,'gspot2')" data-correct="false">one</span> <span class="spotter-word" onclick="spotterPick(this,'gspot2')" data-correct="false">sister.</span><div class="spotter-result" id="gspot2-result"></div></div>
-        <div class="spotter-sentence" id="gspot3"><span class="spotter-word" onclick="spotterPick(this,'gspot3')" data-correct="false">The</span> <span class="spotter-word" onclick="spotterPick(this,'gspot3')" data-correct="false">king</span> <span class="spotter-word" onclick="spotterPick(this,'gspot3')" data-correct="false">played</span> <span class="spotter-word" onclick="spotterPick(this,'gspot3')" data-correct="true">songs</span> <span class="spotter-word" onclick="spotterPick(this,'gspot3')" data-correct="false">on</span> <span class="spotter-word" onclick="spotterPick(this,'gspot3')" data-correct="false">his</span> <span class="spotter-word" onclick="spotterPick(this,'gspot3')" data-correct="false">guitar.</span><div class="spotter-result" id="gspot3-result"></div></div>
-        <div class="spotter-sentence" id="gspot4"><span class="spotter-word" onclick="spotterPick(this,'gspot4')" data-correct="false">A</span> <span class="spotter-word" onclick="spotterPick(this,'gspot4')" data-correct="true">mouse</span> <span class="spotter-word" onclick="spotterPick(this,'gspot4')" data-correct="false">sat</span> <span class="spotter-word" onclick="spotterPick(this,'gspot4')" data-correct="false">at</span> <span class="spotter-word" onclick="spotterPick(this,'gspot4')" data-correct="false">the</span> <span class="spotter-word" onclick="spotterPick(this,'gspot4')" data-correct="false">foot</span> <span class="spotter-word" onclick="spotterPick(this,'gspot4')" data-correct="false">of</span> <span class="spotter-word" onclick="spotterPick(this,'gspot4')" data-correct="false">the</span> <span class="spotter-word" onclick="spotterPick(this,'gspot4')" data-correct="false">king.</span><div class="spotter-result" id="gspot4-result"></div></div>
-      </div>
-      <div class="swyk">
+            <div class="callout callout-info" style="margin-top:14px;"><span class="callout-icon">🎯</span><p><strong>Your turn.</strong> Eight nouns. Sort them by how many each one names.</p></div>
+<div class="sort-game" id="gramSort" data-total="8" data-placed="0"><div class="sort-bank">
+<span class="sort-chip" data-group="a" onclick="gramSortPick(this,'gramSort')">mouse</span>
+<span class="sort-chip" data-group="a" onclick="gramSortPick(this,'gramSort')">brother</span>
+<span class="sort-chip" data-group="a" onclick="gramSortPick(this,'gramSort')">song</span>
+<span class="sort-chip" data-group="a" onclick="gramSortPick(this,'gramSort')">foot</span>
+<span class="sort-chip" data-group="b" onclick="gramSortPick(this,'gramSort')">mice</span>
+<span class="sort-chip" data-group="b" onclick="gramSortPick(this,'gramSort')">brothers</span>
+<span class="sort-chip" data-group="b" onclick="gramSortPick(this,'gramSort')">songs</span>
+<span class="sort-chip" data-group="b" onclick="gramSortPick(this,'gramSort')">feet</span>
+</div><div class="sort-columns">
+<div class="sort-col"><div class="sort-col-header" style="background:linear-gradient(135deg,#55C8E8,#55C8E8);">One</div><div class="sort-col-drop" data-col="a" onclick="gramSortDrop(this,'a','gramSort')"></div></div>
+<div class="sort-col"><div class="sort-col-header" style="background:linear-gradient(135deg,#8B6FC0,#8B6FC0);">More than one</div><div class="sort-col-drop" data-col="b" onclick="gramSortDrop(this,'b','gramSort')"></div></div>
+</div><div class="sort-score" id="gramSort-score"></div></div>
+<div class="swyk">
         <div class="swyk-label">🪶 Show What You Know</div>
-        <div class="swyk-prompt">How do you change a noun that means one into a noun that means more than one? Give an example where you just add <em>-s</em>, and one where you have to do something else.</div>
+        <div class="swyk-prompt">Two of the plurals did not just add a letter on the end. Which two, and what happened to them?</div>
         <div class="journal-label">📓 Your answer <span class="saved-dot" id="dot-grammar"></span></div>
         <textarea class="journal-box" id="journal-grammar" data-label="Grammar: Singular and plural nouns" placeholder="I noticed that..." oninput="autoSave(this,'dot-grammar')"></textarea>
       </div>
@@ -3799,5 +3808,63 @@ document.addEventListener('DOMContentLoaded', function() {
   if (document.readyState === 'loading') { document.addEventListener('DOMContentLoaded', init); }
   else { init(); }
 })();
+
+/* grammar-variety helpers - instance-scoped so they never clash with the
+   page-wide sort/fill handlers used by the spelling and morphology strands */
+function gramSortPick(chip,gid){if(chip.classList.contains('placed'))return;var g=document.getElementById(gid);var prev=g.querySelector('.gram-sel');if(prev){prev.classList.remove('gram-sel');prev.style.outline=''}chip.classList.add('gram-sel');chip.style.outline='3px solid #55C8E8';chip.style.outlineOffset='2px'}
+function gramSortDrop(col,colName,gid){var g=document.getElementById(gid);var sel=g.querySelector('.gram-sel');if(!sel)return;var cl=sel.cloneNode(true);cl.classList.remove('gram-sel');cl.style.outline='';cl.onclick=null;cl.style.cursor='default';if(sel.getAttribute('data-group')===colName){cl.classList.add('correct');sel.classList.add('placed');col.appendChild(cl);var n=parseInt(g.dataset.placed||'0')+1;g.dataset.placed=n;if(n>=parseInt(g.dataset.total||'8')){var sc=document.getElementById(gid+'-score');if(sc){sc.textContent='🎉 All sorted!';sc.classList.add('show')}}}else{cl.classList.add('wrong');col.appendChild(cl);setTimeout(function(){if(cl.parentNode===col)col.removeChild(cl)},600)}sel.classList.remove('gram-sel');sel.style.outline=''}
+function gramFillCheck(gid){var g=document.getElementById(gid);var ok=true;g.querySelectorAll('.fillin-input').forEach(function(inp){var a=inp.getAttribute('data-answer').toLowerCase();var v=inp.value.trim().toLowerCase();if(v===a){inp.classList.remove('wrong');inp.classList.add('correct');inp.disabled=true}else{inp.classList.add('wrong');ok=false;setTimeout(function(){inp.classList.remove('wrong')},600)}});if(ok){var fb=document.getElementById(gid+'-fb');if(fb)fb.classList.add('show')}}
+
+
+function gramSpotAll(word, sid){
+  var s = document.getElementById(sid);
+  if (!s || s.getAttribute('data-done') === 'true') return;
+  var res = document.getElementById(sid + '-result');
+  if (word.classList.contains('correct-reveal')) return;
+  if (word.getAttribute('data-correct') === 'true'){
+    word.classList.add('correct-reveal');
+    var need = s.querySelectorAll('.spotter-word[data-correct="true"]').length;
+    var got  = s.querySelectorAll('.spotter-word.correct-reveal').length;
+    if (got >= need){
+      res.textContent = '✅ That is all of them!';
+      res.className = 'spotter-result show win';
+      s.setAttribute('data-done', 'true');
+    } else {
+      res.textContent = '✅ One down — there is at least one more.';
+      res.className = 'spotter-result show win';
+    }
+  } else {
+    word.classList.add('wrong-reveal');
+    res.textContent = '🤔 Not quite — try again!';
+    res.className = 'spotter-result show miss';
+    setTimeout(function(){ word.classList.remove('wrong-reveal'); }, 600);
+  }
+}
+
+function gramSpotFix(word, sid){
+  var s = document.getElementById(sid);
+  if (!s || s.getAttribute('data-done') === 'true') return;
+  s.querySelectorAll('.spotter-word').forEach(function(w){ w.classList.remove('selected'); });
+  var res = document.getElementById(sid + '-result');
+  var label = word.textContent.replace(/[,!.?"“”]/g, '').trim();
+  var mode = (s.closest('.spotter-game') || s).getAttribute('data-fixmsg') || 'mistake';
+  if (word.getAttribute('data-correct') === 'true'){
+    word.classList.add('correct-reveal');
+    if (label === 'No mistake'){
+      res.textContent = '✅ Right — nothing wrong with that one.';
+    } else if (mode === 'comma'){
+      res.textContent = '✅ Found it — the comma belongs right after "' + label + '".';
+    } else {
+      res.textContent = '✅ Found it — "' + label + '" is the mistake.';
+    }
+    res.className = 'spotter-result show win';
+    s.setAttribute('data-done', 'true');
+  } else {
+    word.classList.add('wrong-reveal');
+    res.textContent = '🤔 Not that one — keep looking.';
+    res.className = 'spotter-result show miss';
+    setTimeout(function(){ word.classList.remove('wrong-reveal'); res.classList.remove('show'); }, 900);
+  }
+}
 </script>
 </body></html>
