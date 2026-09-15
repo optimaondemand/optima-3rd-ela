@@ -234,7 +234,9 @@ def extract_lesson(html, week, day):
     # D1 (sort) and D3 (fill-in) -- the same failure the spelling strand hit.
     gram_prompt = ''
     if grammar:
-        if re.search(r'has exactly one mistake', gram_src):
+        if 'No mistake</span>' in gram_src:
+            gram_prompt = 'Find the mistake \u2014 or say there isn\u2019t one.'
+        elif re.search(r'has exactly one mistake', gram_src):
             gram_prompt = 'Find the one mistake in each sentence.'
         elif 'gramSpotAll(' in gram_src:
             gram_prompt = 'Tap EVERY word that fits — there is more than one.'
