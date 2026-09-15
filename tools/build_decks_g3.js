@@ -131,11 +131,12 @@ function grammarSlide(pres,d,show){
     {x:0.4,y:y+0.05,w:9.2,h:0.4,fontSize:15,bold:show,italic:!show,fontFace:F,color:show?C.green:C.gray,margin:0});
   s.addNotes('Answers: '+d.grammar.map(g=>g.answer).join(', '));
 }
-function spellSlide(pres,d,show){
-  const groups=Object.entries(d.spell_groups||{}).filter(([,w])=>w&&w.length);
+function spellSlide(pres,d,show,pfx){
+  pfx=pfx||'';
+  const groups=Object.entries(d[pfx+'spell_groups']||{}).filter(([,w])=>w&&w.length);
   if(!groups.length) return;
-  const s=iSlide(pres,'🔠  Spelling',C.navy);
-  lbl(s,(d.spell_title||'SPELLING').replace(/^🔠\s*Spelling:\s*/,'').toUpperCase(),0.4,0.85,C.navy);
+  const s=iSlide(pres,pfx?'🔠  Spelling Bonus':'🔠  Spelling',C.navy);
+  lbl(s,(d[pfx+'spell_title']||'SPELLING').replace(/^🔠\s*Spelling(?: Bonus)?:\s*/,'').toUpperCase(),0.4,0.85,C.navy);
   if(!show){
     const all=groups.flatMap(([,w])=>w);
     lbl(s,'WORD BANK',0.4,1.18,C.gray);
@@ -192,6 +193,7 @@ const outDir='/home/claude/decks/out'; fs.mkdirSync(outDir,{recursive:true});
     vocabSlide(pres,d);
     grammarSlide(pres,d,false); grammarSlide(pres,d,true);
     spellSlide(pres,d,false); spellSlide(pres,d,true);
+    spellSlide(pres,d,false,'bonus_'); spellSlide(pres,d,true,'bonus_');
     readingSlide(pres,d);
     writingSlide(pres,d);
     const f=`${outDir}/lesson-${d.week}-${d.day}-teacher-slides.pptx`;

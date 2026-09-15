@@ -203,7 +203,11 @@ def extract_lesson(html, week, day):
     d['vocab'] = vocab[:8]
 
     # ── Grammar (SCOPED to GRAMMAR section) ───────────────────────────────
-    gram_src = sec_gram if sec_gram else html
+    # A day with no grammar section at all (Double Spelling Day) must report no
+    # grammar -- falling back to the whole page scooped up the spelling strand's
+    # spotter rows and invented a grammar slide out of them.
+    gram_src = sec_gram if sec_gram else (
+        html if re.search(r'activity-title[^>]*>\u270f\ufe0f Grammar', html) else '')
     gt_m = re.search(r'activity-title[^>]*>(✏️[^<]*)<', gram_src)
     d['grammar_title'] = clx(gt_m.group(1)) if gt_m else ''
 
@@ -276,6 +280,53 @@ def extract_lesson(html, week, day):
 
     d['grammar'] = grammar[:6]
     d['grammar_prompt'] = gram_prompt
+
+    # ── Bonus wordplay / Double Spelling Day (added 2026-09-15) ───────────
+    # W21 D2 trades its grammar slot for a second spelling section (homophones),
+    # so without this the deck loses a slide on that day: grammarSlide() bails
+    # because there is no grammar, and spell_src only sees the regular section.
+    # The marker deliberately avoids the word SPELLING -- section() matches a
+    # NAME inside any comment, so 'SPELLING BONUS' would hijack the real
+    # spelling section's slice.
+    d['bonus_spell_title'] = ''
+    d['bonus_spell_groups'] = {}
+    _bi = html.find('BONUS WORDPLAY')
+    if _bi > -1:
+        _bi = html.rfind('<!--', 0, _bi)
+        # stop at the next SECTION-level comment, not the next comment of any
+        # kind -- the block contains <!-- spell-notice-first -->, which cut the
+        # slice off before the sort chips.
+        _bm = re.compile(r'<!--[^>]*?\b[A-Z][A-Z]+(?:\s+[A-Z]+)*\b[^>]*?-->').search(html, _bi + 4)
+        _bj = _bm.start() if _bm else -1
+        bonus_src = html[_bi:_bj] if _bj > -1 else html[_bi:]
+        bt_m = re.search(r'activity-title[^>]*>(\U0001F520[^<]*)<', bonus_src)
+        d['bonus_spell_title'] = clx(bt_m.group(1)) if bt_m else 'Spelling Bonus'
+        bhdr = {}
+        for col_m in re.finditer(r'data-col="([^"]+)"', bonus_src):
+            cid = col_m.group(1)
+            if cid in bhdr:
+                continue
+            hp = bonus_src[:col_m.start()].rfind('sort-col-header')
+            if hp > -1:
+                hm = re.search(r'sort-col-header[^>]*>(.*?)</div>', bonus_src[hp:hp+300], re.S)
+                if hm:
+                    bhdr[cid] = clx(hm.group(1))
+        bgroups = {}
+        for chip in re.finditer(
+                r'class="sort-chip"[^>]*data-group="([^"]+)"[^>]*>([^<]+)<', bonus_src):
+            g = chip.group(1)
+            bgroups.setdefault(bhdr.get(g, g), []).append(clx(chip.group(2)))
+        # the choose-the-right-spelling rows: keep both options, tick the right one
+        for sm in re.finditer(r'class="spotter-sentence"[^>]*>(.*?)<div class="spotter-result"',
+                              bonus_src, re.S):
+            opts = re.findall(r'data-correct="(true|false)"[^>]*>(?:<strong>)?([^<]+?)(?:</strong>)?</span>',
+                              sm.group(1))
+            right = [w for c, w in opts if c == 'true']
+            words = [w for _, w in opts]
+            if right:
+                bgroups.setdefault('Pick the right spelling', []).append(
+                    '%s  \u2192  %s' % (' '.join(words), right[0]))
+        d['bonus_spell_groups'] = bgroups
 
     # ── Spelling (SCOPED to SPELLING section) ─────────────────────────────
     # Prefer the SPELLING section comment; several units (W6-7 nonfiction, W25-32
