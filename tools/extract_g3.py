@@ -268,6 +268,19 @@ def extract_lesson(html, week, day):
             gram_prompt = 'Sort each one into the column where it belongs.'
 
     if not grammar:
+        # W30 D3 -- a worked BEFORE/AFTER model plus a sentence to revise in the
+        # journal box. No game, so without this the deck loses the slide.
+        bm = re.search(r'>BEFORE</div>\s*<div[^>]*>(.*?)</div>.*?'
+                       r'>AFTER</div>\s*<div[^>]*>(.*?)</div>', gram_src, re.S)
+        if bm:
+            grammar.append({'sentence': clx(bm.group(1)), 'answer': ''})
+            grammar.append({'sentence': clx(bm.group(2)), 'answer': ''})
+            tm = re.search(r'border:2px dashed[^>]*>(.*?)</div>', gram_src, re.S)
+            if tm:
+                grammar.append({'sentence': 'NOW YOU: ' + clx(tm.group(1)), 'answer': ''})
+            gram_prompt = 'Study the before and after, then fix the last one.'
+
+    if not grammar:
         # D3 -- fill-in: the item text is the prompt, data-answer is the answer.
         for fm in re.finditer(
                 r'<div class="fillin-item">(.*?)</div>', gram_src, re.S):

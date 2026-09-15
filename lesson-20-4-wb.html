@@ -4235,12 +4235,17 @@ function gramSpotFix(word, sid){
   if (!s || s.getAttribute('data-done') === 'true') return;
   s.querySelectorAll('.spotter-word').forEach(function(w){ w.classList.remove('selected'); });
   var res = document.getElementById(sid + '-result');
-  var label = word.textContent.replace(/[,!.]/g, '').trim();
+  var label = word.textContent.replace(/[,!.?"“”]/g, '').trim();
+  var mode = (s.closest('.spotter-game') || s).getAttribute('data-fixmsg') || 'mistake';
   if (word.getAttribute('data-correct') === 'true'){
     word.classList.add('correct-reveal');
-    res.textContent = (label === 'No mistake')
-      ? '✅ Right — nothing wrong with that one.'
-      : '✅ Found it — "' + label + '" is the mistake.';
+    if (label === 'No mistake'){
+      res.textContent = '✅ Right — nothing wrong with that one.';
+    } else if (mode === 'comma'){
+      res.textContent = '✅ Found it — the comma belongs right after "' + label + '".';
+    } else {
+      res.textContent = '✅ Found it — "' + label + '" is the mistake.';
+    }
     res.className = 'spotter-result show win';
     s.setAttribute('data-done', 'true');
   } else {
