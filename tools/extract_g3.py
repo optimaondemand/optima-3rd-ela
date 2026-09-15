@@ -216,8 +216,10 @@ def extract_lesson(html, week, day):
         word_pairs = re.findall(
             r'data-correct="(true|false)"[^>]*>(?:<strong>)?([^<]+?)(?:</strong>)?</span>', raw)
         all_words = [w for _, w in word_pairs]
-        # Take FIRST data-correct="true" word only (guards against accidental double-marks)
-        answer = next((w for c, w in word_pairs if c == 'true'), '')
+        # Join every data-correct="true" word: from W13 the Q2 'tap all that
+        # apply' days mark two adjectives per sentence on purpose, and the deck
+        # has to read both off the slide.
+        answer = ' + '.join(w for c, w in word_pairs if c == 'true')
         sentence = ' '.join(all_words)
         if sentence:
             grammar.append({'sentence': sentence, 'answer': answer})
@@ -228,9 +230,12 @@ def extract_lesson(html, week, day):
     # D1 (sort) and D3 (fill-in) -- the same failure the spelling strand hit.
     gram_prompt = ''
     if grammar:
-        gram_prompt = ('Find the one mistake in each sentence.'
-                       if re.search(r'has exactly one mistake', gram_src)
-                       else 'Tap the word that fits the rule.')
+        if re.search(r'has exactly one mistake', gram_src):
+            gram_prompt = 'Find the one mistake in each sentence.'
+        elif 'gramSpotAll(' in gram_src:
+            gram_prompt = 'Tap EVERY word that fits — there is more than one.'
+        else:
+            gram_prompt = 'Tap the word that fits the rule.'
 
     if not grammar:
         # D1 -- word/sentence sort: one row per column, the column header is
