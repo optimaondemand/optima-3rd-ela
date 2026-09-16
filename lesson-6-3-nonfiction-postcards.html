@@ -2266,41 +2266,57 @@ body {
 </div></div>
 <!-- SPELLING -->
 <div class="activity bl-navy">
-<div class="activity-head"><div class="activity-num" style="background:#0E1C42;">4</div><div style="flex:1;"><div class="activity-title">🔠 Spelling: Compound words</div><div class="activity-sub">Apply the pattern &mdash; build the words.</div></div></div>
+<div class="activity-head"><div class="activity-num" style="background:#0E1C42;">4</div><div style="flex:1;"><div class="activity-title">🔠 Spelling: Adding -ed and -ing to base words</div><div class="activity-sub">Apply the pattern &mdash; proofread it.</div></div></div>
 <div class="activity-body">
 <!-- spell-notice-first -->
-<div class="callout callout-info" style="margin-bottom:14px;"><span class="callout-icon">&#x1F440;</span><p>Before you start: split each word into the two words that made it.</p></div>
-<div class="callout callout-gold" style="margin-bottom:14px;background:#FFF8E8;border:2px solid #F5E6C8;border-left:5px solid #C7922C;border-radius:10px;padding:14px 18px;"><span class="callout-icon">📖</span><p style="font-size:15px;color:#0E1C42;line-height:1.6;"><strong>The Rule:</strong> A <strong>compound word</strong> is two smaller words joined into one. Read each part on its own, then blend them: <em>mail</em> + <em>box</em> = <strong>mailbox</strong>. The new word usually keeps a piece of both meanings.</p></div>
-<div class="callout callout-info"><span class="callout-icon">✨</span><p><strong>Compound Builder!</strong> Read both small words, then tap to join them.</p></div>
-<div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:14px 0;" id="spellGrid">
-<div class="rv-card" onclick="spellReveal(this)" data-after="mailbox" data-hint="a box for mail" style="background:#FAFBFF;border:2px solid #C8DCEE;border-radius:10px;padding:14px;text-align:center;cursor:pointer;transition:all 0.3s;">
-<div style="font-size:26px;font-weight:700;color:#0E1C42;" class="rv-word">mail + box</div>
-<div style="font-size:12px;color:#7A88A8;margin-top:4px;" class="rv-hint">tap to join them!</div></div>
-<div class="rv-card" onclick="spellReveal(this)" data-after="postcard" data-hint="a card you post" style="background:#FAFBFF;border:2px solid #C8DCEE;border-radius:10px;padding:14px;text-align:center;cursor:pointer;transition:all 0.3s;">
-<div style="font-size:26px;font-weight:700;color:#0E1C42;" class="rv-word">post + card</div>
-<div style="font-size:12px;color:#7A88A8;margin-top:4px;" class="rv-hint">tap to join them!</div></div>
-<div class="rv-card" onclick="spellReveal(this)" data-after="sunset" data-hint="when the sun sets" style="background:#FAFBFF;border:2px solid #C8DCEE;border-radius:10px;padding:14px;text-align:center;cursor:pointer;transition:all 0.3s;">
-<div style="font-size:26px;font-weight:700;color:#0E1C42;" class="rv-word">sun + set</div>
-<div style="font-size:12px;color:#7A88A8;margin-top:4px;" class="rv-hint">tap to join them!</div></div>
-<div class="rv-card" onclick="spellReveal(this)" data-after="railroad" data-hint="a road of rails" style="background:#FAFBFF;border:2px solid #C8DCEE;border-radius:10px;padding:14px;text-align:center;cursor:pointer;transition:all 0.3s;">
-<div style="font-size:26px;font-weight:700;color:#0E1C42;" class="rv-word">rail + road</div>
-<div style="font-size:12px;color:#7A88A8;margin-top:4px;" class="rv-hint">tap to join them!</div></div>
-<div class="rv-card" onclick="spellReveal(this)" data-after="daylight" data-hint="the light of day" style="background:#FAFBFF;border:2px solid #C8DCEE;border-radius:10px;padding:14px;text-align:center;cursor:pointer;transition:all 0.3s;">
-<div style="font-size:26px;font-weight:700;color:#0E1C42;" class="rv-word">day + light</div>
-<div style="font-size:12px;color:#7A88A8;margin-top:4px;" class="rv-hint">tap to join them!</div></div>
-<div class="rv-card" onclick="spellReveal(this)" data-after="classroom" data-hint="a room for class" style="background:#FAFBFF;border:2px solid #C8DCEE;border-radius:10px;padding:14px;text-align:center;cursor:pointer;transition:all 0.3s;">
-<div style="font-size:26px;font-weight:700;color:#0E1C42;" class="rv-word">class + room</div>
-<div style="font-size:12px;color:#7A88A8;margin-top:4px;" class="rv-hint">tap to join them!</div></div>
+<div class="callout callout-info" style="margin-bottom:14px;"><span class="callout-icon">&#x1F440;</span><p>Before you start: compare each base word with its longer form. What changed?</p></div>
+<div class="callout callout-gold" style="margin-bottom:14px;background:#FFF8E8;border:2px solid #F5E6C8;border-left:5px solid #C7922C;border-radius:10px;padding:14px 18px;"><span class="callout-icon">📖</span><p style="font-size:15px;color:#0E1C42;line-height:1.6;"><strong>The Rule:</strong> Before you add <strong>-ed</strong> or <strong>-ing</strong>, look at the base word. Ends in silent <em>e</em>? <strong>Drop it</strong> (hope &rarr; hoping). One short vowel and one final consonant? <strong>Double it</strong> (run &rarr; running). Anything else? <strong>Just add the ending</strong> (walk &rarr; walked).</p></div>
+<div class="callout callout-info"><span class="callout-icon">🔍</span><p><strong>Proofreader!</strong> You are the editor now. Each sentence has <strong>two</strong> misspelled words. Tap any word you want to check.</p></div>
+<div id="proofGame" style="margin:14px 0;">
+<div style="background:#FAFBFF;border:2px solid #C8DCEE;border-radius:10px;padding:14px;margin-bottom:10px;font-size:17px;line-height:2.2;color:#0E1C42;">
+<span onclick="proofPick(this)" data-good="We" data-why="" data-ok="1" style="cursor:pointer;border-bottom:2px dotted #B9C4DC;padding:0 3px;">We</span>
+<span onclick="proofPick(this)" data-good="were" data-why="" data-ok="1" style="cursor:pointer;border-bottom:2px dotted #B9C4DC;padding:0 3px;">were</span>
+<span onclick="proofPick(this)" data-good="hoping" data-why="the base is hope &mdash; drop the e before -ing" style="cursor:pointer;border-bottom:2px dotted #B9C4DC;padding:0 3px;">hopeing</span>
+<span onclick="proofPick(this)" data-good="for" data-why="" data-ok="1" style="cursor:pointer;border-bottom:2px dotted #B9C4DC;padding:0 3px;">for</span>
+<span onclick="proofPick(this)" data-good="snow," data-why="" data-ok="1" style="cursor:pointer;border-bottom:2px dotted #B9C4DC;padding:0 3px;">snow,</span>
+<span onclick="proofPick(this)" data-good="so" data-why="" data-ok="1" style="cursor:pointer;border-bottom:2px dotted #B9C4DC;padding:0 3px;">so</span>
+<span onclick="proofPick(this)" data-good="we" data-why="" data-ok="1" style="cursor:pointer;border-bottom:2px dotted #B9C4DC;padding:0 3px;">we</span>
+<span onclick="proofPick(this)" data-good="stayed" data-why="a vowel comes before the y, so nothing doubles" style="cursor:pointer;border-bottom:2px dotted #B9C4DC;padding:0 3px;">stayyed</span>
+<span onclick="proofPick(this)" data-good="home." data-why="" data-ok="1" style="cursor:pointer;border-bottom:2px dotted #B9C4DC;padding:0 3px;">home.</span>
+<div class="spotter-result" style="margin-top:8px;"></div></div>
+<div style="background:#FAFBFF;border:2px solid #C8DCEE;border-radius:10px;padding:14px;margin-bottom:10px;font-size:17px;line-height:2.2;color:#0E1C42;">
+<span onclick="proofPick(this)" data-good="He" data-why="" data-ok="1" style="cursor:pointer;border-bottom:2px dotted #B9C4DC;padding:0 3px;">He</span>
+<span onclick="proofPick(this)" data-good="dropped" data-why="short vowel + one consonant &rarr; double the p" style="cursor:pointer;border-bottom:2px dotted #B9C4DC;padding:0 3px;">droped</span>
+<span onclick="proofPick(this)" data-good="the" data-why="" data-ok="1" style="cursor:pointer;border-bottom:2px dotted #B9C4DC;padding:0 3px;">the</span>
+<span onclick="proofPick(this)" data-good="map" data-why="" data-ok="1" style="cursor:pointer;border-bottom:2px dotted #B9C4DC;padding:0 3px;">map</span>
+<span onclick="proofPick(this)" data-good="and" data-why="" data-ok="1" style="cursor:pointer;border-bottom:2px dotted #B9C4DC;padding:0 3px;">and</span>
+<span onclick="proofPick(this)" data-good="jumped" data-why="jump ends in two consonants, so nothing doubles" style="cursor:pointer;border-bottom:2px dotted #B9C4DC;padding:0 3px;">jumpped</span>
+<span onclick="proofPick(this)" data-good="over" data-why="" data-ok="1" style="cursor:pointer;border-bottom:2px dotted #B9C4DC;padding:0 3px;">over</span>
+<span onclick="proofPick(this)" data-good="the" data-why="" data-ok="1" style="cursor:pointer;border-bottom:2px dotted #B9C4DC;padding:0 3px;">the</span>
+<span onclick="proofPick(this)" data-good="puddle." data-why="" data-ok="1" style="cursor:pointer;border-bottom:2px dotted #B9C4DC;padding:0 3px;">puddle.</span>
+<div class="spotter-result" style="margin-top:8px;"></div></div>
+<div style="background:#FAFBFF;border:2px solid #C8DCEE;border-radius:10px;padding:14px;margin-bottom:10px;font-size:17px;line-height:2.2;color:#0E1C42;">
+<span onclick="proofPick(this)" data-good="The" data-why="" data-ok="1" style="cursor:pointer;border-bottom:2px dotted #B9C4DC;padding:0 3px;">The</span>
+<span onclick="proofPick(this)" data-good="wind" data-why="" data-ok="1" style="cursor:pointer;border-bottom:2px dotted #B9C4DC;padding:0 3px;">wind</span>
+<span onclick="proofPick(this)" data-good="was" data-why="" data-ok="1" style="cursor:pointer;border-bottom:2px dotted #B9C4DC;padding:0 3px;">was</span>
+<span onclick="proofPick(this)" data-good="blowing" data-why="blow ends in a vowel team, so nothing doubles" style="cursor:pointer;border-bottom:2px dotted #B9C4DC;padding:0 3px;">blowwing</span>
+<span onclick="proofPick(this)" data-good="while" data-why="" data-ok="1" style="cursor:pointer;border-bottom:2px dotted #B9C4DC;padding:0 3px;">while</span>
+<span onclick="proofPick(this)" data-good="we" data-why="" data-ok="1" style="cursor:pointer;border-bottom:2px dotted #B9C4DC;padding:0 3px;">we</span>
+<span onclick="proofPick(this)" data-good="planned" data-why="plan needs a double n &mdash; planed is a different word" style="cursor:pointer;border-bottom:2px dotted #B9C4DC;padding:0 3px;">planed</span>
+<span onclick="proofPick(this)" data-good="our" data-why="" data-ok="1" style="cursor:pointer;border-bottom:2px dotted #B9C4DC;padding:0 3px;">our</span>
+<span onclick="proofPick(this)" data-good="trip." data-why="" data-ok="1" style="cursor:pointer;border-bottom:2px dotted #B9C4DC;padding:0 3px;">trip.</span>
+<div class="spotter-result" style="margin-top:8px;"></div></div>
 </div>
-<div class="sort-score" id="spellScore"></div>
+<div class="sort-score" id="proofScore"></div>
 <script>
-function spellReveal(c){if(c.classList.contains("done"))return;c.classList.add("done");c.querySelector(".rv-word").innerHTML=c.dataset.after;var h=c.querySelector(".rv-hint");h.innerHTML=c.dataset.hint;h.style.color="#34B76F";h.style.fontWeight="700";c.style.background="#E3F8ED";c.style.borderColor="#34B76F";var all=document.querySelectorAll(".rv-card"),d=document.querySelectorAll(".rv-card.done");var sc=document.getElementById("spellScore");if(!sc)return;sc.textContent=d.length===all.length?"All joined! Two words, one new meaning.":d.length+"/"+all.length+" done";}
+function proofPick(el){if(el.dataset.done)return;el.dataset.done="1";var box=el.parentElement.querySelector(".spotter-result");if(el.dataset.ok){el.style.borderBottom="2px solid #7A88A8";el.style.cursor="default";if(box){box.innerHTML+=(box.innerHTML?"<br>":"")+"\u2714 \u201c"+el.dataset.good+"\u201d is spelled correctly.";box.className="spotter-result show";}return;}el.textContent=el.dataset.good;el.style.color="#34B76F";el.style.fontWeight="700";el.style.borderBottom="2px solid #34B76F";el.style.cursor="default";if(box){box.innerHTML+=(box.innerHTML?"<br>":"")+"\u2705 "+el.dataset.good+" \u2014 "+el.dataset.why;box.className="spotter-result show win";}var all=document.querySelectorAll("#proofGame [data-good]:not([data-ok])");var d=document.querySelectorAll("#proofGame [data-good]:not([data-ok])[data-done]");var sc=document.getElementById("proofScore");if(!sc)return;sc.textContent=d.length===all.length?"Every misspelling found. That is what proofreading feels like.":d.length+"/"+all.length+" misspellings found";}
 </script>
 
+
 <div class="swyk"><div class="swyk-label">🪶 Show What You Know</div>
-<div class="swyk-prompt">Explain the compound words pattern in your own words. Write two example words.</div>
+<div class="swyk-prompt">Explain the adding -ed and -ing to base words pattern in your own words. Write two example words.</div>
 <div class="journal-label">📓 Your answer <span class="saved-dot" id="dot-swyk"></span></div>
-<textarea class="journal-box" id="journal-swyk" data-label="SWYK: Compound words" placeholder="The pattern is..." oninput="autoSave(this,'dot-swyk')"></textarea></div>
+<textarea class="journal-box" id="journal-swyk" data-label="SWYK: Adding -ed and -ing to base words" placeholder="The pattern is..." oninput="autoSave(this,'dot-swyk')"></textarea></div>
 </div></div>
 <div class="tab-next-wrap"><p class="tab-transition-voice">Words sharpened! Time to read.</p>
 <button class="tab-next-btn" onclick="switchTab('reading')">Continue to 📰 Reading →</button></div>

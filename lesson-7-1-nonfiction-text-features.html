@@ -2334,40 +2334,53 @@ body {
 </div></div>
 <!-- SPELLING -->
 <div class="activity bl-navy">
-<div class="activity-head"><div class="activity-num" style="background:#0E1C42;">4</div><div style="flex:1;"><div class="activity-title">🔠 Spelling: Adding -ed and -ing to base words</div><div class="activity-sub">Day 1: Notice &mdash; work out the pattern before you are told it.</div></div></div>
-<div class="activity-body">
+    <div class="activity-head"><div class="activity-num" style="background:#0E1C42;">4</div><div style="flex:1;"><div class="activity-title">🔠 Spelling: Doubling the final consonant</div><div class="activity-sub">Day 1: Notice &mdash; work out the pattern before you are told it.</div></div></div>
+    <div class="activity-body">
 <!-- spell-notice-first -->
 <div class="key-concept NOTICEBOX" style="background:#EEF3FA;border-color:#C8D6EA;margin:0 0 14px;">
 <div class="key-concept-label" style="color:#0E1C42;">&#x1F440; Look at what changed</div>
-<p>Watch what happens to the base word when the ending arrives.</p>
+<p>Compare the short word with the long one.</p>
 </div>
 
 <div class="callout callout-info" style="margin-top:14px;"><span class="callout-icon">&#x1F9D0;</span><p><strong>Look at the words below, then work through these:</strong></p>
 <ul style="margin:6px 0 0 20px;font-size:15px;color:#3A4A6B;line-height:1.8;">
-<li>Which base words stayed exactly the same?</li>
-<li>Which ones changed &mdash; and what changed, a letter dropped or a letter doubled?</li>
-<li>Look at the last two letters of each base word. Any pattern in which ones changed?</li>
+<li>What letter got doubled?</li>
+<li>What is the vowel doing in the short word &mdash; short sound or long?</li>
+<li>Try it without doubling: <em>hoping</em> or <em>hopping</em>? What changed?</li>
 </ul></div>
 <button class="dol-check-btn" onclick="document.getElementById('spellNotice').classList.toggle('show')">&#x1F440; Now name the pattern</button>
 <div class="dol-answer" id="spellNotice">
-<p><strong>The Rule:</strong> Before you add <strong>-ed</strong> or <strong>-ing</strong>, look at the base word. Ends in silent <em>e</em>? <strong>Drop it</strong> (hope &rarr; hoping). One short vowel and one final consonant? <strong>Double it</strong> (run &rarr; running). Anything else? <strong>Just add the ending</strong> (walk &rarr; walked).</p>
+<p><strong>The Rule:</strong> When a base word has <strong>one short vowel</strong> and ends in <strong>one consonant</strong>, double that consonant before an ending that starts with a vowel: <em>hop</em> &rarr; <strong>hopped</strong>. Two consonants at the end, or a long vowel, and you double nothing: <em>jump</em> &rarr; <strong>jumped</strong>.</p>
+<p>When a short word ends in <strong>one vowel + one consonant</strong>, double that last consonant before adding <em>-ed</em> or <em>-ing</em>: <em>stop &rarr; stopped</em>.</p>
+<p>If the word already ends in two consonants, or in a vowel team, do <strong>not</strong> double: <em>jump &rarr; jumped</em>.</p>
 </div>
 
-<div class="callout callout-info"><span class="callout-icon">🎮</span><p><strong>Sort the Words!</strong> Tap a word, then tap the column where it belongs.</p></div>
-<div class="sort-game" id="spellSort"><div class="sort-bank" id="sortBank">
-<span class="sort-chip" data-group="add -ing" onclick="pickSortChip(this)">mailing</span>
-<span class="sort-chip" data-group="add -ing" onclick="pickSortChip(this)">sending</span>
-<span class="sort-chip" data-group="add -ing" onclick="pickSortChip(this)">reading</span>
-<span class="sort-chip" data-group="add -ing" onclick="pickSortChip(this)">looking</span>
-<span class="sort-chip" data-group="drop e + -ing" onclick="pickSortChip(this)">writing</span>
-<span class="sort-chip" data-group="drop e + -ing" onclick="pickSortChip(this)">making</span>
-<span class="sort-chip" data-group="drop e + -ing" onclick="pickSortChip(this)">using</span>
-<span class="sort-chip" data-group="drop e + -ing" onclick="pickSortChip(this)">placing</span>
-</div><div class="sort-columns">
-<div class="sort-col"><div class="sort-col-header" style="background:linear-gradient(135deg,#55C8E8,#7FD8F0);">add -ing</div><div class="sort-col-drop" data-col="add -ing" onclick="dropSortChip(this,'add -ing')"></div></div>
-<div class="sort-col"><div class="sort-col-header" style="background:linear-gradient(135deg,#55C8E8,#7FD8F0);">drop e + -ing</div><div class="sort-col-drop" data-col="drop e + -ing" onclick="dropSortChip(this,'drop e + -ing')"></div></div>
-</div><div class="sort-score" id="sortScore"></div></div>
-</div></div>
+<div class="callout callout-info" style="margin-top:14px;"><span class="callout-icon">🎮</span><p><strong>Practice: Sort the words.</strong> Tap a word, then tap the column it belongs in.</p></div>
+      <div class="sort-game" id="spellSort">
+        <div class="sort-bank" id="sortBank">
+          <span class="sort-chip" data-group="double" onclick="pickSortChip(this)">stopped</span>
+          <span class="sort-chip" data-group="double" onclick="pickSortChip(this)">snapped</span>
+          <span class="sort-chip" data-group="double" onclick="pickSortChip(this)">wrapped</span>
+          <span class="sort-chip" data-group="double" onclick="pickSortChip(this)">nodding</span>
+          <span class="sort-chip" data-group="no-double" onclick="pickSortChip(this)">jumped</span>
+          <span class="sort-chip" data-group="no-double" onclick="pickSortChip(this)">shouted</span>
+          <span class="sort-chip" data-group="no-double" onclick="pickSortChip(this)">looked</span>
+          <span class="sort-chip" data-group="no-double" onclick="pickSortChip(this)">wanted</span>
+        </div>
+        <div class="sort-columns">
+          <div class="sort-col"><div class="sort-col-header" style="background:linear-gradient(135deg,#55C8E8,#55C8E8);">Doubled the consonant</div><div class="sort-col-drop" data-col="double" onclick="dropSortChip(this,'double')"></div></div>
+          <div class="sort-col"><div class="sort-col-header" style="background:linear-gradient(135deg,#8B6FC0,#8B6FC0);">Did not double</div><div class="sort-col-drop" data-col="no-double" onclick="dropSortChip(this,'no-double')"></div></div>
+        </div>
+        <div class="sort-score" id="sortScore"></div>
+      </div>
+      <div class="swyk">
+        <div class="swyk-label">🪶 Show What You Know</div>
+        <div class="swyk-prompt">In your own words, explain the rule for doubling the final consonant. Give one example.</div>
+        <div class="journal-label">📓 Your explanation <span class="saved-dot" id="dot-spelling"></span></div>
+        <textarea class="journal-box" id="journal-spelling" data-label="Spelling: Doubling the final consonant" placeholder="The rule is..." oninput="autoSave(this,'dot-spelling')"></textarea>
+      </div>
+    </div>
+  </div>
 <div class="activity bl-green">
 <div class="activity-head"><div class="activity-num" style="background:#34B76F;">5</div><div style="flex:1;"><div class="activity-title">🪶 Writing Connection</div><div class="activity-sub">Connect today's reading to your own writing</div></div></div>
 <div class="activity-body">
