@@ -2719,7 +2719,7 @@ body {
 
       <div class="callout callout-info" style="margin-top:16px;"><span class="callout-icon">🎮</span><p><strong>Practice:</strong> Sort these words using the pattern you discovered.</p></div>
       <div class="sort-game" id="spellSort">
-  <div class="sort-bank" id="sortBank"><span class="sort-chip" data-group="a" onclick="pickSortChip(this)">tiger</span><span class="sort-chip" data-group="a" onclick="pickSortChip(this)">robot</span><span class="sort-chip" data-group="a" onclick="pickSortChip(this)">frozen</span><span class="sort-chip" data-group="a" onclick="pickSortChip(this)">music</span><span class="sort-chip" data-group="a" onclick="pickSortChip(this)">tiny</span><span class="sort-chip" data-group="a" onclick="pickSortChip(this)">broken</span></div>
+  <div class="sort-bank" id="sortBank"><span class="sort-chip" data-group="a" onclick="pickSortChip(this)">tiger</span><span class="sort-chip" data-group="b" onclick="pickSortChip(this)">napkin</span><span class="sort-chip" data-group="a" onclick="pickSortChip(this)">robot</span><span class="sort-chip" data-group="b" onclick="pickSortChip(this)">velvet</span><span class="sort-chip" data-group="a" onclick="pickSortChip(this)">music</span><span class="sort-chip" data-group="b" onclick="pickSortChip(this)">helmet</span><span class="sort-chip" data-group="a" onclick="pickSortChip(this)">tiny</span><span class="sort-chip" data-group="b" onclick="pickSortChip(this)">sudden</span></div>
   <div class="sort-columns">
     <div class="sort-col"><div class="sort-col-header" style="background:linear-gradient(135deg,#3D1A6B,#5C2D91);">Open syllable (long vowel at end)</div><div class="sort-col-drop" data-col="a" onclick="dropSortChip(this,'a')"></div></div>
     <div class="sort-col"><div class="sort-col-header" style="background:linear-gradient(135deg,#B8860B,#7A45C4);">Closed (short vowel)</div><div class="sort-col-drop" data-col="b" onclick="dropSortChip(this,'b')"></div></div>
@@ -3255,7 +3255,7 @@ function fireConfetti() {
 /* ───── WORD SORT GAME ───── */
 var sortSelected = null;
 var sortPlaced = 0;
-var sortTotal = 6;
+var sortTotal = 8;
 
 function pickSortChip(chip) {
   if (chip.classList.contains('placed')) return;
