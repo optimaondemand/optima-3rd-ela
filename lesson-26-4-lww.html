@@ -2400,7 +2400,7 @@ body {
       <div class="intro-card-head"><div class="intro-card-head-icon">🎯</div><div><div class="intro-card-head-label">Objectives</div><div class="intro-card-head-title">By the end of this lesson&hellip;</div></div></div>
       <div class="intro-card-body"><div class="obj-line"><span class="obj-icon">📖</span><span><strong>Reading:</strong> I will explain how a character's choice leads to a consequence using evidence.</span></div>
 <div class="obj-line"><span class="obj-icon">✏️</span><span><strong>Grammar:</strong> I will explain why verb tense consistency matters in writing.</span></div>
-<div class="obj-line"><span class="obj-icon">🔤</span><span><strong>Spelling:</strong> I will explain the vowel team pattern and spell this week's words.</span></div>
+<div class="obj-line"><span class="obj-icon">🔤</span><span><strong>Spelling:</strong> I will <em>explain</em> how I knew where each syllable split belonged.</span></div>
 </div>
     </div>
   </div>
@@ -2556,13 +2556,13 @@ A man goes riding by.</div>
 </div>
 <!-- SPELLING -->
 <div class="activity bl-navy">
-  <div class="activity-head"><div class="activity-num" style="background:#0E1C42;">4</div><div><div class="activity-title">🔠 Spelling: Vowel team syllables</div><div class="activity-sub">Explain / Justify — master the pattern</div></div></div>
+  <div class="activity-head"><div class="activity-num" style="background:#0E1C42;">4</div><div><div class="activity-title">🔠 Spelling: Academic vocabulary syllable practice (Day 4: Explain)</div><div class="activity-sub">Explain / justify the pattern.</div></div></div>
   <div class="activity-body">
 <!-- spell-notice-first -->
-<div class="callout callout-info" style="margin-bottom:14px;"><span class="callout-icon">&#x1F442;</span><p>Before you start: find the beat where two vowels share one sound.</p></div>
-<p><strong>This week:</strong> Vowel team syllables</p>
-<div class="callout callout-gold" style="margin-bottom:14px;background:#FFF8E8;border:2px solid #F5E6C8;border-left:5px solid #C7922C;border-radius:10px;padding:14px 18px;"><span class="callout-icon">📖</span><p style="font-size:15px;color:#0E1C42;line-height:1.6;"><strong>The Rule:</strong> Two vowels working as a <strong>team</strong> make one sound, and a team never gets split up &mdash; the whole team stays inside the same syllable: <em>rain&middot;bow</em>, <em>sea&middot;son</em>.</p></div>
-<div class="callout callout-info"><span class="callout-icon">🎲</span><p><strong>Vowel Team Dice!</strong> Roll a word, say it out loud, decide &mdash; then tap to check yourself.</p></div>
+<div class="callout callout-gold" style="margin-bottom:14px;background:#FFF8E8;border:2px solid #F5E6C8;border-left:5px solid #C7922C;border-radius:10px;padding:14px 18px;"><span class="callout-icon">&#x1F4D6;</span><p style="font-size:15px;color:#0E1C42;line-height:1.6;"><strong>The Rule:</strong> One vowel sound, one syllable. Count the sounds you hear, not the vowel letters you see.</p></div>
+      <p>Last day. Roll a school word, split it into beats out loud, and then <strong>say how you knew where the splits went</strong> &mdash; which vowel sounds you heard, and which letters tried to fool you.</p>
+
+      <div class="callout callout-info"><span class="callout-icon">🎲</span><p><strong>Academic Word Dice!</strong> Roll a word, split it into beats out loud, say how you knew &mdash; then tap to check.</p></div>
 <div style="text-align:center;margin:14px 0;">
 <div id="spellDie" style="font-size:44px;line-height:1;">🎲</div>
 <button class="fillin-check-btn" id="spellRollBtn" onclick="rollSpellDice()" style="margin-top:10px;">Roll the dice</button>
@@ -2575,7 +2575,7 @@ A man goes riding by.</div>
 <div id="spellReveal" style="display:none;margin-top:10px;font-size:17px;font-weight:700;color:#34B76F;"></div>
 </div>
 <script>
-var spellDice=[{w:"meadow",s:"mead &middot; ow &mdash; ea and ow, two teams"},{w:"sailboat",s:"sail &middot; boat &mdash; ai and oa"},{w:"freedom",s:"free &middot; dom &mdash; ee"},{w:"coastline",s:"coast &middot; line &mdash; oa, then a silent-e syllable"},{w:"daydream",s:"day &middot; dream &mdash; ay and ea"},{w:"toaster",s:"toast &middot; er &mdash; oa"}];var spellUsed=[];
+var spellDice=[{w:"evidence",s:"ev &middot; i &middot; dence &mdash; three beats"},{w:"compare",s:"com &middot; pare &mdash; two beats"},{w:"character",s:"char &middot; ac &middot; ter &mdash; three beats"},{w:"information",s:"in &middot; for &middot; ma &middot; tion &mdash; four beats, tion is one"},{w:"sequence",s:"se &middot; quence &mdash; two beats"},{w:"detail",s:"de &middot; tail &mdash; two beats, though it shows three vowel letters"}];var spellUsed=[];
 function rollSpellDice(){var av=spellDice.filter(function(x){return spellUsed.indexOf(x.w)===-1});if(!av.length)return;var d=document.getElementById("spellDie"),f=["⚀","⚁","⚂","⚃","⚄","⚅"],n=0;var sp=setInterval(function(){d.textContent=f[Math.floor(Math.random()*6)];n++;if(n>10){clearInterval(sp);var p=av[Math.floor(Math.random()*av.length)];spellUsed.push(p.w);document.getElementById("spellWord").textContent=p.w;document.getElementById("spellBox").style.display="block";document.getElementById("spellReveal").style.display="none";document.getElementById("spellCount").textContent=spellUsed.length+"/"+spellDice.length+" words rolled";if(spellUsed.length===spellDice.length){document.getElementById("spellRollBtn").disabled=true;document.getElementById("spellCount").textContent="You rolled them all!";}}},90);}
 function checkSpellDice(){var w=document.getElementById("spellWord").textContent;for(var i=0;i<spellDice.length;i++){if(spellDice[i].w===w){var r=document.getElementById("spellReveal");r.innerHTML=w+" &mdash; "+spellDice[i].s;r.style.display="block";return;}}}
 </script>

@@ -2400,7 +2400,7 @@ body {
       <div class="intro-card-head"><div class="intro-card-head-icon">🎯</div><div><div class="intro-card-head-label">Objectives</div><div class="intro-card-head-title">By the end of this lesson&hellip;</div></div></div>
       <div class="intro-card-body"><div class="obj-line"><span class="obj-icon">📖</span><span><strong>Reading:</strong> I will identify choices and consequences in Ch. 5.</span></div>
 <div class="obj-line"><span class="obj-icon">✏️</span><span><strong>Grammar:</strong> I will identify tense errors in a paragraph.</span></div>
-<div class="obj-line"><span class="obj-icon">🔤</span><span><strong>Spelling:</strong> I will identify vowel teams in words.</span></div>
+<div class="obj-line"><span class="obj-icon">🔤</span><span><strong>Spelling:</strong> I will <em>identify</em> how many beats an academic word has by ear.</span></div>
 </div>
     </div>
   </div>
@@ -2561,21 +2561,46 @@ A man goes riding by.</div>
 </div>
 <!-- SPELLING -->
 <div class="activity bl-navy">
-  <div class="activity-head"><div class="activity-num" style="background:#0E1C42;">4</div><div><div class="activity-title">🔠 Spelling: Vowel team syllables</div><div class="activity-sub">Identify — master the pattern</div></div></div>
-  <div class="activity-body">
+    <div class="activity-head"><div class="activity-num" style="background:#2A0A4A;">4</div><div><div class="activity-title">&#x1F520; Spelling: Academic vocabulary syllable practice (Day 2: Identify)</div><div class="activity-sub">Identify the beats by ear.</div></div></div>
+    <div class="activity-body">
 <!-- spell-notice-first -->
-<div class="callout callout-info" style="margin-bottom:14px;"><span class="callout-icon">&#x1F442;</span><p>Before you start: find the beat where two vowels share one sound.</p></div>
-<p><strong>This week:</strong> Vowel team syllables</p>
-<div class="callout callout-gold" style="margin-bottom:14px;background:#FFF8E8;border:2px solid #F5E6C8;border-left:5px solid #C7922C;border-radius:10px;padding:14px 18px;"><span class="callout-icon">📖</span><p style="font-size:15px;color:#0E1C42;line-height:1.6;"><strong>The Rule:</strong> Two vowels working as a <strong>team</strong> make one sound, and a team never gets split up &mdash; the whole team stays inside the same syllable: <em>rain&middot;bow</em>, <em>sea&middot;son</em>.</p></div>
+<div class="callout callout-info" style="margin-bottom:14px;"><span class="callout-icon">&#x1F440;</span><p>Before you start: clap the word first, then look at it.</p></div>
+<div class="callout callout-gold" style="margin-bottom:14px;background:#FFF8E8;border:2px solid #F5E6C8;border-left:5px solid #C7922C;border-radius:10px;padding:14px 18px;"><span class="callout-icon">&#x1F4D6;</span><p style="font-size:15px;color:#0E1C42;line-height:1.6;"><strong>The Rule:</strong> One vowel <em>sound</em>, one syllable. Count sounds, not letters &mdash; <em>detail</em> looks like three vowels and sounds like two beats.</p></div>
 
-        <div class="callout callout-info"><span class="callout-icon">🔍</span><p>Read the passage below. Find and circle all the words that follow this week's spelling pattern. Write them in your notebook.</p></div>
-        <div class="task-box">
-          <div class="task-instruction">Passage:</div>
-          <div class="task-sentence" style="border-left-color:#1B7A4E;">The Witch revealed her plan and Edmund felt a deep groan inside his chest. The sleigh swept across the snow as Edmund stared at the distant gleam of the lamp-post.</div>
-          <button class="dol-check-btn" style="margin-top:10px;" onclick="document.getElementById('spellAns').classList.toggle('show')">🔍 See the Pattern Words</button>
-          <div class="dol-answer" id="spellAns"><p><strong>Pattern words:</strong> revealed, groan, sleigh, gleam</p></div>
-        </div></div>
+      <div class="callout callout-info"><span class="callout-icon">&#x1F50E;</span><p><strong>Beat Detective!</strong> Only one word in each row has the number of beats named above it.</p></div>
+<div class="spotter-game" id="spellGame">
+<p style="font-size:14px;color:#3A4A6B;margin:10px 0 4px;">Tap the word with <strong>two</strong> beats.</p>
+<div class="spotter-sentence" id="spell1">
+<span class="spotter-word" onclick="spotterPick(this,'spell1')" data-correct="false">evidence</span>
+<span class="spotter-word" onclick="spotterPick(this,'spell1')" data-correct="true">predict</span>
+<span class="spotter-word" onclick="spotterPick(this,'spell1')" data-correct="false">character</span>
+<span class="spotter-word" onclick="spotterPick(this,'spell1')" data-correct="false">information</span>
+<div class="spotter-result" id="spell1-result"></div></div>
+<p style="font-size:14px;color:#3A4A6B;margin:10px 0 4px;">Tap the word with <strong>three</strong> beats.</p>
+<div class="spotter-sentence" id="spell2">
+<span class="spotter-word" onclick="spotterPick(this,'spell2')" data-correct="false">compare</span>
+<span class="spotter-word" onclick="spotterPick(this,'spell2')" data-correct="false">conversation</span>
+<span class="spotter-word" onclick="spotterPick(this,'spell2')" data-correct="true">important</span>
+<span class="spotter-word" onclick="spotterPick(this,'spell2')" data-correct="false">detail</span>
+<div class="spotter-result" id="spell2-result"></div></div>
+<p style="font-size:14px;color:#3A4A6B;margin:10px 0 4px;">Tap the word with <strong>four</strong> beats.</p>
+<div class="spotter-sentence" id="spell3">
+<span class="spotter-word" onclick="spotterPick(this,'spell3')" data-correct="false">summary</span>
+<span class="spotter-word" onclick="spotterPick(this,'spell3')" data-correct="true">imagination</span>
+<span class="spotter-word" onclick="spotterPick(this,'spell3')" data-correct="false">explain</span>
+<span class="spotter-word" onclick="spotterPick(this,'spell3')" data-correct="false">sequence</span>
+<div class="spotter-result" id="spell3-result"></div></div>
+<p style="font-size:14px;color:#3A4A6B;margin:10px 0 4px;">Tap the word where the letters <strong>trick you</strong> &mdash; more vowel letters than beats.</p>
+<div class="spotter-sentence" id="spell4">
+<span class="spotter-word" onclick="spotterPick(this,'spell4')" data-correct="true">detail</span>
+<span class="spotter-word" onclick="spotterPick(this,'spell4')" data-correct="false">evidence</span>
+<span class="spotter-word" onclick="spotterPick(this,'spell4')" data-correct="false">character</span>
+<span class="spotter-word" onclick="spotterPick(this,'spell4')" data-correct="false">summary</span>
+<div class="spotter-result" id="spell4-result"></div></div>
 </div>
+      
+    </div>
+  </div>
   <div class="tab-next-wrap"><p class="tab-transition-voice">Words and skills sharpened. Time to open the book.</p><button class="tab-next-btn" onclick="switchTab('reading')">Continue to 📖 Reading →</button></div>
 </div><!-- /tab-words -->
 
