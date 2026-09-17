@@ -2484,15 +2484,30 @@ body {
 
 <!-- MORPHOLOGY -->
 <div class="activity bl-purple">
-  <div class="activity-head"><div class="activity-num" style="background:#8B6FC0;">1</div><div><div class="activity-title">🌱 Morphology: Morphology review: prefixes and suffixes</div><div class="activity-sub">Use / Apply — Build the Comparison — build your word knowledge</div></div></div>
-  <div class="activity-body">
-<!-- morph-notice-first -->
-<div class="callout callout-info" style="margin-bottom:14px;"><span class="callout-icon">&#x1F50D;</span><p>Before you start: split each word into front, middle, and end.</p></div>
-        <div class="key-concept"><div class="key-concept-label">📌 Apply: Build words using <strong>Review</strong></div><p>Match each clue to the correct word that uses this week's word part.</p></div>
-        <div style="display:flex;align-items:center;gap:12px;padding:10px 14px;background:#fff;border:2px solid #E2E8F4;border-radius:12px;margin-bottom:8px;"><span style="font-size:14px;color:#3A4A6B;flex:2;">without fear — use fear + the suffix that means without</span><span style="font-weight:800;font-family:Lora,serif;color:#1B7A4E;font-size:16px;">→ fearless</span></div><div style="display:flex;align-items:center;gap:12px;padding:10px 14px;background:#fff;border:2px solid #E2E8F4;border-radius:12px;margin-bottom:8px;"><span style="font-size:14px;color:#3A4A6B;flex:2;">full of courage — use courage + the suffix that means full of</span><span style="font-weight:800;font-family:Lora,serif;color:#1B7A4E;font-size:16px;">→ courageous</span></div><div style="display:flex;align-items:center;gap:12px;padding:10px 14px;background:#fff;border:2px solid #E2E8F4;border-radius:12px;margin-bottom:8px;"><span style="font-size:14px;color:#3A4A6B;flex:2;">to build again — use the prefix meaning again + build</span><span style="font-weight:800;font-family:Lora,serif;color:#1B7A4E;font-size:16px;">→ rebuild</span></div><div style="display:flex;align-items:center;gap:12px;padding:10px 14px;background:#fff;border:2px solid #E2E8F4;border-radius:12px;margin-bottom:8px;"><span style="font-size:14px;color:#3A4A6B;flex:2;">not afraid — use the prefix meaning not + afraid</span><span style="font-weight:800;font-family:Lora,serif;color:#1B7A4E;font-size:16px;">→ unafraid</span></div>
-        <div class="swyk"><div class="swyk-label">🪶 Show What You Know</div><div class="swyk-prompt">Pick one word from above. Write a sentence using that word in your own words.</div>
-        <textarea class="journal-box" id="journal-morph" data-label="Morphology Apply" placeholder="I chose the word... It means... In a sentence:..." oninput="autoSave(this,'dot-morph');gatherAnswers();"></textarea></div></div>
+<div class="activity-head"><div class="activity-num" style="background:#8B6FC0;">1</div><div style="flex:1;"><div class="activity-title">&#x1F331; Morphology: prefixes and suffixes</div><div class="activity-sub">Use / Apply the skill</div></div></div>
+<div class="activity-body">
+<div class="callout callout-info" style="margin-bottom:12px;"><span class="callout-icon">&#x1F50D;</span><p>Before you start: read the parts aloud, push them together, then write the word.</p></div>
+<div class="key-concept"><div class="key-concept-label">&#x1F4CC; Remember</div>
+<p><strong>prefixes and suffixes</strong> means <strong>the whole year's word parts</strong>.</p>
+<p><strong>rebuild</strong> = to build again &middot; <strong>unkind</strong> = not kind &middot; <strong>hopeful</strong> = full of hope</p>
 </div>
+<div class="callout callout-info"><span class="callout-icon">&#x1F9E9;</span><p><strong>Build the word.</strong> Put the parts together and type what they make.</p></div>
+<div class="fillin-game" id="morphFillinGame">
+<div class="fillin-item">re- + build &rarr; <input class="fillin-input" id="mfill1" data-answer="rebuild" maxlength="16" placeholder="______"> &mdash; to build again</div>
+<div class="fillin-item">un- + kind &rarr; <input class="fillin-input" id="mfill2" data-answer="unkind" maxlength="16" placeholder="______"> &mdash; not kind</div>
+<div class="fillin-item">hope + ful &rarr; <input class="fillin-input" id="mfill3" data-answer="hopeful" maxlength="16" placeholder="______"> &mdash; full of hope</div>
+<div class="fillin-item">end + less &rarr; <input class="fillin-input" id="mfill4" data-answer="endless" maxlength="16" placeholder="______"> &mdash; without an end</div>
+<button class="fillin-check-btn" onclick="checkMorphFill(this)">Check My Answers</button>
+<div class="fillin-feedback">&#x1F331; All correct!</div></div>
+<script>
+function checkMorphFill(btn){var g=btn.closest('.fillin-game');var all=true;
+g.querySelectorAll('.fillin-input').forEach(function(i){var a=(i.getAttribute('data-answer')||'').toLowerCase();
+var v=i.value.trim().toLowerCase();
+if(v===a){i.classList.remove('wrong');i.classList.add('correct');i.disabled=true;}
+else{i.classList.remove('correct');i.classList.add('wrong');all=false;setTimeout(function(){i.classList.remove('wrong')},600);}});
+if(all){var f=g.querySelector('.fillin-feedback');if(f)f.classList.add('show');}}
+</script>
+</div></div>
 <!-- VOCABULARY -->
 <div class="activity bl-cyan">
   <div class="activity-head"><div class="activity-num" style="background:#1B7A4E;">2</div><div><div class="activity-title">🔤 Vocabulary: Use the Words</div><div class="activity-sub">Choose the correct word to complete each sentence.</div></div></div>

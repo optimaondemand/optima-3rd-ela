@@ -2306,51 +2306,55 @@ body {
 <div class="tab-panel" id="tab-words">
 
   <!-- ═══ MORPHOLOGY ═══ -->
-  <div class="activity bl-green">
-    <div class="activity-head"><div class="activity-num" style="background:#34B76F;">1</div><div style="flex:1;"><div class="activity-title">🌱 Morphology: in- / im-</div><div class="activity-sub">Day 1: Notice &mdash; work out the pattern before you are told it.</div></div></div>
+  <div class="activity bl-purple">
+    <div class="activity-head"><div class="activity-num" style="background:#8B6FC0;">1</div><div><div class="activity-title">🌱 Morphology: Prefix over- means too much</div><div class="activity-sub">Day 1: Notice &mdash; work out the pattern before you are told it</div><script>
+function checkMorphFill(btn){var g=btn.closest('.fillin-game');var all=true;g.querySelectorAll('.fillin-input').forEach(function(i){var a=(i.getAttribute('data-answer')||'').toLowerCase();var v=i.value.trim().toLowerCase();if(v===a){i.classList.remove('wrong');i.classList.add('correct');i.disabled=true;}else{i.classList.remove('correct');i.classList.add('wrong');all=false;setTimeout(function(){i.classList.remove('wrong')},600);}});if(all){var f=g.querySelector('.fillin-feedback');if(f)f.classList.add('show');}}
+</script>
+</div></div>
     <div class="activity-body">
 <!-- morph-notice-first -->
 <div class="key-concept NOTICEBOX" style="background:#EAF6EF;border-color:#BEE3CC;margin:0 0 14px;">
-<div class="key-concept-label" style="color:#1B7A4E;">&#x1F52E; Predict, then check</div>
-<p>Two chunks that do the same job, but they are not spelled the same.</p>
+<div class="key-concept-label" style="color:#1B7A4E;">&#x1F9E9; Crack the word</div>
+<p>Every word here has too much of something.</p>
 </div>
-<div class="key-concept"><div class="key-concept-label">📌 The words</div>
-        <p><strong>impossible</strong></p>
-        <p><strong>incorrect</strong></p>
-        <p><strong>impatient</strong></p>
-        <p><strong>invisible</strong></p>
-        </div>
+<div class="key-concept"><div class="key-concept-label">&#x1F4CC; The words</div>
+<p><strong>overjoyed</strong> = over- + joy</p>
+<p><strong>overloaded</strong> = over- + loaded</p>
+<p><strong>overlook</strong> = over- + look</p>
+</div>
+
       
 <div class="callout callout-info" style="margin-top:14px;"><span class="callout-icon">&#x1F9D0;</span><p><strong>Try these first:</strong></p>
 <ul style="margin:6px 0 0 20px;font-size:15px;color:#3A4A6B;line-height:1.8;">
-<li>What do these words mean, roughly, all together?</li>
-<li>Which words start with <em>in-</em> and which with <em>im-</em>?</li>
-<li>Look at the letter right after the chunk. Can you spot when each one is used?</li>
+<li>What four letters start each word?</li>
+<li>What is the base word in each?</li>
+<li>What does the chunk add &mdash; a little, or too much?</li>
 </ul></div>
-<button class="dol-check-btn" onclick="document.getElementById('morphNotice').classList.toggle('show')">&#x1F52E; See if you were right</button>
+<button class="dol-check-btn" onclick="document.getElementById('morphNotice').classList.toggle('show')">&#x1F9E9; See if you cracked it</button>
 <div class="dol-answer" id="morphNotice">
-<p>The prefixes <strong>in-</strong> and <strong>im-</strong> both mean <em>not</em>. We use <strong>im-</strong> before base words that start with <em>m</em> or <em>p</em>, because it is easier to say.</p>
+<p>A <strong>prefix</strong> is a word part added to the <em>front</em> of a base word. The prefix <strong>over-</strong> means <em>too much</em> or <em>above</em>.</p>
 <p style="margin:0 0 8px;"><strong>&#x1F4D6; Here is what each word means:</strong></p>
-<p><strong>impossible</strong> &mdash; base word <em>possible</em> = not possible</p>
-<p><strong>incorrect</strong> &mdash; base word <em>correct</em> = not correct</p>
-<p><strong>impatient</strong> &mdash; base word <em>patient</em> = not patient</p>
-<p><strong>invisible</strong> &mdash; base word <em>visible</em> = not able to be seen</p>
+<p><strong>overjoyed</strong> &mdash; too full of joy</p>
+<p><strong>overloaded</strong> &mdash; loaded too much</p>
+<p><strong>overlook</strong> &mdash; to look above something &mdash; to miss it</p>
 </div>
 
-<div class="callout callout-info" style="margin-top:14px;"><span class="callout-icon">🧩</span><p><strong>Practice: Build it.</strong> Type the base word hiding inside each one.</p></div>
+<div class="callout callout-info"><span class="callout-icon">🧩</span><p>Type the missing <strong>prefix</strong> at the start of each word.</p></div>
+<div class="callout callout-info" style="margin-top:14px;"><span class="callout-icon">&#x1F4DA;</span><p><strong>Word bank:</strong> <strong>confident</strong> &middot; <strong>due</strong> &middot; <strong>loaded</strong> &middot; <strong>stepped</strong></p><p style="font-size:13px;color:#7A88A8;margin-top:4px;">Every answer below comes from this list.</p></div>
       <div class="fillin-game" id="fillinGame">
-        <div class="fillin-item"><input class="fillin-input" id="fill1" data-answer="possible" maxlength="12" placeholder="______"> &rarr; <strong>impossible</strong></div>
-        <div class="fillin-item"><input class="fillin-input" id="fill2" data-answer="correct" maxlength="12" placeholder="______"> &rarr; <strong>incorrect</strong></div>
-        <div class="fillin-item"><input class="fillin-input" id="fill3" data-answer="patient" maxlength="12" placeholder="______"> &rarr; <strong>impatient</strong></div>
-        <div class="fillin-item"><input class="fillin-input" id="fill4" data-answer="visible" maxlength="12" placeholder="______"> &rarr; <strong>invisible</strong></div>
-        <button class="fillin-check-btn" onclick="checkFillIn()">Check My Words</button>
-        <div class="fillin-feedback" id="fillinFeedback">🌱 All base words correct!</div>
+<div class="fillin-item">over<input class="fillin-input" id="fill1" data-answer="confident" maxlength="12" placeholder="______">  — too sure of oneself</div>
+        <div class="fillin-item">over<input class="fillin-input" id="fill2" data-answer="due" maxlength="12" placeholder="______">  — past the right time</div>
+        <div class="fillin-item">over<input class="fillin-input" id="fill3" data-answer="loaded" maxlength="12" placeholder="______">  — carrying too much</div>
+        <div class="fillin-item">over<input class="fillin-input" id="fill4" data-answer="stepped" maxlength="12" placeholder="______">  — went too far</div>
+        <button class="fillin-check-btn" onclick="checkMorphFill(this)">Check My Work</button>
+        <div class="fillin-feedback">🌱 All correct!</div>
       </div>
+      
       <div class="swyk">
         <div class="swyk-label">🪶 Show What You Know</div>
-        <div class="swyk-prompt">In your own words, what does <strong>in- / im-</strong> mean? Give one example word and explain what the word part adds.</div>
-        <div class="journal-label">📓 Your answer <span class="saved-dot" id="dot-morph"></span></div>
-        <textarea class="journal-box" id="journal-morph" data-label="Morphology: in- / im-" placeholder="The word part in- / im- means..." oninput="autoSave(this,'dot-morph')"></textarea>
+        <div class="swyk-prompt">Pick ONE over- word and write its meaning. Then use it in a sentence.</div>
+        <div class="textbox-prompt">Use the prefix and its meaning.</div>
+        <textarea class="journal-box" id="journal-morph" data-label="Morphology SWYK: word parts" placeholder="The word ___ means... Sentence: ..." oninput="autoSave(this,'dot-morph');gatherAnswers();"></textarea>
       </div>
     </div>
   </div>

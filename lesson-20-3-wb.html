@@ -2495,34 +2495,30 @@ body {
 
   <!-- MORPHOLOGY -->
   <div class="activity bl-purple">
-    <div class="activity-head"><div class="activity-num" style="background:#8B6FC0;">1</div><div><div class="activity-title">🌱 Morphology: Suffix -est (Day 3: Use)</div><div class="activity-sub">Four prefixes you'll see all year</div></div></div>
-    <div class="activity-body">
-<!-- morph-notice-first -->
-<div class="callout callout-info" style="margin-bottom:14px;"><span class="callout-icon">&#x1F9E9;</span><p>Before you start: how far does this ending push the meaning?</p></div>
-            <p>Today use <strong>-est</strong> words to describe events and characters from Chapter 15.</p>
-      <div class="key-concept">
-        <div class="key-concept-label">📌 Examples</div>
-        <p><strong>nearest</strong> &nbsp;|&nbsp; <strong>lowest</strong> &nbsp;|&nbsp; <strong>strangest</strong></p>
-      </div>
-
-      <div class="callout callout-info"><span class="callout-icon">🧩</span><p>Type the missing <strong>prefix</strong> at the start of each word.</p></div>
-      <div class="fillin-game" id="fillinGame">
-<div class="fillin-item">low<input class="fillin-input" id="fill1" data-answer="est" maxlength="12" placeholder="______">  — most low</div>
-        <div class="fillin-item">tall<input class="fillin-input" id="fill2" data-answer="est" maxlength="12" placeholder="______">  — most tall</div>
-        <div class="fillin-item">strange<input class="fillin-input" id="fill3" data-answer="st" maxlength="12" placeholder="______">  — most strange</div>
-        <div class="fillin-item">near<input class="fillin-input" id="fill4" data-answer="est" maxlength="12" placeholder="______">  — most near</div>
-        <button class="fillin-check-btn" onclick="checkFillIn()">Check My Work</button>
-        <div class="fillin-feedback" id="fillinFeedback">🌱 All correct!</div>
-      </div>
-      
-      <div class="swyk">
-        <div class="swyk-label">🪶 Show What You Know</div>
-        <div class="swyk-prompt">Write a sentence about Chapter 15 using one -est word — about the tide, the mud, or the prince.</div>
-        <div class="textbox-prompt">Use the prefix and its meaning.</div>
-        <textarea class="journal-box" id="journal-morph" data-label="Morphology SWYK: word parts" placeholder="The strangest thing the prince did was..." oninput="autoSave(this,'dot-morph');gatherAnswers();"></textarea>
-      </div>
-    </div>
-  </div>
+<div class="activity-head"><div class="activity-num" style="background:#8B6FC0;">1</div><div style="flex:1;"><div class="activity-title">&#x1F331; Morphology: spect</div><div class="activity-sub">Use / Apply the skill</div></div></div>
+<div class="activity-body">
+<div class="callout callout-info" style="margin-bottom:12px;"><span class="callout-icon">&#x1F50D;</span><p>Before you start: read the parts aloud, push them together, then write the word.</p></div>
+<div class="key-concept"><div class="key-concept-label">&#x1F4CC; Remember</div>
+<p><strong>spect</strong> means <strong>look</strong>.</p>
+<p><strong>inspect</strong> = to look closely into &middot; <strong>spectator</strong> = one who looks on &middot; <strong>respect</strong> = to look again, with care</p>
+</div>
+<div class="callout callout-info"><span class="callout-icon">&#x1F9E9;</span><p><strong>Build the word.</strong> Put the parts together and type what they make.</p></div>
+<div class="fillin-game" id="morphFillinGame">
+<div class="fillin-item">in- + spect &rarr; <input class="fillin-input" id="mfill1" data-answer="inspect" maxlength="16" placeholder="______"> &mdash; to look closely into</div>
+<div class="fillin-item">spect + ator &rarr; <input class="fillin-input" id="mfill2" data-answer="spectator" maxlength="16" placeholder="______"> &mdash; one who looks on</div>
+<div class="fillin-item">re- + spect &rarr; <input class="fillin-input" id="mfill3" data-answer="respect" maxlength="16" placeholder="______"> &mdash; to look again, with care</div>
+<div class="fillin-item">in- + spect + or &rarr; <input class="fillin-input" id="mfill4" data-answer="inspector" maxlength="16" placeholder="______"> &mdash; one whose job is to look</div>
+<button class="fillin-check-btn" onclick="checkMorphFill(this)">Check My Answers</button>
+<div class="fillin-feedback">&#x1F331; All correct!</div></div>
+<script>
+function checkMorphFill(btn){var g=btn.closest('.fillin-game');var all=true;
+g.querySelectorAll('.fillin-input').forEach(function(i){var a=(i.getAttribute('data-answer')||'').toLowerCase();
+var v=i.value.trim().toLowerCase();
+if(v===a){i.classList.remove('wrong');i.classList.add('correct');i.disabled=true;}
+else{i.classList.remove('correct');i.classList.add('wrong');all=false;setTimeout(function(){i.classList.remove('wrong')},600);}});
+if(all){var f=g.querySelector('.fillin-feedback');if(f)f.classList.add('show');}}
+</script>
+</div></div>
 
   <!-- VOCABULARY -->
   <div class="activity bl-cyan">

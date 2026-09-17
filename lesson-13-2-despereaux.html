@@ -2324,29 +2324,29 @@ and then moves on.</div>
 <div class="tab-panel" id="tab-words">
 
   <!-- ═══ MORPHOLOGY ═══ -->
-  <div class="activity bl-green">
-    <div class="activity-head"><div class="activity-num" style="background:#34B76F;">1</div><div style="flex:1;"><div class="activity-title">🌱 Morphology: -tion</div><div class="activity-sub">Day 2: Identify &mdash; Spot it at work in the reading.</div></div></div>
-    <div class="activity-body">
-<!-- morph-notice-first -->
-<div class="callout callout-info" style="margin-bottom:14px;"><span class="callout-icon">&#x1F9E9;</span><p>Before you start: say each word aloud, then find the base underneath.</p></div>
-      <p>Yesterday you learned that <strong>-tion</strong> means <em>the act or result of</em>. Today, find it at work.</p>
-      <div class="callout callout-info" style="margin-top:14px;"><span class="callout-icon">🧩</span><p><strong>Practice: Find the base.</strong> Type the base word hiding inside each one.</p></div>
-      <div class="fillin-game" id="fillinGame">
-        <div class="fillin-item"><input class="fillin-input" id="fill1" data-answer="act" maxlength="12" placeholder="______"> &rarr; <strong>action</strong></div>
-        <div class="fillin-item"><input class="fillin-input" id="fill2" data-answer="direct" maxlength="12" placeholder="______"> &rarr; <strong>direction</strong></div>
-        <div class="fillin-item"><input class="fillin-input" id="fill3" data-answer="celebrate" maxlength="12" placeholder="______"> &rarr; <strong>celebration</strong></div>
-        <div class="fillin-item"><input class="fillin-input" id="fill4" data-answer="invent" maxlength="12" placeholder="______"> &rarr; <strong>invention</strong></div>
-        <button class="fillin-check-btn" onclick="checkFillIn()">Check My Words</button>
-        <div class="fillin-feedback" id="fillinFeedback">🌱 All base words correct!</div>
-      </div>
-      <div class="swyk">
-        <div class="swyk-label">🪶 Show What You Know</div>
-        <div class="swyk-prompt">As you read today, find one word that uses <strong>-tion</strong>. Write the whole sentence it appears in.</div>
-        <div class="journal-label">📓 Your answer <span class="saved-dot" id="dot-morph"></span></div>
-        <textarea class="journal-box" id="journal-morph" data-label="Morphology: -tion" placeholder="The word part -tion means..." oninput="autoSave(this,'dot-morph')"></textarea>
-      </div>
-    </div>
-  </div>
+  <div class="activity bl-purple">
+<div class="activity-head"><div class="activity-num" style="background:#8B6FC0;">1</div><div style="flex:1;"><div class="activity-title">&#x1F331; Morphology: non-</div><div class="activity-sub">Identify the skill<script>
+function morphMatchClick(item){var g=item.closest('.match-grid');if(!g)return;if(item.classList.contains('matched'))return;var sel=g.querySelector('.match-item.selected');if(!sel){item.classList.add('selected');return;}if(sel===item){sel.classList.remove('selected');return;}if(sel.getAttribute('data-match')===item.getAttribute('data-match')&&sel.classList.contains('is-word')!==item.classList.contains('is-word')){sel.classList.remove('selected');sel.classList.add('matched');item.classList.add('matched');if(g.querySelectorAll('.match-item.matched').length===g.querySelectorAll('.match-item').length){var fb=g.parentElement.querySelector('.match-feedback');if(fb)fb.classList.add('show');}}else{item.classList.add('wrong-flash');sel.classList.add('wrong-flash');setTimeout(function(){item.classList.remove('wrong-flash');sel.classList.remove('wrong-flash','selected');},500);}}
+</script>
+</div></div></div>
+<div class="activity-body">
+<div class="callout callout-info" style="margin-bottom:12px;"><span class="callout-icon">&#x1F50D;</span><p>Before you start: find the word part, then read what is left.</p></div>
+<div class="key-concept"><div class="key-concept-label">&#x1F4CC; Remember</div>
+<p><strong>non-</strong> means <strong>not</strong>.</p>
+<p><strong>nonfiction</strong> = writing that is not made up &middot; <strong>nonsense</strong> = words that do not make sense &middot; <strong>nonstop</strong> = without stopping</p>
+</div>
+<div class="callout callout-info"><span class="callout-icon">&#x1F3AF;</span><p><strong>Practice: Match the Word to Its Meaning!</strong> Tap a word, then tap what it means.</p></div>
+<div class="match-game" id="morphMatch"><div class="match-grid" id="morphMatchGrid">
+<div class="match-item is-word" data-match="A" onclick="morphMatchClick(this)">nonfiction</div>
+<div class="match-item" data-match="A" onclick="morphMatchClick(this)">writing that is not made up</div>
+<div class="match-item is-word" data-match="B" onclick="morphMatchClick(this)">nonsense</div>
+<div class="match-item" data-match="B" onclick="morphMatchClick(this)">words that do not make sense</div>
+<div class="match-item is-word" data-match="C" onclick="morphMatchClick(this)">nonstop</div>
+<div class="match-item" data-match="C" onclick="morphMatchClick(this)">without stopping</div>
+<div class="match-item is-word" data-match="D" onclick="morphMatchClick(this)">nonliving</div>
+<div class="match-item" data-match="D" onclick="morphMatchClick(this)">not alive</div>
+</div><div class="match-feedback" id="morphMatchFeedback">&#x2728; All matched!</div></div>
+</div></div>
 
   <!-- ═══ VOCABULARY ═══ -->
   <div class="activity bl-cyan">

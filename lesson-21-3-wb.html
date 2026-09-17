@@ -2495,35 +2495,30 @@ body {
 
   <!-- MORPHOLOGY -->
   <div class="activity bl-purple">
-    <div class="activity-head"><div class="activity-num" style="background:#8B6FC0;">1</div><div><div class="activity-title">🌱 Morphology: Root spect (Day 3: Use)</div><div class="activity-sub">Four prefixes you'll see all year</div></div></div>
-    <div class="activity-body">
-<!-- morph-notice-first -->
-<div class="callout callout-info" style="margin-bottom:14px;"><span class="callout-icon">&#x1F52E;</span><p>Before you start: predict what the shared root has to do with, then check.</p></div>
-            <p>Today use <strong>spect</strong> words in sentences about the resolution and theme of The Whipping Boy.</p>
-      <div class="key-concept">
-        <div class="key-concept-label">📌 Examples</div>
-        <p><strong>respect</strong> &nbsp;|&nbsp; <strong>expect</strong> &nbsp;|&nbsp; <strong>inspect</strong> &nbsp;|&nbsp; <strong>unexpected</strong></p>
-      </div>
-
-      <div class="callout callout-info"><span class="callout-icon">🧩</span><p>Type the missing <strong>prefix</strong> at the start of each word.</p></div>
-<div class="callout callout-info" style="margin-top:14px;"><span class="callout-icon">&#x1F4DA;</span><p><strong>Word bank:</strong> <strong>expected</strong> &middot; <strong>pect</strong> &middot; <strong>spect</strong></p><p style="font-size:13px;color:#7A88A8;margin-top:4px;">Every answer below comes from this list. Some may be used more than once.</p></div>
-      <div class="fillin-game" id="fillinGame">
-<div class="fillin-item">re<input class="fillin-input" id="fill1" data-answer="spect" maxlength="12" placeholder="______">  — to admire; to treat with honor</div>
-        <div class="fillin-item">ex<input class="fillin-input" id="fill2" data-answer="pect" maxlength="12" placeholder="______">  — to look forward to; believe something will happen</div>
-        <div class="fillin-item">in<input class="fillin-input" id="fill3" data-answer="spect" maxlength="12" placeholder="______">  — to look carefully into something</div>
-        <div class="fillin-item">un<input class="fillin-input" id="fill4" data-answer="expected" maxlength="12" placeholder="______">  — not planned for; surprising</div>
-        <button class="fillin-check-btn" onclick="checkFillIn()">Check My Work</button>
-        <div class="fillin-feedback" id="fillinFeedback">🌱 All correct!</div>
-      </div>
-      
-      <div class="swyk">
-        <div class="swyk-label">🪶 Show What You Know</div>
-        <div class="swyk-prompt">The king shows respect to Jemmy at the end of the book. Use respect or unexpected in a sentence about the ending.</div>
-        <div class="textbox-prompt">Use the prefix and its meaning.</div>
-        <textarea class="journal-box" id="journal-morph" data-label="Morphology SWYK: word parts" placeholder="At the end, the king shows respect by... OR The most unexpected moment was..." oninput="autoSave(this,'dot-morph');gatherAnswers();"></textarea>
-      </div>
-    </div>
-  </div>
+<div class="activity-head"><div class="activity-num" style="background:#8B6FC0;">1</div><div style="flex:1;"><div class="activity-title">&#x1F331; Morphology: re-, un-, pre-, dis-, mis-</div><div class="activity-sub">Use / Apply the skill</div></div></div>
+<div class="activity-body">
+<div class="callout callout-info" style="margin-bottom:12px;"><span class="callout-icon">&#x1F50D;</span><p>Before you start: read the parts aloud, push them together, then write the word.</p></div>
+<div class="key-concept"><div class="key-concept-label">&#x1F4CC; Remember</div>
+<p><strong>re-, un-, pre-, dis-, mis-</strong> means <strong>the five prefixes you met first</strong>.</p>
+<p><strong>rebuild</strong> = to build again &middot; <strong>unhappy</strong> = not happy &middot; <strong>preview</strong> = to view before</p>
+</div>
+<div class="callout callout-info"><span class="callout-icon">&#x1F9E9;</span><p><strong>Build the word.</strong> Put the parts together and type what they make.</p></div>
+<div class="fillin-game" id="morphFillinGame">
+<div class="fillin-item">re- + build &rarr; <input class="fillin-input" id="mfill1" data-answer="rebuild" maxlength="16" placeholder="______"> &mdash; to build again</div>
+<div class="fillin-item">un- + happy &rarr; <input class="fillin-input" id="mfill2" data-answer="unhappy" maxlength="16" placeholder="______"> &mdash; not happy</div>
+<div class="fillin-item">pre- + view &rarr; <input class="fillin-input" id="mfill3" data-answer="preview" maxlength="16" placeholder="______"> &mdash; to view before</div>
+<div class="fillin-item">dis- + agree &rarr; <input class="fillin-input" id="mfill4" data-answer="disagree" maxlength="16" placeholder="______"> &mdash; to not agree</div>
+<button class="fillin-check-btn" onclick="checkMorphFill(this)">Check My Answers</button>
+<div class="fillin-feedback">&#x1F331; All correct!</div></div>
+<script>
+function checkMorphFill(btn){var g=btn.closest('.fillin-game');var all=true;
+g.querySelectorAll('.fillin-input').forEach(function(i){var a=(i.getAttribute('data-answer')||'').toLowerCase();
+var v=i.value.trim().toLowerCase();
+if(v===a){i.classList.remove('wrong');i.classList.add('correct');i.disabled=true;}
+else{i.classList.remove('correct');i.classList.add('wrong');all=false;setTimeout(function(){i.classList.remove('wrong')},600);}});
+if(all){var f=g.querySelector('.fillin-feedback');if(f)f.classList.add('show');}}
+</script>
+</div></div>
 
   <!-- VOCABULARY -->
   <div class="activity bl-cyan">

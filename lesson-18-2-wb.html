@@ -2517,35 +2517,28 @@ No one lifts a spoon.</div>
 
   <!-- MORPHOLOGY -->
   <div class="activity bl-purple">
-    <div class="activity-head"><div class="activity-num" style="background:#8B6FC0;">1</div><div><div class="activity-title">🌱 Morphology: Prefix over- (Day 2: Identify)</div><div class="activity-sub">Four prefixes you'll see all year</div></div></div>
-    <div class="activity-body">
-<!-- morph-notice-first -->
-<div class="callout callout-info" style="margin-bottom:14px;"><span class="callout-icon">&#x1F9E9;</span><p>Before you start: what is there too much of in each word?</p></div>
-            <p>Remember: <strong>over-</strong> means <em>too much</em>. Today we find over- words in sentences and identify what the base word means.</p>
-      <div class="key-concept">
-        <div class="key-concept-label">📌 Examples</div>
-        <p><strong>overpowered</strong> &nbsp;|&nbsp; <strong>overjoyed</strong> &nbsp;|&nbsp; <strong>overlooked</strong> &nbsp;|&nbsp; <strong>overdue</strong></p>
-      </div>
-
-      <div class="callout callout-info"><span class="callout-icon">🧩</span><p>Type the missing <strong>prefix</strong> at the start of each word.</p></div>
-<div class="callout callout-info" style="margin-top:14px;"><span class="callout-icon">&#x1F4DA;</span><p><strong>Word bank:</strong> <strong>confident</strong> &middot; <strong>powered</strong> &middot; <strong>reacted</strong> &middot; <strong>sleep</strong></p><p style="font-size:13px;color:#7A88A8;margin-top:4px;">Every answer below comes from this list.</p></div>
-      <div class="fillin-game" id="fillinGame">
-<div class="fillin-item">over<input class="fillin-input" id="fill1" data-answer="powered" maxlength="12" placeholder="______">  — controlled by too much force</div>
-        <div class="fillin-item">over<input class="fillin-input" id="fill2" data-answer="sleep" maxlength="12" placeholder="______">  — to sleep too long</div>
-        <div class="fillin-item">over<input class="fillin-input" id="fill3" data-answer="reacted" maxlength="12" placeholder="______">  — did too much in response</div>
-        <div class="fillin-item">over<input class="fillin-input" id="fill4" data-answer="confident" maxlength="12" placeholder="______">  — too sure of oneself</div>
-        <button class="fillin-check-btn" onclick="checkFillIn()">Check My Work</button>
-        <div class="fillin-feedback" id="fillinFeedback">🌱 All correct!</div>
-      </div>
-      
-      <div class="swyk">
-        <div class="swyk-label">🪶 Show What You Know</div>
-        <div class="swyk-prompt">Jemmy is overpowered by two outlaws in the fog. Write one sentence using the word overpowered.</div>
-        <div class="textbox-prompt">Use the prefix and its meaning.</div>
-        <textarea class="journal-box" id="journal-morph" data-label="Morphology SWYK: word parts" placeholder="Jemmy was overpowered when..." oninput="autoSave(this,'dot-morph');gatherAnswers();"></textarea>
-      </div>
-    </div>
-  </div>
+<div class="activity-head"><div class="activity-num" style="background:#8B6FC0;">1</div><div style="flex:1;"><div class="activity-title">&#x1F331; Morphology: inter- and sub-</div><div class="activity-sub">Identify the skill<script>
+function morphMatchClick(item){var g=item.closest('.match-grid');if(!g)return;if(item.classList.contains('matched'))return;var sel=g.querySelector('.match-item.selected');if(!sel){item.classList.add('selected');return;}if(sel===item){sel.classList.remove('selected');return;}if(sel.getAttribute('data-match')===item.getAttribute('data-match')&&sel.classList.contains('is-word')!==item.classList.contains('is-word')){sel.classList.remove('selected');sel.classList.add('matched');item.classList.add('matched');if(g.querySelectorAll('.match-item.matched').length===g.querySelectorAll('.match-item').length){var fb=g.parentElement.querySelector('.match-feedback');if(fb)fb.classList.add('show');}}else{item.classList.add('wrong-flash');sel.classList.add('wrong-flash');setTimeout(function(){item.classList.remove('wrong-flash');sel.classList.remove('wrong-flash','selected');},500);}}
+</script>
+</div></div></div>
+<div class="activity-body">
+<div class="callout callout-info" style="margin-bottom:12px;"><span class="callout-icon">&#x1F50D;</span><p>Before you start: find the word part, then read what is left.</p></div>
+<div class="key-concept"><div class="key-concept-label">&#x1F4CC; Remember</div>
+<p><strong>inter- and sub-</strong> means <strong>between, and under</strong>.</p>
+<p><strong>interrupt</strong> = to break in between &middot; <strong>interact</strong> = to act between people &middot; <strong>international</strong> = between nations</p>
+</div>
+<div class="callout callout-info"><span class="callout-icon">&#x1F3AF;</span><p><strong>Practice: Match the Word to Its Meaning!</strong> Tap a word, then tap what it means.</p></div>
+<div class="match-game" id="morphMatch"><div class="match-grid" id="morphMatchGrid">
+<div class="match-item is-word" data-match="A" onclick="morphMatchClick(this)">interrupt</div>
+<div class="match-item" data-match="A" onclick="morphMatchClick(this)">to break in between</div>
+<div class="match-item is-word" data-match="B" onclick="morphMatchClick(this)">interact</div>
+<div class="match-item" data-match="B" onclick="morphMatchClick(this)">to act between people</div>
+<div class="match-item is-word" data-match="C" onclick="morphMatchClick(this)">international</div>
+<div class="match-item" data-match="C" onclick="morphMatchClick(this)">between nations</div>
+<div class="match-item is-word" data-match="D" onclick="morphMatchClick(this)">submarine</div>
+<div class="match-item" data-match="D" onclick="morphMatchClick(this)">a boat that goes under the sea</div>
+</div><div class="match-feedback" id="morphMatchFeedback">&#x2728; All matched!</div></div>
+</div></div>
 
   <!-- VOCABULARY -->
   <div class="activity bl-cyan">

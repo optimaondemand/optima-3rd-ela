@@ -2484,15 +2484,30 @@ body {
 
 <!-- MORPHOLOGY -->
 <div class="activity bl-purple">
-  <div class="activity-head"><div class="activity-num" style="background:#8B6FC0;">1</div><div><div class="activity-title">🌱 Morphology: Root/base: script/scribe means write</div><div class="activity-sub">Use / Apply — build your word knowledge</div></div></div>
-  <div class="activity-body">
-<!-- morph-notice-first -->
-<div class="callout callout-info" style="margin-bottom:14px;"><span class="callout-icon">&#x1F9E9;</span><p>Before you start: what do all these words have to do with writing?</p></div>
-        <div class="key-concept"><div class="key-concept-label">📌 Apply: Build words using <strong>script/scribe</strong></div><p>Match each clue to the correct word that uses this week's word part.</p></div>
-        <div style="display:flex;align-items:center;gap:12px;padding:10px 14px;background:#fff;border:2px solid #E2E8F4;border-radius:12px;margin-bottom:8px;"><span style="font-size:14px;color:#3A4A6B;flex:2;">A written order for medicine</span><span style="font-weight:800;font-family:Lora,serif;color:#1B7A4E;font-size:16px;">→ prescription</span></div><div style="display:flex;align-items:center;gap:12px;padding:10px 14px;background:#fff;border:2px solid #E2E8F4;border-radius:12px;margin-bottom:8px;"><span style="font-size:14px;color:#3A4A6B;flex:2;">To write down details about something</span><span style="font-weight:800;font-family:Lora,serif;color:#1B7A4E;font-size:16px;">→ describe</span></div><div style="display:flex;align-items:center;gap:12px;padding:10px 14px;background:#fff;border:2px solid #E2E8F4;border-radius:12px;margin-bottom:8px;"><span style="font-size:14px;color:#3A4A6B;flex:2;">Something written by hand before printing existed</span><span style="font-weight:800;font-family:Lora,serif;color:#1B7A4E;font-size:16px;">→ manuscript</span></div><div style="display:flex;align-items:center;gap:12px;padding:10px 14px;background:#fff;border:2px solid #E2E8F4;border-radius:12px;margin-bottom:8px;"><span style="font-size:14px;color:#3A4A6B;flex:2;">Writing carved into stone or metal</span><span style="font-weight:800;font-family:Lora,serif;color:#1B7A4E;font-size:16px;">→ inscription</span></div>
-        <div class="swyk"><div class="swyk-label">🪶 Show What You Know</div><div class="swyk-prompt">Pick one word from above. Write a sentence using that word in your own words.</div>
-        <textarea class="journal-box" id="journal-morph" data-label="Morphology Apply" placeholder="I chose the word... It means... In a sentence:..." oninput="autoSave(this,'dot-morph');gatherAnswers();"></textarea></div></div>
+<div class="activity-head"><div class="activity-num" style="background:#8B6FC0;">1</div><div style="flex:1;"><div class="activity-title">&#x1F331; Morphology: com- / con-</div><div class="activity-sub">Use / Apply the skill</div></div></div>
+<div class="activity-body">
+<div class="callout callout-info" style="margin-bottom:12px;"><span class="callout-icon">&#x1F50D;</span><p>Before you start: read the parts aloud, push them together, then write the word.</p></div>
+<div class="key-concept"><div class="key-concept-label">&#x1F4CC; Remember</div>
+<p><strong>com- / con-</strong> means <strong>with, together</strong>.</p>
+<p><strong>combine</strong> = to join together &middot; <strong>connect</strong> = to tie together &middot; <strong>company</strong> = people together</p>
 </div>
+<div class="callout callout-info"><span class="callout-icon">&#x1F9E9;</span><p><strong>Build the word.</strong> Put the parts together and type what they make.</p></div>
+<div class="fillin-game" id="morphFillinGame">
+<div class="fillin-item">com- + bine &rarr; <input class="fillin-input" id="mfill1" data-answer="combine" maxlength="16" placeholder="______"> &mdash; to join together</div>
+<div class="fillin-item">con- + nect &rarr; <input class="fillin-input" id="mfill2" data-answer="connect" maxlength="16" placeholder="______"> &mdash; to tie together</div>
+<div class="fillin-item">com- + pany &rarr; <input class="fillin-input" id="mfill3" data-answer="company" maxlength="16" placeholder="______"> &mdash; people together</div>
+<div class="fillin-item">con- + versation &rarr; <input class="fillin-input" id="mfill4" data-answer="conversation" maxlength="16" placeholder="______"> &mdash; turning words together</div>
+<button class="fillin-check-btn" onclick="checkMorphFill(this)">Check My Answers</button>
+<div class="fillin-feedback">&#x1F331; All correct!</div></div>
+<script>
+function checkMorphFill(btn){var g=btn.closest('.fillin-game');var all=true;
+g.querySelectorAll('.fillin-input').forEach(function(i){var a=(i.getAttribute('data-answer')||'').toLowerCase();
+var v=i.value.trim().toLowerCase();
+if(v===a){i.classList.remove('wrong');i.classList.add('correct');i.disabled=true;}
+else{i.classList.remove('correct');i.classList.add('wrong');all=false;setTimeout(function(){i.classList.remove('wrong')},600);}});
+if(all){var f=g.querySelector('.fillin-feedback');if(f)f.classList.add('show');}}
+</script>
+</div></div>
 <!-- VOCABULARY -->
 <div class="activity bl-cyan">
   <div class="activity-head"><div class="activity-num" style="background:#1B7A4E;">2</div><div><div class="activity-title">🔤 Vocabulary: Use the Words</div><div class="activity-sub">Choose the correct word to complete each sentence.</div></div></div>

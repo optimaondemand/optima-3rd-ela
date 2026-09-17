@@ -2308,51 +2308,54 @@ body {
 <div class="tab-panel" id="tab-words">
 
   <!-- ═══ MORPHOLOGY ═══ -->
-  <div class="activity bl-green">
-    <div class="activity-head"><div class="activity-num" style="background:#34B76F;">1</div><div style="flex:1;"><div class="activity-title">🌱 Morphology: base + suffix</div><div class="activity-sub">Day 1: Notice &mdash; work out the pattern before you are told it.</div></div></div>
+  <div class="activity bl-purple">
+    <div class="activity-head"><div class="activity-num" style="background:#8B6FC0;">1</div><div><div class="activity-title">🌱 Morphology: Suffix -er: more OR one who</div><div class="activity-sub">Day 1: Notice &mdash; work out the pattern before you are told it</div><script>
+function checkMorphFill(btn){var g=btn.closest('.fillin-game');var all=true;g.querySelectorAll('.fillin-input').forEach(function(i){var a=(i.getAttribute('data-answer')||'').toLowerCase();var v=i.value.trim().toLowerCase();if(v===a){i.classList.remove('wrong');i.classList.add('correct');i.disabled=true;}else{i.classList.remove('correct');i.classList.add('wrong');all=false;setTimeout(function(){i.classList.remove('wrong')},600);}});if(all){var f=g.querySelector('.fillin-feedback');if(f)f.classList.add('show');}}
+</script>
+</div></div>
     <div class="activity-body">
 <!-- morph-notice-first -->
 <div class="key-concept NOTICEBOX" style="background:#EAF6EF;border-color:#BEE3CC;margin:0 0 14px;">
 <div class="key-concept-label" style="color:#1B7A4E;">&#x1F50D; Hunt the base word</div>
-<p>Some of these words have more than one part added on.</p>
+<p>This ending does two different jobs. Watch for both.</p>
 </div>
-<div class="key-concept"><div class="key-concept-label">📌 The words</div>
-        <p><strong>hopeful</strong></p>
-        <p><strong>hopeless</strong></p>
-        <p><strong>hopelessness</strong></p>
-        <p><strong>hopelessly</strong></p>
-        </div>
+<div class="key-concept"><div class="key-concept-label">&#x1F4CC; The words</div>
+<p><strong>teacher</strong> = teach + -er</p>
+<p><strong>louder</strong> = loud + -er</p>
+<p><strong>hunter</strong> = hunt + -er</p>
+</div>
+
       
 <div class="callout callout-info" style="margin-top:14px;"><span class="callout-icon">&#x1F9D0;</span><p><strong>Try these first:</strong></p>
 <ul style="margin:6px 0 0 20px;font-size:15px;color:#3A4A6B;line-height:1.8;">
 <li>What is the base word in each one?</li>
-<li>How many parts got added &mdash; one, or two?</li>
-<li>Read the parts in order. Does the meaning build up as you go?</li>
+<li>In <em>teacher</em>, is the ending naming a person or comparing two things?</li>
+<li>In <em>taller</em>, which job is it doing?</li>
 </ul></div>
 <button class="dol-check-btn" onclick="document.getElementById('morphNotice').classList.toggle('show')">&#x1F50D; See what was hiding</button>
 <div class="dol-answer" id="morphNotice">
-<p>You have now met six word parts this unit: <strong>-ful</strong>, <strong>-less</strong>, <strong>dis-</strong>, <strong>-ness</strong>, <strong>-ly</strong>, <strong>-tion</strong> and <strong>in-/im-</strong>. A single base word can take more than one of them.</p>
+<p>The suffix <strong>-er</strong> has two meanings: (1) <em>one who does</em> the action, or (2) <em>more</em> of a quality.</p>
 <p style="margin:0 0 8px;"><strong>&#x1F4D6; Here is what each word means:</strong></p>
-<p><strong>hopeful</strong> &mdash; base word <em>hope</em> = full of hope</p>
-<p><strong>hopeless</strong> &mdash; base word <em>hope</em> = without hope</p>
-<p><strong>hopelessness</strong> &mdash; base word <em>hope</em> = the state of being without hope</p>
-<p><strong>hopelessly</strong> &mdash; base word <em>hope</em> = in a hopeless way</p>
+<p><strong>teacher</strong> &mdash; one who teaches</p>
+<p><strong>louder</strong> &mdash; more loud</p>
+<p><strong>hunter</strong> &mdash; one who hunts</p>
 </div>
 
-<div class="callout callout-info" style="margin-top:14px;"><span class="callout-icon">🧩</span><p><strong>Practice: Build it.</strong> Type the base word hiding inside each one.</p></div>
+<div class="callout callout-info"><span class="callout-icon">🧩</span><p>Type the missing <strong>prefix</strong> at the start of each word.</p></div>
       <div class="fillin-game" id="fillinGame">
-        <div class="fillin-item"><input class="fillin-input" id="fill1" data-answer="hope" maxlength="12" placeholder="______"> &rarr; <strong>hopeless</strong></div>
-        <div class="fillin-item"><input class="fillin-input" id="fill2" data-answer="dark" maxlength="12" placeholder="______"> &rarr; <strong>darkness</strong></div>
-        <div class="fillin-item"><input class="fillin-input" id="fill3" data-answer="brave" maxlength="12" placeholder="______"> &rarr; <strong>bravely</strong></div>
-        <div class="fillin-item"><input class="fillin-input" id="fill4" data-answer="possible" maxlength="12" placeholder="______"> &rarr; <strong>impossible</strong></div>
-        <button class="fillin-check-btn" onclick="checkFillIn()">Check My Words</button>
-        <div class="fillin-feedback" id="fillinFeedback">🌱 All base words correct!</div>
+<div class="fillin-item">help<input class="fillin-input" id="fill1" data-answer="er" maxlength="12" placeholder="______">  — one who helps</div>
+        <div class="fillin-item">smart<input class="fillin-input" id="fill2" data-answer="er" maxlength="12" placeholder="______">  — more smart</div>
+        <div class="fillin-item">catch<input class="fillin-input" id="fill3" data-answer="er" maxlength="12" placeholder="______">  — one who catches</div>
+        <div class="fillin-item">quick<input class="fillin-input" id="fill4" data-answer="er" maxlength="12" placeholder="______">  — more quick</div>
+        <button class="fillin-check-btn" onclick="checkMorphFill(this)">Check My Work</button>
+        <div class="fillin-feedback">🌱 All correct!</div>
       </div>
+      
       <div class="swyk">
         <div class="swyk-label">🪶 Show What You Know</div>
-        <div class="swyk-prompt">In your own words, what does <strong>base + suffix</strong> mean? Give one example word and explain what the word part adds.</div>
-        <div class="journal-label">📓 Your answer <span class="saved-dot" id="dot-morph"></span></div>
-        <textarea class="journal-box" id="journal-morph" data-label="Morphology: base + suffix" placeholder="The word part base + suffix means..." oninput="autoSave(this,'dot-morph')"></textarea>
+        <div class="swyk-prompt">Write one sentence using -er to mean 'one who.' Then write one using -er to mean 'more.'</div>
+        <div class="textbox-prompt">Use the prefix and its meaning.</div>
+        <textarea class="journal-box" id="journal-morph" data-label="Morphology SWYK: word parts" placeholder="One who: A catcher is someone who... More: Jemmy was smarter than..." oninput="autoSave(this,'dot-morph');gatherAnswers();"></textarea>
       </div>
     </div>
   </div>

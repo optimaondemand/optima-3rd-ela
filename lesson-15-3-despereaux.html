@@ -2308,26 +2308,31 @@ body {
 <div class="tab-panel" id="tab-words">
 
   <!-- ═══ MORPHOLOGY ═══ -->
-  <div class="activity bl-green">
-    <div class="activity-head"><div class="activity-num" style="background:#34B76F;">1</div><div style="flex:1;"><div class="activity-title">🌱 Morphology: base + suffix</div><div class="activity-sub">Day 3: Apply &mdash; Use it in a sentence of your own.</div></div></div>
-    <div class="activity-body">
-<!-- morph-notice-first -->
-<div class="callout callout-info" style="margin-bottom:14px;"><span class="callout-icon">&#x1F50D;</span><p>Before you start: peel the endings off one at a time.</p></div>
-      <p><strong>base + suffix</strong> means <em>putting the pieces together</em>. Today you use it yourself.</p>
-      <div class="key-concept"><div class="key-concept-label">📌 Words you can build</div>
-        <p><strong>hopeful</strong> &mdash; base word <em>hope</em> = full of hope</p>
-        <p><strong>hopeless</strong> &mdash; base word <em>hope</em> = without hope</p>
-        <p><strong>hopelessness</strong> &mdash; base word <em>hope</em> = the state of being without hope</p>
-        <p><strong>hopelessly</strong> &mdash; base word <em>hope</em> = in a hopeless way</p>
-        </div>
-            <div class="swyk">
-        <div class="swyk-label">🪶 Show What You Know</div>
-        <div class="swyk-prompt">Write two sentences about today&rsquo;s chapters. Use a word with <strong>base + suffix</strong> in each one, and underline it.</div>
-        <div class="journal-label">📓 Your answer <span class="saved-dot" id="dot-morph"></span></div>
-        <textarea class="journal-box" id="journal-morph" data-label="Morphology: base + suffix" placeholder="The word part base + suffix means..." oninput="autoSave(this,'dot-morph')"></textarea>
-      </div>
-    </div>
-  </div>
+  <div class="activity bl-purple">
+<div class="activity-head"><div class="activity-num" style="background:#8B6FC0;">1</div><div style="flex:1;"><div class="activity-title">&#x1F331; Morphology: -er</div><div class="activity-sub">Use / Apply the skill</div></div></div>
+<div class="activity-body">
+<div class="callout callout-info" style="margin-bottom:12px;"><span class="callout-icon">&#x1F50D;</span><p>Before you start: read the parts aloud, push them together, then write the word.</p></div>
+<div class="key-concept"><div class="key-concept-label">&#x1F4CC; Remember</div>
+<p><strong>-er</strong> means <strong>more, or one who does it</strong>.</p>
+<p><strong>teacher</strong> = one who teaches &middot; <strong>louder</strong> = more loud &middot; <strong>hunter</strong> = one who hunts</p>
+</div>
+<div class="callout callout-info"><span class="callout-icon">&#x1F9E9;</span><p><strong>Build the word.</strong> Put the parts together and type what they make.</p></div>
+<div class="fillin-game" id="morphFillinGame">
+<div class="fillin-item">teach + er &rarr; <input class="fillin-input" id="mfill1" data-answer="teacher" maxlength="16" placeholder="______"> &mdash; one who teaches</div>
+<div class="fillin-item">loud + er &rarr; <input class="fillin-input" id="mfill2" data-answer="louder" maxlength="16" placeholder="______"> &mdash; more loud</div>
+<div class="fillin-item">hunt + er &rarr; <input class="fillin-input" id="mfill3" data-answer="hunter" maxlength="16" placeholder="______"> &mdash; one who hunts</div>
+<div class="fillin-item">bake + er &rarr; <input class="fillin-input" id="mfill4" data-answer="baker" maxlength="16" placeholder="______"> &mdash; one who bakes</div>
+<button class="fillin-check-btn" onclick="checkMorphFill(this)">Check My Answers</button>
+<div class="fillin-feedback">&#x1F331; All correct!</div></div>
+<script>
+function checkMorphFill(btn){var g=btn.closest('.fillin-game');var all=true;
+g.querySelectorAll('.fillin-input').forEach(function(i){var a=(i.getAttribute('data-answer')||'').toLowerCase();
+var v=i.value.trim().toLowerCase();
+if(v===a){i.classList.remove('wrong');i.classList.add('correct');i.disabled=true;}
+else{i.classList.remove('correct');i.classList.add('wrong');all=false;setTimeout(function(){i.classList.remove('wrong')},600);}});
+if(all){var f=g.querySelector('.fillin-feedback');if(f)f.classList.add('show');}}
+</script>
+</div></div>
 
   <!-- ═══ VOCABULARY ═══ -->
   <div class="activity bl-cyan">

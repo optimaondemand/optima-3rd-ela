@@ -2238,12 +2238,15 @@ body {
 <div class="fillin-item">un- + tie = <input class="fillin-input" id="fill2" data-answer="untie" maxlength="12" placeholder="______"></div>
 <div class="fillin-item">un- + wrap = <input class="fillin-input" id="fill3" data-answer="unwrap" maxlength="12" placeholder="______"></div>
 <div class="fillin-item">un- + do = <input class="fillin-input" id="fill4" data-answer="undo" maxlength="12" placeholder="______"></div>
-<button class="fillin-check-btn" onclick="checkFillIn()">Check My Answers</button>
-<div class="fillin-feedback" id="fillinFeedback">🌱 All correct!</div></div>
+<button class="fillin-check-btn" onclick="checkMorphFill(this)">Check My Answers</button>
+<div class="fillin-feedback">🌱 All correct!</div></div>
 <div class="swyk"><div class="swyk-label">🪶 Show What You Know</div>
 <div class="swyk-prompt">In your own words, explain: Prefix un- means not. Give one example.</div>
 <div class="journal-label">📓 Your answer <span class="saved-dot" id="dot-swyk"></span></div>
 <textarea class="journal-box" id="journal-swyk" data-label="SWYK: Prefix un- means not" placeholder="I know that..." oninput="autoSave(this,'dot-swyk')"></textarea></div>
+<script>
+function checkMorphFill(btn){var g=btn.closest('.fillin-game');var all=true;g.querySelectorAll('.fillin-input').forEach(function(i){var a=(i.getAttribute('data-answer')||'').toLowerCase();var v=i.value.trim().toLowerCase();if(v===a){i.classList.remove('wrong');i.classList.add('correct');i.disabled=true;}else{i.classList.remove('correct');i.classList.add('wrong');all=false;setTimeout(function(){i.classList.remove('wrong')},600);}});if(all){var f=g.querySelector('.fillin-feedback');if(f)f.classList.add('show');}}
+</script>
 </div></div>
 <!-- VOCABULARY -->
 <div class="activity bl-cyan">

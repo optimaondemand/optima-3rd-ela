@@ -2510,35 +2510,45 @@ And the mome raths outgrabe.</div>
 
   <!-- MORPHOLOGY -->
   <div class="activity bl-purple">
-    <div class="activity-head"><div class="activity-num" style="background:#8B6FC0;">1</div><div><div class="activity-title">🌱 Morphology: Prefix sub- (Day 4: Explain)</div><div class="activity-sub">Four prefixes you'll see all year</div></div></div>
-    <div class="activity-body">
-<!-- morph-notice-first -->
-<div class="callout callout-info" style="margin-bottom:14px;"><span class="callout-icon">&#x1F9E9;</span><p>Before you start: what does the front chunk say about position?</p></div>
-            <p>Today we show everything we know about <strong>sub-</strong> — meaning, examples, and how to use it to decode new words.</p>
-      <div class="key-concept">
-        <div class="key-concept-label">📌 Examples</div>
-        <p><strong>submarine, subway, submerge, subject, subtitle, substandard, suburb, subterranean</strong></p>
-      </div>
-
-      <div class="callout callout-info"><span class="callout-icon">🧩</span><p>Type the missing <strong>prefix</strong> at the start of each word.</p></div>
-<div class="callout callout-info" style="margin-top:14px;"><span class="callout-icon">&#x1F4DA;</span><p><strong>Word bank:</strong> <strong>marine</strong> &middot; <strong>merge</strong> &middot; <strong>stitute</strong> &middot; <strong>terrain</strong></p><p style="font-size:13px;color:#7A88A8;margin-top:4px;">Every answer below comes from this list.</p></div>
-      <div class="fillin-game" id="fillinGame">
-<div class="fillin-item">sub<input class="fillin-input" id="fill1" data-answer="marine" maxlength="15" placeholder="______">  — under the sea</div>
-        <div class="fillin-item">sub<input class="fillin-input" id="fill2" data-answer="merge" maxlength="15" placeholder="______">  — to go under water</div>
-        <div class="fillin-item">sub<input class="fillin-input" id="fill3" data-answer="terrain" maxlength="15" placeholder="______">  — ean</div>
-        <div class="fillin-item">sub<input class="fillin-input" id="fill4" data-answer="stitute" maxlength="15" placeholder="______">  — one who stands in under/instead of another</div>
-        <button class="fillin-check-btn" onclick="checkFillIn()">Check My Work</button>
-        <div class="fillin-feedback" id="fillinFeedback">🌱 All correct!</div>
-      </div>
-      
-      <div class="swyk">
-        <div class="swyk-label">🪶 Show What You Know</div>
-        <div class="swyk-prompt">Explain what the prefix sub- means. Give two sub- words and what each one means.</div>
-        <div class="textbox-prompt">Use the prefix and its meaning.</div>
-        <textarea class="journal-box" id="journal-morph" data-label="Morphology SWYK: word parts" placeholder="The prefix sub- means... Two examples: 1) ___ means... 2) ___ means..." oninput="autoSave(this,'dot-morph');gatherAnswers();"></textarea>
-      </div>
-    </div>
-  </div>
+<div class="activity-head"><div class="activity-num" style="background:#8B6FC0;">1</div><div style="flex:1;"><div class="activity-title">&#x1F331; Morphology: script / scribe</div><div class="activity-sub">Explain / Justify the skill</div></div></div>
+<div class="activity-body">
+<div class="callout callout-info" style="margin-bottom:12px;"><span class="callout-icon">&#x1F50D;</span><p>Before you start: say what the word part does from memory, then roll.</p></div>
+<div class="key-concept"><div class="key-concept-label">&#x1F4CC; Remember</div>
+<p><strong>script / scribe</strong> means <strong>write</strong>.</p>
+<p><strong>script</strong> = the written words of a play &middot; <strong>describe</strong> = to write about something so others see it &middot; <strong>manuscript</strong> = written by hand</p>
+</div>
+<div class="callout callout-info"><span class="callout-icon">&#x1F3B2;</span><p><strong>Dice Roll Challenge!</strong> Roll a word, then say out loud what it means and how the word part changed it. Tap to check yourself.</p></div>
+<div style="text-align:center;margin:16px 0;">
+<div id="diceDisplay" style="font-size:64px;line-height:1;margin-bottom:10px;transition:transform 0.3s;">&#x1F3B2;</div>
+<button onclick="rollMorphDice()" id="diceBtn" style="background:linear-gradient(135deg,#8B6FC0,#A78BD6);color:#fff;border:none;border-radius:10px;padding:12px 28px;font-size:16px;font-weight:700;cursor:pointer;box-shadow:0 3px 8px rgba(139,111,192,0.3);">&#x1F3B2; Roll the Dice!</button>
+</div>
+<div id="diceWordBox" style="display:none;text-align:center;margin:14px 0;">
+<div id="diceWord" style="font-size:28px;font-weight:700;color:#8B6FC0;margin-bottom:6px;"></div>
+<div id="diceTask" style="font-size:15px;color:#3A4A6B;margin-bottom:10px;"></div>
+<button onclick="checkDice()" style="background:#34B76F;color:#fff;border:none;border-radius:8px;padding:8px 18px;font-size:14px;font-weight:700;cursor:pointer;margin-top:6px;">&#x1F50D; Check My Thinking</button>
+<div id="diceReveal" style="display:none;margin-top:10px;background:#E3F8ED;border:2px solid #B8E8CF;border-radius:8px;padding:10px 14px;font-size:15px;color:#1a5c2e;font-weight:600;"></div>
+</div>
+<div id="diceCount" style="text-align:center;margin-top:10px;font-size:13px;color:#7A88A8;">0 of 6 words rolled</div>
+<script>
+var diceWords=[{word:'script',meaning:'the written words of a play'},{word:'describe',meaning:'to write about something so others see it'},{word:'manuscript',meaning:'written by hand'},{word:'inscription',meaning:'words written into stone'},{word:'prescribe',meaning:'to write an order beforehand'},{word:'scribble',meaning:'to write quickly and messily'}];
+var diceRolled=new Set();var diceCurrentIdx=0;
+function rollMorphDice(){var display=document.getElementById('diceDisplay');var faces=['\u2680','\u2681','\u2682','\u2683','\u2684','\u2685'];var count=0;
+document.getElementById('diceReveal').style.display='none';
+var interval=setInterval(function(){display.textContent=faces[Math.floor(Math.random()*6)];display.style.transform='rotate('+(Math.random()*360)+'deg)';count++;
+if(count>12){clearInterval(interval);display.style.transform='rotate(0deg)';
+var available=[];for(var i=0;i<diceWords.length;i++){if(!diceRolled.has(i))available.push(i)}
+if(available.length===0){diceRolled.clear();for(var i=0;i<diceWords.length;i++)available.push(i)}
+diceCurrentIdx=available[Math.floor(Math.random()*available.length)];diceRolled.add(diceCurrentIdx);
+display.textContent=faces[diceCurrentIdx];
+document.getElementById('diceWordBox').style.display='block';
+document.getElementById('diceWord').textContent=diceWords[diceCurrentIdx].word;
+document.getElementById('diceTask').textContent='What does "'+diceWords[diceCurrentIdx].word+'" mean? Say how the word part changes it.';
+document.getElementById('diceCount').textContent=diceRolled.size+' of '+diceWords.length+' words rolled';
+if(diceRolled.size>=diceWords.length){document.getElementById('diceCount').textContent='You rolled all '+diceWords.length+'!'}}},80)}
+function checkDice(){var r=document.getElementById('diceReveal');r.style.display='block';
+r.textContent=diceWords[diceCurrentIdx].word+' = '+diceWords[diceCurrentIdx].meaning}
+</script>
+</div></div>
 
   <!-- VOCABULARY -->
   <div class="activity bl-cyan">

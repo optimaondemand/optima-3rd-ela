@@ -2206,25 +2206,28 @@ I&rsquo;ve traveled far today.</div>
 <div class="tab-panel" id="tab-words">
 <!-- MORPHOLOGY -->
 <div class="activity bl-purple">
-<div class="activity-head"><div class="activity-num" style="background:#8B6FC0;">1</div><div style="flex:1;"><div class="activity-title">🌱 Morphology: Prefix mis- means wrong</div><div class="activity-sub">Identify the skill</div></div></div>
+<div class="activity-head"><div class="activity-num" style="background:#8B6FC0;">1</div><div style="flex:1;"><div class="activity-title">🌱 Morphology: Suffix -ing shows action happening</div><div class="activity-sub">Identify the skill<script>
+function morphMatchClick(item){var g=item.closest('.match-grid');if(!g)return;if(item.classList.contains('matched'))return;var sel=g.querySelector('.match-item.selected');if(!sel){item.classList.add('selected');return;}if(sel===item){sel.classList.remove('selected');return;}if(sel.getAttribute('data-match')===item.getAttribute('data-match')&&sel.classList.contains('is-word')!==item.classList.contains('is-word')){sel.classList.remove('selected');sel.classList.add('matched');item.classList.add('matched');if(g.querySelectorAll('.match-item.matched').length===g.querySelectorAll('.match-item').length){var fb=g.parentElement.querySelector('.match-feedback');if(fb)fb.classList.add('show');}}else{item.classList.add('wrong-flash');sel.classList.add('wrong-flash');setTimeout(function(){item.classList.remove('wrong-flash');sel.classList.remove('wrong-flash','selected');},500);}}
+</script>
+</div></div></div>
 <div class="activity-body">
 <!-- morph-notice-first -->
-<div class="callout callout-info" style="margin-bottom:14px;"><span class="callout-icon">&#x1F52E;</span><p>Before you start: guess what the front chunk says about how something was done.</p></div>
+<div class="callout callout-info" style="margin-bottom:14px;"><span class="callout-icon">&#x1F50D;</span><p>Before you start: find the base word, then check whether its spelling changed.</p></div>
 <div class="key-concept"><div class="key-concept-label">📌 Examples</div>
-<p><strong>mis- + read = misread</strong> &mdash; to read <em>wrong</em></p>
-<p><strong>mis- + lead = mislead</strong> &mdash; to lead someone in the <em>wrong</em> direction</p>
+<p><strong>communicate + -ing = communicating</strong> &mdash; drop the e, add -ing</p>
+<p><strong>travel + -ing = traveling</strong> &mdash; keep the whole base word, add -ing</p>
 </div>
 <div class="callout callout-info"><span class="callout-icon">🎯</span><p><strong>Practice: Match the word to its base!</strong></p></div>
-<div class="match-game" id="morphMatch"><div class="match-grid" id="matchGrid">
-<div class="match-item is-word" data-match="A" onclick="matchClick(this)">misread</div>
-<div class="match-item" data-match="A" onclick="matchClick(this)">read</div>
-<div class="match-item is-word" data-match="B" onclick="matchClick(this)">misplace</div>
-<div class="match-item" data-match="B" onclick="matchClick(this)">place</div>
-<div class="match-item is-word" data-match="C" onclick="matchClick(this)">misuse</div>
-<div class="match-item" data-match="C" onclick="matchClick(this)">use</div>
-<div class="match-item is-word" data-match="D" onclick="matchClick(this)">mislead</div>
-<div class="match-item" data-match="D" onclick="matchClick(this)">lead</div>
-</div><div class="match-feedback" id="matchFeedback">✨ All matched!</div></div>
+<div class="match-game" id="morphMatch"><div class="match-grid" id="morphMatchGrid">
+<div class="match-item is-word" data-match="A" onclick="morphMatchClick(this)">communicating</div>
+<div class="match-item" data-match="A" onclick="morphMatchClick(this)">communicate</div>
+<div class="match-item is-word" data-match="B" onclick="morphMatchClick(this)">signaling</div>
+<div class="match-item" data-match="B" onclick="morphMatchClick(this)">signal</div>
+<div class="match-item is-word" data-match="C" onclick="morphMatchClick(this)">inventing</div>
+<div class="match-item" data-match="C" onclick="morphMatchClick(this)">invent</div>
+<div class="match-item is-word" data-match="D" onclick="morphMatchClick(this)">sending</div>
+<div class="match-item" data-match="D" onclick="morphMatchClick(this)">send</div>
+</div><div class="match-feedback" id="morphMatchFeedback">✨ All matched!</div></div>
 </div></div>
 <!-- VOCABULARY -->
 <div class="activity bl-cyan">

@@ -2211,7 +2211,10 @@ Or should I say, through thick and thin?</div>
 <div class="tab-panel" id="tab-words">
 <!-- MORPHOLOGY -->
 <div class="activity bl-purple">
-<div class="activity-head"><div class="activity-num" style="background:#8B6FC0;">1</div><div style="flex:1;"><div class="activity-title">🌱 Morphology: Prefix re- means again</div><div class="activity-sub">Identify the skill</div></div></div>
+<div class="activity-head"><div class="activity-num" style="background:#8B6FC0;">1</div><div style="flex:1;"><div class="activity-title">🌱 Morphology: Prefix re- means again</div><div class="activity-sub">Identify the skill<script>
+function morphMatchClick(item){var g=item.closest('.match-grid');if(!g)return;if(item.classList.contains('matched'))return;var sel=g.querySelector('.match-item.selected');if(!sel){item.classList.add('selected');return;}if(sel===item){sel.classList.remove('selected');return;}if(sel.getAttribute('data-match')===item.getAttribute('data-match')&&sel.classList.contains('is-word')!==item.classList.contains('is-word')){sel.classList.remove('selected');sel.classList.add('matched');item.classList.add('matched');if(g.querySelectorAll('.match-item.matched').length===g.querySelectorAll('.match-item').length){var fb=g.parentElement.querySelector('.match-feedback');if(fb)fb.classList.add('show');}}else{item.classList.add('wrong-flash');sel.classList.add('wrong-flash');setTimeout(function(){item.classList.remove('wrong-flash');sel.classList.remove('wrong-flash','selected');},500);}}
+</script>
+</div></div></div>
 <div class="activity-body">
 <!-- morph-notice-first -->
 <div class="callout callout-info" style="margin-bottom:14px;"><span class="callout-icon">&#x1F9E9;</span><p>Before you start: what does that chunk at the front do to the meaning?</p></div>
@@ -2221,14 +2224,14 @@ Or should I say, through thick and thin?</div>
 </div>
 <div class="callout callout-info"><span class="callout-icon">🎯</span><p><strong>Practice: Match the Word to Its Base!</strong></p></div>
 <div class="match-game" id="morphMatch"><div class="match-grid" id="morphMatchGrid">
-<div class="match-item is-word" data-match="A" onclick="matchClick(this)">rebuild</div>
-<div class="match-item" data-match="A" onclick="matchClick(this)">build</div>
-<div class="match-item is-word" data-match="B" onclick="matchClick(this)">reread</div>
-<div class="match-item" data-match="B" onclick="matchClick(this)">read</div>
-<div class="match-item is-word" data-match="C" onclick="matchClick(this)">refill</div>
-<div class="match-item" data-match="C" onclick="matchClick(this)">fill</div>
-<div class="match-item is-word" data-match="D" onclick="matchClick(this)">retell</div>
-<div class="match-item" data-match="D" onclick="matchClick(this)">tell</div>
+<div class="match-item is-word" data-match="A" onclick="morphMatchClick(this)">rebuild</div>
+<div class="match-item" data-match="A" onclick="morphMatchClick(this)">build</div>
+<div class="match-item is-word" data-match="B" onclick="morphMatchClick(this)">reread</div>
+<div class="match-item" data-match="B" onclick="morphMatchClick(this)">read</div>
+<div class="match-item is-word" data-match="C" onclick="morphMatchClick(this)">refill</div>
+<div class="match-item" data-match="C" onclick="morphMatchClick(this)">fill</div>
+<div class="match-item is-word" data-match="D" onclick="morphMatchClick(this)">retell</div>
+<div class="match-item" data-match="D" onclick="morphMatchClick(this)">tell</div>
 </div><div class="match-feedback" id="morphMatchFeedback">✨ All matched!</div></div>
 </div></div>
 <!-- VOCABULARY -->

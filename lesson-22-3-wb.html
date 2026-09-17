@@ -2495,35 +2495,30 @@ body {
 
   <!-- MORPHOLOGY -->
   <div class="activity bl-purple">
-    <div class="activity-head"><div class="activity-num" style="background:#8B6FC0;">1</div><div><div class="activity-title">🌱 Morphology: Root spect — in the story (Day 3: Apply to text)</div><div class="activity-sub">Four prefixes you'll see all year</div></div></div>
-    <div class="activity-body">
-<!-- morph-notice-first -->
-<div class="callout callout-info" style="margin-bottom:14px;"><span class="callout-icon">&#x1F9E9;</span><p>Before you start: sort the words by which root is inside them.</p></div>
-            <p>Today we use <strong>spect</strong> words to describe moments from the story.</p>
-      <div class="key-concept">
-        <div class="key-concept-label">📌 Examples</div>
-        <p><strong>inspect</strong> &nbsp;|&nbsp; <strong>expect</strong> &nbsp;|&nbsp; <strong>unexpected</strong> &nbsp;|&nbsp; <strong>spectacle</strong></p>
-      </div>
-
-      <div class="callout callout-info"><span class="callout-icon">🧩</span><p>Type the missing <strong>prefix</strong> at the start of each word.</p></div>
-<div class="callout callout-info" style="margin-top:14px;"><span class="callout-icon">&#x1F4DA;</span><p><strong>Word bank:</strong> <strong>acle</strong> &middot; <strong>expected</strong> &middot; <strong>pect</strong> &middot; <strong>spect</strong></p><p style="font-size:13px;color:#7A88A8;margin-top:4px;">Every answer below comes from this list.</p></div>
-      <div class="fillin-game" id="fillinGame">
-<div class="fillin-item">un<input class="fillin-input" id="fill1" data-answer="expected" maxlength="12" placeholder="______">  — not planned for; surprising</div>
-        <div class="fillin-item">spect<input class="fillin-input" id="fill2" data-answer="acle" maxlength="12" placeholder="______">  — a dramatic or striking scene worth watching</div>
-        <div class="fillin-item">in<input class="fillin-input" id="fill3" data-answer="spect" maxlength="12" placeholder="______">  — to look at closely</div>
-        <div class="fillin-item">ex<input class="fillin-input" id="fill4" data-answer="pect" maxlength="12" placeholder="______">  — to think something is going to happen</div>
-        <button class="fillin-check-btn" onclick="checkFillIn()">Check My Work</button>
-        <div class="fillin-feedback" id="fillinFeedback">🌱 All correct!</div>
-      </div>
-      
-      <div class="swyk">
-        <div class="swyk-label">🪶 Show What You Know</div>
-        <div class="swyk-prompt">Use unexpected or spectacle to describe one moment from the end of The Whipping Boy.</div>
-        <div class="textbox-prompt">Use the prefix and its meaning.</div>
-        <textarea class="journal-box" id="journal-morph" data-label="Morphology SWYK: word parts" placeholder="One unexpected moment was when... OR The most memorable spectacle was..." oninput="autoSave(this,'dot-morph');gatherAnswers();"></textarea>
-      </div>
-    </div>
-  </div>
+<div class="activity-head"><div class="activity-num" style="background:#8B6FC0;">1</div><div style="flex:1;"><div class="activity-title">&#x1F331; Morphology: struct</div><div class="activity-sub">Use / Apply the skill</div></div></div>
+<div class="activity-body">
+<div class="callout callout-info" style="margin-bottom:12px;"><span class="callout-icon">&#x1F50D;</span><p>Before you start: read the parts aloud, push them together, then write the word.</p></div>
+<div class="key-concept"><div class="key-concept-label">&#x1F4CC; Remember</div>
+<p><strong>struct</strong> means <strong>build</strong>.</p>
+<p><strong>construct</strong> = to build together &middot; <strong>structure</strong> = something built &middot; <strong>instruct</strong> = to build knowledge into someone</p>
+</div>
+<div class="callout callout-info"><span class="callout-icon">&#x1F9E9;</span><p><strong>Build the word.</strong> Put the parts together and type what they make.</p></div>
+<div class="fillin-game" id="morphFillinGame">
+<div class="fillin-item">con- + struct &rarr; <input class="fillin-input" id="mfill1" data-answer="construct" maxlength="16" placeholder="______"> &mdash; to build together</div>
+<div class="fillin-item">struct + ure &rarr; <input class="fillin-input" id="mfill2" data-answer="structure" maxlength="16" placeholder="______"> &mdash; something built</div>
+<div class="fillin-item">in- + struct &rarr; <input class="fillin-input" id="mfill3" data-answer="instruct" maxlength="16" placeholder="______"> &mdash; to build knowledge into someone</div>
+<div class="fillin-item">de- + struct &rarr; <input class="fillin-input" id="mfill4" data-answer="destruct" maxlength="16" placeholder="______"> &mdash; to un-build</div>
+<button class="fillin-check-btn" onclick="checkMorphFill(this)">Check My Answers</button>
+<div class="fillin-feedback">&#x1F331; All correct!</div></div>
+<script>
+function checkMorphFill(btn){var g=btn.closest('.fillin-game');var all=true;
+g.querySelectorAll('.fillin-input').forEach(function(i){var a=(i.getAttribute('data-answer')||'').toLowerCase();
+var v=i.value.trim().toLowerCase();
+if(v===a){i.classList.remove('wrong');i.classList.add('correct');i.disabled=true;}
+else{i.classList.remove('correct');i.classList.add('wrong');all=false;setTimeout(function(){i.classList.remove('wrong')},600);}});
+if(all){var f=g.querySelector('.fillin-feedback');if(f)f.classList.add('show');}}
+</script>
+</div></div>
 
   <!-- VOCABULARY -->
   <div class="activity bl-cyan">

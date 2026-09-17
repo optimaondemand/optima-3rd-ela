@@ -2518,9 +2518,12 @@ body {
 
 <div class="callout callout-info"><span class="callout-icon">🧩</span><p>Fill in the missing part after the prefix to build the word.</p></div>
         <div class="fillin-game" id="fillinGame"><div class="fillin-item"><span style="font-weight:700;color:#0E1C42;">inter-</span><input class="fillin-input" id="fill1" data-answer="national" maxlength="12" placeholder="____"> — between nations — international</div><div class="fillin-item"><span style="font-weight:700;color:#0E1C42;">trans-</span><input class="fillin-input" id="fill2" data-answer="port" maxlength="12" placeholder="____"> — carry across — transport</div><div class="fillin-item"><span style="font-weight:700;color:#0E1C42;">re-</span><input class="fillin-input" id="fill3" data-answer="form" maxlength="12" placeholder="____"> — shape again — reform</div><div class="fillin-item"><span style="font-weight:700;color:#0E1C42;">pro-</span><input class="fillin-input" id="fill4" data-answer="ject" maxlength="12" placeholder="____"> — throw forward — project</div>
-          <button class="fillin-check-btn" onclick="checkFillIn()">Check My Work ✓</button>
-          <div class="fillin-feedback" id="fillinFeedback">🌱 All correct! Great word-builder work.</div>
-        </div></div>
+          <button class="fillin-check-btn" onclick="checkMorphFill(this)">Check My Work ✓</button>
+          <div class="fillin-feedback">🌱 All correct! Great word-builder work.</div>
+        <script>
+function checkMorphFill(btn){var g=btn.closest('.fillin-game');var all=true;g.querySelectorAll('.fillin-input').forEach(function(i){var a=(i.getAttribute('data-answer')||'').toLowerCase();var v=i.value.trim().toLowerCase();if(v===a){i.classList.remove('wrong');i.classList.add('correct');i.disabled=true;}else{i.classList.remove('correct');i.classList.add('wrong');all=false;setTimeout(function(){i.classList.remove('wrong')},600);}});if(all){var f=g.querySelector('.fillin-feedback');if(f)f.classList.add('show');}}
+</script>
+</div></div>
 </div>
 <!-- VOCABULARY -->
 <div class="activity bl-cyan">

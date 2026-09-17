@@ -2499,15 +2499,45 @@ Could frame thy fearful symmetry?</div>
 
 <!-- MORPHOLOGY -->
 <div class="activity bl-purple">
-  <div class="activity-head"><div class="activity-num" style="background:#8B6FC0;">1</div><div><div class="activity-title">🌱 Morphology: Prefix inter- means between</div><div class="activity-sub">Explain / Justify — build your word knowledge</div></div></div>
-  <div class="activity-body">
-<!-- morph-notice-first -->
-<div class="callout callout-info" style="margin-bottom:14px;"><span class="callout-icon">&#x1F52E;</span><p>Before you start: predict what the front chunk says about how many.</p></div>
-        <div class="key-concept"><div class="key-concept-label">📌 Explain: What does <strong>inter-</strong> mean?</div><p>Complete each sentence in your notebook to show you understand the word part.</p></div>
-        <div style="padding:12px 16px;background:#EAF4EE;border:2px solid #B8E0C8;border-radius:12px;margin-bottom:10px;"><div style="font-weight:800;font-family:Lora,serif;font-size:16px;color:#0E1C42;margin-bottom:6px;">interrupt</div><div style="font-size:14px;color:#3A4A6B;">When you interrupt someone, you break in between their ___.</div></div><div style="padding:12px 16px;background:#EAF4EE;border:2px solid #B8E0C8;border-radius:12px;margin-bottom:10px;"><div style="font-weight:800;font-family:Lora,serif;font-size:16px;color:#0E1C42;margin-bottom:6px;">international</div><div style="font-size:14px;color:#3A4A6B;">Something is international when it involves more than one ___.</div></div><div style="padding:12px 16px;background:#EAF4EE;border:2px solid #B8E0C8;border-radius:12px;margin-bottom:10px;"><div style="font-weight:800;font-family:Lora,serif;font-size:16px;color:#0E1C42;margin-bottom:6px;">interact</div><div style="font-size:14px;color:#3A4A6B;">Two characters interact when they act ___ each other.</div></div>
-        <div class="swyk"><div class="swyk-label">🪶 Show What You Know</div><div class="swyk-prompt">In your own words: what does inter- mean, and how does knowing it help you figure out new words?</div>
-        <textarea class="journal-box" id="journal-morph" data-label="Morphology Explain" placeholder="The word part inter- means... Knowing it helps me because..." oninput="autoSave(this,'dot-morph');gatherAnswers();"></textarea></div></div>
+<div class="activity-head"><div class="activity-num" style="background:#8B6FC0;">1</div><div style="flex:1;"><div class="activity-title">&#x1F331; Morphology: tele-</div><div class="activity-sub">Explain / Justify the skill</div></div></div>
+<div class="activity-body">
+<div class="callout callout-info" style="margin-bottom:12px;"><span class="callout-icon">&#x1F50D;</span><p>Before you start: say what the word part does from memory, then roll.</p></div>
+<div class="key-concept"><div class="key-concept-label">&#x1F4CC; Remember</div>
+<p><strong>tele-</strong> means <strong>far</strong>.</p>
+<p><strong>telephone</strong> = sound from far away &middot; <strong>television</strong> = seeing from far away &middot; <strong>telescope</strong> = a tool for looking far away</p>
 </div>
+<div class="callout callout-info"><span class="callout-icon">&#x1F3B2;</span><p><strong>Dice Roll Challenge!</strong> Roll a word, then say out loud what it means and how the word part changed it. Tap to check yourself.</p></div>
+<div style="text-align:center;margin:16px 0;">
+<div id="diceDisplay" style="font-size:64px;line-height:1;margin-bottom:10px;transition:transform 0.3s;">&#x1F3B2;</div>
+<button onclick="rollMorphDice()" id="diceBtn" style="background:linear-gradient(135deg,#8B6FC0,#A78BD6);color:#fff;border:none;border-radius:10px;padding:12px 28px;font-size:16px;font-weight:700;cursor:pointer;box-shadow:0 3px 8px rgba(139,111,192,0.3);">&#x1F3B2; Roll the Dice!</button>
+</div>
+<div id="diceWordBox" style="display:none;text-align:center;margin:14px 0;">
+<div id="diceWord" style="font-size:28px;font-weight:700;color:#8B6FC0;margin-bottom:6px;"></div>
+<div id="diceTask" style="font-size:15px;color:#3A4A6B;margin-bottom:10px;"></div>
+<button onclick="checkDice()" style="background:#34B76F;color:#fff;border:none;border-radius:8px;padding:8px 18px;font-size:14px;font-weight:700;cursor:pointer;margin-top:6px;">&#x1F50D; Check My Thinking</button>
+<div id="diceReveal" style="display:none;margin-top:10px;background:#E3F8ED;border:2px solid #B8E8CF;border-radius:8px;padding:10px 14px;font-size:15px;color:#1a5c2e;font-weight:600;"></div>
+</div>
+<div id="diceCount" style="text-align:center;margin-top:10px;font-size:13px;color:#7A88A8;">0 of 6 words rolled</div>
+<script>
+var diceWords=[{word:'telephone',meaning:'sound from far away'},{word:'television',meaning:'seeing from far away'},{word:'telescope',meaning:'a tool for looking far away'},{word:'telegram',meaning:'a message written from far away'},{word:'teleport',meaning:'to be carried far in an instant'},{word:'telecast',meaning:'thrown out to viewers far away'}];
+var diceRolled=new Set();var diceCurrentIdx=0;
+function rollMorphDice(){var display=document.getElementById('diceDisplay');var faces=['\u2680','\u2681','\u2682','\u2683','\u2684','\u2685'];var count=0;
+document.getElementById('diceReveal').style.display='none';
+var interval=setInterval(function(){display.textContent=faces[Math.floor(Math.random()*6)];display.style.transform='rotate('+(Math.random()*360)+'deg)';count++;
+if(count>12){clearInterval(interval);display.style.transform='rotate(0deg)';
+var available=[];for(var i=0;i<diceWords.length;i++){if(!diceRolled.has(i))available.push(i)}
+if(available.length===0){diceRolled.clear();for(var i=0;i<diceWords.length;i++)available.push(i)}
+diceCurrentIdx=available[Math.floor(Math.random()*available.length)];diceRolled.add(diceCurrentIdx);
+display.textContent=faces[diceCurrentIdx];
+document.getElementById('diceWordBox').style.display='block';
+document.getElementById('diceWord').textContent=diceWords[diceCurrentIdx].word;
+document.getElementById('diceTask').textContent='What does "'+diceWords[diceCurrentIdx].word+'" mean? Say how the word part changes it.';
+document.getElementById('diceCount').textContent=diceRolled.size+' of '+diceWords.length+' words rolled';
+if(diceRolled.size>=diceWords.length){document.getElementById('diceCount').textContent='You rolled all '+diceWords.length+'!'}}},80)}
+function checkDice(){var r=document.getElementById('diceReveal');r.style.display='block';
+r.textContent=diceWords[diceCurrentIdx].word+' = '+diceWords[diceCurrentIdx].meaning}
+</script>
+</div></div>
 <!-- VOCABULARY -->
 <div class="activity bl-cyan">
   <div class="activity-head"><div class="activity-num" style="background:#1B7A4E;">2</div><div><div class="activity-title">🔤 Vocabulary: Justify Your Choice</div><div class="activity-sub">Connect a word to the story.</div></div></div>

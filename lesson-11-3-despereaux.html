@@ -2308,26 +2308,31 @@ body {
 <div class="tab-panel" id="tab-words">
 
   <!-- ═══ MORPHOLOGY ═══ -->
-  <div class="activity bl-green">
-    <div class="activity-head"><div class="activity-num" style="background:#34B76F;">1</div><div style="flex:1;"><div class="activity-title">🌱 Morphology: -ness</div><div class="activity-sub">Day 3: Apply &mdash; Use it in a sentence of your own.</div></div></div>
-    <div class="activity-body">
-<!-- morph-notice-first -->
-<div class="callout callout-info" style="margin-bottom:14px;"><span class="callout-icon">&#x1F9E9;</span><p>Before you start: what does this ending turn a describing word into?</p></div>
-      <p><strong>-ness</strong> means <em>the state of being</em>. Today you use it yourself.</p>
-      <div class="key-concept"><div class="key-concept-label">📌 Words you can build</div>
-        <p><strong>darkness</strong> &mdash; base word <em>dark</em> = the state of being dark</p>
-        <p><strong>kindness</strong> &mdash; base word <em>kind</em> = the quality of being kind</p>
-        <p><strong>sadness</strong> &mdash; base word <em>sad</em> = the state of being sad</p>
-        <p><strong>goodness</strong> &mdash; base word <em>good</em> = the quality of being good</p>
-        </div>
-            <div class="swyk">
-        <div class="swyk-label">🪶 Show What You Know</div>
-        <div class="swyk-prompt">Write two sentences about today&rsquo;s chapters. Use a word with <strong>-ness</strong> in each one, and underline it.</div>
-        <div class="journal-label">📓 Your answer <span class="saved-dot" id="dot-morph"></span></div>
-        <textarea class="journal-box" id="journal-morph" data-label="Morphology: -ness" placeholder="The word part -ness means..." oninput="autoSave(this,'dot-morph')"></textarea>
-      </div>
-    </div>
-  </div>
+  <div class="activity bl-purple">
+<div class="activity-head"><div class="activity-num" style="background:#8B6FC0;">1</div><div style="flex:1;"><div class="activity-title">&#x1F331; Morphology: -ness</div><div class="activity-sub">Use / Apply the skill</div></div></div>
+<div class="activity-body">
+<div class="callout callout-info" style="margin-bottom:12px;"><span class="callout-icon">&#x1F50D;</span><p>Before you start: read the parts aloud, push them together, then write the word.</p></div>
+<div class="key-concept"><div class="key-concept-label">&#x1F4CC; Remember</div>
+<p><strong>-ness</strong> means <strong>names a quality as a thing</strong>.</p>
+<p><strong>darkness</strong> = the quality of being dark &middot; <strong>kindness</strong> = the quality of being kind &middot; <strong>sadness</strong> = the quality of being sad</p>
+</div>
+<div class="callout callout-info"><span class="callout-icon">&#x1F9E9;</span><p><strong>Build the word.</strong> Put the parts together and type what they make.</p></div>
+<div class="fillin-game" id="morphFillinGame">
+<div class="fillin-item">dark + ness &rarr; <input class="fillin-input" id="mfill1" data-answer="darkness" maxlength="16" placeholder="______"> &mdash; the quality of being dark</div>
+<div class="fillin-item">kind + ness &rarr; <input class="fillin-input" id="mfill2" data-answer="kindness" maxlength="16" placeholder="______"> &mdash; the quality of being kind</div>
+<div class="fillin-item">sad + ness &rarr; <input class="fillin-input" id="mfill3" data-answer="sadness" maxlength="16" placeholder="______"> &mdash; the quality of being sad</div>
+<div class="fillin-item">good + ness &rarr; <input class="fillin-input" id="mfill4" data-answer="goodness" maxlength="16" placeholder="______"> &mdash; the quality of being good</div>
+<button class="fillin-check-btn" onclick="checkMorphFill(this)">Check My Answers</button>
+<div class="fillin-feedback">&#x1F331; All correct!</div></div>
+<script>
+function checkMorphFill(btn){var g=btn.closest('.fillin-game');var all=true;
+g.querySelectorAll('.fillin-input').forEach(function(i){var a=(i.getAttribute('data-answer')||'').toLowerCase();
+var v=i.value.trim().toLowerCase();
+if(v===a){i.classList.remove('wrong');i.classList.add('correct');i.disabled=true;}
+else{i.classList.remove('correct');i.classList.add('wrong');all=false;setTimeout(function(){i.classList.remove('wrong')},600);}});
+if(all){var f=g.querySelector('.fillin-feedback');if(f)f.classList.add('show');}}
+</script>
+</div></div>
 
   <!-- ═══ VOCABULARY ═══ -->
   <div class="activity bl-cyan">

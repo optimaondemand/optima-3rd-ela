@@ -2191,25 +2191,44 @@ I hope you find it true.</div>
 <div class="tab-panel" id="tab-words">
 <!-- MORPHOLOGY -->
 <div class="activity bl-purple">
-<div class="activity-head"><div class="activity-num" style="background:#8B6FC0;">1</div><div style="flex:1;"><div class="activity-title">🌱 Morphology: Suffix -ing shows action happening</div><div class="activity-sub">Explain / Justify the skill</div></div></div>
+<div class="activity-head"><div class="activity-num" style="background:#8B6FC0;">1</div><div style="flex:1;"><div class="activity-title">&#x1F331; Morphology: -ful</div><div class="activity-sub">Explain / Justify the skill</div></div></div>
 <div class="activity-body">
-<!-- morph-notice-first -->
-<div class="callout callout-info" style="margin-bottom:14px;"><span class="callout-icon">&#x1F50D;</span><p>Before you start: find the base word, then check whether its spelling changed.</p></div>
-<div class="key-concept"><div class="key-concept-label">📌 Examples</div>
-<p><strong>-ing review</strong> &mdash; add -ing: mailing, reading, sending</p>
-<p><strong>-ing with spelling change</strong> &mdash; write → writing (drop e); map → mapping (double p)</p>
+<div class="callout callout-info" style="margin-bottom:12px;"><span class="callout-icon">&#x1F50D;</span><p>Before you start: say what the word part does from memory, then roll.</p></div>
+<div class="key-concept"><div class="key-concept-label">&#x1F4CC; Remember</div>
+<p><strong>-ful</strong> means <strong>full of</strong>.</p>
+<p><strong>hopeful</strong> = full of hope &middot; <strong>fearful</strong> = full of fear &middot; <strong>careful</strong> = full of care</p>
 </div>
-<div class="callout callout-info"><span class="callout-icon">🎯</span><p><strong>Practice: Match the word to its base!</strong></p></div>
-<div class="match-game" id="morphMatch"><div class="match-grid" id="matchGrid">
-<div class="match-item is-word" data-match="A" onclick="matchClick(this)">traveling</div>
-<div class="match-item" data-match="A" onclick="matchClick(this)">travel</div>
-<div class="match-item is-word" data-match="B" onclick="matchClick(this)">writing</div>
-<div class="match-item" data-match="B" onclick="matchClick(this)">write</div>
-<div class="match-item is-word" data-match="C" onclick="matchClick(this)">stopping</div>
-<div class="match-item" data-match="C" onclick="matchClick(this)">stop</div>
-<div class="match-item is-word" data-match="D" onclick="matchClick(this)">guiding</div>
-<div class="match-item" data-match="D" onclick="matchClick(this)">guide</div>
-</div><div class="match-feedback" id="matchFeedback">✨ All matched!</div></div>
+<div class="callout callout-info"><span class="callout-icon">&#x1F3B2;</span><p><strong>Dice Roll Challenge!</strong> Roll a word, then say out loud what it means and how the word part changed it. Tap to check yourself.</p></div>
+<div style="text-align:center;margin:16px 0;">
+<div id="diceDisplay" style="font-size:64px;line-height:1;margin-bottom:10px;transition:transform 0.3s;">&#x1F3B2;</div>
+<button onclick="rollMorphDice()" id="diceBtn" style="background:linear-gradient(135deg,#8B6FC0,#A78BD6);color:#fff;border:none;border-radius:10px;padding:12px 28px;font-size:16px;font-weight:700;cursor:pointer;box-shadow:0 3px 8px rgba(139,111,192,0.3);">&#x1F3B2; Roll the Dice!</button>
+</div>
+<div id="diceWordBox" style="display:none;text-align:center;margin:14px 0;">
+<div id="diceWord" style="font-size:28px;font-weight:700;color:#8B6FC0;margin-bottom:6px;"></div>
+<div id="diceTask" style="font-size:15px;color:#3A4A6B;margin-bottom:10px;"></div>
+<button onclick="checkDice()" style="background:#34B76F;color:#fff;border:none;border-radius:8px;padding:8px 18px;font-size:14px;font-weight:700;cursor:pointer;margin-top:6px;">&#x1F50D; Check My Thinking</button>
+<div id="diceReveal" style="display:none;margin-top:10px;background:#E3F8ED;border:2px solid #B8E8CF;border-radius:8px;padding:10px 14px;font-size:15px;color:#1a5c2e;font-weight:600;"></div>
+</div>
+<div id="diceCount" style="text-align:center;margin-top:10px;font-size:13px;color:#7A88A8;">0 of 6 words rolled</div>
+<script>
+var diceWords=[{word:'hopeful',meaning:'full of hope'},{word:'fearful',meaning:'full of fear'},{word:'careful',meaning:'full of care'},{word:'wonderful',meaning:'full of wonder'},{word:'peaceful',meaning:'full of peace'},{word:'joyful',meaning:'full of joy'}];
+var diceRolled=new Set();var diceCurrentIdx=0;
+function rollMorphDice(){var display=document.getElementById('diceDisplay');var faces=['\u2680','\u2681','\u2682','\u2683','\u2684','\u2685'];var count=0;
+document.getElementById('diceReveal').style.display='none';
+var interval=setInterval(function(){display.textContent=faces[Math.floor(Math.random()*6)];display.style.transform='rotate('+(Math.random()*360)+'deg)';count++;
+if(count>12){clearInterval(interval);display.style.transform='rotate(0deg)';
+var available=[];for(var i=0;i<diceWords.length;i++){if(!diceRolled.has(i))available.push(i)}
+if(available.length===0){diceRolled.clear();for(var i=0;i<diceWords.length;i++)available.push(i)}
+diceCurrentIdx=available[Math.floor(Math.random()*available.length)];diceRolled.add(diceCurrentIdx);
+display.textContent=faces[diceCurrentIdx];
+document.getElementById('diceWordBox').style.display='block';
+document.getElementById('diceWord').textContent=diceWords[diceCurrentIdx].word;
+document.getElementById('diceTask').textContent='What does "'+diceWords[diceCurrentIdx].word+'" mean? Say how the word part changes it.';
+document.getElementById('diceCount').textContent=diceRolled.size+' of '+diceWords.length+' words rolled';
+if(diceRolled.size>=diceWords.length){document.getElementById('diceCount').textContent='You rolled all '+diceWords.length+'!'}}},80)}
+function checkDice(){var r=document.getElementById('diceReveal');r.style.display='block';
+r.textContent=diceWords[diceCurrentIdx].word+' = '+diceWords[diceCurrentIdx].meaning}
+</script>
 </div></div>
 <!-- VOCABULARY -->
 <div class="activity bl-cyan">
