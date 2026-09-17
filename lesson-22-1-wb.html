@@ -2695,42 +2695,40 @@ body {
 
   <!-- SPELLING -->
   <div class="activity bl-navy">
-    <div class="activity-head"><div class="activity-num" style="background:#2A0A4A;">4</div><div><div class="activity-title">🔠 Spelling: Multisyllabic Decoding (Day 1: Divide and decode)</div><div class="activity-sub">Discover the pattern.</div></div></div>
-    <div class="activity-body"><!-- spell-notice-first -->
-
-<div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:14px 0;">
-        <div class="key-concept" style="margin-bottom:0;">
-          <div class="key-concept-label">Group A — divided like this</div>
-          <p style="font-size:17px;font-weight:700;letter-spacing:0.5px;">rab<strong style="color:#4A7C2E;">·</strong>bit · gar<strong style="color:#4A7C2E;">·</strong>den · bas<strong style="color:#4A7C2E;">·</strong>ket · sis<strong style="color:#4A7C2E;">·</strong>ter</p>
-        </div>
-        <div class="key-concept" style="margin-bottom:0;background:#F0E8FF;border-color:#D8CCF0;">
-          <div class="key-concept-label" style="color:#8B6FC0;">Group B — same pattern</div>
-          <p style="font-size:17px;font-weight:700;letter-spacing:0.5px;">tun<strong style="color:#8B6914;">·</strong>nel · ham<strong style="color:#8B6914;">·</strong>per · win<strong style="color:#8B6914;">·</strong>ter · pic<strong style="color:#8B6914;">·</strong>nic</p>
-        </div>
-      </div>
-
-      <div class="socratic-box">
-        <div class="socratic-label">&#x1F442; Say them out loud</div>
-        <p class="socratic-q">Look at the letters around the dot in each word. Count: vowel, consonant, consonant, vowel. That's the <strong>VCCV pattern</strong>.</p>
-        <p class="socratic-q">Where does the dot fall — before, between, or after the two consonants?</p>
-        <p class="socratic-q">Can you say the rule in your own words?</p>
-      </div>
-
-      <button class="dol-check-btn" style="margin:12px auto;display:block;" onclick="document.getElementById('spellReveal').classList.toggle('show')">🔍 See the Rule</button>
-      <div class="dol-answer" id="spellReveal"><p><strong>The Rule:</strong> A long word is only a stack of small ones. <strong>Find the vowels, split between them, read each chunk, then push the chunks together</strong>. <em>im&middot;por&middot;tant</em> is three easy beats, not one hard word.</p><p>Use what you know — closed, open, r-controlled, silent-e — to divide and read these longer words.</p><p>When a word has the <strong>VCCV</strong> pattern (vowel–consonant–consonant–vowel), you divide it <em>between the two consonants</em>.</p><p>This helps you read long words like <em>tunnel</em> (<strong>tun·nel</strong>) and <em>basket</em> (<strong>bas·ket</strong>).</p></div>
-
-      <div class="callout callout-info" style="margin-top:16px;"><span class="callout-icon">🎮</span><p><strong>Practice:</strong> Sort these words using the pattern you discovered.</p></div>
-      <div class="sort-game" id="spellSort">
-  <div class="sort-bank" id="sortBank"><span class="sort-chip" data-group="a" onclick="pickSortChip(this)">forgotten</span><span class="sort-chip" data-group="b" onclick="pickSortChip(this)">expected</span><span class="sort-chip" data-group="b" onclick="pickSortChip(this)">powerful</span><span class="sort-chip" data-group="a" onclick="pickSortChip(this)">servant</span><span class="sort-chip" data-group="b" onclick="pickSortChip(this)">adventure</span><span class="sort-chip" data-group="a" onclick="pickSortChip(this)">determined</span></div>
-  <div class="sort-columns">
-    <div class="sort-col"><div class="sort-col-header" style="background:linear-gradient(135deg,#3D1A6B,#5C2D91);">Mostly closed/r-controlled syllables</div><div class="sort-col-drop" data-col="a" onclick="dropSortChip(this,'a')"></div></div>
-    <div class="sort-col"><div class="sort-col-header" style="background:linear-gradient(135deg,#B8860B,#7A45C4);">Contains open or silent-e</div><div class="sort-col-drop" data-col="b" onclick="dropSortChip(this,'b')"></div></div>
-  </div>
-  <div class="sort-score" id="sortScore"></div>
+<div class="activity-head"><div class="activity-num" style="background:#0E1C42;">4</div><div style="flex:1;"><div class="activity-title">🔠 Spelling: Compound words</div><div class="activity-sub">Day 1: Notice &mdash; work out the pattern before you are told it.</div></div></div>
+<div class="activity-body">
+<!-- spell-notice-first -->
+<div class="key-concept NOTICEBOX" style="background:#EEF3FA;border-color:#C8D6EA;margin:0 0 14px;">
+<div class="key-concept-label" style="color:#0E1C42;">&#x1F440; Look at what changed</div>
+<p>Each word below is really two words that moved in together.</p>
 </div>
-      
-    </div>
-  </div>
+
+<div class="callout callout-info" style="margin-top:14px;"><span class="callout-icon">&#x1F9D0;</span><p><strong>Look at the words below, then work through these:</strong></p>
+<ul style="margin:6px 0 0 20px;font-size:15px;color:#3A4A6B;line-height:1.8;">
+<li>Where does the first word stop and the second begin?</li>
+<li>Did either word change its spelling when they joined?</li>
+<li>Does the new meaning still have both old words in it?</li>
+</ul></div>
+<button class="dol-check-btn" onclick="document.getElementById('spellNotice').classList.toggle('show')">&#x1F440; Now name the pattern</button>
+<div class="dol-answer" id="spellNotice">
+<p><strong>The Rule:</strong> A <strong>compound word</strong> is two smaller words joined into one. Read each part on its own, then blend them: <em>mail</em> + <em>box</em> = <strong>mailbox</strong>. The new word usually keeps a piece of both meanings.</p>
+</div>
+
+<div class="callout callout-info"><span class="callout-icon">🎮</span><p><strong>Sort the Words!</strong> Tap a word, then tap the column where it belongs.</p></div>
+<div class="sort-game" id="spellSort"><div class="sort-bank" id="sortBank">
+<span class="sort-chip" data-group="compound" onclick="pickSortChip(this)">mailbox</span>
+<span class="sort-chip" data-group="compound" onclick="pickSortChip(this)">postcard</span>
+<span class="sort-chip" data-group="compound" onclick="pickSortChip(this)">landmark</span>
+<span class="sort-chip" data-group="compound" onclick="pickSortChip(this)">notebook</span>
+<span class="sort-chip" data-group="not-compound" onclick="pickSortChip(this)">compass</span>
+<span class="sort-chip" data-group="not-compound" onclick="pickSortChip(this)">envelope</span>
+<span class="sort-chip" data-group="not-compound" onclick="pickSortChip(this)">journey</span>
+<span class="sort-chip" data-group="not-compound" onclick="pickSortChip(this)">letter</span>
+</div><div class="sort-columns">
+<div class="sort-col"><div class="sort-col-header" style="background:linear-gradient(135deg,#55C8E8,#55C8E8);">Compound word</div><div class="sort-col-drop" data-col="compound" onclick="dropSortChip(this,'compound')"></div></div>
+<div class="sort-col"><div class="sort-col-header" style="background:linear-gradient(135deg,#8B6FC0,#8B6FC0);">Not a compound word</div><div class="sort-col-drop" data-col="not-compound" onclick="dropSortChip(this,'not-compound')"></div></div>
+</div><div class="sort-score" id="sortScore"></div></div>
+</div></div>
 
   <div class="tab-next-wrap">
     <p class="tab-transition-voice">Your words and skills are sharp. Time to open the book.</p>
@@ -3239,7 +3237,7 @@ function fireConfetti() {
 /* ───── WORD SORT GAME ───── */
 var sortSelected = null;
 var sortPlaced = 0;
-var sortTotal = 6;
+var sortTotal = 8;
 
 function pickSortChip(chip) {
   if (chip.classList.contains('placed')) return;

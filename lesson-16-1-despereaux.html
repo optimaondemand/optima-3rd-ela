@@ -2486,54 +2486,40 @@ body {
 
   <!-- ═══ SPELLING ═══ -->
   <div class="activity bl-navy">
-    <div class="activity-head"><div class="activity-num" style="background:#0E1C42;">4</div><div style="flex:1;"><div class="activity-title">🔠 Spelling: Cumulative spelling review</div><div class="activity-sub">Day 1: Notice &mdash; work out the pattern before you are told it.</div></div></div>
-    <div class="activity-body">
-<!-- spell-notice-first -->
-<div class="key-concept NOTICEBOX" style="background:#EEF3FA;border-color:#C8D6EA;margin:0 0 14px;">
-<div class="key-concept-label" style="color:#0E1C42;">&#x1F5C2;&#xFE0F; Sort them yourself first</div>
-<p>A whole year of patterns, mixed together.</p>
-</div>
+    <div class="activity-head"><div class="activity-num" style="background:#2A0A4A;">4</div><div><div class="activity-title">🔠 Spelling: Review syllable types: closed, open, silent-e (Day 1: Closed + Open)</div><div class="activity-sub">Discover the pattern.</div></div></div>
+    <div class="activity-body"><!-- spell-notice-first -->
 
-<div class="callout callout-info" style="margin-top:14px;"><span class="callout-icon">&#x1F9D0;</span><p><strong>Look at the words below, then work through these:</strong></p>
-<ul style="margin:6px 0 0 20px;font-size:15px;color:#3A4A6B;line-height:1.8;">
-<li>Which patterns can you name on sight?</li>
-<li>Which words could belong to more than one group?</li>
-<li>Which pattern still catches you out?</li>
-</ul></div>
-<button class="dol-check-btn" onclick="document.getElementById('spellNotice').classList.toggle('show')">&#x1F5C2;&#xFE0F; Now name the pattern</button>
-<div class="dol-answer" id="spellNotice">
-<p><strong>The Rule:</strong> Everything from the unit in one place: <strong>compounds</strong>, <strong>drop the e</strong>, <strong>double the consonant</strong>, <strong>y to i</strong>, <strong>plural -s / -es</strong>, and <strong>soft c and g</strong> before e, i, y. Ask what the base word is first &mdash; the rule follows from there.</p>
-<p>Everything from this unit in one sort: doubling, dropping the e, y to i, plurals, and soft c or g.</p>
-<p>Read each word aloud first. Ask what had to change before the ending went on.</p>
-</div>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:14px 0;">
+        <div class="key-concept" style="margin-bottom:0;">
+          <div class="key-concept-label">Group A &mdash; one of each type</div>
+          <p style="font-size:17px;font-weight:700;letter-spacing:0.5px;">nap<strong style="color:#4A7C2E;">&middot;</strong>kin &middot; ti<strong style="color:#4A7C2E;">&middot;</strong>ger &middot; gar<strong style="color:#4A7C2E;">&middot;</strong>den &middot; ta<strong style="color:#4A7C2E;">&middot;</strong>ble</p>
+        </div>
+        <div class="key-concept" style="margin-bottom:0;background:#F0E8FF;border-color:#D8CCF0;">
+          <div class="key-concept-label" style="color:#8B6FC0;">Group B &mdash; the same four types again</div>
+          <p style="font-size:17px;font-weight:700;letter-spacing:0.5px;">rab<strong style="color:#8B6914;">&middot;</strong>bit &middot; mu<strong style="color:#8B6914;">&middot;</strong>sic &middot; cor<strong style="color:#8B6914;">&middot;</strong>ner &middot; can<strong style="color:#8B6914;">&middot;</strong>dle</p>
+        </div>
+      </div>
 
-<div class="callout callout-info" style="margin-top:14px;"><span class="callout-icon">🎮</span><p><strong>Practice: Sort the words.</strong> Tap a word, then tap the column it belongs in.</p></div>
+      <div class="socratic-box">
+        <div class="socratic-label">&#x1F50D; What do you notice?</div>
+        <p class="socratic-q">Take the first beat of each word. Does it end on a vowel or on a consonant?</p>
+        <p class="socratic-q">Which ones have an <em>r</em> bossing the vowel around?</p>
+        <p class="socratic-q">Which ones end in a consonant plus <em>-le</em>? Can you name all four types now?</p>
+      </div>
+
+      <button class="dol-check-btn" style="margin:12px auto;display:block;" onclick="document.getElementById('spellReveal').classList.toggle('show')">🔍 See the Rule</button>
+      <div class="dol-answer" id="spellReveal"><p><strong>The Rule:</strong> Four syllable types, four different jobs: <strong>closed</strong> ends in a consonant and keeps the vowel short (nap), <strong>open</strong> ends in a vowel and lets it say its name (ti), <strong>r-controlled</strong> hands the vowel over to the r (gar), and <strong>silent-e</strong> reaches back to make the vowel long (pete). Name the type and the word decodes itself.</p><p>Review closed and open syllables together. Closed = ends in consonant (short vowel). Open = ends in vowel (long vowel).</p></div>
+
+      <div class="callout callout-info" style="margin-top:16px;"><span class="callout-icon">🎮</span><p><strong>Practice:</strong> Sort these words using the pattern you discovered.</p></div>
       <div class="sort-game" id="spellSort">
-        <div class="sort-bank" id="sortBank">
-          <span class="sort-chip" data-group="double" onclick="pickSortChip(this)">snapped</span>
-          <span class="sort-chip" data-group="drop-e" onclick="pickSortChip(this)">staring</span>
-          <span class="sort-chip" data-group="y-to-i" onclick="pickSortChip(this)">carried</span>
-          <span class="sort-chip" data-group="plural" onclick="pickSortChip(this)">dishes</span>
-          <span class="sort-chip" data-group="soft-cg" onclick="pickSortChip(this)">prince</span>
-          <span class="sort-chip" data-group="plural" onclick="pickSortChip(this)">stories</span>
-          <span class="sort-chip" data-group="soft-cg" onclick="pickSortChip(this)">gentle</span>
-          <span class="sort-chip" data-group="double" onclick="pickSortChip(this)">stopped</span>
-        </div>
-        <div class="sort-columns">
-          <div class="sort-col"><div class="sort-col-header" style="background:linear-gradient(135deg,#55C8E8,#55C8E8);">Doubled</div><div class="sort-col-drop" data-col="double" onclick="dropSortChip(this,'double')"></div></div>
-          <div class="sort-col"><div class="sort-col-header" style="background:linear-gradient(135deg,#8B6FC0,#8B6FC0);">Dropped the e</div><div class="sort-col-drop" data-col="drop-e" onclick="dropSortChip(this,'drop-e')"></div></div>
-          <div class="sort-col"><div class="sort-col-header" style="background:linear-gradient(135deg,#C7922C,#C7922C);">y &rarr; i</div><div class="sort-col-drop" data-col="y-to-i" onclick="dropSortChip(this,'y-to-i')"></div></div>
-          <div class="sort-col"><div class="sort-col-header" style="background:linear-gradient(135deg,#34B76F,#34B76F);">Plural ending</div><div class="sort-col-drop" data-col="plural" onclick="dropSortChip(this,'plural')"></div></div>
-          <div class="sort-col"><div class="sort-col-header" style="background:linear-gradient(135deg,#c7627e,#c7627e);">Soft c or g</div><div class="sort-col-drop" data-col="soft-cg" onclick="dropSortChip(this,'soft-cg')"></div></div>
-        </div>
-        <div class="sort-score" id="sortScore"></div>
-      </div>
-      <div class="swyk">
-        <div class="swyk-label">🪶 Show What You Know</div>
-        <div class="swyk-prompt">Pick one spelling pattern you have learned this year and explain it in your own words. Give one example.</div>
-        <div class="journal-label">📓 Your explanation <span class="saved-dot" id="dot-spelling"></span></div>
-        <textarea class="journal-box" id="journal-spelling" data-label="Spelling: Cumulative spelling review" placeholder="The rule is..." oninput="autoSave(this,'dot-spelling')"></textarea>
-      </div>
+  <div class="sort-bank" id="sortBank"><span class="sort-chip" data-group="a" onclick="pickSortChip(this)">robin</span><span class="sort-chip" data-group="b" onclick="pickSortChip(this)">table</span><span class="sort-chip" data-group="b" onclick="pickSortChip(this)">broken</span><span class="sort-chip" data-group="a" onclick="pickSortChip(this)">cotton</span><span class="sort-chip" data-group="b" onclick="pickSortChip(this)">open</span><span class="sort-chip" data-group="a" onclick="pickSortChip(this)">kitten</span></div>
+  <div class="sort-columns">
+    <div class="sort-col"><div class="sort-col-header" style="background:linear-gradient(135deg,#3D1A6B,#5C2D91);">Closed syllable</div><div class="sort-col-drop" data-col="a" onclick="dropSortChip(this,'a')"></div></div>
+    <div class="sort-col"><div class="sort-col-header" style="background:linear-gradient(135deg,#B8860B,#7A45C4);">Open syllable</div><div class="sort-col-drop" data-col="b" onclick="dropSortChip(this,'b')"></div></div>
+  </div>
+  <div class="sort-score" id="sortScore"></div>
+</div>
+      
     </div>
   </div>
 
@@ -3019,7 +3005,7 @@ function fireConfetti() {
 /* ───── WORD SORT GAME ───── */
 var sortSelected = null;
 var sortPlaced = 0;
-var sortTotal = 8;
+var sortTotal = 6;
 
 function pickSortChip(chip) {
   if (chip.classList.contains('placed')) return;

@@ -2550,46 +2550,36 @@ body {
 </div>
 <!-- SPELLING -->
 <div class="activity bl-navy">
-  <div class="activity-head"><div class="activity-num" style="background:#0E1C42;">4</div><div><div class="activity-title">🔠 Spelling: Magic-e / silent-e syllables</div><div class="activity-sub">Apply the pattern &mdash; build the words.</div></div></div>
+  <div class="activity-head"><div class="activity-num" style="background:#0E1C42;">4</div><div><div class="activity-title">🔠 Spelling: Schwa introduction in longer words</div><div class="activity-sub">Use / Apply — master the pattern</div></div></div>
   <div class="activity-body">
 <!-- spell-notice-first -->
-<div class="callout callout-info" style="margin-bottom:14px;"><span class="callout-icon">&#x1F5C2;&#xFE0F;</span><p>Before you start: find the beat with the silent e and listen to its vowel.</p></div>
-<p><strong>This week:</strong> Magic-e / silent-e syllables</p>
-<div class="callout callout-gold" style="margin-bottom:14px;background:#FFF8E8;border:2px solid #F5E6C8;border-left:5px solid #C7922C;border-radius:10px;padding:14px 18px;"><span class="callout-icon">📖</span><p style="font-size:15px;color:#0E1C42;line-height:1.6;"><strong>The Rule:</strong> A <strong>silent-e syllable</strong> works the same way inside a long word as it does in a short one: the e at the end reaches back and makes the vowel say its <strong>name</strong>. <em>com&middot;pete</em>, <em>in&middot;vite</em>, <em>es&middot;cape</em>.</p></div>
-<div class="callout callout-info"><span class="callout-icon">🧩</span><p><strong>Syllable Tiles!</strong> The second chunk in every one of these is a silent-e syllable &mdash; so its vowel says its name. Tap the chunks <strong>in order</strong> to build the word. A chunk in the wrong place will not stick.</p></div>
-<div id="tileGame" style="margin:14px 0;">
-<div class="tile-word" data-next="0" data-total="2" data-whole="compete" style="background:#FAFBFF;border:2px solid #C8DCEE;border-radius:10px;padding:14px;margin-bottom:10px;">
-<div class="tw-slots" style="min-height:34px;font-size:24px;font-weight:700;color:#0E1C42;text-align:center;letter-spacing:1px;">&nbsp;</div>
-<div style="display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-top:10px;">
-<span class="tw-tile" onclick="tileTap(this)" data-pos="1" style="background:#FFF;border:2px solid #8B6FC0;border-radius:8px;padding:6px 14px;font-size:18px;font-weight:700;color:#3D5285;cursor:pointer;">pete</span>
-<span class="tw-tile" onclick="tileTap(this)" data-pos="0" style="background:#FFF;border:2px solid #8B6FC0;border-radius:8px;padding:6px 14px;font-size:18px;font-weight:700;color:#3D5285;cursor:pointer;">com</span>
+<div class="callout callout-info" style="margin-bottom:14px;"><span class="callout-icon">&#x1F442;</span><p>Before you start: find the lazy beat, and notice its vowel is not what it looks like.</p></div>
+<p><strong>This week:</strong> Schwa introduction in longer words</p>
+<div class="callout callout-gold" style="margin-bottom:14px;background:#FFF8E8;border:2px solid #F5E6C8;border-left:5px solid #C7922C;border-radius:10px;padding:14px 18px;"><span class="callout-icon">📖</span><p style="font-size:15px;color:#0E1C42;line-height:1.6;"><strong>The Rule:</strong> In a long word, one syllable gets less stress and its vowel blurs into a lazy <strong>/uh/</strong> sound. That is the <strong>schwa</strong>. Any vowel letter can make it: the a in <em>a&middot;bout</em>, the o in <em>les&middot;son</em>. That is why long words are hard to spell by ear.</p></div>
+<div class="callout callout-info"><span class="callout-icon">✨</span><p><strong>Find the Schwa!</strong> Say the word the lazy way you really say it, then tap to see which vowel blurred.</p></div>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:14px 0;" id="spellGrid">
+<div class="rv-card" onclick="spellReveal(this)" data-after="a &middot; bout" data-hint="the a blurs to /uh/" style="background:#FAFBFF;border:2px solid #C8DCEE;border-radius:10px;padding:14px;text-align:center;cursor:pointer;transition:all 0.3s;">
+<div style="font-size:26px;font-weight:700;color:#0E1C42;" class="rv-word">about</div>
+<div style="font-size:12px;color:#7A88A8;margin-top:4px;" class="rv-hint">tap to find the schwa!</div></div>
+<div class="rv-card" onclick="spellReveal(this)" data-after="les &middot; son" data-hint="the o blurs" style="background:#FAFBFF;border:2px solid #C8DCEE;border-radius:10px;padding:14px;text-align:center;cursor:pointer;transition:all 0.3s;">
+<div style="font-size:26px;font-weight:700;color:#0E1C42;" class="rv-word">lesson</div>
+<div style="font-size:12px;color:#7A88A8;margin-top:4px;" class="rv-hint">tap to find the schwa!</div></div>
+<div class="rv-card" onclick="spellReveal(this)" data-after="pen &middot; cil" data-hint="the i blurs" style="background:#FAFBFF;border:2px solid #C8DCEE;border-radius:10px;padding:14px;text-align:center;cursor:pointer;transition:all 0.3s;">
+<div style="font-size:26px;font-weight:700;color:#0E1C42;" class="rv-word">pencil</div>
+<div style="font-size:12px;color:#7A88A8;margin-top:4px;" class="rv-hint">tap to find the schwa!</div></div>
+<div class="rv-card" onclick="spellReveal(this)" data-after="prob &middot; lem" data-hint="the e blurs" style="background:#FAFBFF;border:2px solid #C8DCEE;border-radius:10px;padding:14px;text-align:center;cursor:pointer;transition:all 0.3s;">
+<div style="font-size:26px;font-weight:700;color:#0E1C42;" class="rv-word">problem</div>
+<div style="font-size:12px;color:#7A88A8;margin-top:4px;" class="rv-hint">tap to find the schwa!</div></div>
+<div class="rv-card" onclick="spellReveal(this)" data-after="cir &middot; cus" data-hint="the u blurs" style="background:#FAFBFF;border:2px solid #C8DCEE;border-radius:10px;padding:14px;text-align:center;cursor:pointer;transition:all 0.3s;">
+<div style="font-size:26px;font-weight:700;color:#0E1C42;" class="rv-word">circus</div>
+<div style="font-size:12px;color:#7A88A8;margin-top:4px;" class="rv-hint">tap to find the schwa!</div></div>
+<div class="rv-card" onclick="spellReveal(this)" data-after="ba &middot; nan &middot; a" data-hint="the first and last a blur" style="background:#FAFBFF;border:2px solid #C8DCEE;border-radius:10px;padding:14px;text-align:center;cursor:pointer;transition:all 0.3s;">
+<div style="font-size:26px;font-weight:700;color:#0E1C42;" class="rv-word">banana</div>
+<div style="font-size:12px;color:#7A88A8;margin-top:4px;" class="rv-hint">tap to find the schwa!</div></div>
 </div>
-<div class="spotter-result" style="margin-top:8px;"></div></div>
-<div class="tile-word" data-next="0" data-total="2" data-whole="invite" style="background:#FAFBFF;border:2px solid #C8DCEE;border-radius:10px;padding:14px;margin-bottom:10px;">
-<div class="tw-slots" style="min-height:34px;font-size:24px;font-weight:700;color:#0E1C42;text-align:center;letter-spacing:1px;">&nbsp;</div>
-<div style="display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-top:10px;">
-<span class="tw-tile" onclick="tileTap(this)" data-pos="1" style="background:#FFF;border:2px solid #8B6FC0;border-radius:8px;padding:6px 14px;font-size:18px;font-weight:700;color:#3D5285;cursor:pointer;">vite</span>
-<span class="tw-tile" onclick="tileTap(this)" data-pos="0" style="background:#FFF;border:2px solid #8B6FC0;border-radius:8px;padding:6px 14px;font-size:18px;font-weight:700;color:#3D5285;cursor:pointer;">in</span>
-</div>
-<div class="spotter-result" style="margin-top:8px;"></div></div>
-<div class="tile-word" data-next="0" data-total="2" data-whole="escape" style="background:#FAFBFF;border:2px solid #C8DCEE;border-radius:10px;padding:14px;margin-bottom:10px;">
-<div class="tw-slots" style="min-height:34px;font-size:24px;font-weight:700;color:#0E1C42;text-align:center;letter-spacing:1px;">&nbsp;</div>
-<div style="display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-top:10px;">
-<span class="tw-tile" onclick="tileTap(this)" data-pos="1" style="background:#FFF;border:2px solid #8B6FC0;border-radius:8px;padding:6px 14px;font-size:18px;font-weight:700;color:#3D5285;cursor:pointer;">cape</span>
-<span class="tw-tile" onclick="tileTap(this)" data-pos="0" style="background:#FFF;border:2px solid #8B6FC0;border-radius:8px;padding:6px 14px;font-size:18px;font-weight:700;color:#3D5285;cursor:pointer;">es</span>
-</div>
-<div class="spotter-result" style="margin-top:8px;"></div></div>
-<div class="tile-word" data-next="0" data-total="2" data-whole="mistake" style="background:#FAFBFF;border:2px solid #C8DCEE;border-radius:10px;padding:14px;margin-bottom:10px;">
-<div class="tw-slots" style="min-height:34px;font-size:24px;font-weight:700;color:#0E1C42;text-align:center;letter-spacing:1px;">&nbsp;</div>
-<div style="display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-top:10px;">
-<span class="tw-tile" onclick="tileTap(this)" data-pos="1" style="background:#FFF;border:2px solid #8B6FC0;border-radius:8px;padding:6px 14px;font-size:18px;font-weight:700;color:#3D5285;cursor:pointer;">take</span>
-<span class="tw-tile" onclick="tileTap(this)" data-pos="0" style="background:#FFF;border:2px solid #8B6FC0;border-radius:8px;padding:6px 14px;font-size:18px;font-weight:700;color:#3D5285;cursor:pointer;">mis</span>
-</div>
-<div class="spotter-result" style="margin-top:8px;"></div></div>
-</div>
-<div class="sort-score" id="tileScore"></div>
+<div class="sort-score" id="spellScore"></div>
 <script>
-function tileTap(el){var box=el.closest(".tile-word");if(!box||el.dataset.used)return;var want=parseInt(box.dataset.next,10);var res=box.querySelector(".spotter-result");if(parseInt(el.dataset.pos,10)!==want){el.style.borderColor="#c7627e";setTimeout(function(){el.style.borderColor="#8B6FC0";},500);if(res){res.textContent="Not that chunk yet \u2014 say the word slowly and listen for the next beat.";res.className="spotter-result show";}return;}el.dataset.used="1";el.style.background="#E3F8ED";el.style.borderColor="#34B76F";el.style.cursor="default";var slots=box.querySelector(".tw-slots");slots.textContent=(want===0?"":slots.textContent+" \u00b7 ")+el.textContent;box.dataset.next=want+1;if(want+1===parseInt(box.dataset.total,10)&&res){res.textContent="\u2705 "+box.dataset.whole;res.className="spotter-result show win";}var all=document.querySelectorAll(".tile-word"),d=0;all.forEach(function(b){if(b.dataset.next===b.dataset.total)d++;});var sc=document.getElementById("tileScore");if(!sc)return;sc.textContent=d===all.length?"Every word built. Chunk by chunk is how long words work.":d+"/"+all.length+" words built";}
+function spellReveal(c){if(c.classList.contains("done"))return;c.classList.add("done");c.querySelector(".rv-word").innerHTML=c.dataset.after;var h=c.querySelector(".rv-hint");h.innerHTML=c.dataset.hint;h.style.color="#34B76F";h.style.fontWeight="700";c.style.background="#E3F8ED";c.style.borderColor="#34B76F";var all=document.querySelectorAll(".rv-card"),d=document.querySelectorAll(".rv-card.done");var sc=document.getElementById("spellScore");if(!sc)return;sc.textContent=d.length===all.length?"All found! The blurry vowel is the one to double-check when you spell.":d.length+"/"+all.length+" done";}
 </script>
 </div>
 </div>

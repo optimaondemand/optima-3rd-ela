@@ -2481,51 +2481,40 @@ body {
 
   <!-- ═══ SPELLING ═══ -->
   <div class="activity bl-navy">
-    <div class="activity-head"><div class="activity-num" style="background:#0E1C42;">4</div><div style="flex:1;"><div class="activity-title">🔠 Spelling: Soft c and soft g</div><div class="activity-sub">Day 1: Notice &mdash; work out the pattern before you are told it.</div></div></div>
-    <div class="activity-body">
-<!-- spell-notice-first -->
-<div class="key-concept NOTICEBOX" style="background:#EEF3FA;border-color:#C8D6EA;margin:0 0 14px;">
-<div class="key-concept-label" style="color:#0E1C42;">&#x1F442; Say them out loud</div>
-<p>Say these aloud. The same letters are not making the same sound.</p>
-</div>
+    <div class="activity-head"><div class="activity-num" style="background:#2A0A4A;">4</div><div><div class="activity-title">🔠 Spelling: Closed Syllables in Longer Words</div><div class="activity-sub">Discover the pattern.</div></div></div>
+    <div class="activity-body"><!-- spell-notice-first -->
 
-<div class="callout callout-info" style="margin-top:14px;"><span class="callout-icon">&#x1F9D0;</span><p><strong>Look at the words below, then work through these:</strong></p>
-<ul style="margin:6px 0 0 20px;font-size:15px;color:#3A4A6B;line-height:1.8;">
-<li>What sound does the <em>c</em> make in each word?</li>
-<li>What sound does the <em>g</em> make?</li>
-<li>Look at the letter right after them. Can you predict the sound from it?</li>
-</ul></div>
-<button class="dol-check-btn" onclick="document.getElementById('spellNotice').classList.toggle('show')">&#x1F442; Now name the pattern</button>
-<div class="dol-answer" id="spellNotice">
-<p><strong>The Rule:</strong> The letters <strong>c</strong> and <strong>g</strong> have two voices. Before <strong>e, i,</strong> or <strong>y</strong> they go soft: c says <strong>/s/</strong> (city) and g says <strong>/j/</strong> (giant). Before any other letter they stay hard: <em>cave</em>, <em>goat</em>.</p>
-<p><strong>c</strong> and <strong>g</strong> go soft &mdash; /s/ and /j/ &mdash; when the very next letter is <strong>e</strong>, <strong>i</strong> or <strong>y</strong>: <em>mice</em>, <em>magic</em>.</p>
-<p>Before any other letter they stay hard: <em>Cook</em>, <em>gold</em>.</p>
-</div>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:14px 0;">
+        <div class="key-concept" style="margin-bottom:0;">
+          <div class="key-concept-label">Group A — divided like this</div>
+          <p style="font-size:17px;font-weight:700;letter-spacing:0.5px;">rab<strong style="color:#4A7C2E;">·</strong>bit · gar<strong style="color:#4A7C2E;">·</strong>den · bas<strong style="color:#4A7C2E;">·</strong>ket · sis<strong style="color:#4A7C2E;">·</strong>ter</p>
+        </div>
+        <div class="key-concept" style="margin-bottom:0;background:#F0E8FF;border-color:#D8CCF0;">
+          <div class="key-concept-label" style="color:#8B6FC0;">Group B — same pattern</div>
+          <p style="font-size:17px;font-weight:700;letter-spacing:0.5px;">tun<strong style="color:#8B6914;">·</strong>nel · ham<strong style="color:#8B6914;">·</strong>per · win<strong style="color:#8B6914;">·</strong>ter · pic<strong style="color:#8B6914;">·</strong>nic</p>
+        </div>
+      </div>
 
-<div class="callout callout-info" style="margin-top:14px;"><span class="callout-icon">🎮</span><p><strong>Practice: Sort the words.</strong> Tap a word, then tap the column it belongs in.</p></div>
+      <div class="socratic-box">
+        <div class="socratic-label">&#x1F442; Say them out loud</div>
+        <p class="socratic-q">Look at the letters around the dot in each word. Count: vowel, consonant, consonant, vowel. That's the <strong>VCCV pattern</strong>.</p>
+        <p class="socratic-q">Where does the dot fall — before, between, or after the two consonants?</p>
+        <p class="socratic-q">Can you say the rule in your own words?</p>
+      </div>
+
+      <button class="dol-check-btn" style="margin:12px auto;display:block;" onclick="document.getElementById('spellReveal').classList.toggle('show')">🔍 See the Rule</button>
+      <div class="dol-answer" id="spellReveal"><p><strong>The Rule:</strong> A <strong>closed syllable</strong> ends in a consonant, and that consonant shuts the vowel in so it stays <strong>short</strong>: <em>nap</em>, <em>kin</em>. Long words are often just two closed syllables stuck together: <strong>nap&middot;kin</strong>.</p><p>A <strong>closed syllable</strong> ends in a consonant, so the vowel makes its <em>short</em> sound — like <em>hap</em> in <strong>hap·py</strong>.</p></div>
+
+      <div class="callout callout-info" style="margin-top:16px;"><span class="callout-icon">🎮</span><p><strong>Practice:</strong> Sort these words using the pattern you discovered.</p></div>
       <div class="sort-game" id="spellSort">
-        <div class="sort-bank" id="sortBank">
-          <span class="sort-chip" data-group="soft" onclick="pickSortChip(this)">mice</span>
-          <span class="sort-chip" data-group="soft" onclick="pickSortChip(this)">prince</span>
-          <span class="sort-chip" data-group="soft" onclick="pickSortChip(this)">magic</span>
-          <span class="sort-chip" data-group="soft" onclick="pickSortChip(this)">gentle</span>
-          <span class="sort-chip" data-group="hard" onclick="pickSortChip(this)">Cook</span>
-          <span class="sort-chip" data-group="hard" onclick="pickSortChip(this)">candle</span>
-          <span class="sort-chip" data-group="hard" onclick="pickSortChip(this)">gold</span>
-          <span class="sort-chip" data-group="hard" onclick="pickSortChip(this)">garlic</span>
-        </div>
-        <div class="sort-columns">
-          <div class="sort-col"><div class="sort-col-header" style="background:linear-gradient(135deg,#55C8E8,#55C8E8);">Soft (/s/ or /j/)</div><div class="sort-col-drop" data-col="soft" onclick="dropSortChip(this,'soft')"></div></div>
-          <div class="sort-col"><div class="sort-col-header" style="background:linear-gradient(135deg,#8B6FC0,#8B6FC0);">Hard (/k/ or /g/)</div><div class="sort-col-drop" data-col="hard" onclick="dropSortChip(this,'hard')"></div></div>
-        </div>
-        <div class="sort-score" id="sortScore"></div>
-      </div>
-      <div class="swyk">
-        <div class="swyk-label">🪶 Show What You Know</div>
-        <div class="swyk-prompt">In your own words, explain the rule for soft c and soft g. Give one example.</div>
-        <div class="journal-label">📓 Your explanation <span class="saved-dot" id="dot-spelling"></span></div>
-        <textarea class="journal-box" id="journal-spelling" data-label="Spelling: Soft c and soft g" placeholder="The rule is..." oninput="autoSave(this,'dot-spelling')"></textarea>
-      </div>
+  <div class="sort-bank" id="sortBank"><span class="sort-chip" data-group="a" onclick="pickSortChip(this)">rabbit</span><span class="sort-chip" data-group="b" onclick="pickSortChip(this)">castle</span><span class="sort-chip" data-group="a" onclick="pickSortChip(this)">basket</span><span class="sort-chip" data-group="a" onclick="pickSortChip(this)">kitten</span><span class="sort-chip" data-group="b" onclick="pickSortChip(this)">garden</span><span class="sort-chip" data-group="a" onclick="pickSortChip(this)">blanket</span></div>
+  <div class="sort-columns">
+    <div class="sort-col"><div class="sort-col-header" style="background:linear-gradient(135deg,#3D1A6B,#5C2D91);">Closed 1st syllable</div><div class="sort-col-drop" data-col="a" onclick="dropSortChip(this,'a')"></div></div>
+    <div class="sort-col"><div class="sort-col-header" style="background:linear-gradient(135deg,#B8860B,#7A45C4);">Other pattern</div><div class="sort-col-drop" data-col="b" onclick="dropSortChip(this,'b')"></div></div>
+  </div>
+  <div class="sort-score" id="sortScore"></div>
+</div>
+      
     </div>
   </div>
 
@@ -3011,7 +3000,7 @@ function fireConfetti() {
 /* ───── WORD SORT GAME ───── */
 var sortSelected = null;
 var sortPlaced = 0;
-var sortTotal = 8;
+var sortTotal = 6;
 
 function pickSortChip(chip) {
   if (chip.classList.contains('placed')) return;

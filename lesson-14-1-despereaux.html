@@ -2484,51 +2484,40 @@ body {
 
   <!-- ═══ SPELLING ═══ -->
   <div class="activity bl-navy">
-    <div class="activity-head"><div class="activity-num" style="background:#0E1C42;">4</div><div style="flex:1;"><div class="activity-title">🔠 Spelling: Longer words with familiar suffixes</div><div class="activity-sub">Day 1: Notice &mdash; work out the pattern before you are told it.</div></div></div>
-    <div class="activity-body">
-<!-- spell-notice-first -->
-<div class="key-concept NOTICEBOX" style="background:#EEF3FA;border-color:#C8D6EA;margin:0 0 14px;">
-<div class="key-concept-label" style="color:#0E1C42;">&#x1F5C2;&#xFE0F; Sort them yourself first</div>
-<p>Long words, but each one is a base word you know plus an ending you know.</p>
-</div>
+    <div class="activity-head"><div class="activity-num" style="background:#2A0A4A;">4</div><div><div class="activity-title">🔠 Spelling: Open Syllables in Longer Words (Day 1: Define)</div><div class="activity-sub">Discover the pattern.</div></div></div>
+    <div class="activity-body"><!-- spell-notice-first -->
 
-<div class="callout callout-info" style="margin-top:14px;"><span class="callout-icon">&#x1F9D0;</span><p><strong>Look at the words below, then work through these:</strong></p>
-<ul style="margin:6px 0 0 20px;font-size:15px;color:#3A4A6B;line-height:1.8;">
-<li>Where does the base word end?</li>
-<li>Which endings do you recognize from earlier this year?</li>
-<li>Did the base word change its spelling to make room?</li>
-</ul></div>
-<button class="dol-check-btn" onclick="document.getElementById('spellNotice').classList.toggle('show')">&#x1F5C2;&#xFE0F; Now name the pattern</button>
-<div class="dol-answer" id="spellNotice">
-<p><strong>The Rule:</strong> Long words get short fast when you find the <strong>base word</strong> first, then peel off the suffix: <em>darkness</em> = <strong>dark</strong> + <strong>-ness</strong>. Suffixes that start with a consonant (-ful, -less, -ly, -ness) usually leave the base alone.</p>
-<p>A long word is only a short word with pieces on it. Find the base, then read the pieces around it.</p>
-<p><em>hope + less + ness</em> makes <strong>hopelessness</strong> &mdash; four syllables, one small base word.</p>
-</div>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:14px 0;">
+        <div class="key-concept" style="margin-bottom:0;">
+          <div class="key-concept-label">Group A &mdash; divided like this</div>
+          <p style="font-size:17px;font-weight:700;letter-spacing:0.5px;">ti<strong style="color:#4A7C2E;">&middot;</strong>ger &middot; mu<strong style="color:#4A7C2E;">&middot;</strong>sic &middot; ro<strong style="color:#4A7C2E;">&middot;</strong>bot &middot; ba<strong style="color:#4A7C2E;">&middot;</strong>by</p>
+        </div>
+        <div class="key-concept" style="margin-bottom:0;background:#F0E8FF;border-color:#D8CCF0;">
+          <div class="key-concept-label" style="color:#8B6FC0;">Group B &mdash; same pattern</div>
+          <p style="font-size:17px;font-weight:700;letter-spacing:0.5px;">pa<strong style="color:#8B6914;">&middot;</strong>per &middot; pi<strong style="color:#8B6914;">&middot;</strong>lot &middot; la<strong style="color:#8B6914;">&middot;</strong>ter &middot; o<strong style="color:#8B6914;">&middot;</strong>pen</p>
+        </div>
+      </div>
 
-<div class="callout callout-info" style="margin-top:14px;"><span class="callout-icon">🎮</span><p><strong>Practice: Sort the words.</strong> Tap a word, then tap the column it belongs in.</p></div>
+      <div class="socratic-box">
+        <div class="socratic-label">&#x1F50D; What do you notice?</div>
+        <p class="socratic-q">Look at the letter just before the dot in each word. Is it a vowel or a consonant?</p>
+        <p class="socratic-q">Say the first beat on its own. Is the vowel saying its short sound, or its name?</p>
+        <p class="socratic-q">What do you think happens to a vowel when nothing comes after it in its own beat?</p>
+      </div>
+
+      <button class="dol-check-btn" style="margin:12px auto;display:block;" onclick="document.getElementById('spellReveal').classList.toggle('show')">🔍 See the Rule</button>
+      <div class="dol-answer" id="spellReveal"><p><strong>The Rule:</strong> An <strong>open syllable</strong> ends in a vowel, so nothing shuts the vowel in and it says its <strong>name</strong>: <em>ti</em> in <strong>ti&middot;ger</strong>, <em>mu</em> in <strong>mu&middot;sic</strong>. Closed syllable, short vowel. Open syllable, long vowel.</p><p>An <strong>open syllable</strong> ends in a vowel, and the vowel makes its <em>long</em> sound — like <em>ba</em> in <strong>ba·by</strong> or <em>ti</em> in <strong>ti·ger</strong>.</p></div>
+
+      <div class="callout callout-info" style="margin-top:16px;"><span class="callout-icon">🎮</span><p><strong>Practice:</strong> Sort these words using the pattern you discovered.</p></div>
       <div class="sort-game" id="spellSort">
-        <div class="sort-bank" id="sortBank">
-          <span class="sort-chip" data-group="three-parts" onclick="pickSortChip(this)">hopelessness</span>
-          <span class="sort-chip" data-group="three-parts" onclick="pickSortChip(this)">thoughtfulness</span>
-          <span class="sort-chip" data-group="three-parts" onclick="pickSortChip(this)">fearlessly</span>
-          <span class="sort-chip" data-group="three-parts" onclick="pickSortChip(this)">impatiently</span>
-          <span class="sort-chip" data-group="two-parts" onclick="pickSortChip(this)">darkness</span>
-          <span class="sort-chip" data-group="two-parts" onclick="pickSortChip(this)">hopeful</span>
-          <span class="sort-chip" data-group="two-parts" onclick="pickSortChip(this)">quickly</span>
-          <span class="sort-chip" data-group="two-parts" onclick="pickSortChip(this)">disagree</span>
-        </div>
-        <div class="sort-columns">
-          <div class="sort-col"><div class="sort-col-header" style="background:linear-gradient(135deg,#55C8E8,#55C8E8);">Base + two endings</div><div class="sort-col-drop" data-col="three-parts" onclick="dropSortChip(this,'three-parts')"></div></div>
-          <div class="sort-col"><div class="sort-col-header" style="background:linear-gradient(135deg,#8B6FC0,#8B6FC0);">Base + one ending</div><div class="sort-col-drop" data-col="two-parts" onclick="dropSortChip(this,'two-parts')"></div></div>
-        </div>
-        <div class="sort-score" id="sortScore"></div>
-      </div>
-      <div class="swyk">
-        <div class="swyk-label">🪶 Show What You Know</div>
-        <div class="swyk-prompt">In your own words, explain the rule for longer words with familiar suffixes. Give one example.</div>
-        <div class="journal-label">📓 Your explanation <span class="saved-dot" id="dot-spelling"></span></div>
-        <textarea class="journal-box" id="journal-spelling" data-label="Spelling: Longer words with familiar suffixes" placeholder="The rule is..." oninput="autoSave(this,'dot-spelling')"></textarea>
-      </div>
+  <div class="sort-bank" id="sortBank"><span class="sort-chip" data-group="a" onclick="pickSortChip(this)">tiger</span><span class="sort-chip" data-group="b" onclick="pickSortChip(this)">napkin</span><span class="sort-chip" data-group="a" onclick="pickSortChip(this)">robot</span><span class="sort-chip" data-group="b" onclick="pickSortChip(this)">velvet</span><span class="sort-chip" data-group="a" onclick="pickSortChip(this)">music</span><span class="sort-chip" data-group="b" onclick="pickSortChip(this)">helmet</span><span class="sort-chip" data-group="a" onclick="pickSortChip(this)">tiny</span><span class="sort-chip" data-group="b" onclick="pickSortChip(this)">sudden</span></div>
+  <div class="sort-columns">
+    <div class="sort-col"><div class="sort-col-header" style="background:linear-gradient(135deg,#3D1A6B,#5C2D91);">Open syllable (long vowel at end)</div><div class="sort-col-drop" data-col="a" onclick="dropSortChip(this,'a')"></div></div>
+    <div class="sort-col"><div class="sort-col-header" style="background:linear-gradient(135deg,#B8860B,#7A45C4);">Closed (short vowel)</div><div class="sort-col-drop" data-col="b" onclick="dropSortChip(this,'b')"></div></div>
+  </div>
+  <div class="sort-score" id="sortScore"></div>
+</div>
+      
     </div>
   </div>
 

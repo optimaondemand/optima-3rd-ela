@@ -2483,52 +2483,40 @@ body {
 
   <!-- ═══ SPELLING ═══ -->
   <div class="activity bl-navy">
-    <div class="activity-head"><div class="activity-num" style="background:#0E1C42;">4</div><div style="flex:1;"><div class="activity-title">🔠 Spelling: Review: endings that change the base</div><div class="activity-sub">Day 1: Notice &mdash; work out the pattern before you are told it.</div></div></div>
-    <div class="activity-body">
-<!-- spell-notice-first -->
-<div class="key-concept NOTICEBOX" style="background:#EEF3FA;border-color:#C8D6EA;margin:0 0 14px;">
-<div class="key-concept-label" style="color:#0E1C42;">&#x1F440; Look at what changed</div>
-<p>Every word here changed its spelling when the ending arrived.</p>
-</div>
+    <div class="activity-head"><div class="activity-num" style="background:#2A0A4A;">4</div><div><div class="activity-title">🔠 Spelling: r-Controlled Syllables (Day 1: Define)</div><div class="activity-sub">Discover the pattern.</div></div></div>
+    <div class="activity-body"><!-- spell-notice-first -->
 
-<div class="callout callout-info" style="margin-top:14px;"><span class="callout-icon">&#x1F9D0;</span><p><strong>Look at the words below, then work through these:</strong></p>
-<ul style="margin:6px 0 0 20px;font-size:15px;color:#3A4A6B;line-height:1.8;">
-<li>Which words dropped a letter?</li>
-<li>Which doubled one?</li>
-<li>Which swapped one letter for another?</li>
-</ul></div>
-<button class="dol-check-btn" onclick="document.getElementById('spellNotice').classList.toggle('show')">&#x1F440; Now name the pattern</button>
-<div class="dol-answer" id="spellNotice">
-<p><strong>The Rule:</strong> Three endings change the base word before they go on: <strong>drop the silent e</strong> (hope &rarr; hoping), <strong>double the final consonant</strong> after a short vowel (run &rarr; running), and <strong>change y to i</strong> after a consonant (carry &rarr; carried). Everything else just takes the ending.</p>
-<p>Three rules change the base word before the ending goes on: <strong>double</strong> the consonant, <strong>drop</strong> the silent e, or change <strong>y to i</strong>.</p>
-<p>Sort each word by which rule was used to build it.</p>
-</div>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:14px 0;">
+        <div class="key-concept" style="margin-bottom:0;">
+          <div class="key-concept-label">Group A &mdash; divided like this</div>
+          <p style="font-size:17px;font-weight:700;letter-spacing:0.5px;">gar<strong style="color:#4A7C2E;">&middot;</strong>den &middot; mar<strong style="color:#4A7C2E;">&middot;</strong>ket &middot; cor<strong style="color:#4A7C2E;">&middot;</strong>ner &middot; far<strong style="color:#4A7C2E;">&middot;</strong>mer</p>
+        </div>
+        <div class="key-concept" style="margin-bottom:0;background:#F0E8FF;border-color:#D8CCF0;">
+          <div class="key-concept-label" style="color:#8B6FC0;">Group B &mdash; same pattern</div>
+          <p style="font-size:17px;font-weight:700;letter-spacing:0.5px;">bird<strong style="color:#8B6914;">&middot;</strong>song &middot; thir<strong style="color:#8B6914;">&middot;</strong>ty &middot; tur<strong style="color:#8B6914;">&middot;</strong>nip &middot; per<strong style="color:#8B6914;">&middot;</strong>son</p>
+        </div>
+      </div>
 
-<div class="callout callout-info" style="margin-top:14px;"><span class="callout-icon">🎮</span><p><strong>Practice: Sort the words.</strong> Tap a word, then tap the column it belongs in.</p></div>
+      <div class="socratic-box">
+        <div class="socratic-label">&#x1F50D; What do you notice?</div>
+        <p class="socratic-q">Find the letter <em>r</em> in each word. What letter comes just before it?</p>
+        <p class="socratic-q">Say the first beat aloud. Does that vowel sound short, long, or like neither?</p>
+        <p class="socratic-q">What do you think the <em>r</em> is doing to the vowel in front of it?</p>
+      </div>
+
+      <button class="dol-check-btn" style="margin:12px auto;display:block;" onclick="document.getElementById('spellReveal').classList.toggle('show')">🔍 See the Rule</button>
+      <div class="dol-answer" id="spellReveal"><p><strong>The Rule:</strong> When a vowel is followed by <strong>r</strong>, the r takes over and the vowel says neither its short nor its long sound: <em>ar</em> (car), <em>or</em> (corn), and <em>er, ir, ur</em>, which all say the same thing. That is an <strong>r-controlled syllable</strong>.</p><p>When <em>r</em> follows a vowel, the vowel does not say its regular sound — the r changes it. These are <strong>r-controlled syllables</strong>: ar, er, ir, or, ur.</p></div>
+
+      <div class="callout callout-info" style="margin-top:16px;"><span class="callout-icon">🎮</span><p><strong>Practice:</strong> Sort these words using the pattern you discovered.</p></div>
       <div class="sort-game" id="spellSort">
-        <div class="sort-bank" id="sortBank">
-          <span class="sort-chip" data-group="double" onclick="pickSortChip(this)">stopped</span>
-          <span class="sort-chip" data-group="double" onclick="pickSortChip(this)">nodding</span>
-          <span class="sort-chip" data-group="drop-e" onclick="pickSortChip(this)">shining</span>
-          <span class="sort-chip" data-group="drop-e" onclick="pickSortChip(this)">named</span>
-          <span class="sort-chip" data-group="y-to-i" onclick="pickSortChip(this)">hurried</span>
-          <span class="sort-chip" data-group="y-to-i" onclick="pickSortChip(this)">cried</span>
-          <span class="sort-chip" data-group="double" onclick="pickSortChip(this)">wrapped</span>
-          <span class="sort-chip" data-group="drop-e" onclick="pickSortChip(this)">waved</span>
-        </div>
-        <div class="sort-columns">
-          <div class="sort-col"><div class="sort-col-header" style="background:linear-gradient(135deg,#55C8E8,#55C8E8);">Doubled</div><div class="sort-col-drop" data-col="double" onclick="dropSortChip(this,'double')"></div></div>
-          <div class="sort-col"><div class="sort-col-header" style="background:linear-gradient(135deg,#8B6FC0,#8B6FC0);">Dropped the e</div><div class="sort-col-drop" data-col="drop-e" onclick="dropSortChip(this,'drop-e')"></div></div>
-          <div class="sort-col"><div class="sort-col-header" style="background:linear-gradient(135deg,#C7922C,#C7922C);">y &rarr; i</div><div class="sort-col-drop" data-col="y-to-i" onclick="dropSortChip(this,'y-to-i')"></div></div>
-        </div>
-        <div class="sort-score" id="sortScore"></div>
-      </div>
-      <div class="swyk">
-        <div class="swyk-label">🪶 Show What You Know</div>
-        <div class="swyk-prompt">Some endings change the base word before they attach. Explain one of those changes in your own words, and give an example.</div>
-        <div class="journal-label">📓 Your explanation <span class="saved-dot" id="dot-spelling"></span></div>
-        <textarea class="journal-box" id="journal-spelling" data-label="Spelling: Review: endings that change the base" placeholder="The rule is..." oninput="autoSave(this,'dot-spelling')"></textarea>
-      </div>
+  <div class="sort-bank" id="sortBank"><span class="sort-chip" data-group="a" onclick="pickSortChip(this)">garden</span><span class="sort-chip" data-group="b" onclick="pickSortChip(this)">fern</span><span class="sort-chip" data-group="b" onclick="pickSortChip(this)">bird</span><span class="sort-chip" data-group="a" onclick="pickSortChip(this)">storm</span><span class="sort-chip" data-group="b" onclick="pickSortChip(this)">burn</span><span class="sort-chip" data-group="a" onclick="pickSortChip(this)">park</span></div>
+  <div class="sort-columns">
+    <div class="sort-col"><div class="sort-col-header" style="background:linear-gradient(135deg,#3D1A6B,#5C2D91);">ar or or</div><div class="sort-col-drop" data-col="a" onclick="dropSortChip(this,'a')"></div></div>
+    <div class="sort-col"><div class="sort-col-header" style="background:linear-gradient(135deg,#B8860B,#7A45C4);">er, ir, or ur</div><div class="sort-col-drop" data-col="b" onclick="dropSortChip(this,'b')"></div></div>
+  </div>
+  <div class="sort-score" id="sortScore"></div>
+</div>
+      
     </div>
   </div>
 
@@ -3014,7 +3002,7 @@ function fireConfetti() {
 /* ───── WORD SORT GAME ───── */
 var sortSelected = null;
 var sortPlaced = 0;
-var sortTotal = 8;
+var sortTotal = 6;
 
 function pickSortChip(chip) {
   if (chip.classList.contains('placed')) return;

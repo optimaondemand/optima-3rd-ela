@@ -2599,36 +2599,54 @@ body {
 </div>
 <!-- SPELLING -->
 <div class="activity bl-navy">
-  <div class="activity-head"><div class="activity-num" style="background:#0E1C42;">4</div><div><div class="activity-title">🔠 Spelling: Schwa sound in longer words</div><div class="activity-sub">Day 1: Notice &mdash; work out the pattern before you are told it.</div></div></div>
-  <div class="activity-body">
+    <div class="activity-head"><div class="activity-num" style="background:#0E1C42;">4</div><div style="flex:1;"><div class="activity-title">🔠 Spelling: Suffixes that change meaning</div><div class="activity-sub">Day 1: Notice &mdash; work out the pattern before you are told it.</div></div></div>
+    <div class="activity-body">
 <!-- spell-notice-first -->
 <div class="key-concept NOTICEBOX" style="background:#EEF3FA;border-color:#C8D6EA;margin:0 0 14px;">
-<div class="key-concept-label" style="color:#0E1C42;">&#x1F442; Say them out loud</div>
-<p>Say these aloud and listen to the beat nobody stresses.</p>
-</div>
-        
-<div class="callout callout-info" style="margin-top:14px;"><span class="callout-icon">&#x1F9D0;</span><p><strong>Look at the words below, then work through these:</strong></p>
-<ul style="margin:6px 0 0 20px;font-size:15px;color:#3A4A6B;line-height:1.8;">
-<li>Which beat in each word is said quickly and quietly?</li>
-<li>What vowel sound do you actually hear there &mdash; or is it almost none?</li>
-<li>Does the spelling of that vowel match what you hear?</li>
-</ul></div>
-<button class="dol-check-btn" onclick="document.getElementById('spellNotice').classList.toggle('show')">&#x1F442; Now name the pattern</button>
-<div class="dol-answer" id="spellNotice">
-<p><strong>The Rule:</strong> In a long word, one syllable gets less stress and its vowel blurs into a lazy <strong>/uh/</strong> sound. That is the <strong>schwa</strong>. Any vowel letter can make it: the a in <em>a&middot;bout</em>, the o in <em>les&middot;son</em>. That is why long words are hard to spell by ear.</p>
-<p>The schwa is the most common vowel sound in English. It sounds like 'uh' and can be spelled with any vowel: a, e, i, o, or u. Example: about — the a sounds like 'uh.' You often need to memorize which letter spells the schwa.</p>
+<div class="key-concept-label" style="color:#0E1C42;">&#x1F440; Look at what changed</div>
+<p>Every word here changed its spelling when the ending arrived.</p>
 </div>
 
-<div class="callout callout-info"><span class="callout-icon">🎮</span><p>Sort these words into the correct spelling pattern group.</p></div>
-        <div class="sort-game" id="spellSort">
-          <div class="sort-bank" id="sortBank"><span class="sort-chip" data-group="schwa_a" onclick="pickSortChip(this)">about</span> <span class="sort-chip" data-group="schwa_eo" onclick="pickSortChip(this)">problem</span> <span class="sort-chip" data-group="schwa_a" onclick="pickSortChip(this)">afraid</span> <span class="sort-chip" data-group="schwa_eo" onclick="pickSortChip(this)">moment</span> <span class="sort-chip" data-group="schwa_a" onclick="pickSortChip(this)">along</span> <span class="sort-chip" data-group="schwa_eo" onclick="pickSortChip(this)">season</span> <span class="sort-chip" data-group="schwa_a" onclick="pickSortChip(this)">await</span> <span class="sort-chip" data-group="schwa_eo" onclick="pickSortChip(this)">forgotten</span> </div>
-          <div class="sort-columns">
-            <div class="sort-col"><div class="sort-col-header" style="background:linear-gradient(135deg,#1B7A4E,#2EA863);">Schwa spelled with a</div><div class="sort-col-drop" data-col="schwa_eo" onclick="dropSortChip(this,'schwa_eo')"></div></div>
-            <div class="sort-col"><div class="sort-col-header" style="background:linear-gradient(135deg,#8B6914,#a87f1f);">Schwa spelled with e or o</div><div class="sort-col-drop" data-col="schwa_a" onclick="dropSortChip(this,'schwa_a')"></div></div>
-          </div>
-          <div class="sort-score" id="sortScore"></div>
-        </div></div>
+<div class="callout callout-info" style="margin-top:14px;"><span class="callout-icon">&#x1F9D0;</span><p><strong>Look at the words below, then work through these:</strong></p>
+<ul style="margin:6px 0 0 20px;font-size:15px;color:#3A4A6B;line-height:1.8;">
+<li>Which words dropped a letter?</li>
+<li>Which doubled one?</li>
+<li>Which swapped one letter for another?</li>
+</ul></div>
+<button class="dol-check-btn" onclick="document.getElementById('spellNotice').classList.toggle('show')">&#x1F440; Now name the pattern</button>
+<div class="dol-answer" id="spellNotice">
+<p><strong>The Rule:</strong> Three endings change the base word before they go on: <strong>drop the silent e</strong> (hope &rarr; hoping), <strong>double the final consonant</strong> after a short vowel (run &rarr; running), and <strong>change y to i</strong> after a consonant (carry &rarr; carried). Everything else just takes the ending.</p>
+<p>Three rules change the base word before the ending goes on: <strong>double</strong> the consonant, <strong>drop</strong> the silent e, or change <strong>y to i</strong>.</p>
+<p>Sort each word by which rule was used to build it.</p>
 </div>
+
+<div class="callout callout-info" style="margin-top:14px;"><span class="callout-icon">🎮</span><p><strong>Practice: Sort the words.</strong> Tap a word, then tap the column it belongs in.</p></div>
+      <div class="sort-game" id="spellSort">
+        <div class="sort-bank" id="sortBank">
+          <span class="sort-chip" data-group="double" onclick="pickSortChip(this)">stopped</span>
+          <span class="sort-chip" data-group="double" onclick="pickSortChip(this)">nodding</span>
+          <span class="sort-chip" data-group="drop-e" onclick="pickSortChip(this)">shining</span>
+          <span class="sort-chip" data-group="drop-e" onclick="pickSortChip(this)">named</span>
+          <span class="sort-chip" data-group="y-to-i" onclick="pickSortChip(this)">hurried</span>
+          <span class="sort-chip" data-group="y-to-i" onclick="pickSortChip(this)">cried</span>
+          <span class="sort-chip" data-group="double" onclick="pickSortChip(this)">wrapped</span>
+          <span class="sort-chip" data-group="drop-e" onclick="pickSortChip(this)">waved</span>
+        </div>
+        <div class="sort-columns">
+          <div class="sort-col"><div class="sort-col-header" style="background:linear-gradient(135deg,#55C8E8,#55C8E8);">Doubled</div><div class="sort-col-drop" data-col="double" onclick="dropSortChip(this,'double')"></div></div>
+          <div class="sort-col"><div class="sort-col-header" style="background:linear-gradient(135deg,#8B6FC0,#8B6FC0);">Dropped the e</div><div class="sort-col-drop" data-col="drop-e" onclick="dropSortChip(this,'drop-e')"></div></div>
+          <div class="sort-col"><div class="sort-col-header" style="background:linear-gradient(135deg,#C7922C,#C7922C);">y &rarr; i</div><div class="sort-col-drop" data-col="y-to-i" onclick="dropSortChip(this,'y-to-i')"></div></div>
+        </div>
+        <div class="sort-score" id="sortScore"></div>
+      </div>
+      <div class="swyk">
+        <div class="swyk-label">🪶 Show What You Know</div>
+        <div class="swyk-prompt">Some endings change the base word before they attach. Explain one of those changes in your own words, and give an example.</div>
+        <div class="journal-label">📓 Your explanation <span class="saved-dot" id="dot-spelling"></span></div>
+        <textarea class="journal-box" id="journal-spelling" data-label="Spelling: Suffixes that change meaning" placeholder="The rule is..." oninput="autoSave(this,'dot-spelling')"></textarea>
+      </div>
+    </div>
+  </div>
   <div class="tab-next-wrap"><p class="tab-transition-voice">Words and skills sharpened. Time to open the book.</p><button class="tab-next-btn" onclick="switchTab('reading')">Continue to 📖 Reading →</button></div>
 </div><!-- /tab-words -->
 
