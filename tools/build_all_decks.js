@@ -94,7 +94,8 @@ function dolModelSlide(pres,d){
   const hints=(d.model_hints||[]);
   lbl(s,hints.length?'KEY GRAMMAR POINTS IN THE MODEL':'CORRECT MODEL — STUDY WHAT IS RIGHT',0.4,0.88,C.cyan);
   let y=1.2;
-  if(!hints.length && d.dol_model){ qBox(s,pres,d.dol_model,0.4,1.18,9.2,0.9,C.cyanLight,C.darkGray,C.cyan); y=2.2; }
+  if(!hints.length && d.dol_model){ qBox(s,pres,d.dol_model,0.4,1.18,9.2,0.9,C.cyanLight,C.darkGray,C.cyan); y=2.2;
+    if(d.dol_model_note){ lbl(s,'NOTICE',0.4,2.3,C.cyan); s.addText(d.dol_model_note,{x:0.4,y:2.58,w:9.2,h:1.2,fontSize:15,fontFace:F,color:C.darkGray,wrap:true,valign:'top',margin:0}); } }
   hints.slice(0,4).forEach((h,i)=>{ card(s,pres,0.4,y,9.2,0.6,i%2?C.white:C.offWhite);
     s.addText([{text:h.word+'  ',options:{bold:true,color:C.navy}},{text:h.hint,options:{color:C.darkGray,fontSize:13}}],
       {x:0.65,y:y+0.1,w:8.6,h:0.4,fontSize:15,fontFace:F,wrap:true,valign:'middle',margin:0}); y+=0.68; });
@@ -123,7 +124,7 @@ function morphSlide(pres,d){
   lbl(s,(d.morph_title||'WORD PARTS').toUpperCase(),0.4,0.88,C.purple);
   let y=1.2;
   (d.morph_items||[]).slice(0,4).forEach((it,i)=>{ card(s,pres,0.4,y,9.2,0.68,i%2?'F8F4FF':C.purpleLight);
-    s.addText('🌱  '+it,{x:0.65,y:y+0.13,w:8.6,h:0.42,fontSize:15,fontFace:F,color:C.darkGray,wrap:true,valign:'middle',margin:0}); y+=0.76; });
+    s.addText('🌱  '+it.replace(/\s*=\s*/,' = '),{x:0.65,y:y+0.13,w:8.6,h:0.42,fontSize:15,fontFace:F,color:C.darkGray,wrap:true,valign:'middle',margin:0}); y+=0.76; });
   s.addNotes('Break the word into base + word part. Ask what the part adds to the meaning.');
 }
 function vocabSlide(pres,d){
@@ -136,6 +137,51 @@ function vocabSlide(pres,d){
       {x:0.65,y:y+0.14,w:8.6,h:0.46,fontFace:F,wrap:true,valign:'middle',margin:0}); y+=0.8; });
   s.addNotes('Each word appears in the chapters read this week, in the author’s own sentence.');
 }
+// Notice-first grammar: the examples and think-it-through questions, then the pattern.
+function grammarNoticeSlide(pres,d,show){
+  if(!(d.gram_examples||[]).length) return;
+  const s=iSlide(pres,'✏️  Grammar — What do you notice?',C.gold);
+  lbl(s,(d.gram_title||'GRAMMAR').toUpperCase(),0.4,0.82,C.gold);
+  if(d.gram_notice) s.addText(d.gram_notice,{x:0.4,y:1.08,w:9.2,h:0.45,fontSize:15,italic:true,fontFace:F,color:C.gray,wrap:true,margin:0});
+  let y=1.6;
+  d.gram_examples.slice(0,2).forEach((e,i)=>{ const marks=(d.gram_marks||[])[i]||[];
+    qBox(s,pres,'',0.4,y,9.2,0.72,i%2?C.white:C.goldLight,C.darkGray,C.gold);
+    const toks=e.split(/(\s+)/); const used={};
+    const runs=toks.map(t=>{ const bare=t.replace(/[,.;:!?]$/,''); const on=marks.includes(bare);
+      return {text:t,options:on?{bold:true,color:C.gold,underline:{style:'sng'}}:{color:C.darkGray}}; });
+    s.addText(runs,{x:0.65,y:y+0.14,w:8.7,h:0.44,fontSize:17,fontFace:F,wrap:true,valign:'middle',margin:0}); y+=0.82; });
+  if(!show){
+    if((d.gram_think||[]).length){ lbl(s,'THINK IT THROUGH',0.4,y+0.05,C.gold);
+      s.addText(d.gram_think.map((q,i)=>(i+1)+'.  '+q).join('\n'),{x:0.4,y:y+0.32,w:9.2,h:5.35-y-0.4,fontSize:14,fontFace:F,color:C.darkGray,wrap:true,valign:'top',margin:0}); }
+  } else {
+    card(s,pres,0.4,y+0.05,9.2,5.35-y-0.1,C.greenLight);
+    lbl(s,'✅  THE PATTERN',0.62,y+0.12,C.green);
+    s.addText((d.gram_rule||[]).slice(0,4).join('\n'),{x:0.62,y:y+0.4,w:8.76,h:5.35-y-0.6,fontSize:13,fontFace:F,color:C.darkGray,wrap:true,valign:'top',margin:0,fit:'shrink'});
+  }
+  s.addNotes('Let students talk through the questions before revealing the pattern.\n'+(d.gram_rule||[]).join('\n'));
+}
+// Sort game with blank column headers: words first, groups on the reveal.
+function grammarSortSlide(pres,d,show){
+  const groups=Object.entries(d.gram_sort||{}).filter(([,w])=>w&&w.length);
+  if(!groups.length) return;
+  const s=iSlide(pres,'✏️  Grammar — Your turn',C.gold);
+  lbl(s,(d.gram_title||'GRAMMAR').toUpperCase(),0.4,0.82,C.gold);
+  if(!show){
+    const all=groups.flatMap(([,w])=>w); const mixed=[]; for(let i=0;i<all.length;i++) mixed.push(all[(i*3)%all.length]);
+    qBox(s,pres,[...new Set(mixed.concat(all))].join('    ·    '),0.4,1.15,9.2,1.0,C.white,C.navy,C.gold);
+    s.addText(d.gram_task||'Sort the words into two groups.',{x:0.4,y:2.35,w:9.2,h:0.8,fontSize:15,italic:true,fontFace:F,color:C.gray,wrap:true,margin:0});
+  } else {
+    const w=9.2/groups.length;
+    groups.forEach(([g,words],i)=>{ const x=0.4+i*w;
+      s.addShape(pres.ShapeType.roundRect,{x:x+0.05,y:1.15,w:w-0.1,h:0.5,fill:{color:C.gold},rectRadius:0.08});
+      s.addText(g,{x:x+0.1,y:1.21,w:w-0.2,h:0.38,fontSize:14,bold:true,fontFace:F,color:C.white,align:'center',margin:0});
+      card(s,pres,x+0.05,1.72,w-0.1,2.2,C.white);
+      s.addText(words.join('\n'),{x:x+0.15,y:1.82,w:w-0.3,h:2.0,fontSize:16,fontFace:F,color:C.darkGray,align:'center',margin:0}); });
+    s.addText('Now name the split: what does every word in each group have in common?',{x:0.4,y:4.05,w:9.2,h:0.45,fontSize:15,bold:true,fontFace:F,color:C.green,wrap:true,margin:0});
+  }
+  s.addNotes(groups.map(([g,w])=>g+': '+w.join(', ')).join(' | '));
+}
+
 function grammarSlide(pres,d,show){
   if(!d.grammar||!d.grammar.length) return;
   const s=iSlide(pres,'✏️  Grammar',C.gold);
@@ -143,7 +189,15 @@ function grammarSlide(pres,d,show){
   let y=1.18;
   d.grammar.slice(0,4).forEach((g,i)=>{
     card(s,pres,0.4,y,9.2,0.72,i%2?C.white:C.goldLight);
-    if(show && g.answer){
+    if(show && g.fill){
+      const parts=g.sentence.split('______');
+      const runs=[{text:parts[0],options:{color:C.darkGray}},{text:g.answer,options:{bold:true,color:C.green}},{text:parts.slice(1).join('______'),options:{color:C.darkGray}}];
+      s.addText(runs,{x:0.65,y:y+0.16,w:8.6,h:0.44,fontSize:16,fontFace:F,wrap:true,valign:'middle',margin:0});
+    } else if(show && g.answers){
+      const parts=g.sentence.split(' ');
+      const runs=parts.map((p,i)=>({text:p+(i<parts.length-1?' ':''),options:g.answers.includes(p)?{bold:true,color:C.green}:{color:C.darkGray}}));
+      s.addText(runs,{x:0.65,y:y+0.16,w:8.6,h:0.44,fontSize:16,fontFace:F,wrap:true,valign:'middle',margin:0});
+    } else if(show && g.answer){
       const parts=g.sentence.split(new RegExp('('+g.answer.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')+')'));
       const runs=parts.filter(p=>p!=='').map(p=> p===g.answer
         ? {text:p,options:{bold:true,color:C.green}} : {text:p,options:{color:C.darkGray}});
@@ -153,6 +207,7 @@ function grammarSlide(pres,d,show){
     }
     y+=0.8;
   });
+  if(show && (d.gram_fixes||[]).length){ s.addText(d.gram_fixes.join('\n'),{x:0.4,y:y+0.05,w:9.2,h:5.4-y-0.1,fontSize:12,fontFace:F,color:C.green,wrap:true,valign:'top',margin:0,fit:'shrink'}); s.addNotes('Answers: '+d.grammar.map(g=>g.answer).filter(Boolean).join(', ')); return; }
   s.addText(show?'✅  Answers revealed':(d.gram_task||'Tap the word that fits the rule.'),
     {x:0.4,y:y+0.05,w:9.2,h:0.4,fontSize:15,bold:show,italic:!show,fontFace:F,color:show?C.green:C.gray,margin:0});
   s.addNotes('Answers: '+d.grammar.map(g=>g.answer).filter(Boolean).join(', '));
@@ -180,6 +235,23 @@ function spellSlide(pres,d,show){
   }
   s.addNotes(groups.map(([g,w])=>g+': '+w.join(', ')).join(' | '));
 }
+// Days 2-4 spelling has no sort: show the rule, the day's activity, and any tap-the-word rows.
+function spellRuleSlide(pres,d,show){
+  if(Object.keys(d.spell_groups||{}).length || !d.spell_rule) return;
+  const rows=d.spell_rows||[];
+  if(show && !rows.length) return;
+  const s=iSlide(pres,'🔠  Spelling',C.navy);
+  lbl(s,(d.spell_title||'SPELLING').toUpperCase(),0.4,0.85,C.navy);
+  lbl(s,'📖  THE RULE',0.4,1.15,C.gold);
+  qBox(s,pres,d.spell_rule,0.4,1.42,9.2,1.05,C.goldLight,C.darkGray,C.gold);
+  let y=2.62;
+  if(d.spell_activity){ s.addText(d.spell_activity,{x:0.4,y,w:9.2,h:0.45,fontSize:14,italic:true,fontFace:F,color:C.gray,wrap:true,margin:0}); y+=0.5; }
+  rows.slice(0,4).forEach((r,i)=>{ card(s,pres,0.4,y,9.2,0.48,i%2?C.white:C.offWhite);
+    const runs=r.words.map((w,k)=>({text:w+(k<r.words.length-1?'     ·     ':''),options:(show&&w===r.answer)?{bold:true,color:C.green}:{color:C.darkGray}}));
+    s.addText(runs,{x:0.65,y:y+0.07,w:8.6,h:0.34,fontSize:15,fontFace:F,valign:'middle',margin:0}); y+=0.53; });
+  if(show) s.addText('✅  Answers revealed',{x:0.4,y:y+0.02,w:9.2,h:0.3,fontSize:13,bold:true,fontFace:F,color:C.green,margin:0});
+  s.addNotes('Rule: '+d.spell_rule+(rows.length?'\nAnswers: '+rows.map(r=>r.answer).join(', '):''));
+}
 function readingSlide(pres,d){
   const s=cSlide(pres,'📕  Read',NC.accent);
   s.addText(d.ch_range||'Today’s chapters',{x:0.4,y:0.95,w:9.2,h:0.55,fontSize:26,bold:true,fontFace:F,color:C.navy,margin:0});
@@ -202,7 +274,7 @@ function writingSlide(pres,d){
 const data=JSON.parse(fs.readFileSync(process.argv[2]||'lesson_all.json','utf8'));
 const tmw=JSON.parse(fs.readFileSync(process.argv[3]||'tmw_all.json','utf8'));
 let rows=data.lessons||data; if(!Array.isArray(rows)) rows=Object.values(rows);
-const outDir='/home/claude/decks/out2'; fs.mkdirSync(outDir,{recursive:true});
+const outDir=process.argv[4]||'/home/claude/decks/out2'; fs.mkdirSync(outDir,{recursive:true});
 (async()=>{
   let n=0;
   for(const d of rows){
@@ -218,8 +290,11 @@ const outDir='/home/claude/decks/out2'; fs.mkdirSync(outDir,{recursive:true});
     dolSlide(pres,d,false); dolSlide(pres,d,true);
     morphSlide(pres,d);
     vocabSlide(pres,d);
+    grammarNoticeSlide(pres,d,false); grammarNoticeSlide(pres,d,true);
+    grammarSortSlide(pres,d,false); grammarSortSlide(pres,d,true);
     grammarSlide(pres,d,false); grammarSlide(pres,d,true);
     spellSlide(pres,d,false); spellSlide(pres,d,true);
+    spellRuleSlide(pres,d,false); spellRuleSlide(pres,d,true);
     readingSlide(pres,d);
     writingSlide(pres,d);
     const f=`${outDir}/lesson-${d.week}-${d.day}-teacher-slides.pptx`;

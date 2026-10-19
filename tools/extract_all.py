@@ -12,7 +12,8 @@ import re, io, os, json, glob, html, sys
 
 def cl(x):
     x = re.sub(r'<[^>]+>', ' ', x or '')
-    return re.sub(r'\s+', ' ', html.unescape(x)).strip()
+    x = re.sub(r'\s+', ' ', html.unescape(x)).strip()
+    return re.sub(r' ([,.;:!?])(?=\s|$)', r'\1', x)
 
 TITLE_KEYS = [
     ('📚', 'What Good Readers', 'wgrd'),
@@ -101,6 +102,12 @@ def extract(path, week, day):
                     re.findall(r"dolHighlight\(this,'([^']*)'\)[^>]*>(.*?)</span>", body, re.S)]
             elif not d['dol_fix']:
                 d['dol_fix'] = txt
+    elif re.search(r'Model Sentence', dol):        # era A2 (W1-16): labelled model + fix-it
+        for lab, sent in re.findall(r'class="task-label"[^>]*>(.*?)</div>\s*<div class="task-sentence"[^>]*>(.*?)</div>', dol, re.S):
+            if 'Model' in lab and not d['dol_model']: d['dol_model'] = cl(sent)
+            elif 'Fix' in lab and not d['dol_fix']: d['dol_fix'] = cl(sent)
+        m = re.search(r'<p[^>]*>\s*Notice:(.*?)</p>', dol, re.S)
+        d['dol_model_note'] = cl(m.group(1)) if m else ''
     else:                                          # era A (W1-16)
         fixes = [cl(x) for x in re.findall(r'class="task-sentence"[^>]*>(.*?)</div>', dol, re.S)]
         fixes = [f for f in fixes if f]
@@ -111,11 +118,16 @@ def extract(path, week, day):
     if ansblk:
         ps = [cl(p) for p in re.findall(r'<p[^>]*>(.*?)</p>', ansblk.group(1), re.S)]
         ps = [p for p in ps if p]
+        # "Corrected:" sometimes sits alone in its own <p> with the sentence in the next one
+        ps = [p for p in ps if not re.fullmatch(r'Corrected(?: sentences?)?:?', p)]
+        if ps and ansblk.group(1).find('Corrected') >= 0 and not re.match(r'^(Corrected|\d\.)', ps[0]):
+            ps[0] = 'Corrected: ' + ps[0]
         corr = [p for p in ps if re.match(r'^(Corrected|\d\.)', p)]
-        d['dol_ans']  = re.sub(r'^Corrected sentences?:\s*', '', corr[0]) if corr else (ps[0] if ps else '')
+        d['dol_ans']  = re.sub(r'^Corrected(?: sentences?)?:\s*', '', corr[0]) if corr else (ps[0] if ps else '')
         d['dol_ans2'] = corr[1] if len(corr) > 1 else ''
         rest = [p for p in ps if p not in corr]
         d['dol_errors'] = rest[-1] if rest else ''
+        if d['dol_errors'] == d['dol_ans']: d['dol_errors'] = ''
 
     # ── Copywork ─────────────────────────────────────────────────────────
     m = re.search(r'class="copywork-text"[^>]*>(.*?)</div>', g('copywork') or s, re.S)
@@ -197,7 +209,28 @@ def extract(path, week, day):
         multi = len(choices) <= 3 and all(len(c.split()) > 2 for c in choices)
         sent = ('   |   ' if multi else ' ').join(choices)
         gram.append({'sentence': sent, 'answer': ans, 'choices': choices, 'pick_one': multi})
+    # multi-answer spotters (gramSpotAll): every correct word, not just the first
+    gram2 = []
+    for m in re.finditer(r'<div class="spotter-sentence"[^>]*>(.*?)</div>', gr, re.S):
+        pairs = re.findall(r'data-correct="(true|false)"[^>]*>([^<]*)</span>', m.group(1))
+        if pairs and 'gramSpotAll' in m.group(1):
+            gram2.append({'sentence': ' '.join(cl(w) for _, w in pairs), 'answers': [cl(w) for c, w in pairs if c == 'true'],
+                          'answer': ', '.join(cl(w) for c, w in pairs if c == 'true')})
+    if gram2: gram = gram2
     if not gram:
+        # fill-in grammar: "Cook gave the soup to <em>Mig</em>. → Cook gave the soup to [her]"
+        for m in re.finditer(r'class="fillin-item"[^>]*>(.*?)</div>', gr, re.S):
+            blk = m.group(1); a = re.search(r'data-answer="([^"]+)"', blk)
+            if not a: continue
+            before = cl(re.sub(r'<input[^>]*>', ' ______ ', blk))
+            gram.append({'sentence': before, 'answer': cl(a.group(1)), 'fill': True})
+    d['gram_sort'] = {}
+    if not gram:
+        # sort game with blank column headers
+        heads = {g_: cl(h) for h, g_ in re.findall(r'class="sort-col-header"[^>]*>(.*?)</div>\s*<div class="sort-col-drop"[^>]*data-col="([^"]+)"', gr, re.S)}
+        for g_, w in re.findall(r'class="sort-chip" data-group="([^"]+)"[^>]*>([^<]*)<', gr):
+            d['gram_sort'].setdefault(heads.get(g_, g_), []).append(cl(w))
+    if not gram and not d['gram_sort']:
         # W1-4: a tap-to-reveal classification game — the answer is baked into
         # the inline onclick, so pull the sentence and the label it reveals.
         for m in re.finditer(r"<span class=\"spotter-word\" onclick=\"[^\"]*textContent='([^']*)'[^>]*>(.*?)</span>", gr, re.S):
@@ -214,6 +247,18 @@ def extract(path, week, day):
     m = re.search(r'class="callout[^"]*"[^>]*>.*?<p>(.*?)</p>', gr, re.S)
     d['gram_task'] = cl(m.group(1)) if m else ''
     d['gram_examples'] = [cl(x) for x in re.findall(r'class="task-sentence"[^>]*>(.*?)</div>', gr, re.S)][:2]
+    d['gram_marks'] = [[cl(w) for w in re.findall(r'<strong>(.*?)</strong>', x)] for x in re.findall(r'class="task-sentence"[^>]*>(.*?)</div>', gr, re.S)][:2]
+    # notice-first block: prompt, think questions, the rule from the reveal, the turn instruction
+    m = re.search(r'grammar-notice-first.*?<p>(.*?)</p>', gr, re.S)
+    d['gram_notice'] = cl(m.group(1)) if m else ''
+    m = re.search(r'Think it through.*?<ol[^>]*>(.*?)</ol>', gr, re.S)
+    d['gram_think'] = [cl(x) for x in re.findall(r'<li>(.*?)</li>', m.group(1), re.S)] if m else []
+    m = re.search(r'id="gramNotice"[^>]*>(.*?)</div>', gr, re.S)
+    d['gram_rule'] = [cl(x) for x in re.findall(r'<p[^>]*>(.*?)</p>', m.group(1), re.S)] if m else []
+    m = re.search(r'callout-icon">🎯</span><p>(.*?)</p>', gr, re.S)
+    d['gram_task'] = cl(m.group(1)) if m else d['gram_task']
+    m = re.search(r'id="gramFix[^"]*"[^>]*>(.*?)</div>|See the four fixes</button>\s*<div[^>]*>(.*?)</div>', gr, re.S)
+    d['gram_fixes'] = [cl(x) for x in re.findall(r'<p[^>]*>(.*?)</p>', (m.group(1) or m.group(2)), re.S)] if m else []
 
     # ── Spelling (scoped) ────────────────────────────────────────────────
     sp = g('spell')
@@ -225,6 +270,14 @@ def extract(path, week, day):
     for grp, word in re.findall(r'class="sort-chip" data-group="([^"]+)"[^>]*>([^<]*)<', sp):
         groups.setdefault(labels.get(grp, grp), []).append(cl(word))
     d['spell_groups'] = groups
+    m = re.search(r'<strong>The Rule:</strong>(.*?)</p>', sp, re.S)
+    d['spell_rule'] = cl(m.group(1)) if m else ''
+    m = re.search(r'callout-info"><span class="callout-icon">[^<]*</span><p>(.*?)</p>', sp, re.S)
+    d['spell_activity'] = cl(m.group(1)) if m else ''
+    d['spell_rows'] = []
+    for m in re.finditer(r'<div class="spotter-sentence"[^>]*>(.*?)<div class="spotter-result"', sp, re.S):
+        pairs = re.findall(r'data-correct="(true|false)"[^>]*>([^<]*)</span>', m.group(1))
+        if pairs: d['spell_rows'].append({'words': [cl(w) for _, w in pairs], 'answer': next((cl(w) for c, w in pairs if c == 'true'), '')})
     d['spell_rules'] = [cl(p) for p in re.findall(r'class="key-concept"[^>]*>(?:.*?)</div>(.*?)</div>', sp, re.S)][:1]
 
     # ── Writer's Workshop ────────────────────────────────────────────────
