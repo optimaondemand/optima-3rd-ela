@@ -2254,7 +2254,7 @@ body {
         <p class="socratic-q">Which scene would you read aloud to someone who had never heard the book?</p>
       </div>
       <div class="journal-label">📓 Your thoughts <span class="saved-dot" id="dot-wgrd"></span></div>
-      <textarea class="journal-box" id="journal-wgrd" data-label="What Good Readers Do: How the author introduces Despereaux" placeholder="When I reread this scene I noticed..." oninput="autoSave(this,'dot-wgrd')"></textarea>
+      <textarea class="journal-box" id="journal-wgrd" data-label="What Good Readers Do: What I noticed on a second reading" placeholder="When I reread this scene I noticed..." oninput="autoSave(this,'dot-wgrd')"></textarea>
     </div>
   </div>
 
@@ -2566,7 +2566,7 @@ function ladderTap(el){if(el.dataset.done)return;el.dataset.done="1";el.querySel
   
   <!-- Reading assignment -->
   <div class="activity bl-cyan">
-    <div class="activity-head"><div class="activity-num" style="background:#55C8E8;">1</div><div style="flex:1;"><div class="activity-title">📕 Read: Reader's Theater</div><div class="activity-sub">Read both chapters. Take your time.</div></div></div>
+    <div class="activity-head"><div class="activity-num" style="background:#55C8E8;">1</div><div style="flex:1;"><div class="activity-title">📕 Read: Reader's Theater</div><div class="activity-sub">Choose one scene. Take your time.</div></div></div>
     <div class="activity-body">
       <p>Today is Reader's Theater preparation and performance. Choose a scene from the novel to read aloud &mdash; to someone at home, or record yourself and listen back. Focus on expression: read the emotion, not just the words.</p>
 
@@ -2577,11 +2577,11 @@ function ladderTap(el){if(el.dataset.done)return;el.dataset.done="1";el.querySel
       <div class="pause-columns">
         <div class="pause-col">
           <div class="socratic-box" style="margin-bottom:0;">
-            <div class="socratic-label">⏸️ Ch. 8 — Performing the Story</div>
+            <div class="socratic-label">⏸️ Your Scene — Performing the Story</div>
             <p class="socratic-q">Choose a scene to perform. <strong>Which scene do you want to read? Why is it important?</strong></p>
           </div>
-          <div class="journal-label">📓 Ch. 8 — Performing the Story <span class="saved-dot" id="dot-pause1"></span></div>
-          <textarea class="journal-box" id="journal-pause1" data-label="Pause & Think: Ch. 1 — Why does his mother call him a disappointment?" placeholder="I chose this scene because..." oninput="autoSave(this,'dot-pause1')"></textarea>
+          <div class="journal-label">📓 Your Scene — Performing the Story <span class="saved-dot" id="dot-pause1"></span></div>
+          <textarea class="journal-box" id="journal-pause1" data-label="Pause & Think: The scene I chose and why" placeholder="I chose this scene because..." oninput="autoSave(this,'dot-pause1')"></textarea>
         </div>
         <div class="pause-col">
           <div class="socratic-box" style="margin-bottom:0;">
@@ -2622,10 +2622,10 @@ function ladderTap(el){if(el.dataset.done)return;el.dataset.done="1";el.querySel
     <div class="rwm-sentence">&ldquo;He was ridiculously small.&rdquo;</div>
     <div class="rwm-step">
       <div class="rwm-step-label">📖 Read like a Reader</div>
-      <div class="rwm-step-text">You've now read the whole story. Rereading this sentence, does &ldquo;ridiculously small&rdquo; feel like a put-down &mdash; or does it feel like affection? Has your feeling about Despereaux changed since the very first chapter?</div>
+      <div class="rwm-step-text">You've now read the whole story. Rereading this sentence, does &ldquo;ridiculously small&rdquo; feel like a put-down &mdash; or does it feel like affection? Has your feeling about Despereaux changed since the beginning of the book?</div>
       <div class="textbox-prompt">Write 1&ndash;2 sentences.</div>
       <div class="journal-label">📓 Your response <span class="saved-dot" id="dot-rwm-reader"></span></div>
-      <textarea class="journal-box" id="journal-rwm-reader" data-label="RWM — Read like a Reader" placeholder="Now that I know the whole story, "ridiculously small" feels..." oninput="autoSave(this,'dot-rwm-reader');gatherAnswers();"></textarea>
+      <textarea class="journal-box" id="journal-rwm-reader" data-label="RWM — Read like a Reader" placeholder="Now that I know the whole story, &quot;ridiculously small&quot; feels..." oninput="autoSave(this,'dot-rwm-reader');gatherAnswers();"></textarea>
     </div>
     <div class="rwm-step">
       <div class="rwm-step-label">✏️ Read like a Writer</div>
@@ -2664,30 +2664,30 @@ function ladderTap(el){if(el.dataset.done)return;el.dataset.done="1";el.querySel
   <div class="activity bl-cyan">
     <div class="activity-head"><div class="activity-num" style="background:#55C8E8;">📖</div><div style="flex:1;"><div class="activity-title">Reading Comprehension</div><div class="activity-sub">Answer in complete sentences. Use evidence from the text.</div></div></div>
     <div class="activity-body">
-      <div class="chapter-section-title">Chapter 1 — Performing the Story</div>
+      <div class="chapter-section-title">Your Scene — Performing the Story</div>
 
       <div class="q-block"><div class="q-text"><span class="q-num">1</span>Which scene did you choose to perform? Write a one-sentence introduction to it.</div></div>
-      <textarea class="journal-box" id="journal-q1" data-label="Q1: How did Roscuro get his name? What does "chiaroscu" placeholder="Type your answer..." oninput="autoSave(this,'dot-q1');gatherAnswers();" style="min-height:60px;"></textarea>
+      <textarea class="journal-box" id="journal-q1" data-label="Q1: My scene in one sentence" placeholder="Type your answer..." oninput="autoSave(this,'dot-q1');gatherAnswers();" style="min-height:60px;"></textarea>
 
       <div class="q-block"><div class="q-text"><span class="q-num">2</span>Quotation marks: write one line of dialogue for your scene with the speech tag at the beginning, middle, and end.</div></div>
-      <textarea class="journal-box" id="journal-q2" data-label="Q2: Who is Gregory the jailer? What is his job, and wh" placeholder="Type your answer..." oninput="autoSave(this,'dot-q2');gatherAnswers();" style="min-height:60px;"></textarea>
+      <textarea class="journal-box" id="journal-q2" data-label="Q2: One line of dialogue, tag in three places" placeholder="Type your answer..." oninput="autoSave(this,'dot-q2');gatherAnswers();" style="min-height:60px;"></textarea>
 
       <div class="q-block"><div class="q-text"><span class="q-num">3</span>Prefix review: find one word in your scene with the prefix <em>re-</em>. What does it mean? Could you replace it with a word without that prefix? What changes?</div></div>
-      <textarea class="journal-box" id="journal-q3" data-label="Q3: The author says Roscuro was born in "a darkness so" placeholder="Type your answer..." oninput="autoSave(this,'dot-q3');gatherAnswers();" style="min-height:60px;"></textarea>
+      <textarea class="journal-box" id="journal-q3" data-label="Q3: A re- word from my scene" placeholder="Type your answer..." oninput="autoSave(this,'dot-q3');gatherAnswers();" style="min-height:60px;"></textarea>
 
       <div class="q-block"><div class="q-text"><span class="q-num">4</span>Which character in your scene has the strongest feelings? Which words in your scene show those feelings?</div></div>
       <textarea class="journal-box" id="journal-q4" data-label="Q4: Which character in your scene has the strongest feelings?" placeholder="Type your answer..." oninput="autoSave(this,'dot-q4');gatherAnswers();" style="min-height:60px;"></textarea>
 
       <div class="q-block"><div class="q-text"><span class="q-num">5</span>What makes this scene important to the whole novel? Write two sentences.</div></div>
-      <textarea class="journal-box" id="journal-q5" data-label="Q5: Roscuro's mother and father are not named. His par" placeholder="Type your answer..." oninput="autoSave(this,'dot-q5');gatherAnswers();" style="min-height:60px;"></textarea>
+      <textarea class="journal-box" id="journal-q5" data-label="Q5: Why my scene matters to the novel" placeholder="Type your answer..." oninput="autoSave(this,'dot-q5');gatherAnswers();" style="min-height:60px;"></textarea>
 
       <div class="chapter-section-title">Reader's Theater — Reflection</div>
 
       <div class="q-block"><div class="q-text"><span class="q-num">6</span>After performing: what was the hardest part of reading the scene aloud?</div></div>
-      <textarea class="journal-box" id="journal-q6" data-label="Q6: When Roscuro first sees the light, what does he do" placeholder="Type your answer..." oninput="autoSave(this,'dot-q6');gatherAnswers();" style="min-height:60px;"></textarea>
+      <textarea class="journal-box" id="journal-q6" data-label="Q6: The hardest part of reading aloud" placeholder="Type your answer..." oninput="autoSave(this,'dot-q6');gatherAnswers();" style="min-height:60px;"></textarea>
 
       <div class="q-block"><div class="q-text"><span class="q-num">7</span>How did reading the scene aloud change your understanding of the characters or the writing?</div></div>
-      <textarea class="journal-box" id="journal-q7" data-label="Q7: Compare the way the author introduces Roscuro in C" placeholder="Type your answer..." oninput="autoSave(this,'dot-q7');gatherAnswers();" style="min-height:60px;"></textarea>
+      <textarea class="journal-box" id="journal-q7" data-label="Q7: How reading aloud changed my understanding" placeholder="Type your answer..." oninput="autoSave(this,'dot-q7');gatherAnswers();" style="min-height:60px;"></textarea>
 
       
 
@@ -2726,7 +2726,7 @@ function ladderTap(el){if(el.dataset.done)return;el.dataset.done="1";el.querySel
           </div>
           <div style="background:#FFF;border:1px solid #F5E6C8;border-radius:6px;padding:10px;">
             <div style="font-size:11px;color:#4A7C2E;font-weight:700;letter-spacing:0.5px;">AFTER</div>
-            <div style="font-style:italic;font-size:13px;margin-top:4px;">Clara reads aloud and revises: Para 2 originally said "he goes into the dungeon" — she adds the specific detail: "with only a needle and a thread of light from Gregory's candle." Para 3 originally said "he changed" — she replaces it with "he proved that being different was not wrong. It was necessary."</div>
+            <div style="font-style:italic;font-size:13px;margin-top:4px;">Clara reads aloud and revises: Para 2 originally said "he goes into the dungeon" — she adds the specific detail: "with only a needle and a spool of red thread from the threadmaster." Para 3 originally said "he changed" — she replaces it with "he proved that being different was not wrong. It was necessary."</div>
           </div>
         </div>
         <p style="margin-top:10px;font-size:13px;color:#3A4A6B;"><strong>Notice:</strong> Clara added specific detail and replaced a vague statement with something precise. Both changes make the writing more convincing.</p>
