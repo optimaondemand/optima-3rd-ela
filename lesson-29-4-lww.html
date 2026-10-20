@@ -2574,10 +2574,11 @@ r.textContent=diceWords[diceCurrentIdx].word+' = '+diceWords[diceCurrentIdx].mea
 </div>
 <button class="dol-check-btn" onclick="document.getElementById('gramFix').classList.toggle('show')">&#x1F50D; See the answers</button>
 <div class="dol-answer" id="gramFix">
-<p>The comma goes <em>inside</em> the closing quotation mark: <strong>Aslan",</strong> &rarr; Aslan,&rdquo;</p>
-<p>Speech starts with a capital letter, like any sentence: <strong>"is</strong> &rarr; &ldquo;Is, <strong>"the</strong> &rarr; &ldquo;The.</p>
-<p>Names take capitals: <strong>peter, lucy, susan, edmund, aslan</strong>.</p>
-<p>Apostrophes: <strong>lucys</strong> &rarr; Lucy&rsquo;s, <strong>peters</strong> &rarr; Peter&rsquo;s, <strong>didnt</strong> &rarr; didn&rsquo;t, <strong>dont</strong> &rarr; don&rsquo;t.</p>
+<p>The commas and the period in the dialogue are already <em>inside</em> the quotation marks &mdash; leave them.</p>
+<p>Speech starts with a capital letter, like any sentence: <strong>"run</strong> &rarr; &ldquo;Run. (<strong>"and</strong> stays lowercase &mdash; it continues the same spoken sentence.)</p>
+<p>Names take capitals: <strong>lucy, peters, susan</strong>.</p>
+<p>Apostrophes: <strong>peters</strong> &rarr; Peter&rsquo;s, <strong>didnt</strong> &rarr; didn&rsquo;t, <strong>dont</strong> &rarr; don&rsquo;t.</p>
+<p>A comma goes before <em>and</em> in the last sentence, because it joins two complete thoughts.</p>
 </div>
 <div class="swyk"><div class="swyk-label">🪶 Show What You Know</div>
 <div class="swyk-prompt">One of those was a dialogue mistake and the rest were not. Which was which?</div>
@@ -2676,7 +2677,7 @@ function checkSpellDice(){var w=document.getElementById("spellWord").textContent
 <div class="rwm-sentence">&ldquo;Her arms were bare underneath it and terribly white.&rdquo;</div>
 <div class="rwm-step">
 <div class="rwm-step-label">📖 Read like a Reader</div>
-<div class="rwm-step-text">The Witch has taken off her mantle at the Stone Table. What is about to happen, and how does this sentence make you feel about it?</div>
+<div class="rwm-step-text">This is Ch. 13. In a dark valley, Edmund is tied to a tree, and the Witch takes off her mantle because she is about to kill him. How does this sentence make you feel about what she is going to do?</div>
 <div class="textbox-prompt">Write 1 sentence: what does this moment make you expect?</div>
 <div class="journal-label">📓 Your response <span class="saved-dot" id="dot-rwm-reader"></span></div>
 <textarea class="journal-box" id="journal-rwm-reader" data-label="RWM &mdash; Read like a Reader" placeholder="This moment makes me expect..." oninput="autoSave(this,'dot-rwm-reader');gatherAnswers();"></textarea>
