@@ -2563,11 +2563,11 @@ function morphMatchClick(item){var g=item.closest('.match-grid');if(!g)return;if
             <div class="decode-step-title">Look at the Word Parts</div>
             <div class="decode-step-text">Do you see a root, prefix, or suffix you recognize?</div>
             <div class="decode-word-parts">
-              <span class="decode-part decode-part-affix">eaves-</span>
+              <span class="decode-part decode-part-root">oblige</span>
               <span class="decode-part-plus">+</span>
-              <span class="decode-part decode-part-root">drop</span>
+              <span class="decode-part decode-part-affix">-ed</span>
             </div>
-            <div class="decode-step-text"><strong>Eaves</strong> are the edges of a roof. Long ago, people would stand under the eaves to listen to people inside through the windows. So <em>eavesdrop</em> = to listen secretly, like someone hiding under the eaves.</div>
+            <div class="decode-step-text">To <strong>oblige</strong> someone is to do them a favor, and <strong>-ed</strong> tells how someone feels. So being <em>obliged</em> means feeling you owe someone thanks.</div>
           </div>
         </div>
         <div class="decode-step">
@@ -2575,7 +2575,7 @@ function morphMatchClick(item){var g=item.closest('.match-grid');if(!g)return;if
           <div class="decode-step-content">
             <div class="decode-step-title">Confirm</div>
             <div class="decode-step-text">Were we close?</div>
-            <div class="decode-reveal show" style="display:block;">✅ <strong>Eavesdrop</strong> means to secretly listen to a conversation you weren't meant to hear. Our context and word parts got us there!</div>
+            <div class="decode-reveal show" style="display:block;">✅ <strong>Obliged</strong> means thankful or grateful &mdash; <em>ever so much obliged</em> means very thankful. Our context and word parts got us there!</div>
           </div>
         </div>
       </div>
@@ -2611,7 +2611,7 @@ function morphMatchClick(item){var g=item.closest('.match-grid');if(!g)return;if
           <div class="flip-card" onclick="this.classList.toggle('flipped')" style="height:150px;">
             <div class="flip-card-inner">
               <div class="flip-card-front"><div class="fc-emoji">🪶</div><div class="fc-word">scribblement</div><div class="fc-tap">tap to flip</div></div>
-              <div class="flip-card-back"><div class="fc-word-back">scribblement</div><div class="fc-def">Billy's word for writing — scrawling marks on paper.</div></div>
+              <div class="flip-card-back"><div class="fc-word-back">scribblement</div><div class="fc-def">Cutwater's word for writing — scrawling marks on paper.</div></div>
             </div>
           </div>
         </div>
@@ -2623,7 +2623,7 @@ function morphMatchClick(item){var g=item.closest('.match-grid');if(!g)return;if
           <div class="match-item is-word" data-match="A" onclick="matchClick(this)">obliged</div>
           <div class="match-item" data-match="C" onclick="matchClick(this)">A wooden frame used to hang criminals as punishment.</div>
           <div class="match-item is-word" data-match="B" onclick="matchClick(this)">scoundrel</div>
-          <div class="match-item" data-match="D" onclick="matchClick(this)">Billy's word for writing — scrawling marks on paper.</div>
+          <div class="match-item" data-match="D" onclick="matchClick(this)">Cutwater's word for writing — scrawling marks on paper.</div>
           <div class="match-item is-word" data-match="C" onclick="matchClick(this)">gallows</div>
           <div class="match-item" data-match="A" onclick="matchClick(this)">Grateful; thankful for a favor done.</div>
           <div class="match-item is-word" data-match="D" onclick="matchClick(this)">scribblement</div>
@@ -2835,14 +2835,14 @@ function morphMatchClick(item){var g=item.closest('.match-grid');if(!g)return;if
         <div class="pause-col">
           <div class="socratic-box" style="margin-bottom:0;">
             <div class="socratic-label">⏸️ Pause &amp; Think — Part 1</div>
-            <p class="socratic-q">Billy wants the note to ask for a wagonload of gold. How does Jemmy make this work in his favor?</p>
+            <p class="socratic-q">Billy plans to ask for the prince&rsquo;s weight in gold. Why does Jemmy insist on a wagonload of gold and jewels instead?</p>
           </div>
           <div class="thinking-stop">💭 Pause and think about this — no need to write.</div>
         </div>
 <div class="pause-col">
           <div class="socratic-box" style="margin-bottom:0;">
             <div class="socratic-label">⏸️ Pause &amp; Think — Part 2</div>
-            <p class="socratic-q">Jemmy hides a trick inside the note. <strong>What is his plan, and why can't Billy figure it out?</strong></p>
+            <p class="socratic-q">Billy makes Jemmy read the note out loud &mdash; backward. <strong>Why does Billy do this, and how does Jemmy pass the test?</strong></p>
           </div>
           <div class="thinking-stop">💭 Pause and think about this — no need to write.</div>
         </div>
@@ -2928,9 +2928,9 @@ function morphMatchClick(item){var g=item.closest('.match-grid');if(!g)return;if
       <div class="textbox-prompt">Think about who will receive the note and what they will recognize.</div>
       <textarea class="journal-box" id="journal-q2" data-label="Q2: chapter thinking" placeholder="Jemmy uses the real name because... This shows that Jemmy is..." oninput="autoSave(this,'dot-q2');gatherAnswers();"></textarea>
 
-      <div class="q-block"><div class="q-text"><span class="q-num">3</span>In Chapter 9, Jemmy sees a way to escape. What is his plan?</div></div>
-      <div class="textbox-prompt">Think about how the note is read backward — and what Jemmy has actually written.</div>
-      <textarea class="journal-box" id="journal-q3" data-label="Q3: chapter thinking" placeholder="Jemmy's plan is to... The clue that it might work is..." oninput="autoSave(this,'dot-q3');gatherAnswers();"></textarea>
+      <div class="q-block"><div class="q-text"><span class="q-num">3</span>At the end of Chapter 9, how does Jemmy suggest the note get to the castle? Who would really go free?</div></div>
+      <div class="textbox-prompt">Think about who the outlaws believe the &ldquo;whipping boy&rdquo; really is.</div>
+      <textarea class="journal-box" id="journal-q3" data-label="Q3: chapter thinking" placeholder="Jemmy suggests... The one who would really go free is..." oninput="autoSave(this,'dot-q3');gatherAnswers();"></textarea>
     </div>
   </div>
 
