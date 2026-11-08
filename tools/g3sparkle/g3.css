@@ -53,10 +53,6 @@
   background:#FFF1C4; border:2px solid #E9C46A; border-radius:12px; padding:10px 18px; cursor:pointer; }
 .g3-tw-chip:hover, .g3-tw-chip:focus { background:#FFE7A0; outline:none; box-shadow:0 0 0 3px #F6D57A; }
 .g3-done-list { margin:0 0 12px; }
-.g3-tw-done { display:flex; flex-wrap:wrap; align-items:baseline; gap:8px; font-size:17px; padding:7px 0; border-bottom:1px dashed #E5DAC0; }
-.g3-tw-said { font-family:Lora,Georgia,serif; font-style:italic; color:#3B2A14; }
-.g3-tw-arrow { color:#C7922C; font-weight:800; }
-.g3-tw-means { color:#24324F; font-weight:600; }
 
 /* the crest */
 .g3-saddle { text-align:center; margin:4px 0 12px; }
@@ -129,3 +125,103 @@
 .g3-opti-row > details { grid-column:1 / -1; }
 .g3-opti-row .spk-audio { margin:0; flex-wrap:nowrap; max-width:460px; }
 @media (max-width:480px) { .g3-opti-row .spk-audio { flex-wrap:wrap; } }
+
+/* ── tooltips placed against the viewport (never clipped) ── */
+.g3-tip.g3-tip-fixed { position:fixed; bottom:auto; transform:none; z-index:2147483000; }
+.g3-tip.g3-tip-fixed::after { left:var(--g3-arrow, 50%); }
+.g3-tip.g3-tip-fixed.g3-tip-below::after { top:auto; bottom:100%; border-top-color:transparent; border-bottom-color:#24324F; }
+
+/* ── the open book: full-strength picture on the left page ── */
+.open-book-left { opacity:1 !important; }
+
+/* ── the open book flips to today's page ── */
+.open-book { perspective:1600px; }
+.g3-flip { position:absolute; top:0; bottom:0; left:50%; right:0; pointer-events:none; z-index:7; transform-style:preserve-3d; display:none; }
+.g3-flipping .g3-flip { display:block; }
+.g3-leaf { position:absolute; inset:0; transform-origin:left center; transform-style:preserve-3d; transform:rotateY(0deg); }
+.g3-flipping .g3-leaf { animation:g3Turn .9s cubic-bezier(.45,.05,.3,1) var(--d) both; }
+@keyframes g3Turn {
+  0%   { transform:rotateY(0deg); }
+  100% { transform:rotateY(-180deg); }
+}
+.g3-leaf-side { position:absolute; inset:0; backface-visibility:hidden; -webkit-backface-visibility:hidden;
+  background:linear-gradient(90deg, #EFE6D6 0%, #FFFDF8 10%, #FFF8F0 70%, #F6EEE2 100%);
+  padding:22px 26px 26px 22px; box-shadow:inset 0 0 0 1px rgba(200,185,165,.35); overflow:hidden; }
+.g3-leaf-back { transform:rotateY(180deg); background:linear-gradient(270deg, #EFE6D6 0%, #FFFDF8 10%, #FFF8F0 70%, #F6EEE2 100%); padding:22px 22px 26px 26px; }
+.g3-leaf-head { height:5px; width:38%; margin:0 auto 14px; border-radius:3px; background:#C9B79A; opacity:.7; }
+.g3-leaf-side i { display:block; height:4px; margin:0 0 9px; border-radius:2px; background:#B9AA92; opacity:.55; }
+.g3-leaf-num { position:absolute; bottom:8px; font:700 10px/1 Lora, Georgia, serif; color:#A8977C; }
+.g3-leaf-front .g3-leaf-num { right:14px; } .g3-leaf-back .g3-leaf-num { left:14px; }
+.g3-flipping .g3-leaf::after { content:''; position:absolute; inset:0; pointer-events:none; animation:g3Shade .9s ease var(--d) both;
+  background:linear-gradient(90deg, rgba(60,40,20,.18), rgba(60,40,20,0) 60%); }
+@keyframes g3Shade { 0%,100% { opacity:0; } 50% { opacity:1; } }
+/* today's page waits under the turning leaves, then appears */
+.g3-flipping .open-book-right > *, .g3-flipping .open-book-left > * { animation:g3Settle 1.8s ease both; }
+@keyframes g3Settle { 0%, 62% { opacity:0; } 100% { opacity:1; } }
+@media (prefers-reduced-motion: reduce) { .g3-flip { display:none !important; } }
+
+
+/* ── Street Talk: the everyday words open under the phrase ── */
+.g3-tw-live { display:flex; flex-direction:column; align-items:flex-start; gap:0; }
+.g3-tw-chip { position:relative; }
+.g3-tw-tap { font-family:Nunito,sans-serif; font-style:normal; font-size:13px; font-weight:800; color:#8A6A1E; margin-left:8px; }
+.g3-tw-chip.open .g3-tw-tap { display:none; }
+.g3-tw-chip.open { background:#FFF3CF; box-shadow:0 0 0 3px #F6D57A; border-bottom-left-radius:4px; }
+.g3-tw-reveal { position:relative; margin:12px 0 0 18px; padding-left:18px; border-left:3px solid #E9C46A; animation:g3Drop .35s ease both; }
+.g3-tw-reveal::before { content:''; position:absolute; left:-9px; top:-12px; width:15px; height:15px; border-left:3px solid #E9C46A; border-bottom:3px solid #E9C46A; border-bottom-left-radius:10px; display:none; }
+@keyframes g3Drop { from { opacity:0; transform:translateY(-6px); } to { opacity:1; transform:none; } }
+.g3-tw-reveal .spk-mini-btn { margin-top:10px; }
+.g3-tw-means { background:#EEF3FF; border:2px solid #C9D6F2; border-radius:12px; padding:10px 14px; font-size:18px; line-height:1.45; color:#24324F; font-weight:600; }
+.g3-tw-tag { display:block; font-size:12px; font-weight:800; letter-spacing:.08em; text-transform:uppercase; color:#2B5BA8; margin-bottom:2px; }
+.g3-done-list { display:flex; flex-direction:column; gap:12px; margin-bottom:14px; }
+.g3-done-list:empty { display:none; }
+.g3-tw-done { padding:12px 14px; border:1px solid #EADFC6; border-radius:14px; background:#FFFDF7; }
+.g3-tw-done .g3-tw-said { font-family:Lora,Georgia,serif; font-style:italic; font-size:19px; color:#3B2A14; margin-bottom:8px; }
+.g3-tw-done .g3-tw-means { margin-left:14px; font-size:17px; }
+
+/* ── read along with Opti: words light up as he says them ── */
+.g3-ra > summary { font-weight:800; color:#0E1C42; }
+.g3-ra-text { font-size:19px; line-height:1.75; color:#24324F; }
+.g3-ra-text .g3-w { border-radius:5px; padding:1px 1px; transition:background .12s, color .12s; cursor:pointer; }
+.g3-ra-live .g3-ra-text .g3-w { color:#24324F; }
+.g3-ra-text .g3-w.said { color:#7A86A2; }
+.g3-ra-text .g3-w.now { background:#FFE38A; color:#0E1C42; box-shadow:0 0 0 2px #FFE38A; }
+.g3-ra-text .g3-w:hover { text-decoration:underline dotted #C7922C; }
+
+/* ── Character Spotlight: a little stage ── */
+.g3-spot { border-left-color:#E9C46A !important; overflow:hidden; }
+.g3-spot .activity-head { position:relative; overflow:hidden; background:radial-gradient(120% 140% at 85% 0%, #2A3C78 0%, #142659 45%, #0E1C42 100%) !important; border-bottom:3px solid #E9C46A !important; padding-top:18px; padding-bottom:18px; }
+.g3-spot .activity-head::after { content:''; position:absolute; left:0; right:0; bottom:0; height:10px;
+  background:repeating-linear-gradient(90deg, #8E1B2E 0 22px, #A3263A 22px 44px); opacity:.9; }
+.g3-spot-beam { position:absolute; inset:0; width:100%; height:100%; pointer-events:none; }
+.g3-spot-lamp { position:absolute; left:calc(345 / 400 * 100%); top:-6px; width:26px; height:14px; margin-left:-13px; border-radius:0 0 14px 14px; background:linear-gradient(#3A3A44,#16161C); box-shadow:0 6px 14px 4px rgba(255,236,170,.55); }
+.g3-spot .activity-num { background:linear-gradient(145deg,#F4D27A,#C7922C) !important; color:#0E1C42; box-shadow:0 0 0 3px rgba(255,233,168,.35), 0 0 18px rgba(255,214,120,.55); position:relative; z-index:1; }
+.g3-spot .activity-title { color:#FFF6DC !important; position:relative; z-index:1; text-shadow:0 1px 0 rgba(0,0,0,.25); }
+.g3-spot .activity-sub { color:#E9C46A !important; position:relative; z-index:1; font-weight:700; }
+.g3-spot .activity-body { background:linear-gradient(180deg,#FFFBF0,#FFFFFF 60%); }
+.g3-spot .key-concept { background:#FFFFFF !important; border:2px dashed #E9C46A !important; border-radius:16px; position:relative; }
+.g3-spot .key-concept-label { color:#8A6A1E !important; }
+.g3-spot .socratic-box { position:relative; background:linear-gradient(135deg,#FFF6DD,#FBEBC4) !important; border:2px solid #E2C27A !important; border-radius:18px;
+  box-shadow:inset 0 0 0 5px #FFF9E8, inset 0 0 0 6px #E9D5A2, 0 6px 16px rgba(120,90,30,.12); padding:22px 24px 20px 24px; }
+.g3-spot .socratic-box::before { content:'✦'; color:#E9C46A; position:absolute; top:-16px; left:50%; transform:translateX(-50%); width:34px; height:34px; line-height:34px; text-align:center; font-size:18px; background:#0E1C42; border:2px solid #E9C46A; border-radius:50%; }
+.g3-spot .socratic-label { color:#7A2E1E !important; text-align:center; letter-spacing:.06em; }
+.g3-spot .socratic-q { font-family:Lora,Georgia,serif; color:#3B2A14 !important; font-size:19px; line-height:1.7; }
+.g3-spot .thinking-stop { background:#EEF3FF; border:2px solid #C9D6F2; border-radius:999px; color:#0E1C42; font-weight:700; }
+
+/* ── the chapter opener: numeral, flourish and epigraph ── */
+.spk-numeral { margin:26px 0 8px; }
+.spk-numeral svg { filter:drop-shadow(0 4px 10px rgba(14,28,66,.25)) drop-shadow(0 0 14px rgba(233,196,106,.35)); }
+.spk-numeral-word { display:flex; align-items:center; gap:14px; color:#0E1C42; font-size:15px; letter-spacing:.3em; }
+.spk-numeral-word::before, .spk-numeral-word::after { content:''; width:70px; height:10px;
+  background:
+    radial-gradient(circle at 50% 50%, #C7922C 0 3.5px, transparent 4px) right center / 10px 10px no-repeat,
+    linear-gradient(#C7922C,#C7922C) left center / calc(100% - 12px) 1.5px no-repeat; }
+.spk-numeral-word::after { transform:scaleX(-1); }
+.quote-strip { position:relative; max-width:760px; margin:10px auto 22px !important; border:none !important; border-radius:18px; padding:26px 56px 18px !important;
+  background:linear-gradient(180deg,#FFFBF1,#FBF1DA) !important; box-shadow:inset 0 0 0 1px #EAD8AE, inset 0 0 0 6px #FFFBF1, inset 0 0 0 7px #EFDFB8, 0 8px 22px rgba(120,90,30,.10); text-align:center; }
+.quote-strip::before, .quote-strip::after { position:absolute; font-family:Lora,Georgia,serif; font-size:76px; line-height:1; color:#E9C46A; opacity:.8; }
+.quote-strip::before { content:'“'; left:16px; top:6px; }
+.quote-strip::after { content:'”'; right:16px; bottom:-18px; }
+.quote-strip-text { font-size:21px !important; line-height:1.55; color:#3B2A14 !important; }
+.quote-strip-attr { margin-top:10px; display:inline-flex; align-items:center; gap:8px; color:#8A6A1E !important; letter-spacing:.1em; font-size:12px !important; }
+@media (max-width:600px) { .quote-strip { padding:24px 30px 16px !important; margin:10px 12px 20px !important; } .quote-strip::before, .quote-strip::after { font-size:56px; } .quote-strip-text { font-size:18px !important; } .spk-numeral-word::before, .spk-numeral-word::after { width:36px; } }

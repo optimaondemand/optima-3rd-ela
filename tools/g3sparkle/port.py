@@ -230,11 +230,12 @@ js = rep(js, """    '<div class="spk-copia-seed">' + DATA.copia.seed + '</div>';
 # ── G3 keeps the page's own palette (Bethany, Nov 7): no G4 cream
 js = rep(js, "    ['warm',        function () { document.body.classList.add('spk-warm'); }],\n", "")
 
+js = rep(js, "  a.preload = 'metadata';\n  a.src = src;\n", "  a.preload = 'metadata';\n  a.src = src;\n  wrap._spkAudio = a;\n")
 # ── G3 additions, inside the IIFE, ahead of boot
 m = io.open(mod, encoding='utf-8').read()
 js = rep(js, '\nfunction boot() {', '\n' + m + '\n\nfunction boot() {')
 js = rep(js, "    ['wordgame',    buildWordGame],\n",
-             "    ['wordgame',    buildWordGame],\n    ['glossary',    buildGlossary],\n    ['saywords',    buildSayWords],\n    ['cards',       buildCards],\n")
+             "    ['wordgame',    buildWordGame],\n    ['glossary',    buildGlossary],\n    ['saywords',    buildSayWords],\n    ['cards',       buildCards],\n    ['tips',        hookTips],\n    ['bookflip',    buildBookFlip],\n    ['readalong',   buildReadAlong],\n    ['spotlight',   buildSpotlight],\n")
 js = rep(js, "    ['journal',     buildJournal],\n", "    ['journal',     buildJournal],\n    ['opti',        optiFaces],\n")
 # the greeting builds media again after a name is entered; Opti follows
 js = rep(js, "  try { buildMedia(); } catch (e) {}\n  dividerAfterOpening();",

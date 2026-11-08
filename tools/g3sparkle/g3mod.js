@@ -176,20 +176,22 @@ function cardInfo(c, body) {
   body.insertAdjacentHTML('beforeend', h);
 }
 
-/* card kind 'tapwords': one phrase at a time; tap it to see the everyday words */
+/* card kind 'tapwords': one phrase at a time. Tap the phrase and its
+   everyday words open right underneath it; "Next" moves on. Phrases
+   already done stay stacked above, each with its meaning under it. */
 function cardTapwords(c, body) {
   var items = c.items || []; if (!items.length) return;
   var KEY = 'oao.g3ela.card.' + LID + '.' + c.id;
   var done = Math.min(items.length, Sparkle.get(KEY, 0) || 0);
   body.insertAdjacentHTML('beforeend', lookCard(c.look, c.todo) + '<div class="g3-done-list"></div><div class="g3-steps"></div>');
   var steps = body.querySelector('.g3-steps'), list = body.querySelector('.g3-done-list');
-  function row(it) {
-    var d = document.createElement('div'); d.className = 'g3-tw-done';
-    d.innerHTML = '<span class="g3-tw-said">“' + esc(it.said) + '”</span><span class="g3-tw-arrow" aria-hidden="true">→</span><span class="g3-tw-means">' + esc(it.means) + '</span>';
-    list.appendChild(d);
+  function pair(it) {
+    return '<div class="g3-tw-said">“' + esc(it.said) + '”</div>' +
+           '<div class="g3-tw-means"><span class="g3-tw-tag">Everyday words</span>' + esc(it.means) + '</div>';
   }
   function show() {
-    list.innerHTML = ''; for (var k = 0; k < done; k++) row(items[k]);
+    list.innerHTML = '';
+    for (var k = 0; k < done; k++) { var d = document.createElement('div'); d.className = 'g3-tw-done'; d.innerHTML = pair(items[k]); list.appendChild(d); }
     if (done >= items.length) {
       steps.innerHTML = '<div class="g3-finish">✓ ' + esc(c.finish || 'All done!') + '</div>' +
         '<button type="button" class="spk-mini-btn g3-again">Start again</button>';
@@ -199,10 +201,16 @@ function cardTapwords(c, body) {
     var it = items[done];
     steps.innerHTML = stepHead(done + 1, items.length, it.title || 'Tap the words') +
       '<p class="g3-step-p">' + esc(it.context || '') + '</p>' +
-      '<button type="button" class="g3-tw-chip">“' + esc(it.said) + '”</button>';
-    steps.querySelector('.g3-tw-chip').onclick = function () {
-      done++; Sparkle.set(KEY, done); wgSfx('chime'); show();
+      '<div class="g3-tw-live"><button type="button" class="g3-tw-chip" aria-expanded="false">“' + esc(it.said) + '” <span class="g3-tw-tap" aria-hidden="true">👆 tap</span></button>' +
+      '<div class="g3-tw-reveal" hidden><div class="g3-tw-means"><span class="g3-tw-tag">Everyday words</span>' + esc(it.means) + '</div>' +
+      '<button type="button" class="spk-mini-btn g3-tw-next">' + (done + 1 < items.length ? 'Next words →' : 'Finish ✓') + '</button></div></div>';
+    var chip = steps.querySelector('.g3-tw-chip'), rev = steps.querySelector('.g3-tw-reveal');
+    chip.onclick = function () {
+      if (!rev.hidden) return;
+      rev.hidden = false; chip.setAttribute('aria-expanded', 'true'); chip.classList.add('open'); wgSfx('chime');
+      steps.querySelector('.g3-tw-next').focus({ preventScroll: true });
     };
+    steps.querySelector('.g3-tw-next').onclick = function () { done++; Sparkle.set(KEY, done); show(); };
   }
   show();
 }
@@ -423,3 +431,155 @@ WORDGAME.tower = function (cfg) {
   paint();
   if (anchor) anchor.parentNode.insertBefore(card, anchor); else panel.appendChild(card);
 };
+
+/* ── tooltips never get cut off ─────────────────────────────────────
+   The tip is placed with position:fixed against the viewport, so a
+   card with overflow:hidden or the edge of the screen can't clip it.
+   It sits above the word, or below when there isn't room, and the
+   little arrow still points at the word. */
+function placeTip(span) {
+  var tip = span.querySelector('.g3-tip'); if (!tip) return;
+  tip.classList.add('g3-tip-fixed');
+  var r = span.querySelector('.g3-gl-w').getBoundingClientRect();
+  var vw = document.documentElement.clientWidth, vh = window.innerHeight, pad = 8;
+  tip.style.left = '0px'; tip.style.top = '0px'; tip.style.maxWidth = Math.min(300, vw - pad * 2) + 'px';
+  var tw = tip.offsetWidth, th = tip.offsetHeight;
+  var cx = r.left + r.width / 2;
+  var left = Math.max(pad, Math.min(vw - pad - tw, cx - tw / 2));
+  var above = r.top - th - 10 >= pad || r.bottom + th + 10 > vh;
+  var top = above ? r.top - th - 10 : r.bottom + 10;
+  tip.style.left = left + 'px'; tip.style.top = Math.max(pad, top) + 'px';
+  tip.style.setProperty('--g3-arrow', Math.max(14, Math.min(tw - 14, cx - left)) + 'px');
+  tip.classList.toggle('g3-tip-below', !above);
+}
+function hookTips() {
+  document.querySelectorAll('.g3-gl').forEach(function (s) {
+    if (s._g3tip) return; s._g3tip = true;
+    ['mouseenter', 'focus', 'click'].forEach(function (ev) { s.addEventListener(ev, function () { placeTip(s); }); });
+  });
+  window.addEventListener('scroll', function () { document.querySelectorAll('.g3-gl.open, .g3-gl:hover, .g3-gl:focus-within').forEach(placeTip); }, { passive: true });
+  window.addEventListener('resize', function () { document.querySelectorAll('.g3-gl.open').forEach(placeTip); });
+}
+
+/* ── the open book flips to today's page ────────────────────────────
+   Every time the book comes into view (opening the Reading tab, or
+   scrolling back to it), a few printed pages turn from right to left
+   and the book settles on the page that is open now. The turning
+   pages carry faint lines of print, a running head and a page number,
+   so they read as pages of a book, never as blank sheets. Off with
+   reduced motion. */
+function bookLeafSide(back, n) {
+  var h = '<div class="g3-leaf-side ' + (back ? 'g3-leaf-back' : 'g3-leaf-front') + '">' +
+          '<div class="g3-leaf-head"></div>';
+  var widths = [96, 100, 92, 100, 98, 88, 100, 95, 100, 70];
+  for (var i = 0; i < widths.length; i++) {
+    var w = widths[(i + n * 3) % widths.length];
+    if (i === 4 || i === 9) w = 40 + ((n * 17 + i * 7) % 40);   /* paragraph ends */
+    h += '<i style="width:' + w + '%"></i>';
+  }
+  return h + '<div class="g3-leaf-num">' + (back ? (n * 2) : (n * 2 + 1)) + '</div></div>';
+}
+function buildBookFlip() {
+  var book = document.querySelector('.open-book'); if (!book || book.querySelector('.g3-flip')) return;
+  var right = book.querySelector('.open-book-right'), left = book.querySelector('.open-book-left');
+  if (!right || !left) return;
+  var flip = document.createElement('div'); flip.className = 'g3-flip'; flip.setAttribute('aria-hidden', 'true');
+  var N = 5, base = 3 + ((LESSON.week || 1) * 7) % 40;
+  for (var k = 0; k < N; k++) {
+    var leaf = document.createElement('div'); leaf.className = 'g3-leaf';
+    leaf.style.setProperty('--d', (k * 0.16) + 's');
+    leaf.style.zIndex = String(20 + N - k);
+    leaf.innerHTML = bookLeafSide(false, base + k) + bookLeafSide(true, base + k + 1);
+    flip.appendChild(leaf);
+  }
+  book.appendChild(flip);
+  var playing = false;
+  function play() {
+    if (playing) return;
+    var rm = false; try { rm = window.matchMedia('(prefers-reduced-motion: reduce)').matches; } catch (e) {}
+    if (rm || document.documentElement.classList.contains('spk-motion-off')) return;
+    playing = true;
+    book.classList.remove('g3-flipping'); void book.offsetWidth;
+    book.classList.add('g3-flipping');
+    var total = (N - 1) * 160 + 900 + 150;
+    setTimeout(function () { book.classList.remove('g3-flipping'); playing = false; }, total);
+  }
+  if ('IntersectionObserver' in window) {
+    var seen = false;
+    new IntersectionObserver(function (es) {
+      es.forEach(function (e) {
+        if (e.isIntersecting && e.intersectionRatio >= 0.5) { if (!seen) { seen = true; play(); } }
+        else if (!e.isIntersecting) seen = false;           /* left the screen or the tab closed: play again next time */
+      });
+    }, { threshold: [0, 0.5] }).observe(book);
+  }
+}
+
+
+/* ── read along with Opti ───────────────────────────────────────────
+   Like G3 social studies: under each clip, "📄 Read along with Opti"
+   opens Opti's words, and while the clip plays each word lights up as
+   he says it (words already said go soft, the one he is on glows gold).
+   Timing is shared out by word length, with a little extra for the
+   pause after a comma or a full stop. */
+function readAlongify(ra) {
+  if (ra._g3ra) return; ra._g3ra = true;
+  var wrap = ra.parentNode, au = wrap && wrap.querySelector('.spk-audio');
+  var a = au && au._spkAudio; if (!a) return;
+  var bodyEl = ra.querySelector('.spk-note-body'), sum = ra.querySelector('summary');
+  var text = bodyEl.textContent, toks = text.split(/(\s+)/), html = '', weights = [], wi = 0;
+  toks.forEach(function (w) {
+    if (!w) return;
+    if (/^\s+$/.test(w)) { html += /\n\s*\n/.test(w) ? '<br><br>' : ' '; return; }
+    var wt = w.replace(/[^\w']/g, '').length + 2;
+    if (/[.!?…]["”’)]*$/.test(w)) wt += 6; else if (/[,;:—–]["”’)]*$/.test(w)) wt += 3;
+    weights.push(wt);
+    html += '<span class="g3-w" data-w="' + (wi++) + '">' + esc(w) + '</span>';
+  });
+  bodyEl.innerHTML = html; bodyEl.classList.add('g3-ra-text');
+  var ws = bodyEl.querySelectorAll('.g3-w'), cum = [], tot = 0;
+  weights.forEach(function (x) { cum.push(tot); tot += x; });
+  sum.textContent = '📄 Read along with Opti';
+  ra.classList.add('g3-ra');
+  var last = -2, raf = 0;
+  function setWord(k) {
+    if (k === last) return; last = k;
+    for (var i = 0; i < ws.length; i++) { ws[i].classList.toggle('said', i < k); ws[i].classList.toggle('now', i === k); }
+  }
+  function frame() {
+    if (a.duration) {
+      var lead = 0.25, f = Math.min(1, Math.max(0, (a.currentTime - lead) / Math.max(0.5, a.duration - lead * 2))) * tot, k = 0;
+      while (k + 1 < cum.length && cum[k + 1] <= f) k++;
+      setWord(k);
+    }
+    if (!a.paused) raf = requestAnimationFrame(frame);
+  }
+  a.addEventListener('play', function () { ra.classList.add('g3-ra-live'); cancelAnimationFrame(raf); raf = requestAnimationFrame(frame); });
+  a.addEventListener('pause', function () { cancelAnimationFrame(raf); });
+  a.addEventListener('ended', function () { cancelAnimationFrame(raf); setWord(ws.length); ra.classList.remove('g3-ra-live'); });
+  a.addEventListener('seeked', function () { if (a.currentTime < 0.1) setWord(-1); });
+  /* tap a word to hear Opti from there */
+  bodyEl.addEventListener('click', function (e) {
+    var w = e.target.closest && e.target.closest('.g3-w'); if (!w || !a.duration) return;
+    var k = +w.getAttribute('data-w'); a.currentTime = 0.25 + cum[k] / tot * Math.max(0.5, a.duration - 0.5);
+    if (a.paused) au.querySelector('.spk-audio-btn').click();
+  });
+}
+function buildReadAlong() {
+  function scan() { document.querySelectorAll('.spk-readalong').forEach(readAlongify); }
+  scan();
+  if (window.MutationObserver) new MutationObserver(scan).observe(document.body, { childList: true, subtree: true });
+}
+
+/* ── the Character Spotlight block gets a stage ─────────────────── */
+function buildSpotlight() {
+  document.querySelectorAll('.activity').forEach(function (b) {
+    var t = b.querySelector('.activity-title');
+    if (!t || !/^Character Spotlight/i.test(t.textContent) || b.classList.contains('g3-spot')) return;
+    b.classList.add('g3-spot');
+    var head = b.querySelector('.activity-head');
+    if (head) head.insertAdjacentHTML('afterbegin',
+      '<svg class="g3-spot-beam" viewBox="0 0 400 120" preserveAspectRatio="none" aria-hidden="true"><defs><linearGradient id="g3beam" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFF1C4" stop-opacity=".75"/><stop offset="1" stop-color="#FFE9A8" stop-opacity="0"/></linearGradient></defs><path d="M338 0 L352 0 L420 120 L230 120 Z" fill="url(#g3beam)"/><ellipse cx="325" cy="118" rx="95" ry="10" fill="#FFE9A8" opacity=".22"/></svg>' +
+      '<div class="g3-spot-lamp" aria-hidden="true"></div>');
+  });
+}
