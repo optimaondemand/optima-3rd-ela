@@ -1,0 +1,12 @@
+{
+ "connector": "This week’s passage is the very first page of The Whipping Boy. Read it three times, and listen to your own voice get smoother each time.",
+ "media": {
+  "welcome": {
+   "path": "guide/opti/g3ela-18-fluency-welcome",
+   "label": "Opti’s welcome"
+  }
+ },
+ "transcripts": {
+  "welcome": "Hi, it’s Opti. This week’s passage is the very first page of The Whipping Boy. Read it three times. The first time, just get the words right. The second time, make it smooth. The third time, let your voice have fun with the prank. It really does get easier each time."
+ }
+}
