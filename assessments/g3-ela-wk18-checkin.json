@@ -1,0 +1,158 @@
+{
+ "id": "g3-ela-wk18-checkin",
+ "title": "Week 18 Check-In · The Whipping Boy",
+ "description": "This week you started The Whipping Boy and met two very different boys: a spoiled prince and Jemmy, the orphan boy who takes his punishments. You practiced conjunctions (and, but, so), the prefixes inter- and sub-, and vowel team syllables. Show what you know!",
+ "quarter": 3,
+ "chapters": "Ch. 1–5",
+ "questions": [
+  {
+   "n": 1,
+   "section": "Grammar",
+   "type": "multiple_choice_question",
+   "points": 1,
+   "text": "Which sentence correctly uses a conjunction to join two ideas?",
+   "options": [
+    "The prince was spoiled, but Jemmy was clever.",
+    "The prince was spoiled but, Jemmy was clever.",
+    "The prince was spoiled. But Jemmy was clever."
+   ],
+   "answer": 0,
+   "from": "18.1–18.4 Grammar (and, but, so)",
+   "status": "kept"
+  },
+  {
+   "n": 2,
+   "section": "Grammar",
+   "type": "essay_question",
+   "points": 1,
+   "text": "Combine these two sentences into one using a conjunction: “The prince could not write his name. Jemmy could read and write.”",
+   "from": "18.3 Grammar (join each pair)",
+   "status": "kept"
+  },
+  {
+   "n": 3,
+   "section": "Grammar",
+   "type": "essay_question",
+   "points": 1,
+   "text": "Write your own compound sentence using “but” to show a difference between two characters or ideas.",
+   "from": "18.1 Grammar SWYK, 18.3 Grammar",
+   "status": "kept (one word: contrast → difference, the word the lessons use)"
+  },
+  {
+   "n": 4,
+   "section": "Morphology",
+   "type": "essay_question",
+   "points": 1,
+   "text": "The prefix inter- means “between.” Break apart the word interrupt. What does it mean?",
+   "from": "18.1 Morphology (inter- + rupt)",
+   "status": "new (old Q4 tested over-, not taught)"
+  },
+  {
+   "n": 5,
+   "section": "Morphology",
+   "type": "multiple_choice_question",
+   "points": 1,
+   "text": "The prefix sub- means “under.” A subway train most likely runs —",
+   "options": [
+    "under the city streets",
+    "between two cities",
+    "high above the city"
+   ],
+   "answer": 0,
+   "from": "18.1 Morphology (“What does a subway go under?”)",
+   "status": "new (old Q5 tested over-)"
+  },
+  {
+   "n": 6,
+   "section": "Morphology",
+   "type": "essay_question",
+   "points": 1,
+   "text": "Choose one: interrupt, interact, or international. Write a sentence that shows what the word means.",
+   "from": "18.1–18.3 Morphology word list",
+   "status": "new (old Q6 tested over-)"
+  },
+  {
+   "n": 7,
+   "section": "Spelling",
+   "type": "essay_question",
+   "points": 1,
+   "text": "Each word has a vowel team. Write each word and split it into syllables with a slash mark (example: rain/bow). season · explain · railroad",
+   "from": "18.3 Spelling (Vowel Team Splitter)",
+   "status": "new (old Q7 tested closed syllables, not taught)"
+  },
+  {
+   "n": 8,
+   "section": "Spelling",
+   "type": "essay_question",
+   "points": 1,
+   "text": "A vowel team is two vowels that work together to make one sound. Explain this rule in your own words and give one example word.",
+   "from": "18.1 Spelling rule",
+   "status": "new (old Q8 tested closed syllables)"
+  },
+  {
+   "n": 9,
+   "section": "Spelling",
+   "type": "multiple_choice_question",
+   "points": 1,
+   "text": "Which word is split into syllables the wrong way?",
+   "options": [
+    "rain/bow",
+    "se/ason",
+    "pea/nut"
+   ],
+   "answer": 1,
+   "from": "18.3 Spelling (a team never gets split up)",
+   "status": "new (old Q9 tested closed syllables)"
+  },
+  {
+   "n": 10,
+   "section": "Reading",
+   "type": "essay_question",
+   "points": 1,
+   "text": "How are Jemmy and Prince Brat different, according to this passage? Use a detail from the text.",
+   "from": "18.1 Reading (Ch. 1–2), 18.4 review Q1",
+   "status": "kept"
+  },
+  {
+   "n": 11,
+   "section": "Reading",
+   "type": "essay_question",
+   "points": 1,
+   "text": "Jemmy sat in on the prince’s lessons, but only Jemmy learned. Why do you think Jemmy learned when the prince didn’t? What does this tell you about him?",
+   "from": "18.1 Reading (Ch. 2)",
+   "status": "kept"
+  },
+  {
+   "n": 12,
+   "section": "Reading",
+   "type": "essay_question",
+   "points": 1,
+   "text": "Does it seem fair that Jemmy has to take the prince’s punishments? Use details from the passage to explain your thinking.",
+   "from": "18.1 Big Question, 18.4 review",
+   "status": "kept"
+  },
+  {
+   "n": 13,
+   "section": "Writing",
+   "type": "essay_question",
+   "points": 1,
+   "text": "Model sentence: “The prince had everything — fine food, warm clothes, and a throne to sit on — but Jemmy had only his wits.” Notice how the dashes and the word “but” show a sharp difference. Write your own sentence that shows a difference between two characters, using this pattern.",
+   "from": "18.1–18.4 conjunction but; RWM sentence work",
+   "status": "kept"
+  },
+  {
+   "n": 14,
+   "section": "Writing",
+   "type": "essay_question",
+   "points": 1,
+   "text": "Write 1–2 sentences describing what each boy wants at the start of the story. What does Prince Brat seem to want? What does Jemmy seem to want?",
+   "from": "18.1–18.2 Reading; Writer’s Workshop claim",
+   "status": "kept"
+  }
+ ],
+ "passage": {
+  "before": 10,
+  "title": "Reading passage (summary of Ch. 1–2)",
+  "text": "The prince was known throughout the kingdom as Prince Brat. He had never been whipped in his life, for it was the law: no one was allowed to strike a prince. Jemmy had been brought to the castle to take his punishments for him. Jemmy had to sit close at hand during the prince’s daily lessons. The prince learned nothing — but Jemmy learned to read, write, and do sums."
+ }
+}
