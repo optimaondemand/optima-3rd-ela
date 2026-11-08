@@ -88,7 +88,15 @@ var ART = {
      (BOARD_SPACES below) and the progress layer is drawn on top. */
   board: { src: '' },
 
-  covers: {},
+  /* the four novels on the G3 shelf. Covers come from Open Library by
+     cover id (an edition the lessons match); a cover that fails to load
+     falls back to a drawn spine, so the shelf never shows a hole. */
+  covers: {
+    stanley: 'https://covers.openlibrary.org/b/id/22062-M.jpg',
+    desp:    'https://covers.openlibrary.org/b/id/541143-M.jpg',
+    wb:      'https://covers.openlibrary.org/b/id/27023-M.jpg',
+    lww:     'https://covers.openlibrary.org/b/id/13303087-M.jpg'
+  },
 
   /* per-world art. `terrain` paints that stretch of the map and is
      feathered into its neighbours so the map stays one picture;
