@@ -1,0 +1,131 @@
+/* ══════════════════════════════════════════════════════════════
+   G3 ELA ADDITIONS (Opti's Story Map). Big, plain type for 8-year-olds.
+   ══════════════════════════════════════════════════════════════ */
+.g3-look { background:#FFF8E6; border:1.5px solid #EAD7A6; border-radius:12px; padding:12px 16px; margin:4px 0 12px; }
+.g3-look-h { font-family:Nunito,sans-serif; font-weight:800; font-size:15px; color:#8B6914; letter-spacing:.2px; margin-bottom:4px; }
+.g3-look p { margin:0; font-size:17px; line-height:1.55; color:#3A3326; }
+.g3-todo { font-size:17px; line-height:1.5; color:#24324F; margin:0 0 12px; }
+.g3-todo b { color:#3B4A86; }
+.g3-p { font-size:17px; line-height:1.6; color:#2E3A55; margin:10px 0; }
+.g3-opt { font-size:15px; color:#6B7690; font-style:italic; margin:8px 0 0; }
+
+/* one step at a time */
+.g3-step-h { display:inline-block; font-family:Nunito,sans-serif; font-weight:800; font-size:15px; color:#fff;
+  background:#3B4A86; border-radius:999px; padding:5px 14px; margin:2px 0 10px; }
+.g3-step-p { font-size:17px; line-height:1.5; color:#24324F; margin:0 0 12px; }
+.g3-steps { border:2px solid #E9C46A; border-radius:14px; padding:14px 16px; background:#FFFEF9; }
+.g3-finish { font-family:Nunito,sans-serif; font-weight:800; font-size:18px; color:#2F6B3B; padding:6px 0 10px; }
+
+/* glossary */
+.g3-gl { position:relative; cursor:help; }
+.g3-gl-w { border-bottom:2px dotted #8B6FC0; }
+.g3-gl:focus { outline:3px solid #E9C46A; outline-offset:2px; border-radius:3px; }
+.g3-tip { display:none; position:absolute; left:50%; bottom:calc(100% + 8px); transform:translateX(-50%); z-index:60;
+  width:max-content; max-width:min(280px, 80vw); background:#24324F; color:#fff; border-radius:10px; padding:10px 12px;
+  font-size:16px; line-height:1.45; font-style:normal; font-weight:400; text-align:left; box-shadow:0 6px 18px rgba(0,0,0,.2); }
+.g3-tip::after { content:''; position:absolute; top:100%; left:50%; margin-left:-7px; border:7px solid transparent; border-top-color:#24324F; }
+.g3-tip b { font-family:Nunito,sans-serif; font-weight:800; margin-right:6px; }
+.g3-tip-m { display:block; margin-top:3px; }
+.g3-gl:hover .g3-tip, .g3-gl:focus .g3-tip, .g3-gl:focus-within .g3-tip, .g3-gl.open .g3-tip { display:block; }
+.g3-say { border:0; background:#FFF1C4; border-radius:999px; font-size:15px; line-height:1; padding:5px 7px; cursor:pointer; vertical-align:middle; }
+.g3-tip .g3-say { background:#3B4A86; }
+.flip-card-front .g3-say { margin-top:4px; position:relative; z-index:2; }
+
+/* Opti, beside his own voice */
+.g3-opti-wrap { display:flex; flex-wrap:wrap; align-items:center; gap:10px; }
+.g3-opti-wrap > .g3-opti-face { flex:0 0 auto; }
+.g3-opti-wrap > .spk-audio, .g3-opti-wrap > .spk-video { flex:1 1 240px; }
+.g3-opti-wrap > details { flex:1 1 100%; }
+.g3-opti-face { display:inline-flex; width:46px; height:46px; align-items:flex-end; justify-content:center; }
+.g3-opti-face img, .g3-opti-face svg { max-height:46px; width:auto; }
+.g3-opti-row { display:flex; flex-wrap:wrap; align-items:center; gap:10px; margin-bottom:10px; }
+.g3-opti-row > .spk-audio { flex:1 1 220px; }
+.g3-opti-row > details { flex:1 1 100%; }
+
+/* art */
+.g3-art { margin:6px 0 12px; text-align:center; }
+.g3-art img { max-width:100%; max-height:340px; border-radius:10px; box-shadow:0 3px 10px rgba(40,30,10,.18); }
+.g3-art figcaption { font-size:13px; color:#6B7690; margin-top:6px; }
+.g3-plate-look { max-width:640px; margin:10px auto 4px; text-align:left; }
+
+/* Jemmy's Street Talk */
+.g3-tw-chip { display:inline-block; font-family:Lora,Georgia,serif; font-size:20px; font-style:italic; color:#3B2A14;
+  background:#FFF1C4; border:2px solid #E9C46A; border-radius:12px; padding:10px 18px; cursor:pointer; }
+.g3-tw-chip:hover, .g3-tw-chip:focus { background:#FFE7A0; outline:none; box-shadow:0 0 0 3px #F6D57A; }
+.g3-done-list { margin:0 0 12px; }
+.g3-tw-done { display:flex; flex-wrap:wrap; align-items:baseline; gap:8px; font-size:17px; padding:7px 0; border-bottom:1px dashed #E5DAC0; }
+.g3-tw-said { font-family:Lora,Georgia,serif; font-style:italic; color:#3B2A14; }
+.g3-tw-arrow { color:#C7922C; font-weight:800; }
+.g3-tw-means { color:#24324F; font-weight:600; }
+
+/* the crest */
+.g3-saddle { text-align:center; margin:4px 0 12px; }
+.g3-crest-real img { max-height:260px; background:#fff; padding:8px; }
+.g3-redo { margin:0 0 12px; font-size:15px; }
+.g3-redo summary { cursor:pointer; color:#3B4A86; font-weight:700; }
+.g3-crest-wrap { display:flex; flex-wrap:wrap; gap:18px; align-items:flex-start; }
+.g3-crest-live { flex:0 0 200px; margin:0 auto; }
+.g3-crest-tools { flex:1 1 260px; }
+.g3-tl { display:block; font-family:Nunito,sans-serif; font-weight:800; font-size:15px; color:#24324F; margin:10px 0 6px; }
+.g3-chk { font-weight:600; }
+.g3-row { display:flex; flex-wrap:wrap; gap:8px; }
+.g3-sw { width:38px; height:38px; border-radius:50%; border:3px solid #fff; box-shadow:0 0 0 2px #C9BFA6; cursor:pointer; }
+.g3-sw.sel { box-shadow:0 0 0 3px #C7922C; }
+.g3-sym { display:flex; flex-direction:column; align-items:center; gap:2px; background:#FFFDF4; border:2px solid #E5DAC0; border-radius:10px;
+  padding:4px 6px; font-size:13px; color:#3A3326; cursor:pointer; min-width:56px; }
+.g3-sym.sel { border-color:#C7922C; background:#FFF1C4; }
+.g3-motto { font-size:18px; padding:8px 10px; border:2px solid #D9CCAA; border-radius:10px; width:100%; max-width:260px; }
+.g3-warn { color:#A32020; font-size:15px; margin-top:4px; }
+.g3-dl { margin-top:14px; }
+
+/* Up the North Tower */
+.g3-tw-grid { display:flex; flex-wrap:wrap; gap:18px; align-items:flex-start; }
+.g3-tower { flex:0 0 200px; margin:0 auto; }
+.g3-tw-play { flex:1 1 280px; border:2px solid #E9C46A; border-radius:14px; padding:14px 16px; background:#FFFEF9; }
+.g3-tw-q { font-size:19px; line-height:1.5; color:#24324F; margin:0 0 12px; }
+.g3-opts { display:flex; flex-direction:column; gap:8px; }
+.g3-opt-btn { text-align:left; font-size:18px; line-height:1.4; padding:10px 14px; border:2px solid #CBD3EA; background:#fff;
+  border-radius:12px; cursor:pointer; color:#24324F; }
+.g3-opt-btn:hover, .g3-opt-btn:focus { border-color:#3B4A86; background:#F3F5FC; outline:none; }
+.g3-opt-btn.tried { opacity:.55; text-decoration:line-through; }
+.g3-fb { margin-top:12px; font-size:17px; line-height:1.5; border-radius:10px; padding:10px 12px; }
+.g3-fb.ok { background:#E8F4E6; color:#24502A; }
+.g3-fb.no { background:#FFF1E6; color:#7A3A10; }
+@media (max-width:520px) { .g3-tower { flex-basis:150px; } .g3-tw-q { font-size:18px; } }
+@media (prefers-reduced-motion: reduce) { .g3-card * { transition:none !important; animation:none !important; } }
+
+/* the HTML hidden attribute must win over the flex rules above */
+.g3-opti-row[hidden], .g3-opti-face[hidden], .g3-say[hidden], .g3-warn[hidden] { display:none !important; }
+.spk-copia-card p { font-size:17px !important; }
+
+/* ── G3 navy theme (Bethany, Nov 7): every sparkled G3 page wears the
+   course's navy blue header, whatever color the unit page shipped with.
+   The page's own light background and cards are left alone. ── */
+.progress-wrap { background:#0E1C42 !important; }
+.progress-label { color:#7FA6D9 !important; }
+.progress-fill { background:linear-gradient(90deg, #2B5BA8, #4A86C5, #B8860B) !important; }
+.header, .header.spk-hd { background:#0E1C42 !important; border-bottom-color:#2B5BA8 !important; }
+.header::after { background:linear-gradient(90deg, #2B5BA8, #4A86C5, #2B5BA8) !important; }
+.header-sub { color:#7FA6D9 !important; }
+
+/* the plate sits on the page itself, not on G4 parchment */
+.spk-plate { background:#FFFFFF !important; }
+
+.g3-sayrow { display:flex; flex-wrap:wrap; align-items:center; gap:8px; margin:10px 16px 4px; font-size:16px; }
+.g3-sayrow[hidden], .g3-saychip[hidden] { display:none !important; }
+.g3-sayrow-l { font-family:Nunito,sans-serif; font-weight:800; color:#24324F; }
+.g3-say-chip { font-size:16px; padding:6px 12px; background:#E9EEF9; color:#24324F; font-family:Nunito,sans-serif; font-weight:700; }
+.tab-btn.active { color:#0E1C42 !important; border-bottom-color:#2B5BA8 !important; }
+.tab-btn:hover { color:#0E1C42 !important; }
+
+/* the audio bar shrinks beside Opti on a phone */
+.g3-opti-wrap > .spk-audio, .g3-opti-row > .spk-audio { flex:1 1 180px !important; min-width:0 !important; max-width:100%; box-sizing:border-box; }
+.g3-opti-wrap .spk-audio-bar { min-width:30px; }
+.g3-opti-wrap .spk-audio, .g3-opti-row .spk-audio { flex-wrap:wrap; }
+.g3-opti-wrap .spk-audio-btn, .g3-opti-row .spk-audio-btn { flex:0 1 auto !important; min-width:0; white-space:normal; text-align:left; }
+
+.g3-opti-row { display:grid !important; grid-template-columns:46px minmax(0,1fr); gap:10px; align-items:center; }
+.g3-opti-row[hidden] { display:none !important; }
+.g3-opti-row > details { grid-column:1 / -1; }
+.g3-opti-row .spk-audio { margin:0; flex-wrap:nowrap; max-width:460px; }
+@media (max-width:480px) { .g3-opti-row .spk-audio { flex-wrap:wrap; } }
