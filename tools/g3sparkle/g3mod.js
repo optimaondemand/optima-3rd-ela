@@ -583,3 +583,37 @@ function buildSpotlight() {
       '<div class="g3-spot-lamp" aria-hidden="true"></div>');
   });
 }
+
+/* ── Opti reads the directions ──────────────────────────────────────
+   Every "What to do:" line carries data-say="<slug>". A 🔊 in front of
+   it plays Opti saying exactly those words:
+   assets/audio/guide/opti/g3ela-how-<slug>.mp3 (shared by every lesson
+   that uses the same words). The button stays hidden until the file is
+   really there, so a line without a recording just reads as text. */
+var SAY_FOR_CARD = { 'spk-copia-card': 'copia', 'g3card-tower': 'tower' };
+function buildSayDo() {
+  document.querySelectorAll('.g3-todo:not([data-say])').forEach(function (p) {
+    for (var k in SAY_FOR_CARD) {
+      if (p.closest('.' + k) || p.closest('#' + k)) { p.setAttribute('data-say', SAY_FOR_CARD[k]); break; }
+    }
+  });
+  document.querySelectorAll('[data-say]').forEach(function (p) {
+    if (p._g3say) return; p._g3say = true;
+    var b = document.createElement('button');
+    b.type = 'button'; b.className = 'g3-say'; b.hidden = true;
+    b.setAttribute('aria-label', 'Hear Opti read the directions');
+    b.innerHTML = '<span aria-hidden="true">🔊</span>';
+    var a = new Audio(); a.preload = 'metadata';
+    a.addEventListener('loadedmetadata', function () { b.hidden = false; });
+    a.addEventListener('play', function () { b.classList.add('on'); });
+    a.addEventListener('pause', function () { b.classList.remove('on'); });
+    a.addEventListener('ended', function () { b.classList.remove('on'); });
+    a.src = MEDIA.audioBase + 'guide/opti/g3ela-how-' + p.getAttribute('data-say') + '.mp3';
+    b.onclick = function () {
+      if (!a.paused) { a.pause(); return; }
+      if (typeof audioStopAll === 'function') audioStopAll(a);
+      _nowPlaying = a; a.currentTime = 0; a.play().catch(function () {});
+    };
+    p.insertBefore(b, p.firstChild);
+  });
+}

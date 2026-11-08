@@ -288,11 +288,22 @@ js = rep(js, """  var bx = me[0] < BOARD_W - 200 ? me[0] + 46 : me[0] - 46 - bw;
              """  var bx = Math.max(8, Math.min(BOARD_W - bw - 8, me[0] - bw / 2)), by = me[1] + BOARD_R + 12;
   s += '<rect x="' + bx + '" y="' + by + '" width="' + bw + '" height="34" rx="17" fill="#C7922C" stroke="#FFF8E9" stroke-width="2"/>' +
        '<text x="' + (bx + bw / 2) + '" y="' + (by + 24) + '" font-size="18" text-anchor="middle" ' +""")
+# ── plain words (Nov 8): no story about Erasmus, no "no wrong answer",
+#    the writing project is named by what it is, and books light up
+js = rep(js, "'<div class=\"spk-card-sub\">Long ago, a teacher named Erasmus had his students rewrite one sentence a hundred ways. You only need three.</div>' +",
+             "'<div class=\"spk-card-sub\">Write one sentence three new ways.</div>' +")
+js = rep(js, "    '<p style=\"font-size:15px;color:#3A4A6B;\">Here is one sentence about this week’s reading. There is no wrong answer here — only more ways to say it.</p>' +\n", "")
+js = rep(js, "'That way your whole ' + (/report/i.test(arc.name) ? 'report' : /essay|analysis/i.test(arc.name) ? 'essay' : /project/i.test(arc.name) ? 'project' : 'story') + ' is in one place and nothing gets lost.</p>' +",
+             "'That way your whole ' + (/paragraph/i.test(arc.name) ? 'paragraph' : /letter/i.test(arc.name) ? 'letter' : /report/i.test(arc.name) ? 'report' : /essay|analysis/i.test(arc.name) ? 'essay' : /project/i.test(arc.name) ? 'project' : 'story') + ' is in one place and nothing gets lost.</p>' +")
+js = rep(js, "note.textContent = 'Your document is the one that always has your whole story.';", "note.textContent = 'Your document always has all of your writing.';")
+js = rep(js, "['Change the opener', 'Start with a when or a where.'],", "['Change the opener', 'Start with when or where it happened.'],")
+js = rep(js, "['Swap the verb', 'Find a stronger word than the one in bold.'],", "['Swap the verb', 'Use a stronger word than the bold word.'],")
+js = rep(js, "A book stands up once you have read all of it.", "A book lights up once you have read all of it.")
 # ── G3 additions, inside the IIFE, ahead of boot
 m = io.open(mod, encoding='utf-8').read()
 js = rep(js, '\nfunction boot() {', '\n' + m + '\n\nfunction boot() {')
 js = rep(js, "    ['wordgame',    buildWordGame],\n",
-             "    ['wordgame',    buildWordGame],\n    ['glossary',    buildGlossary],\n    ['saywords',    buildSayWords],\n    ['cards',       buildCards],\n    ['tips',        hookTips],\n    ['bookflip',    buildBookFlip],\n    ['readalong',   buildReadAlong],\n    ['spotlight',   buildSpotlight],\n")
+             "    ['wordgame',    buildWordGame],\n    ['glossary',    buildGlossary],\n    ['saywords',    buildSayWords],\n    ['cards',       buildCards],\n    ['tips',        hookTips],\n    ['bookflip',    buildBookFlip],\n    ['readalong',   buildReadAlong],\n    ['spotlight',   buildSpotlight],\n    ['saydo',       buildSayDo],\n")
 js = rep(js, "    ['journal',     buildJournal],\n", "    ['journal',     buildJournal],\n    ['opti',        optiFaces],\n")
 # the greeting builds media again after a name is entered; Opti follows
 js = rep(js, "  try { buildMedia(); } catch (e) {}\n  dividerAfterOpening();",

@@ -352,7 +352,7 @@ function buildWritingProject() {
       titleCase(arc.name.replace(/^an? /, '').replace(/^your /, '')) +
       '</b> \u2014 a Google Doc or a Word file. ' +
       'Every day: write in the box below, then <b>copy it into your own document</b>. ' +
-      'That way your whole ' + (/report/i.test(arc.name) ? 'report' : /essay|analysis/i.test(arc.name) ? 'essay' : /project/i.test(arc.name) ? 'project' : 'story') + ' is in one place and nothing gets lost.</p>' +
+      'That way your whole ' + (/paragraph/i.test(arc.name) ? 'paragraph' : /letter/i.test(arc.name) ? 'letter' : /report/i.test(arc.name) ? 'report' : /essay|analysis/i.test(arc.name) ? 'essay' : /project/i.test(arc.name) ? 'project' : 'story') + ' is in one place and nothing gets lost.</p>' +
     '</div>';
   var firstReal = document.querySelector('.spk-arc-head');
   if (firstReal && firstReal.parentNode === body) body.insertBefore(goal, firstReal.nextSibling);
@@ -413,7 +413,7 @@ function buildWritingProject() {
     if (!text.trim()) { note.textContent = 'Write something first, then copy it.'; return; }
     function done() {
       copy.textContent = 'Copied \u2014 now paste it in your document';
-      note.textContent = 'Your document is the one that always has your whole story.';
+      note.textContent = 'Your document always has all of your writing.';
       setTimeout(function () { copy.textContent = 'Copy today\u2019s writing'; }, 4000);
     }
     try {
@@ -1061,7 +1061,7 @@ function buildJourney() {
           '<span class="spk-case-foot left"></span>' +
           '<span class="spk-case-foot right"></span></div>' +
       '</div>' +
-      '<div class="spk-shelf-note" id="spkShelfNote">A book stands up once you have read all of it.</div>' +
+      '<div class="spk-shelf-note" id="spkShelfNote">A book lights up once you have read all of it.</div>' +
     '</div>';
   if (after && after.nextSibling) after.parentNode.insertBefore(card, after.nextSibling);
   else panel.insertBefore(card, panel.firstChild);
@@ -1887,16 +1887,15 @@ function buildCopia() {
   var card = document.createElement('div');
   card.className = 'spk-card spk-copia-card';
   var slots = [
-    ['Change the opener', 'Start with a when or a where.'],
-    ['Swap the verb', 'Find a stronger word than the one in bold.'],
+    ['Change the opener', 'Start with when or where it happened.'],
+    ['Swap the verb', 'Use a stronger word than the bold word.'],
     ['Add a where or a how', 'Tell us where it happened, or how it was done.']
   ];
   var html =
     '<div class="spk-card-head"><div class="spk-card-num">✎</div><div>' +
     '<div class="spk-card-title">Copia · Say It Three Ways</div>' +
-    '<div class="spk-card-sub">Long ago, a teacher named Erasmus had his students rewrite one sentence a hundred ways. You only need three.</div>' +
+    '<div class="spk-card-sub">Write one sentence three new ways.</div>' +
     '</div></div><div class="spk-card-body">' +
-    '<p style="font-size:15px;color:#3A4A6B;">Here is one sentence about this week’s reading. There is no wrong answer here — only more ways to say it.</p>' +
     lookCard(DATA.copia.look, DATA.copia.todo) +
     '<div class="spk-copia-seed">' + DATA.copia.seed + '</div>';
   slots.forEach(function (s, i) {
@@ -3953,6 +3952,40 @@ function buildSpotlight() {
   });
 }
 
+/* ── Opti reads the directions ──────────────────────────────────────
+   Every "What to do:" line carries data-say="<slug>". A 🔊 in front of
+   it plays Opti saying exactly those words:
+   assets/audio/guide/opti/g3ela-how-<slug>.mp3 (shared by every lesson
+   that uses the same words). The button stays hidden until the file is
+   really there, so a line without a recording just reads as text. */
+var SAY_FOR_CARD = { 'spk-copia-card': 'copia', 'g3card-tower': 'tower' };
+function buildSayDo() {
+  document.querySelectorAll('.g3-todo:not([data-say])').forEach(function (p) {
+    for (var k in SAY_FOR_CARD) {
+      if (p.closest('.' + k) || p.closest('#' + k)) { p.setAttribute('data-say', SAY_FOR_CARD[k]); break; }
+    }
+  });
+  document.querySelectorAll('[data-say]').forEach(function (p) {
+    if (p._g3say) return; p._g3say = true;
+    var b = document.createElement('button');
+    b.type = 'button'; b.className = 'g3-say'; b.hidden = true;
+    b.setAttribute('aria-label', 'Hear Opti read the directions');
+    b.innerHTML = '<span aria-hidden="true">🔊</span>';
+    var a = new Audio(); a.preload = 'metadata';
+    a.addEventListener('loadedmetadata', function () { b.hidden = false; });
+    a.addEventListener('play', function () { b.classList.add('on'); });
+    a.addEventListener('pause', function () { b.classList.remove('on'); });
+    a.addEventListener('ended', function () { b.classList.remove('on'); });
+    a.src = MEDIA.audioBase + 'guide/opti/g3ela-how-' + p.getAttribute('data-say') + '.mp3';
+    b.onclick = function () {
+      if (!a.paused) { a.pause(); return; }
+      if (typeof audioStopAll === 'function') audioStopAll(a);
+      _nowPlaying = a; a.currentTime = 0; a.play().catch(function () {});
+    };
+    p.insertBefore(b, p.firstChild);
+  });
+}
+
 
 function boot() {
   /* Each step is isolated. Previously all eighteen sat inside one
@@ -3993,6 +4026,7 @@ function boot() {
     ['bookflip',    buildBookFlip],
     ['readalong',   buildReadAlong],
     ['spotlight',   buildSpotlight],
+    ['saydo',       buildSayDo],
     ['watch',       liftWatchBlock],
     ['media',       buildMedia],
     ['captions',    captionAllFilms],

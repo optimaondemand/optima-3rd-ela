@@ -17,10 +17,22 @@ for rel in set(re.findall(r'(?:art|companions)/[\w./-]+\.(?:jpg|png)', h + js)):
     if u: h = h.replace('"' + rel + '"', '"' + u + '"'); js = js.replace("'" + rel + "'", "'" + u + "'")
 # audio: embed every clip that exists, keyed by its path, and let Audio() find it
 audio = {}
+import json as _j
+m = re.search(r'id="oao-lesson">\s*(\{.*?\})', h, re.S)
+decl = _j.loads(m.group(1)) if m else {}
+md = re.search(r'id="oao-data">\s*(\{.*?\})\s*</script>', h, re.S)
+data = _j.loads(md.group(1)) if md else {}
+want_words = set(re.sub(r"[^a-z0-9]+", "-", w.lower()).strip('-') for w in data.get('sayWords', []))
+pref = 'g3ela-%s-%s-' % (decl.get('week'), decl.get('day'))
+def wanted(rel):
+    b = os.path.basename(rel)
+    if b.startswith(pref) or b.startswith('g3ela-how-'): return True
+    if b.startswith('g3ela-word-'): return b[11:-4] in want_words
+    return False
 adir = os.path.join(repo, 'assets', 'audio')
 for root, _, files in os.walk(adir):
     for f in files:
-        if f.endswith('.mp3'):
+        if f.endswith('.mp3') and wanted(f):
             rel = os.path.relpath(os.path.join(root, f), os.path.join(repo)).replace(os.sep, '/')
             audio[rel] = uri(os.path.relpath(os.path.join(root, f), os.path.join(repo, 'assets')))
 shim = ''

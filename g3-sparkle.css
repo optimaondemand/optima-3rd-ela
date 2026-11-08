@@ -1847,3 +1847,15 @@ html[data-spk-tab="reading"] .spk-notes-fab:not(.hide) { display:block; }
 .quote-strip-text { font-size:21px !important; line-height:1.55; color:#3B2A14 !important; }
 .quote-strip-attr { margin-top:10px; display:inline-flex; align-items:center; gap:8px; color:#8A6A1E !important; letter-spacing:.1em; font-size:12px !important; }
 @media (max-width:600px) { .quote-strip { padding:24px 30px 16px !important; margin:10px 12px 20px !important; } .quote-strip::before, .quote-strip::after { font-size:56px; } .quote-strip-text { font-size:18px !important; } .spk-numeral-word::before, .spk-numeral-word::after { width:36px; } }
+
+/* ── "What to do" lines, with Opti's 🔊 ── */
+.g3-do { background:#EEF3FF; border:2px solid #C9D6F2; border-radius:12px; padding:10px 14px; margin:0 0 14px; font-size:17px; line-height:1.55; color:#24324F; }
+.g3-do b { color:#0E1C42; }
+.g3-say { display:inline-flex; align-items:center; justify-content:center; width:34px; height:34px; margin:0 8px 0 0; vertical-align:middle;
+  border-radius:50%; border:2px solid #C9D6F2; background:#FFFFFF; cursor:pointer; font-size:16px; line-height:1; padding:0; }
+.g3-say:hover, .g3-say:focus-visible { border-color:#2B5BA8; outline:none; box-shadow:0 0 0 3px rgba(43,91,168,.2); }
+.g3-say.on { background:#FFE38A; border-color:#C7922C; }
+.g3-say[hidden] { display:none !important; }
+
+/* DOL: the parts to tap are marked before anyone taps them */
+.dol-highlight-word:not(.highlighted):not(.key-reveal) { background:#FFF6D6; border-bottom:2px dotted #C7922C; }
