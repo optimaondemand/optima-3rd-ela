@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Week 18 Family Guide · 3rd Grade ELA · Optima Academy Online</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Nunito:wght@400;600;700;800;900&display=swap');
+:root{
+  --navy:#0E1C42; --ink:#3A4A6B; --muted:#5E6C8C; --line:#E2E8F4;
+  --sky:#55C8E8; --sky-bg:#EAF8FD; --gold:#C7922C; --gold-bg:#FFF3DC;
+  --green:#34B76F; --green-bg:#E3F8ED; --plum:#8B6FC0; --plum-bg:#F1ECFA;
+  --paper:#FAFBFF; --cream:#FFF8F0;
+}
+*{box-sizing:border-box;}
+html,body{margin:0;padding:0;}
+body{background:var(--paper);color:var(--ink);font-family:"Nunito",sans-serif;font-size:18px;line-height:1.6;}
+.wrap{max-width:880px;margin:0 auto;padding:24px 16px 48px;}
+h1,h2,h3{font-family:"Lora",Georgia,serif;color:var(--navy);margin:0;}
+p{margin:0 0 10px;}
+strong{color:var(--navy);}
+
+/* header */
+.hero{background:var(--navy);color:#fff;border-radius:18px;overflow:hidden;display:grid;grid-template-columns:1.25fr 1fr;}
+.hero-text{padding:28px 28px 26px;}
+.brand{display:flex;align-items:center;gap:10px;font-size:15px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:#BFD0EE;margin-bottom:14px;}
+.brand img{width:38px;height:38px;border-radius:50%;background:#fff;}
+.hero h1{color:#fff;font-size:34px;line-height:1.2;margin-bottom:6px;}
+.hero .sub{font-size:19px;color:#DCE6F7;margin-bottom:16px;}
+.chips{display:flex;flex-wrap:wrap;gap:8px;}
+.chip{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.25);border-radius:999px;padding:5px 13px;font-size:16px;font-weight:700;color:#fff;}
+.hero-art{background:#F5E6C8 center/cover no-repeat;min-height:240px;}
+
+/* cards */
+.card{background:#fff;border:1px solid var(--line);border-radius:16px;padding:22px 24px;margin-top:18px;}
+.card-head{display:flex;align-items:center;gap:12px;margin-bottom:12px;}
+.card-head .ico{font-size:26px;line-height:1;}
+.card-head h2{font-size:24px;}
+.card-head .tag{margin-left:auto;font-size:14px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);}
+
+.glance{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+.glance .box{border-radius:12px;padding:14px 16px;}
+.box-label{font-size:14px;font-weight:900;letter-spacing:.08em;text-transform:uppercase;margin-bottom:4px;}
+.b-sky{background:var(--sky-bg);} .b-sky .box-label{color:#1F8CB0;}
+.b-gold{background:var(--gold-bg);} .b-gold .box-label{color:#9A6C14;}
+.b-green{background:var(--green-bg);} .b-green .box-label{color:#1F8452;}
+.b-plum{background:var(--plum-bg);} .b-plum .box-label{color:#6A4FA3;}
+.quote{font-family:"Lora",Georgia,serif;font-style:italic;font-size:20px;color:var(--navy);border-left:4px solid var(--gold);padding:4px 0 4px 16px;margin:16px 0 0;}
+.quote small{display:block;font-family:"Nunito",sans-serif;font-style:normal;font-size:15px;color:var(--muted);margin-top:4px;}
+
+/* day table */
+.days{width:100%;border-collapse:collapse;}
+.days th{font-size:14px;font-weight:900;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);text-align:left;padding:8px 10px;border-bottom:2px solid var(--line);}
+.days td{padding:12px 10px;border-bottom:1px solid var(--line);vertical-align:top;}
+.days tr:last-child td{border-bottom:none;}
+.day-n{font-family:"Lora",Georgia,serif;font-weight:700;font-size:20px;color:var(--navy);white-space:nowrap;}
+.day-n span{display:block;font-family:"Nunito",sans-serif;font-size:15px;font-weight:700;color:var(--muted);}
+.ch{font-weight:800;color:var(--navy);}
+.small{font-size:16px;color:var(--muted);}
+.pill{display:inline-block;font-size:14px;font-weight:800;border-radius:999px;padding:2px 10px;margin:4px 4px 0 0;}
+.p-poem{background:var(--plum-bg);color:#6A4FA3;}
+.p-guide{background:var(--cream);color:#9A6C14;border:1px solid #F5E6C8;}
+.extra-row td{background:var(--paper);}
+
+/* words */
+.words{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;}
+.word{border:1px solid var(--line);border-radius:12px;padding:12px 16px;}
+.word b{font-family:"Lora",Georgia,serif;font-size:21px;color:var(--navy);display:block;}
+.word span{font-size:17px;}
+.skills{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:14px;}
+.skills .box{border-radius:12px;padding:14px 16px;font-size:17px;}
+.eg{display:block;margin-top:6px;font-weight:700;color:var(--navy);}
+
+/* poem */
+.poem-wrap{display:grid;grid-template-columns:1fr 1fr;gap:18px;align-items:center;}
+.poem{font-family:"Lora",Georgia,serif;font-size:22px;line-height:1.9;color:var(--navy);background:var(--plum-bg);border-radius:12px;padding:16px 22px;}
+.poem small{display:block;font-family:"Nunito",sans-serif;font-size:15px;color:var(--muted);line-height:1.4;margin-top:6px;}
+
+/* ask */
+.ask{list-style:none;margin:0;padding:0;counter-reset:q;}
+.ask li{counter-increment:q;position:relative;padding:12px 0 12px 50px;border-bottom:1px dashed var(--line);}
+.ask li:last-child{border-bottom:none;}
+.ask li::before{content:counter(q);position:absolute;left:0;top:11px;width:34px;height:34px;border-radius:50%;background:var(--gold-bg);color:#9A6C14;font-weight:900;display:flex;align-items:center;justify-content:center;font-size:17px;}
+.ask .q{font-weight:800;color:var(--navy);display:block;}
+.ask .listen{font-size:16px;color:var(--muted);}
+
+/* checklist */
+.check{list-style:none;margin:0;padding:0;}
+.check li{padding:7px 0 7px 34px;position:relative;}
+.check li::before{content:"✓";position:absolute;left:4px;top:6px;color:var(--green);font-weight:900;font-size:19px;}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:18px;}
+
+.next{background:var(--navy);color:#DCE6F7;border:none;}
+.next h2{color:#fff;}
+.next strong{color:#fff;}
+.foot{text-align:center;font-size:15px;color:var(--muted);margin-top:26px;}
+
+.print-btn{display:inline-block;margin-top:16px;background:var(--gold);color:#fff;border:none;border-radius:999px;padding:9px 18px;font-family:"Nunito",sans-serif;font-weight:800;font-size:16px;cursor:pointer;}
+
+@media (max-width:720px){
+  .hero{grid-template-columns:1fr;}
+  .hero-art{min-height:180px;order:-1;}
+  .glance,.words,.skills,.poem-wrap,.two{grid-template-columns:1fr;}
+  .days thead{display:none;}
+  .days tr{display:block;border-bottom:1px solid var(--line);padding:8px 0;}
+  .days td{display:block;border:none;padding:4px 0;}
+}
+@media print{
+  body{background:#fff;font-size:15px;}
+  .wrap{padding:0;}
+  .print-btn{display:none;}
+  .card{break-inside:avoid;margin-top:12px;padding:14px 16px;}
+  .hero,.next{-webkit-print-color-adjust:exact;print-color-adjust:exact;}
+}
+
+/* lesson mechanics */
+.howto{background:var(--cream);border:1px solid #F5E6C8;border-radius:16px;padding:18px 22px;margin-top:18px;}
+.howto h2{font-size:21px;margin-bottom:10px;}
+.howto ul{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:8px 22px;}
+.howto li{position:relative;padding-left:32px;font-size:17px;line-height:1.5;}
+.howto li span{position:absolute;left:0;top:0;font-size:20px;}
+@media (max-width:760px){.howto ul{grid-template-columns:1fr;}}
+@media print{.howto{break-inside:avoid;}}
+.b-rose{background:#FDEEEE;border-radius:12px;padding:14px 16px;} .b-rose .box-label{color:#A8434A;}
+
+.p-museum{background:var(--sky-bg);color:#1F6F8C;}
+.p-extra{background:var(--green-bg);color:#1F8452;}
+.extras{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
+.extras .box{border-radius:12px;padding:14px 16px;font-size:17px;}
+.essay{display:flex;flex-wrap:wrap;gap:6px;margin:4px 0 12px;}
+.essay span{font-size:15px;font-weight:800;border-radius:999px;padding:4px 12px;background:var(--paper);border:1px solid var(--line);color:var(--muted);}
+.essay span.now{background:var(--gold-bg);border-color:#F5E6C8;color:#9A6C14;}
+.essay span.done{background:var(--green-bg);border-color:#CDEFDB;color:#1F8452;}
+@media (max-width:720px){.extras{grid-template-columns:1fr;}}
+.unit-link{margin:12px 0 0;font-size:16px;}.unit-link a{color:#BFD0EE;font-weight:800;}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="hero">
+<div class="hero-text">
+<div class="brand"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy Online">Family Guide · 3rd Grade ELA</div>
+<h1>Week 18: The Boy Who Takes the Blame</h1>
+<div class="sub"><em>The Whipping Boy</em> by Sid Fleischman, Chapters 1–5</div>
+<div class="chips">
+<span class="chip">4 lessons</span>
+<span class="chip">1 fluency recording</span>
+<span class="chip">Chapters 1–5</span>
+<span class="chip">Check-In at week’s end</span>
+</div>
+<button class="print-btn" onclick="window.print()">🖨️ Print this guide</button>
+<p class="unit-link"><a href="parent-guide-wb-unit.html">Read the unit guide for The Whipping Boy →</a></p>
+</div>
+<div class="hero-art" style="background-image:url('https://optimaondemand.github.io/optima-3rd-ela/assets/art/wb/wb-banquet.jpg');background-position:center 40%;" role="img" aria-label="An old painting of a crowded royal feast"></div>
+</header>
+
+<section class="howto">
+<h2>🧭 How the Lesson Pages Work</h2>
+<ul>
+<li><span>🗂️</span><strong>Four tabs, in order:</strong> Warm-Up → Word Study → Reading → Assignment. A button at the bottom of each tab moves to the next.</li>
+<li><span>🦉</span><strong>Opti the owl is the guide.</strong> At the top of each tab, Opti has a short message. Tap ▶ to hear it, or tap <strong>Read Opti’s words instead</strong>.</li>
+<li><span>🔊</span><strong>Two buttons at the top:</strong> <strong>Read aloud</strong> reads the page out loud, and <strong>Lesson details</strong> shows the unit, week, chapters and standards.</li>
+<li><span>💬</span><strong>Words with a dotted line</strong> show what they mean when your student taps them. The <strong>🔊 word buttons</strong> on Word Study say a word out loud, so it is easy to pronounce.</li>
+<li><span>💾</span><strong>Answers save as you type</strong>, but only in that browser on that computer. Switching computers or clearing the browser loses them.</li>
+<li><span>📓</span><strong>Download your ELA journal for the day</strong> at the bottom of the Assignment tab saves everything as one page. Use it (or Copy) to <strong>submit in Canvas</strong>. A lesson isn’t turned in until it’s submitted there.</li>
+<li><span>🎙️</span><strong>Fluency is a separate page</strong> in the Canvas module, because recording doesn’t work inside a lesson. Keep the novel nearby.</li>
+<li><span>🗺️</span><strong>The Reading Road</strong> on the Reading tab is a map of the whole year. Opti stands on this week. It folds closed so it stays out of the way.</li>
+</ul>
+</section>
+
+<section class="card">
+<div class="card-head"><span class="ico">🧭</span><h2>This Week at a Glance</h2></div>
+<p>A new book! Prince Brat plays pranks, but he is never punished. It is forbidden to spank a prince, so a boy from the streets named Jemmy is kept in the castle to be whipped in his place. One night the bored prince runs away and makes Jemmy come along. By dawn they are lost in a thick fog, and two outlaws, Hold-Your-Nose Billy and Cutwater, grab them. Then the outlaws spot the king’s crest on the saddle.</p>
+<div class="glance">
+<div class="box b-sky"><div class="box-label">Reading skill</div><strong>Noticing who has power.</strong> Who gives the orders, who has to obey, and what each character chooses to do about it.</div>
+<div class="box b-green"><div class="box-label">Big idea</div><strong>Is it fair?</strong> One boy has everything and never gets in trouble. The other gets in trouble for things he didn’t do.</div>
+</div>
+<p class="quote">“Fetch the whipping boy!”<small>The king, Chapter 1</small></p>
+</section>
+
+<section class="card">
+<div class="card-head"><span class="ico">📅</span><h2>Day by Day</h2></div>
+<table class="days">
+<thead><tr><th>Lesson</th><th>Reading</th><th>Big question</th></tr></thead>
+<tbody>
+<tr>
+<td class="day-n">18.1<span>Day 1</span></td>
+<td><span class="ch">Chapters 1–2</span><br>The prince ruins a royal feast with a prank, and Jemmy takes twenty whacks for it without making a sound. Jemmy sits through the prince’s lessons, and only Jemmy learns.<br><span class="pill p-guide">Guide: Opti</span><span class="pill p-extra">Why a Whipping Boy?</span><span class="pill p-museum">Jemmy’s Street Talk</span></td>
+<td>Why would a prince need a whipping boy? What does this tell you about who has power, and who doesn’t?</td>
+</tr>
+<tr>
+<td class="day-n">18.2<span>Day 2</span></td>
+<td><span class="ch">Chapters 3–4</span><br>The prince decides to run away because he is bored, and he makes Jemmy go with him. By morning they are lost in the fog, and someone grabs them.<br><span class="pill p-guide">Guide: Opti</span><span class="pill p-poem">Haiku</span></td>
+<td>The prince says he is bored. Is boredom a good reason to put someone else in danger?</td>
+</tr>
+<tr>
+<td class="day-n">18.3<span>Day 3</span></td>
+<td><span class="ch">Chapter 5</span><br>The boys meet the outlaws Hold-Your-Nose Billy and Cutwater. Jemmy tries to keep the prince quiet, but the prince announces who he is.<br><span class="pill p-guide">Guide: Opti</span><span class="pill p-extra">The King’s Crest</span></td>
+<td>When you are in a dangerous situation, is it better to stay quiet or to speak up? What does Jemmy do, and why?</td>
+</tr>
+<tr>
+<td class="day-n">18.4<span>Day 4</span></td>
+<td><span class="ch">Chapters 1–5 review</span><br>No new reading. Your student looks back over all five chapters and checks their opinion writing.<br><span class="pill p-guide">Guide: Opti</span><span class="pill p-poem">Haiku</span></td>
+<td>After reading Chapters 1–5, who do you think has the harder life, Jemmy or the prince? Why?</td>
+</tr>
+<tr class="extra-row">
+<td class="day-n">🎙️<span>Fluency</span></td>
+<td colspan="2">The first page of Chapter 1: the prince’s prank at the feast. Your student reads it three times (right words, then smooth, then with expression), then <strong>records and submits in Canvas.</strong></td>
+</tr>
+<tr class="extra-row">
+<td class="day-n">📋<span>Check-In</span></td>
+<td colspan="2">A 14-point check on the week, in Canvas: joining words, the word parts inter- and sub-, vowel teams, reading, and a short writing response.</td>
+</tr>
+</tbody>
+</table>
+</section>
+
+<section class="card">
+<div class="card-head"><span class="ico">🔤</span><h2>Words to Know</h2><span class="tag">Use them at home!</span></div>
+<div class="words">
+<div class="word"><b>exasperation</b><span>a strong feeling of frustration that has been building up</span></div>
+<div class="word"><b>contrite</b><span>feeling truly sorry for something you did wrong</span></div>
+<div class="word"><b>forbidden</b><span>not allowed; against the rules</span></div>
+<div class="word"><b>defiantly</b><span>done in a bold, refusing-to-obey way</span></div>
+<div class="word"><b>astonishment</b><span>a feeling of great surprise</span></div>
+<div class="word"><b>strayed</b><span>wandered off the path by mistake</span></div>
+<div class="word"><b>cutthroat</b><span>a dangerous criminal</span></div>
+<div class="word"><b>ruffian</b><span>a rough, violent person; a bully</span></div>
+<div class="word"><b>exploit</b><span>a bold, daring act</span></div>
+<div class="word"><b>heir</b><span>the person who will get a throne or title</span></div>
+<div class="word"><b>ransom</b><span>money demanded to free a prisoner</span></div>
+<div class="word"><b>gallows</b><span>a frame used for hanging people long ago</span></div>
+</div>
+<div class="skills">
+<div class="box b-sky"><div class="box-label">Word parts</div><strong>inter-</strong> means “between.” <strong>sub-</strong> means “under.”<span class="eg">interrupt · international · submarine</span></div>
+<div class="box b-gold"><div class="box-label">Spelling</div><strong>Vowel teams.</strong> Two vowels that make one sound stay together in one syllable.<span class="eg">rain·bow · sea·son · pea·nut</span></div>
+<div class="box b-green"><div class="box-label">Grammar</div><strong>Joining words.</strong> <em>and</em> adds, <em>but</em> shows a difference, <em>so</em> shows a result.<span class="eg">He was scared, but he kept going.</span></div>
+</div>
+</section>
+
+<section class="card">
+<div class="card-head"><span class="ico">✨</span><h2>New in the Lessons</h2></div>
+<p>Starting this week, the lesson pages have a guide and a few extras:</p>
+<div class="extras">
+<div class="box b-gold"><div class="box-label">🦉 Opti</div>Opti the owl welcomes your student each day and gives a short tip at the top of each tab. Every message can be heard or read.</div>
+<div class="box b-plum"><div class="box-label">🏰 Up the North Tower</div>This week’s word game. Jemmy’s room is at the top of the castle’s north tower. Each right answer lights one step, 8 a day, until your student reaches his window on Day 4.</div>
+<div class="box b-sky"><div class="box-label">💬 Jemmy’s Street Talk</div>Jemmy grew up on the streets and talks that way (“Ain’t I already been whipped…”). On Day 1, your student taps his words to see them in everyday English.</div>
+<div class="box b-green"><div class="box-label">🛡️ The King’s Crest</div>On Day 3, your student holds up a lantern to see the kind of royal crest the outlaws find on the saddle, then can design a crest of their own and save it as a picture.</div>
+</div>
+<p class="small" style="margin-top:12px;">Each day also opens with a real old painting or print that fits the chapter, like a royal feast, a foggy forest and a castle tower, with a note explaining what it shows.</p>
+</section>
+
+<section class="card">
+<div class="card-head"><span class="ico">✍️</span><h2>Your Student’s Opinion Writing</h2><span class="tag">Writer’s Workshop</span></div>
+<div class="essay"><span class="now">Wk 18 · Choose a claim</span><span>Wk 19 · Add reasons</span><span>Wk 20 · Draft</span><span>Wk 21 · Revise &amp; publish</span><span>Wk 22 · Compare &amp; present</span></div>
+<p>Your student picks a character and writes an opinion about them. Day 1: a <strong>claim</strong> (name a character, make a judgment, hint at why). Day 2: one <strong>reason</strong>. Day 3: a <strong>text example</strong> that names the chapter. Day 4: a check that the claim, reason and example all do their jobs.</p>
+<p class="small">An example writer named Clara shows each step first with her own opinion about Prince Brat.</p>
+</section>
+
+<section class="card">
+<div class="card-head"><span class="ico">💬</span><h2>Ask at Home</h2></div>
+<ol class="ask">
+<li><span class="q">What is a whipping boy, and why does the prince have one?</span><span class="listen">Listen for: no one is allowed to spank a prince, so Jemmy is punished instead.</span></li>
+<li><span class="q">Why won’t Jemmy cry when he gets whacked?</span><span class="listen">Listen for: he doesn’t want to give the prince the fun of hearing him.</span></li>
+<li><span class="q">Why did the prince run away, and why did he bring Jemmy?</span><span class="listen">Listen for: he was bored; Jemmy thinks it’s because the prince has no friends.</span></li>
+<li><span class="q">Who do you think has the harder life, Jemmy or the prince?</span><span class="listen">Listen for: an opinion plus a reason from the book. Either answer can be right.</span></li>
+</ol>
+</section>
+
+<div class="two">
+<section class="card">
+<div class="card-head"><span class="ico">📬</span><h2>What Gets Turned In</h2></div>
+<ul class="check">
+<li>Each lesson’s Assignment tab: three chapter questions, a word study answer and the day’s writing step, submitted in Canvas</li>
+<li>The fluency recording</li>
+<li>The Week 18 Check-In in Canvas</li>
+</ul>
+</section>
+<section class="card">
+<div class="card-head"><span class="ico">🏡</span><h2>Try at Home</h2></div>
+<ul class="check">
+<li>Play “and, but, so”: one person says half a sentence, the other finishes it with a joining word</li>
+<li>Hunt for vowel teams (ai, ea, oa) on a cereal box or a store sign</li>
+<li>Ask: “Would you take the blame for someone else? When?”</li>
+</ul>
+</section>
+</div>
+
+<section class="card">
+<div class="card-head"><span class="ico">🎒</span><h2>Have on Hand</h2></div>
+<ul class="check">
+<li>A copy of <em>The Whipping Boy</em> by Sid Fleischman</li>
+<li>A device that can record for the fluency page</li>
+</ul>
+</section>
+
+<section class="card next">
+<div class="card-head"><span class="ico">⏭️</span><h2>Coming Up in Week 19</h2></div>
+<p><strong>Chapters 6–11.</strong> The runaways are now prisoners of the outlaws. Your student meets a new word part, <strong>port</strong>, which means “carry,” and adds reasons to their opinion writing.</p>
+</section>
+
+<p class="foot">Optima Academy Online · 3rd Grade ELA · Week 18 Family Guide</p>
+</div>
+</body>
+</html>
