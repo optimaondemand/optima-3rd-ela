@@ -134,14 +134,14 @@ js = block(js, 'var LANDMARK = {', '''var LANDMARK = {
 # ornaments, seals or headpieces until G3 has its own.
 js = rep(js, "board: { src: 'maps/year-board.jpg' },", "board: { src: 'art/road/year-board.jpg' },")
 js, n1 = re.subn(r"\n  covers: \{\n.*?\n  \},", """
-  /* the four novels on the G3 shelf. Covers come from Open Library by
-     cover id (an edition the lessons match); a cover that fails to load
+  /* the four novels on the G3 shelf. Covers are stored in the repo
+     (from Open Library, sized for the shelf); a cover that fails to load
      falls back to a drawn spine, so the shelf never shows a hole. */
   covers: {
-    stanley: 'https://covers.openlibrary.org/b/id/22062-M.jpg',
-    desp:    'https://covers.openlibrary.org/b/id/541143-M.jpg',
-    wb:      'https://covers.openlibrary.org/b/id/27023-M.jpg',
-    lww:     'https://covers.openlibrary.org/b/id/13303087-M.jpg'
+    stanley: 'art/covers/stanley.jpg',
+    desp:    'art/covers/desp.jpg',
+    wb:      'art/covers/wb.jpg',
+    lww:     'art/covers/lww.jpg'
   },""", js, count=1, flags=re.S)
 js, n2 = re.subn(r"\n  worlds: \{\n.*?\n  \},", "\n  worlds: {},", js, count=1, flags=re.S)
 if n1 != 1 or n2 != 1: sys.exit('port: covers/worlds not replaced')
