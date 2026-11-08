@@ -86,7 +86,7 @@ var ART = {
   /* §2.2 the year map. Bethany's painted board — the spaces are part
      of the picture, so their coordinates were measured off the file
      (BOARD_SPACES below) and the progress layer is drawn on top. */
-  board: { src: '' },
+  board: { src: 'art/road/year-board.jpg' },
 
   /* the four novels on the G3 shelf. Covers come from Open Library by
      cover id (an edition the lessons match); a cover that fails to load
@@ -802,18 +802,19 @@ var LANDMARK = {
    Thirty-six spaces, thirty-two weeks: a week claims its space by
    proportion, which keeps Start at week 1 and Finish at week 32
    without leaving gaps in the middle.                            */
-var BOARD_W = 1448, BOARD_H = 1086, BOARD_R = 23;
+var BOARD_W = 1536, BOARD_H = 1024, BOARD_R = 35;
 /* the painted vignettes, measured off the artwork. A world the
    student has not reached yet is desaturated and veiled, exactly the
    way an unread book lies flat on the shelf: the board then shows the
    year filling with colour as they go. */
 var BOARD_WORLDS = [
-  { id:'frisby', x:112, y:140, w:412, h:258 },
-  { id:'anne',   x:544, y:156, w:428, h:252 },
-  { id:'nts',    x:996, y:156, w:446, h:290 },
-  { id:'ft',     x: 84, y:652, w:438, h:288 },
-  { id:'pc',     x:512, y:682, w:406, h:270 },
-  { id:'synth',  x:950, y:686, w:494, h:266 }
+  { id:'stanley', x:  30, y: 700, w: 560, h: 310 },
+  { id:'nonfic',  x: 740, y: 700, w: 780, h: 310 },
+  { id:'desp',    x:  30, y: 470, w:1490, h: 240 },
+  { id:'wb',      x:  40, y: 290, w:1040, h: 215 },
+  { id:'med',     x:1060, y: 320, w: 460, h: 215 },
+  { id:'lww',     x:  30, y:  95, w:1100, h: 235 },
+  { id:'ext',     x:1110, y: 100, w: 410, h: 230 }
 ];
 /* a world is 'reached' once this lesson's week is inside it or past
    it, or once storage says any of its weeks has been worked */
@@ -827,45 +828,14 @@ function worldReached(prog, id) {
   return false;
 }
 var BOARD_SPACES = [
-  [118,373,'#C7922C'],
-  [220,407,'#C7922C'],
-  [329,433,'#C7922C'],
-  [432,435,'#C7922C'],
-  [536,420,'#6E8F3A'],
-  [642,418,'#6E8F3A'],
-  [746,434,'#6E8F3A'],
-  [850,447,'#6E8F3A'],
-  [955,438,'#6E8F3A'],
-  [1062,434,'#4A6E8F'],
-  [1165,450,'#4A6E8F'],
-  [1267,468,'#4A6E8F'],
-  [1352,510,'#4A6E8F'],
-  [1369,594,'#4A6E8F'],
-  [1270,647,'#4A6E8F'],
-  [1153,652,'#4A6E8F'],
-  [1040,651,'#4A6E8F'],
-  /* the four spaces that ran past Prince Caspian's picture were painted
-     out of the artwork and replaced by an arrow: the road from Number
-     the Stars goes straight on to Freedom Train's salmon spaces */
-  [463,645,'#C0623F'],
-  [356,619,'#C0623F'],
-  [254,596,'#C0623F'],
-  [156,605,'#C0623F'],
-  [75,660,'#C0623F'],
-  [60,747,'#C0623F'],
-  [79,847,'#C0623F'],
-  [146,909,'#C0623F'],
-  [242,948,'#C0623F'],
-  [347,965,'#C0623F'],
-  [447,966,'#7A5C86'],
-  [561,963,'#7A5C86'],
-  [679,960,'#7A5C86'],
-  [792,965,'#7A5C86'],
-  [901,980,'#C7922C'],
-  [1006,989,'#C7922C'],
-  [1111,988,'#C7922C'],
-  [1204,980,'#C7922C'],
-  [1293,958,'#C7922C']
+  [296,961,'#A8701F'], [415,952,'#A8701F'], [535,940,'#A8701F'], [651,928,'#A8701F'], [777,923,'#A8701F'],
+  [1241,917,'#4F7A3E'], [1364,916,'#4F7A3E'],
+  [505,657,'#8A3E66'], [611,649,'#8A3E66'], [713,641,'#8A3E66'], [819,640,'#8A3E66'], [925,637,'#8A3E66'],
+  [1033,640,'#8A3E66'], [1141,644,'#8A3E66'], [1243,656,'#8A3E66'], [1347,656,'#8A3E66'], [1444,627,'#8A3E66'],
+  [544,467,'#3B4A86'], [665,449,'#3B4A86'], [785,447,'#3B4A86'], [908,449,'#3B4A86'], [1029,465,'#3B4A86'],
+  [1213,489,'#7A6234'], [1352,478,'#7A6234'],
+  [400,269,'#2F6380'], [527,267,'#2F6380'], [657,278,'#2F6380'], [778,280,'#2F6380'], [897,286,'#2F6380'], [1023,290,'#2F6380'],
+  [1181,279,'#A8801F'], [1304,272,'#A8801F']
 ];
 var BOARD_N = BOARD_SPACES.length;
 /* ── where the owl stands ───────────────────────────────────────
@@ -883,12 +853,13 @@ var BOARD_N = BOARD_SPACES.length;
    Change the artwork and these anchors have to be re-measured with
    it — they describe the painting, not the curriculum. */
 var BOARD_LEGS = [
-  { id:'frisby', weeks:[1,  6], spaces:[ 1,  4] },   /* Frisby + the wk-6 workshop */
-  { id:'anne',   weeks:[7, 14], spaces:[ 5,  9] },
-  { id:'nts',    weeks:[15,19], spaces:[10, 17] },   /* incl. the wk-15 bridge */
-  { id:'ft',     weeks:[20,25], spaces:[18, 27] },
-  { id:'pc',     weeks:[26,30], spaces:[28, 31] },
-  { id:'synth',  weeks:[31,32], spaces:[32, 36] }
+  { id:'stanley', weeks:[1,  5], spaces:[ 1,  5] },
+  { id:'nonfic',  weeks:[6,  7], spaces:[ 6,  7] },
+  { id:'desp',    weeks:[8, 17], spaces:[ 8, 17] },
+  { id:'wb',      weeks:[18,22], spaces:[18, 22] },
+  { id:'med',     weeks:[23,24], spaces:[23, 24] },
+  { id:'lww',     weeks:[25,30], spaces:[25, 30] },
+  { id:'ext',     weeks:[31,32], spaces:[31, 32] }
 ];
 function legOfWeek(w) {
   for (var i = 0; i < BOARD_LEGS.length; i++) {
@@ -1154,7 +1125,7 @@ function drawBoardMap(svg) {
   /* the student's name, hand-written into the open field the artist
      left in the middle of the board. Second place the name appears. */
   if (p && p.name) {
-    s += '<text x="724" y="543" font-size="30" text-anchor="middle" ' +
+    s += '<text x="768" y="148" font-size="26" text-anchor="middle" ' +
          'font-family="Lora,Georgia,serif" font-style="italic" fill="#8B6914" opacity=".85">' +
          esc(p.name) + '’s journey</text>';
   }
@@ -1202,7 +1173,7 @@ function drawBoardMap(svg) {
   }
 
   /* the owl stands on today's space */
-  var me = BOARD_SPACES[cur - 1], OW = 150;
+  var me = BOARD_SPACES[cur - 1], OW = 124;
   /* the owl stands clear of the ring rather than on top of it, so the
      gold marker still reads as the space the student is on */
   var oy = me[1] - OW - 26;
@@ -1210,9 +1181,9 @@ function drawBoardMap(svg) {
        owlMarkSVG(p && p.owl ? p.owl : defaultCompanion(), OW) + '</g>';
   var label = 'LESSON ' + LESSON.week + '.' + dayNum(LESSON.day);
   var bw = 20 + label.length * 10.5;
-  var bx = me[0] < BOARD_W - 200 ? me[0] + 46 : me[0] - 46 - bw;
-  s += '<rect x="' + bx + '" y="' + (me[1] - 17) + '" width="' + bw + '" height="34" rx="17" fill="#C7922C"/>' +
-       '<text x="' + (bx + bw / 2) + '" y="' + (me[1] + 7) + '" font-size="18" text-anchor="middle" ' +
+  var bx = Math.max(8, Math.min(BOARD_W - bw - 8, me[0] - bw / 2)), by = me[1] + BOARD_R + 12;
+  s += '<rect x="' + bx + '" y="' + by + '" width="' + bw + '" height="34" rx="17" fill="#C7922C" stroke="#FFF8E9" stroke-width="2"/>' +
+       '<text x="' + (bx + bw / 2) + '" y="' + (by + 24) + '" font-size="18" text-anchor="middle" ' +
        'font-family="Nunito,sans-serif" font-weight="800" fill="#FFF8E9">' + label + '</text>';
 
   svg.innerHTML = s;

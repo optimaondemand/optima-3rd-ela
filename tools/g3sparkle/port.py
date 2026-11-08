@@ -132,7 +132,7 @@ js = block(js, 'var LANDMARK = {', '''var LANDMARK = {
 # G4's painted board is G4's art. G3 uses the drawn road: no board, no
 # covers (the shelf shows title spines; covers are copyrighted), and no
 # ornaments, seals or headpieces until G3 has its own.
-js = rep(js, "board: { src: 'maps/year-board.jpg' },", "board: { src: '' },")
+js = rep(js, "board: { src: 'maps/year-board.jpg' },", "board: { src: 'art/road/year-board.jpg' },")
 js, n1 = re.subn(r"\n  covers: \{\n.*?\n  \},", """
   /* the four novels on the G3 shelf. Covers come from Open Library by
      cover id (an edition the lessons match); a cover that fails to load
@@ -240,6 +240,54 @@ js = rep(js, """    '<div class="spk-copia-seed">' + DATA.copia.seed + '</div>';
 js = rep(js, "    ['warm',        function () { document.body.classList.add('spk-warm'); }],\n", "")
 
 js = rep(js, "  a.preload = 'metadata';\n  a.src = src;\n", "  a.preload = 'metadata';\n  a.src = src;\n  wrap._spkAudio = a;\n")
+# ── the G3 painted board (Bethany's art, 1536x1024, Nov 2026) ───────
+#    32 painted spaces = 32 weeks, one space a week. Centres measured off
+#    the file with a circle finder, not eyeballed. Each row reads left to
+#    right, bottom row first, like lines on a page: the painting's curves
+#    join the rows at the other ends, so the owl hops back to the left
+#    at the end of rows 1 and 3.
+js = rep(js, "var BOARD_W = 1448, BOARD_H = 1086, BOARD_R = 23;", "var BOARD_W = 1536, BOARD_H = 1024, BOARD_R = 35;")
+js = block(js, 'var BOARD_WORLDS = [', """var BOARD_WORLDS = [
+  { id:'stanley', x:  30, y: 700, w: 560, h: 310 },
+  { id:'nonfic',  x: 740, y: 700, w: 780, h: 310 },
+  { id:'desp',    x:  30, y: 470, w:1490, h: 240 },
+  { id:'wb',      x:  40, y: 290, w:1040, h: 215 },
+  { id:'med',     x:1060, y: 320, w: 460, h: 215 },
+  { id:'lww',     x:  30, y:  95, w:1100, h: 235 },
+  { id:'ext',     x:1110, y: 100, w: 410, h: 230 }
+];""")
+js = block(js, 'var BOARD_SPACES = [', """var BOARD_SPACES = [
+  [296,961,'#A8701F'], [415,952,'#A8701F'], [535,940,'#A8701F'], [651,928,'#A8701F'], [777,923,'#A8701F'],
+  [1241,917,'#4F7A3E'], [1364,916,'#4F7A3E'],
+  [505,657,'#8A3E66'], [611,649,'#8A3E66'], [713,641,'#8A3E66'], [819,640,'#8A3E66'], [925,637,'#8A3E66'],
+  [1033,640,'#8A3E66'], [1141,644,'#8A3E66'], [1243,656,'#8A3E66'], [1347,656,'#8A3E66'], [1444,627,'#8A3E66'],
+  [544,467,'#3B4A86'], [665,449,'#3B4A86'], [785,447,'#3B4A86'], [908,449,'#3B4A86'], [1029,465,'#3B4A86'],
+  [1213,489,'#7A6234'], [1352,478,'#7A6234'],
+  [400,269,'#2F6380'], [527,267,'#2F6380'], [657,278,'#2F6380'], [778,280,'#2F6380'], [897,286,'#2F6380'], [1023,290,'#2F6380'],
+  [1181,279,'#A8801F'], [1304,272,'#A8801F']
+];""")
+js = block(js, 'var BOARD_LEGS = [', """var BOARD_LEGS = [
+  { id:'stanley', weeks:[1,  5], spaces:[ 1,  5] },
+  { id:'nonfic',  weeks:[6,  7], spaces:[ 6,  7] },
+  { id:'desp',    weeks:[8, 17], spaces:[ 8, 17] },
+  { id:'wb',      weeks:[18,22], spaces:[18, 22] },
+  { id:'med',     weeks:[23,24], spaces:[23, 24] },
+  { id:'lww',     weeks:[25,30], spaces:[25, 30] },
+  { id:'ext',     weeks:[31,32], spaces:[31, 32] }
+];""")
+# no open field on this painting for the student's name: it goes on a
+# small ribbon under the title banner instead
+js = rep(js, """    s += '<text x="724" y="543" font-size="30" text-anchor="middle" ' +""",
+             """    s += '<text x="768" y="148" font-size="26" text-anchor="middle" ' +""")
+# the owl is a little smaller on this board, and the LESSON pill sits
+# under the space so it never covers the next one along the row
+js = rep(js, "var me = BOARD_SPACES[cur - 1], OW = 150;", "var me = BOARD_SPACES[cur - 1], OW = 124;")
+js = rep(js, """  var bx = me[0] < BOARD_W - 200 ? me[0] + 46 : me[0] - 46 - bw;
+  s += '<rect x="' + bx + '" y="' + (me[1] - 17) + '" width="' + bw + '" height="34" rx="17" fill="#C7922C"/>' +
+       '<text x="' + (bx + bw / 2) + '" y="' + (me[1] + 7) + '" font-size="18" text-anchor="middle" ' +""",
+             """  var bx = Math.max(8, Math.min(BOARD_W - bw - 8, me[0] - bw / 2)), by = me[1] + BOARD_R + 12;
+  s += '<rect x="' + bx + '" y="' + by + '" width="' + bw + '" height="34" rx="17" fill="#C7922C" stroke="#FFF8E9" stroke-width="2"/>' +
+       '<text x="' + (bx + bw / 2) + '" y="' + (by + 24) + '" font-size="18" text-anchor="middle" ' +""")
 # ── G3 additions, inside the IIFE, ahead of boot
 m = io.open(mod, encoding='utf-8').read()
 js = rep(js, '\nfunction boot() {', '\n' + m + '\n\nfunction boot() {')
