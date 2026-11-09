@@ -1,0 +1,133 @@
+{
+ "week": 18,
+ "day": 2,
+ "book": "The Whipping Boy",
+ "chapters": "Chapters 3–4",
+ "title": "The Runaways’ Ride",
+ "pattern": "A",
+ "map": "Medieval Forest",
+ "mapFilter": "Forest",
+ "stamp": {
+  "name": "Runaways’ Ride",
+  "art": "horseshoe"
+ },
+ "brief": "Hoo! Let’s step off the Reading Road and into the book. In Chapter 3, the prince wakes Jemmy in the night to run away. Build their ride in a forest, then take a photo for your teacher.",
+ "look": "This stop is a forest at night, from Chapters 3 and 4. The prince and Jemmy ride a castle horse into the trees.",
+ "models": [
+  {
+   "name": "White Horse - Idle",
+   "type": "White Horse",
+   "why": "from the castle stable",
+   "icon": "horse"
+  },
+  {
+   "name": "Basket",
+   "type": "Basket",
+   "why": "Jemmy carries it. Make it big!",
+   "icon": "basket"
+  },
+  {
+   "name": "Cloak",
+   "type": "Cloak",
+   "why": "the prince wears it",
+   "icon": "cloak"
+  },
+  {
+   "name": "Moon Phases - Full Moon",
+   "type": "Full Moon",
+   "why": "it lit their way",
+   "icon": "moon"
+  }
+ ],
+ "steps": [
+  {
+   "title": "Know your models",
+   "say": "step1",
+   "text": "These are your four models. Say each name out loud. This list is also in VR: open your menu, click the **Canvas** tab, then pick our assignment."
+  },
+  {
+   "title": "Go in",
+   "say": "step2",
+   "first": true,
+   "text": "Put on your headset and open the **On-Demand** app. Click the **Explore** tab. Type **Forest** in the **Filter environments** box and click **Medieval Forest**. Then click **Begin Solo**."
+  },
+  {
+   "title": "Build it",
+   "say": "step3",
+   "howto": "move",
+   "text": "Press the **top button on your right controller** and click **Models**. Put the **horse** between the trees. Put the **basket** and the **cloak** next to it. Put the **moon** up high."
+  },
+  {
+   "title": "Say it out loud",
+   "say": "step4",
+   "frame": "“The prince ran away because ___. He picked Jemmy because ___.”",
+   "text": "Point to the horse and say this out loud:",
+   "spoken": "Point to the horse and say this out loud. The prince ran away because… and finish the sentence. He picked Jemmy because… and finish that one too."
+  },
+  {
+   "title": "Snap and submit",
+   "say": "step5",
+   "submit": true,
+   "fits": "the horse, the basket, the cloak and the moon",
+   "text": ""
+  }
+ ],
+ "extra": {
+  "say": "extra",
+  "text": "Add a **Frog** by the horse. Say why the prince once dumped bullfrogs in the moat."
+ },
+ "points": "Your photo shows the horse, the big basket, the cloak and the moon.",
+ "mapday": {
+  "say": "mapday",
+  "intro": "No headset today? That’s okay. It’s Road Map Day. Read each clue from the book and tap the thing it names. Then finish two sentences about the runaways.",
+  "clues": [
+   {
+    "q": "“…carrying a wicker basket the size of a sea chest.”",
+    "ch": "Chapter 3",
+    "a": "basket"
+   },
+   {
+    "q": "“…the prince was wearing a black cloak…”",
+    "ch": "Chapter 3",
+    "a": "cloak"
+   },
+   {
+    "q": "“The night moon had lit their way like a lantern.”",
+    "ch": "Chapter 4",
+    "a": "moon"
+   },
+   {
+    "q": "“…double-mounted on a horse from the castle stable…”",
+    "ch": "Chapter 4",
+    "a": "horse"
+   }
+  ],
+  "choices": [
+   "horse",
+   "sword",
+   "basket",
+   "dog",
+   "cloak",
+   "moon"
+  ],
+  "frames": [
+   {
+    "start": "The prince ran away because",
+    "hints": [
+     "he was bored",
+     "everything was boring",
+     "his pranks were boring now"
+    ]
+   },
+   {
+    "start": "He made Jemmy come because",
+    "hints": [
+     "he needed a servant",
+     "he had no friends",
+     "Jemmy had to carry the basket"
+    ]
+   }
+  ],
+  "minWords": 20
+ }
+}

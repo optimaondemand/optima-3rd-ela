@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Optima Academy Online — {{CANVAS}}</title>
+<!-- G3 ELA weekly VR · Reading Road Stop · built by tools/vr/build_vr.py from tools/vr/week{{WEEK}}.json.
+     Do not hand-edit: change the JSON (or tools/vr/template.html) and rebuild. Always Day 2 of the week. -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400&family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#0E1C42;--ink:#24324F;--muted:#6B7690;--sky:#55C8E8;--gold:#C7922C;--gold2:#E9C46A;--line:#D9E0F0;--bg:#F0F2F8;--ok:#2E7D4F;--okbg:#E3F8ED;--bad:#B4433C;--blue:#2B5BA8;--bluebg:#EEF3FF;--blueline:#C9D6F2}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Nunito',Verdana,sans-serif;background:var(--bg);color:var(--navy);line-height:1.6;-webkit-font-smoothing:antialiased}
+button{font-family:inherit}
+.page{max-width:920px;margin:0 auto;background:#fff;box-shadow:0 0 40px rgba(14,28,66,.08);min-height:100vh}
+.hdr{background:var(--navy);border-bottom:6px solid var(--sky);padding:20px 28px 18px;color:#fff}
+.brand{display:flex;align-items:center;gap:12px;margin-bottom:12px}
+.logo{width:48px;height:48px;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.logo img{width:44px;height:34px}
+.org{font-size:20px;font-weight:800;line-height:1.15}.orgsub{font-size:11px;color:var(--sky)}
+.tag{display:inline-block;background:var(--gold);color:var(--navy);font-weight:900;font-size:12px;letter-spacing:.06em;text-transform:uppercase;border-radius:999px;padding:3px 12px;margin-bottom:8px}
+.hdr h1{font-family:'Lora',Georgia,serif;font-size:28px;line-height:1.25}
+.hdr .sub{font-size:15px;color:#C9D6F2;margin-top:4px}
+.wrap{padding:22px 24px 40px}
+@media(max-width:520px){.wrap{padding:18px 14px 34px}.hdr{padding:18px 16px}.hdr h1{font-size:24px}}
+.opti{display:flex;gap:16px;align-items:flex-start;background:linear-gradient(180deg,#FFFBF0,#FFF6E0);border:2px solid #EAD8AE;border-radius:18px;padding:16px 18px;margin-bottom:16px}
+.opti img{width:74px;height:auto;flex-shrink:0}
+.opti .who{font-weight:900;font-size:13px;letter-spacing:.06em;text-transform:uppercase;color:#8A6A1E}
+.opti p{font-size:17px;color:var(--ink)}
+@media(max-width:520px){.opti img{width:56px}}
+.say{display:inline-flex;align-items:center;justify-content:center;width:34px;height:34px;margin:0 8px 0 0;vertical-align:middle;border-radius:50%;border:2px solid var(--blueline);background:#fff;cursor:pointer;font-size:16px;line-height:1;padding:0}
+.say.on{background:#FFE38A;border-color:var(--gold)}
+.say[hidden]{display:none!important}
+.ra{font-size:13px;font-weight:800;color:var(--blue);background:none;border:none;cursor:pointer;margin-left:2px}
+.ra[hidden]{display:none}
+.w.now{background:#FFE38A;border-radius:4px;box-shadow:0 0 0 2px #FFE38A}
+.w.said{color:#7A86A2}
+.look{background:#FFF8E6;border:2px solid #F0DDA8;border-radius:14px;padding:12px 16px;margin-bottom:16px}
+.look h2{font-size:15px;font-weight:900;color:#8A6A1E;margin-bottom:2px}
+.look p{font-size:16px;color:var(--ink)}
+.paths{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:16px}
+.path{border:3px solid var(--line);background:#fff;border-radius:14px;padding:12px 14px;text-align:left;cursor:pointer;color:var(--navy)}
+.path b{display:block;font-size:17px}.path small{color:var(--muted);font-size:14px}
+.path[aria-pressed="true"]{border-color:var(--gold);background:#FFFBEA}
+@media(max-width:560px){.paths{grid-template-columns:1fr}}
+.card{border:3px solid var(--gold2);border-radius:18px;padding:16px 18px 18px;background:#FFFEF9;margin-bottom:16px}
+.card h2{font-family:'Lora',Georgia,serif;font-size:22px;margin-bottom:8px}
+.job{background:var(--navy);color:#fff;border-radius:12px;padding:10px 14px;font-size:16px;margin-bottom:14px}
+.job b{display:inline-flex;width:24px;height:24px;border-radius:50%;background:var(--gold);color:var(--navy);align-items:center;justify-content:center;font-size:13px;margin-right:2px}
+.steps{list-style:none;display:flex;flex-direction:column;gap:12px}
+.step{border:2px solid var(--line);border-radius:14px;padding:14px 16px;background:#fff}
+.step.cur{border-color:var(--gold);box-shadow:0 0 0 3px rgba(233,196,106,.35)}
+.step.done{background:#F6FFF9;border-color:#B8E8CF}
+.step.done .next-step,.step.done .models,.step.done .howto{display:none}
+.step-n{display:inline-block;background:var(--navy);color:#fff;font-weight:800;border-radius:999px;padding:4px 12px;font-size:14px;margin-bottom:8px}
+.step.done .step-n{background:var(--ok)}
+.step.done .step-n::before{content:'✓ '}
+.step-t{font-size:17px;color:var(--ink)}
+.step.done .step-t{font-size:14px;color:var(--muted)}
+.howto{background:var(--bluebg);border:2px solid var(--blueline);border-radius:12px;padding:9px 12px;margin-top:10px;font-size:15px;color:var(--ink)}
+.howto.first{display:block;margin:0 0 8px}
+.say-it{font-family:'Lora',Georgia,serif;font-size:17px}
+.next-step{margin-top:12px}
+.models{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:12px}
+@media(max-width:620px){.models{grid-template-columns:1fr}}
+.model{display:flex;gap:10px;align-items:center;border:2px solid var(--line);border-radius:12px;padding:8px 10px;background:#FAFBFF}
+.mi svg{width:46px;height:46px;display:block}
+.model b{display:block;font-size:16px}.model small{display:block;color:var(--muted);font-size:13px}
+.model .why{font-size:14px;color:var(--ink)}
+.btn{border:none;border-radius:12px;padding:11px 18px;font-size:16px;font-weight:800;cursor:pointer}
+.btn.gold{background:linear-gradient(135deg,#F4D27A,var(--gold));color:var(--navy)}
+.btn.navy{background:var(--navy);color:#fff}
+.btn.ghost{background:#fff;color:var(--navy);border:2px solid var(--line)}
+.btn:disabled{opacity:.45;cursor:not-allowed}
+.extra{display:flex;gap:12px;align-items:flex-start;border:2px dashed var(--gold2);border-radius:14px;padding:12px 14px;margin-top:14px;background:#FFFDF4}
+.extra svg{width:44px;height:44px;flex-shrink:0}
+.extra .lab{font-weight:900;font-size:13px;letter-spacing:.06em;text-transform:uppercase;color:#8A6A1E}
+.points{margin-top:14px;font-size:15px;background:#F7F9FD;border:1px solid var(--line);border-radius:12px;padding:10px 14px}
+.done-box{display:none;text-align:center;border:3px solid var(--gold2);border-radius:18px;padding:16px;background:#FFFBEA;margin-top:14px}
+.done-box.show{display:block;animation:pop .5s ease}
+@keyframes pop{from{transform:scale(.92);opacity:0}to{transform:none;opacity:1}}
+.stamp{width:130px;height:130px;display:block;margin:0 auto 6px;transform:rotate(-8deg)}
+.done-box p{font-size:17px}
+/* help drawer */
+details.help{border:2px solid var(--line);border-radius:14px;margin-top:16px;background:#fff}
+details.help>summary{cursor:pointer;list-style:none;padding:12px 16px;display:flex;gap:10px;align-items:center;font-size:16px}
+details.help>summary small{display:block;color:var(--muted);font-size:13px}
+.hd-body{padding:0 16px 16px}
+.hd-frame{position:relative;padding-top:56.25%;border-radius:12px;overflow:hidden;background:#000;margin-bottom:6px}
+.hd-frame iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.hd-cap,.hd-note,.hd-alt{font-size:14px;color:var(--muted);margin-bottom:10px}
+.hd-group{font-size:16px;margin:14px 0 8px}
+.hd-steps{list-style:none;display:flex;flex-direction:column;gap:10px}
+.hd-step{display:grid;grid-template-columns:200px 1fr;gap:12px;align-items:start;border:1px solid var(--line);border-radius:12px;padding:8px}
+.hd-step img{width:100%;height:auto;border-radius:8px;display:block}
+.hd-step p{font-size:15px;color:var(--ink)}
+.hd-n{display:inline-flex;width:22px;height:22px;border-radius:50%;background:var(--navy);color:#fff;font-size:12px;font-weight:900;align-items:center;justify-content:center;margin-right:6px}
+@media(max-width:560px){.hd-step{grid-template-columns:1fr}}
+/* Road Map Day */
+.scene{position:relative;border-radius:14px;overflow:hidden;border:3px solid #3A4E7A;margin:12px 0}
+.scene svg.bg{display:block;width:100%;height:auto}
+.slot{position:absolute;width:15%;aspect-ratio:1;border:2px dashed rgba(255,255,255,.55);border-radius:12px;display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,.75);font-weight:900;font-size:13px;text-align:center}
+.slot svg{width:100%;height:100%}
+.slot.filled{border:none;animation:pop .45s ease}
+.clue{background:#fff;border:2px solid var(--gold2);border-radius:14px;padding:12px 14px;margin-bottom:10px}
+.clue .q{font-family:'Lora',Georgia,serif;font-size:18px}
+.clue .ch{font-size:13px;color:var(--muted);font-weight:800}
+.objs{display:grid;grid-template-columns:repeat(6,1fr);gap:8px}
+@media(max-width:620px){.objs{grid-template-columns:repeat(3,1fr)}}
+.obj{border:2px solid var(--line);background:#fff;border-radius:12px;padding:6px 4px;cursor:pointer;font-weight:800;font-size:14px;color:var(--navy);display:flex;flex-direction:column;align-items:center;gap:2px}
+.obj svg{width:44px;height:44px}
+.obj:disabled{opacity:.35;cursor:default}
+.obj.shake{animation:shake .35s}
+@keyframes shake{25%{transform:translateX(-4px)}75%{transform:translateX(4px)}}
+.fb{min-height:24px;font-weight:700;margin:6px 0}
+.fb.ok{color:var(--ok)}.fb.bad{color:var(--bad)}
+.frame{margin-top:12px}
+.frame label{display:block;font-size:17px;margin-bottom:4px}
+textarea{font-family:'Nunito',sans-serif;font-size:17px;color:var(--navy);border:2px solid var(--line);border-radius:10px;padding:9px 12px;width:100%;min-height:76px;resize:vertical}
+textarea:focus{outline:none;border-color:var(--blue)}
+.chips{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin-top:6px;font-size:13px;color:var(--muted)}
+.chipx{border:2px solid var(--line);background:#fff;border-radius:999px;padding:4px 10px;font-size:14px;font-weight:700;cursor:pointer;color:var(--navy)}
+.wc{font-size:14px;color:var(--muted);margin-top:8px}.wc.ok{color:var(--ok)}
+.namebox{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-top:12px}
+.namebox input{font-family:inherit;font-size:16px;border:2px solid var(--line);border-radius:10px;padding:7px 10px;max-width:260px;width:100%}
+[hidden]{display:none!important}
+/* save view + print */
+.saveview{display:none;position:fixed;inset:0;z-index:100;background:#E9ECF4;overflow:auto;padding:18px}
+.saveview.open{display:block}
+.save-bar{max-width:760px;margin:0 auto 14px;background:#fff;border-radius:14px;padding:14px 18px}
+.save-bar ol{margin:6px 0 10px 22px}
+.sheet{max-width:760px;margin:0 auto;background:#fff;padding:26px}
+.sheet h3{font-family:'Lora',Georgia,serif;font-size:22px;margin-bottom:4px}
+.sheet .k{font-size:12px;font-weight:900;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin-bottom:8px}
+.sheet p.ans{font-family:'Lora',Georgia,serif;font-size:18px;margin:6px 0 12px;border-bottom:1px solid var(--line);padding-bottom:8px}
+.sheet .stamp{width:110px;height:110px;margin:10px 0 0}
+@media print{@page{margin:12mm}body > .page{display:none!important}.saveview{display:block!important;position:static;padding:0;background:#fff}.save-bar{display:none!important}.sheet{padding:0}*{-webkit-print-color-adjust:exact;print-color-adjust:exact}}
+.foot{font-size:12px;color:var(--muted);text-align:center;padding:16px}
+</style>
+</head>
+<body>
+<div class="page">
+<header class="hdr">
+  <div class="brand"><div class="logo"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy"></div><div><div class="org">Optima Academy Online</div><div class="orgsub">3rd Grade ELA · {{BOOK}} · {{CHAPTERS}}</div></div></div>
+  <div class="tag">🥽 Reading Road Stop · Week {{WEEK}}</div>
+  <h1>{{TITLE}}</h1>
+  <div class="sub">{{CANVAS}}</div>
+</header>
+<main class="wrap">
+  <section class="opti"><img src="assets/companions/owl.png" alt="Opti the owl"><div><div class="who">Opti · your guide</div><p data-say="brief" data-ra="1">{{BRIEF}}</p></div></section>
+  <section class="look"><h2>👀 What am I looking at?</h2><p>{{LOOK}}</p></section>
+
+  <div class="paths" role="group" aria-label="Choose your path">
+    <button type="button" class="path" id="pathVR" aria-pressed="true"><b>🥽 I have a headset</b><small>Build it in VR.</small></button>
+    <button type="button" class="path" id="pathMap" aria-pressed="false"><b>📋 No headset today?</b><small>Play Road Map Day on this page.</small></button>
+  </div>
+
+  <section class="card" id="vr">
+    <h2>🥽 In VR</h2>
+    <div class="job">{{JOB}}</div>
+    <ol class="steps" id="steps">{{STEPS}}</ol>
+    <div class="extra" id="extra" hidden><span aria-hidden="true">{{EXTRA_ICON}}</span><div><div class="lab">⭐ Extra stop (if you have time)</div><p data-say="extra">{{EXTRA}}</p></div></div>
+    <div class="points">⭐ <b>Full points:</b> {{POINTS}}</div>
+    <div class="done-box" id="vrDone">{{STAMP_VR}}<p><b>Road stamp earned!</b> It’s on your Reading Road now.</p></div>
+
+    <details class="help" id="help">
+      <summary><span aria-hidden="true">🛟</span><span><b>Having trouble in VR?</b><small>Steps with pictures, and a how-to video</small></span></summary>
+      <div class="hd-body">
+        <div class="hd-frame" data-src="https://www.youtube-nocookie.com/embed/slDH-WN4scY?rel=0"></div>
+        <p class="hd-cap">How-to video: Optima On-Demand and Canvas</p>
+        <p class="hd-note">These pictures come from other maps. Your map will be <b>{{MAP}}</b>, but the buttons are the same.</p>
+        <h4 class="hd-group">🖥️ First time only: connect Canvas (on your computer)</h4>
+        <ol class="hd-steps">
+          <li class="hd-step"><img loading="lazy" src="assets/vr/vr-canvas-help-01-login.jpg" alt="The Optima On Demand login page, with the Sign In button circled."><div><span class="hd-n">1</span><b>Log in</b><p>Go to <a href="https://xr.optimaed.com" target="_blank" rel="noopener">xr.optimaed.com</a>. Log in the same way you do in VR.</p></div></li>
+          <li class="hd-step"><img loading="lazy" src="assets/vr/vr-canvas-help-02-authorize.jpg" alt="The Canvas box that asks to connect, with the Authorize button circled."><div><span class="hd-n">2</span><b>Connect to Canvas</b><p>Click <b>Connect to Canvas</b>. Log in to Canvas, then click <b>Authorize</b>.</p></div></li>
+          <li class="hd-step"><img loading="lazy" src="assets/vr/vr-canvas-help-03-connected.jpg" alt="The Canvas page on the website, with the Canvas button and the list of assignments circled."><div><span class="hd-n">3</span><b>Find our class</b><p>Click <b>Canvas</b> on the left and pick our class. You only do this one time.</p></div></li>
+        </ol>
+        <h4 class="hd-group">📄 Only if the assignment has a file</h4>
+        <ol class="hd-steps">
+          <li class="hd-step"><img loading="lazy" src="assets/vr/vr-canvas-help-04-upload.jpg" alt="The Upload file box, with the Upload File button circled."><div><span class="hd-n">4</span><b>Get the file ready</b><p>Click <b>Open in Canvas</b> to download the file. Then click <b>My Files</b> and <b>Upload File</b>.</p></div></li>
+        </ol>
+        <h4 class="hd-group">🥽 In the headset</h4>
+        <ol class="hd-steps">
+          <li class="hd-step"><img loading="lazy" src="assets/vr/vr-canvas-help-05-explore.jpg" alt="The Explore tab in the headset, with the tab and the filter box circled."><div><span class="hd-n">5</span><b>Explore tab</b><p>Click <b>Explore</b>. Type the map’s name in <b>Filter environments</b>.</p></div></li>
+          <li class="hd-step"><img loading="lazy" src="assets/vr/vr-canvas-help-06-begin-solo.jpg" alt="A map is picked and the Begin Solo button is circled."><div><span class="hd-n">6</span><b>Begin Solo</b><p>Click the map, then click <b>Begin Solo</b>.</p></div></li>
+          <li class="hd-step"><img loading="lazy" src="assets/vr/vr-canvas-help-07-canvas.jpg" alt="The Canvas tab in the headset, with the tab and the assignment box circled."><div><span class="hd-n">7</span><b>Read the assignment</b><p>Press the <b>top button on your right controller</b>. Click <b>Canvas</b> and pick our assignment.</p></div></li>
+          <li class="hd-step"><img loading="lazy" src="assets/vr/vr-canvas-help-08-models.jpg" alt="The Models tab open in an ocean map, with a list of models."><div><span class="hd-n">8</span><b>Bring out the models</b><p>Click <b>Models</b>. Type the name, then click a model to bring it out.</p></div></li>
+          <li class="hd-step"><img loading="lazy" src="assets/vr/vr-canvas-help-08b-move.jpg" alt="A controller moving a fish model in an ocean map."><div><span class="hd-n">9</span><b>Move and resize</b><p>Grab with the <b>palm trigger</b>. Use <b>both</b> palm triggers to make it bigger or smaller.</p></div></li>
+          <li class="hd-step"><img loading="lazy" src="assets/vr/vr-canvas-help-09-placed.jpg" alt="A picture file placed in an ocean map."><div><span class="hd-n">10</span><b>Need a file?</b><p>Click <b>Library</b>, then <b>Files</b>, and pick your file.</p></div></li>
+          <li class="hd-step"><img loading="lazy" src="assets/vr/vr-canvas-help-10-camera.jpg" alt="The Library camera, with the Height slider and the Take photo button circled."><div><span class="hd-n">11</span><b>Take a photo</b><p>Click <b>Library</b>, then <b>Camera</b>. Make it all fit, then click <b>Take photo</b>.</p></div></li>
+          <li class="hd-step"><img loading="lazy" src="assets/vr/vr-canvas-help-11-choose.jpg" alt="The My Files list in the headset, with the newest file circled."><div><span class="hd-n">12</span><b>Pick your photo</b><p>Click <b>Canvas</b> and pick our assignment. Click <b>Choose from My Files</b>, pick your newest photo, then <b>Use this file</b>.</p></div></li>
+          <li class="hd-step"><img loading="lazy" src="assets/vr/vr-canvas-help-12-submitted.jpg" alt="The Canvas tab after submitting, with the green Submitted tag circled."><div><span class="hd-n">13</span><b>Submit to Canvas</b><p>Click <b>Submit to Canvas</b>. Look for the green <b>Submitted</b> tag. To leave, press the <b>Meta button</b>, then <b>Quit</b>.</p></div></li>
+        </ol>
+        <h4 class="hd-group">🔁 Didn’t work in VR? Two other ways</h4>
+        <ol class="hd-steps">
+          <li class="hd-step"><img loading="lazy" src="assets/vr/vr-canvas-help-13-portal-submit.jpg" alt="The Canvas page on the website, with the Choose from My Files button circled."><div><span class="hd-n">14</span><b>Use the website</b><p>Go to <a href="https://xr.optimaed.com" target="_blank" rel="noopener">xr.optimaed.com</a> and click <b>Canvas</b>. Pick our assignment, click <b>Choose from My Files</b>, and submit your photo.</p></div></li>
+        </ol>
+        <p class="hd-alt">Your photos also save to <b>My Files</b> at xr.optimaed.com. You can download your photo there and upload it to the Canvas assignment yourself.</p>
+      </div>
+    </details>
+  </section>
+
+  <section class="card" id="map" hidden>
+    <h2>📋 Road Map Day</h2>
+    <p data-say="mapday" class="step-t">{{MAP_INTRO}}</p>
+    <div class="scene" aria-label="A forest at night, waiting for the runaways' things">
+      <svg class="bg" viewBox="0 0 600 320" aria-hidden="true"><defs><linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#12204A"/><stop offset="1" stop-color="#2E4470"/></linearGradient></defs>
+        <rect width="600" height="320" fill="url(#sky)"/><g fill="#fff" opacity=".7"><circle cx="60" cy="40" r="1.4"/><circle cx="160" cy="22" r="1.2"/><circle cx="250" cy="60" r="1.1"/><circle cx="330" cy="30" r="1.4"/><circle cx="560" cy="70" r="1.2"/></g>
+        <path d="M0 250 Q150 230 300 248 T600 244 V320 H0Z" fill="#1E3324"/>
+        <g fill="#16291C"><path d="M20 260 L60 120 L100 260Z"/><path d="M80 262 L118 150 L156 262Z"/><path d="M470 258 L512 130 L554 258Z"/><path d="M530 262 L566 160 L600 262Z"/><path d="M380 256 L410 170 L440 256Z"/></g>
+        <path d="M0 290 Q300 270 600 292 V320 H0Z" fill="#284430"/>
+      </svg>
+      <div class="slot" id="slot-moon" style="left:66%;top:6%">moon</div>
+      <div class="slot" id="slot-horse" style="left:30%;top:52%">horse</div>
+      <div class="slot" id="slot-basket" style="left:48%;top:62%">basket</div>
+      <div class="slot" id="slot-cloak" style="left:14%;top:60%">cloak</div>
+    </div>
+    <div class="clue" id="clue"><div class="q" id="clueQ"></div><div class="ch" id="clueCh"></div></div>
+    <div class="objs" id="objs">{{CHOICES}}</div>
+    <div class="fb" id="mfb" role="status"></div>
+    <div id="frames" hidden>
+      {{FRAMES}}
+      <div class="wc" id="wc"></div>
+      <div class="namebox"><label for="nm"><b>Your name</b></label><input id="nm" type="text" maxlength="40" autocomplete="off"></div>
+      <button type="button" class="btn gold" id="savePdf" style="margin-top:12px" disabled>📄 Save my Road Map Day page</button>
+      <p class="wc">Then upload the PDF to <b>{{CANVAS}}</b> in Canvas.</p>
+    </div>
+    <div class="done-box" id="mapDone">{{STAMP_MAP}}<p><b>Map stamp earned!</b> It’s on your Reading Road now.</p></div>
+  </section>
+</main>
+<div class="foot">Optima Academy Online · 3rd Grade ELA · {{CANVAS}}</div>
+</div>
+<div class="saveview" id="saveview" role="dialog" aria-label="Save your Road Map Day page"></div>
+<script>window.VR = {{DATA}};</script>
+<script>
+(function(){'use strict';
+var V = window.VR, W = V.week, KEY = 'oao.g3ela.vr.' + W, PKEY = 'oao.g3ela.vrpage.' + W;
+var AUDIO = 'assets/audio/guide/opti/g3ela-vr-' + W + '-';
+function $(s,r){return (r||document).querySelector(s);} function $$(s,r){return Array.prototype.slice.call((r||document).querySelectorAll(s));}
+function esc(t){return String(t==null?'':t).replace(/[&<>"']/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];});}
+function words(t){return String(t||'').trim().split(/\s+/).filter(Boolean).length;}
+var S={}; try{S=JSON.parse(localStorage.getItem(PKEY)||'{}')||{};}catch(e){}
+function save(){try{localStorage.setItem(PKEY,JSON.stringify(S));}catch(e){}}
+function stamp(kind){try{var cur=localStorage.getItem(KEY); if(cur!=='vr') localStorage.setItem(KEY,kind);}catch(e){}}
+
+/* Opti's 🔊 on every voiced line, hidden until the clip exists; the brief also gets a read-along */
+var NOW=null;
+$$('[data-say]').forEach(function(p){
+  var slot=p.getAttribute('data-say'), b=document.createElement('button'); b.type='button'; b.className='say'; b.hidden=true;
+  b.setAttribute('aria-label','Hear Opti read this'); b.innerHTML='<span aria-hidden="true">🔊</span>';
+  var a=new Audio(); a.preload='metadata'; var ws=null, raf=0, tot=0, cum=[];
+  if(p.getAttribute('data-ra')){
+    var txt=p.textContent, html='', wi=0; txt.split(/(\s+)/).forEach(function(w){ if(!w) return; if(/^\s+$/.test(w)){html+=' ';return;} var wt=w.replace(/[^\w']/g,'').length+2+(/[.!?]$/.test(w)?6:/[,;:]$/.test(w)?3:0); cum.push(tot); tot+=wt; html+='<span class="w">'+esc(w)+'</span>'; wi++; });
+    p.innerHTML=html; ws=$$('.w',p);
+  }
+  function frame(){ if(ws&&a.duration){ var f=Math.min(1,Math.max(0,(a.currentTime-.25)/Math.max(.5,a.duration-.5)))*tot,k=0; while(k+1<cum.length&&cum[k+1]<=f)k++; ws.forEach(function(x,i){x.classList.toggle('said',i<k);x.classList.toggle('now',i===k);}); } if(!a.paused) raf=requestAnimationFrame(frame); }
+  a.addEventListener('loadedmetadata',function(){b.hidden=false;});
+  a.addEventListener('play',function(){b.classList.add('on'); raf=requestAnimationFrame(frame);});
+  a.addEventListener('pause',function(){b.classList.remove('on'); cancelAnimationFrame(raf);});
+  a.addEventListener('ended',function(){b.classList.remove('on'); if(ws) ws.forEach(function(x){x.classList.remove('now');x.classList.add('said');});});
+  a.src=AUDIO+slot+'.mp3';
+  b.onclick=function(){ if(!a.paused){a.pause();return;} if(NOW&&NOW!==a){try{NOW.pause();}catch(e){}} NOW=a; a.currentTime=0; a.play().catch(function(){}); };
+  p.insertBefore(b,p.firstChild);
+});
+
+/* the two paths */
+function path(p){ $('#pathVR').setAttribute('aria-pressed',p==='vr'); $('#pathMap').setAttribute('aria-pressed',p==='map'); $('#vr').hidden=p!=='vr'; $('#map').hidden=p!=='map'; S.path=p; save(); }
+$('#pathVR').onclick=function(){path('vr');}; $('#pathMap').onclick=function(){path('map');};
+
+/* VR steps, one at a time */
+var steps=$$('#steps .step'), N=steps.length;
+function showSteps(){ var k=Math.min(S.step||0,N); steps.forEach(function(s,i){ s.hidden=i>k; s.classList.toggle('done',i<k); s.classList.toggle('cur',i===k); });
+  $('#extra').hidden=k<2; if(k>=N){ $('#vrDone').classList.add('show'); stamp('vr'); } }
+steps.forEach(function(s,i){ $('.next-step',s).onclick=function(){ S.step=i+1; save(); showSteps(); var nx=steps[i+1]||$('#vrDone'); if(nx) setTimeout(function(){nx.scrollIntoView({behavior:'smooth',block:'center'});},50); }; });
+showSteps();
+
+/* help drawer: load the video only when opened */
+$('#help').addEventListener('toggle',function(){ var f=$('.hd-frame',this); if(this.open&&!f.firstChild){ var i=document.createElement('iframe'); i.src=f.getAttribute('data-src'); i.title='How-to video: Optima On-Demand and Canvas'; i.allow='encrypted-media; picture-in-picture'; i.allowFullscreen=true; f.appendChild(i);} });
+
+/* Road Map Day: clue game */
+var C=V.clues; S.placed=S.placed||[];
+function slotFill(o){ var sl=$('#slot-'+o); if(sl){ sl.innerHTML=V.icons[o]; sl.classList.add('filled'); } }
+function showClue(){ var k=S.placed.length;
+  S.placed.forEach(slotFill); $$('.obj').forEach(function(b){ b.disabled=S.placed.indexOf(b.getAttribute('data-o'))>=0; });
+  if(k>=C.length){ $('#clue').hidden=true; $('#objs').hidden=true; $('#mfb').className='fb ok'; $('#mfb').textContent='✓ The scene is ready. Now finish the two sentences.'; $('#frames').hidden=false; return; }
+  $('#clueQ').textContent=C[k].q; $('#clueCh').textContent='Clue '+(k+1)+' of '+C.length+' · '+C[k].ch; }
+$$('.obj').forEach(function(b){ b.onclick=function(){ var k=S.placed.length; if(k>=C.length) return; var o=b.getAttribute('data-o');
+  if(o===C[k].a){ S.placed.push(o); save(); $('#mfb').className='fb ok'; $('#mfb').textContent='✓ Yes! '+V.names[o].charAt(0).toUpperCase()+V.names[o].slice(1)+'.'; showClue(); }
+  else { b.classList.remove('shake'); void b.offsetWidth; b.classList.add('shake'); $('#mfb').className='fb bad'; $('#mfb').textContent='Not that one. Read the clue again and look for the thing it names.'; } }; });
+showClue();
+
+/* the two sentence frames */
+var tas=$$('#frames textarea'); S.fr=S.fr||[];
+function wc(){ var n=tas.reduce(function(t,ta){return t+words(ta.value);},0), ok=n>=V.minWords&&tas.every(function(t){return words(t.value)>=3;});
+  $('#wc').textContent=n+' words'+(ok?' ✓':' · write at least '+V.minWords+' in all'); $('#wc').className='wc'+(ok?' ok':''); $('#savePdf').disabled=!ok; }
+tas.forEach(function(ta,i){ ta.value=S.fr[i]||''; ta.addEventListener('input',function(){S.fr[i]=ta.value; save(); wc();}); });
+$$('.chipx').forEach(function(c){ c.onclick=function(){ var ta=tas[+c.getAttribute('data-k')]; ta.value=(ta.value.trim()? ta.value.trim()+' ' : '')+c.textContent; ta.dispatchEvent(new Event('input')); ta.focus(); }; });
+var nm=$('#nm'); nm.value=S.name||''; nm.addEventListener('input',function(){S.name=nm.value; save();});
+wc();
+
+/* save the page as a PDF, then the Map stamp */
+$('#savePdf').onclick=function(){
+  var v=$('#saveview'), starts=tas.map(function(t){return t.getAttribute('data-start');});
+  v.innerHTML='<div class="save-bar"><b>Save your page</b><ol><li>Tap <b>Save as PDF</b>. A print window opens.</li><li>Next to <b>Destination</b>, choose <b>Save as PDF</b>, then tap <b>Save</b>.</li><li>Upload the PDF to <b>'+esc(V.canvas)+'</b> in Canvas.</li></ol><button type="button" class="btn gold" id="pp">Save as PDF</button> <button type="button" class="btn ghost" id="pc">Back</button></div>'+
+    '<section class="sheet"><div class="k">Road Map Day · '+esc(S.name||'Name: ______________')+'</div><h3>'+esc(V.title)+'</h3><p class="k">'+esc(V.canvas)+'</p>'+
+    '<p class="k">The scene: '+S.placed.map(function(o){return esc(V.names[o]);}).join(', ')+'</p>'+
+    tas.map(function(t,i){return '<p class="ans"><b>'+esc(starts[i])+'</b> '+esc(t.value.replace(new RegExp('^'+starts[i].replace(/[.*+?^${}()|[\]\\]/g,'\\$&')+'\\s*','i'),''))+'</p>';}).join('')+
+    $('#mapDone svg').outerHTML+'</section>';
+  v.classList.add('open'); stamp('map'); $('#mapDone').classList.add('show');
+  $('#pp').onclick=function(){try{window.print();}catch(e){}}; $('#pc').onclick=function(){v.classList.remove('open');};
+};
+if(S.path) path(S.path);
+})();
+</script>
+</body>
+</html>
