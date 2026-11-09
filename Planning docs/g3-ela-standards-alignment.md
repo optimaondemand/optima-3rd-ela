@@ -92,11 +92,11 @@ Evidence: Ch. 16–20, WGRD theme in the final chapters · WW revise & publish o
 **Week 22** — ELA.3.R.1.1, ELA.3.R.1.2, ELA.3.C.1.3, ELA.3.F.1.3, ELA.3.F.1.4, ELA.3.V.1.2, ELA.3.C.3.1, ELA.3.R.3.1, ELA.K12.EE.1.1  
 Evidence: Synthesis: how two characters changed, theme, reader's theater · WW character comparison paragraph with claim/reasons/chapter evidence · struct · compound words · pronouns · Poetry personification · weekly passage. No oral presentation found, so no C.2.1
 
-**Week 23** — ELA.3.R.2.2, ELA.3.C.1.4, ELA.3.F.1.3, ELA.3.V.1.2, ELA.3.C.3.1, ELA.3.R.3.1  
-Evidence: Medieval nonfiction, WGRD central idea · WW expository: choose topic + notes · trans- · VCCV · capitalization · Poetry hyperbole. No fluency file; notes come from one article, so no C.4.1
+**Week 23** — ELA.3.R.2.2, ELA.3.R.2.3, ELA.3.R.3.1, ELA.3.C.1.4, ELA.3.C.3.1, ELA.3.C.4.1, ELA.3.F.1.3, ELA.3.V.1.2  
+Evidence: Medieval nonfiction, WGRD central idea · 23.3 Q4 author's purpose shown in first and last sentences (R.2.3, added Nov 9) · WW expository: choose topic, then 23.2 research question + notes from two articles with titles (C.4.1, added Nov 9) · trans- · VCCV · capitalization · Poetry hyperbole. No fluency file
 
-**Week 24** — ELA.3.R.2.1, ELA.3.R.2.2, ELA.3.C.1.4, ELA.3.C.1.5, ELA.3.F.1.3, ELA.3.V.1.2, ELA.3.V.1.3, ELA.3.C.3.1  
-Evidence: Medieval nonfiction, WGRD cause-and-effect structure · grammar main idea & details · WW expository paragraph draft/revise/publish · script/scribe · suffix review · Poetry invented words understood from context (Jabberwocky). No fluency file
+**Week 24** — ELA.3.R.2.1, ELA.3.R.2.2, ELA.3.R.2.4, ELA.3.C.1.4, ELA.3.C.1.5, ELA.3.C.3.1, ELA.3.F.1.3, ELA.3.V.1.2, ELA.3.V.1.3  
+Evidence: Medieval nonfiction, WGRD cause-and-effect structure · 24.3 Q4 author's claim (towns 'loud, busy, and often smelly') + two pieces of evidence (R.2.4, added Nov 9) · grammar main idea & details · WW expository paragraph draft/revise/publish · script/scribe · suffix review · Poetry invented words understood from context (Jabberwocky). No fluency file
 
 **Week 25** — ELA.3.R.1.1, ELA.3.C.1.4, ELA.3.F.1.3, ELA.3.F.1.4, ELA.3.V.1.2, ELA.3.C.3.1, ELA.3.R.3.1, ELA.K12.EE.1.1  
 Evidence: LWW Ch. 1–3, WGRD how the author builds the world (setting/character) · WW literary response describing the setting with evidence/quotes · tele- · schwa · complex sentences · Poetry personification · in-lesson fluency + file
@@ -126,4 +126,4 @@ Evidence: Culmination: claim about one character + 7 pillars, written response +
 
 - Week 17 has no daily lesson files (spotlight task only).
 - `lesson-22-wb-project.html` has no info strip and no standards bar yet.
-- C.4.1 (research from multiple sources), C.5.x (multimedia/digital) and R.2.3/R.2.4 are not taught in any week's daily lessons.
+- C.5.x (multimedia/digital) is not taught in any week's daily lessons. C.4.1, R.2.3 and R.2.4 were added to weeks 23–24 on Nov 9 (see those weeks).

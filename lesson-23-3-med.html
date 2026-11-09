@@ -2368,7 +2368,7 @@ body {
   <div class="standards-panel-inner">
     <div class="standards-group">
       <div class="standards-group-label">Florida B.E.S.T.</div>
-      <div class="standards-codes"><span class="fl-code">ELA.3.R.2.2</span> · <span class="fl-code">ELA.3.C.1.4</span> · <span class="fl-code">ELA.3.F.1.3</span> · <span class="fl-code">ELA.3.V.1.2</span> · <span class="fl-code">ELA.3.C.3.1</span> · <span class="fl-code">ELA.3.R.3.1</span></div>
+      <div class="standards-codes"><span class="fl-code">ELA.3.R.2.2</span> · <span class="fl-code">ELA.3.R.2.3</span> · <span class="fl-code">ELA.3.R.3.1</span> · <span class="fl-code">ELA.3.C.1.4</span> · <span class="fl-code">ELA.3.C.3.1</span> · <span class="fl-code">ELA.3.C.4.1</span> · <span class="fl-code">ELA.3.F.1.3</span> · <span class="fl-code">ELA.3.V.1.2</span></div>
     </div>
   </div>
 </div>
@@ -2831,6 +2831,9 @@ function spellReveal(c){if(c.classList.contains("done"))return;c.classList.add("
       <div class="q-block"><div class="q-text"><span class="q-num">3</span>In The Whipping Boy, the prince breaks rule after rule, and for most of the book his whipping boy takes the punishment. Based on this article, is this realistic? Why or why not?</div></div>
       <div class="textbox-prompt">The article says courts had very strict rules. Think about who would be exempt from those rules.</div>
       <textarea class="journal-box" id="journal-q3" data-label="Q3: chapter thinking" placeholder="This (is/is not) realistic because the article says..." oninput="autoSave(this,'dot-q3');gatherAnswers();"></textarea>
+      <div class="q-block"><div class="q-text"><span class="q-num">4</span>Why did the author write this article: to tell a story, to explain something, or to convince you? Show how you know using the <strong>first</strong> sentence and the <strong>last</strong> sentence.</div></div>
+      <div class="textbox-prompt">Look at how the article starts (what a royal court was) and how it ends (what could happen if you broke the rules). How does each part help the author do the job?</div>
+      <textarea class="journal-box" id="journal-q4" data-label="Q4: Author&rsquo;s purpose" placeholder="The author wrote this article to... I know because the first sentence... The last sentence..." oninput="autoSave(this,'dot-q4');gatherAnswers();"></textarea>
     </div>
   </div>
 
@@ -2932,6 +2935,7 @@ Closing sentence: ..." oninput="autoSave(this,'dot-writing');gatherAnswers();"><
         <div class="turn-in-item" onclick="toggleCheck(this)"><div class="turn-in-check"></div><div class="turn-in-item-text">I identified the central idea of today's article.</div></div>
         <div class="turn-in-item" onclick="toggleCheck(this)"><div class="turn-in-check"></div><div class="turn-in-item-text">I used a detail from the article to answer a question.</div></div>
         <div class="turn-in-item" onclick="toggleCheck(this)"><div class="turn-in-check"></div><div class="turn-in-item-text">I planned my expository paragraph.</div></div>
+        <div class="turn-in-item" onclick="toggleCheck(this)"><div class="turn-in-check"></div><div class="turn-in-item-text">I explained the author&rsquo;s purpose using the first and last sentences.</div></div>
         <div class="turn-in-item" onclick="toggleCheck(this)"><div class="turn-in-check"></div><div class="turn-in-item-text">I copied or downloaded my work and submitted it to Canvas.</div></div>
       </div>
     </div>
@@ -2943,7 +2947,7 @@ Closing sentence: ..." oninput="autoSave(this,'dot-writing');gatherAnswers();"><
 <div class="footer">
   <div class="footer-main"><span>Optima Academy Online</span> · 3rd Grade ELA · Week 23 · Lesson 23.3</div>
   <div class="footer-sub"><em>Medieval Nonfiction &mdash; Week 23</em></div>
-  <div class="footer-standards">FL: ELA.3.R.2.2, ELA.3.C.1.4, ELA.3.F.1.3, ELA.3.V.1.2, ELA.3.C.3.1, ELA.3.R.3.1</div>
+  <div class="footer-standards">FL: ELA.3.R.2.2, ELA.3.R.2.3, ELA.3.R.3.1, ELA.3.C.1.4, ELA.3.C.3.1, ELA.3.C.4.1, ELA.3.F.1.3, ELA.3.V.1.2</div>
   <div class="footer-copy">© Optima Academy Online · An Education Experience Company</div>
 </div>
 
@@ -2978,7 +2982,7 @@ function expandIntro() {
 function gatherAnswers() {
   var output = '';
   var sections = [
-    { title: '📖 CHAPTER THINKING', ids: ['journal-q1','journal-q2','journal-q3'] },
+    { title: '📖 CHAPTER THINKING', ids: ['journal-q1','journal-q2','journal-q3','journal-q4'] },
     { title: '📖 RWM — READ LIKE A READER / WRITER / MIMIC', ids: ['journal-rwm-reader', 'journal-rwm-writer', 'journal-rwm-mimic'] },
     { title: '🔤 WORD STUDY CONNECTION (MORPHOLOGY)', ids: ['journal-morph'] },
     { title: '🪶 WRITING CONNECTION', ids: ['journal-writing'] }
@@ -3428,7 +3432,7 @@ function downloadJournal() {
   gatherAnswers();
 
   var sections = [
-    { title: '📖 CHAPTER THINKING', ids: ['journal-q1','journal-q2','journal-q3'] },
+    { title: '📖 CHAPTER THINKING', ids: ['journal-q1','journal-q2','journal-q3','journal-q4'] },
     { title: '🔤 WORD STUDY CONNECTION (MORPHOLOGY)', ids: ['journal-morph'] },
     { title: '🪶 WRITING CONNECTION', ids: ['journal-writing'] }
   ];

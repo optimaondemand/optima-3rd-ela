@@ -2368,7 +2368,7 @@ body {
   <div class="standards-panel-inner">
     <div class="standards-group">
       <div class="standards-group-label">Florida B.E.S.T.</div>
-      <div class="standards-codes"><span class="fl-code">ELA.3.R.2.1</span> · <span class="fl-code">ELA.3.R.2.2</span> · <span class="fl-code">ELA.3.C.1.4</span> · <span class="fl-code">ELA.3.C.1.5</span> · <span class="fl-code">ELA.3.F.1.3</span> · <span class="fl-code">ELA.3.V.1.2</span> · <span class="fl-code">ELA.3.V.1.3</span> · <span class="fl-code">ELA.3.C.3.1</span></div>
+      <div class="standards-codes"><span class="fl-code">ELA.3.R.2.1</span> · <span class="fl-code">ELA.3.R.2.2</span> · <span class="fl-code">ELA.3.R.2.4</span> · <span class="fl-code">ELA.3.C.1.4</span> · <span class="fl-code">ELA.3.C.1.5</span> · <span class="fl-code">ELA.3.C.3.1</span> · <span class="fl-code">ELA.3.F.1.3</span> · <span class="fl-code">ELA.3.V.1.2</span> · <span class="fl-code">ELA.3.V.1.3</span></div>
     </div>
   </div>
 </div>
@@ -2807,6 +2807,9 @@ function spellReveal(c){if(c.classList.contains("done"))return;c.classList.add("
       <div class="q-block"><div class="q-text"><span class="q-num">3</span>The article and The Whipping Boy both involve characters moving through a city — Jemmy leads the prince through the sewers. Based on today's article, what details from the novel feel historically realistic?</div></div>
       <div class="textbox-prompt">Think about the noise, smells, crowds, and narrow streets described in both the novel and the article.</div>
       <textarea class="journal-box" id="journal-q3" data-label="Q3: chapter thinking" placeholder="Details from the novel that seem historically realistic include..." oninput="autoSave(this,'dot-q3');gatherAnswers();"></textarea>
+      <div class="q-block"><div class="q-text"><span class="q-num">4</span>The author makes a claim: &ldquo;Life in a medieval town was loud, busy, and often smelly.&rdquo; Find <strong>two</strong> pieces of evidence the author uses to support this claim. Then explain how one of them proves it.</div></div>
+      <div class="textbox-prompt">A claim is what the author wants you to believe. Evidence is the facts the author gives to prove it. Look at the sentences right after the claim.</div>
+      <textarea class="journal-box" id="journal-q4" data-label="Q4: Author&rsquo;s claim and evidence" placeholder="The author&rsquo;s claim is... One piece of evidence is... Another is... This proves the claim because..." oninput="autoSave(this,'dot-q4');gatherAnswers();"></textarea>
     </div>
   </div>
 
@@ -2903,6 +2906,7 @@ function spellReveal(c){if(c.classList.contains("done"))return;c.classList.add("
         <div class="turn-in-item" onclick="toggleCheck(this)"><div class="turn-in-check"></div><div class="turn-in-item-text">I identified the central idea of today's article.</div></div>
         <div class="turn-in-item" onclick="toggleCheck(this)"><div class="turn-in-check"></div><div class="turn-in-item-text">I found sensory details in the article.</div></div>
         <div class="turn-in-item" onclick="toggleCheck(this)"><div class="turn-in-check"></div><div class="turn-in-item-text">I edited my expository paragraph using the checklist.</div></div>
+        <div class="turn-in-item" onclick="toggleCheck(this)"><div class="turn-in-check"></div><div class="turn-in-item-text">I found two pieces of evidence for the author&rsquo;s claim and explained one.</div></div>
         <div class="turn-in-item" onclick="toggleCheck(this)"><div class="turn-in-check"></div><div class="turn-in-item-text">I copied or downloaded my work and submitted it to Canvas.</div></div>
       </div>
     </div>
@@ -2914,7 +2918,7 @@ function spellReveal(c){if(c.classList.contains("done"))return;c.classList.add("
 <div class="footer">
   <div class="footer-main"><span>Optima Academy Online</span> · 3rd Grade ELA · Week 24 · Lesson 24.3</div>
   <div class="footer-sub"><em>Medieval Nonfiction &mdash; Medieval Towns: Busy, Smelly, and Alive</em></div>
-  <div class="footer-standards">FL: ELA.3.R.2.1, ELA.3.R.2.2, ELA.3.C.1.4, ELA.3.C.1.5, ELA.3.F.1.3, ELA.3.V.1.2, ELA.3.V.1.3, ELA.3.C.3.1</div>
+  <div class="footer-standards">FL: ELA.3.R.2.1, ELA.3.R.2.2, ELA.3.R.2.4, ELA.3.C.1.4, ELA.3.C.1.5, ELA.3.C.3.1, ELA.3.F.1.3, ELA.3.V.1.2, ELA.3.V.1.3</div>
   <div class="footer-copy">© Optima Academy Online · An Education Experience Company</div>
 </div>
 
@@ -2949,7 +2953,7 @@ function expandIntro() {
 function gatherAnswers() {
   var output = '';
   var sections = [
-    { title: '📖 CHAPTER THINKING', ids: ['journal-q1','journal-q2','journal-q3'] },
+    { title: '📖 CHAPTER THINKING', ids: ['journal-q1','journal-q2','journal-q3','journal-q4'] },
     { title: '📖 RWM — READ LIKE A READER / WRITER / MIMIC', ids: ['journal-rwm-reader', 'journal-rwm-writer', 'journal-rwm-mimic'] },
     { title: '🔤 WORD STUDY CONNECTION (MORPHOLOGY)', ids: ['journal-morph'] },
     { title: '🪶 WRITING CONNECTION', ids: ['journal-writing'] }
@@ -3399,7 +3403,7 @@ function downloadJournal() {
   gatherAnswers();
 
   var sections = [
-    { title: '📖 CHAPTER THINKING', ids: ['journal-q1','journal-q2','journal-q3'] },
+    { title: '📖 CHAPTER THINKING', ids: ['journal-q1','journal-q2','journal-q3','journal-q4'] },
     { title: '🔤 WORD STUDY CONNECTION (MORPHOLOGY)', ids: ['journal-morph'] },
     { title: '🪶 WRITING CONNECTION', ids: ['journal-writing'] }
   ];
