@@ -1875,6 +1875,21 @@ body {
   .header-title { font-size: 22px; }
   .tab-btn { min-width: 100px; font-size: 11px; padding: 10px 6px 9px; }
 }
+
+/* ═══════════ STANDARDS BAR (from the 3rd grade scope & sequence) ═══════════ */
+.standards-toggle-bar{display:flex;align-items:center;justify-content:space-between;background:linear-gradient(135deg,#132552,#17306A);padding:10px 28px;cursor:pointer;user-select:none;border-bottom:1px solid rgba(85,200,232,.15);}
+.standards-toggle-bar:hover{background:linear-gradient(135deg,#17306A,#1B3878);}
+.standards-toggle-label{font-size:12px;color:rgba(255,255,255,.6);text-transform:uppercase;letter-spacing:1px;font-weight:700;}
+.standards-toggle-arrow{font-size:10px;color:rgba(255,255,255,.4);transition:transform .25s ease;}
+.standards-toggle-bar.open .standards-toggle-arrow{transform:rotate(180deg);}
+.standards-panel{max-height:0;overflow:hidden;transition:max-height .3s ease;background:#0E1C42;border-bottom:1px solid rgba(85,200,232,.1);}
+.standards-panel.open{max-height:220px;}
+.standards-panel-inner{display:flex;gap:32px;padding:14px 28px 16px;flex-wrap:wrap;}
+.standards-group{display:flex;flex-direction:column;gap:6px;}
+.standards-group-label{font-size:10px;color:rgba(255,255,255,.45);text-transform:uppercase;letter-spacing:.8px;font-weight:700;}
+.standards-codes{font-size:13px;color:rgba(255,255,255,.75);line-height:1.6;}
+.standards-codes .fl-code{color:#80CBC4;font-weight:700;}
+.footer-standards{font-size:10px;color:rgba(255,255,255,.35);margin-top:6px;letter-spacing:.3px;}
 </style>
 <style>
 .decode-steps{margin:14px 0}.decode-step{display:flex;gap:14px;margin-bottom:16px;align-items:flex-start}.decode-step:last-child{margin-bottom:0}.decode-step-num{width:36px;height:36px;border-radius:50%;color:#fff;font-size:18px;font-weight:800;display:flex;align-items:center;justify-content:center;flex-shrink:0}.decode-step-content{flex:1}.decode-step-title{font-size:16px;font-weight:800;color:#0E1C42;margin-bottom:4px}.decode-step-text{font-size:15px;color:#3A4A6B;line-height:1.6;margin-bottom:8px}.decode-sentence{background:#FFF8F0;border:2px solid #F5E6C8;border-left:4px solid #C7922C;border-radius:10px;padding:12px 16px;font-family:"Lora",Georgia,serif;font-size:16px;color:#0E1C42;line-height:1.6;font-style:italic;margin-bottom:10px}.decode-word-parts{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin:8px 0}.decode-part{display:inline-flex;padding:6px 14px;border-radius:8px;font-family:"Lora",Georgia,serif;font-size:16px;font-weight:700}.decode-part-root{background:#F0E8FF;color:#8B6FC0;border:1.5px solid #D8CCF0}.decode-part-affix{background:#EAF8FD;color:#1A6B8E;border:1.5px solid #D6F2FB}.decode-part-plus{color:#B0B8CC;font-size:12px;font-weight:800}.decode-reveal{display:none;background:#E3F8ED;border:2px solid #B8E8CF;border-left:4px solid #34B76F;border-radius:10px;padding:12px 16px;font-size:15px;color:#0E1C42;line-height:1.5;margin-top:8px}.decode-reveal.show{display:block}.vocab-decode-item{margin-bottom:14px}.fluency-passage{background:linear-gradient(135deg,#FFF8F0 0%,#FFF3DC 100%);border:2px solid #F5E6C8;border-left:6px solid #C7922C;border-radius:14px;padding:20px 24px;margin-bottom:16px;font-family:"Lora",Georgia,serif;font-size:17px;color:#0E1C42;line-height:1.85;font-style:italic}.textbox-prompt{font-size:15px;color:#3A4A6B;line-height:1.6;margin-bottom:8px;padding:10px 14px;background:#FAFBFF;border:1.5px solid #E2E8F4;border-radius:10px}
@@ -2098,6 +2113,20 @@ body {
 <div class="header-badge"><span class="header-badge-icon">📖</span>
 <span class="header-badge-text">Day 4: Explain / Justify</span></div>
 </div>
+<!-- ═══════════ STANDARDS ═══════════ -->
+<div class="standards-toggle-bar" onclick="this.classList.toggle('open');this.nextElementSibling.classList.toggle('open');">
+  <span class="standards-toggle-label">Standards Alignment</span>
+  <span class="standards-toggle-arrow">▼</span>
+</div>
+<div class="standards-panel">
+  <div class="standards-panel-inner">
+    <div class="standards-group">
+      <div class="standards-group-label">Florida B.E.S.T.</div>
+      <div class="standards-codes"><span class="fl-code">ELA.3.R.1.3</span> · <span class="fl-code">ELA.3.R.2.1</span> · <span class="fl-code">ELA.3.C.1.2</span> · <span class="fl-code">ELA.3.V.1.2</span> · <span class="fl-code">ELA.3.C.3.1</span> · <span class="fl-code">ELA.3.R.1.4</span></div>
+    </div>
+  </div>
+</div>
+
 <div class="info-strip">
 <div class="info-cell"><div class="info-icon" style="background:#EAF8FD;">📚</div>
 <div><div class="info-label">Unit</div><div class="info-value">Unit 1</div><div class="info-detail">Flat Stanley</div></div></div>
@@ -2505,6 +2534,7 @@ Different is a way to live.</div>
 <div class="footer">
 <div class="footer-main"><span>Optima Academy Online</span> · 3rd Grade ELA · Week 4 · Lesson 4.4</div>
 <div class="footer-sub"><em>Flat Stanley</em> — Story vs. Real World</div>
+<div class="footer-standards">FL: ELA.3.R.1.3, ELA.3.R.2.1, ELA.3.C.1.2, ELA.3.V.1.2, ELA.3.C.3.1, ELA.3.R.1.4</div>
 <div class="footer-copy">© Optima Academy Online · An Education Experience Company</div></div>
 </div><!-- /page-wrap -->
 <script>
