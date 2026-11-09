@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Optima Academy Online — The Whipping Boy: Unit Project</title>
+<!-- G3 ELA · The Whipping Boy unit project (after Lesson 22.4).
+     Wanted poster for Hold-Your-Nose Billy and Cutwater + Jemmy's letter to the king.
+     Built Nov 9 2026 BEFORE weeks 20–22 were sparkled: re-check against the
+     finished weeks 19–22 (vocabulary, letter parts, opinion parts) at the end of the
+     week 22 sparkle. Book facts checked against Planning docs/whipping_boy_ocr.txt.
+     Audio (hidden until the file exists): assets/audio/guide/opti/g3ela-proj-wb-<slot>.mp3
+     Turn-in: one PDF (two pages) in Canvas. -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400&family=Nunito:wght@400;600;700;800;900&family=Rye&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#0E1C42; --ink:#24324F; --muted:#6B7690; --sky:#55C8E8; --gold:#C7922C; --gold2:#E9C46A;
+  --paper:#FBF3DF; --paper2:#F3E4C2; --line:#D9E0F0; --bg:#F0F2F8; --ok:#2E7D4F; --okbg:#E3F8ED; --bad:#B4433C; --badbg:#FFF0EC;
+  --blue:#2B5BA8; --bluebg:#EEF3FF; --blueline:#C9D6F2;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Nunito',Verdana,sans-serif;background:var(--bg);color:var(--navy);line-height:1.6;-webkit-font-smoothing:antialiased}
+.page{max-width:920px;margin:0 auto;background:#fff;box-shadow:0 0 40px rgba(14,28,66,.08);min-height:100vh}
+button{font-family:inherit}
+/* progress */
+.prog{position:sticky;top:0;z-index:50;background:var(--navy);padding:8px 20px 10px;display:flex;align-items:center;gap:14px}
+.prog-l{font-size:12px;color:var(--sky);font-weight:800;text-transform:uppercase;letter-spacing:.8px;white-space:nowrap}
+.prog-t{flex:1;height:10px;background:rgba(255,255,255,.12);border-radius:10px;overflow:hidden}
+.prog-f{height:100%;width:0;background:linear-gradient(90deg,var(--sky),#7FD8F0,var(--gold));border-radius:10px;transition:width .4s}
+.prog-p{font-size:13px;color:var(--gold);font-weight:800;min-width:36px;text-align:right}
+/* header */
+.hdr{background:var(--navy);border-bottom:6px solid var(--sky);padding:20px 28px 18px;color:#fff}
+.brand{display:flex;align-items:center;gap:12px;margin-bottom:14px}
+.logo{width:52px;height:52px;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.logo img{width:48px;height:38px}
+.org{font-size:22px;font-weight:800;line-height:1.15}.orgsub{font-size:11px;color:var(--sky);letter-spacing:.5px}
+.hdr h1{font-family:'Lora',Georgia,serif;font-size:28px;line-height:1.25;margin-bottom:6px}
+.hdr .sub{font-size:16px;color:#C9D6F2}
+.tag{display:inline-block;background:var(--gold);color:var(--navy);font-weight:900;font-size:12px;letter-spacing:.06em;text-transform:uppercase;border-radius:999px;padding:3px 12px;margin-bottom:10px}
+/* info strip */
+.info{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border-bottom:1px solid var(--line)}
+.cell{display:flex;gap:10px;align-items:center;padding:14px 16px;border-right:1px solid var(--line)}
+.cell:last-child{border-right:none}
+.ico{width:38px;height:38px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:19px;flex-shrink:0}
+.lab{font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:.06em;color:var(--muted)}
+.val{font-weight:800;font-size:15px;line-height:1.25}.det{font-size:12px;color:var(--muted)}
+@media(max-width:700px){.info{grid-template-columns:1fr 1fr}.cell:nth-child(2){border-right:none}.cell{border-bottom:1px solid var(--line)}}
+.wrap{padding:22px 24px 40px}
+@media(max-width:520px){.wrap{padding:18px 14px 34px}.hdr{padding:18px 16px}.hdr h1{font-size:24px}}
+/* Opti */
+.opti{display:flex;gap:16px;align-items:flex-start;background:linear-gradient(180deg,#FFFBF0,#FFF6E0);border:2px solid #EAD8AE;border-radius:18px;padding:16px 18px;margin-bottom:18px}
+.opti img{width:78px;height:auto;flex-shrink:0}
+.opti h2{font-family:'Lora',Georgia,serif;font-size:21px;margin-bottom:4px}
+.opti p{font-size:17px;color:var(--ink)}
+.say{display:inline-flex;align-items:center;justify-content:center;width:34px;height:34px;margin:0 8px 0 0;vertical-align:middle;border-radius:50%;border:2px solid var(--blueline);background:#fff;cursor:pointer;font-size:16px;line-height:1;padding:0}
+.say.on{background:#FFE38A;border-color:var(--gold)}
+.say[hidden]{display:none!important}
+/* name + rubric */
+.namebox{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin:0 0 14px}
+.namebox label{font-weight:800}
+input[type=text],textarea{font-family:'Nunito',sans-serif;font-size:17px;color:var(--navy);border:2px solid var(--line);border-radius:10px;padding:9px 12px;background:#fff;width:100%}
+input[type=text]:focus,textarea:focus{outline:none;border-color:var(--blue);box-shadow:0 0 0 3px rgba(43,91,168,.15)}
+.namebox input{max-width:320px}
+details.rubric{border:2px solid var(--line);border-radius:14px;margin-bottom:18px;background:#fff}
+details.rubric summary{cursor:pointer;font-weight:800;padding:12px 16px;list-style:none}
+details.rubric summary::before{content:'▸ ';color:var(--gold)}
+details.rubric[open] summary::before{content:'▾ '}
+.rtab{overflow-x:auto;padding:0 12px 14px}
+.rtab table{border-collapse:collapse;width:100%;min-width:620px;font-size:14px}
+.rtab th,.rtab td{border:1px solid var(--line);padding:8px 9px;vertical-align:top;text-align:left}
+.rtab th{background:var(--navy);color:#fff;font-size:13px}
+.rtab td:first-child{font-weight:800;background:#F7F9FD;width:16%}
+.rnote{font-size:13px;color:var(--muted);padding:0 16px 12px}
+/* step chips */
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin:0 0 14px}
+.chip{border:2px solid var(--line);background:#fff;border-radius:999px;padding:4px 11px;font-size:13px;font-weight:800;color:var(--muted);cursor:pointer}
+.chip.done{border-color:#B8E8CF;background:var(--okbg);color:var(--ok)}
+.chip.cur{border-color:var(--gold);background:#FFF6DA;color:var(--navy)}
+.chip:disabled{cursor:not-allowed;opacity:.55}
+/* step card */
+.step{border:3px solid var(--gold2);border-radius:18px;padding:18px 18px 20px;background:#FFFEF9}
+.stephead{display:inline-block;background:var(--navy);color:#fff;font-weight:800;border-radius:999px;padding:5px 14px;margin-bottom:12px;font-size:15px}
+.do{background:var(--bluebg);border:2px solid var(--blueline);border-radius:12px;padding:10px 14px;margin:0 0 16px;font-size:17px;line-height:1.55;color:var(--ink)}
+.do b{color:var(--navy)}
+.nav{display:flex;justify-content:space-between;gap:10px;margin-top:18px;flex-wrap:wrap}
+.btn{border:none;border-radius:12px;padding:12px 20px;font-size:16px;font-weight:800;cursor:pointer}
+.btn.gold{background:linear-gradient(135deg,#F4D27A,var(--gold));color:var(--navy)}
+.btn.navy{background:var(--navy);color:#fff}
+.btn.ghost{background:#fff;color:var(--navy);border:2px solid var(--line)}
+.btn:disabled{opacity:.45;cursor:not-allowed}
+.need{font-size:14px;color:var(--muted);margin-top:8px}
+/* clue cards */
+.clues{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+@media(max-width:620px){.clues{grid-template-columns:1fr}}
+.clue{border:2px solid var(--line);border-radius:14px;padding:12px 14px;background:#fff}
+.clue p{font-size:17px;margin-bottom:10px}
+.clue .row{display:flex;gap:8px;flex-wrap:wrap}
+.clue .row button{flex:1 1 130px;border:2px solid var(--line);background:#fff;border-radius:10px;padding:8px 10px;font-weight:800;font-size:14px;cursor:pointer;color:var(--navy)}
+.clue .row button:hover{border-color:var(--blue)}
+.clue.right{border-color:#8FD3AE;background:#F6FFF9}
+.clue.right .row{display:none}
+.clue .fb{font-size:15px;margin-top:8px;display:none}
+.clue.right .fb{display:block;color:var(--ok)}
+.clue.miss .fb{display:block;color:var(--bad)}
+/* drawing */
+.drawwrap{display:grid;grid-template-columns:1fr 210px;gap:16px;align-items:start}
+@media(max-width:700px){.drawwrap{grid-template-columns:1fr}}
+.pad{position:relative;border:3px solid #7A5C2E;border-radius:6px;background:var(--paper);touch-action:none}
+.pad canvas{display:block;width:100%;height:auto;cursor:crosshair;touch-action:none}
+.tools{display:flex;flex-direction:column;gap:10px}
+.swatches{display:flex;flex-wrap:wrap;gap:8px}
+.sw{width:34px;height:34px;border-radius:50%;border:3px solid #fff;box-shadow:0 0 0 2px var(--line);cursor:pointer}
+.sw.on{box-shadow:0 0 0 3px var(--navy)}
+.sizes{display:flex;gap:8px}
+.sz{border:2px solid var(--line);background:#fff;border-radius:10px;padding:6px 10px;font-weight:800;cursor:pointer}
+.sz.on{border-color:var(--navy);background:#F0F3FA}
+.cluelist{font-size:14px;color:var(--ink);background:#FAFBFF;border:1px solid var(--line);border-radius:10px;padding:8px 10px}
+.cluelist b{display:block;color:var(--navy)}
+/* forms */
+.field{margin-bottom:16px}
+.field > label,.flabel{display:block;font-weight:800;margin-bottom:4px;font-size:16px}
+.frame{font-size:14px;color:var(--muted);margin-bottom:6px}
+textarea{min-height:92px;resize:vertical;line-height:1.5}
+.wc{font-size:13px;color:var(--muted);margin-top:3px}
+.wc.ok{color:var(--ok)}
+.pick{display:flex;flex-wrap:wrap;gap:8px}
+.pick button{border:2px solid var(--line);background:#fff;border-radius:999px;padding:7px 13px;font-size:15px;font-weight:700;cursor:pointer;color:var(--navy);text-align:left}
+.pick button[aria-pressed="true"]{border-color:var(--gold);background:#FFF3CF}
+.pick button[aria-pressed="true"]::before{content:'✓ ';color:var(--gold)}
+.two{display:grid;grid-template-columns:1.1fr 1fr;gap:18px;align-items:start}
+@media(max-width:760px){.two{grid-template-columns:1fr}}
+.previewlab{font-size:12px;font-weight:900;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin-bottom:6px}
+/* events */
+.events{display:flex;flex-direction:column;gap:10px}
+.ev{display:flex;gap:12px;align-items:center;border:2px solid var(--line);background:#fff;border-radius:12px;padding:10px 12px;cursor:pointer;text-align:left;font-size:16px;color:var(--navy);width:100%}
+.ev .n{width:32px;height:32px;border-radius:50%;border:2px dashed var(--line);display:flex;align-items:center;justify-content:center;font-weight:900;flex-shrink:0;color:var(--muted)}
+.ev.picked{border-color:var(--gold);background:#FFFBEA}
+.ev.picked .n{border:none;background:var(--navy);color:#fff}
+.ev small{color:var(--muted)}
+.evfb{margin-top:10px;font-weight:700}
+.evfb.ok{color:var(--ok)}.evfb.bad{color:var(--bad)}
+.remind{background:#FAFBFF;border:1px solid var(--line);border-radius:12px;padding:10px 14px;margin-bottom:14px;font-size:15px}
+.remind ol{margin-left:20px}
+/* check */
+.checks{display:flex;flex-direction:column;gap:8px}
+.ck{display:flex;gap:10px;align-items:flex-start;border:2px solid var(--line);border-radius:12px;padding:10px 12px;background:#fff;cursor:pointer;font-size:16px;text-align:left;color:var(--navy)}
+.ck .box{width:24px;height:24px;border-radius:6px;border:2px solid var(--line);flex-shrink:0;display:flex;align-items:center;justify-content:center;font-weight:900}
+.ck[aria-pressed="true"]{border-color:#8FD3AE;background:#F6FFF9}
+.ck[aria-pressed="true"] .box{background:var(--ok);border-color:var(--ok);color:#fff}
+.ck[aria-pressed="true"] .box::after{content:'✓'}
+/* ── the poster ── */
+.poster{background:linear-gradient(180deg,#F8EBCB,#F1DDB0);border:3px solid #6E4E22;border-radius:4px;padding:16px 16px 14px;color:#3B2A14;text-align:center;font-family:'Lora',Georgia,serif;box-shadow:inset 0 0 0 4px #F8EBCB,inset 0 0 0 6px #B08B4F,0 6px 16px rgba(80,55,20,.18);position:relative}
+.poster .w{font-family:'Rye',Georgia,serif;font-size:46px;line-height:1;letter-spacing:.06em;color:#7A2E1E}
+.poster .names{font-family:'Rye',Georgia,serif;font-size:17px;margin:4px 0 8px;color:#3B2A14}
+.poster .pic{border:2px solid #6E4E22;background:#FBF3DF;min-height:120px;margin:0 auto 8px;display:flex;align-items:center;justify-content:center;color:#A08B66;font-style:italic;font-size:14px}
+.poster .pic img{display:block;width:100%;height:auto}
+.poster h4{font-family:'Rye',Georgia,serif;font-weight:400;font-size:14px;letter-spacing:.08em;margin:8px 0 2px;color:#7A2E1E}
+.poster p,.poster li{font-size:14px;line-height:1.45}
+.poster ul{list-style:none}
+.poster .rw{font-family:'Rye',Georgia,serif;font-size:18px;color:#7A2E1E;margin-top:8px}
+.poster .by{font-size:12px;font-style:italic;margin-top:6px}
+.poster .blank{color:#A08B66;font-style:italic}
+/* ── the letter ── */
+.letter{--lh:26px;background:#FFFDF6;border:1px solid #E6D9B8;border-radius:4px;padding:var(--lh) 20px;font-family:'Lora',Georgia,serif;color:#2D2416;box-shadow:0 6px 16px rgba(80,55,20,.12);font-size:15px;line-height:var(--lh);background-image:repeating-linear-gradient(to bottom,transparent 0,transparent calc(var(--lh) - 1px),#EFE6CF calc(var(--lh) - 1px),#EFE6CF var(--lh));background-position:0 calc(var(--lh) - 5px)}
+.letter > *{margin:0 0 var(--lh)!important}
+.letter p.body{margin-bottom:0!important}
+.letter p.body + p.body{margin-top:0!important}
+.letter .hd{text-align:right;white-space:pre-line}
+.letter .gr{margin-bottom:8px}
+.letter p.body{text-indent:1.6em;white-space:pre-line}
+.letter .cl{margin-top:var(--lh)!important;margin-left:50%!important}
+.letter .sg{margin-left:50%!important;font-style:italic}
+.letter .blank{color:#B0A080;font-style:italic}
+/* ── save view + print ── */
+.saveview{display:none;position:fixed;inset:0;z-index:100;background:#E9ECF4;overflow:auto;padding:18px}
+.saveview.open{display:block}
+.save-bar{max-width:820px;margin:0 auto 16px;background:#fff;border-radius:14px;padding:16px 18px;box-shadow:0 4px 18px rgba(14,28,66,.12)}
+.save-bar h2{font-family:'Lora',Georgia,serif;font-size:22px;margin-bottom:6px}
+.save-bar ol{margin:6px 0 10px 22px;font-size:16px}
+.save-actions{display:flex;gap:10px;flex-wrap:wrap}
+.sheet{max-width:820px;margin:0 auto 18px;background:#fff;padding:28px;box-shadow:0 4px 18px rgba(14,28,66,.12)}
+.sheet .k{font-size:12px;font-weight:900;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin-bottom:10px}
+.sheet .poster .w{font-size:64px}.sheet .poster .names{font-size:22px}.sheet .poster p,.sheet .poster li{font-size:16px}
+.sheet .letter{font-size:17px;--lh:30px;min-height:860px}
+@media print{
+  @page{margin:12mm}
+  body{background:#fff}
+  body > .page{display:none!important}
+  .saveview{display:block!important;position:static;background:#fff;padding:0;overflow:visible}
+  .save-bar{display:none!important}
+  .sheet{box-shadow:none;margin:0;padding:0;page-break-after:always;break-after:page;max-width:none}
+  .sheet:last-child{page-break-after:auto;break-after:auto}
+  .poster,.letter{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+}
+.foot{font-size:12px;color:var(--muted);text-align:center;padding:16px}
+.sr{position:absolute;left:-9999px}
+</style>
+</head>
+<body>
+<div class="page">
+  <div class="prog"><span class="prog-l">📜 Project progress</span><div class="prog-t"><div class="prog-f" id="progF"></div></div><span class="prog-p" id="progP">0%</span></div>
+  <header class="hdr">
+    <div class="brand"><div class="logo"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy"></div><div><div class="org">Optima Academy Online</div><div class="orgsub">An Education Experience Company</div></div></div>
+    <div class="tag">⭐ Unit Project</div>
+    <h1>The Whipping Boy — Wanted! and a Letter to the King</h1>
+    <div class="sub">Make a true Wanted poster for the real outlaws, then write Jemmy’s letter telling the king what really happened.</div>
+  </header>
+  <div class="info">
+    <div class="cell"><div class="ico" style="background:#EEF3FF">📚</div><div><div class="lab">Unit</div><div class="val">The Whipping Boy</div><div class="det">Weeks 18–22</div></div></div>
+    <div class="cell"><div class="ico" style="background:#FFF6DA">📅</div><div><div class="lab">When</div><div class="val">After Lesson 22.4</div><div class="det">8 short steps</div></div></div>
+    <div class="cell"><div class="ico" style="background:#E3F8ED">📖</div><div><div class="lab">Reading</div><div class="val">Ch. 1–20</div><div class="det">The whole book</div></div></div>
+    <div class="cell"><div class="ico" style="background:#F0E8FF">📄</div><div><div class="lab">Turn in</div><div class="val">One PDF</div><div class="det">in Canvas</div></div></div>
+  </div>
+
+  <main class="wrap">
+    <section class="opti" aria-label="Opti's welcome">
+      <img src="assets/companions/owl.png" alt="Opti the owl">
+      <div>
+        <h2>The broadsides got it wrong</h2>
+        <p data-say="welcome">Remember the news sellers at the fair? Their broadsides said Jemmy was the rascal. That was wrong! First you’ll make a true Wanted poster for the real outlaws, Hold-Your-Nose Billy and Cutwater. Then you’ll write Jemmy’s letter to the king, telling what really happened. Use what you know from the book. Your work saves as you go.</p>
+      </div>
+    </section>
+
+    <div class="namebox"><label for="nm">Your name</label><input type="text" id="nm" maxlength="40" autocomplete="off" placeholder="First and last name"></div>
+
+    <details class="rubric">
+      <summary>How your project is graded (16 points)</summary>
+      <div class="rtab"><table>
+        <thead><tr><th></th><th>4 · Exceeds</th><th>3 · Meets</th><th>2 · Approaching</th><th>1 · Beginning</th></tr></thead>
+        <tbody>
+          <tr><td>Book facts (poster)</td><td>Every description and crime is true, with exact details from the book</td><td>Every description and crime is true</td><td>Some details are vague, or one is not true</td><td>Details are missing or not true</td></tr>
+          <tr><td>What really happened (letter)</td><td>Three true events in order (beginning, middle, end), each with a clear detail</td><td>Three true events in order</td><td>Only two events, or out of order</td><td>One event, or events not from the book</td></tr>
+          <tr><td>Jemmy’s opinion (letter)</td><td>A clear opinion about the prince, a reason, and an example with a chapter number</td><td>A clear opinion and a reason</td><td>An opinion with no reason</td><td>No opinion</td></tr>
+          <tr><td>Letter parts and writing</td><td>All five letter parts; capitals and end marks are right; ideas joined with and, but or so</td><td>All five letter parts; a few small mistakes</td><td>A letter part is missing, or mistakes make it hard to read</td><td>Several letter parts are missing</td></tr>
+        </tbody></table></div>
+      <div class="rnote">The five letter parts: heading, greeting, body, closing, signature.</div>
+    </details>
+
+    <nav class="chips" id="chips" aria-label="Project steps"></nav>
+    <section class="step" id="step" aria-live="polite"></section>
+  </main>
+  <div class="foot">Optima Academy Online · 3rd Grade ELA · The Whipping Boy · Unit Project</div>
+</div>
+
+<div class="saveview" id="saveview" role="dialog" aria-label="Save your project as a PDF"></div>
+
+<script>
+(function () {
+'use strict';
+var KEY = 'oao.g3ela.project.wb';
+var AUDIO = 'assets/audio/guide/opti/g3ela-proj-wb-';
+function $(s, r) { return (r || document).querySelector(s); }
+function $$(s, r) { return Array.prototype.slice.call((r || document).querySelectorAll(s)); }
+function esc(t) { return String(t == null ? '' : t).replace(/[&<>"']/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]; }); }
+function words(t) { return String(t || '').trim().split(/\s+/).filter(Boolean).length; }
+
+/* ── saved work ── */
+var S = {};
+try { S = JSON.parse(localStorage.getItem(KEY) || '{}') || {}; } catch (e) { S = {}; }
+function save() { try { localStorage.setItem(KEY, JSON.stringify(S)); } catch (e) {} progress(); }
+
+/* ── the book (checked against the novel's text) ── */
+var BILLY = [
+  { t: 'He is a big man, “big and raw as a skinned ox.”', ok: true, ch: 'Chapter 5' },
+  { t: 'He smells like a ton of garlic.', ok: true, ch: 'Chapter 5' },
+  { t: 'He has a wooden leg.', ok: false },
+  { t: 'He has red hair and a red beard.', ok: true, ch: 'Chapters 6 and 19' },
+  { t: 'He has yellow teeth.', ok: true, ch: 'Chapter 7' },
+  { t: 'He rides a fast black horse.', ok: false, why: 'Their horse died. In Chapter 11 Billy says they have been on foot.' },
+  { t: 'Ballad sellers sing songs about him.', ok: true, ch: 'Chapters 5 and 18' },
+  { t: 'He puts the prince’s crown on his own head.', ok: true, ch: 'Chapter 6' }
+];
+var CUT = [
+  { t: 'He is very thin, “skin and bones.”', ok: true, ch: 'Chapter 10' },
+  { t: 'He has a big round belly.', ok: false },
+  { t: 'He scratches as if his shirt has fleas.', ok: true, ch: 'Chapter 6' },
+  { t: 'He has thin, greasy lips.', ok: true, ch: 'Chapter 9' },
+  { t: 'He wears a tall black hat.', ok: false },
+  { t: 'He has long arms.', ok: true, ch: 'Chapter 13' },
+  { t: 'He snickers and cackles.', ok: true, ch: 'Chapters 5 and 19' },
+  { t: 'He cannot write.', ok: true, ch: 'Chapter 7' }
+];
+var CRIMES = [
+  'Robbing travelers on the road (Chapters 5 and 15)',
+  'Kidnapping the prince and Jemmy (Chapters 5 and 6)',
+  'Stealing the prince’s crown and food (Chapter 6)',
+  'Asking the king for a ransom of gold (Chapter 8)',
+  'Whipping the prince (Chapter 16)'
+];
+var SEEN = [
+  'at their hut in the forest (Chapter 6)',
+  'on the river road (Chapter 15)',
+  'in the city sewers (Chapter 19)',
+  'sneaking onto a convict ship (Chapter 20)'
+];
+var EVENTS = [
+  'The prince runs away because he is bored, and he makes Jemmy come too. (Chapter 3)',
+  'Two outlaws catch the boys in the fog. (Chapters 4–5)',
+  'Billy thinks Jemmy is the prince, so Jemmy writes the ransom note. (Chapters 7–8)',
+  'The prince tells Cutwater that Jemmy is hiding under the straw. (Chapter 12)',
+  'The outlaws whip the prince, and he does not cry out. Betsy’s bear chases them off. (Chapters 16–17)',
+  'Rats chase the outlaws in the sewers, and the prince brings Jemmy home to the king. (Chapters 19–20)'
+];
+var SHUFFLE = [3, 0, 5, 2, 4, 1];   /* fixed order on screen, so every student sees the same list */
+var GREETS = ['Dear King,', 'Dear Your Majesty,', 'To the King,'];
+var CLOSES = ['Your loyal servant,', 'Your friend,', 'Sincerely,'];
+
+/* ── the steps ── */
+var STEPS = [
+  { id: 'billy', title: 'Clues about Billy', say: 'step1',
+    todo: 'Read each clue about Billy. Tap In the book if the book says it, or Not in the book if it doesn’t. Get all eight right to go on.' },
+  { id: 'cut', title: 'Clues about Cutwater', say: 'step2',
+    todo: 'Read each clue about Cutwater. Tap In the book if the book says it, or Not in the book if it doesn’t. Get all eight right to go on.' },
+  { id: 'draw', title: 'Draw the outlaws', say: 'step3',
+    todo: 'Draw Billy and Cutwater in the poster frame. Use the true clues. Tap a color, then draw with your finger or your mouse.' },
+  { id: 'poster', title: 'Write the poster', say: 'step4',
+    todo: 'Write what each outlaw looks like, in your own words. Then tap at least two crimes, tap where they were last seen, and type the reward.' },
+  { id: 'order', title: 'Put the story in order', say: 'step5',
+    todo: 'Tap the six events in the order they happen in the book. Then tap Check my order.' },
+  { id: 'happened', title: 'What really happened', say: 'step6',
+    todo: 'Write what really happened, as Jemmy. Tell one event from the beginning, one from the middle and one from the end. Use First, Next and Last.' },
+  { id: 'letter', title: 'Finish the letter', say: 'step7',
+    todo: 'Type the heading. Tap a greeting. Write Jemmy’s opinion of the prince, with a reason and an example. Then tap a closing and sign it.' },
+  { id: 'save', title: 'Check and save', say: 'step8',
+    todo: 'Tap each box when your project has it. Then tap Open my PDF pages, and save them as one PDF to turn in on Canvas.' }
+];
+var CHECKS = [
+  'My poster tells what Billy and Cutwater look like, with true details.',
+  'My poster has at least two true crimes, where they were last seen, and a reward.',
+  'My letter has a heading, a greeting, a body, a closing and a signature.',
+  'My letter tells three true events in order: beginning, middle and end.',
+  'My letter gives Jemmy’s opinion of the prince, with a reason and an example.',
+  'I checked my capitals and end marks.'
+];
+
+function stepDone(i) {
+  var id = STEPS[i].id;
+  if (id === 'billy') return allRight('billy', BILLY);
+  if (id === 'cut') return allRight('cut', CUT);
+  if (id === 'draw') return !!S.drawing && (S.strokes || 0) >= 3;
+  if (id === 'poster') return words(S.pBilly) >= 8 && words(S.pCut) >= 8 && (S.crimes || []).length >= 2 && S.seen != null && String(S.reward || '').trim().length >= 2;
+  if (id === 'order') return !!S.orderOk;
+  if (id === 'happened') return words(S.happened) >= 25;
+  if (id === 'letter') return String(S.heading || '').trim().length >= 4 && S.greet != null && words(S.opinion) >= 20 && S.close != null && String(S.sign || '').trim().length >= 2;
+  if (id === 'save') return (S.checks || []).filter(Boolean).length === CHECKS.length;
+  return false;
+}
+function allRight(k, list) { var a = S[k] || {}; for (var i = 0; i < list.length; i++) if (a[i] !== 'right') return false; return true; }
+function firstOpen() { for (var i = 0; i < STEPS.length; i++) if (!stepDone(i)) return i; return STEPS.length - 1; }
+function reachable(i) { for (var j = 0; j < i; j++) if (!stepDone(j)) return false; return true; }
+function progress() {
+  var n = 0; for (var i = 0; i < STEPS.length; i++) if (stepDone(i)) n++;
+  var p = Math.round(n / STEPS.length * 100);
+  $('#progF').style.width = p + '%'; $('#progP').textContent = p + '%';
+  renderChips();
+}
+
+/* ── Opti's 🔊 on a line (hidden until the clip exists) ── */
+var NOW = null;
+function addSay(el) {
+  var slot = el.getAttribute('data-say'); if (!slot || el._say) return; el._say = true;
+  var b = document.createElement('button'); b.type = 'button'; b.className = 'say'; b.hidden = true;
+  b.setAttribute('aria-label', 'Hear Opti read this'); b.innerHTML = '<span aria-hidden="true">🔊</span>';
+  var a = new Audio(); a.preload = 'metadata';
+  a.addEventListener('loadedmetadata', function () { b.hidden = false; });
+  a.addEventListener('play', function () { b.classList.add('on'); });
+  a.addEventListener('pause', function () { b.classList.remove('on'); });
+  a.addEventListener('ended', function () { b.classList.remove('on'); });
+  a.src = AUDIO + slot + '.mp3';
+  b.onclick = function () {
+    if (!a.paused) { a.pause(); return; }
+    if (NOW && NOW !== a) { try { NOW.pause(); } catch (e) {} }
+    NOW = a; a.currentTime = 0; a.play().catch(function () {});
+  };
+  el.insertBefore(b, el.firstChild);
+}
+
+/* ── chips + step shell ── */
+var CUR = Math.min(S.cur != null ? S.cur : firstOpen(), STEPS.length - 1);
+if (!reachable(CUR)) CUR = firstOpen();
+function renderChips() {
+  var h = '';
+  STEPS.forEach(function (s, i) {
+    var cls = 'chip' + (i === CUR ? ' cur' : '') + (stepDone(i) ? ' done' : '');
+    h += '<button type="button" class="' + cls + '" data-i="' + i + '"' + (reachable(i) ? '' : ' disabled') + '>' + (stepDone(i) ? '✓ ' : '') + (i + 1) + ' · ' + esc(s.title) + '</button>';
+  });
+  var c = $('#chips'); c.innerHTML = h;
+  $$('.chip', c).forEach(function (b) { b.onclick = function () { go(+b.getAttribute('data-i')); }; });
+}
+function go(i) { if (!reachable(i)) return; CUR = i; S.cur = i; save(); render(); var st = $('#step'); var y = st.getBoundingClientRect().top + window.pageYOffset - 70; window.scrollTo({ top: Math.max(0, y), behavior: 'smooth' }); }
+function shell(i, body) {
+  var s = STEPS[i];
+  return '<div class="stephead">Step ' + (i + 1) + ' of ' + STEPS.length + ' · ' + esc(s.title) + '</div>' +
+    '<p class="do" data-say="' + s.say + '"><b>What to do:</b> ' + esc(s.todo) + '</p>' + body +
+    '<div class="nav"><button type="button" class="btn ghost" id="back"' + (i === 0 ? ' hidden' : '') + '>← Back</button>' +
+    (i < STEPS.length - 1 ? '<button type="button" class="btn gold" id="next">Next: ' + esc(STEPS[i + 1].title) + ' →</button>' : '') + '</div>' +
+    (i < STEPS.length - 1 ? '<div class="need" id="need"></div>' : '');
+}
+function wireNav(i, needText) {
+  var nx = $('#next'), bk = $('#back'), nd = $('#need');
+  if (bk) bk.onclick = function () { go(i - 1); };
+  function upd() { if (!nx) return; var ok = stepDone(i); nx.disabled = !ok; if (nd) nd.textContent = ok ? '' : needText; }
+  if (nx) nx.onclick = function () { if (stepDone(i)) go(i + 1); };
+  upd(); return upd;
+}
+
+/* ── step renderers ── */
+function clueStep(i, k, list, who) {
+  S[k] = S[k] || {};
+  var h = '<div class="clues">';
+  list.forEach(function (c, n) {
+    var st = S[k][n];
+    h += '<div class="clue' + (st === 'right' ? ' right' : '') + '" data-n="' + n + '"><p>' + esc(c.t) + '</p>' +
+      '<div class="row"><button type="button" data-a="yes">📖 In the book</button><button type="button" data-a="no">✖ Not in the book</button></div>' +
+      '<div class="fb">' + (st === 'right' ? fbRight(c) : '') + '</div></div>';
+  });
+  h += '</div>';
+  $('#step').innerHTML = shell(i, h);
+  var upd = wireNav(i, 'Get all eight clues right to go on.');
+  $$('.clue', $('#step')).forEach(function (card) {
+    var n = +card.getAttribute('data-n'), c = list[n];
+    $$('button', card).forEach(function (b) {
+      b.onclick = function () {
+        var said = b.getAttribute('data-a') === 'yes';
+        var fb = $('.fb', card);
+        if (said === c.ok) { S[k][n] = 'right'; card.classList.remove('miss'); card.classList.add('right'); fb.innerHTML = fbRight(c); }
+        else {
+          card.classList.add('miss');
+          fb.textContent = c.ok ? 'Look again. This one is in the book, in ' + c.ch + '.' :
+            (c.why || 'Look again. The book never says this about ' + who + '.');
+        }
+        save(); upd();
+      };
+    });
+  });
+}
+function fbRight(c) { return c.ok ? '✓ In the book: ' + esc(c.ch) + '.' : '✓ Right. The book never says this.' + (c.why ? ' ' + esc(c.why) : ''); }
+
+function drawStep(i) {
+  var cols = ['#2B2B2B', '#7A4A1E', '#C0392B', '#E67E22', '#E9C46A', '#2E7D4F', '#2B5BA8', '#FFFFFF'];
+  var h = '<div class="drawwrap"><div><div class="pad"><canvas id="cv" width="640" height="420" aria-label="Drawing pad for the poster picture"></canvas></div></div>' +
+    '<div class="tools"><div class="flabel">Color</div><div class="swatches">' +
+    cols.map(function (c, n) { return '<button type="button" class="sw' + (n === 0 ? ' on' : '') + '" data-c="' + c + '" style="background:' + c + '" aria-label="' + (c === '#FFFFFF' ? 'Eraser (white)' : 'Color ' + c) + '"></button>'; }).join('') +
+    '</div><div class="flabel">Pencil size</div><div class="sizes"><button type="button" class="sz" data-s="3">Thin</button><button type="button" class="sz on" data-s="7">Medium</button><button type="button" class="sz" data-s="14">Thick</button></div>' +
+    '<button type="button" class="btn ghost" id="clr">Start over</button>' +
+    '<div class="cluelist"><b>Billy</b>big, red hair and beard, yellow teeth<b>Cutwater</b>very thin, long arms, greasy lips</div></div></div>';
+  $('#step').innerHTML = shell(i, h);
+  var upd = wireNav(i, 'Draw both outlaws to go on.');
+  var cv = $('#cv'), x = cv.getContext('2d'), color = cols[0], size = 7, drawing = false, last = null;
+  function blank() { x.fillStyle = '#FBF3DF'; x.fillRect(0, 0, cv.width, cv.height); }
+  blank();
+  if (S.drawing) { var im = new Image(); im.onload = function () { x.drawImage(im, 0, 0); }; im.src = S.drawing; }
+  function pt(e) { var r = cv.getBoundingClientRect(); return { x: (e.clientX - r.left) * cv.width / r.width, y: (e.clientY - r.top) * cv.height / r.height }; }
+  cv.addEventListener('pointerdown', function (e) { drawing = true; last = pt(e); try { cv.setPointerCapture(e.pointerId); } catch (er) {} dot(last); e.preventDefault(); });
+  cv.addEventListener('pointermove', function (e) { if (!drawing) return; var p = pt(e); x.strokeStyle = color; x.lineWidth = color === '#FFFFFF' ? size * 2.5 : size; x.lineCap = 'round'; x.lineJoin = 'round'; x.beginPath(); x.moveTo(last.x, last.y); x.lineTo(p.x, p.y); x.stroke(); last = p; e.preventDefault(); });
+  function end() { if (!drawing) return; drawing = false; S.strokes = (S.strokes || 0) + 1; try { S.drawing = cv.toDataURL('image/jpeg', 0.85); } catch (er) {} save(); upd(); }
+  cv.addEventListener('pointerup', end); cv.addEventListener('pointercancel', end); cv.addEventListener('pointerleave', end);
+  function dot(p) { x.fillStyle = color; x.beginPath(); x.arc(p.x, p.y, (color === '#FFFFFF' ? size * 2.5 : size) / 2, 0, Math.PI * 2); x.fill(); }
+  $$('.sw').forEach(function (b) { b.onclick = function () { $$('.sw').forEach(function (o) { o.classList.remove('on'); }); b.classList.add('on'); color = b.getAttribute('data-c'); }; });
+  $$('.sz').forEach(function (b) { b.onclick = function () { $$('.sz').forEach(function (o) { o.classList.remove('on'); }); b.classList.add('on'); size = +b.getAttribute('data-s'); }; });
+  $('#clr').onclick = function () { blank(); S.drawing = null; S.strokes = 0; save(); upd(); };
+}
+
+function posterHTML() {
+  var cr = (S.crimes || []).map(function (n) { return '<li>' + esc(CRIMES[n]) + '</li>'; }).join('');
+  return '<div class="poster">' +
+    '<div class="w">WANTED</div><div class="names">Hold-Your-Nose Billy &amp; Cutwater</div>' +
+    '<div class="pic">' + (S.drawing ? '<img alt="The student’s drawing of Billy and Cutwater" src="' + S.drawing + '">' : 'Your drawing goes here') + '</div>' +
+    '<h4>HOLD-YOUR-NOSE BILLY</h4><p>' + (S.pBilly ? esc(S.pBilly) : '<span class="blank">What Billy looks like…</span>') + '</p>' +
+    '<h4>CUTWATER</h4><p>' + (S.pCut ? esc(S.pCut) : '<span class="blank">What Cutwater looks like…</span>') + '</p>' +
+    '<h4>WANTED FOR</h4><ul>' + (cr || '<li class="blank">Pick at least two crimes…</li>') + '</ul>' +
+    '<h4>LAST SEEN</h4><p>' + (S.seen != null ? esc(SEEN[S.seen]) : '<span class="blank">Pick where…</span>') + '</p>' +
+    '<div class="rw">REWARD: ' + (S.reward ? esc(S.reward) : '<span class="blank">…</span>') + '</div>' +
+    '<div class="by">By order of the King</div></div>';
+}
+function posterStep(i) {
+  var h = '<div class="two"><div>' +
+    '<div class="field"><label for="pB">What Billy looks like</label><div class="frame">Try: Hold-Your-Nose Billy is ___. He has ___.</div><textarea id="pB" maxlength="400"></textarea><div class="wc" id="wB"></div></div>' +
+    '<div class="field"><label for="pC">What Cutwater looks like</label><div class="frame">Try: Cutwater is ___. He has ___.</div><textarea id="pC" maxlength="400"></textarea><div class="wc" id="wC"></div></div>' +
+    '<div class="field"><div class="flabel">Wanted for (tap at least two)</div><div class="pick" id="crimes">' + CRIMES.map(function (c, n) { return '<button type="button" data-n="' + n + '" aria-pressed="' + ((S.crimes || []).indexOf(n) >= 0) + '">' + esc(c) + '</button>'; }).join('') + '</div></div>' +
+    '<div class="field"><div class="flabel">Last seen (tap one)</div><div class="pick" id="seen">' + SEEN.map(function (c, n) { return '<button type="button" data-n="' + n + '" aria-pressed="' + (S.seen === n) + '">' + esc(c) + '</button>'; }).join('') + '</div></div>' +
+    '<div class="field"><label for="rw">Reward from the king</label><div class="frame">Example: 100 gold coins</div><input type="text" id="rw" maxlength="40"></div>' +
+    '</div><div><div class="previewlab">Your poster</div><div id="pv"></div></div></div>';
+  $('#step').innerHTML = shell(i, h);
+  var upd = wireNav(i, 'Write at least 8 words for each outlaw, tap two crimes and a place, and type a reward.');
+  function refresh() { $('#pv').innerHTML = posterHTML(); wc('#pB', '#wB', S.pBilly, 8); wc('#pC', '#wC', S.pCut, 8); upd(); }
+  bindText('#pB', 'pBilly', refresh); bindText('#pC', 'pCut', refresh); bindText('#rw', 'reward', refresh);
+  $$('#crimes button').forEach(function (b) { b.onclick = function () { var n = +b.getAttribute('data-n'); S.crimes = S.crimes || []; var k = S.crimes.indexOf(n); if (k >= 0) S.crimes.splice(k, 1); else S.crimes.push(n); S.crimes.sort(); b.setAttribute('aria-pressed', k < 0); save(); refresh(); }; });
+  $$('#seen button').forEach(function (b) { b.onclick = function () { S.seen = +b.getAttribute('data-n'); $$('#seen button').forEach(function (o) { o.setAttribute('aria-pressed', o === b); }); save(); refresh(); }; });
+  refresh();
+}
+function bindText(sel, k, cb) { var el = $(sel); el.value = S[k] || ''; el.addEventListener('input', function () { S[k] = el.value; save(); cb(); }); }
+function wc(inp, out, val, min) { var n = words(val), o = $(out); if (!o) return; o.textContent = n + ' words' + (n >= min ? ' ✓' : ' · write at least ' + min); o.className = 'wc' + (n >= min ? ' ok' : ''); }
+
+function orderStep(i) {
+  S.pick = S.pick || [];
+  var h = '<div class="events" id="evs">' + SHUFFLE.map(function (e) {
+    var k = S.pick.indexOf(e);
+    return '<button type="button" class="ev' + (k >= 0 ? ' picked' : '') + '" data-e="' + e + '"><span class="n">' + (k >= 0 ? k + 1 : '') + '</span><span>' + esc(EVENTS[e]) + '</span></button>';
+  }).join('') + '</div><div class="nav" style="margin-top:12px;justify-content:flex-start"><button type="button" class="btn navy" id="chk">Check my order</button><button type="button" class="btn ghost" id="rst">Start over</button></div><div class="evfb" id="evfb" role="status"></div>';
+  $('#step').innerHTML = shell(i, h);
+  var upd = wireNav(i, 'Put all six events in the right order to go on.');
+  var fb = $('#evfb');
+  if (S.orderOk) { fb.className = 'evfb ok'; fb.textContent = '✓ That is the order of the book.'; }
+  $$('#evs .ev').forEach(function (b) {
+    b.onclick = function () {
+      if (S.orderOk) return;
+      var e = +b.getAttribute('data-e'), k = S.pick.indexOf(e);
+      if (k >= 0) S.pick = S.pick.slice(0, k); else S.pick.push(e);
+      save(); orderStep(i);
+    };
+  });
+  $('#rst').onclick = function () { S.pick = []; S.orderOk = false; save(); orderStep(i); };
+  $('#chk').onclick = function () {
+    if (S.pick.length < 6) { fb.className = 'evfb bad'; fb.textContent = 'Tap all six events first. You have numbered ' + S.pick.length + '.'; return; }
+    var wrong = -1; for (var n = 0; n < 6; n++) if (S.pick[n] !== n) { wrong = n; break; }
+    if (wrong < 0) { S.orderOk = true; save(); fb.className = 'evfb ok'; fb.textContent = '✓ That is the order of the book.'; upd(); }
+    else { fb.className = 'evfb bad'; fb.textContent = 'Number ' + (wrong + 1) + ' is not in the right place. Check the chapter numbers, then tap Start over.'; }
+  };
+}
+
+function letterHTML() {
+  return '<div class="letter">' +
+    '<div class="hd">' + (S.heading ? esc(S.heading) : '<span class="blank">Heading: place and date</span>') + '</div>' +
+    '<div class="gr">' + (S.greet != null ? esc(GREETS[S.greet]) : '<span class="blank">Greeting,</span>') + '</div>' +
+    '<p class="body">' + (S.happened ? esc(S.happened) : '<span class="blank">What really happened…</span>') + '</p>' +
+    '<p class="body">' + (S.opinion ? esc(S.opinion) : '<span class="blank">Jemmy’s opinion of the prince…</span>') + '</p>' +
+    '<div class="cl">' + (S.close != null ? esc(CLOSES[S.close]) : '<span class="blank">Closing,</span>') + '</div>' +
+    '<div class="sg">' + (S.sign ? esc(S.sign) : '<span class="blank">Signature</span>') + '</div></div>';
+}
+function happenedStep(i) {
+  var h = '<div class="remind"><b>The story in order</b><ol>' + EVENTS.map(function (e) { return '<li>' + esc(e) + '</li>'; }).join('') + '</ol></div>' +
+    '<div class="two"><div><div class="field"><label for="hp">Body, part 1: what really happened</label>' +
+    '<div class="frame">Try: First, ___. Next, ___. Last, ___.</div><textarea id="hp" maxlength="1200" style="min-height:170px"></textarea><div class="wc" id="wH"></div></div></div>' +
+    '<div><div class="previewlab">Your letter</div><div id="lv"></div></div></div>';
+  $('#step').innerHTML = shell(i, h);
+  var upd = wireNav(i, 'Write at least 25 words to go on.');
+  function refresh() { $('#lv').innerHTML = letterHTML(); wc('#hp', '#wH', S.happened, 25); upd(); }
+  bindText('#hp', 'happened', refresh); refresh();
+}
+function letterStep(i) {
+  var h = '<div class="two"><div>' +
+    '<div class="field"><label for="hd">Heading: the place and the date</label><div class="frame">Example: The castle, June 3</div><input type="text" id="hd" maxlength="40"></div>' +
+    '<div class="field"><div class="flabel">Greeting (tap one)</div><div class="pick" id="gr">' + GREETS.map(function (g, n) { return '<button type="button" data-n="' + n + '" aria-pressed="' + (S.greet === n) + '">' + esc(g) + '</button>'; }).join('') + '</div></div>' +
+    '<div class="field"><label for="op">Body, part 2: Jemmy’s opinion of the prince now</label>' +
+    '<div class="frame">Try: I think the prince ___ because ___. For example, in Chapter ___, ___.</div><textarea id="op" maxlength="1000" style="min-height:140px"></textarea><div class="wc" id="wO"></div></div>' +
+    '<div class="field"><div class="flabel">Closing (tap one)</div><div class="pick" id="cl">' + CLOSES.map(function (g, n) { return '<button type="button" data-n="' + n + '" aria-pressed="' + (S.close === n) + '">' + esc(g) + '</button>'; }).join('') + '</div></div>' +
+    '<div class="field"><label for="sg">Signature</label><div class="frame">Jemmy is writing, so sign it Jemmy.</div><input type="text" id="sg" maxlength="30"></div>' +
+    '</div><div><div class="previewlab">Your letter</div><div id="lv"></div></div></div>';
+  $('#step').innerHTML = shell(i, h);
+  var upd = wireNav(i, 'Fill in the heading, greeting, opinion (at least 20 words), closing and signature.');
+  function refresh() { $('#lv').innerHTML = letterHTML(); wc('#op', '#wO', S.opinion, 20); upd(); }
+  bindText('#hd', 'heading', refresh); bindText('#op', 'opinion', refresh); bindText('#sg', 'sign', refresh);
+  $$('#gr button').forEach(function (b) { b.onclick = function () { S.greet = +b.getAttribute('data-n'); $$('#gr button').forEach(function (o) { o.setAttribute('aria-pressed', o === b); }); save(); refresh(); }; });
+  $$('#cl button').forEach(function (b) { b.onclick = function () { S.close = +b.getAttribute('data-n'); $$('#cl button').forEach(function (o) { o.setAttribute('aria-pressed', o === b); }); save(); refresh(); }; });
+  refresh();
+}
+function saveStep(i) {
+  S.checks = S.checks || [];
+  var h = '<div class="checks">' + CHECKS.map(function (c, n) { return '<button type="button" class="ck" data-n="' + n + '" aria-pressed="' + !!S.checks[n] + '"><span class="box"></span><span>' + esc(c) + '</span></button>'; }).join('') + '</div>' +
+    '<div class="nav" style="justify-content:flex-start"><button type="button" class="btn gold" id="openSave">📄 Open my PDF pages</button></div><div class="need" id="need2"></div>';
+  $('#step').innerHTML = shell(i, h);
+  wireNav(i, '');
+  function upd() { var ok = stepDone(i); $('#openSave').disabled = !ok; $('#need2').textContent = ok ? '' : 'Tap all six boxes to open your PDF pages. If a box isn’t true yet, go back and fix that step.'; }
+  $$('.ck').forEach(function (b) { b.onclick = function () { var n = +b.getAttribute('data-n'); S.checks[n] = !S.checks[n]; b.setAttribute('aria-pressed', !!S.checks[n]); save(); upd(); }; });
+  $('#openSave').onclick = openSave; upd();
+}
+
+function render() {
+  var i = CUR, id = STEPS[i].id;
+  if (id === 'billy') clueStep(i, 'billy', BILLY, 'Billy');
+  else if (id === 'cut') clueStep(i, 'cut', CUT, 'Cutwater');
+  else if (id === 'draw') drawStep(i);
+  else if (id === 'poster') posterStep(i);
+  else if (id === 'order') orderStep(i);
+  else if (id === 'happened') happenedStep(i);
+  else if (id === 'letter') letterStep(i);
+  else saveStep(i);
+  $$('[data-say]', $('#step')).forEach(addSay);
+  renderChips();
+}
+
+/* ── the PDF pages ── */
+function fileName() { var n = String(S.name || '').trim().replace(/[^A-Za-z0-9]+/g, '-').replace(/^-|-$/g, ''); return (n || 'MyName') + '-Whipping-Boy-Project.pdf'; }
+function openSave() {
+  var v = $('#saveview'), nm = String(S.name || '').trim();
+  v.innerHTML = '<div class="save-bar"><h2>Save your PDF</h2><b>How to turn it in</b><ol>' +
+    '<li>Look over your two pages below. Tap Back to my project to fix anything.</li>' +
+    '<li>Tap <b>Save as PDF</b>. A print window opens.</li>' +
+    '<li>Next to <b>Destination</b>, choose <b>Save as PDF</b>, then tap <b>Save</b>.</li>' +
+    '<li>Name the file <b>' + esc(fileName()) + '</b>.</li>' +
+    '<li>Upload the PDF to the <b>Whipping Boy Unit Project</b> assignment in Canvas.</li></ol>' +
+    '<div class="save-actions"><button type="button" class="btn gold" id="printBtn">Save as PDF</button><button type="button" class="btn ghost" id="closeSave">Back to my project</button></div></div>' +
+    '<section class="sheet"><div class="k">The Whipping Boy · Unit Project · ' + esc(nm || 'Name: ________________') + '</div>' + posterHTML() + '</section>' +
+    '<section class="sheet"><div class="k">Jemmy’s letter to the king · ' + esc(nm || 'Name: ________________') + '</div>' + letterHTML() + '</section>';
+  v.classList.add('open'); document.body.style.overflow = 'hidden';
+  $('#printBtn').onclick = function () { try { window.print(); } catch (e) {} };
+  $('#closeSave').onclick = function () { v.classList.remove('open'); document.body.style.overflow = ''; };
+  v.scrollTop = 0;
+}
+
+/* ── boot ── */
+var nm = $('#nm'); nm.value = S.name || '';
+nm.addEventListener('input', function () { S.name = nm.value; save(); });
+$$('[data-say]').forEach(addSay);
+render(); progress();
+})();
+</script>
+</body>
+</html>
