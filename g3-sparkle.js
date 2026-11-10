@@ -616,7 +616,9 @@ function showProfileCard(isEdit) {
     renderIllumAuthor();
     owlSay('Well met, ' + name + '.');
   };
-  input.focus();
+  /* no scroll: the page opens at the top, banner and Start here showing
+     (a plain focus() pulled the name box into view, below the fold) */
+  try { input.focus({ preventScroll: true }); } catch (e) {}
 }
 
 /* ══════════════════════════════════════════════════════════════
