@@ -125,5 +125,12 @@ Evidence: Culmination: claim about one character + 7 pillars, written response +
 ## Not covered
 
 - Week 17 has no daily lesson files (spotlight task only).
-- `lesson-22-wb-project.html` has no info strip and no standards bar yet.
-- C.5.x (multimedia/digital) is not taught in any week's daily lessons. C.4.1, R.2.3 and R.2.4 were added to weeks 23–24 on Nov 9 (see those weeks).
+- `lesson-22-wb-project.html` (Wanted poster + letter to the king) got its own standards bar Nov 10: ELA.3.R.1.1, ELA.3.R.3.2, ELA.3.C.1.3, ELA.3.C.1.5, ELA.3.C.3.1, ELA.K12.EE.1.1, ELA.K12.EE.5.1 (letter format). It keeps its own info strip.
+- C.4.1, R.2.3 and R.2.4 were added to weeks 23–24 on Nov 9, and C.5.1 to week 32 on Nov 10 (see those weeks).
+
+## Nov 10 additions
+
+- Week 22: 22.4 Q4 summarize the whole book (R.3.2) and Q5 present the comparison paragraph aloud (C.2.1).
+- Week 30: 30.3 Q4 revise with a digital spelling/grammar checker (C.5.2).
+- Week 31: 31.4 Q4 talk it over with someone at home (ELA.K12.EE.4.1).
+- Week 32: two multimedia pieces in the presentation (C.5.1).

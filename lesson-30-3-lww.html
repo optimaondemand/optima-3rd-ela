@@ -2399,7 +2399,7 @@ body {
   <div class="standards-panel-inner">
     <div class="standards-group">
       <div class="standards-group-label">Florida B.E.S.T.</div>
-      <div class="standards-codes"><span class="fl-code">ELA.3.R.1.2</span> · <span class="fl-code">ELA.3.C.1.3</span> · <span class="fl-code">ELA.3.C.1.5</span> · <span class="fl-code">ELA.3.F.1.3</span> · <span class="fl-code">ELA.3.F.1.4</span> · <span class="fl-code">ELA.3.V.1.2</span> · <span class="fl-code">ELA.3.C.3.1</span> · <span class="fl-code">ELA.3.R.3.1</span></div>
+      <div class="standards-codes"><span class="fl-code">ELA.3.R.1.2</span> · <span class="fl-code">ELA.3.R.3.1</span> · <span class="fl-code">ELA.3.C.1.3</span> · <span class="fl-code">ELA.3.C.1.5</span> · <span class="fl-code">ELA.3.C.3.1</span> · <span class="fl-code">ELA.3.C.5.2</span> · <span class="fl-code">ELA.3.F.1.3</span> · <span class="fl-code">ELA.3.F.1.4</span> · <span class="fl-code">ELA.3.V.1.2</span></div>
     </div>
   </div>
 </div>
@@ -2672,6 +2672,14 @@ if(all){var f=g.querySelector('.fillin-feedback');if(f)f.classList.add('show');}
             <textarea class="journal-box" id="journal-q3" data-label="Q3: your reading growth" placeholder="The skill that helped me most was... I used it when..." oninput="autoSave(this,'dot-journal-q3');gatherAnswers();"></textarea>
           </div>
         </div>
+<div class="activity" style="margin-bottom:14px;">
+  <div class="activity-head"><div class="activity-num" style="background:#1B7A4E;font-size:14px;">Q4</div><div><div class="activity-title">Q4 — Use a Digital Tool</div></div></div>
+  <div class="activity-body">
+    <p style="font-size:16px;line-height:1.6;margin-bottom:8px;color:#0E1C42;">Type your theme response into a writing app (like Google Docs or Word). Turn on the spelling and grammar checker. Look at one thing the checker marks. Write what it suggested, and whether you took the suggestion or kept your words &mdash; and why.</p>
+    <div class="textbox-prompt">A checker is a helper, not the boss. Sometimes your words are right and the checker is wrong.</div>
+    <textarea class="journal-box" id="journal-q4" data-label="Q4: a digital tool helped me revise" placeholder="The checker marked ... It suggested ... I (took / did not take) it because ..." oninput="autoSave(this,'dot-q4');gatherAnswers();"></textarea>
+  </div>
+</div>
   
   <!-- RWM -->
   <div class="rwm-box">
@@ -2765,13 +2773,14 @@ My final literary response: ..." oninput="autoSave(this,'dot-writing');gatherAns
   </div>
   <div class="turn-in-card" style="margin-top:18px;">
     <div class="turn-in-header"><div class="turn-in-header-icon">📬</div><div><div class="turn-in-header-label">Ready?</div><div class="turn-in-header-title">Before You Submit</div></div></div>
-    <div class="turn-in-body"><div class="turn-in-checklist"><div class="turn-in-item" onclick="toggleCheck(this)"><div class="turn-in-check"></div><div class="turn-in-item-text">I wrote my synthesis paragraph covering the whole novel.</div></div><div class="turn-in-item" onclick="toggleCheck(this)"><div class="turn-in-check"></div><div class="turn-in-item-text">I edited the grammar passage correctly.</div></div><div class="turn-in-item" onclick="toggleCheck(this)"><div class="turn-in-check"></div><div class="turn-in-item-text">I gave my literary response a title and made one final improvement.</div></div><div class="turn-in-item" onclick="toggleCheck(this)"><div class="turn-in-check"></div><div class="turn-in-item-text">I copied or downloaded my work and submitted it to Canvas.</div></div></div></div>
+    <div class="turn-in-body"><div class="turn-in-checklist"><div class="turn-in-item" onclick="toggleCheck(this)"><div class="turn-in-check"></div><div class="turn-in-item-text">I wrote my synthesis paragraph covering the whole novel.</div></div><div class="turn-in-item" onclick="toggleCheck(this)"><div class="turn-in-check"></div><div class="turn-in-item-text">I edited the grammar passage correctly.</div></div><div class="turn-in-item" onclick="toggleCheck(this)"><div class="turn-in-check"></div><div class="turn-in-item-text">I gave my literary response a title and made one final improvement.</div></div><div class="turn-in-item" onclick="toggleCheck(this)"><div class="turn-in-check"></div><div class="turn-in-item-text">I used a digital checker on my theme response and wrote about one suggestion.</div></div>
+<div class="turn-in-item" onclick="toggleCheck(this)"><div class="turn-in-check"></div><div class="turn-in-item-text">I copied or downloaded my work and submitted it to Canvas.</div></div></div></div>
   </div>
 </div>
 <div class="footer">
   <div class="footer-main"><span>Optima Academy Online</span> &middot; 3rd Grade ELA &middot; Week 30 &middot; Lesson 30.3</div>
   <div class="footer-sub"><em>The Lion, the Witch and the Wardrobe</em> &mdash; Ch. 16–17 + Synthesis</div>
-  <div class="footer-standards">FL: ELA.3.R.1.2, ELA.3.C.1.3, ELA.3.C.1.5, ELA.3.F.1.3, ELA.3.F.1.4, ELA.3.V.1.2, ELA.3.C.3.1, ELA.3.R.3.1</div>
+  <div class="footer-standards">FL: ELA.3.R.1.2, ELA.3.R.3.1, ELA.3.C.1.3, ELA.3.C.1.5, ELA.3.C.3.1, ELA.3.C.5.2, ELA.3.F.1.3, ELA.3.F.1.4, ELA.3.V.1.2</div>
   <div class="footer-copy">&copy; Optima Academy Online &middot; An Education Experience Company</div>
 </div>
 </div><!-- /page-wrap -->
@@ -2804,7 +2813,7 @@ function expandIntro() {
 function gatherAnswers() {
   var output = '';
   var sections = [
-    { title: '📖 CHAPTER THINKING', ids: ['journal-q1','journal-q2','journal-q3'] },
+    { title: '📖 CHAPTER THINKING', ids: ['journal-q1','journal-q2','journal-q3','journal-q4'] },
     { title: '📖 RWM — READ LIKE A READER / WRITER / MIMIC', ids: ['journal-rwm-reader', 'journal-rwm-writer', 'journal-rwm-mimic'] },
     { title: '🔤 WORD STUDY CONNECTION (MORPHOLOGY)', ids: ['journal-morph'] },
     { title: '🪶 WRITING CONNECTION', ids: ['journal-writing'] }
@@ -3234,7 +3243,7 @@ function downloadJournal() {
   gatherAnswers();
 
   var sections = [
-    { title: '📖 CHAPTER THINKING', ids: ['journal-q1','journal-q2','journal-q3'] },
+    { title: '📖 CHAPTER THINKING', ids: ['journal-q1','journal-q2','journal-q3','journal-q4'] },
     { title: '📖 RWM — READ LIKE A READER / WRITER / MIMIC', ids: ['journal-rwm-reader', 'journal-rwm-writer', 'journal-rwm-mimic'] },
     { title: '🔤 WORD STUDY CONNECTION (MORPHOLOGY)', ids: ['journal-morph'] },
     { title: '🪶 WRITING CONNECTION', ids: ['journal-writing'] }
