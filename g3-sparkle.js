@@ -4236,6 +4236,7 @@ function buildBookFlip() {
    pause after a comma or a full stop. */
 function readAlongify(ra) {
   if (ra._g3ra) return; ra._g3ra = true;
+  if (ra.classList.contains('g3-fold')) return;   // audit Nov 10: a folded card is not a clip's words (it showed a second "Read along with Opti")
   var wrap = ra.parentNode, au = wrap && wrap.querySelector('.spk-audio');
   var a = au && au._spkAudio; if (!a) return;
   var bodyEl = ra.querySelector('.spk-note-body'), sum = ra.querySelector('summary');
@@ -4425,7 +4426,7 @@ function applyTeach(T) {
     if (row) body.insertBefore(row, body.firstChild);
     if (row || folds.length) {
       var d = document.createElement('details'); d.className = 'spk-note spk-readalong g3-fold';
-      d.innerHTML = '<summary>📄 Read Opti’s words</summary>';
+      d.innerHTML = '<summary>' + (m.script ? '📄 Read Opti’s words' : '📖 Read more about this') + '</summary>';
       var inner = document.createElement('div'); inner.className = 'spk-note-body';
       if (m.script) { var p = document.createElement('p'); p.className = 'g3-fold-words'; p.textContent = plainScript(m.script); inner.appendChild(p); }
       folds.forEach(function (e) { inner.appendChild(e); });

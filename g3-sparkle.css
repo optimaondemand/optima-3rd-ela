@@ -2012,3 +2012,8 @@ button.g3-opt-btn:active, button.g3-tw-chip:active, button.spk-btn:active, butto
 .g3-hand { display:inline-block; transform-origin:50% 90%; animation:g3Tap 3s ease-in-out infinite; }
 @keyframes g3Tap { 0%,64%,100% { transform:translateY(0) scale(1); } 72% { transform:translateY(3px) scale(.86); } 80% { transform:translateY(0) scale(1); } 88% { transform:translateY(3px) scale(.86); } }
 @media (prefers-reduced-motion: reduce) { .g3-hand { animation:none; } }
+
+/* audit Nov 10 2026: dark purple words on a purple button, and purple labels on the dark band, were hard to read */
+.tab-next-btn, button.tab-next-btn, .gathered-btn.gathered-btn-copy { color: #fff !important; }
+.gathered-header-label { color: #E9D8FF !important; }
+.footer-main > span:first-child { color: #D9C2FF !important; }
