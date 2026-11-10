@@ -934,7 +934,9 @@ function findMod(m) {
    ?pilot=1 / G3_PILOT_TTS forces the browser voice (previews). */
 if (/[?&]pilot=1(&|$)/.test(location.search)) window.G3_PILOT_TTS = true;
 function buildTeach() {
-  var T = DATA.teach; if (!T || document.querySelector('.g3-teach')) return;
+  var T = DATA.teach;
+  if (!T) { if (DATA.howto) { try { buildHowTo(); } catch (e) {} } return; }
+  if (document.querySelector('.g3-teach')) return;
   applyTeach(T);
 }
 function applyTeach(T) {
@@ -988,7 +990,7 @@ function applyTeach(T) {
    file, committed with the layer), with a poster so the card is never
    blank before the video loads. ── */
 function buildHowTo() {
-  if (document.querySelector('.g3-start') || !document.body.classList.contains('g3-teaching')) return;
+  if (document.querySelector('.g3-start') || !(document.body.classList.contains('g3-teaching') || DATA.howto)) return;
   var src = window.G3_HOWTO_SRC || 'assets/video/g3ela-howto.mp4';
   var poster = window.G3_HOWTO_POSTER || 'assets/video/g3ela-howto.jpg';
   var card = document.createElement('details'); card.className = 'g3-start';

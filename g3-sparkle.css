@@ -1658,6 +1658,17 @@ html[data-spk-tab="reading"] .spk-notes-fab:not(.hide) { display:block; }
 .nav-howto-v { width:100%; border-radius:12px; background:#000; display:block; }
 @media (max-width:560px) { .nav-start-k { font-size:20px; } .nav-start-face { display:none; } }
 
+/* the 👆 taps now and then, so the eye goes to what to press (Nov 10 2026) */
+.nav-hand { display:inline-block; transform-origin:50% 90%; animation:navTap 3s ease-in-out infinite; }
+@keyframes navTap { 0%,64%,100% { transform:translateY(0) scale(1); } 72% { transform:translateY(3px) scale(.86); } 80% { transform:translateY(0) scale(1); } 88% { transform:translateY(3px) scale(.86); } }
+@media (prefers-reduced-motion: reduce) { .nav-hand { animation:none; } }
+
+/* "What to do" on every activity (Nov 10 2026) */
+.nav-do { background:#FFFBEF; border:1.5px solid #E8D9A8; border-radius:12px; padding:10px 16px; margin:0 0 14px; font-size:16px; color:#24324F; }
+.nav-do-h { font-family:Nunito,sans-serif; font-weight:800; font-size:16px; color:#8B6914; }
+.nav-do ol { margin:6px 0 2px 22px; padding:0; }
+.nav-do li { margin:3px 0; line-height:1.5; }
+
 
 /* ══════════════════════════════════════════════════════════════
    G3 ELA ADDITIONS (Opti's Story Map). Big, plain type for 8-year-olds.
@@ -1996,3 +2007,8 @@ button.g3-opt-btn:active, button.g3-tw-chip:active, button.spk-btn:active, butto
 .g3-start .g3-howto { max-width:none; margin:0; border:0; border-radius:0; background:transparent; padding:0 16px 16px; }
 .g3-howto-v { width:100%; border-radius:12px; background:#000; display:block; }
 @media (max-width:560px) { .g3-start-k { font-size:20px; } .g3-start-face { display:none; } }
+
+/* the 👆 taps now and then, so the eye goes to what to press (Nov 10 2026) */
+.g3-hand { display:inline-block; transform-origin:50% 90%; animation:g3Tap 3s ease-in-out infinite; }
+@keyframes g3Tap { 0%,64%,100% { transform:translateY(0) scale(1); } 72% { transform:translateY(3px) scale(.86); } 80% { transform:translateY(0) scale(1); } 88% { transform:translateY(3px) scale(.86); } }
+@media (prefers-reduced-motion: reduce) { .g3-hand { animation:none; } }

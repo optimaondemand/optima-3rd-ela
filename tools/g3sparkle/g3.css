@@ -335,3 +335,8 @@ button.g3-opt-btn:active, button.g3-tw-chip:active, button.spk-btn:active, butto
 .g3-start .g3-howto { max-width:none; margin:0; border:0; border-radius:0; background:transparent; padding:0 16px 16px; }
 .g3-howto-v { width:100%; border-radius:12px; background:#000; display:block; }
 @media (max-width:560px) { .g3-start-k { font-size:20px; } .g3-start-face { display:none; } }
+
+/* the 👆 taps now and then, so the eye goes to what to press (Nov 10 2026) */
+.g3-hand { display:inline-block; transform-origin:50% 90%; animation:g3Tap 3s ease-in-out infinite; }
+@keyframes g3Tap { 0%,64%,100% { transform:translateY(0) scale(1); } 72% { transform:translateY(3px) scale(.86); } 80% { transform:translateY(0) scale(1); } 88% { transform:translateY(3px) scale(.86); } }
+@media (prefers-reduced-motion: reduce) { .g3-hand { animation:none; } }

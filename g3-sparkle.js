@@ -3440,10 +3440,25 @@ function navHowTo() {
   if (key && key.parentNode) key.parentNode.insertBefore(card, key.nextSibling);
   else document.body.insertBefore(card, document.body.firstChild);
 }
+/* "What to do" at the top of every activity: DATA.todo = [{find:'title regex', steps:[...]}] */
+function navTodo() {
+  (DATA.todo || []).forEach(function (T) {
+    var re = new RegExp(T.find, 'i'), mod = null, t = document.querySelectorAll('.activity-title, .spk-card-title');
+    for (var i = 0; i < t.length; i++) if (re.test(t[i].textContent || '')) { mod = t[i].closest('.activity, .spk-card'); break; }
+    if (!mod) return;
+    var body = mod.querySelector('.activity-body, .spk-card-body') || mod;
+    if (body.querySelector(':scope > .nav-do')) return;
+    var box = document.createElement('div'); box.className = 'nav-do';
+    box.innerHTML = '<div class="nav-do-h">What to do</div><ol>' + (T.steps || []).map(function (x) { return '<li>' + esc(x) + '</li>'; }).join('') + '</ol>';
+    var first = body.firstChild;
+    while (first && first.nodeType === 1 && /spk-guide-wrap|g3-opti-row|spk-arc-head/.test(first.className || '')) first = first.nextSibling;
+    body.insertBefore(box, first);
+  });
+}
 function buildNav() {
   if (!DATA.navFixes) return;
   document.body.classList.add('nav-fixes');
-  navTabTop(); navKey(); navFewerWords(); navHowTo(); navTaps();
+  navTabTop(); navKey(); navFewerWords(); navHowTo(); navTodo(); navTaps();
   if (window.MutationObserver) {
     var t = null;
     new MutationObserver(function () { clearTimeout(t); t = setTimeout(function () { navTaps(); }, 60); })
@@ -4387,7 +4402,9 @@ function findMod(m) {
    ?pilot=1 / G3_PILOT_TTS forces the browser voice (previews). */
 if (/[?&]pilot=1(&|$)/.test(location.search)) window.G3_PILOT_TTS = true;
 function buildTeach() {
-  var T = DATA.teach; if (!T || document.querySelector('.g3-teach')) return;
+  var T = DATA.teach;
+  if (!T) { if (DATA.howto) { try { buildHowTo(); } catch (e) {} } return; }
+  if (document.querySelector('.g3-teach')) return;
   applyTeach(T);
 }
 function applyTeach(T) {
@@ -4441,7 +4458,7 @@ function applyTeach(T) {
    file, committed with the layer), with a poster so the card is never
    blank before the video loads. ── */
 function buildHowTo() {
-  if (document.querySelector('.g3-start') || !document.body.classList.contains('g3-teaching')) return;
+  if (document.querySelector('.g3-start') || !(document.body.classList.contains('g3-teaching') || DATA.howto)) return;
   var src = window.G3_HOWTO_SRC || 'assets/video/g3ela-howto.mp4';
   var poster = window.G3_HOWTO_POSTER || 'assets/video/g3ela-howto.jpg';
   var card = document.createElement('details'); card.className = 'g3-start';
