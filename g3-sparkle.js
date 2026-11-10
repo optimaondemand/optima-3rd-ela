@@ -4346,24 +4346,31 @@ function ttsSay(text, btn) {
 }
 /* the player: Opti + one big button, real clip if it is there */
 function teachPlayer(label, src, text, cls) {
+  /* One button. It plays Opti's recorded clip when the file is there;
+     until it is, the browser reads Opti's words aloud instead, so the
+     live lesson works the same today as it will once the clips exist. */
   var row = document.createElement('div'); row.className = 'g3-teach ' + (cls || '');
   var secs = Math.max(5, Math.round(plainScript(text).length / 15));
-  if (window.G3_PILOT_TTS) {
-    row.innerHTML = '<span class="g3-teach-face" aria-hidden="true">' + owlSVG('opti', 44) + '</span>';
-    var b = document.createElement('button'); b.type = 'button'; b.className = 'g3-teach-btn';
-    b.innerHTML = '<span class="g3-teach-ico">▶</span> ' + esc(label) + ' <span class="g3-teach-t">' + Math.floor(secs / 60) + ':' + ('0' + secs % 60).slice(-2) + '</span>';
-    b.onclick = function () { ttsSay(plainScript(text), b); };
-    row.appendChild(b);
-    return row;
-  }
-  var ac = audioControl(label, src); if (!ac) return null;
-  row.hidden = true;
   row.innerHTML = '<span class="g3-teach-face" aria-hidden="true">' + owlSVG('opti', 44) + '</span>';
-  row.appendChild(ac);
-  if (window.MutationObserver) {
-    var ob = new MutationObserver(function () { if (!ac.hidden) { row.hidden = false; ob.disconnect(); } });
-    ob.observe(ac, { attributes: true, attributeFilter: ['hidden'] });
+  var b = document.createElement('button'); b.type = 'button'; b.className = 'g3-teach-btn';
+  b.innerHTML = '<span class="g3-teach-ico">▶</span> ' + esc(label) + ' <span class="g3-teach-t">' + Math.floor(secs / 60) + ':' + ('0' + secs % 60).slice(-2) + '</span>';
+  var a = null, real = false;
+  if (!window.G3_PILOT_TTS) {
+    a = new Audio(); a.preload = 'metadata';
+    a.addEventListener('loadedmetadata', function () { real = true; });
+    a.addEventListener('ended', function () { b.classList.remove('on'); });
+    a.addEventListener('pause', function () { b.classList.remove('on'); });
+    a.src = src;
   }
+  b.onclick = function () {
+    if (real && a) {
+      if (!a.paused) { a.pause(); return; }
+      if (window.speechSynthesis) speechSynthesis.cancel();
+      audioStopAll(a); _nowPlaying = a; try { a.currentTime = 0; } catch (e) {}
+      b.classList.add('on'); a.play().catch(function () { b.classList.remove('on'); });
+    } else ttsSay(plainScript(text), b);
+  };
+  row.appendChild(b);
   return row;
 }
 function findMod(m) {
@@ -4372,18 +4379,14 @@ function findMod(m) {
   for (var i = 0; i < t.length; i++) if (re.test(t[i].textContent || '')) return t[i].closest('.activity, .spk-card');
   return null;
 }
-/* Opti-teaches mode turns on only when it can be heard: in a pilot
-   preview (?pilot=1 or G3_PILOT_TTS) or once the lesson's first teach
-   clip is really there. Until then a lesson keeps its own words and
-   tab notes, so nothing is folded away behind a silent button. */
+/* Opti-teaches mode is on for every lesson whose DATA has `teach`
+   (Bethany, Nov 10 2026: the live lesson IS the pilot). Each button
+   plays the recorded clip when it exists, else the browser voice.
+   ?pilot=1 / G3_PILOT_TTS forces the browser voice (previews). */
 if (/[?&]pilot=1(&|$)/.test(location.search)) window.G3_PILOT_TTS = true;
 function buildTeach() {
   var T = DATA.teach; if (!T || document.querySelector('.g3-teach')) return;
-  if (window.G3_PILOT_TTS) return applyTeach(T);
-  var first = (T.mods || []).filter(function (m) { return m.script; })[0]; if (!first) return;
-  var a = new Audio(); a.preload = 'metadata';
-  a.addEventListener('loadedmetadata', function () { applyTeach(T); });
-  a.src = teachSrc('teach', first.id);
+  applyTeach(T);
 }
 function applyTeach(T) {
   if (document.body.classList.contains('g3-teaching')) return;
