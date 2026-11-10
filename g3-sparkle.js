@@ -2889,6 +2889,7 @@ function declutter() {
    the length of the call, then putting the scroll back. */
 function hookTabScroll() {
   if (typeof window.switchTab !== 'function') return;
+  if (DATA.navFixes) return;   /* pilot-review fixes: a new tab goes to the top (buildNav) */
   var inner = window.switchTab;
   window.switchTab = function (tabId) {
     var y = window.pageYOffset || document.documentElement.scrollTop || 0;
@@ -3351,6 +3352,101 @@ function addCounter(ta) {
   }
   ta.addEventListener('input', upd); upd();
   setTimeout(upd, 600);            /* after the lesson restores saved answers */
+}
+
+/* ══════════════════════════════════════════════════════════════
+   PILOT-REVIEW FIXES (Nov 10 2026), from the G3 ELA pilot review,
+   applied to G4 ahead of its own review. Lesson by lesson: only a
+   lesson whose DATA has `navFixes: true` gets them (week 7 first).
+     · a new tab starts at the top of the lesson (and asks Canvas to
+       scroll its page up, since the lesson sits in an iframe there)
+     · 👆 on every button that does something; a key line under the
+       header says 👆 = tap, 🔊 = listen
+     · fewer words: the Writer's Workshop banner and the Explorer /
+       Scholar choice say it in one line each
+     · Opti's "How to use your lesson" video in a Start here drawer at
+       the very top of the lesson
+   ══════════════════════════════════════════════════════════════ */
+function navTabTop() {
+  if (typeof window.switchTab !== 'function' || window.switchTab._navTop) return;
+  var inner = window.switchTab;
+  var f = function () {
+    var r = inner.apply(this, arguments);
+    var top = document.getElementById('pageTop');
+    try { if (top) top.scrollIntoView({ block: 'start' }); else window.scrollTo(0, 0); } catch (e) { window.scrollTo(0, 0); }
+    try {
+      if (window.parent && window.parent !== window) {
+        window.parent.postMessage(JSON.stringify({ subject: 'lti.scrollToTop' }), '*');
+        window.parent.postMessage({ subject: 'lti.scrollToTop' }, '*');
+      }
+    } catch (e) {}
+    return r;
+  };
+  f._navTop = true; window.switchTab = f;
+}
+var NAV_TAP_BTN = 'button.dol-check-btn, button.fillin-check-btn, button.tab-next-btn, button.spk-mini-btn, ' +
+  'button.spk-dol-swap, button.spk-btn, button.gathered-btn, button.spk-notes-use, button.check-btn, button.game-btn';
+function navTaps(root) {
+  (root || document).querySelectorAll(NAV_TAP_BTN).forEach(function (b) {
+    if (b.querySelector('.nav-hand')) return;
+    var t = b.firstChild;
+    if (t && t.nodeType === 3) t.nodeValue = t.nodeValue.replace(/^\s*(?:\p{Extended_Pictographic}️?\s*)+/u, '');
+    var h = document.createElement('span'); h.className = 'nav-hand'; h.setAttribute('aria-hidden', 'true'); h.textContent = '👆';
+    b.insertBefore(h, b.firstChild);
+  });
+  (root || document).querySelectorAll('.fc-tap').forEach(function (t) {
+    if (!/👆/.test(t.textContent)) t.textContent = '👆 ' + t.textContent;
+  });
+}
+function navKey() {
+  if (document.querySelector('.nav-key')) return;
+  var hdr = document.querySelector('.spk-hd, .header'); if (!hdr) return;
+  var k = document.createElement('div'); k.className = 'nav-key';
+  k.innerHTML = '<span><b>👆</b> You can tap it.</span><span><b>🔊</b> You can listen.</span>';
+  hdr.parentNode.insertBefore(k, hdr.nextSibling);
+}
+function navFewerWords() {
+  document.querySelectorAll('.spk-goal-gloss').forEach(function (g) { g.remove(); });
+  document.querySelectorAll('.spk-keep').forEach(function (k) {
+    if (k._nav) return; k._nav = true;
+    var b = k.querySelector('p b'); var name = b ? b.textContent : 'your project';
+    k.innerHTML = '<p><b>Every day:</b> copy your writing into one document called <b>' + name + '</b>.</p>';
+  });
+  var lab = document.querySelector('.spk-roads-label'); if (lab) lab.textContent = 'Pick one. Both finish the lesson.';
+  document.querySelectorAll('.spk-road[data-tier="scholar"] .spk-road-line').forEach(function (l) {
+    l.innerHTML = 'Add <b>one more</b> detail or reason to each answer. Earn the Scholar’s seal.';
+  });
+  document.querySelectorAll('.spk-roads-note').forEach(function (n) { n.remove(); });
+}
+function navHowTo() {
+  if (document.querySelector('.nav-start')) return;
+  var src = window.NAV_HOWTO_SRC || 'assets/video/g3ela-howto.mp4';
+  var poster = window.NAV_HOWTO_POSTER || 'assets/video/g3ela-howto.jpg';
+  var card = document.createElement('details'); card.className = 'nav-start';
+  card.innerHTML = '<summary class="nav-start-bar"><span class="nav-start-play" aria-hidden="true">▶</span>' +
+    '<span class="nav-start-txt"><span class="nav-start-k">Start here</span>' +
+    '<span class="nav-start-t">Watch how to use your lesson · 1 minute</span></span>' +
+    '<span class="nav-start-face" aria-hidden="true">' + owlSVG('optima', 46) + '</span>' +
+    '<span class="nav-start-chev" aria-hidden="true">▾</span></summary>' +
+    '<div class="nav-howto"><video class="nav-howto-v" controls preload="metadata" playsinline></video></div>';
+  var v = card.querySelector('video');
+  v.poster = poster;
+  v.addEventListener('play', function () { audioStopAll(); });
+  v.src = src;
+  card.addEventListener('toggle', function () { if (!card.open) { try { v.pause(); } catch (e) {} } });
+  var key = document.querySelector('.nav-key') || document.querySelector('.spk-hd, .header');
+  if (key && key.parentNode) key.parentNode.insertBefore(card, key.nextSibling);
+  else document.body.insertBefore(card, document.body.firstChild);
+}
+function buildNav() {
+  if (!DATA.navFixes) return;
+  document.body.classList.add('nav-fixes');
+  navTabTop(); navKey(); navFewerWords(); navHowTo(); navTaps();
+  if (window.MutationObserver) {
+    var t = null;
+    new MutationObserver(function () { clearTimeout(t); t = setTimeout(function () { navTaps(); }, 60); })
+      .observe(document.body, { childList: true, subtree: true });
+  }
 }
 
 /* ══════════════════════════════════════════════════════════════
@@ -4335,24 +4431,29 @@ function applyTeach(T) {
 }
 
 /* ── How to use your lesson (pilot feedback, Nov 10 2026): Opti's
-   1-minute tour, one video for the whole course, played right on the
-   page at the top of the Warm-Up tab. Always shown (one course-wide
+   1-minute tour, one video for the whole course, in a "Start here"
+   drawer at the very top of the lesson, under the key line. Always shown (one course-wide
    file, committed with the layer), with a poster so the card is never
    blank before the video loads. ── */
 function buildHowTo() {
-  if (document.querySelector('.g3-howto') || !document.body.classList.contains('g3-teaching')) return;
-  var warm = document.getElementById('tab-warmup'); if (!warm) return;
+  if (document.querySelector('.g3-start') || !document.body.classList.contains('g3-teaching')) return;
   var src = window.G3_HOWTO_SRC || 'assets/video/g3ela-howto.mp4';
   var poster = window.G3_HOWTO_POSTER || 'assets/video/g3ela-howto.jpg';
-  var card = document.createElement('section'); card.className = 'g3-howto';
-  card.innerHTML = '<div class="g3-howto-head"><span class="g3-howto-face" aria-hidden="true">' + owlSVG('opti', 48) + '</span>' +
-    '<div><div class="g3-howto-k">Watch this first</div><div class="g3-howto-t">How to use your lesson</div></div></div>' +
-    '<video class="g3-howto-v" controls preload="metadata" playsinline></video>';
+  var card = document.createElement('details'); card.className = 'g3-start';
+  card.innerHTML = '<summary class="g3-start-bar"><span class="g3-start-play" aria-hidden="true">▶</span>' +
+    '<span class="g3-start-txt"><span class="g3-start-k">Start here</span>' +
+    '<span class="g3-start-t">Watch how to use your lesson · 1 minute</span></span>' +
+    '<span class="g3-start-face" aria-hidden="true">' + owlSVG('opti', 46) + '</span>' +
+    '<span class="g3-start-chev" aria-hidden="true">▾</span></summary>' +
+    '<div class="g3-howto"><video class="g3-howto-v" controls preload="metadata" playsinline></video></div>';
   var v = card.querySelector('video');
   v.poster = poster;
   v.addEventListener('play', function () { audioStopAll(); });
   v.src = src;
-  warm.insertBefore(card, warm.firstChild);
+  card.addEventListener('toggle', function () { if (!card.open) { try { v.pause(); } catch (e) {} } });
+  var key = document.querySelector('.g3-tapkey') || document.querySelector('.spk-hd, .header');
+  if (key && key.parentNode) key.parentNode.insertBefore(card, key.nextSibling);
+  else document.body.insertBefore(card, document.body.firstChild);
 }
 
 
@@ -4407,6 +4508,7 @@ function boot() {
     ['opti',        optiFaces],
     ['teach',       buildTeach],
     ['howto',       buildHowTo],
+    ['nav',         buildNav],
     ['marginalia',  marginalia],
     ['ornaments',   ornaments],
     ['seal',        function () { sealCheck(true); }],

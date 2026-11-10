@@ -980,22 +980,27 @@ function applyTeach(T) {
 }
 
 /* ── How to use your lesson (pilot feedback, Nov 10 2026): Opti's
-   1-minute tour, one video for the whole course, played right on the
-   page at the top of the Warm-Up tab. Always shown (one course-wide
+   1-minute tour, one video for the whole course, in a "Start here"
+   drawer at the very top of the lesson, under the key line. Always shown (one course-wide
    file, committed with the layer), with a poster so the card is never
    blank before the video loads. ── */
 function buildHowTo() {
-  if (document.querySelector('.g3-howto') || !document.body.classList.contains('g3-teaching')) return;
-  var warm = document.getElementById('tab-warmup'); if (!warm) return;
+  if (document.querySelector('.g3-start') || !document.body.classList.contains('g3-teaching')) return;
   var src = window.G3_HOWTO_SRC || 'assets/video/g3ela-howto.mp4';
   var poster = window.G3_HOWTO_POSTER || 'assets/video/g3ela-howto.jpg';
-  var card = document.createElement('section'); card.className = 'g3-howto';
-  card.innerHTML = '<div class="g3-howto-head"><span class="g3-howto-face" aria-hidden="true">' + owlSVG('opti', 48) + '</span>' +
-    '<div><div class="g3-howto-k">Watch this first</div><div class="g3-howto-t">How to use your lesson</div></div></div>' +
-    '<video class="g3-howto-v" controls preload="metadata" playsinline></video>';
+  var card = document.createElement('details'); card.className = 'g3-start';
+  card.innerHTML = '<summary class="g3-start-bar"><span class="g3-start-play" aria-hidden="true">▶</span>' +
+    '<span class="g3-start-txt"><span class="g3-start-k">Start here</span>' +
+    '<span class="g3-start-t">Watch how to use your lesson · 1 minute</span></span>' +
+    '<span class="g3-start-face" aria-hidden="true">' + owlSVG('opti', 46) + '</span>' +
+    '<span class="g3-start-chev" aria-hidden="true">▾</span></summary>' +
+    '<div class="g3-howto"><video class="g3-howto-v" controls preload="metadata" playsinline></video></div>';
   var v = card.querySelector('video');
   v.poster = poster;
   v.addEventListener('play', function () { audioStopAll(); });
   v.src = src;
-  warm.insertBefore(card, warm.firstChild);
+  card.addEventListener('toggle', function () { if (!card.open) { try { v.pause(); } catch (e) {} } });
+  var key = document.querySelector('.g3-tapkey') || document.querySelector('.spk-hd, .header');
+  if (key && key.parentNode) key.parentNode.insertBefore(card, key.nextSibling);
+  else document.body.insertBefore(card, document.body.firstChild);
 }
