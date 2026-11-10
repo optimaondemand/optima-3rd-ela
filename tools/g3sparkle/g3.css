@@ -292,3 +292,29 @@ button.g3-opt-btn:active, button.g3-tw-chip:active, button.spk-btn:active, butto
 .g3-tapkey b { margin-right:4px; }
 .g3-tapkey .g3-dot { font-weight:700; text-decoration:underline dotted 2px; text-underline-offset:3px; }
 .g3-model-h { font-family:Nunito,sans-serif; font-weight:800; font-size:17px; color:#5C2D91; margin:4px 0 10px; }
+/* Opti teaches */
+.g3-teach { display:flex; align-items:center; gap:10px; margin:2px 0 10px; }
+.g3-teach[hidden] { display:none !important; }
+.g3-teach-face svg { display:block; }
+.g3-teach-btn { font-family:Nunito,sans-serif; font-weight:800; font-size:17px; color:#fff; background:#C8962E; border:0; border-radius:999px;
+  padding:11px 20px; cursor:pointer; box-shadow:0 3px 0 rgba(36,50,79,.28); display:inline-flex; align-items:center; gap:8px; }
+.g3-teach-btn.on { background:#8B6914; }
+.g3-teach-btn:active { transform:translateY(2px); box-shadow:0 1px 0 rgba(36,50,79,.28); }
+.g3-teach-t { font-weight:700; font-size:14px; opacity:.85; }
+.g3-teach-sm { margin:0 0 6px; }
+.g3-teach-sm .g3-teach-face { display:none; }
+.g3-teach-sm .g3-teach-btn { font-size:15px; padding:8px 14px; background:#5C2D91; }
+.g3-teach-sm .g3-teach-btn.on { background:#3E1D63; }
+.g3-fold { margin:0 0 12px; }
+.g3-fold > summary { font-family:Nunito,sans-serif; font-weight:800; font-size:15px; color:#24324F; cursor:pointer; }
+.g3-fold-words { font-size:17px; line-height:1.6; color:#3A3326; }
+.g3-no-turnnotes .spk-guide-wrap.g3-opti-wrap { display:none !important; }
+.g3-teach-face img, .g3-teach-face svg { height:44px !important; width:auto !important; max-width:none; display:block; }
+.g3-cards-said .g3-sayrow { display:none !important; }
+.g3-howto[hidden] { display:none !important; }
+.g3-howto { max-width:760px; margin:18px auto 22px; background:#F3F6FC; border:1.5px solid #DCE3F1; border-radius:16px; padding:14px 16px 16px; }
+.g3-howto-head { display:flex; align-items:center; gap:12px; margin-bottom:10px; }
+.g3-howto-face img, .g3-howto-face svg { height:52px !important; width:auto !important; max-width:none; display:block; }
+.g3-howto-k { font-family:Nunito,sans-serif; font-weight:800; font-size:13px; letter-spacing:.6px; text-transform:uppercase; color:#8B6914; }
+.g3-howto-t { font-family:Lora,Georgia,serif; font-weight:700; font-size:22px; color:#0F1B3D; }
+.g3-howto-v { width:100%; border-radius:12px; background:#000; display:block; }

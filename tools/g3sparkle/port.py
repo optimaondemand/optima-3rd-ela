@@ -163,7 +163,7 @@ js = rep(js, """      if (dp.credit) {
         var cap = document.createElement('figcaption');
         cap.className = 'spk-plate-credit'; cap.textContent = dp.credit;
         plate.appendChild(cap);
-      }""", """      if (dp.look) plate.insertAdjacentHTML('beforeend', noticeCard(esc(dp.look)));
+      }""", """      if (dp.look) plate.insertAdjacentHTML('beforeend', noticeCard(esc(dp.look), dp.lookBtn));
       if (dp.credit) {
         var cap = document.createElement('figcaption');
         cap.className = 'spk-plate-credit'; cap.textContent = dp.credit;
@@ -312,7 +312,7 @@ m = io.open(mod, encoding='utf-8').read()
 js = rep(js, '\nfunction boot() {', '\n' + m + '\n\nfunction boot() {')
 js = rep(js, "    ['wordgame',    buildWordGame],\n",
              "    ['wordgame',    buildWordGame],\n    ['glossary',    buildGlossary],\n    ['saywords',    buildSayWords],\n    ['cards',       buildCards],\n    ['tips',        hookTips],\n    ['bookflip',    buildBookFlip],\n    ['readalong',   buildReadAlong],\n    ['spotlight',   buildSpotlight],\n    ['saydo',       buildSayDo],\n")
-js = rep(js, "    ['journal',     buildJournal],\n", "    ['journal',     buildJournal],\n    ['opti',        optiFaces],\n")
+js = rep(js, "    ['journal',     buildJournal],\n", "    ['journal',     buildJournal],\n    ['opti',        optiFaces],\n    ['teach',       buildTeach],\n    ['howto',       buildHowTo],\n")
 # the greeting builds media again after a name is entered; Opti follows
 js = rep(js, "  try { buildMedia(); } catch (e) {}\n  dividerAfterOpening();",
              "  try { buildMedia(); } catch (e) {}\n  try { optiFaces(); } catch (e) {}\n  dividerAfterOpening();")

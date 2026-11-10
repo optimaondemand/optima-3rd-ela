@@ -987,7 +987,7 @@ function buildPlate() {
     plate.appendChild(img);
     if (dp) {
       plate.classList.add('spk-plate-photo');
-      if (dp.look) plate.insertAdjacentHTML('beforeend', noticeCard(esc(dp.look)));
+      if (dp.look) plate.insertAdjacentHTML('beforeend', noticeCard(esc(dp.look), dp.lookBtn));
       if (dp.credit) {
         var cap = document.createElement('figcaption');
         cap.className = 'spk-plate-credit'; cap.textContent = dp.credit;
@@ -3394,18 +3394,20 @@ function lookCard(look, todo) {
 
 /* Notice first, reveal after. Under a picture: look, notice, wonder,
    then one tap tells you what it is. */
-function noticeCard(about) {
+function noticeCard(about, btn) {
+  btn = btn || 'Tap to learn about this picture';
   if (!about) return '';
   return '<div class="g3-notice"><div class="g3-notice-h">👀 Look closely.</div>' +
     '<p class="g3-notice-q">What do you <b>notice</b>? What do you <b>wonder</b>? Say it out loud.</p>' +
-    '<button type="button" class="g3-notice-btn" aria-expanded="false">Tap to find out what it is</button>' +
+    '<button type="button" class="g3-notice-btn" aria-expanded="false" data-label="' + esc(btn) + '">' + esc(btn) + '</button>' +
     '<p class="g3-notice-a" hidden>' + about + '</p></div>';
 }
 document.addEventListener('click', function (e) {
   var b = e.target && e.target.closest && e.target.closest('.g3-notice-btn'); if (!b) return;
   var a = b.nextElementSibling; if (!a) return;
   a.hidden = !a.hidden; b.setAttribute('aria-expanded', String(!a.hidden));
-  b.textContent = a.hidden ? 'Tap to find out what it is' : 'Hide it';
+  b.textContent = a.hidden ? (b.getAttribute('data-label') || 'Tap to learn about this picture') : 'Hide the answer';
+  markTaps(b.parentNode);
 });
 
 /* A new tab starts at the top of the lesson (pilot feedback, Nov 10
@@ -3602,7 +3604,7 @@ function artFig(a, cls) {
 
 /* card kind 'info': art + what it is + a few plain sentences */
 function cardInfo(c, body) {
-  var h = lookCard(null, c.todo) + artFig(c.art) + (c.art ? noticeCard(c.look) : '');
+  var h = lookCard(null, c.todo) + artFig(c.art) + (c.art ? noticeCard(c.look, c.lookBtn) : '');
   (c.text || []).forEach(function (p) { h += '<p class="g3-p">' + p + '</p>'; });
   body.insertAdjacentHTML('beforeend', h);
 }
@@ -4215,6 +4217,144 @@ function buildSayDo() {
   });
 }
 
+/* ══════════════════════════════════════════════════════════════
+   OPTI TEACHES (pilot feedback, Nov 10 2026): fewer words on the page,
+   more said out loud. Opti acts as the teacher: before each activity he
+   gives the context and the instruction, then the student does it. The
+   boxes he has explained fold away behind "📄 Read it instead".
+     DATA.teach = {
+       mods:  [ {id, find:'title regex' | sel:'css', script, fold:['css', …]} ],
+       cards: { 'word': 'Opti reads the book sentence + meaning', … },
+       dropTurnNotes: true      // the 3 "Opti · before …" tab notes go
+     }
+   Clip files: guide/opti/g3ela-W-D-teach-<id>.mp3 and -say-<word>.mp3.
+   A clip that is not recorded yet keeps its row hidden, like every other
+   slot (window.G3_PILOT_TTS lets a preview stand in a computer voice).
+   ══════════════════════════════════════════════════════════════ */
+function teachSrc(kind, id) {
+  return MEDIA.audioBase + 'guide/opti/g3ela-' + LESSON.week + '-' + dayNum(LESSON.day) + '-' + kind + '-' + g3slug(id) + '.mp3';
+}
+function plainScript(t) { return String(t || '').replace(/\[[^\]]*\]\s*/g, '').trim(); }
+var _ttsBtn = null;
+function ttsSay(text, btn) {
+  if (!window.speechSynthesis) return;
+  speechSynthesis.cancel();
+  if (_ttsBtn) _ttsBtn.classList.remove('on');
+  if (_ttsBtn === btn) { _ttsBtn = null; return; }
+  var u = new SpeechSynthesisUtterance(text), v = speechSynthesis.getVoices();
+  u.voice = v.filter(function (x) { return /en[-_]US/i.test(x.lang) && /natural|aria|jenny|guy|google us/i.test(x.name); })[0] ||
+            v.filter(function (x) { return /^en/i.test(x.lang); })[0] || null;
+  u.rate = 0.95; u.pitch = 1.05;
+  u.onend = function () { btn.classList.remove('on'); if (_ttsBtn === btn) _ttsBtn = null; };
+  audioStopAll(); btn.classList.add('on'); _ttsBtn = btn; speechSynthesis.speak(u);
+}
+/* the player: Opti + one big button, real clip if it is there */
+function teachPlayer(label, src, text, cls) {
+  var row = document.createElement('div'); row.className = 'g3-teach ' + (cls || '');
+  var secs = Math.max(5, Math.round(plainScript(text).length / 15));
+  if (window.G3_PILOT_TTS) {
+    row.innerHTML = '<span class="g3-teach-face" aria-hidden="true">' + owlSVG('opti', 44) + '</span>';
+    var b = document.createElement('button'); b.type = 'button'; b.className = 'g3-teach-btn';
+    b.innerHTML = '<span class="g3-teach-ico">▶</span> ' + esc(label) + ' <span class="g3-teach-t">' + Math.floor(secs / 60) + ':' + ('0' + secs % 60).slice(-2) + '</span>';
+    b.onclick = function () { ttsSay(plainScript(text), b); };
+    row.appendChild(b);
+    return row;
+  }
+  var ac = audioControl(label, src); if (!ac) return null;
+  row.hidden = true;
+  row.innerHTML = '<span class="g3-teach-face" aria-hidden="true">' + owlSVG('opti', 44) + '</span>';
+  row.appendChild(ac);
+  if (window.MutationObserver) {
+    var ob = new MutationObserver(function () { if (!ac.hidden) { row.hidden = false; ob.disconnect(); } });
+    ob.observe(ac, { attributes: true, attributeFilter: ['hidden'] });
+  }
+  return row;
+}
+function findMod(m) {
+  if (m.sel) return document.querySelector(m.sel);
+  var re = new RegExp(m.find, 'i'), t = document.querySelectorAll('.activity-title, .spk-card-title');
+  for (var i = 0; i < t.length; i++) if (re.test(t[i].textContent || '')) return t[i].closest('.activity, .spk-card');
+  return null;
+}
+/* Opti-teaches mode turns on only when it can be heard: in a pilot
+   preview (?pilot=1 or G3_PILOT_TTS) or once the lesson's first teach
+   clip is really there. Until then a lesson keeps its own words and
+   tab notes, so nothing is folded away behind a silent button. */
+if (/[?&]pilot=1(&|$)/.test(location.search)) window.G3_PILOT_TTS = true;
+function buildTeach() {
+  var T = DATA.teach; if (!T || document.querySelector('.g3-teach')) return;
+  if (window.G3_PILOT_TTS) return applyTeach(T);
+  var first = (T.mods || []).filter(function (m) { return m.script; })[0]; if (!first) return;
+  var a = new Audio(); a.preload = 'metadata';
+  a.addEventListener('loadedmetadata', function () { applyTeach(T); });
+  a.src = teachSrc('teach', first.id);
+}
+function applyTeach(T) {
+  if (document.body.classList.contains('g3-teaching')) return;
+  document.body.classList.add('g3-teaching');
+  /* the greeting rebuilds media after a name is typed, so hide by class */
+  if (T.dropTurnNotes) document.body.classList.add('g3-no-turnnotes');
+  (T.mods || []).forEach(function (m) {
+    var mod = findMod(m); if (!mod) return;
+    var body = mod.querySelector('.activity-body, .spk-card-body') || mod;
+    var row = m.script ? teachPlayer(m.label || 'Opti teaches this', teachSrc('teach', m.id), m.script) : null;
+    var folds = [];
+    (m.fold || []).forEach(function (s) { body.querySelectorAll(s).forEach(function (e) { if (folds.indexOf(e) < 0) folds.push(e); }); });
+    (m.foldText || []).forEach(function (rx) {
+      var re = new RegExp(rx, 'i');
+      [].forEach.call(body.children, function (e) { if (re.test(e.textContent || '') && folds.indexOf(e) < 0) folds.push(e); });
+    });
+    if (row) body.insertBefore(row, body.firstChild);
+    if (row || folds.length) {
+      var d = document.createElement('details'); d.className = 'spk-note spk-readalong g3-fold';
+      d.innerHTML = '<summary>📄 Read Opti’s words</summary>';
+      var inner = document.createElement('div'); inner.className = 'spk-note-body';
+      if (m.script) { var p = document.createElement('p'); p.className = 'g3-fold-words'; p.textContent = plainScript(m.script); inner.appendChild(p); }
+      folds.forEach(function (e) { inner.appendChild(e); });
+      d.appendChild(inner);
+      var prev = row || body.querySelector(':scope > .g3-opti-row');
+      body.insertBefore(d, prev ? prev.nextSibling : body.firstChild);
+      /* Opti's teaching ends on the instruction, so the What to do line
+         keeps its words but loses its own 🔊 */
+      if (row) body.querySelectorAll('.g3-do .g3-say, .g3-todo .g3-say, .g3-do .g3-saydo, .g3-todo .g3-saydo').forEach(function (x) { x.remove(); });
+      /* a shorter What to do: Opti has already explained the rest */
+      var td = m.todo && body.querySelector('.g3-do, .g3-todo');
+      if (td) td.innerHTML = '<b>What to do:</b> ' + m.todo;
+    }
+  });
+  /* every vocabulary card: Opti reads the book's sentence and the meaning */
+  var C = T.cards || {};
+  if (Object.keys(C).length) document.body.classList.add('g3-cards-said');
+  document.querySelectorAll('.vocab-decode-item').forEach(function (it) {
+    var w = ((it.querySelector('.fc-word') || {}).textContent || '').trim(), s = C[w] || C[w.toLowerCase()];
+    if (!s || it.querySelector('.g3-teach')) return;
+    var r = teachPlayer('Opti reads it', teachSrc('say', w), s, 'g3-teach-sm');
+    if (r) it.insertBefore(r, it.firstChild);
+  });
+  try { buildHowTo(); } catch (e) {}
+}
+
+/* ── How to use your lesson (pilot feedback, Nov 10 2026): Opti's
+   1-minute tour, one video for the whole course, played right on the
+   page at the top of the Warm-Up tab. Always shown (one course-wide
+   file, committed with the layer), with a poster so the card is never
+   blank before the video loads. ── */
+function buildHowTo() {
+  if (document.querySelector('.g3-howto') || !document.body.classList.contains('g3-teaching')) return;
+  var warm = document.getElementById('tab-warmup'); if (!warm) return;
+  var src = window.G3_HOWTO_SRC || 'assets/video/g3ela-howto.mp4';
+  var poster = window.G3_HOWTO_POSTER || 'assets/video/g3ela-howto.jpg';
+  var card = document.createElement('section'); card.className = 'g3-howto';
+  card.innerHTML = '<div class="g3-howto-head"><span class="g3-howto-face" aria-hidden="true">' + owlSVG('opti', 48) + '</span>' +
+    '<div><div class="g3-howto-k">Watch this first</div><div class="g3-howto-t">How to use your lesson</div></div></div>' +
+    '<video class="g3-howto-v" controls preload="metadata" playsinline></video>';
+  var v = card.querySelector('video');
+  v.poster = poster;
+  v.addEventListener('play', function () { audioStopAll(); });
+  v.src = src;
+  warm.insertBefore(card, warm.firstChild);
+}
+
 
 function boot() {
   /* Each step is isolated. Previously all eighteen sat inside one
@@ -4265,6 +4405,8 @@ function boot() {
     ['onpage',      buildOnPage],
     ['journal',     buildJournal],
     ['opti',        optiFaces],
+    ['teach',       buildTeach],
+    ['howto',       buildHowTo],
     ['marginalia',  marginalia],
     ['ornaments',   ornaments],
     ['seal',        function () { sealCheck(true); }],

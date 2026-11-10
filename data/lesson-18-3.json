@@ -5,7 +5,8 @@
   "src": "art/wb/wb-highwayman.jpg",
   "alt": "An old black-and-white drawing of a man on horseback jumping a wooden gate",
   "credit": "Dick Turpin Jumping the Hornsey Tollgate · George Cruikshank, 1849 · Public domain",
-  "look": "A drawing from an old storybook, printed in 1849. It shows a highwayman, a robber who stopped travelers on the road, jumping his horse over a gate. Hold-Your-Nose Billy in Chapter 5 is a highwayman too."
+  "look": "A drawing from an old storybook, printed in 1849. It shows a highwayman, a robber who stopped travelers on the road, jumping his horse over a gate. Hold-Your-Nose Billy in Chapter 5 is a highwayman too.",
+  "lookBtn": "Tap to learn about this highwayman drawing"
  },
  "dol": {
   "a": {
@@ -310,5 +311,105 @@
     "money paid or demanded to free a prisoner"
    ]
   ]
+ },
+ "teach": {
+  "dropTurnNotes": true,
+  "mods": [
+   {
+    "id": "wgrd",
+    "find": "What Good Readers",
+    "fold": [
+     ":scope > p:not(.g3-do)",
+     ":scope > .key-concept",
+     ":scope > .socratic-box"
+    ],
+    "todo": "Listen to Opti. Keep his question in your head while you read.",
+    "script": "[warmly] Here's today's reading tip. Good readers notice what a character does when he's in danger. In Chapter 5, two outlaws grab the boys. Watch Jemmy. Does he fight, does he try to trick them, or does he stay quiet? And think about why he makes that choice. You don't need to write anything. Just watch Jemmy closely while you read."
+   },
+   {
+    "id": "dol",
+    "find": "Daily Oral",
+    "fold": [],
+    "todo": "Tap the yellow parts. Then pick Sentence A or B and type it the right way.",
+    "script": "Let's fix a sentence about the outlaws. Look at the correct one first. Billy gets a capital letter, because it's a name. Commas go around the describing part in the middle: raw as a skinned ox. And a comma goes before and, because and joins two ideas. Tap the yellow parts to see each rule. Then pick Sentence A or B, and type it with capitals, commas, and a period."
+   },
+   {
+    "id": "morph",
+    "find": "Morphology",
+    "fold": [
+     ":scope > .callout:not(:has(+ .fillin-game))",
+     ":scope > .key-concept"
+    ],
+    "todo": "Type the whole word in each box. Then tap Check My Answers.",
+    "script": "Today you'll build words from their parts. Remember, inter means between, and sub means under. Say each pair of parts out loud, then say them together as one word. Inter, rupt: interrupt. Hear how the parts snap together? Type the whole word in each box, then tap Check My Answers. Look at the little meaning next to each one. It tells you what you just built."
+   },
+   {
+    "id": "vocab",
+    "find": "Vocabulary",
+    "fold": [
+     ":scope > .g3-model-h",
+     ":scope > .decode-steps"
+    ],
+    "todo": "Fill in each sentence with a word from the word bank. Tap Check My Work. Then play the matching game.",
+    "script": "Here's a word from Chapter 5: ruffian. The prince calls Billy a clod and a ruffian. He's insulting him, so a ruffian must be someone rough and rude. Ruffian has no parts to help, so the sentence does the work. A ruffian is a rough, violent person, a bully. Now the other words in the word bank. An exploit is a bold, daring act. An heir is the person who will be king one day. And a ransom is money demanded to set a prisoner free. Fill in each sentence, then tap Check My Work."
+   },
+   {
+    "id": "gram",
+    "find": "Grammar",
+    "fold": [
+     ":scope > .callout:not(:has(+ .spotter-game)):not(:has(+ .fillin-game)):not(:has(+ .sort-game)):not(:has(+ .dol-check-btn))"
+    ],
+    "todo": "Type and, but, or so in each blank. Tap Check My Answers. Then write a sentence that uses but.",
+    "script": "Today you'll do the joining yourself. Each pair has two short sentences. Glue them into one with and, but, or so. Ask yourself: am I adding an idea? Use and. Are the two ideas different, or surprising? Use but. Does the first thing cause the second? Use so. Read each one out loud with the word you picked. Then tap Check My Answers, and write your own sentence about Chapter 5 that uses but."
+   },
+   {
+    "id": "spell",
+    "find": "Spelling",
+    "fold": [],
+    "foldText": [
+     "^\\s*👂",
+     "^\\s*This week:",
+     "The Rule:"
+    ],
+    "todo": "Find the vowel team in each word. Then tap the word to split it.",
+    "script": "Remember vowel teams? Two vowels side by side making one sound. Here's today's rule: when you split a word into syllables, never split the team. The team always stays together. Rain, bow. Sea, son. Look at each word, find the vowel team, and think about where the split goes. Then tap the word to check. The split goes between the syllables, never through the team."
+   },
+   {
+    "id": "spotlight",
+    "find": "Character Spotlight",
+    "fold": [
+     ":scope > .socratic-box"
+    ],
+    "script": "Think about this before you read. When two outlaws grab the boys, the prince keeps telling them who he is. Jemmy tries to stop him without saying a word. Why would Jemmy want the prince to stay quiet? What might happen if outlaws find out they have a prince? Watch who keeps his head, and who keeps talking."
+   },
+   {
+    "id": "read",
+    "find": "^\\s*\\S*\\s*Read:",
+    "fold": [],
+    "todo": "Read the two questions. Then read Ch. 5 in your book.",
+    "script": "Time to read Chapter 5. First, read the two Pause and Think questions below. In this chapter, Jemmy jabs the prince with his elbow. Ask yourself why. Then watch the outlaw named Cutwater. He notices something on the saddle that changes everything. Stop at each question, think of your answer, and keep reading. After you read, try the King's Crest to see what Cutwater saw."
+   },
+   {
+    "id": "chq",
+    "find": "Chapter Thinking",
+    "fold": [],
+    "todo": "Pick Explorer or Scholar. Answer the three questions in full sentences.",
+    "script": "Now show what you understood, in full sentences with details from the book. One, how does Jemmy know who Hold-Your-Nose Billy is, and what does that tell us about how famous Billy is? Two, when the prince says who he is, the outlaws don't bow. What do they do instead? Three, Jemmy jabbed the prince to keep him quiet. Was that the right thing to do? Use a detail to back up your answer. For a challenge, pick Scholar and add one more detail."
+   },
+   {
+    "id": "write",
+    "find": "Writer.s Workshop",
+    "fold": [
+     ":scope > .callout"
+    ],
+    "foldText": [
+     "watch how",
+     "today.s tool"
+    ],
+    "todo": "Write one example from the book. Start with: For example, in Chapter.",
+    "script": "You have a claim and a reason. Today you'll prove your reason with an example from the book. Clara's reason was, Prince Brat enjoys watching Jemmy get whipped. To prove it, she found a real moment. For example, in Chapter 2, the prince tells the tutor, ten whacks at least. Always name the chapter, so your reader can find it. Now write one example of your own. Start with, For example, in Chapter. Then copy it into your document."
+   }
+  ],
+  "cards": {}
  }
 }

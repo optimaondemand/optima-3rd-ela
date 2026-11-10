@@ -5,7 +5,8 @@
   "src": "art/wb/wb-tower.jpg",
   "alt": "A painting of a lonely stone tower on a hill under a cloudy sky",
   "credit": "Dolbadarn Castle (detail) · J. M. W. Turner, 1799–1800 · Public domain",
-  "look": "A real castle tower in Wales, painted by J. M. W. Turner more than 200 years ago. It stands alone on a hill, a little like the north tower where Jemmy sleeps."
+  "look": "A real castle tower in Wales, painted by J. M. W. Turner more than 200 years ago. It stands alone on a hill, a little like the north tower where Jemmy sleeps.",
+  "lookBtn": "Tap to learn about this castle tower painting"
  },
  "dol": {
   "a": {
@@ -247,5 +248,117 @@
     "strong frustration that has been building up"
    ]
   ]
+ },
+ "teach": {
+  "dropTurnNotes": true,
+  "mods": [
+   {
+    "id": "wgrd",
+    "find": "What Good Readers",
+    "fold": [
+     ":scope > p:not(.g3-do)",
+     ":scope > .key-concept",
+     ":scope > .socratic-box"
+    ],
+    "todo": "Listen to Opti. Keep his question in your head while you read.",
+    "script": "[warmly] There are no new chapters today. Instead, good readers look back over everything they've read. Think about both boys in Chapters 1 to 5. The prince has velvet clothes and a king for a father. Jemmy has rags, and he gets whipped for the prince's pranks. Which boy has the harder life? Do you feel sorry for either one? Think about why. You don't need to write anything."
+   },
+   {
+    "id": "dol",
+    "find": "Daily Oral",
+    "fold": [],
+    "todo": "Tap the yellow parts. Then pick Sentence A or B and type it the right way.",
+    "script": "Let's fix a sentence. Look at the correct one. The prince says one word: Boring. That word goes inside quotation marks, and it starts with a capital letter. A comma comes right before the opening quotation mark, after the word said. And the period goes inside the closing quotation mark. Tap the yellow parts to see each rule. Then pick Sentence A or B, and type it the right way."
+   },
+   {
+    "id": "poem",
+    "find": "Poetry",
+    "fold": [
+     ":scope > .callout",
+     ":scope > .socratic-box"
+    ],
+    "todo": "Pick one haiku. Say out loud the picture it puts in your head.",
+    "script": "Here are the three haiku again. Remember, a haiku holds one small picture and doesn't explain it. Today, you get to choose. Read all three out loud, and pick the one you like best. Then close your eyes and see the picture it puts in your head. Is it the snow, the rat with the candles, or the soup that no one eats? Say your picture out loud. You don't need to write it."
+   },
+   {
+    "id": "morph",
+    "find": "Morphology",
+    "fold": [
+     ":scope > .key-concept"
+    ],
+    "foldText": [
+     "Before you roll"
+    ],
+    "todo": "Tap Roll the Dice. Say what the word means. Tap Check My Thinking. Roll all six words.",
+    "script": "Let's play with inter and sub one more time. Before you roll, say it out loud: inter means between, sub means under. Tap Roll the Dice. When a word comes up, find its first part, and say what the whole word means. Then tap Check My Thinking to see if you were right. Keep rolling until you've done all six words."
+   },
+   {
+    "id": "vocab",
+    "find": "Vocabulary",
+    "fold": [
+     ":scope > .g3-model-h",
+     ":scope > .decode-steps"
+    ],
+    "todo": "Fill in each sentence with a word from the word bank. Tap Check My Work. Then play the matching game.",
+    "script": "This week you met lots of new words. Today you'll use four of them. Let's start with contrite. The prince lowered his head so as to appear humbled and contrite. He's trying to look sorry. So contrite means truly sorry for something you did wrong. Now the others. Astonishment means great surprise. A ruffian is a rough, mean bully. And exasperation is a fed-up feeling that keeps building. Fill in each sentence from the word bank, then tap Check My Work."
+   },
+   {
+    "id": "gram",
+    "find": "Grammar",
+    "fold": [
+     ":scope > .callout:not(:has(+ .spotter-game)):not(:has(+ .fillin-game)):not(:has(+ .sort-game)):not(:has(+ .dol-check-btn))"
+    ],
+    "todo": "Tap the wrong joining word, or tap No mistake. Then answer the question in the box.",
+    "script": "Today you're the teacher, checking someone else's work. Some of these sentences use the wrong joining word. Remember: and adds an idea, but shows a difference, and so shows what happens because of something. Read each sentence out loud. If the joining word doesn't match the meaning, tap it. If the sentence is right, tap No mistake. Then tell which sentence had no mistake, and how you knew."
+   },
+   {
+    "id": "spell",
+    "find": "Spelling",
+    "fold": [],
+    "foldText": [
+     "^\\s*👂",
+     "^\\s*This week:",
+     "The Rule:"
+    ],
+    "todo": "Tap Roll the dice. Say the word and split it. Tap Check my answer. Roll all six words.",
+    "script": "Let's roll some vowel team words. Tap Roll the dice. When a word comes up, say it out loud and clap the syllables. Find the vowel team, and remember, the team never splits. Meadow: mead, ow. Then tap Check my answer to see if you split it the right way. Keep rolling until you've done all six words."
+   },
+   {
+    "id": "spotlight",
+    "find": "Character Spotlight",
+    "fold": [
+     ":scope > .socratic-box"
+    ],
+    "script": "Think about the two boys side by side. One has velvet clothes, a tutor, and a king for a father. The other has rags and a rat-catcher's know-how. But Jemmy also learned all the lessons the prince never did. Now they're both stuck with the same outlaws. Which boy do you think will be better at getting out of trouble?"
+   },
+   {
+    "id": "read",
+    "find": "Look Back",
+    "fold": [],
+    "todo": "Read the two questions. Then look back through Ch. 1–5 in your book.",
+    "script": "There are no new chapters today. Instead, look back through Chapters 1 to 5 in your book. First, read the two Pause and Think questions below. One asks about the biggest conflict: which characters are against each other, and over what? The other asks you to predict. What will the outlaws do with a real prince? Flip back through the pages to find clues. You don't need to write these answers."
+   },
+   {
+    "id": "chq",
+    "find": "Chapter Thinking",
+    "fold": [],
+    "todo": "Pick Explorer or Scholar. Answer the three questions in full sentences.",
+    "script": "Now look back and answer in full sentences, with details from the book. One, describe Jemmy's life at the castle. What is good about it, and what is hard? Two, what are two pranks the prince has pulled, and why does no one ever punish him? Three, both boys are captives now. Who is more responsible for that? Use one detail. For a challenge, pick Scholar, and add one more detail to each answer."
+   },
+   {
+    "id": "write",
+    "find": "Writer.s Workshop",
+    "fold": [
+     ":scope > .callout"
+    ],
+    "foldText": [
+     "watch how",
+     "today.s tool"
+    ],
+    "todo": "Read your claim, reason and example. Write one thing you will add or fix.",
+    "script": "This week you wrote a claim, a reason, and an example. Today you'll check your work, like a real writer. Clara read her draft and asked three questions. Is my claim clear? Does my reason tell why? Is my example from the book? Then she found one thing to add. Now read your own claim, reason, and example. Ask the same three questions. Then write one thing you'll add or fix to make your opinion stronger."
+   }
+  ],
+  "cards": {}
  }
 }

@@ -5,7 +5,8 @@
   "src": "art/wb/wb-fog-forest.jpg",
   "alt": "A dark forest clearing with fog lying low over the grass",
   "credit": "Glade in a Forest. Fog · Arkhip Kuindzhi, 1898–1908 · Public domain",
-  "look": "A forest clearing on a foggy morning, painted by Arkhip Kuindzhi more than 100 years ago. In Chapter 4, a thick fog swirls in and the boys lose the road."
+  "look": "A forest clearing on a foggy morning, painted by Arkhip Kuindzhi more than 100 years ago. In Chapter 4, a thick fog swirls in and the boys lose the road.",
+  "lookBtn": "Tap to learn about this foggy forest painting"
  },
  "dol": {
   "a": {
@@ -239,5 +240,120 @@
     "a dangerous criminal who would do anything for money"
    ]
   ]
+ },
+ "teach": {
+  "dropTurnNotes": true,
+  "mods": [
+   {
+    "id": "wgrd",
+    "find": "What Good Readers",
+    "fold": [
+     ":scope > p:not(.g3-do)",
+     ":scope > .key-concept",
+     ":scope > .socratic-box"
+    ],
+    "todo": "Listen to Opti. Keep his question in your head while you read.",
+    "script": "[warmly] Here's today's reading tip. Good readers notice when a character makes a bad choice, and then watch what that choice causes. Today the prince decides to run away, and Jemmy has to go with him. As you read, ask yourself: whose idea was this, and whose fault is the trouble that follows? Keep that question in your head. You don't need to write anything."
+   },
+   {
+    "id": "dol",
+    "find": "Daily Oral",
+    "fold": [],
+    "todo": "Tap the yellow parts. Then pick Sentence A or B and type it the right way.",
+    "script": "Let's fix a sentence. Look at the correct one first. The prince is talking, so his words go inside quotation marks. A comma goes before the closing quotation mark, because the sentence keeps going: the prince announced to Jemmy. Tap the yellow parts to see each rule. Then pick Sentence A or Sentence B. Add the quotation marks, the comma, and the capital letters, and type it the right way."
+   },
+   {
+    "id": "poem",
+    "find": "Poetry",
+    "fold": [
+     ":scope > .callout",
+     ":scope > .socratic-box"
+    ],
+    "todo": "Read the three haiku out loud. Clap the beats in the first one: 5, then 7, then 5.",
+    "script": "This is a haiku, a tiny poem with a fixed shape. The first line has five beats, the second has seven, and the last has five again. A haiku holds one picture and doesn't explain it. Read all three out loud. Then go back to the first one and clap each beat. Snow, on, the, court, yard. That's five! Keep clapping, and check that you get five, seven, five."
+   },
+   {
+    "id": "morph",
+    "find": "Morphology",
+    "fold": [
+     ":scope > .callout:not(:has(+ .match-game))",
+     ":scope > .key-concept"
+    ],
+    "todo": "Tap a word, then tap what it means. Match all four words.",
+    "script": "You already know two word parts. Inter means between, like the internet connecting computers. Sub means under, like a subway under the city. When you see a long word, find the part at the start first, then read the rest. Tap a word in the game, then tap what it means. If you're stuck, look at the first part of the word. It gives you a big clue."
+   },
+   {
+    "id": "vocab",
+    "find": "Vocabulary",
+    "fold": [
+     ":scope > .g3-model-h",
+     ":scope > .decode-steps"
+    ],
+    "todo": "Listen to each card. Guess the meaning, then flip the card. Then play the matching game.",
+    "script": "Let's be word detectives again. Here's astonishment. Read the sentence: Jemmy stared at him with dreadful astonishment. Jemmy just heard something he never expected. Now look at the parts. Astonish means to surprise, and ment turns it into a thing. So astonishment is a feeling of great surprise. Now tap Opti reads it on each card, guess the meaning, and flip the card to check. Then play the matching game."
+   },
+   {
+    "id": "gram",
+    "find": "Grammar",
+    "fold": [
+     ":scope > .callout:not(:has(+ .spotter-game)):not(:has(+ .fillin-game)):not(:has(+ .sort-game)):not(:has(+ .dol-check-btn))"
+    ],
+    "todo": "Tap the joining word, then the part after it. Then write one sentence with a new joining word.",
+    "script": "Joining words are back, and today you're a joining-word spotter. Remember: and adds an idea, but shows a difference, and so shows what happens next. In each sentence, first tap the joining word. Then tap the part of the sentence that comes after it. That part is the new idea the joining word brings in. Last, pick one sentence and write it again with a different joining word. Notice how the meaning changes."
+   },
+   {
+    "id": "spell",
+    "find": "Spelling",
+    "fold": [],
+    "foldText": [
+     "^\\s*👂",
+     "^\\s*This week:",
+     "The Rule:"
+    ],
+    "todo": "Tap every word in the two sentences that has a vowel team.",
+    "script": "Let's go hunting for vowel teams. A vowel team is two vowels side by side that make one sound, like the o and a in coach, or the e and a in feast. The team always stays together. Read the two sentences slowly. Every time you see two vowels working together, tap that word. There's more than one, so keep looking until the game says you found them all."
+   },
+   {
+    "id": "spotlight",
+    "find": "Character Spotlight",
+    "fold": [
+     ":scope > .socratic-box"
+    ],
+    "script": "Here's something to think about. The prince runs away for one reason: he's bored. Jemmy doesn't get a choice. He has to come along and carry the basket. But out in the fog, there are no guards and no castle walls. Watch Jemmy closely. He may see a chance of his own. Who do you think is really in charge out there?"
+   },
+   {
+    "id": "read",
+    "find": "^\\s*\\S*\\s*Read:",
+    "fold": [],
+    "todo": "Read the two questions. Then read Ch. 3–4 in your book.",
+    "script": "Time to read Chapters 3 and 4 in your book. First, read the two Pause and Think questions below, so you know where to stop. In Chapter 3, look for the prince's real reason for running away. In Chapter 4, a thick fog rolls in and two strangers appear. Ask yourself who Jemmy thinks they are, and why he's so scared. Stop at each question, think of your answer, and keep reading."
+   },
+   {
+    "id": "chq",
+    "find": "Chapter Thinking",
+    "fold": [],
+    "todo": "Pick Explorer or Scholar. Answer the three questions in full sentences.",
+    "script": "Now show what you understood. Remember, a good answer is a full sentence with a detail from the book. One, what is Jemmy's plan to escape in the fog, and what stops it? Two, when the strangers grab the boys, what does Jemmy think they are, and why is he scared? Three, why does the prince pick Jemmy to run away with? Use a detail from Chapter 3. Want a challenge? Pick Scholar, and add one more detail to each answer."
+   },
+   {
+    "id": "write",
+    "find": "Writer.s Workshop",
+    "fold": [
+     ":scope > .callout"
+    ],
+    "foldText": [
+     "watch how",
+     "today.s tool"
+    ],
+    "todo": "Copy your claim from Day 1. Write one reason under it.",
+    "script": "On Day 1 you wrote a claim. Today you'll give it a reason. A reason tells why your claim is true. Listen to Clara. Her claim was, Prince Brat is the most unfair character. Then she added, One reason is that Prince Brat wants Jemmy whipped hard for things the prince did. See how the reason backs up the claim? Copy your claim from Day 1 into the box. Then write one reason under it. You can start with, One reason is that."
+   }
+  ],
+  "cards": {
+   "astonishment": "Astonishment. Jemmy stared at him with dreadful astonishment. Astonishment means a feeling of great surprise or shock.",
+   "gallows": "Gallows. More likely I'll be hung from the gallows. A gallows is a wooden frame that was used long ago to punish people by hanging. Jemmy is afraid of a terrible punishment.",
+   "strayed": "Strayed. A thick fog had swirled in, they'd strayed from the road, and trees had closed in on them. Strayed means wandered off the path by mistake.",
+   "cutthroat": "Cutthroat. A cutthroat! he thought. A cutthroat is a dangerous criminal who would do anything for money."
+  }
  }
 }
