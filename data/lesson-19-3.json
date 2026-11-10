@@ -1,0 +1,256 @@
+{
+ "connector": "The ransom note is written. Now someone has to carry it to the castle, and nobody wants that job. Today the outlaws argue, Jemmy bosses them like a prince, and the real prince makes a choice that leaves Jemmy struck dumb.",
+ "writingFocus": "conclusion",
+ "plate": {
+  "src": "art/wb/wb-horse.jpg",
+  "alt": "A painting of a red-brown horse rearing up on its back legs against a plain background",
+  "credit": "Whistlejacket (detail) · George Stubbs, about 1762 · Public domain",
+  "look": "A real racehorse named Whistlejacket, painted by George Stubbs about 260 years ago. He was painted life-size. The boys rode out of the castle on one of the king’s own horses."
+ },
+ "dol": {
+  "a": {
+   "raw": "the prince was furious for a long time",
+   "fixed": "<strong>T</strong>he prince was furious for a long time<strong>.</strong>",
+   "why": "The starts the sentence, so it gets a capital T. A period ends it. Nobody is talking, so there are no quotation marks."
+  },
+  "b": {
+   "raw": "jemmy stared at the prince in surprise",
+   "fixed": "<strong>J</strong>emmy stared at the prince in surprise<strong>.</strong>",
+   "why": "Jemmy starts the sentence and is a name, so it gets a capital J. A period ends it. Nobody is talking, so there are no quotation marks."
+  }
+ },
+ "hints": {
+  "mfill1": {
+   "h1": "Say the two parts out loud, one right after the other.",
+   "why": "trans + port: to carry across."
+  },
+  "mfill2": {
+   "h1": "Put the first part right in front of port. No space.",
+   "why": "im + port: to carry in."
+  },
+  "mfill3": {
+   "h1": "Put the first part right in front of port. No space.",
+   "why": "ex + port: to carry out."
+  },
+  "mfill4": {
+   "h1": "This time the root comes first. Add the ending after it.",
+   "why": "port + able: able to be carried."
+  },
+  "vcloze1": {
+   "h1": "The prince will not budge, like a stubborn mule. Which bank word has mule in it?",
+   "why": "mulishness means being stubborn like a mule."
+  },
+  "vcloze2": {
+   "h1": "The boy refuses boldly. Which bank word means boldly refusing to obey?",
+   "why": "defiant means boldly refusing to obey."
+  },
+  "vcloze3": {
+   "h1": "It is a private talk to work something out. Which bank word means that?",
+   "why": "a parley is a talk between two sides."
+  },
+  "vcloze4": {
+   "h1": "He always does the opposite. Which bank word means that?",
+   "why": "contrary means always doing the opposite."
+  },
+  "gfill1": {
+   "h1": "Read until you have a whole thought. Stop before the joining word.",
+   "why": "Jemmy ran, and the outlaw followed."
+  },
+  "gfill2": {
+   "h1": "Find the joining word. The comma goes right before it.",
+   "why": "It was cold, so they lit a fire."
+  },
+  "gfill3": {
+   "h1": "Find the joining word. Which word comes just before it?",
+   "why": "He was tired, but he kept going."
+  },
+  "gfill4": {
+   "h1": "Find the joining word. Which word comes just before it?",
+   "why": "The prince shouted, and Jemmy turned."
+  }
+ },
+ "miss": {
+  "match": {
+   "mulishness": "Mulishness has the word mule in it. Look for the stubborn meaning.",
+   "defiant": "Defiant means standing up and saying no. Look for the meaning about boldly refusing.",
+   "parley": "A parley is a kind of talk. Look for the meaning about a conversation.",
+   "contrary": "Contrary means doing the opposite. Look for that meaning."
+  }
+ },
+ "flags": {
+  "journal-q1": {
+   "quote": false,
+   "count": 1
+  },
+  "journal-q2": {
+   "quote": true,
+   "count": 1
+  },
+  "journal-q3": {
+   "quote": false,
+   "count": 2
+  }
+ },
+ "scholar": {
+  "journal-q1": "… and tell what Jemmy wanted the prince to do instead.",
+  "journal-q2": "… and tell what Jemmy says back to him.",
+  "journal-q3": "… and tell what the outlaws offer the prince when they come back."
+ },
+ "wordgame": {
+  "type": "wagon",
+  "title": "Fill the Wagon",
+  "sub": "Billy wants a wagonload of gold and jewels. Every right answer adds one.",
+  "look": "This is the outlaws’ wagon. In Chapter 8, Jemmy tells Billy to ask the king for a whole wagonload of gold and jewels. Each sack has a label. You get one thing to sort at a time. Every right answer drops a gold coin or a jewel into the wagon. You add 8 each day this week. On Day 4 the wagon is full.",
+  "todo": "Read the words on the card. Tap the sack where they belong. A right answer adds gold to the wagon.",
+  "win": "Today’s 8 are in the wagon. Come back next lesson to add more.",
+  "winWeek": "A wagonload of gold, with jewels mixed in! The wagon is full.",
+  "bins": [
+   {
+    "id": "cle",
+    "label": "Ends in consonant-le"
+   },
+   {
+    "id": "other",
+    "label": "Other ending"
+   }
+  ],
+  "stepTitle": "Which ending?",
+  "items": [
+   {
+    "t": "saddle",
+    "bin": "cle",
+    "why": "sad · dle: the d goes with the le.",
+    "miss": {
+     "other": "Look at the last three letters: d, l, e. A consonant, then le."
+    }
+   },
+   {
+    "t": "wagon",
+    "bin": "other",
+    "why": "wagon ends in on, not le.",
+    "miss": {
+     "cle": "Look at the last two letters. Are they l then e?"
+    }
+   },
+   {
+    "t": "cradle",
+    "bin": "cle",
+    "why": "cra · dle: the d goes with the le.",
+    "miss": {
+     "other": "Look at the last three letters: d, l, e."
+    }
+   },
+   {
+    "t": "garlic",
+    "bin": "other",
+    "why": "garlic ends in ic, not le.",
+    "miss": {
+     "cle": "Look at the last two letters. They are i and c."
+    }
+   },
+   {
+    "t": "tumble",
+    "bin": "cle",
+    "why": "tum · ble: the b goes with the le.",
+    "miss": {
+     "other": "Look at the last three letters: b, l, e."
+    }
+   },
+   {
+    "t": "jewel",
+    "bin": "other",
+    "why": "jewel ends in e then l. Consonant-le ends in l then e.",
+    "miss": {
+     "cle": "Look closely: jewel ends in e-l. Consonant-le words end in l-e."
+    }
+   },
+   {
+    "t": "pebble",
+    "bin": "cle",
+    "why": "peb · ble: the b goes with the le.",
+    "miss": {
+     "other": "Look at the last three letters: b, l, e."
+    }
+   },
+   {
+    "t": "herring",
+    "bin": "other",
+    "why": "herring ends in ing, not le.",
+    "miss": {
+     "cle": "Look at the last two letters. They are n and g."
+    }
+   }
+  ]
+ },
+ "glossary": [
+  {
+   "w": "whipping boy",
+   "cs": true,
+   "m": "a boy kept in the castle to be punished whenever the prince does something wrong"
+  },
+  {
+   "w": "ransom",
+   "m": "money that kidnappers ask for before they let someone go"
+  },
+  {
+   "w": "compound sentence",
+   "m": "a sentence made of two complete thoughts joined by a word like and, but, or so"
+  },
+  {
+   "w": "complete thought",
+   "m": "a group of words that makes sense on its own, like The outlaw growled."
+  },
+  {
+   "w": "root",
+   "m": "the main part of a word. Other parts are added to the front or the end."
+  },
+  {
+   "w": "syllable",
+   "m": "one beat in a word. Can-dle has two."
+  },
+  {
+   "w": "counterclaim",
+   "m": "what someone who disagrees with you might say"
+  },
+  {
+   "w": "conclusion",
+   "m": "the last sentence of a paragraph. It says your big idea in a new way."
+  }
+ ],
+ "sayWords": [
+  "mulishness",
+  "defiant",
+  "parley",
+  "contrary"
+ ],
+ "transcripts": {
+  "welcome": "Hi, it’s Opti. The ransom note is written. Now somebody has to carry it to the castle, and nobody wants that job. These two chapters are loud. People shout and stomp, and one boy makes a choice that leaves Jemmy speechless. As you read, ask yourself: why would he choose that?",
+  "guide1": "Word work. You’ll build words that share the root that means carry, and you’ll find where the comma goes in a compound sentence. Here’s the trick: the comma sits right in front of the joining word, like a little doorstop. Then you’ll snap word parts together, one tile at a time.",
+  "guide2": "Before you read: Chapter 10 is a battle of words. Jemmy uses big, bossy prince talk on the outlaws. Listen to how they react. In Chapter 11, the prince gets a chance most kids would grab. Watch what he does with it, and watch Jemmy’s face.",
+  "guide3": "Every paragraph needs a good ending. A conclusion is your last word, the sentence a reader carries away. Don’t just copy your first sentence. Say your big idea in a fresh way, and make it sound finished, like closing a door."
+ },
+ "notes": {
+  "wordParts": "The root port means “carry.” transport = carry across, import = carry in, export = carry out, report = carry back, portable = able to be carried.",
+  "grammar": "A compound sentence joins two complete thoughts with a comma and a joining word: Jemmy wrote the note, and Billy watched.",
+  "spelling": "When a word ends in a consonant + le, that consonant goes with the le to make the last syllable: ta·ble, can·dle, sim·ple.",
+  "wgrd": "Good readers notice when a character changes, even a little, and they ask why.",
+  "vocab": [
+   [
+    "mulishness",
+    "stubborn refusal to obey; acting like a mule"
+   ],
+   [
+    "defiant",
+    "boldly refusing to obey"
+   ],
+   [
+    "parley",
+    "a private talk between two sides, often enemies"
+   ],
+   [
+    "contrary",
+    "always doing the opposite; hard to deal with"
+   ]
+  ]
+ }
+}

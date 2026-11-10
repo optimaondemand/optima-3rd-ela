@@ -158,18 +158,12 @@ js = rep(js, "'<span>This is the owl who reads along with you. You\\u2019ll see 
              "'<span>This is Opti, the owl who reads along with you. You\\u2019ll see him on the Reading Road.</span></div>'")
 
 # ── the plate: G3 plates are public-domain art, credited, with a
-#    "What am I looking at?" line under the picture
+#    notice/wonder under the picture; one tap tells what it is
 js = rep(js, """      if (dp.credit) {
         var cap = document.createElement('figcaption');
         cap.className = 'spk-plate-credit'; cap.textContent = dp.credit;
         plate.appendChild(cap);
-      }""", """      if (dp.look) {
-        var lk = document.createElement('div');
-        lk.className = 'g3-look g3-plate-look';
-        var lh = document.createElement('div'); lh.className = 'g3-look-h'; lh.textContent = '\\ud83d\\udc40 What am I looking at?';
-        var lp = document.createElement('p'); lp.textContent = dp.look;
-        lk.appendChild(lh); lk.appendChild(lp); plate.appendChild(lk);
-      }
+      }""", """      if (dp.look) plate.insertAdjacentHTML('beforeend', noticeCard(esc(dp.look)));
       if (dp.credit) {
         var cap = document.createElement('figcaption');
         cap.className = 'spk-plate-credit'; cap.textContent = dp.credit;
@@ -198,7 +192,7 @@ js = rep(js, """  var cfg = DATA.wordgame;
   if (!cfg || !WORDGAME[cfg.type]) return;              /* no themed game for this lesson */""",
 """  var cfg = DATA.wordgame;
   if (!cfg || !WORDGAME[cfg.type]) return;              /* no themed game for this lesson */
-  if (cfg.type === 'tower') { WORDGAME.tower(cfg); return; }   /* G3: self-contained, not built from a page game */""")
+  if (cfg.type === 'tower' || cfg.type === 'wagon') { WORDGAME[cfg.type](cfg); return; }   /* G3: self-contained, not built from a page game */""")
 js = rep(js, "'guide/narrator/g3ela-'", "'guide/opti/g3ela-'")
 
 # ── the G4 book kits (bridge / NTS / Freedom Train) are G4's
@@ -231,7 +225,7 @@ if (typeof window.checkVocabCloze === 'function') window.checkVocabCloze = spkHi
 """)
 
 
-# ── copia opens like every G3 module: "What am I looking at?" + "What to do:"
+# ── copia opens like every G3 module: "What to do:" (Opti reads it)
 js = rep(js, """    '<div class="spk-copia-seed">' + DATA.copia.seed + '</div>';""",
              """    lookCard(DATA.copia.look, DATA.copia.todo) +
     '<div class="spk-copia-seed">' + DATA.copia.seed + '</div>';""")
@@ -299,6 +293,20 @@ js = rep(js, "note.textContent = 'Your document is the one that always has your 
 js = rep(js, "['Change the opener', 'Start with a when or a where.'],", "['Change the opener', 'Start with when or where it happened.'],")
 js = rep(js, "['Swap the verb', 'Find a stronger word than the one in bold.'],", "['Swap the verb', 'Use a stronger word than the bold word.'],")
 js = rep(js, "A book stands up once you have read all of it.", "A book lights up once you have read all of it.")
+# ── fewer words (pilot, Nov 10 2026): "a lot of reading for 3rd grade"
+#    Writer's Workshop banner: title + week line + one line on where to keep it
+js = rep(js, "    '<div class=\"spk-goal-gloss\">' + arc.gloss + '</div>' +\n", "")
+js = cut(js, "      '<div class=\"spk-keep-title\">Keep your writing in one place</div>' +", "    '</div>';\n  var firstReal",
+  "      '<p><b>Every day:</b> copy your writing into one document called <b>My ' +\n"
+  "      titleCase(arc.name.replace(/^an? /, '').replace(/^your /, '')) + '</b>.</p>' +\n")
+#    Explorer / Scholar in one line each, no note under them
+js = rep(js, "'<div class=\"spk-roads-label\">Pick how you want to answer today\\u2019s three questions.</div>' +",
+             "'<div class=\"spk-roads-label\">Pick one. Both finish the lesson.</div>' +")
+js = rep(js, """        '<span class="spk-road-line">Every question asks you for <b>one more thing</b>: another detail, ' +
+        'or <b>why</b> you think so. Finish all three and you earn the Scholar\\u2019s seal.</span>' +""",
+             """        '<span class="spk-road-line">Add <b>one more</b> detail or reason to each answer. Earn the Scholar\\u2019s seal.</span>' +""")
+js = rep(js, "    '<div class=\"spk-roads-note\">Either one finishes the lesson. You can switch whenever you want.</div>' +\n", "")
+
 # ── G3 additions, inside the IIFE, ahead of boot
 m = io.open(mod, encoding='utf-8').read()
 js = rep(js, '\nfunction boot() {', '\n' + m + '\n\nfunction boot() {')
@@ -308,6 +316,10 @@ js = rep(js, "    ['journal',     buildJournal],\n", "    ['journal',     buildJ
 # the greeting builds media again after a name is entered; Opti follows
 js = rep(js, "  try { buildMedia(); } catch (e) {}\n  dividerAfterOpening();",
              "  try { buildMedia(); } catch (e) {}\n  try { optiFaces(); } catch (e) {}\n  dividerAfterOpening();")
+
+# ── a new tab starts at the top (pilot, Nov 10 2026): no G4 scroll-hold;
+#    the 👆 tap rule + key line, and g3TabTop, run with the hooks
+js = rep(js, "hookGather(); hookTabScroll(); }],", "hookGather(); }],\n    ['taps',        buildTaps],")
 
 if 'g4ela' in js: sys.exit('port: g4ela left in the layer')
 io.open(out + '/g3-sparkle.js', 'w', encoding='utf-8').write(js)

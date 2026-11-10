@@ -343,16 +343,11 @@ function buildWritingProject() {
   goal.innerHTML =
     '<div class="spk-goal-label">What you are writing</div>' +
     '<div class="spk-goal-title">' + arc.name.charAt(0).toUpperCase() + arc.name.slice(1) + '</div>' +
-    '<div class="spk-goal-gloss">' + arc.gloss + '</div>' +
     '<div class="spk-goal-meta">Week ' + step + ' of ' + of + ' \u00b7 you finish it and publish it in Week ' +
       arc.weeks[1] + '</div>' +
     '<div class="spk-keep">' +
-      '<div class="spk-keep-title">Keep your writing in one place</div>' +
-      '<p>Make one document just for this project and call it <b>My ' +
-      titleCase(arc.name.replace(/^an? /, '').replace(/^your /, '')) +
-      '</b> \u2014 a Google Doc or a Word file. ' +
-      'Every day: write in the box below, then <b>copy it into your own document</b>. ' +
-      'That way your whole ' + (/paragraph/i.test(arc.name) ? 'paragraph' : /letter/i.test(arc.name) ? 'letter' : /report/i.test(arc.name) ? 'report' : /essay|analysis/i.test(arc.name) ? 'essay' : /project/i.test(arc.name) ? 'project' : 'story') + ' is in one place and nothing gets lost.</p>' +
+      '<p><b>Every day:</b> copy your writing into one document called <b>My ' +
+      titleCase(arc.name.replace(/^an? /, '').replace(/^your /, '')) + '</b>.</p>' +
     '</div>';
   var firstReal = document.querySelector('.spk-arc-head');
   if (firstReal && firstReal.parentNode === body) body.insertBefore(goal, firstReal.nextSibling);
@@ -992,13 +987,7 @@ function buildPlate() {
     plate.appendChild(img);
     if (dp) {
       plate.classList.add('spk-plate-photo');
-      if (dp.look) {
-        var lk = document.createElement('div');
-        lk.className = 'g3-look g3-plate-look';
-        var lh = document.createElement('div'); lh.className = 'g3-look-h'; lh.textContent = '\ud83d\udc40 What am I looking at?';
-        var lp = document.createElement('p'); lp.textContent = dp.look;
-        lk.appendChild(lh); lk.appendChild(lp); plate.appendChild(lk);
-      }
+      if (dp.look) plate.insertAdjacentHTML('beforeend', noticeCard(esc(dp.look)));
       if (dp.credit) {
         var cap = document.createElement('figcaption');
         cap.className = 'spk-plate-credit'; cap.textContent = dp.credit;
@@ -1515,7 +1504,7 @@ function buildTiers() {
   var sw = document.createElement('div');
   sw.className = 'spk-roads';
   sw.innerHTML =
-    '<div class="spk-roads-label">Pick how you want to answer today\u2019s three questions.</div>' +
+    '<div class="spk-roads-label">Pick one. Both finish the lesson.</div>' +
     '<div class="spk-roads-cards">' +
       '<button type="button" class="spk-road" data-tier="explorer">' +
         '<span class="spk-road-name">Explorer</span>' +
@@ -1524,11 +1513,9 @@ function buildTiers() {
       '<button type="button" class="spk-road" data-tier="scholar">' +
         '<span class="spk-road-laurel">' + laurelSVG(46) + '</span>' +
         '<span class="spk-road-name">Scholar \u2014 go further</span>' +
-        '<span class="spk-road-line">Every question asks you for <b>one more thing</b>: another detail, ' +
-        'or <b>why</b> you think so. Finish all three and you earn the Scholar\u2019s seal.</span>' +
+        '<span class="spk-road-line">Add <b>one more</b> detail or reason to each answer. Earn the Scholar\u2019s seal.</span>' +
       '</button>' +
     '</div>' +
-    '<div class="spk-roads-note">Either one finishes the lesson. You can switch whenever you want.</div>' +
     '<div class="spk-seal-strip" id="spkSealStrip"></div>';
   firstBlock.parentNode.insertBefore(sw, firstBlock);
 
@@ -1870,7 +1857,7 @@ function wgWhy(why) {
 function buildWordGame() {
   var cfg = DATA.wordgame;
   if (!cfg || !WORDGAME[cfg.type]) return;              /* no themed game for this lesson */
-  if (cfg.type === 'tower') { WORDGAME.tower(cfg); return; }   /* G3: self-contained, not built from a page game */
+  if (cfg.type === 'tower' || cfg.type === 'wagon') { WORDGAME[cfg.type](cfg); return; }   /* G3: self-contained, not built from a page game */
   var act = wgActivity(cfg.strand); if (!act) return;
   var game = act.querySelector('.fillin-game'); if (!game) return;
   var W = wgWords(game); if (W.length < 2) return;
@@ -3373,10 +3360,10 @@ function addCounter(ta) {
      DATA.glossary  = [ {w, m, key} ]      dotted words, 🔊 on key words
      DATA.sayWords  = [ 'word', … ]          🔊 on the vocab cards (says just the word)
      DATA.cards     = [ {id, kind, tab, after, title, sub, look, todo, …} ]
-     DATA.wordgame  = {type:'tower', …}      Up the North Tower
-   The six rules for 8-year-olds: every module opens with
-   "👀 What am I looking at?" and a "What to do:" line, and shows one
-   step at a time.
+     DATA.wordgame  = {type:'tower'|'wagon', …}  Up the North Tower / Fill the Wagon
+   The rules for 8-year-olds: every module opens with a "What to do:"
+   line Opti reads, shows one step at a time, and every picture opens
+   on notice/wonder before it says what it is.
    ══════════════════════════════════════════════════════════════ */
 function g3slug(w) { return String(w).toLowerCase().replace(/[’']/g, '').replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, ''); }
 function wordSrc(w) { return MEDIA.audioBase + 'words/g3ela-word-' + g3slug(w) + '.mp3'; }
@@ -3397,12 +3384,88 @@ function sayBtn(w) {
   return b;
 }
 
-/* "👀 What am I looking at?" + "What to do:", the opening of every module */
+/* "What to do:", the opening of every module. Pilot feedback (Nov 10
+   2026): the "👀 What am I looking at?" box was one more thing to read
+   before the work, so modules open on "What to do:" alone (Opti reads
+   it). A card's `look` text now lives behind a picture's notice/wonder. */
 function lookCard(look, todo) {
-  var h = '';
-  if (look) h += '<div class="g3-look"><div class="g3-look-h">👀 What am I looking at?</div><p>' + look + '</p></div>';
-  if (todo) h += '<p class="g3-todo"><b>What to do:</b> ' + todo + '</p>';
-  return h;
+  return todo ? '<p class="g3-todo"><b>What to do:</b> ' + todo + '</p>' : '';
+}
+
+/* Notice first, reveal after. Under a picture: look, notice, wonder,
+   then one tap tells you what it is. */
+function noticeCard(about) {
+  if (!about) return '';
+  return '<div class="g3-notice"><div class="g3-notice-h">👀 Look closely.</div>' +
+    '<p class="g3-notice-q">What do you <b>notice</b>? What do you <b>wonder</b>? Say it out loud.</p>' +
+    '<button type="button" class="g3-notice-btn" aria-expanded="false">Tap to find out what it is</button>' +
+    '<p class="g3-notice-a" hidden>' + about + '</p></div>';
+}
+document.addEventListener('click', function (e) {
+  var b = e.target && e.target.closest && e.target.closest('.g3-notice-btn'); if (!b) return;
+  var a = b.nextElementSibling; if (!a) return;
+  a.hidden = !a.hidden; b.setAttribute('aria-expanded', String(!a.hidden));
+  b.textContent = a.hidden ? 'Tap to find out what it is' : 'Hide it';
+});
+
+/* A new tab starts at the top of the lesson (pilot feedback, Nov 10
+   2026). G4 holds the scroll across a switch; G3 does not: an
+   8-year-old who taps Reading should land on Reading's first line. The
+   lesson's own switchTab already scrolls to #pageTop; G4's
+   hookTabScroll is left out of the G3 build (port.py), and this also
+   asks Canvas to scroll its page up, since the lesson sits in an
+   iframe there. */
+function g3TabTop() {
+  if (typeof window.switchTab !== 'function' || window.switchTab._g3top) return;
+  var inner = window.switchTab;
+  var f = function () {
+    var r = inner.apply(this, arguments);
+    var top = document.getElementById('pageTop');
+    try { if (top) top.scrollIntoView({ block: 'start' }); else window.scrollTo(0, 0); } catch (e) { window.scrollTo(0, 0); }
+    try {
+      if (window.parent && window.parent !== window) {
+        window.parent.postMessage(JSON.stringify({ subject: 'lti.scrollToTop' }), '*');
+        window.parent.postMessage({ subject: 'lti.scrollToTop' }, '*');
+      }
+    } catch (e) {}
+    return r;
+  };
+  f._g3top = true; window.switchTab = f;
+}
+
+/* What is a button and what is not (pilot feedback, Nov 10 2026).
+   One rule across the page: if you can tap it, it shows 👆 and lifts
+   like a key. Boxes you only read stay flat. A key line under the
+   header says so once. */
+var G3_TAP_BTN = 'button.dol-check-btn, button.fillin-check-btn, button.tab-next-btn, button.spk-mini-btn, ' +
+  'button.spk-dol-swap, button.g3-opt-btn, button.g3-tw-chip, button.g3-notice-btn, button.spk-btn, button.gathered-btn';
+function markTaps(root) {
+  (root || document).querySelectorAll(G3_TAP_BTN).forEach(function (b) {
+    if (b.querySelector('.g3-hand')) return;
+    /* one icon per button: a leading emoji gives way to the hand */
+    var t = b.firstChild;
+    if (t && t.nodeType === 3) t.nodeValue = t.nodeValue.replace(/^\s*(?:\p{Extended_Pictographic}\uFE0F?\s*)+/u, '');
+    var h = document.createElement('span'); h.className = 'g3-hand'; h.setAttribute('aria-hidden', 'true'); h.textContent = '👆';
+    b.insertBefore(h, b.firstChild);
+  });
+  (root || document).querySelectorAll('.fc-tap').forEach(function (t) {
+    if (!/👆/.test(t.textContent)) t.textContent = '👆 ' + t.textContent;
+  });
+}
+function buildTapKey() {
+  if (document.querySelector('.g3-tapkey')) return;
+  var hdr = document.querySelector('.spk-hd, .header'); if (!hdr) return;
+  var k = document.createElement('div'); k.className = 'g3-tapkey';
+  k.innerHTML = '<span><b>👆</b> You can tap it.</span><span><b>🔊</b> You can listen.</span><span><b class="g3-dot">dotted word</b> Tap it to see what it means.</span>';
+  hdr.parentNode.insertBefore(k, hdr.nextSibling);
+}
+function buildTaps() {
+  markTaps(); buildTapKey(); g3TabTop();
+  if (window.MutationObserver) {
+    var t = null;
+    new MutationObserver(function () { clearTimeout(t); t = setTimeout(function () { markTaps(); }, 60); })
+      .observe(document.body, { childList: true, subtree: true });
+  }
 }
 
 /* ── glossary: dotted words with a tooltip; key words get a 🔊 ─────── */
@@ -3539,7 +3602,7 @@ function artFig(a, cls) {
 
 /* card kind 'info': art + what it is + a few plain sentences */
 function cardInfo(c, body) {
-  var h = lookCard(c.look, c.todo) + artFig(c.art);
+  var h = lookCard(null, c.todo) + artFig(c.art) + (c.art ? noticeCard(c.look) : '');
   (c.text || []).forEach(function (p) { h += '<p class="g3-p">' + p + '</p>'; });
   body.insertAdjacentHTML('beforeend', h);
 }
@@ -3682,7 +3745,7 @@ function cardCrest(c, body) {
 
 function buildCards() {
   var C = DATA.cards; if (!C || !C.length) return;
-  var ICON = { info: '👀', tapwords: '💬', crest: '🛡️' };
+  var ICON = { info: '👀', tapwords: '💬', crest: '🛡️', backward: '🔄' };
   /* reversed, so two cards anchored to the same activity keep DATA order */
   C.slice().reverse().forEach(function (c) {
     if (document.getElementById('g3card-' + c.id)) return;
@@ -3692,6 +3755,7 @@ function buildCards() {
     if (c.kind === 'info') cardInfo(c, body);
     else if (c.kind === 'tapwords') cardTapwords(c, body);
     else if (c.kind === 'crest') cardCrest(c, body);
+    else if (c.kind === 'backward') cardBackward(c, body);
     else return;
     cardVoice(c.id, body);
     at.host.insertBefore(card, at.before || null);
@@ -3799,6 +3863,171 @@ WORDGAME.tower = function (cfg) {
   paint();
   if (anchor) anchor.parentNode.insertBefore(card, anchor); else panel.appendChild(card);
 };
+
+/* ── Fill the Wagon: one round a day ────────────────────────────────
+   DATA.wordgame = { type:'wagon', title, sub, look, todo, win, winWeek,
+     bins:[ {id, label} ], items:[ {t, bin, why, miss:{binId:'…'}} ] }
+   One thing to sort at a time: read it, tap the sack it belongs in. Each
+   right answer drops a coin (every fourth one a jewel) into the outlaws'
+   wagon. Day d starts with days 1…d-1's coins already in, so the week
+   fills one wagon. Practice only; never fills a graded box. */
+function wagonSVG(have, day, per) {
+  var total = per * 4;
+  var s = '<svg viewBox="0 0 240 190" width="100%" style="max-width:250px" role="img" aria-label="The wagon has ' + have + ' of ' + total + ' coins and jewels">' +
+    '<rect width="240" height="190" rx="12" fill="#EAF1E4"/>' +
+    '<path d="M0 160 Q120 150 240 160 V190 H0 Z" fill="#B9CFA4"/>' +
+    '<path d="M186 120 L232 104" stroke="#6B4423" stroke-width="5" stroke-linecap="round"/>';
+  /* the pile, drawn before the front board so it sits inside the wagon bed */
+  for (var k = 0; k < total; k++) {
+    var row = Math.floor(k / 8), col = k % 8;
+    var x = 44 + col * 19 + (row % 2 ? 9 : 0), y = 99 - row * 12;
+    var today = k >= (day - 1) * per && k < day * per;
+    if (k < have) {
+      if (k % 4 === 3) {
+        var jc = ['#C0392B', '#2E6FB5', '#2F8F4E', '#8E44AD'][(k >> 2) % 4];
+        s += '<path d="M' + x + ' ' + (y - 8) + ' l7 7 l-7 8 l-7 -8 Z" fill="' + jc + '" stroke="#3B2A14" stroke-width="1.2"/>' +
+             '<path d="M' + (x - 3) + ' ' + (y - 3) + ' l3 -3" stroke="#fff" stroke-width="1.2" opacity=".7"/>';
+      } else {
+        s += '<ellipse cx="' + x + '" cy="' + y + '" rx="8" ry="6" fill="#F2C14E" stroke="#9A6B12" stroke-width="1.4"/>' +
+             '<ellipse cx="' + x + '" cy="' + (y - 1) + '" rx="4" ry="2.6" fill="none" stroke="#C8901E" stroke-width="1"/>';
+      }
+    } else if (today && row < 3) {
+      s += '<ellipse cx="' + x + '" cy="' + y + '" rx="8" ry="6" fill="none" stroke="#9A8A6A" stroke-width="1" stroke-dasharray="2 2" opacity=".6"/>';
+    }
+  }
+  s += '<path d="M30 104 H196 L186 136 H40 Z" fill="#8A5A2B" stroke="#4E3016" stroke-width="2.5"/>' +
+       '<path d="M34 114 H192 M37 125 H189" stroke="#6B4423" stroke-width="1.5"/>';
+  [[62, 146], [166, 146]].forEach(function (w) {
+    s += '<circle cx="' + w[0] + '" cy="' + w[1] + '" r="17" fill="#5E3A1A" stroke="#3B220E" stroke-width="3"/>' +
+         '<circle cx="' + w[0] + '" cy="' + w[1] + '" r="4" fill="#C7922C"/>';
+    for (var a = 0; a < 6; a++) {
+      var r = a * Math.PI / 3;
+      s += '<path d="M' + w[0] + ' ' + w[1] + ' L' + (w[0] + 15 * Math.cos(r)).toFixed(1) + ' ' + (w[1] + 15 * Math.sin(r)).toFixed(1) + '" stroke="#C9A46A" stroke-width="2"/>';
+    }
+  });
+  if (have >= total) s += '<text x="120" y="24" text-anchor="middle" font-family="Nunito,sans-serif" font-weight="800" font-size="15" fill="#2F6B3B">A wagonload!</text>';
+  return s + '</svg>';
+}
+WORDGAME.wagon = function (cfg) {
+  var items = cfg.items || [], bins = cfg.bins || []; if (!items.length || bins.length < 2) return;
+  var panel = document.getElementById('tab-words'); if (!panel) return;
+  var anchor = panel.querySelector('.tab-next-wrap');
+  var day = dayNum(LESSON.day), PER = items.length;
+  var KEY = 'oao.g3ela.wg.' + LID;
+  var st = Sparkle.get(KEY, null) || { i: 0, misses: 0 };
+  if (st.i > PER) st.i = PER;
+  var card = cardShell({ id: 'wagon', kind: 'wagon', title: cfg.title || 'Fill the Wagon', sub: cfg.sub || '' }, '💰');
+  var body = card.querySelector('.spk-card-body');
+  body.insertAdjacentHTML('beforeend', lookCard(cfg.look, cfg.todo) +
+    '<div class="g3-tw-grid"><div class="g3-wagon"></div><div class="g3-tw-play" aria-live="polite"></div></div>');
+  var wagonEl = body.querySelector('.g3-wagon'), play = body.querySelector('.g3-tw-play');
+  function have() { return (day - 1) * PER + st.i; }
+  function paint(msg, ok, tried) {
+    wagonEl.innerHTML = wagonSVG(have(), day, PER);
+    if (st.i >= PER) {
+      play.innerHTML = '<div class="g3-finish">✓ ' + esc(day === 4 ? (cfg.winWeek || cfg.win || '') : (cfg.win || '')) + '</div>' +
+        '<button type="button" class="spk-mini-btn g3-again">Play today’s round again</button>';
+      play.querySelector('.g3-again').onclick = function () { st = { i: 0, misses: 0 }; Sparkle.set(KEY, st); paint(); };
+      return;
+    }
+    var it = items[st.i];
+    var h = stepHead(st.i + 1, PER, cfg.stepTitle || 'Which sack?') +
+      '<div class="g3-wg-item">' + it.t + '</div><div class="g3-sacks">';
+    bins.forEach(function (b) {
+      h += '<button type="button" class="g3-sack' + (tried && tried.indexOf(b.id) >= 0 ? ' tried' : '') + '" data-b="' + esc(b.id) + '">' +
+           '<span class="g3-sack-ic" aria-hidden="true">💰</span><span>' + esc(b.label) + '</span></button>';
+    });
+    h += '</div>';
+    if (msg) h += '<div class="g3-fb ' + (ok ? 'ok' : 'no') + '">' + msg + '</div>';
+    play.innerHTML = h;
+    play.querySelectorAll('.g3-sack').forEach(function (b) {
+      b.onclick = function () {
+        var id = b.getAttribute('data-b');
+        if (id === it.bin) {
+          st.i++; Sparkle.set(KEY, st); wgSfx(st.i >= PER ? 'win' : 'chime');
+          if (st.i >= PER) { paint(); return; }
+          paint('✓ ' + (it.why || 'Into the wagon it goes.'), true);
+          var pile = wagonEl.querySelector('svg'); if (pile) { pile.classList.remove('g3-clink'); void pile.getBoundingClientRect(); pile.classList.add('g3-clink'); }
+        } else {
+          st.misses++; Sparkle.set(KEY, st); wgSfx('bonk');
+          paint((it.miss || {})[id] || 'Not that sack. Read it again, then try another.', false, (tried || []).concat([id]));
+        }
+      };
+    });
+  }
+  paint();
+  if (anchor) anchor.parentNode.insertBefore(card, anchor); else panel.appendChild(card);
+};
+
+/* card kind 'backward': read a note from the last word to the first (Billy's test),
+   then rebuild it the right way round by tapping the words in order. Last step: why. */
+function cardBackward(c, body) {
+  var notes = c.notes || [], q = c.q; if (!notes.length) return;
+  var N = notes.length + (q ? 1 : 0);
+  var KEY = 'oao.g3ela.card.' + LID + '.' + c.id;
+  var st = Sparkle.get(KEY, null) || { step: 0 };
+  if (st.step > N) st.step = N;
+  body.insertAdjacentHTML('beforeend', lookCard(c.look, c.todo) + '<div class="g3-steps" aria-live="polite"></div>');
+  var steps = body.querySelector('.g3-steps');
+  function save() { Sparkle.set(KEY, st); }
+  function finish() {
+    steps.innerHTML = (q && q.why ? '<div class="g3-fb ok">' + esc(q.why) + '</div>' : '') +
+      '<div class="g3-finish">✓ ' + esc(c.finish || 'All done!') + '</div>' +
+      '<button type="button" class="spk-mini-btn g3-again">Start again</button>';
+    steps.querySelector('.g3-again').onclick = function () { st = { step: 0 }; save(); paint(); };
+  }
+  function noteStep(n) {
+    var back = notes[n].back, fwd = back.slice().reverse(), got = 0;
+    steps.innerHTML = stepHead(n + 1, N, notes[n].title || 'Turn the note around') +
+      '<p class="g3-step-p">' + esc(c.stepText || 'Read the note out loud from the last word to the first. Then tap the words in the right order.') + '</p>' +
+      '<div class="g3-bk-note"><span class="g3-bk-tag">The note, read backward</span>' + back.map(esc).join(' ') + '</div>' +
+      '<div class="g3-bk-line" aria-label="Your note the right way round"><span class="g3-bk-tag">The right way round</span><span class="g3-bk-built"></span></div>' +
+      '<div class="g3-bk-chips"></div><div class="g3-bk-fb"></div>';
+    var chips = steps.querySelector('.g3-bk-chips'), built = steps.querySelector('.g3-bk-built'), fb = steps.querySelector('.g3-bk-fb');
+    back.forEach(function (w, k) {
+      var b = document.createElement('button'); b.type = 'button'; b.className = 'g3-bk-chip'; b.textContent = w;
+      b.onclick = function () {
+        if (b.disabled) return;
+        if (w === fwd[got]) {
+          b.disabled = true; b.classList.add('used'); got++;
+          built.textContent = fwd.slice(0, got).join(' '); fb.innerHTML = '';
+          if (got === fwd.length) {
+            wgSfx('chime');
+            fb.innerHTML = '<div class="g3-fb ok">✓ ' + esc(notes[n].done || 'You turned it around.') + '</div>' +
+              '<button type="button" class="spk-btn g3-next">' + (n + 1 < N ? 'Next →' : 'Finish ✓') + '</button>';
+            fb.querySelector('.g3-next').onclick = function () { st.step = n + 1; save(); paint(); };
+          }
+        } else {
+          wgSfx('bonk'); b.classList.remove('g3-shake'); void b.offsetWidth; b.classList.add('g3-shake');
+          fb.innerHTML = '<div class="g3-fb no">' + esc(got === 0 ? (c.missFirst || 'Not that one yet. The note starts with the last word you see.') : (c.missNext || 'Not that one yet. Look for the word just before the ones you used.')) + '</div>';
+        }
+      };
+      chips.appendChild(b);
+    });
+  }
+  function qStep(msg, ok, tried) {
+    var h = stepHead(N, N, q.title || 'Why read it backward?') + '<p class="g3-tw-q">' + q.text + '</p><div class="g3-opts">';
+    q.opts.forEach(function (o, n) { h += '<button type="button" class="g3-opt-btn' + (tried && tried.indexOf(n) >= 0 ? ' tried' : '') + '" data-n="' + n + '">' + esc(o) + '</button>'; });
+    h += '</div>';
+    if (msg) h += '<div class="g3-fb ' + (ok ? 'ok' : 'no') + '">' + msg + '</div>';
+    steps.innerHTML = h;
+    steps.querySelectorAll('.g3-opt-btn').forEach(function (b) {
+      b.onclick = function () {
+        var n = +b.getAttribute('data-n');
+        if (n === q.a) {
+          wgSfx('win'); st.step = N; save(); finish();
+        } else {
+          wgSfx('bonk'); qStep(esc((q.miss || {})[n] || 'Not that one. Read the choices again.'), false, (tried || []).concat([n]));
+        }
+      };
+    });
+  }
+  function paint() {
+    if (st.step >= N) { finish(); return; }
+    if (st.step < notes.length) noteStep(st.step); else qStep();
+  }
+  paint();
+}
 
 /* ── tooltips never get cut off ─────────────────────────────────────
    The tip is placed with position:fixed against the viewport, so a
@@ -3958,7 +4187,7 @@ function buildSpotlight() {
    assets/audio/guide/opti/g3ela-how-<slug>.mp3 (shared by every lesson
    that uses the same words). The button stays hidden until the file is
    really there, so a line without a recording just reads as text. */
-var SAY_FOR_CARD = { 'spk-copia-card': 'copia', 'g3card-tower': 'tower' };
+var SAY_FOR_CARD = { 'spk-copia-card': 'copia', 'g3card-tower': 'tower', 'g3card-wagon': 'wagon', 'g3card-backward': 'backward' };
 function buildSayDo() {
   document.querySelectorAll('.g3-todo:not([data-say])').forEach(function (p) {
     for (var k in SAY_FOR_CARD) {
@@ -3998,7 +4227,8 @@ function boot() {
      Now a builder that throws costs exactly its own feature. The names
      are logged so a broken lesson says which piece is missing. */
   var steps = [
-    ['hooks',       function () { hookProgress(); hookTabs(); hookGather(); hookTabScroll(); }],
+    ['hooks',       function () { hookProgress(); hookTabs(); hookGather(); }],
+    ['taps',        buildTaps],
     ['declutter',   declutter],
     ['top',         buildTop],
     ['numeral',     buildNumeral],

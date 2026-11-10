@@ -1,0 +1,267 @@
+{
+ "connector": "The outlaws think Jemmy is the prince, and Jemmy is going along with it. Today he writes the ransom note while Billy watches every word. Listen to how a street boy talks when he pretends to be a prince.",
+ "writingFocus": "flow",
+ "plate": {
+  "src": "art/wb/wb-scribe.jpg",
+  "alt": "An old painting of a man in a red robe writing in a big book at a wooden desk",
+  "credit": "Jean Miélot at his desk · unknown painter, Brussels, 1400s · Public domain",
+  "look": "A writer named Jean Miélot at his desk, painted by hand in a book more than 500 years ago. Long ago, few people could read or write, and writers like him used a feather pen called a quill. In Chapter 8, Jemmy writes the ransom note with a hawk’s feather and beet juice."
+ },
+ "dol": {
+  "a": {
+   "raw": "sign your name here ordered hold-your-nose billy",
+   "fixed": "<strong>“S</strong>ign your name here<strong>,”</strong> ordered <strong>H</strong>old-<strong>Y</strong>our-<strong>N</strong>ose <strong>B</strong>illy<strong>.</strong>",
+   "why": "Quotation marks go around Billy’s exact words, and Sign starts them with a capital. A comma goes inside the closing quotation mark. Hold-Your-Nose Billy is a name, so each part gets a capital. A period ends the sentence."
+  },
+  "b": {
+   "raw": "eat your bread whispered jemmy",
+   "fixed": "<strong>“E</strong>at your bread<strong>,”</strong> whispered <strong>J</strong>emmy<strong>.</strong>",
+   "why": "Quotation marks go around Jemmy’s exact words, and Eat starts them with a capital. A comma goes inside the closing quotation mark. Jemmy is a name, so it gets a capital. A period ends the sentence."
+  }
+ },
+ "miss": {
+  "match": {
+   "obliged": "Obliged is a feeling. Look for the meaning about being thankful.",
+   "scoundrel": "A scoundrel is a kind of person, and not a good one. Look for the villain meaning.",
+   "gallows": "Gallows is a thing made of wood. Look for the meaning about a frame.",
+   "scribblement": "Scribblement is Cutwater’s made-up word. Look for the meaning about writing."
+  }
+ },
+ "flags": {
+  "journal-q1": {
+   "quote": false,
+   "count": 1
+  },
+  "journal-q2": {
+   "quote": false,
+   "count": 1
+  },
+  "journal-q3": {
+   "quote": true,
+   "count": 1
+  }
+ },
+ "scholar": {
+  "journal-q1": "… and tell what the prince says about Jemmy’s letters.",
+  "journal-q2": "… and tell how Jemmy signs the note.",
+  "journal-q3": "… and explain why Jemmy might want the whipping boy to carry it."
+ },
+ "wordgame": {
+  "type": "wagon",
+  "title": "Fill the Wagon",
+  "sub": "Billy wants a wagonload of gold and jewels. Every right answer adds one.",
+  "look": "This is the outlaws’ wagon. In Chapter 8, Jemmy tells Billy to ask the king for a whole wagonload of gold and jewels. Each sack has a label. You get one thing to sort at a time. Every right answer drops a gold coin or a jewel into the wagon. You add 8 each day this week. On Day 4 the wagon is full.",
+  "todo": "Read the words on the card. Tap the sack where they belong. A right answer adds gold to the wagon.",
+  "win": "Today’s 8 are in the wagon. Come back next lesson to add more.",
+  "winWeek": "A wagonload of gold, with jewels mixed in! The wagon is full.",
+  "bins": [
+   {
+    "id": "yes",
+    "label": "Compound sentence"
+   },
+   {
+    "id": "no",
+    "label": "Not compound"
+   }
+  ],
+  "stepTitle": "Compound or not?",
+  "items": [
+   {
+    "t": "Billy wanted gold, but Jemmy wanted more.",
+    "bin": "yes",
+    "why": "Two complete thoughts joined by a comma and but.",
+    "miss": {
+     "no": "Cover the word but. Billy wanted gold. Jemmy wanted more. Both sides make sense alone."
+    }
+   },
+   {
+    "t": "Jemmy dipped the quill in beet juice.",
+    "bin": "no",
+    "why": "One complete thought. There is no joining word.",
+    "miss": {
+     "yes": "Look for a joining word like and, but, or so. This sentence has only one thought."
+    }
+   },
+   {
+    "t": "Cutwater gnawed on a pheasant, and Billy paced the hut.",
+    "bin": "yes",
+    "why": "Two thoughts joined by a comma and and.",
+    "miss": {
+     "no": "Cover the word and. Can each side stand alone as a sentence?"
+    }
+   },
+   {
+    "t": "The prince sat on the moldy straw.",
+    "bin": "no",
+    "why": "One complete thought.",
+    "miss": {
+     "yes": "There is only one thought here, and no joining word."
+    }
+   },
+   {
+    "t": "Billy could not read, so he tested Jemmy.",
+    "bin": "yes",
+    "why": "Two thoughts joined by a comma and so.",
+    "miss": {
+     "no": "Cover the word so. Billy could not read. He tested Jemmy. Two sentences!"
+    }
+   },
+   {
+    "t": "Jemmy read the note backward.",
+    "bin": "no",
+    "why": "One complete thought.",
+    "miss": {
+     "yes": "Look for a joining word with a whole thought on each side. It is not here."
+    }
+   },
+   {
+    "t": "The prince was hungry, so he nibbled the stale bread.",
+    "bin": "yes",
+    "why": "Two thoughts joined by a comma and so.",
+    "miss": {
+     "no": "Cover the word so. Does each side make sense on its own?"
+    }
+   },
+   {
+    "t": "Jemmy signed the note with a flourish.",
+    "bin": "no",
+    "why": "One complete thought.",
+    "miss": {
+     "yes": "This sentence has one thought and no joining word."
+    }
+   }
+  ]
+ },
+ "cards": [
+  {
+   "id": "backward",
+   "kind": "backward",
+   "tab": "reading",
+   "after": "^\\W*Read: Ch",
+   "title": "Read It Backward",
+   "sub": "Try Billy’s test from Chapter 9",
+   "look": "In Chapter 9, Billy wants to check the ransom note. He makes Jemmy read it backward, from the last word to the first. The real note ends with “Your Obedient Son,” so Jemmy starts with “Son Obedient Your.” Below are three short notes, already written backward.",
+   "todo": "Read each note out loud from the last word to the first. Then tap the words in the right order. Last, answer the question.",
+   "stepText": "Read the note out loud, starting with the last word. Then tap the words in the right order.",
+   "notes": [
+    {
+     "title": "Note 1",
+     "back": [
+      "hungry.",
+      "am",
+      "I"
+     ],
+     "done": "I am hungry. That is what the prince keeps saying!"
+    },
+    {
+     "title": "Note 2",
+     "back": [
+      "herring.",
+      "and",
+      "bread",
+      "Eat"
+     ],
+     "done": "Eat bread and herring. That is the outlaws’ breakfast."
+    },
+    {
+     "title": "Note 3",
+     "back": [
+      "garlic.",
+      "like",
+      "smells",
+      "Billy"
+     ],
+     "done": "Billy smells like garlic. He really does!"
+    }
+   ],
+   "q": {
+    "title": "Why read it backward?",
+    "text": "Why does Billy make Jemmy read the note backward?",
+    "opts": [
+     "Billy can’t read. If Jemmy had made up the words, he would trip over them backward.",
+     "Billy thinks the note sounds funnier backward.",
+     "The king can only read notes that are written backward."
+    ],
+    "a": 0,
+    "why": "Billy can’t check the words himself. Reading backward is hard to fake, so if Jemmy reads it smoothly, the words must really be on the paper.",
+    "miss": {
+     "1": "Billy is not trying to be funny. He wants to know if the note says what Jemmy told him.",
+     "2": "The king reads notes the normal way. This test is for Jemmy."
+    }
+   },
+   "finish": "Jemmy read the real note backward twice before Billy was satisfied."
+  }
+ ],
+ "glossary": [
+  {
+   "w": "whipping boy",
+   "cs": true,
+   "m": "a boy kept in the castle to be punished whenever the prince does something wrong"
+  },
+  {
+   "w": "ransom",
+   "m": "money that kidnappers ask for before they let someone go"
+  },
+  {
+   "w": "compound sentence",
+   "m": "a sentence made of two complete thoughts joined by a word like and, but, or so"
+  },
+  {
+   "w": "complete thought",
+   "m": "a group of words that makes sense on its own, like The outlaw growled."
+  },
+  {
+   "w": "root",
+   "m": "the main part of a word. Other parts are added to the front or the end."
+  },
+  {
+   "w": "syllable",
+   "m": "one beat in a word. Can-dle has two."
+  },
+  {
+   "w": "counterclaim",
+   "m": "what someone who disagrees with you might say"
+  },
+  {
+   "w": "conclusion",
+   "m": "the last sentence of a paragraph. It says your big idea in a new way."
+  }
+ ],
+ "sayWords": [
+  "obliged",
+  "scoundrel",
+  "gallows",
+  "scribblement"
+ ],
+ "transcripts": {
+  "welcome": "Welcome back, it’s Opti. The outlaws think Jemmy is the prince, and Jemmy is going along with it. Now he has to write a ransom note while two outlaws watch. As you read, think about this: how does a street boy act like a prince? And keep an eye on the real prince. He is not happy.",
+  "guide1": "Word study time. You’ll match more words that share the root that means carry. Then you’ll find the two complete thoughts hiding inside long sentences. Here’s a tip: cover the joining word with your finger. If both sides still make sense on their own, you found them.",
+  "guide2": "Before you read: Chapter 8 is all about the ransom note. Listen to how Jemmy talks when he pretends to be the prince. Then, in Chapter 9, Billy gives Jemmy a strange test. Watch closely, and ask yourself why Billy would think of it.",
+  "guide3": "Today you’re a listener. Read your paragraph out loud, slowly, like you’re reading it to a friend. Your ears will catch things your eyes miss. Is there a spot where the sentences bump? A transition word can smooth it right out.",
+  "card-backward": "Billy and Cutwater can’t read the note Jemmy wrote. So in Chapter 9, Billy makes Jemmy read it backward, from the last word to the first. Now you try it. Turn each note around. Then think about why Billy wanted it read that way."
+ },
+ "notes": {
+  "wordParts": "The root port means “carry.” transport = carry across, import = carry in, export = carry out, report = carry back, portable = able to be carried.",
+  "grammar": "A compound sentence joins two complete thoughts with a comma and a joining word: Jemmy wrote the note, and Billy watched.",
+  "spelling": "When a word ends in a consonant + le, that consonant goes with the le to make the last syllable: ta·ble, can·dle, sim·ple.",
+  "wgrd": "Good readers notice when a character does something unexpected, like being kind to someone who has not been kind to him.",
+  "vocab": [
+   [
+    "obliged",
+    "grateful; thankful for a favor done"
+   ],
+   [
+    "scoundrel",
+    "a dishonest or wicked person; a villain"
+   ],
+   [
+    "gallows",
+    "a wooden frame used to hang criminals as punishment"
+   ],
+   [
+    "scribblement",
+    "Cutwater’s word for writing"
+   ]
+  ]
+ }
+}

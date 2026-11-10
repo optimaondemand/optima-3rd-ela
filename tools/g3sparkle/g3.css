@@ -237,3 +237,58 @@
 
 /* DOL: the parts to tap are marked before anyone taps them */
 .dol-highlight-word:not(.highlighted):not(.key-reveal) { background:#FFF6D6; border-bottom:2px dotted #C7922C; }
+
+/* ── Fill the Wagon (week 19) ── */
+.g3-wagon { flex:0 0 230px; margin:0 auto; }
+.g3-wagon svg.g3-clink { animation:g3clink .45s ease-out; }
+@keyframes g3clink { 0% { transform:translateY(0); } 35% { transform:translateY(3px); } 100% { transform:translateY(0); } }
+.g3-wg-item { font-family:Lora,Georgia,serif; font-size:20px; line-height:1.45; color:#24324F; background:#FFFDF4; border:2px dashed #C7922C;
+  border-radius:12px; padding:12px 14px; margin:0 0 12px; }
+.g3-sacks { display:grid; grid-template-columns:repeat(auto-fit, minmax(140px, 1fr)); gap:8px; }
+.g3-sack { display:flex; align-items:center; gap:8px; text-align:left; font-family:Nunito,sans-serif; font-weight:800; font-size:16px; line-height:1.3;
+  padding:10px 12px; border:2px solid #B08A4A; background:#F6EBD6; color:#4E3016; border-radius:14px; cursor:pointer; min-height:48px; }
+.g3-sack:hover, .g3-sack:focus { background:#EFDDB8; border-color:#7A5A20; outline:none; }
+.g3-sack.tried { opacity:.5; text-decoration:line-through; }
+.g3-sack-ic { font-size:22px; }
+@media (max-width:520px) { .g3-wagon { flex-basis:190px; } .g3-wg-item { font-size:18px; } }
+/* ── Read It Backward card ── */
+.g3-bk-note, .g3-bk-line { font-family:Lora,Georgia,serif; font-size:20px; line-height:1.5; border-radius:10px; padding:10px 14px; margin:0 0 10px; }
+.g3-bk-note { background:#FBF3E4; border:1px solid #E2CFA6; color:#7A1E14; }
+.g3-bk-line { background:#fff; border:2px solid #CBD3EA; color:#24324F; min-height:62px; }
+.g3-bk-tag { display:block; font-family:Nunito,sans-serif; font-size:12px; font-weight:800; letter-spacing:.04em; text-transform:uppercase; color:#7A88A8; }
+.g3-bk-chips { display:flex; flex-wrap:wrap; gap:8px; margin:0 0 8px; }
+.g3-bk-chip { font-family:Lora,Georgia,serif; font-size:19px; padding:8px 14px; border:2px solid #3B4A86; background:#F3F5FC; color:#1E2A55;
+  border-radius:10px; cursor:pointer; min-height:44px; }
+.g3-bk-chip.used { opacity:.35; border-style:dashed; cursor:default; }
+.g3-bk-chip.g3-shake { animation:g3shake .35s; }
+@keyframes g3shake { 25% { transform:translateX(-4px); } 75% { transform:translateX(4px); } }
+
+/* ── Pilot feedback, Nov 10 2026 ─────────────────────────────────── */
+/* the word chips in "Hear this week's words" are words, not round icons */
+.g3-say.g3-say-chip { width:auto; height:auto; min-height:38px; margin:0; padding:7px 14px; white-space:nowrap; }
+.g3-sayrow { row-gap:10px; }
+/* notice first, reveal after */
+.g3-notice { background:#FFF8E6; border:1.5px solid #EAD7A6; border-radius:12px; padding:12px 16px; margin:8px auto 12px; max-width:640px; text-align:left; }
+.g3-notice-h { font-family:Nunito,sans-serif; font-weight:800; font-size:16px; color:#8B6914; margin-bottom:4px; }
+.g3-notice-q { margin:0 0 10px; font-size:18px; line-height:1.5; color:#3A3326; }
+.g3-notice-a { margin:10px 0 0; font-size:17px; line-height:1.55; color:#3A3326; }
+.g3-notice-a[hidden] { display:none !important; }
+/* 👆 = you can tap it. Every tap target lifts like a key; read-only boxes stay flat */
+.g3-hand { display:inline-block; margin-right:6px; font-size:1.05em; line-height:1; }
+.g3-notice-btn, button.dol-check-btn, button.fillin-check-btn, button.tab-next-btn, button.spk-mini-btn,
+button.spk-dol-swap, button.g3-opt-btn, button.g3-tw-chip, button.spk-btn, button.gathered-btn {
+  cursor:pointer !important; box-shadow:0 3px 0 rgba(36,50,79,.28) !important; transition:transform .08s, box-shadow .08s; }
+.g3-notice-btn { font-family:Nunito,sans-serif; font-weight:800; font-size:16px; color:#fff; background:#3B4A86; border:0; border-radius:999px; padding:9px 18px; }
+.g3-notice-btn:active, button.dol-check-btn:active, button.fillin-check-btn:active, button.tab-next-btn:active, button.spk-mini-btn:active,
+button.g3-opt-btn:active, button.g3-tw-chip:active, button.spk-btn:active, button.gathered-btn:active { transform:translateY(2px); box-shadow:0 1px 0 rgba(36,50,79,.28) !important; }
+.flip-card, .match-item, .sort-chip, .spk-dol-card, .turn-in-item { cursor:pointer !important; }
+.sort-chip, .match-item { box-shadow:0 3px 0 rgba(36,50,79,.18) !important; }
+.dol-highlight-word { cursor:pointer; text-decoration:underline dotted 2px; }
+/* word parts are labels, not buttons */
+.decode-part { background:transparent !important; border:0 !important; border-bottom:3px solid currentColor !important; border-radius:0 !important; padding:0 2px !important; box-shadow:none !important; }
+/* the key line under the header */
+.g3-tapkey { display:flex; flex-wrap:wrap; gap:8px 22px; justify-content:center; padding:10px 16px; background:#F3F6FC; border-bottom:1px solid #DCE3F1;
+  font-family:Nunito,sans-serif; font-size:16px; color:#24324F; }
+.g3-tapkey b { margin-right:4px; }
+.g3-tapkey .g3-dot { font-weight:700; text-decoration:underline dotted 2px; text-underline-offset:3px; }
+.g3-model-h { font-family:Nunito,sans-serif; font-weight:800; font-size:17px; color:#5C2D91; margin:4px 0 10px; }

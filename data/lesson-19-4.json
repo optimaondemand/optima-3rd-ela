@@ -1,0 +1,236 @@
+{
+ "connector": "No new chapters today. Look back at Chapters 6 to 11: the hut, the quill, the ransom note, and all that shouting. Who held the power in that hut? Today you put your whole opinion paragraph together.",
+ "writingFocus": "paragraph",
+ "plate": {
+  "src": "art/wb/wb-crown.jpg",
+  "alt": "An old painting of a golden crown covered in jewels, sitting on a red cushion",
+  "credit": "The Imperial Crown · Johann Adam Delsenbach, 1751 · Public domain",
+  "look": "A real emperor’s crown, made of gold and covered in jewels, drawn and painted by Johann Adam Delsenbach about 275 years ago. In this week’s chapters, the prince’s golden crown ends up in the outlaws’ hands."
+ },
+ "dol": {
+  "a": {
+   "raw": "its not you they're looking for said the prince",
+   "fixed": "<strong>“I</strong>t<strong>’</strong>s not you they’re looking for<strong>,”</strong> said the prince<strong>.</strong>",
+   "why": "Quotation marks go around the prince’s exact words, and It’s starts them with a capital. It’s needs an apostrophe because it means it is. A comma goes inside the closing quotation mark. A period ends the sentence."
+  },
+  "b": {
+   "raw": "well send the whipping boy said billy",
+   "fixed": "<strong>“W</strong>e<strong>’</strong>ll send the whipping boy<strong>,”</strong> said <strong>B</strong>illy<strong>.</strong>",
+   "why": "Quotation marks go around Billy’s exact words, and We’ll starts them with a capital. We’ll needs an apostrophe because it means we will. A comma goes inside the closing quotation mark. Billy is a name. A period ends the sentence."
+  }
+ },
+ "hints": {
+  "vcloze1": {
+   "h1": "Jemmy cannot understand it. Which bank word means to understand something deep?",
+   "why": "fathom means to understand something deep."
+  },
+  "vcloze2": {
+   "h1": "The outlaws get all mixed up. Which bank word means to confuse someone?",
+   "why": "flummox means to confuse someone completely."
+  },
+  "vcloze3": {
+   "h1": "The two outlaws step outside to talk. Which bank word is a talk between two sides?",
+   "why": "parley means to talk things over."
+  },
+  "vcloze4": {
+   "h1": "Cutwater thinks the prince is fishing for something. Which bank word means that?",
+   "why": "angling means trying to get something in a clever way."
+  }
+ },
+ "miss": {
+  "match": {
+   "fathom": "Fathom is about understanding. Look for that meaning.",
+   "flummox": "Flummox is about confusing someone. Look for that meaning.",
+   "parley": "A parley is a talk. Look for the meaning about two sides talking.",
+   "angling": "Angling is like fishing for something. Look for that meaning."
+  }
+ },
+ "flags": {
+  "journal-q1": {
+   "quote": false,
+   "count": 2
+  },
+  "journal-q2": {
+   "quote": true,
+   "count": 1
+  },
+  "journal-q3": {
+   "quote": false,
+   "count": 2
+  }
+ },
+ "scholar": {
+  "journal-q1": "… and say whether you think it was a good choice.",
+  "journal-q2": "… and explain what it might show about the prince.",
+  "journal-q3": "… and say which kind of clever you think matters more."
+ },
+ "wordgame": {
+  "type": "wagon",
+  "title": "Fill the Wagon",
+  "sub": "Billy wants a wagonload of gold and jewels. Every right answer adds one.",
+  "look": "This is the outlaws’ wagon. In Chapter 8, Jemmy tells Billy to ask the king for a whole wagonload of gold and jewels. Each sack has a label. You get one thing to sort at a time. Every right answer drops a gold coin or a jewel into the wagon. You add 8 each day this week. On Day 4 the wagon is full.",
+  "todo": "Read the words on the card. Tap the sack where they belong. A right answer adds gold to the wagon.",
+  "win": "Today’s 8 are in the wagon. Come back next lesson to add more.",
+  "winWeek": "A wagonload of gold, with jewels mixed in! The wagon is full.",
+  "bins": [
+   {
+    "id": "port",
+    "label": "Has the root port (carry)"
+   },
+   {
+    "id": "comp",
+    "label": "Compound sentence"
+   },
+   {
+    "id": "cle",
+    "label": "Ends in consonant-le"
+   }
+  ],
+  "stepTitle": "Which sack?",
+  "items": [
+   {
+    "t": "support",
+    "bin": "port",
+    "why": "sup + port: to carry from under, like holding something up.",
+    "miss": {
+     "comp": "This is one word, not a sentence.",
+     "cle": "support ends in ort. Find the root."
+    }
+   },
+   {
+    "t": "The outlaws went outside, and the boys argued.",
+    "bin": "comp",
+    "why": "Two complete thoughts joined by a comma and and.",
+    "miss": {
+     "port": "Look for a comma and a joining word.",
+     "cle": "This is a sentence, not one word."
+    }
+   },
+   {
+    "t": "needle",
+    "bin": "cle",
+    "why": "nee · dle: the d goes with the le.",
+    "miss": {
+     "port": "Look at the last three letters: d, l, e.",
+     "comp": "This is one word, not a sentence."
+    }
+   },
+   {
+    "t": "export",
+    "bin": "port",
+    "why": "ex + port: to carry out.",
+    "miss": {
+     "comp": "This is one word, not a sentence.",
+     "cle": "export ends in ort. Find the root."
+    }
+   },
+   {
+    "t": "The prince was offered gold, but he said no.",
+    "bin": "comp",
+    "why": "Two complete thoughts joined by a comma and but.",
+    "miss": {
+     "port": "Look for a comma and a joining word.",
+     "cle": "This is a sentence, not one word."
+    }
+   },
+   {
+    "t": "bottle",
+    "bin": "cle",
+    "why": "bot · tle: the t goes with the le.",
+    "miss": {
+     "port": "Look at the last three letters: t, l, e.",
+     "comp": "This is one word, not a sentence."
+    }
+   },
+   {
+    "t": "Jemmy wanted to slip away, but the prince would not leave.",
+    "bin": "comp",
+    "why": "Two complete thoughts joined by a comma and but.",
+    "miss": {
+     "port": "Look for a comma and a joining word.",
+     "cle": "This is a sentence, not one word."
+    }
+   },
+   {
+    "t": "beetle",
+    "bin": "cle",
+    "why": "bee · tle: the t goes with the le.",
+    "miss": {
+     "port": "Look at the last three letters: t, l, e.",
+     "comp": "This is one word, not a sentence."
+    }
+   }
+  ]
+ },
+ "glossary": [
+  {
+   "w": "whipping boy",
+   "cs": true,
+   "m": "a boy kept in the castle to be punished whenever the prince does something wrong"
+  },
+  {
+   "w": "ransom",
+   "m": "money that kidnappers ask for before they let someone go"
+  },
+  {
+   "w": "compound sentence",
+   "m": "a sentence made of two complete thoughts joined by a word like and, but, or so"
+  },
+  {
+   "w": "complete thought",
+   "m": "a group of words that makes sense on its own, like The outlaw growled."
+  },
+  {
+   "w": "root",
+   "m": "the main part of a word. Other parts are added to the front or the end."
+  },
+  {
+   "w": "syllable",
+   "m": "one beat in a word. Can-dle has two."
+  },
+  {
+   "w": "counterclaim",
+   "m": "what someone who disagrees with you might say"
+  },
+  {
+   "w": "conclusion",
+   "m": "the last sentence of a paragraph. It says your big idea in a new way."
+  }
+ ],
+ "sayWords": [
+  "fathom",
+  "flummox",
+  "parley",
+  "angling"
+ ],
+ "transcripts": {
+  "welcome": "Welcome back, it’s Opti. No new chapters today. Instead, let’s look back at Chapters 6 through 11. A lot happened in that hut. Think about who held the quill, who gave the orders, and who surprised you. Today you’ll put your whole opinion paragraph together, all five parts.",
+  "guide1": "Review day. You’ll roll the dice for words that share the root that means carry, and you’ll hunt for mistakes in compound sentences. Not every sentence has a mistake, so read each one carefully before you tap. Then fill the last sacks in the wagon.",
+  "guide2": "No new reading today. Flip back through Chapters 6 to 11 and find the moments that stuck with you. Was there a time Jemmy surprised you? A time the prince did? Keep those pages in mind. They’ll help you answer the questions.",
+  "guide3": "This is the big one. Today you put all five parts together: your claim, your reason, your example, the other side, and your conclusion. Read Clara’s paragraph first, and notice how each part leads to the next. Then build yours, one sentence at a time."
+ },
+ "notes": {
+  "wordParts": "The root port means “carry.” transport = carry across, import = carry in, export = carry out, report = carry back, portable = able to be carried.",
+  "grammar": "A compound sentence joins two complete thoughts with a comma and a joining word: Jemmy wrote the note, and Billy watched.",
+  "spelling": "When a word ends in a consonant + le, that consonant goes with the le to make the last syllable: ta·ble, can·dle, sim·ple.",
+  "wgrd": "Good readers look back at the whole section and ask how each character has changed since the start.",
+  "vocab": [
+   [
+    "fathom",
+    "to understand something very deep or hard"
+   ],
+   [
+    "flummox",
+    "to completely confuse someone"
+   ],
+   [
+    "parley",
+    "a talk between two sides who disagree"
+   ],
+   [
+    "angling",
+    "trying in a clever way to get something"
+   ]
+  ]
+ }
+}

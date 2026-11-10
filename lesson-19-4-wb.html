@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Optima Academy Online — Lesson 19.4: The Whipping Boy (Ch. 6–11 Review)</title>
+<title>Optima Academy Online — Lesson 19.4: The Whipping Boy (Ch. 6–11 Review) (Sparkle)</title>
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Nunito:wght@400;600;700;800;900&display=swap');
 
@@ -2114,7 +2114,263 @@ body {
   .header-title { font-size: 22px; }
   .tab-btn { min-width: 100px; font-size: 11px; padding: 10px 6px 9px; }
 }
+
+/* ═══════════ STANDARDS BAR (from the 3rd grade scope & sequence) ═══════════ */
+.standards-toggle-bar{display:flex;align-items:center;justify-content:space-between;background:linear-gradient(135deg,#132552,#17306A);padding:10px 28px;cursor:pointer;user-select:none;border-bottom:1px solid rgba(85,200,232,.15);}
+.standards-toggle-bar:hover{background:linear-gradient(135deg,#17306A,#1B3878);}
+.standards-toggle-label{font-size:12px;color:rgba(255,255,255,.6);text-transform:uppercase;letter-spacing:1px;font-weight:700;}
+.standards-toggle-arrow{font-size:10px;color:rgba(255,255,255,.4);transition:transform .25s ease;}
+.standards-toggle-bar.open .standards-toggle-arrow{transform:rotate(180deg);}
+.standards-panel{max-height:0;overflow:hidden;transition:max-height .3s ease;background:#0E1C42;border-bottom:1px solid rgba(85,200,232,.1);}
+.standards-panel.open{max-height:360px;}
+.standards-panel-inner{display:flex;gap:32px;padding:14px 28px 16px;flex-wrap:wrap;}
+.standards-group{display:flex;flex-direction:column;gap:6px;}
+.standards-group-label{font-size:10px;color:rgba(255,255,255,.45);text-transform:uppercase;letter-spacing:.8px;font-weight:700;}
+.standards-codes{font-size:13px;color:rgba(255,255,255,.75);line-height:1.6;}
+.standards-codes .fl-code{color:#80CBC4;font-weight:700;}
+.footer-standards{font-size:10px;color:rgba(255,255,255,.35);margin-top:6px;letter-spacing:.3px;}
 </style>
+<script type="application/json" id="oao-lesson">
+{"grade": 3, "subject": "ela", "book": "wb", "week": 19, "day": 4, "bookTitle": "The Whipping Boy", "chapters": "Ch. 6–11"}
+</script>
+<script type="application/json" id="oao-data">
+{
+ "connector": "No new chapters today. Look back at Chapters 6 to 11: the hut, the quill, the ransom note, and all that shouting. Who held the power in that hut? Today you put your whole opinion paragraph together.",
+ "writingFocus": "paragraph",
+ "plate": {
+  "src": "art/wb/wb-crown.jpg",
+  "alt": "An old painting of a golden crown covered in jewels, sitting on a red cushion",
+  "credit": "The Imperial Crown · Johann Adam Delsenbach, 1751 · Public domain",
+  "look": "A real emperor’s crown, made of gold and covered in jewels, drawn and painted by Johann Adam Delsenbach about 275 years ago. In this week’s chapters, the prince’s golden crown ends up in the outlaws’ hands."
+ },
+ "dol": {
+  "a": {
+   "raw": "its not you they're looking for said the prince",
+   "fixed": "<strong>“I</strong>t<strong>’</strong>s not you they’re looking for<strong>,”</strong> said the prince<strong>.</strong>",
+   "why": "Quotation marks go around the prince’s exact words, and It’s starts them with a capital. It’s needs an apostrophe because it means it is. A comma goes inside the closing quotation mark. A period ends the sentence."
+  },
+  "b": {
+   "raw": "well send the whipping boy said billy",
+   "fixed": "<strong>“W</strong>e<strong>’</strong>ll send the whipping boy<strong>,”</strong> said <strong>B</strong>illy<strong>.</strong>",
+   "why": "Quotation marks go around Billy’s exact words, and We’ll starts them with a capital. We’ll needs an apostrophe because it means we will. A comma goes inside the closing quotation mark. Billy is a name. A period ends the sentence."
+  }
+ },
+ "hints": {
+  "vcloze1": {
+   "h1": "Jemmy cannot understand it. Which bank word means to understand something deep?",
+   "why": "fathom means to understand something deep."
+  },
+  "vcloze2": {
+   "h1": "The outlaws get all mixed up. Which bank word means to confuse someone?",
+   "why": "flummox means to confuse someone completely."
+  },
+  "vcloze3": {
+   "h1": "The two outlaws step outside to talk. Which bank word is a talk between two sides?",
+   "why": "parley means to talk things over."
+  },
+  "vcloze4": {
+   "h1": "Cutwater thinks the prince is fishing for something. Which bank word means that?",
+   "why": "angling means trying to get something in a clever way."
+  }
+ },
+ "miss": {
+  "match": {
+   "fathom": "Fathom is about understanding. Look for that meaning.",
+   "flummox": "Flummox is about confusing someone. Look for that meaning.",
+   "parley": "A parley is a talk. Look for the meaning about two sides talking.",
+   "angling": "Angling is like fishing for something. Look for that meaning."
+  }
+ },
+ "flags": {
+  "journal-q1": {
+   "quote": false,
+   "count": 2
+  },
+  "journal-q2": {
+   "quote": true,
+   "count": 1
+  },
+  "journal-q3": {
+   "quote": false,
+   "count": 2
+  }
+ },
+ "scholar": {
+  "journal-q1": "… and say whether you think it was a good choice.",
+  "journal-q2": "… and explain what it might show about the prince.",
+  "journal-q3": "… and say which kind of clever you think matters more."
+ },
+ "wordgame": {
+  "type": "wagon",
+  "title": "Fill the Wagon",
+  "sub": "Billy wants a wagonload of gold and jewels. Every right answer adds one.",
+  "look": "This is the outlaws’ wagon. In Chapter 8, Jemmy tells Billy to ask the king for a whole wagonload of gold and jewels. Each sack has a label. You get one thing to sort at a time. Every right answer drops a gold coin or a jewel into the wagon. You add 8 each day this week. On Day 4 the wagon is full.",
+  "todo": "Read the words on the card. Tap the sack where they belong. A right answer adds gold to the wagon.",
+  "win": "Today’s 8 are in the wagon. Come back next lesson to add more.",
+  "winWeek": "A wagonload of gold, with jewels mixed in! The wagon is full.",
+  "bins": [
+   {
+    "id": "port",
+    "label": "Has the root port (carry)"
+   },
+   {
+    "id": "comp",
+    "label": "Compound sentence"
+   },
+   {
+    "id": "cle",
+    "label": "Ends in consonant-le"
+   }
+  ],
+  "stepTitle": "Which sack?",
+  "items": [
+   {
+    "t": "support",
+    "bin": "port",
+    "why": "sup + port: to carry from under, like holding something up.",
+    "miss": {
+     "comp": "This is one word, not a sentence.",
+     "cle": "support ends in ort. Find the root."
+    }
+   },
+   {
+    "t": "The outlaws went outside, and the boys argued.",
+    "bin": "comp",
+    "why": "Two complete thoughts joined by a comma and and.",
+    "miss": {
+     "port": "Look for a comma and a joining word.",
+     "cle": "This is a sentence, not one word."
+    }
+   },
+   {
+    "t": "needle",
+    "bin": "cle",
+    "why": "nee · dle: the d goes with the le.",
+    "miss": {
+     "port": "Look at the last three letters: d, l, e.",
+     "comp": "This is one word, not a sentence."
+    }
+   },
+   {
+    "t": "export",
+    "bin": "port",
+    "why": "ex + port: to carry out.",
+    "miss": {
+     "comp": "This is one word, not a sentence.",
+     "cle": "export ends in ort. Find the root."
+    }
+   },
+   {
+    "t": "The prince was offered gold, but he said no.",
+    "bin": "comp",
+    "why": "Two complete thoughts joined by a comma and but.",
+    "miss": {
+     "port": "Look for a comma and a joining word.",
+     "cle": "This is a sentence, not one word."
+    }
+   },
+   {
+    "t": "bottle",
+    "bin": "cle",
+    "why": "bot · tle: the t goes with the le.",
+    "miss": {
+     "port": "Look at the last three letters: t, l, e.",
+     "comp": "This is one word, not a sentence."
+    }
+   },
+   {
+    "t": "Jemmy wanted to slip away, but the prince would not leave.",
+    "bin": "comp",
+    "why": "Two complete thoughts joined by a comma and but.",
+    "miss": {
+     "port": "Look for a comma and a joining word.",
+     "cle": "This is a sentence, not one word."
+    }
+   },
+   {
+    "t": "beetle",
+    "bin": "cle",
+    "why": "bee · tle: the t goes with the le.",
+    "miss": {
+     "port": "Look at the last three letters: t, l, e.",
+     "comp": "This is one word, not a sentence."
+    }
+   }
+  ]
+ },
+ "glossary": [
+  {
+   "w": "whipping boy",
+   "cs": true,
+   "m": "a boy kept in the castle to be punished whenever the prince does something wrong"
+  },
+  {
+   "w": "ransom",
+   "m": "money that kidnappers ask for before they let someone go"
+  },
+  {
+   "w": "compound sentence",
+   "m": "a sentence made of two complete thoughts joined by a word like and, but, or so"
+  },
+  {
+   "w": "complete thought",
+   "m": "a group of words that makes sense on its own, like The outlaw growled."
+  },
+  {
+   "w": "root",
+   "m": "the main part of a word. Other parts are added to the front or the end."
+  },
+  {
+   "w": "syllable",
+   "m": "one beat in a word. Can-dle has two."
+  },
+  {
+   "w": "counterclaim",
+   "m": "what someone who disagrees with you might say"
+  },
+  {
+   "w": "conclusion",
+   "m": "the last sentence of a paragraph. It says your big idea in a new way."
+  }
+ ],
+ "sayWords": [
+  "fathom",
+  "flummox",
+  "parley",
+  "angling"
+ ],
+ "transcripts": {
+  "welcome": "Welcome back, it’s Opti. No new chapters today. Instead, let’s look back at Chapters 6 through 11. A lot happened in that hut. Think about who held the quill, who gave the orders, and who surprised you. Today you’ll put your whole opinion paragraph together, all five parts.",
+  "guide1": "Review day. You’ll roll the dice for words that share the root that means carry, and you’ll hunt for mistakes in compound sentences. Not every sentence has a mistake, so read each one carefully before you tap. Then fill the last sacks in the wagon.",
+  "guide2": "No new reading today. Flip back through Chapters 6 to 11 and find the moments that stuck with you. Was there a time Jemmy surprised you? A time the prince did? Keep those pages in mind. They’ll help you answer the questions.",
+  "guide3": "This is the big one. Today you put all five parts together: your claim, your reason, your example, the other side, and your conclusion. Read Clara’s paragraph first, and notice how each part leads to the next. Then build yours, one sentence at a time."
+ },
+ "notes": {
+  "wordParts": "The root port means “carry.” transport = carry across, import = carry in, export = carry out, report = carry back, portable = able to be carried.",
+  "grammar": "A compound sentence joins two complete thoughts with a comma and a joining word: Jemmy wrote the note, and Billy watched.",
+  "spelling": "When a word ends in a consonant + le, that consonant goes with the le to make the last syllable: ta·ble, can·dle, sim·ple.",
+  "wgrd": "Good readers look back at the whole section and ask how each character has changed since the start.",
+  "vocab": [
+   [
+    "fathom",
+    "to understand something very deep or hard"
+   ],
+   [
+    "flummox",
+    "to completely confuse someone"
+   ],
+   [
+    "parley",
+    "a talk between two sides who disagree"
+   ],
+   [
+    "angling",
+    "trying in a clever way to get something"
+   ]
+  ]
+ }
+}
+</script>
 </head>
 <body>
 
@@ -2344,11 +2600,25 @@ body {
   <div class="header-badge"><span class="header-badge-icon">👑</span><span class="header-badge-text">Lesson 19.4</span></div>
 </div>
 
+<!-- ═══════════ STANDARDS ═══════════ -->
+<div class="standards-toggle-bar" onclick="this.classList.toggle('open');this.nextElementSibling.classList.toggle('open');">
+  <span class="standards-toggle-label">Standards Alignment</span>
+  <span class="standards-toggle-arrow">▼</span>
+</div>
+<div class="standards-panel">
+  <div class="standards-panel-inner">
+    <div class="standards-group">
+      <div class="standards-group-label">Florida B.E.S.T.</div>
+      <div class="standards-codes"><span class="fl-code">ELA.3.R.1.1</span> · <span class="fl-code">ELA.3.C.1.3</span> · <span class="fl-code">ELA.3.F.1.3</span> · <span class="fl-code">ELA.3.F.1.4</span> · <span class="fl-code">ELA.3.V.1.2</span> · <span class="fl-code">ELA.3.C.3.1</span> · <span class="fl-code">ELA.3.R.1.4</span></div>
+    </div>
+  </div>
+</div>
+
 <!-- ═══════════ INFO STRIP ═══════════ -->
 <div class="info-strip">
   <div class="info-cell"><div class="info-icon" style="background:#E3F8ED;">📚</div><div><div class="info-label">Unit</div><div class="info-value">Unit 3</div><div class="info-detail">The Whipping Boy</div></div></div>
   <div class="info-cell"><div class="info-icon" style="background:#EAF8FD;">📅</div><div><div class="info-label">Week</div><div class="info-value">Week 19</div><div class="info-detail">Lesson 19.4 of 4</div></div></div>
-  <div class="info-cell"><div class="info-icon" style="background:#FFF8E8;">📖</div><div><div class="info-label">Reading</div><div class="info-value">Ch. 6–11 Review</div><div class="info-detail">Review, Response, and Writing Workshop</div></div></div>
+  <div class="info-cell"><div class="info-icon" style="background:#FFF8E8;">📖</div><div><div class="info-label">Reading</div><div class="info-value">Ch. 6–11 Review</div><div class="info-detail">No new chapters today</div></div></div>
   <div class="info-cell"><div class="info-icon" style="background:#F0E8FF;">🔤</div><div><div class="info-label">Focus</div><div class="info-value">Compound sentences</div><div class="info-detail">Root port means carry</div></div></div>
 </div>
 
@@ -2435,30 +2705,31 @@ body {
 
   <!-- What Good Readers Do -->
   <div class="activity bl-purple">
-    <div class="activity-head"><div class="activity-num" style="background:#8B6FC0;">1</div><div><div class="activity-title">📚 What Good Readers Do</div><div class="activity-sub">Set your reading lens for the week</div></div></div>
+    <div class="activity-head"><div class="activity-num" style="background:#8B6FC0;">1</div><div><div class="activity-title">📚 What Good Readers Do</div><div class="activity-sub">What to watch for while you read</div></div></div>
     <div class="activity-body">
-      <p>Good readers return to the whole section and ask: how has each character changed since Chapter 1? Compare who they were at the start to who they are now.</p>
+<p class="g3-do" data-say="readers"><b>What to do:</b> Read the tip. Think about it while you read today. You do not write anything here.</p>
+      <p>Good readers look back at everything they have read so far. Today, think about how Jemmy and the prince have changed since Chapter 1.</p>
       <div class="key-concept" style="background:#F0F7FF;border-color:#C8DCEE;margin:10px 0;">
       <div class="key-concept-label" style="color:#3D5285;">&#x1F50D; How to Do It</div>
       <ol style="margin:6px 0 6px 20px;font-size:14px;color:#3A4A6B;line-height:1.8;">
-      <li><strong>Name what each character wants:</strong> Ask it separately for each one &mdash; right now, in this chapter.</li>
-      <li><strong>Find the action that proves it:</strong> Characters show what they want by what they do, not by announcing it.</li>
-      <li><strong>Ask whether the wants collide:</strong> When two characters want opposite things, that is where the trouble comes from.</li>
+      <li><strong>What does each boy want?</strong> Ask it for Jemmy. Then ask it for the prince.</li>
+      <li><strong>What does he do to get it?</strong> What a character does shows what he wants.</li>
+      <li><strong>Do their wants clash?</strong> When two characters want opposite things, trouble starts.</li>
       </ol>
       </div>
       <div class="socratic-box">
         <div class="socratic-label">🧠 As you read this week, watch for:</div>
-        <p class="socratic-q">Good readers return to the whole section and ask: how has each character changed since Chapter 1? Compare who they were at the start to who they are now.</p>
+        <p class="socratic-q"><strong>How is each boy different now from how he was in Chapter 1?</strong></p>
       </div>
-      <div class="thinking-stop">💭 Think about this as you read today — you don't need to write anything here.</div>
+      
     </div>
   </div>
 
   <!-- DOL -->
   <div class="activity bl-cyan">
-    <div class="activity-head"><div class="activity-num" style="background:#5C2D91;">2</div><div><div class="activity-title">✏️ Daily Oral Language</div><div class="activity-sub">Study the model, then fix the sentence.</div></div></div>
+    <div class="activity-head"><div class="activity-num" style="background:#5C2D91;">2</div><div><div class="activity-title">✏️ Daily Oral Language</div><div class="activity-sub">Fix a sentence from the story.</div></div></div>
     <div class="activity-body">
-      <p>The first sentence is <strong>correct</strong>. Tap the parts you notice are done right &mdash; capital letters, punctuation, quotation marks, anything that follows the rules. Then use it as a model to fix the second sentence.</p>
+<p class="g3-do" data-say="dol"><b>What to do:</b> Tap the highlighted parts of the correct sentence to see why they are right. Then choose Sentence A or Sentence B, and type it the right way in the box.</p>
 
       <div class="task-box">
         <div class="dol-model-label">&#9989; Correct Model &mdash; from the novel</div>
@@ -2483,8 +2754,9 @@ body {
 
   <!-- poetry-corner:auto -->
 <div class="activity bl-rose">
-<div class="activity-head"><div class="activity-num" style="background:#c7627e;">🪶</div><div style="flex:1;"><div class="activity-title">🪶 Poetry</div><div class="activity-sub">Write your own haiku.</div></div></div>
-<div class="activity-body"><div class="poem-box">
+<div class="activity-head"><div class="activity-num" style="background:#c7627e;">🪶</div><div style="flex:1;"><div class="activity-title">🪶 Poetry</div><div class="activity-sub">Make up your own haiku.</div></div></div>
+<div class="activity-body">
+<p class="g3-do" data-say="poem-make"><b>What to do:</b> Make up your own haiku about something outside your window. Count the syllables on your fingers: 5, then 7, then 5. Say it out loud. You do not need to write it.</p><div class="poem-box">
 <div class="poem-title">Two Haiku for a Cold Morning</div>
 <div class="poem-author">written for this lesson</div>
 <div class="poem-text">Five steps to the gate.
@@ -2496,11 +2768,11 @@ upside down and perfectly
 until the stone lands.</div>
 </div>
 <div class="callout callout-think"><span class="callout-icon">💡</span><p>Both of these follow the 5&ndash;7&ndash;5 shape. Notice that each one changes direction in the last line: the walk comes back to the fire; the still pond is broken by a stone. A haiku usually saves its surprise for the end.</p></div>
-<div class="socratic-box"><div class="socratic-label">🧠 Think About It</div><p class="socratic-q">Write your own haiku about something that happens outside your window. Count on your fingers: 5, then 7, then 5.</p></div>
+<div class="socratic-box"><div class="socratic-label">🧠 Think About It</div><p class="socratic-q">What could your haiku be about? A bird, a car, the rain, a tree?</p></div>
 </div></div>
 <!-- /poetry-corner:auto -->
 <div class="tab-next-wrap">
-    <p class="tab-transition-voice">Now that your mind is warmed up, let&rsquo;s sharpen your words and skills.</p>
+    <p class="tab-transition-voice">Next: word study.</p>
     <button class="tab-next-btn" onclick="switchTab('words')">Continue to 🔤 Word Study →</button>
   </div>
 </div><!-- /tab-warmup -->
@@ -2513,14 +2785,15 @@ until the stone lands.</div>
 
   <!-- MORPHOLOGY -->
   <div class="activity bl-purple">
-<div class="activity-head"><div class="activity-num" style="background:#8B6FC0;">1</div><div style="flex:1;"><div class="activity-title">🌱 Morphology: port</div><div class="activity-sub">Explain / Justify the skill</div></div></div>
+<div class="activity-head"><div class="activity-num" style="background:#8B6FC0;">1</div><div style="flex:1;"><div class="activity-title">🌱 Morphology: port</div><div class="activity-sub">Roll a word and tell what it means.</div></div></div>
 <div class="activity-body">
-<div class="callout callout-info" style="margin-bottom:12px;"><span class="callout-icon">&#x1F50D;</span><p>Before you start: say what the word part does from memory, then roll.</p></div>
+<p class="g3-do" data-say="morph-dice"><b>What to do:</b> Say what the word part means. Then tap Roll the Dice. Say what the word means, and tap Check My Thinking. Roll all six words.</p>
+<div class="callout callout-info" style="margin-bottom:12px;"><span class="callout-icon">&#x1F50D;</span><p>Before you roll, say out loud what port means.</p></div>
 <div class="key-concept"><div class="key-concept-label">&#x1F4CC; Remember</div>
 <p><strong>port</strong> means <strong>carry</strong>.</p>
 <p><strong>transport</strong> = to carry across &middot; <strong>import</strong> = to carry in &middot; <strong>export</strong> = to carry out</p>
 </div>
-<div class="callout callout-info"><span class="callout-icon">&#x1F3B2;</span><p><strong>Dice Roll Challenge!</strong> Roll a word, then say out loud what it means and how the word part changed it. Tap to check yourself.</p></div>
+<div class="callout callout-info"><span class="callout-icon">&#x1F3B2;</span><p><strong>Dice Roll Challenge!</strong></p></div>
 <div style="text-align:center;margin:16px 0;">
 <div id="diceDisplay" style="font-size:64px;line-height:1;margin-bottom:10px;transition:transform 0.3s;">&#x1F3B2;</div>
 <button onclick="rollMorphDice()" id="diceBtn" style="background:linear-gradient(135deg,#8B6FC0,#A78BD6);color:#fff;border:none;border-radius:10px;padding:12px 28px;font-size:16px;font-weight:700;cursor:pointer;box-shadow:0 3px 8px rgba(139,111,192,0.3);">&#x1F3B2; Roll the Dice!</button>
@@ -2555,8 +2828,9 @@ r.textContent=diceWords[diceCurrentIdx].word+' = '+diceWords[diceCurrentIdx].mea
 
   <!-- VOCABULARY -->
   <div class="activity bl-cyan">
-    <div class="activity-head"><div class="activity-num" style="background:#5C2D91;">2</div><div><div class="activity-title">🔤 Vocabulary</div><div class="activity-sub">Words from this week's chapters.</div></div></div>
+    <div class="activity-head"><div class="activity-num" style="background:#5C2D91;">2</div><div><div class="activity-title">🔤 Vocabulary</div><div class="activity-sub">Review four words from this week</div></div></div>
     <div class="activity-body">
+<p class="g3-do" data-say="vocabcloze"><b>What to do:</b> Read how we figured out the first word. Then fill in each sentence with a word from the word bank, and tap Check My Work. Last, play the matching game.</p>
             <p>When you meet a word you don't know, use these three steps <em>in order</em>:</p>
 
       <!-- MODELED WORD -->
@@ -2622,10 +2896,11 @@ r.textContent=diceWords[diceCurrentIdx].word+' = '+diceWords[diceCurrentIdx].mea
 
   <!-- GRAMMAR -->
   <div class="activity bl-gold">
-    <div class="activity-head"><div class="activity-num" style="background:#B8860B;">3</div><div><div class="activity-title">✏️ Grammar: Compound Sentences</div><div class="activity-sub">Day 4: Review &mdash; hunt the mistakes. Not every sentence has one.</div>
+    <div class="activity-head"><div class="activity-num" style="background:#B8860B;">3</div><div><div class="activity-title">✏️ Grammar: Compound Sentences</div><div class="activity-sub">Find the mistake. Not every sentence has one.</div>
 <!-- grammar-level -->
 <div style="margin-top:6px;"><span style="display:inline-block;background:#FFF8E8;color:#8A6212;border:1px solid #C7922C;border-radius:999px;padding:3px 10px;font-size:11px;font-weight:800;letter-spacing:.05em;text-transform:uppercase;">🧱 Grammar Level: Sentence Builder</span></div></div></div>
-    <div class="activity-body"><!-- grammar-notice-first -->
+    <div class="activity-body">
+<p class="g3-do" data-say="gram-hunt"><b>What to do:</b> Read each sentence. Tap the word where the mistake is, or tap No mistake. Then tap See the answers, and answer the question in the box.</p><!-- grammar-notice-first -->
 <div class="key-concept" style="background:#F0F7FF;border-color:#C8DCEE;margin:0 0 14px;">
 <div class="key-concept-label" style="color:#3D5285;">&#x1F50E; What do you notice?</div>
 <p>Look at the two halves of this sentence and what holds them together.</p>
@@ -2643,10 +2918,10 @@ r.textContent=diceWords[diceCurrentIdx].word+' = '+diceWords[diceCurrentIdx].mea
 </ol></div>
 <button class="dol-check-btn" onclick="document.getElementById('gramNotice').classList.toggle('show')">&#x1F50D; Now check your thinking</button>
 <div class="dol-answer" id="gramNotice">
-<p>Today you will write three compound sentences — one for each conjunction — about Chapters 6–11.</p>
+<p>Today you check compound sentences for mistakes. Look at the comma and the joining word together.</p>
 <p>A compound sentence: two complete thoughts joined by a comma and <strong>but</strong>. The <strong>but</strong> tells you the second half goes against the first.</p>
 </div>
-<div class="callout callout-info" style="margin-top:14px;"><span class="callout-icon">🎯</span><p><strong>Your turn.</strong> Each sentence either has one mistake or nothing wrong at all. Tap the word that is wrong, or tap <strong>No mistake</strong>. Look at the commas and the joining words together.</p></div>
+<div class="callout callout-info" style="margin-top:14px;"><span class="callout-icon">🎯</span><p><strong>Your turn.</strong> Each sentence has one mistake or no mistake.</p></div>
 <div class="spotter-game" id="grammarGame">
 <div class="spotter-sentence" id="gspot1"><span class="spotter-word" onclick="gramSpotFix(this,'gspot1')" data-correct="false">Jemmy</span> <span class="spotter-word" onclick="gramSpotFix(this,'gspot1')" data-correct="true">ran</span> <span class="spotter-word" onclick="gramSpotFix(this,'gspot1')" data-correct="false">and</span> <span class="spotter-word" onclick="gramSpotFix(this,'gspot1')" data-correct="false">the</span> <span class="spotter-word" onclick="gramSpotFix(this,'gspot1')" data-correct="false">outlaw</span> <span class="spotter-word" onclick="gramSpotFix(this,'gspot1')" data-correct="false">followed.</span> <span class="spotter-word" onclick="gramSpotFix(this,'gspot1')" data-correct="false" style="background:#F2F4F8;font-style:italic;">No mistake</span><div class="spotter-result" id="gspot1-result"></div></div>
 <div class="spotter-sentence" id="gspot2"><span class="spotter-word" onclick="gramSpotFix(this,'gspot2')" data-correct="false">It</span> <span class="spotter-word" onclick="gramSpotFix(this,'gspot2')" data-correct="false">was</span> <span class="spotter-word" onclick="gramSpotFix(this,'gspot2')" data-correct="false">cold,</span> <span class="spotter-word" onclick="gramSpotFix(this,'gspot2')" data-correct="false">so</span> <span class="spotter-word" onclick="gramSpotFix(this,'gspot2')" data-correct="false">they</span> <span class="spotter-word" onclick="gramSpotFix(this,'gspot2')" data-correct="false">lit</span> <span class="spotter-word" onclick="gramSpotFix(this,'gspot2')" data-correct="false">a</span> <span class="spotter-word" onclick="gramSpotFix(this,'gspot2')" data-correct="false">fire.</span> <span class="spotter-word" onclick="gramSpotFix(this,'gspot2')" data-correct="true" style="background:#F2F4F8;font-style:italic;">No mistake</span><div class="spotter-result" id="gspot2-result"></div></div>
@@ -2670,10 +2945,11 @@ r.textContent=diceWords[diceCurrentIdx].word+' = '+diceWords[diceCurrentIdx].mea
 
   <!-- SPELLING -->
   <div class="activity bl-navy">
-    <div class="activity-head"><div class="activity-num" style="background:#2A0A4A;">4</div><div><div class="activity-title">🔠 Spelling: Consonant-le Syllables</div><div class="activity-sub">Day 4: Explain / justify the pattern.</div></div></div>
+    <div class="activity-head"><div class="activity-num" style="background:#2A0A4A;">4</div><div><div class="activity-title">🔠 Spelling: Consonant-le Syllables</div><div class="activity-sub">Roll a word and split it into syllables.</div></div></div>
     <div class="activity-body">
+<p class="g3-do" data-say="spell4"><b>What to do:</b> Tap Roll the dice. Say the word out loud and split it into syllables. Then tap Check my answer. Roll all six words.</p>
 <!-- spell-notice-first -->
-<div class="callout callout-info" style="margin-bottom:14px;"><span class="callout-icon">&#x1F442;</span><p>Before you start: listen to the last beat and notice how quiet it is.</p></div>
+<div class="callout callout-info" style="margin-bottom:14px;"><span class="callout-icon">&#x1F442;</span><p>Say each word out loud. Listen to the last beat.</p></div>
 <div class="callout callout-gold" style="margin-bottom:14px;background:#FFF8E8;border:2px solid #F5E6C8;border-left:5px solid #C7922C;border-radius:10px;padding:14px 18px;"><span class="callout-icon">📖</span><p style="font-size:15px;color:#0E1C42;line-height:1.6;"><strong>The Rule:</strong> When a word ends in a consonant plus <strong>-le</strong>, that consonant goes <em>with</em> the -le to make the last syllable: <em>ta&middot;ble</em>, <em>lit&middot;tle</em>, <em>can&middot;dle</em>. Count back three letters from the end and you have found the split.</p></div>
             <p>Sort and explain: what makes consonant-le syllables special? How do you divide them?</p>
 
@@ -2690,15 +2966,15 @@ r.textContent=diceWords[diceCurrentIdx].word+' = '+diceWords[diceCurrentIdx].mea
 
       <div class="socratic-box">
         <div class="socratic-label">&#x1F50D; What do you notice?</div>
-        <p class="socratic-q">Look at the last three letters of each word. What two of them are always the same?</p>
+        <p class="socratic-q">Look at the last three letters of each word. Which two letters are always the same?</p>
         <p class="socratic-q">What kind of letter comes just before the <em>-le</em>?</p>
-        <p class="socratic-q">Count back three letters from the end of each word. Where does the dot land?</p>
+        <p class="socratic-q">Count back three letters from the end of each word. Is that where the dot is?</p>
       </div>
 
       <button class="dol-check-btn" style="margin:12px auto;display:block;" onclick="document.getElementById('spellRuleReveal').classList.toggle('show')">🔍 See the Rule</button>
       <div class="dol-answer" id="spellRuleReveal"></div>
 
-            <div class="callout callout-info"><span class="callout-icon">🎲</span><p><strong>Consonant-le Dice!</strong> Roll a word, say it out loud, decide &mdash; then tap to check yourself.</p></div>
+            <div class="callout callout-info"><span class="callout-icon">🎲</span><p><strong>Consonant-le Dice!</strong></p></div>
 <div style="text-align:center;margin:14px 0;">
 <div id="spellDie" style="font-size:44px;line-height:1;">🎲</div>
 <button class="fillin-check-btn" id="spellRollBtn" onclick="rollSpellDice()" style="margin-top:10px;">Roll the dice</button>
@@ -2721,7 +2997,7 @@ function checkSpellDice(){var w=document.getElementById("spellWord").textContent
   </div>
 
   <div class="tab-next-wrap">
-    <p class="tab-transition-voice">Your words and skills are sharp. Time to open the book.</p>
+    <p class="tab-transition-voice">Next: reading.</p>
     <button class="tab-next-btn" onclick="switchTab('reading')">Continue to 📖 Reading →</button>
   </div>
 </div><!-- /tab-words -->
@@ -2788,15 +3064,11 @@ function checkSpellDice(){var w=document.getElementById("spellWord").textContent
       </div>
     </div>
     <div class="activity-body">
-      <div class="key-concept" style="background:#F0E8FF;border-color:#D8CCF0;margin-bottom:14px;">
-        <div class="key-concept-label" style="color:#6B4FB0;">💎 As you read, notice:</div>
-        <p>Good readers return to the whole section and ask: how has each character changed since Chapter 1? Compare who they were at the start to who they are now.</p>
-      </div>
       <div class="socratic-box">
         <div class="socratic-label">&#x1F451; Help with a second motive:</div>
         <p class="socratic-q" style="font-style:normal;">When the outlaws demand a ransom note, Prince Brat cannot write his own name. Jemmy takes the hawk&rsquo;s quill and writes it for him &mdash; not out of kindness, but because a scheme has leaped into his head. From the outside, helping someone and using someone can look exactly the same.</p>
       </div>
-      <div class="thinking-stop">💭 Think: How will your character help someone in your story?</div>
+      
     </div>
   </div>
 
@@ -2805,25 +3077,26 @@ function checkSpellDice(){var w=document.getElementById("spellWord").textContent
   
   <!-- Open book + links -->
   <div class="activity bl-green">
-    <div class="activity-head"><div class="activity-num" style="background:#34B76F;">1</div><div><div class="activity-title">📕 Read: Ch. 6–11 Review</div><div class="activity-sub">Review, Response, and Writing Workshop</div></div></div>
+    <div class="activity-head"><div class="activity-num" style="background:#34B76F;">1</div><div><div class="activity-title">📕 Look Back: Ch. 6–11</div><div class="activity-sub">No new chapters today</div></div></div>
     <div class="activity-body">
+<p class="g3-do" data-say="readrev-week"><b>What to do:</b> There are no new chapters today. Read the two Pause and Think questions. Then look back through this week’s chapters in your book to find your answers. You do not write these answers.</p>
       
       <!-- pause-before-reading -->
-      <div class="callout callout-info" style="margin-bottom:14px;"><span class="callout-icon">&#x23F8;&#xFE0F;</span><p><strong>Read these first.</strong> Look them over before you open your book, then stop and answer each one when you reach that part.</p></div>
+      
       <div class="pause-columns">
         <div class="pause-col">
           <div class="socratic-box" style="margin-bottom:0;">
             <div class="socratic-label">⏸️ Pause &amp; Think — Part 1</div>
             <p class="socratic-q">Jemmy says: 'It's not me you think you're protecting, is it?' What does he mean?</p>
           </div>
-          <div class="thinking-stop">💭 Pause and think about this — no need to write.</div>
+          
         </div>
 <div class="pause-col">
           <div class="socratic-box" style="margin-bottom:0;">
             <div class="socratic-label">⏸️ Pause &amp; Think — Part 2</div>
             <p class="socratic-q">The prince says: 'I'll return to the castle when I'm ready.' <strong>Has he really changed — or not?</strong></p>
           </div>
-          <div class="thinking-stop">💭 Pause and think about this — no need to write.</div>
+          
         </div>
       </div>
 
@@ -2839,14 +3112,9 @@ function checkSpellDice(){var w=document.getElementById("spellWord").textContent
             <div class="open-book-title"><em>The Whipping Boy</em></div>
             <div style="height:10px;"></div>
             <div class="open-book-chapter" style="font-size:14px;color:#7A88A8;font-style:normal;font-family:'Nunito',sans-serif;font-weight:700;">Ch. 6–11 Review</div>
-            <div class="open-book-prompt" style="margin-top:8px;">Open your novel to Ch. 6–11 Review.</div>
+            <div class="open-book-prompt" style="margin-top:8px;">Look back at Chapters 6–11.</div>
           </div>
         </div>
-      </div>
-
-      <div class="callout callout-info" style="margin-bottom:14px;">
-        <span class="callout-icon">📕</span>
-        <p><strong>Open your novel to Ch. 6–11 Review.</strong> Read at your own pace. The Pause &amp; Think prompts are above &mdash; look them over first, then stop at each one as you read.</p>
       </div>
       </div>
   </div>
@@ -2854,21 +3122,22 @@ function checkSpellDice(){var w=document.getElementById("spellWord").textContent
   
   <!-- RWM -->
   <div class="rwm-box">
-<div class="rwm-header">📖 RWM &mdash; Read like a Reader, Read like a Writer, Mimic</div>
+<div class="rwm-header">📖 Read Like a Writer</div>
+<p class="g3-do" data-say="rwm"><b>What to do:</b> Read the sentence from the book. Then do the three parts in order. Write one sentence in each box.</p>
 <div class="rwm-sentence">&ldquo;Sweat broke out across his face like raindrops.&rdquo;</div>
 <div class="rwm-step">
 <div class="rwm-step-label">📖 Read like a Reader</div>
 <div class="rwm-step-text">Jemmy has just told Billy what the king would do to whoever delivers the ransom note. What is happening to the outlaw here?</div>
 <div class="textbox-prompt">Write 1 sentence: what is the outlaw feeling, and how do you know?</div>
 <div class="journal-label">📓 Your response <span class="saved-dot" id="dot-rwm-reader"></span></div>
-<textarea class="journal-box" id="journal-rwm-reader" data-label="RWM &mdash; Read like a Reader" placeholder="The outlaw is..." oninput="autoSave(this,'dot-rwm-reader');gatherAnswers();"></textarea>
+<textarea class="journal-box" id="journal-rwm-reader" data-label="Read like a reader" placeholder="The outlaw is..." oninput="autoSave(this,'dot-rwm-reader');gatherAnswers();"></textarea>
 </div>
 <div class="rwm-step">
 <div class="rwm-step-label">✏️ Read like a Writer</div>
 <div class="rwm-step-text">The word <em>afraid</em> never appears. Fleischman gives you the <strong>sweat</strong>, then compares it to <strong>raindrops</strong> so you can picture how much. Showing fear on a face beats naming it.</div>
 <div class="textbox-prompt">Write 1 sentence: why is sweat a better way to show fear than the word <em>afraid</em>?</div>
 <div class="journal-label">📓 Your response <span class="saved-dot" id="dot-rwm-writer"></span></div>
-<textarea class="journal-box" id="journal-rwm-writer" data-label="RWM &mdash; Read like a Writer" placeholder="Showing the sweat works better because..." oninput="autoSave(this,'dot-rwm-writer');gatherAnswers();"></textarea>
+<textarea class="journal-box" id="journal-rwm-writer" data-label="Read like a writer" placeholder="Showing the sweat works better because..." oninput="autoSave(this,'dot-rwm-writer');gatherAnswers();"></textarea>
 </div>
 <div class="rwm-step">
 <div class="rwm-step-label">🖊️ Mimic</div>
@@ -2876,11 +3145,11 @@ function checkSpellDice(){var w=document.getElementById("spellWord").textContent
 <div class="rwm-frame">Sentence frame: [Something on their body] [did something] like [a comparison].</div>
 <div class="textbox-prompt">Write a sentence that shows fear without naming it.</div>
 <div class="journal-label">📓 Your sentence <span class="saved-dot" id="dot-rwm-mimic"></span></div>
-<textarea class="journal-box" id="journal-rwm-mimic" data-label="RWM &mdash; Mimic" placeholder="Write your sentence here..." oninput="autoSave(this,'dot-rwm-mimic');gatherAnswers();"></textarea>
+<textarea class="journal-box" id="journal-rwm-mimic" data-label="Write your own" placeholder="Write your sentence here..." oninput="autoSave(this,'dot-rwm-mimic');gatherAnswers();"></textarea>
 </div>
 </div>
 <div class="tab-next-wrap">
-    <p class="tab-transition-voice">You&rsquo;ve read and noticed. Now answer the questions and submit your work.</p>
+    <p class="tab-transition-voice">Next: answer the questions and turn in your work.</p>
     <button class="tab-next-btn" onclick="switchTab('assignment')">Continue to 📬 Assignment →</button>
   </div>
 </div><!-- /tab-reading -->
@@ -2899,8 +3168,9 @@ function checkSpellDice(){var w=document.getElementById("spellWord").textContent
 
   <!-- Part A: Chapter Thinking -->
   <div class="activity bl-cyan">
-    <div class="activity-head"><div class="activity-num" style="background:#5C2D91;">A</div><div><div class="activity-title">📖 Chapter Thinking</div><div class="activity-sub">Answer in complete sentences with evidence from the text.</div></div></div>
+    <div class="activity-head"><div class="activity-num" style="background:#5C2D91;">A</div><div><div class="activity-title">📖 Chapter Thinking</div><div class="activity-sub">Answer in full sentences. Use details from the book.</div></div></div>
     <div class="activity-body">
+<p class="g3-do" data-say="chapter"><b>What to do:</b> Choose Explorer or Scholar. Then answer the three questions in full sentences. Use details from the book.</p>
       <div class="q-block"><div class="q-text"><span class="q-num">1</span>Jemmy signs the ransom note as the prince. How does this decision both help and hurt him?</div></div>
       <div class="textbox-prompt">Think about what Jemmy says the outlaws will do when they find out he tricked them.</div>
       <textarea class="journal-box" id="journal-q1" data-label="Q1: chapter thinking" placeholder="It helps Jemmy because... but it also hurts him because..." oninput="autoSave(this,'dot-q1');gatherAnswers();"></textarea>
@@ -2917,9 +3187,9 @@ function checkSpellDice(){var w=document.getElementById("spellWord").textContent
 
   <!-- Part B: Word Study Connection -->
   <div class="activity bl-purple">
-    <div class="activity-head"><div class="activity-num" style="background:#8B6FC0;">B</div><div><div class="activity-title">🔤 Word Study Connection (Morphology)</div><div class="activity-sub">Your morphology response from the Word Study tab.</div></div></div>
+    <div class="activity-head"><div class="activity-num" style="background:#8B6FC0;">B</div><div><div class="activity-title">🔤 Word Study Check</div><div class="activity-sub">The word part work on the Word Study tab</div></div></div>
     <div class="activity-body">
-      <p style="font-size:15px;color:#7A88A8;">Your morphology answer was saved on the Word Study tab. It will appear in your gathered work below.</p>
+      <p style="font-size:15px;color:#7A88A8;">Finish the word part work on the Word Study tab. It shows in your work below.</p>
     </div>
   </div>
 
@@ -2933,6 +3203,7 @@ function checkSpellDice(){var w=document.getElementById("spellWord").textContent
       </div>
     </div>
     <div class="activity-body">
+<p class="g3-do" data-say="ww-full"><b>What to do:</b> Read Clara’s whole paragraph. Then write your own paragraph in the box with all five parts: claim, reason, example, the other side, and conclusion.</p>
       <div style="display:flex;flex-wrap:wrap;gap:4px;justify-content:flex-start;align-items:center;margin-bottom:10px;">
 <span style="background:#E8F1E8;color:#4A7C2E;padding:4px 8px;border-radius:6px;font-size:11px;">✓ Choose a Claim</span>
           <span style="background:#B8860B;color:#fff;padding:4px 8px;border-radius:6px;font-size:11px;">★ Add Reasons</span>
@@ -2940,12 +3211,11 @@ function checkSpellDice(){var w=document.getElementById("spellWord").textContent
           <span style="background:#FAFBFF;color:#7A88A8;padding:4px 8px;border-radius:6px;font-size:11px;">○ Revise</span>
           <span style="background:#FAFBFF;color:#7A88A8;padding:4px 8px;border-radius:6px;font-size:11px;">○ Publish</span>
         </div>
-      <div class="callout callout-info" style="margin:0 0 14px 0;padding:10px 14px;"><span class="callout-icon">🎯</span><p style="font-size:14px;"><strong>Today&rsquo;s focus:</strong> Today: Write your full paragraph — all five parts</p></div>
+      <div class="callout callout-info" style="margin:0 0 14px 0;padding:10px 14px;"><span class="callout-icon">🎯</span><p style="font-size:14px;"><strong>Today&rsquo;s focus:</strong> Write your full paragraph — all five parts</p></div>
 
       <!-- WATCH HOW -->
       <div class="key-concept" style="background:#FFFEF7;border-color:#E8D5A0;margin-bottom:14px;">
-        <div class="key-concept-label" style="color:#B8860B;">👀 Watch How &mdash; Meet Today, our example writer</div>
-        <p style="font-size:14px;"><em>Today: Write your full paragraph — all five parts</em></p>
+        <div class="key-concept-label" style="color:#B8860B;">👀 Watch How &mdash; Meet Clara, our example writer</div>
         <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:10px;">
           <div style="background:#FFF;border:1px solid #E8D5A0;border-radius:6px;padding:10px;">
             <div style="font-size:11px;color:#C7627E;font-weight:700;letter-spacing:0.5px;">BEFORE</div>
@@ -2981,7 +3251,6 @@ function checkSpellDice(){var w=document.getElementById("spellWord").textContent
       </div>
 
       <!-- NOW YOU TRY -->
-      <div class="callout callout-info" style="background:#E8F1E8;border-color:#A8C8A8;margin:0 0 10px 0;padding:10px 14px;"><span class="callout-icon">📝</span><p style="font-size:14px;"><strong>Now you try.</strong> Write your full opinion paragraph using all five parts: Claim → Reason → Example → Counterclaim → Conclusion.</p></div>
       <div class="textbox-prompt">Write your full opinion paragraph using all five parts: Claim → Reason → Example → Counterclaim → Conclusion.</div>
       <textarea class="journal-box" id="journal-writing" data-label="Writing Connection" placeholder="My opinion paragraph:
 
@@ -3012,8 +3281,8 @@ function checkSpellDice(){var w=document.getElementById("spellWord").textContent
     <div class="turn-in-header"><div class="turn-in-header-icon">📬</div><div><div class="turn-in-header-label">Ready?</div><div class="turn-in-header-title">Before You Submit</div></div></div>
     <div class="turn-in-body">
       <div class="turn-in-checklist">
-        <div class="turn-in-item" onclick="toggleCheck(this)"><div class="turn-in-check"></div><div class="turn-in-item-text">I answered all 3 review questions with evidence.</div></div>
-        <div class="turn-in-item" onclick="toggleCheck(this)"><div class="turn-in-check"></div><div class="turn-in-item-text">I completed my Morphology response.</div></div>
+        <div class="turn-in-item" onclick="toggleCheck(this)"><div class="turn-in-check"></div><div class="turn-in-item-text">I answered all 3 review questions with details from the book.</div></div>
+        <div class="turn-in-item" onclick="toggleCheck(this)"><div class="turn-in-check"></div><div class="turn-in-item-text">I finished the word part work on the Word Study tab.</div></div>
         <div class="turn-in-item" onclick="toggleCheck(this)"><div class="turn-in-check"></div><div class="turn-in-item-text">I wrote my full opinion paragraph with all five parts.</div></div>
         <div class="turn-in-item" onclick="toggleCheck(this)"><div class="turn-in-check"></div><div class="turn-in-item-text">I copied or downloaded my work and submitted it to Canvas.</div></div>
       </div>
@@ -3026,6 +3295,7 @@ function checkSpellDice(){var w=document.getElementById("spellWord").textContent
 <div class="footer">
   <div class="footer-main"><span>Optima Academy Online</span> · 3rd Grade ELA · Week 19 · Lesson 19.4</div>
   <div class="footer-sub"><em>The Whipping Boy</em> — Ch. 6–11 Review</div>
+  <div class="footer-standards">FL: ELA.3.R.1.1, ELA.3.C.1.3, ELA.3.F.1.3, ELA.3.F.1.4, ELA.3.V.1.2, ELA.3.C.3.1, ELA.3.R.1.4</div>
   <div class="footer-copy">© Optima Academy Online · An Education Experience Company</div>
 </div>
 
@@ -3061,8 +3331,8 @@ function gatherAnswers() {
   var output = '';
   var sections = [
     { title: '📖 CHAPTER THINKING', ids: ['journal-q1','journal-q2','journal-q3'] },
-    { title: '📖 RWM — READ LIKE A READER / WRITER / MIMIC', ids: ['journal-rwm-reader', 'journal-rwm-writer', 'journal-rwm-mimic'] },
-    { title: '🔤 WORD STUDY CONNECTION (MORPHOLOGY)', ids: ['journal-morph'] },
+    { title: '📖 READ LIKE A WRITER', ids: ['journal-rwm-reader', 'journal-rwm-writer', 'journal-rwm-mimic'] },
+    { title: '🔤 WORD STUDY CHECK', ids: ['journal-morph'] },
     { title: '🪶 WRITING CONNECTION', ids: ['journal-writing'] }
   ];
 
@@ -3511,8 +3781,8 @@ function downloadJournal() {
 
   var sections = [
     { title: '📖 CHAPTER THINKING', ids: ['journal-q1','journal-q2','journal-q3'] },
-    { title: '📖 RWM — READ LIKE A READER / WRITER / MIMIC', ids: ['journal-rwm-reader', 'journal-rwm-writer', 'journal-rwm-mimic'] },
-    { title: '🔤 WORD STUDY CONNECTION (MORPHOLOGY)', ids: ['journal-morph'] },
+    { title: '📖 READ LIKE A WRITER', ids: ['journal-rwm-reader', 'journal-rwm-writer', 'journal-rwm-mimic'] },
+    { title: '🔤 WORD STUDY CHECK', ids: ['journal-morph'] },
     { title: '🪶 WRITING CONNECTION', ids: ['journal-writing'] }
   ];
 
@@ -4413,4 +4683,9 @@ function gramSpotFix(word, sid){
 })();
 </script>
 
+
+<!-- ═════════ OAO SPARKLE LAYER (additive) ═════════ -->
+<link rel="stylesheet" href="g3-sparkle.css">
+<script src="g3-sparkle.js" defer></script>
+<!-- ═════════ END OAO SPARKLE ═════════ -->
 </body></html>

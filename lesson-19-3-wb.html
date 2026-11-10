@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Optima Academy Online — Lesson 19.3: The Whipping Boy (Ch. 10–11)</title>
+<title>Optima Academy Online — Lesson 19.3: The Whipping Boy (Ch. 10–11) (Sparkle)</title>
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Nunito:wght@400;600;700;800;900&display=swap');
 
@@ -2114,7 +2114,283 @@ body {
   .header-title { font-size: 22px; }
   .tab-btn { min-width: 100px; font-size: 11px; padding: 10px 6px 9px; }
 }
+
+/* ═══════════ STANDARDS BAR (from the 3rd grade scope & sequence) ═══════════ */
+.standards-toggle-bar{display:flex;align-items:center;justify-content:space-between;background:linear-gradient(135deg,#132552,#17306A);padding:10px 28px;cursor:pointer;user-select:none;border-bottom:1px solid rgba(85,200,232,.15);}
+.standards-toggle-bar:hover{background:linear-gradient(135deg,#17306A,#1B3878);}
+.standards-toggle-label{font-size:12px;color:rgba(255,255,255,.6);text-transform:uppercase;letter-spacing:1px;font-weight:700;}
+.standards-toggle-arrow{font-size:10px;color:rgba(255,255,255,.4);transition:transform .25s ease;}
+.standards-toggle-bar.open .standards-toggle-arrow{transform:rotate(180deg);}
+.standards-panel{max-height:0;overflow:hidden;transition:max-height .3s ease;background:#0E1C42;border-bottom:1px solid rgba(85,200,232,.1);}
+.standards-panel.open{max-height:360px;}
+.standards-panel-inner{display:flex;gap:32px;padding:14px 28px 16px;flex-wrap:wrap;}
+.standards-group{display:flex;flex-direction:column;gap:6px;}
+.standards-group-label{font-size:10px;color:rgba(255,255,255,.45);text-transform:uppercase;letter-spacing:.8px;font-weight:700;}
+.standards-codes{font-size:13px;color:rgba(255,255,255,.75);line-height:1.6;}
+.standards-codes .fl-code{color:#80CBC4;font-weight:700;}
+.footer-standards{font-size:10px;color:rgba(255,255,255,.35);margin-top:6px;letter-spacing:.3px;}
 </style>
+<script type="application/json" id="oao-lesson">
+{"grade": 3, "subject": "ela", "book": "wb", "week": 19, "day": 3, "bookTitle": "The Whipping Boy", "chapters": "Ch. 10–11"}
+</script>
+<script type="application/json" id="oao-data">
+{
+ "connector": "The ransom note is written. Now someone has to carry it to the castle, and nobody wants that job. Today the outlaws argue, Jemmy bosses them like a prince, and the real prince makes a choice that leaves Jemmy struck dumb.",
+ "writingFocus": "conclusion",
+ "plate": {
+  "src": "art/wb/wb-horse.jpg",
+  "alt": "A painting of a red-brown horse rearing up on its back legs against a plain background",
+  "credit": "Whistlejacket (detail) · George Stubbs, about 1762 · Public domain",
+  "look": "A real racehorse named Whistlejacket, painted by George Stubbs about 260 years ago. He was painted life-size. The boys rode out of the castle on one of the king’s own horses."
+ },
+ "dol": {
+  "a": {
+   "raw": "the prince was furious for a long time",
+   "fixed": "<strong>T</strong>he prince was furious for a long time<strong>.</strong>",
+   "why": "The starts the sentence, so it gets a capital T. A period ends it. Nobody is talking, so there are no quotation marks."
+  },
+  "b": {
+   "raw": "jemmy stared at the prince in surprise",
+   "fixed": "<strong>J</strong>emmy stared at the prince in surprise<strong>.</strong>",
+   "why": "Jemmy starts the sentence and is a name, so it gets a capital J. A period ends it. Nobody is talking, so there are no quotation marks."
+  }
+ },
+ "hints": {
+  "mfill1": {
+   "h1": "Say the two parts out loud, one right after the other.",
+   "why": "trans + port: to carry across."
+  },
+  "mfill2": {
+   "h1": "Put the first part right in front of port. No space.",
+   "why": "im + port: to carry in."
+  },
+  "mfill3": {
+   "h1": "Put the first part right in front of port. No space.",
+   "why": "ex + port: to carry out."
+  },
+  "mfill4": {
+   "h1": "This time the root comes first. Add the ending after it.",
+   "why": "port + able: able to be carried."
+  },
+  "vcloze1": {
+   "h1": "The prince will not budge, like a stubborn mule. Which bank word has mule in it?",
+   "why": "mulishness means being stubborn like a mule."
+  },
+  "vcloze2": {
+   "h1": "The boy refuses boldly. Which bank word means boldly refusing to obey?",
+   "why": "defiant means boldly refusing to obey."
+  },
+  "vcloze3": {
+   "h1": "It is a private talk to work something out. Which bank word means that?",
+   "why": "a parley is a talk between two sides."
+  },
+  "vcloze4": {
+   "h1": "He always does the opposite. Which bank word means that?",
+   "why": "contrary means always doing the opposite."
+  },
+  "gfill1": {
+   "h1": "Read until you have a whole thought. Stop before the joining word.",
+   "why": "Jemmy ran, and the outlaw followed."
+  },
+  "gfill2": {
+   "h1": "Find the joining word. The comma goes right before it.",
+   "why": "It was cold, so they lit a fire."
+  },
+  "gfill3": {
+   "h1": "Find the joining word. Which word comes just before it?",
+   "why": "He was tired, but he kept going."
+  },
+  "gfill4": {
+   "h1": "Find the joining word. Which word comes just before it?",
+   "why": "The prince shouted, and Jemmy turned."
+  }
+ },
+ "miss": {
+  "match": {
+   "mulishness": "Mulishness has the word mule in it. Look for the stubborn meaning.",
+   "defiant": "Defiant means standing up and saying no. Look for the meaning about boldly refusing.",
+   "parley": "A parley is a kind of talk. Look for the meaning about a conversation.",
+   "contrary": "Contrary means doing the opposite. Look for that meaning."
+  }
+ },
+ "flags": {
+  "journal-q1": {
+   "quote": false,
+   "count": 1
+  },
+  "journal-q2": {
+   "quote": true,
+   "count": 1
+  },
+  "journal-q3": {
+   "quote": false,
+   "count": 2
+  }
+ },
+ "scholar": {
+  "journal-q1": "… and tell what Jemmy wanted the prince to do instead.",
+  "journal-q2": "… and tell what Jemmy says back to him.",
+  "journal-q3": "… and tell what the outlaws offer the prince when they come back."
+ },
+ "wordgame": {
+  "type": "wagon",
+  "title": "Fill the Wagon",
+  "sub": "Billy wants a wagonload of gold and jewels. Every right answer adds one.",
+  "look": "This is the outlaws’ wagon. In Chapter 8, Jemmy tells Billy to ask the king for a whole wagonload of gold and jewels. Each sack has a label. You get one thing to sort at a time. Every right answer drops a gold coin or a jewel into the wagon. You add 8 each day this week. On Day 4 the wagon is full.",
+  "todo": "Read the words on the card. Tap the sack where they belong. A right answer adds gold to the wagon.",
+  "win": "Today’s 8 are in the wagon. Come back next lesson to add more.",
+  "winWeek": "A wagonload of gold, with jewels mixed in! The wagon is full.",
+  "bins": [
+   {
+    "id": "cle",
+    "label": "Ends in consonant-le"
+   },
+   {
+    "id": "other",
+    "label": "Other ending"
+   }
+  ],
+  "stepTitle": "Which ending?",
+  "items": [
+   {
+    "t": "saddle",
+    "bin": "cle",
+    "why": "sad · dle: the d goes with the le.",
+    "miss": {
+     "other": "Look at the last three letters: d, l, e. A consonant, then le."
+    }
+   },
+   {
+    "t": "wagon",
+    "bin": "other",
+    "why": "wagon ends in on, not le.",
+    "miss": {
+     "cle": "Look at the last two letters. Are they l then e?"
+    }
+   },
+   {
+    "t": "cradle",
+    "bin": "cle",
+    "why": "cra · dle: the d goes with the le.",
+    "miss": {
+     "other": "Look at the last three letters: d, l, e."
+    }
+   },
+   {
+    "t": "garlic",
+    "bin": "other",
+    "why": "garlic ends in ic, not le.",
+    "miss": {
+     "cle": "Look at the last two letters. They are i and c."
+    }
+   },
+   {
+    "t": "tumble",
+    "bin": "cle",
+    "why": "tum · ble: the b goes with the le.",
+    "miss": {
+     "other": "Look at the last three letters: b, l, e."
+    }
+   },
+   {
+    "t": "jewel",
+    "bin": "other",
+    "why": "jewel ends in e then l. Consonant-le ends in l then e.",
+    "miss": {
+     "cle": "Look closely: jewel ends in e-l. Consonant-le words end in l-e."
+    }
+   },
+   {
+    "t": "pebble",
+    "bin": "cle",
+    "why": "peb · ble: the b goes with the le.",
+    "miss": {
+     "other": "Look at the last three letters: b, l, e."
+    }
+   },
+   {
+    "t": "herring",
+    "bin": "other",
+    "why": "herring ends in ing, not le.",
+    "miss": {
+     "cle": "Look at the last two letters. They are n and g."
+    }
+   }
+  ]
+ },
+ "glossary": [
+  {
+   "w": "whipping boy",
+   "cs": true,
+   "m": "a boy kept in the castle to be punished whenever the prince does something wrong"
+  },
+  {
+   "w": "ransom",
+   "m": "money that kidnappers ask for before they let someone go"
+  },
+  {
+   "w": "compound sentence",
+   "m": "a sentence made of two complete thoughts joined by a word like and, but, or so"
+  },
+  {
+   "w": "complete thought",
+   "m": "a group of words that makes sense on its own, like The outlaw growled."
+  },
+  {
+   "w": "root",
+   "m": "the main part of a word. Other parts are added to the front or the end."
+  },
+  {
+   "w": "syllable",
+   "m": "one beat in a word. Can-dle has two."
+  },
+  {
+   "w": "counterclaim",
+   "m": "what someone who disagrees with you might say"
+  },
+  {
+   "w": "conclusion",
+   "m": "the last sentence of a paragraph. It says your big idea in a new way."
+  }
+ ],
+ "sayWords": [
+  "mulishness",
+  "defiant",
+  "parley",
+  "contrary"
+ ],
+ "transcripts": {
+  "welcome": "Hi, it’s Opti. The ransom note is written. Now somebody has to carry it to the castle, and nobody wants that job. These two chapters are loud. People shout and stomp, and one boy makes a choice that leaves Jemmy speechless. As you read, ask yourself: why would he choose that?",
+  "guide1": "Word work. You’ll build words that share the root that means carry, and you’ll find where the comma goes in a compound sentence. Here’s the trick: the comma sits right in front of the joining word, like a little doorstop. Then you’ll snap word parts together, one tile at a time.",
+  "guide2": "Before you read: Chapter 10 is a battle of words. Jemmy uses big, bossy prince talk on the outlaws. Listen to how they react. In Chapter 11, the prince gets a chance most kids would grab. Watch what he does with it, and watch Jemmy’s face.",
+  "guide3": "Every paragraph needs a good ending. A conclusion is your last word, the sentence a reader carries away. Don’t just copy your first sentence. Say your big idea in a fresh way, and make it sound finished, like closing a door."
+ },
+ "notes": {
+  "wordParts": "The root port means “carry.” transport = carry across, import = carry in, export = carry out, report = carry back, portable = able to be carried.",
+  "grammar": "A compound sentence joins two complete thoughts with a comma and a joining word: Jemmy wrote the note, and Billy watched.",
+  "spelling": "When a word ends in a consonant + le, that consonant goes with the le to make the last syllable: ta·ble, can·dle, sim·ple.",
+  "wgrd": "Good readers notice when a character changes, even a little, and they ask why.",
+  "vocab": [
+   [
+    "mulishness",
+    "stubborn refusal to obey; acting like a mule"
+   ],
+   [
+    "defiant",
+    "boldly refusing to obey"
+   ],
+   [
+    "parley",
+    "a private talk between two sides, often enemies"
+   ],
+   [
+    "contrary",
+    "always doing the opposite; hard to deal with"
+   ]
+  ]
+ }
+}
+</script>
 </head>
 <body>
 
@@ -2344,6 +2620,20 @@ body {
   <div class="header-badge"><span class="header-badge-icon">👑</span><span class="header-badge-text">Lesson 19.3</span></div>
 </div>
 
+<!-- ═══════════ STANDARDS ═══════════ -->
+<div class="standards-toggle-bar" onclick="this.classList.toggle('open');this.nextElementSibling.classList.toggle('open');">
+  <span class="standards-toggle-label">Standards Alignment</span>
+  <span class="standards-toggle-arrow">▼</span>
+</div>
+<div class="standards-panel">
+  <div class="standards-panel-inner">
+    <div class="standards-group">
+      <div class="standards-group-label">Florida B.E.S.T.</div>
+      <div class="standards-codes"><span class="fl-code">ELA.3.R.1.1</span> · <span class="fl-code">ELA.3.C.1.3</span> · <span class="fl-code">ELA.3.F.1.3</span> · <span class="fl-code">ELA.3.F.1.4</span> · <span class="fl-code">ELA.3.V.1.2</span> · <span class="fl-code">ELA.3.C.3.1</span> · <span class="fl-code">ELA.3.R.1.4</span></div>
+    </div>
+  </div>
+</div>
+
 <!-- ═══════════ INFO STRIP ═══════════ -->
 <div class="info-strip">
   <div class="info-cell"><div class="info-icon" style="background:#E3F8ED;">📚</div><div><div class="info-label">Unit</div><div class="info-value">Unit 3</div><div class="info-detail">The Whipping Boy</div></div></div>
@@ -2435,30 +2725,31 @@ body {
 
   <!-- What Good Readers Do -->
   <div class="activity bl-purple">
-    <div class="activity-head"><div class="activity-num" style="background:#8B6FC0;">1</div><div><div class="activity-title">📚 What Good Readers Do</div><div class="activity-sub">Set your reading lens for the week</div></div></div>
+    <div class="activity-head"><div class="activity-num" style="background:#8B6FC0;">1</div><div><div class="activity-title">📚 What Good Readers Do</div><div class="activity-sub">What to watch for while you read</div></div></div>
     <div class="activity-body">
-      <p>Good readers notice when a character changes — even slightly. Watch Prince Brat in Chapter 11. He makes a surprising choice. Why?</p>
+<p class="g3-do" data-say="readers"><b>What to do:</b> Read the tip. Think about it while you read today. You do not write anything here.</p>
+      <p>Good readers notice when a character changes, even a little. In Chapter 11, the prince makes a choice that surprises Jemmy.</p>
       <div class="key-concept" style="background:#F0F7FF;border-color:#C8DCEE;margin:10px 0;">
       <div class="key-concept-label" style="color:#3D5285;">&#x1F50D; How to Do It</div>
       <ol style="margin:6px 0 6px 20px;font-size:14px;color:#3A4A6B;line-height:1.8;">
-      <li><strong>Name what each character wants:</strong> Ask it separately for each one &mdash; right now, in this chapter.</li>
-      <li><strong>Find the action that proves it:</strong> Characters show what they want by what they do, not by announcing it.</li>
-      <li><strong>Ask whether the wants collide:</strong> When two characters want opposite things, that is where the trouble comes from.</li>
+      <li><strong>What does each boy want?</strong> Ask it for Jemmy. Then ask it for the prince.</li>
+      <li><strong>What does he do to get it?</strong> What a character does shows what he wants.</li>
+      <li><strong>Do their wants clash?</strong> When two characters want opposite things, trouble starts.</li>
       </ol>
       </div>
       <div class="socratic-box">
         <div class="socratic-label">🧠 As you read this week, watch for:</div>
-        <p class="socratic-q">Good readers notice when a character changes — even slightly. Watch Prince Brat in Chapter 11. He makes a surprising choice. Why?</p>
+        <p class="socratic-q"><strong>What does the prince choose? Why might he choose it?</strong></p>
       </div>
-      <div class="thinking-stop">💭 Think about this as you read today — you don't need to write anything here.</div>
+      
     </div>
   </div>
 
   <!-- DOL -->
   <div class="activity bl-cyan">
-    <div class="activity-head"><div class="activity-num" style="background:#5C2D91;">2</div><div><div class="activity-title">✏️ Daily Oral Language</div><div class="activity-sub">Study the model, then fix the sentence.</div></div></div>
+    <div class="activity-head"><div class="activity-num" style="background:#5C2D91;">2</div><div><div class="activity-title">✏️ Daily Oral Language</div><div class="activity-sub">Fix a sentence from the story.</div></div></div>
     <div class="activity-body">
-      <p>The first sentence is <strong>correct</strong>. Tap the parts you notice are done right &mdash; capital letters, punctuation, quotation marks, anything that follows the rules. Then use it as a model to fix the second sentence.</p>
+<p class="g3-do" data-say="dol"><b>What to do:</b> Tap the highlighted parts of the correct sentence to see why they are right. Then choose Sentence A or Sentence B, and type it the right way in the box.</p>
 
       <div class="task-box">
         <div class="dol-model-label">&#9989; Correct Model &mdash; from the novel</div>
@@ -2482,7 +2773,7 @@ body {
   </div>
 
   <div class="tab-next-wrap">
-    <p class="tab-transition-voice">Now that your mind is warmed up, let&rsquo;s sharpen your words and skills.</p>
+    <p class="tab-transition-voice">Next: word study.</p>
     <button class="tab-next-btn" onclick="switchTab('words')">Continue to 🔤 Word Study →</button>
   </div>
 </div><!-- /tab-warmup -->
@@ -2495,9 +2786,10 @@ body {
 
   <!-- MORPHOLOGY -->
   <div class="activity bl-purple">
-<div class="activity-head"><div class="activity-num" style="background:#8B6FC0;">1</div><div style="flex:1;"><div class="activity-title">🌱 Morphology: port</div><div class="activity-sub">Use / Apply the skill</div></div></div>
+<div class="activity-head"><div class="activity-num" style="background:#8B6FC0;">1</div><div style="flex:1;"><div class="activity-title">🌱 Morphology: port</div><div class="activity-sub">Build words with port.</div></div></div>
 <div class="activity-body">
-<div class="callout callout-info" style="margin-bottom:12px;"><span class="callout-icon">&#x1F50D;</span><p>Before you start: read the parts aloud, push them together, then write the word.</p></div>
+<p class="g3-do" data-say="morph3"><b>What to do:</b> Say each pair of parts out loud. Type the whole word in the box. Then tap Check My Answers.</p>
+<div class="callout callout-info" style="margin-bottom:12px;"><span class="callout-icon">&#x1F50D;</span><p>Say each part out loud. Then say them together as one word.</p></div>
 <div class="key-concept"><div class="key-concept-label">&#x1F4CC; Remember</div>
 <p><strong>port</strong> means <strong>carry</strong>.</p>
 <p><strong>transport</strong> = to carry across &middot; <strong>import</strong> = to carry in &middot; <strong>export</strong> = to carry out</p>
@@ -2522,8 +2814,9 @@ if(all){var f=g.querySelector('.fillin-feedback');if(f)f.classList.add('show');}
 
   <!-- VOCABULARY -->
   <div class="activity bl-cyan">
-    <div class="activity-head"><div class="activity-num" style="background:#5C2D91;">2</div><div><div class="activity-title">🔤 Vocabulary</div><div class="activity-sub">Words from this week's chapters.</div></div></div>
+    <div class="activity-head"><div class="activity-num" style="background:#5C2D91;">2</div><div><div class="activity-title">🔤 Vocabulary</div><div class="activity-sub">Four words from this week’s chapters</div></div></div>
     <div class="activity-body">
+<p class="g3-do" data-say="vocabcloze"><b>What to do:</b> Read how we figured out the first word. Then fill in each sentence with a word from the word bank, and tap Check My Work. Last, play the matching game.</p>
             <p>When you meet a word you don't know, use these three steps <em>in order</em>:</p>
 
       <!-- MODELED WORD -->
@@ -2593,10 +2886,11 @@ if(all){var f=g.querySelector('.fillin-feedback');if(f)f.classList.add('show');}
 
   <!-- GRAMMAR -->
   <div class="activity bl-gold">
-    <div class="activity-head"><div class="activity-num" style="background:#B8860B;">3</div><div><div class="activity-title">✏️ Grammar: Compound Sentences</div><div class="activity-sub">Day 3: Apply &mdash; build it, then write one of your own.</div>
+    <div class="activity-head"><div class="activity-num" style="background:#B8860B;">3</div><div><div class="activity-title">✏️ Grammar: Compound Sentences</div><div class="activity-sub">Find where the comma goes.</div>
 <!-- grammar-level -->
 <div style="margin-top:6px;"><span style="display:inline-block;background:#FFF8E8;color:#8A6212;border:1px solid #C7922C;border-radius:999px;padding:3px 10px;font-size:11px;font-weight:800;letter-spacing:.05em;text-transform:uppercase;">🧱 Grammar Level: Sentence Builder</span></div></div></div>
-    <div class="activity-body"><!-- grammar-notice-first -->
+    <div class="activity-body">
+<p class="g3-do" data-say="gram-comma"><b>What to do:</b> Find the last word of the first complete thought. Type it in the box, and tap Check My Answers. Then write your own compound sentence.</p><!-- grammar-notice-first -->
 <div class="key-concept" style="background:#F0F7FF;border-color:#C8DCEE;margin:0 0 14px;">
 <div class="key-concept-label" style="color:#3D5285;">&#x1F50E; What do you notice?</div>
 <p>Look at the two halves of this sentence and what holds them together.</p>
@@ -2614,10 +2908,10 @@ if(all){var f=g.querySelector('.fillin-feedback');if(f)f.classList.add('show');}
 </ol></div>
 <button class="dol-check-btn" onclick="document.getElementById('gramNotice').classList.toggle('show')">&#x1F50D; Now check your thinking</button>
 <div class="dol-answer" id="gramNotice">
-<p>Today you write your own compound sentences about Chapters 10–11.</p>
+<p>In a compound sentence, the comma goes right before the joining word.</p>
 <p>A compound sentence: two complete thoughts joined by a comma and <strong>but</strong>. The <strong>but</strong> tells you the second half goes against the first.</p>
 </div>
-<div class="callout callout-info" style="margin-top:14px;"><span class="callout-icon">🎯</span><p><strong>Your turn.</strong> Nobody has punctuated these. Type the word the comma belongs after &mdash; it is always the last word of the first complete thought.</p></div>
+<div class="callout callout-info" style="margin-top:14px;"><span class="callout-icon">🎯</span><p><strong>Your turn.</strong> These sentences have no commas. Type the word the comma goes after. It is the last word of the first complete thought.</p></div>
 <div class="fillin-game" id="gramFill">
 <div class="fillin-item">Jemmy ran and the outlaw followed. &mdash; the comma goes after <input class="fillin-input" id="gfill1" data-answer="ran" maxlength="18" placeholder="______"> <span style="color:#7A88A8;font-size:12px;">(type the word)</span></div>
 <div class="fillin-item">It was cold so they lit a fire. &mdash; the comma goes after <input class="fillin-input" id="gfill2" data-answer="cold" maxlength="18" placeholder="______"></div>
@@ -2626,7 +2920,7 @@ if(all){var f=g.querySelector('.fillin-feedback');if(f)f.classList.add('show');}
 <button class="fillin-check-btn" onclick="gramFillCheck('gramFill')">Check My Answers</button>
 <div class="fillin-feedback" id="gramFill-fb">🌱 All correct!</div></div>
 <div class="swyk"><div class="swyk-label">🪶 Show What You Know</div>
-<div class="swyk-prompt">Write a compound sentence of your own about Chapter 10 or 11, comma and all.</div>
+<div class="swyk-prompt">Write your own compound sentence about Chapter 10 or 11. Put the comma before the joining word.</div>
 <div class="journal-label">📓 Your answer <span class="saved-dot" id="dot-grammar"></span></div>
 <textarea class="journal-box" id="journal-grammar" data-label="Grammar response" placeholder="I noticed that..." oninput="autoSave(this,'dot-grammar')"></textarea></div>
 </div>
@@ -2636,12 +2930,13 @@ if(all){var f=g.querySelector('.fillin-feedback');if(f)f.classList.add('show');}
 
   <!-- SPELLING -->
   <div class="activity bl-navy">
-    <div class="activity-head"><div class="activity-num" style="background:#2A0A4A;">4</div><div><div class="activity-title">🔠 Spelling: Consonant-le Syllables</div><div class="activity-sub">Day 3: Apply the pattern &mdash; build the words.</div></div></div>
+    <div class="activity-head"><div class="activity-num" style="background:#2A0A4A;">4</div><div><div class="activity-title">🔠 Spelling: Consonant-le Syllables</div><div class="activity-sub">Build words that end in consonant-le.</div></div></div>
     <div class="activity-body">
+<p class="g3-do" data-say="spell-tiles"><b>What to do:</b> Tap the word parts in order to build each word. A part in the wrong place will not stick.</p>
 <!-- spell-notice-first -->
-<div class="callout callout-info" style="margin-bottom:14px;"><span class="callout-icon">&#x1F442;</span><p>Before you start: listen to the last beat and notice how quiet it is.</p></div>
+<div class="callout callout-info" style="margin-bottom:14px;"><span class="callout-icon">&#x1F442;</span><p>Say each word out loud. Listen to the last beat.</p></div>
 <div class="callout callout-gold" style="margin-bottom:14px;background:#FFF8E8;border:2px solid #F5E6C8;border-left:5px solid #C7922C;border-radius:10px;padding:14px 18px;"><span class="callout-icon">📖</span><p style="font-size:15px;color:#0E1C42;line-height:1.6;"><strong>The Rule:</strong> When a word ends in a consonant plus <strong>-le</strong>, that consonant goes <em>with</em> the -le to make the last syllable: <em>ta&middot;ble</em>, <em>lit&middot;tle</em>, <em>can&middot;dle</em>. Count back three letters from the end and you have found the split.</p></div>
-            <p>Today we divide words with consonant-le syllables and practice reading them smoothly.</p>
+            
 
       <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:14px 0;">
         <div class="key-concept" style="margin-bottom:0;">
@@ -2656,15 +2951,12 @@ if(all){var f=g.querySelector('.fillin-feedback');if(f)f.classList.add('show');}
 
       <div class="socratic-box">
         <div class="socratic-label">&#x1F50D; What do you notice?</div>
-        <p class="socratic-q">Look at the last three letters of each word. What two of them are always the same?</p>
+        <p class="socratic-q">Look at the last three letters of each word. Which two letters are always the same?</p>
         <p class="socratic-q">What kind of letter comes just before the <em>-le</em>?</p>
-        <p class="socratic-q">Count back three letters from the end of each word. Where does the dot land?</p>
+        <p class="socratic-q">Count back three letters from the end of each word. Is that where the dot is?</p>
       </div>
 
-      <button class="dol-check-btn" style="margin:12px auto;display:block;" onclick="document.getElementById('spellReveal').classList.toggle('show')">🔍 See the Rule</button>
-      <div class="dol-answer" id="spellReveal"></div>
-
-            <div class="callout callout-info"><span class="callout-icon">🧩</span><p><strong>Syllable Tiles!</strong> Notice that the consonant always travels with the <em>-le</em>. Tap the chunks <strong>in order</strong> to build the word. A chunk in the wrong place will not stick.</p></div>
+            <div class="callout callout-info"><span class="callout-icon">🧩</span><p><strong>Syllable Tiles!</strong> The consonant always stays with the <em>-le</em>.</p></div>
 <div id="tileGame" style="margin:14px 0;">
 <div class="tile-word" data-next="0" data-total="2" data-whole="candle" style="background:#FAFBFF;border:2px solid #C8DCEE;border-radius:10px;padding:14px;margin-bottom:10px;">
 <div class="tw-slots" style="min-height:34px;font-size:24px;font-weight:700;color:#0E1C42;text-align:center;letter-spacing:1px;">&nbsp;</div>
@@ -2706,7 +2998,7 @@ function tileTap(el){var box=el.closest(".tile-word");if(!box||el.dataset.used)r
   </div>
 
   <div class="tab-next-wrap">
-    <p class="tab-transition-voice">Your words and skills are sharp. Time to open the book.</p>
+    <p class="tab-transition-voice">Next: reading.</p>
     <button class="tab-next-btn" onclick="switchTab('reading')">Continue to 📖 Reading →</button>
   </div>
 </div><!-- /tab-words -->
@@ -2773,15 +3065,11 @@ function tileTap(el){var box=el.closest(".tile-word");if(!box||el.dataset.used)r
       </div>
     </div>
     <div class="activity-body">
-      <div class="key-concept" style="background:#F0E8FF;border-color:#D8CCF0;margin-bottom:14px;">
-        <div class="key-concept-label" style="color:#6B4FB0;">💎 As you read, notice:</div>
-        <p>Good readers notice when a character changes — even slightly. Watch Prince Brat in Chapter 11. He makes a surprising choice. Why?</p>
-      </div>
       <div class="socratic-box">
         <div class="socratic-label">&#x1F451; Help with a second motive:</div>
         <p class="socratic-q" style="font-style:normal;">When the outlaws demand a ransom note, Prince Brat cannot write his own name. Jemmy takes the hawk&rsquo;s quill and writes it for him &mdash; not out of kindness, but because a scheme has leaped into his head. From the outside, helping someone and using someone can look exactly the same.</p>
       </div>
-      <div class="thinking-stop">💭 Think: How will your character help someone in your story?</div>
+      
     </div>
   </div>
 
@@ -2792,23 +3080,24 @@ function tileTap(el){var box=el.closest(".tile-word");if(!box||el.dataset.used)r
   <div class="activity bl-green">
     <div class="activity-head"><div class="activity-num" style="background:#34B76F;">1</div><div><div class="activity-title">📕 Read: Ch. 10–11</div><div class="activity-sub">In which Prince Brat lives up to his name; Containing a great deal of shouting</div></div></div>
     <div class="activity-body">
+<p class="g3-do" data-say="read"><b>What to do:</b> Read the two Pause and Think questions first. Then read today’s chapters in your book. When you get to each question, stop and think of your answer. You do not write these answers.</p>
       
       <!-- pause-before-reading -->
-      <div class="callout callout-info" style="margin-bottom:14px;"><span class="callout-icon">&#x23F8;&#xFE0F;</span><p><strong>Read these first.</strong> Look them over before you open your book, then stop and answer each one when you reach that part.</p></div>
+      
       <div class="pause-columns">
         <div class="pause-col">
           <div class="socratic-box" style="margin-bottom:0;">
             <div class="socratic-label">⏸️ Pause &amp; Think — Part 1</div>
             <p class="socratic-q">Chapter 10: the prince refuses to carry the outlaws&rsquo; ransom note back to the castle. Why might he refuse this errand?</p>
           </div>
-          <div class="thinking-stop">💭 Pause and think about this — no need to write.</div>
+          
         </div>
 <div class="pause-col">
           <div class="socratic-box" style="margin-bottom:0;">
             <div class="socratic-label">⏸️ Pause &amp; Think — Part 2</div>
             <p class="socratic-q">Chapter 11: Billy pulls off his belt to whip the prince, and Jemmy steps in. <strong>What does Jemmy suggest instead?</strong></p>
           </div>
-          <div class="thinking-stop">💭 Pause and think about this — no need to write.</div>
+          
         </div>
       </div>
 
@@ -2828,32 +3117,28 @@ function tileTap(el){var box=el.closest(".tile-word");if(!box||el.dataset.used)r
           </div>
         </div>
       </div>
-
-      <div class="callout callout-info" style="margin-bottom:14px;">
-        <span class="callout-icon">📕</span>
-        <p><strong>Open your novel to Ch. 10–11.</strong> Read at your own pace. The Pause &amp; Think prompts are above &mdash; look them over first, then stop at each one as you read.</p>
-      </div>
       </div>
   </div>
 
   
   <!-- RWM -->
   <div class="rwm-box">
-<div class="rwm-header">📖 RWM &mdash; Read like a Reader, Read like a Writer, Mimic</div>
+<div class="rwm-header">📖 Read Like a Writer</div>
+<p class="g3-do" data-say="rwm"><b>What to do:</b> Read the sentence from the book. Then do the three parts in order. Write one sentence in each box.</p>
 <div class="rwm-sentence">&ldquo;Gaw, Jemmy thought, he&rsquo;s fuming like a stovepipe at being un-princed.&rdquo;</div>
 <div class="rwm-step">
 <div class="rwm-step-label">📖 Read like a Reader</div>
 <div class="rwm-step-text">The outlaws will not believe the prince is a prince, and the prince is furious. What is Jemmy noticing about him?</div>
 <div class="textbox-prompt">Write 1 sentence: what is the prince feeling, and how can Jemmy tell?</div>
 <div class="journal-label">📓 Your response <span class="saved-dot" id="dot-rwm-reader"></span></div>
-<textarea class="journal-box" id="journal-rwm-reader" data-label="RWM &mdash; Read like a Reader" placeholder="The prince is..." oninput="autoSave(this,'dot-rwm-reader');gatherAnswers();"></textarea>
+<textarea class="journal-box" id="journal-rwm-reader" data-label="Read like a reader" placeholder="The prince is..." oninput="autoSave(this,'dot-rwm-reader');gatherAnswers();"></textarea>
 </div>
 <div class="rwm-step">
 <div class="rwm-step-label">✏️ Read like a Writer</div>
 <div class="rwm-step-text">Two things happen in this sentence. Fleischman compares anger to a <strong>stovepipe</strong> &mdash; you can almost see the smoke. Then he invents a word: <strong>un-princed</strong>. Authors are allowed to make up a word when no real one fits.</div>
 <div class="textbox-prompt">Write 1 sentence: what does the invented word <em>un-princed</em> tell you that a real word might not?</div>
 <div class="journal-label">📓 Your response <span class="saved-dot" id="dot-rwm-writer"></span></div>
-<textarea class="journal-box" id="journal-rwm-writer" data-label="RWM &mdash; Read like a Writer" placeholder="The made-up word tells me..." oninput="autoSave(this,'dot-rwm-writer');gatherAnswers();"></textarea>
+<textarea class="journal-box" id="journal-rwm-writer" data-label="Read like a writer" placeholder="The made-up word tells me..." oninput="autoSave(this,'dot-rwm-writer');gatherAnswers();"></textarea>
 </div>
 <div class="rwm-step">
 <div class="rwm-step-label">🖊️ Mimic</div>
@@ -2861,11 +3146,11 @@ function tileTap(el){var box=el.closest(".tile-word");if(!box||el.dataset.used)r
 <div class="rwm-frame">Sentence frame: [Name] is fuming like [a comparison] at being un-[something].</div>
 <div class="textbox-prompt">Write your own sentence with a comparison and an invented word.</div>
 <div class="journal-label">📓 Your sentence <span class="saved-dot" id="dot-rwm-mimic"></span></div>
-<textarea class="journal-box" id="journal-rwm-mimic" data-label="RWM &mdash; Mimic" placeholder="Write your sentence here..." oninput="autoSave(this,'dot-rwm-mimic');gatherAnswers();"></textarea>
+<textarea class="journal-box" id="journal-rwm-mimic" data-label="Write your own" placeholder="Write your sentence here..." oninput="autoSave(this,'dot-rwm-mimic');gatherAnswers();"></textarea>
 </div>
 </div>
 <div class="tab-next-wrap">
-    <p class="tab-transition-voice">You&rsquo;ve read and noticed. Now answer the questions and submit your work.</p>
+    <p class="tab-transition-voice">Next: answer the questions and turn in your work.</p>
     <button class="tab-next-btn" onclick="switchTab('assignment')">Continue to 📬 Assignment →</button>
   </div>
 </div><!-- /tab-reading -->
@@ -2884,8 +3169,9 @@ function tileTap(el){var box=el.closest(".tile-word");if(!box||el.dataset.used)r
 
   <!-- Part A: Chapter Thinking -->
   <div class="activity bl-cyan">
-    <div class="activity-head"><div class="activity-num" style="background:#5C2D91;">A</div><div><div class="activity-title">📖 Chapter Thinking</div><div class="activity-sub">Answer in complete sentences with evidence from the text.</div></div></div>
+    <div class="activity-head"><div class="activity-num" style="background:#5C2D91;">A</div><div><div class="activity-title">📖 Chapter Thinking</div><div class="activity-sub">Answer in full sentences. Use details from the book.</div></div></div>
     <div class="activity-body">
+<p class="g3-do" data-say="chapter"><b>What to do:</b> Choose Explorer or Scholar. Then answer the three questions in full sentences. Use details from the book.</p>
       <div class="q-block"><div class="q-text"><span class="q-num">1</span>Chapter 11 opens by asking if the prince has sand for brains. What does the prince do that makes Jemmy think this?</div></div>
       <div class="textbox-prompt">Look at what the prince says when the outlaws tell him to carry the crown to the castle.</div>
       <textarea class="journal-box" id="journal-q1" data-label="Q1: chapter thinking" placeholder="Jemmy thinks this because the prince..." oninput="autoSave(this,'dot-q1');gatherAnswers();"></textarea>
@@ -2902,9 +3188,9 @@ function tileTap(el){var box=el.closest(".tile-word");if(!box||el.dataset.used)r
 
   <!-- Part B: Word Study Connection -->
   <div class="activity bl-purple">
-    <div class="activity-head"><div class="activity-num" style="background:#8B6FC0;">B</div><div><div class="activity-title">🔤 Word Study Connection (Morphology)</div><div class="activity-sub">Your morphology response from the Word Study tab.</div></div></div>
+    <div class="activity-head"><div class="activity-num" style="background:#8B6FC0;">B</div><div><div class="activity-title">🔤 Word Study Check</div><div class="activity-sub">The word part work on the Word Study tab</div></div></div>
     <div class="activity-body">
-      <p style="font-size:15px;color:#7A88A8;">Your morphology answer was saved on the Word Study tab. It will appear in your gathered work below.</p>
+      <p style="font-size:15px;color:#7A88A8;">Finish the word part work on the Word Study tab. It shows in your work below.</p>
     </div>
   </div>
 
@@ -2918,6 +3204,7 @@ function tileTap(el){var box=el.closest(".tile-word");if(!box||el.dataset.used)r
       </div>
     </div>
     <div class="activity-body">
+<p class="g3-do" data-say="ww-conclusion"><b>What to do:</b> Read Clara’s conclusion. Then write a conclusion sentence for your paragraph. Do not copy your first sentence word for word.</p>
       <div style="display:flex;flex-wrap:wrap;gap:4px;justify-content:flex-start;align-items:center;margin-bottom:10px;">
 <span style="background:#E8F1E8;color:#4A7C2E;padding:4px 8px;border-radius:6px;font-size:11px;">✓ Choose a Claim</span>
           <span style="background:#B8860B;color:#fff;padding:4px 8px;border-radius:6px;font-size:11px;">★ Add Reasons</span>
@@ -2925,12 +3212,11 @@ function tileTap(el){var box=el.closest(".tile-word");if(!box||el.dataset.used)r
           <span style="background:#FAFBFF;color:#7A88A8;padding:4px 8px;border-radius:6px;font-size:11px;">○ Revise</span>
           <span style="background:#FAFBFF;color:#7A88A8;padding:4px 8px;border-radius:6px;font-size:11px;">○ Publish</span>
         </div>
-      <div class="callout callout-info" style="margin:0 0 14px 0;padding:10px 14px;"><span class="callout-icon">🎯</span><p style="font-size:14px;"><strong>Today&rsquo;s focus:</strong> Today: Write your conclusion sentence</p></div>
+      <div class="callout callout-info" style="margin:0 0 14px 0;padding:10px 14px;"><span class="callout-icon">🎯</span><p style="font-size:14px;"><strong>Today&rsquo;s focus:</strong> Write your conclusion sentence</p></div>
 
       <!-- WATCH HOW -->
       <div class="key-concept" style="background:#FFFEF7;border-color:#E8D5A0;margin-bottom:14px;">
-        <div class="key-concept-label" style="color:#B8860B;">👀 Watch How &mdash; Meet Today, our example writer</div>
-        <p style="font-size:14px;"><em>Today: Write your conclusion sentence</em></p>
+        <div class="key-concept-label" style="color:#B8860B;">👀 Watch How &mdash; Meet Clara, our example writer</div>
         <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:10px;">
           <div style="background:#FFF;border:1px solid #E8D5A0;border-radius:6px;padding:10px;">
             <div style="font-size:11px;color:#C7627E;font-weight:700;letter-spacing:0.5px;">BEFORE</div>
@@ -2967,7 +3253,6 @@ function tileTap(el){var box=el.closest(".tile-word");if(!box||el.dataset.used)r
       </div>
 
       <!-- NOW YOU TRY -->
-      <div class="callout callout-info" style="background:#E8F1E8;border-color:#A8C8A8;margin:0 0 10px 0;padding:10px 14px;"><span class="callout-icon">📝</span><p style="font-size:14px;"><strong>Now you try.</strong> Write a conclusion sentence. Do not repeat your first sentence word for word.</p></div>
       <div class="textbox-prompt">Write a conclusion sentence. Do not repeat your first sentence word for word.</div>
       <textarea class="journal-box" id="journal-writing" data-label="Writing Connection" placeholder="In the end, Prince Brat's actions show that..." oninput="autoSave(this,'dot-writing');gatherAnswers();"></textarea>
     </div>
@@ -2992,8 +3277,8 @@ function tileTap(el){var box=el.closest(".tile-word");if(!box||el.dataset.used)r
     <div class="turn-in-header"><div class="turn-in-header-icon">📬</div><div><div class="turn-in-header-label">Ready?</div><div class="turn-in-header-title">Before You Submit</div></div></div>
     <div class="turn-in-body">
       <div class="turn-in-checklist">
-        <div class="turn-in-item" onclick="toggleCheck(this)"><div class="turn-in-check"></div><div class="turn-in-item-text">I answered all 3 chapter questions with evidence.</div></div>
-        <div class="turn-in-item" onclick="toggleCheck(this)"><div class="turn-in-check"></div><div class="turn-in-item-text">I completed my Morphology response.</div></div>
+        <div class="turn-in-item" onclick="toggleCheck(this)"><div class="turn-in-check"></div><div class="turn-in-item-text">I answered all 3 chapter questions with details from the book.</div></div>
+        <div class="turn-in-item" onclick="toggleCheck(this)"><div class="turn-in-check"></div><div class="turn-in-item-text">I finished the word part work on the Word Study tab.</div></div>
         <div class="turn-in-item" onclick="toggleCheck(this)"><div class="turn-in-check"></div><div class="turn-in-item-text">I wrote a conclusion sentence for my paragraph.</div></div>
         <div class="turn-in-item" onclick="toggleCheck(this)"><div class="turn-in-check"></div><div class="turn-in-item-text">I copied or downloaded my work and submitted it to Canvas.</div></div>
       </div>
@@ -3006,6 +3291,7 @@ function tileTap(el){var box=el.closest(".tile-word");if(!box||el.dataset.used)r
 <div class="footer">
   <div class="footer-main"><span>Optima Academy Online</span> · 3rd Grade ELA · Week 19 · Lesson 19.3</div>
   <div class="footer-sub"><em>The Whipping Boy</em> — Ch. 10–11</div>
+  <div class="footer-standards">FL: ELA.3.R.1.1, ELA.3.C.1.3, ELA.3.F.1.3, ELA.3.F.1.4, ELA.3.V.1.2, ELA.3.C.3.1, ELA.3.R.1.4</div>
   <div class="footer-copy">© Optima Academy Online · An Education Experience Company</div>
 </div>
 
@@ -3041,8 +3327,8 @@ function gatherAnswers() {
   var output = '';
   var sections = [
     { title: '📖 CHAPTER THINKING', ids: ['journal-q1','journal-q2','journal-q3'] },
-    { title: '📖 RWM — READ LIKE A READER / WRITER / MIMIC', ids: ['journal-rwm-reader', 'journal-rwm-writer', 'journal-rwm-mimic'] },
-    { title: '🔤 WORD STUDY CONNECTION (MORPHOLOGY)', ids: ['journal-morph'] },
+    { title: '📖 READ LIKE A WRITER', ids: ['journal-rwm-reader', 'journal-rwm-writer', 'journal-rwm-mimic'] },
+    { title: '🔤 WORD STUDY CHECK', ids: ['journal-morph'] },
     { title: '🪶 WRITING CONNECTION', ids: ['journal-writing'] }
   ];
 
@@ -3491,8 +3777,8 @@ function downloadJournal() {
 
   var sections = [
     { title: '📖 CHAPTER THINKING', ids: ['journal-q1','journal-q2','journal-q3'] },
-    { title: '📖 RWM — READ LIKE A READER / WRITER / MIMIC', ids: ['journal-rwm-reader', 'journal-rwm-writer', 'journal-rwm-mimic'] },
-    { title: '🔤 WORD STUDY CONNECTION (MORPHOLOGY)', ids: ['journal-morph'] },
+    { title: '📖 READ LIKE A WRITER', ids: ['journal-rwm-reader', 'journal-rwm-writer', 'journal-rwm-mimic'] },
+    { title: '🔤 WORD STUDY CHECK', ids: ['journal-morph'] },
     { title: '🪶 WRITING CONNECTION', ids: ['journal-writing'] }
   ];
 
@@ -4393,4 +4679,9 @@ function gramSpotFix(word, sid){
 })();
 </script>
 
+
+<!-- ═════════ OAO SPARKLE LAYER (additive) ═════════ -->
+<link rel="stylesheet" href="g3-sparkle.css">
+<script src="g3-sparkle.js" defer></script>
+<!-- ═════════ END OAO SPARKLE ═════════ -->
 </body></html>

@@ -1,0 +1,258 @@
+{
+ "connector": "Last time, the outlaws grabbed the boys in the fog and saw the king’s crest on the saddle. Today they take the boys to their hideout. Watch for something golden in the prince’s basket, and watch what happens when the outlaws need someone to write.",
+ "writingFocus": "counter",
+ "plate": {
+  "src": "art/wb/wb-forest-hut.jpg",
+  "alt": "A painting of a small log hut in a clearing among tall pine trees",
+  "credit": "Hut in the Forest · Ivan Shishkin, second half of the 1800s · Public domain",
+  "look": "A small hut deep in a pine forest, painted by Ivan Shishkin more than 100 years ago. In Chapter 6, the outlaws lead the boys through thick pines to their hideout, a rickety hut with a moldy roof."
+ },
+ "dol": {
+  "a": {
+   "raw": "thats your ransom your royal highness billy said grinning",
+   "fixed": "<strong>“T</strong>hat<strong>’</strong>s your ransom<strong>, Y</strong>our <strong>R</strong>oyal <strong>H</strong>ighness<strong>,”</strong> <strong>B</strong>illy said<strong>,</strong> grinning<strong>.</strong>",
+   "why": "Quotation marks go around Billy’s exact words. That’s needs an apostrophe for the missing i. Your Royal Highness is a title, so each word gets a capital, and a comma comes before it. A comma goes inside the closing quotation mark. Billy is a name. A comma comes before grinning, and a period ends the sentence."
+  },
+  "b": {
+   "raw": "heres your supper your young majesty cutwater said laughing",
+   "fixed": "<strong>“H</strong>ere<strong>’</strong>s your supper<strong>, Y</strong>our <strong>Y</strong>oung <strong>M</strong>ajesty<strong>,”</strong> <strong>C</strong>utwater said<strong>,</strong> laughing<strong>.</strong>",
+   "why": "Quotation marks go around Cutwater’s exact words. Here’s needs an apostrophe for the missing i. Your Young Majesty is a title, so each word gets a capital, and a comma comes before it. A comma goes inside the closing quotation mark. Cutwater is a name. A comma comes before laughing, and a period ends the sentence."
+  }
+ },
+ "hints": {
+  "fill1": {
+   "h1": "Look at the word bank. Which word part means carry?",
+   "why": "trans + port: to carry across."
+  },
+  "fill2": {
+   "h1": "Something is carried in. Which bank word means carry?",
+   "why": "im + port: to carry in."
+  },
+  "fill3": {
+   "h1": "Something is carried out. Which bank word means carry?",
+   "why": "ex + port: to carry out."
+  },
+  "fill4": {
+   "h1": "News is carried back. Which bank word means carry?",
+   "why": "re + port: to carry back."
+  }
+ },
+ "miss": {
+  "match": {
+   "scheme": "A scheme is something you think up. Look for the meaning about a plan.",
+   "ransom": "A ransom is about money. Look for the meaning about a prisoner.",
+   "flummox": "Flummox is something you do to someone’s brain. Look for the meaning about confusing.",
+   "amiss": "Amiss is how things are when something is off. Look for the meaning that says wrong."
+  }
+ },
+ "flags": {
+  "journal-q1": {
+   "quote": false,
+   "count": 1
+  },
+  "journal-q2": {
+   "quote": false,
+   "count": 1
+  },
+  "journal-q3": {
+   "quote": true,
+   "count": 1
+  }
+ },
+ "scholar": {
+  "journal-q1": "… and tell what Billy says he can be even richer than.",
+  "journal-q2": "… and tell how the prince acts when it happens.",
+  "journal-q3": "… and explain how Jemmy plays along when Billy decides he is the prince."
+ },
+ "copia": {
+  "look": "One plain sentence about today’s chapters, and three empty boxes. Each box asks you to say the same idea in a new way.",
+  "todo": "Rewrite the sentence three ways, one box at a time. Tap Show one way if you get stuck.",
+  "seed": "Billy <b>lifted</b> a golden crown out of the basket.",
+  "eg": [
+   "In the gloom of the hut, Billy lifted a golden crown out of the basket.",
+   "Billy <i>pulled</i> a golden crown out of the basket.",
+   "Billy lifted a golden crown out of the prince’s wicker basket."
+  ]
+ },
+ "wordgame": {
+  "type": "wagon",
+  "title": "Fill the Wagon",
+  "sub": "Billy wants a wagonload of gold and jewels. Every right answer adds one.",
+  "look": "This is the outlaws’ wagon. In Chapter 8, Jemmy tells Billy to ask the king for a whole wagonload of gold and jewels. Each sack has a label. You get one thing to sort at a time. Every right answer drops a gold coin or a jewel into the wagon. You add 8 each day this week. On Day 4 the wagon is full.",
+  "todo": "Read the words on the card. Tap the sack where they belong. A right answer adds gold to the wagon.",
+  "win": "Today’s 8 are in the wagon. Come back next lesson to add more.",
+  "winWeek": "A wagonload of gold, with jewels mixed in! The wagon is full.",
+  "bins": [
+   {
+    "id": "in",
+    "label": "Carry in"
+   },
+   {
+    "id": "out",
+    "label": "Carry out"
+   },
+   {
+    "id": "across",
+    "label": "Carry across"
+   },
+   {
+    "id": "back",
+    "label": "Carry back"
+   }
+  ],
+  "stepTitle": "Which way is it carried?",
+  "items": [
+   {
+    "t": "Ships bring bananas <b>into</b> our country from far away.",
+    "bin": "in",
+    "why": "Bananas come in from another place. That is import: carry in.",
+    "miss": {
+     "out": "The bananas are coming into our country, not leaving it.",
+     "across": "Look at the word into. Where are the bananas going?",
+     "back": "Nothing is being brought back here. Look at the word into."
+    }
+   },
+   {
+    "t": "A farmer sends apples <b>out</b> to other countries.",
+    "bin": "out",
+    "why": "The apples leave the country. That is export: carry out.",
+    "miss": {
+     "in": "The apples are leaving, not coming in. Look at the word out.",
+     "across": "Look at the word out.",
+     "back": "The apples are not coming back. They go out."
+    }
+   },
+   {
+    "t": "A big cart carries the king’s food <b>across</b> the bridge.",
+    "bin": "across",
+    "why": "From one side to the other. That is transport: carry across.",
+    "miss": {
+     "in": "Look at the word across.",
+     "out": "Look at the word across.",
+     "back": "The cart goes over the bridge to the other side. Look at the word across."
+    }
+   },
+   {
+    "t": "A rider carries news <b>back</b> to the castle.",
+    "bin": "back",
+    "why": "The news goes back to where it started. That is report: carry back.",
+    "miss": {
+     "in": "Look at the word back.",
+     "out": "Look at the word back.",
+     "across": "Look at the word back."
+    }
+   },
+   {
+    "t": "A trader brings silk <b>into</b> the king’s land.",
+    "bin": "in",
+    "why": "The silk comes in. Carry in, like import.",
+    "miss": {
+     "out": "Look at the word into. The silk is coming in.",
+     "across": "Look at the word into.",
+     "back": "Look at the word into."
+    }
+   },
+   {
+    "t": "A ferryman rows people <b>across</b> the river.",
+    "bin": "across",
+    "why": "From one bank to the other side. Carry across, like transport.",
+    "miss": {
+     "in": "Look at the word across.",
+     "out": "Look at the word across.",
+     "back": "Look at the word across."
+    }
+   },
+   {
+    "t": "A spy carries a secret <b>back</b> to his captain.",
+    "bin": "back",
+    "why": "The secret goes back to the captain. Carry back, like report.",
+    "miss": {
+     "in": "Look at the word back.",
+     "out": "Look at the word back.",
+     "across": "Look at the word back."
+    }
+   },
+   {
+    "t": "The town sends wool <b>out</b> on a ship.",
+    "bin": "out",
+    "why": "The wool leaves the town. Carry out, like export.",
+    "miss": {
+     "in": "The wool is leaving. Look at the word out.",
+     "across": "Look at the word out.",
+     "back": "Look at the word out."
+    }
+   }
+  ]
+ },
+ "glossary": [
+  {
+   "w": "whipping boy",
+   "cs": true,
+   "m": "a boy kept in the castle to be punished whenever the prince does something wrong"
+  },
+  {
+   "w": "ransom",
+   "m": "money that kidnappers ask for before they let someone go"
+  },
+  {
+   "w": "compound sentence",
+   "m": "a sentence made of two complete thoughts joined by a word like and, but, or so"
+  },
+  {
+   "w": "complete thought",
+   "m": "a group of words that makes sense on its own, like The outlaw growled."
+  },
+  {
+   "w": "root",
+   "m": "the main part of a word. Other parts are added to the front or the end."
+  },
+  {
+   "w": "syllable",
+   "m": "one beat in a word. Can-dle has two."
+  },
+  {
+   "w": "counterclaim",
+   "m": "what someone who disagrees with you might say"
+  },
+  {
+   "w": "conclusion",
+   "m": "the last sentence of a paragraph. It says your big idea in a new way."
+  }
+ ],
+ "sayWords": [
+  "scheme",
+  "ransom",
+  "flummox",
+  "amiss"
+ ],
+ "transcripts": {
+  "welcome": "Hi, it’s Opti. Last time, two outlaws grabbed the boys in the fog and found the king’s crest on the saddle. Today we visit the outlaws’ hideout. Here’s a puzzle to carry with you: who’s the prince now? Keep your eyes on the boy who can write, and the boy who can’t.",
+  "guide1": "Word work first. Today you’ll meet a very old root that comes from Latin. Four words share it. See if you can figure out what it means before the page tells you. After that, you’ll sort word groups by how many complete thoughts they hold. Take it one step at a time.",
+  "guide2": "Before you read: Chapter 6 takes you into the outlaws’ hut, deep in the pine forest. Look around it the way Jemmy does. Then, in Chapter 7, the outlaws need someone to write a message. Watch Jemmy closely when that happens. He’s thinking fast.",
+  "guide3": "Your opinion is getting strong. Today, try something brave: think about the other side. What would someone who disagrees with you say? Write it down fairly. Then explain why you still think you’re right. Good writers aren’t scared of the other side. They answer it."
+ },
+ "notes": {
+  "wordParts": "The root port means “carry.” transport = carry across, import = carry in, export = carry out, report = carry back, portable = able to be carried.",
+  "grammar": "A compound sentence joins two complete thoughts with a comma and a joining word: Jemmy wrote the note, and Billy watched.",
+  "spelling": "When a word ends in a consonant + le, that consonant goes with the le to make the last syllable: ta·ble, can·dle, sim·ple.",
+  "wgrd": "Good readers think about why characters do what they do: what each one wants, and what he does to get it.",
+  "vocab": [
+   [
+    "scheme",
+    "a clever secret plan, often tricky or sneaky"
+   ],
+   [
+    "ransom",
+    "money demanded in exchange for a prisoner"
+   ],
+   [
+    "flummox",
+    "to confuse or trick someone completely"
+   ],
+   [
+    "amiss",
+    "wrong; not the way it should be"
+   ]
+  ]
+ }
+}

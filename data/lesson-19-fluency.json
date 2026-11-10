@@ -1,0 +1,12 @@
+{
+ "connector": "This week’s passage is the start of Chapter 11, where everybody is shouting. Read it three times, and give each person a voice.",
+ "media": {
+  "welcome": {
+   "path": "guide/opti/g3ela-19-fluency-welcome",
+   "label": "Opti’s welcome"
+  }
+ },
+ "transcripts": {
+  "welcome": "Hi, it’s Opti. This week’s passage is the start of Chapter 11, where everybody is shouting. Read it three times. First, get every word right. Next, make it smooth. Then give each person a voice: Jemmy amazed, the prince cold, and Billy loud. Have fun with it."
+ }
+}

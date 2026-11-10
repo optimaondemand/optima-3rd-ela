@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Optima Academy Online — Lesson 19.2: The Whipping Boy (Ch. 8–9)</title>
+<title>Optima Academy Online — Lesson 19.2: The Whipping Boy (Ch. 8–9) (Sparkle)</title>
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Nunito:wght@400;600;700;800;900&display=swap');
 
@@ -2114,7 +2114,294 @@ body {
   .header-title { font-size: 22px; }
   .tab-btn { min-width: 100px; font-size: 11px; padding: 10px 6px 9px; }
 }
+
+/* ═══════════ STANDARDS BAR (from the 3rd grade scope & sequence) ═══════════ */
+.standards-toggle-bar{display:flex;align-items:center;justify-content:space-between;background:linear-gradient(135deg,#132552,#17306A);padding:10px 28px;cursor:pointer;user-select:none;border-bottom:1px solid rgba(85,200,232,.15);}
+.standards-toggle-bar:hover{background:linear-gradient(135deg,#17306A,#1B3878);}
+.standards-toggle-label{font-size:12px;color:rgba(255,255,255,.6);text-transform:uppercase;letter-spacing:1px;font-weight:700;}
+.standards-toggle-arrow{font-size:10px;color:rgba(255,255,255,.4);transition:transform .25s ease;}
+.standards-toggle-bar.open .standards-toggle-arrow{transform:rotate(180deg);}
+.standards-panel{max-height:0;overflow:hidden;transition:max-height .3s ease;background:#0E1C42;border-bottom:1px solid rgba(85,200,232,.1);}
+.standards-panel.open{max-height:360px;}
+.standards-panel-inner{display:flex;gap:32px;padding:14px 28px 16px;flex-wrap:wrap;}
+.standards-group{display:flex;flex-direction:column;gap:6px;}
+.standards-group-label{font-size:10px;color:rgba(255,255,255,.45);text-transform:uppercase;letter-spacing:.8px;font-weight:700;}
+.standards-codes{font-size:13px;color:rgba(255,255,255,.75);line-height:1.6;}
+.standards-codes .fl-code{color:#80CBC4;font-weight:700;}
+.footer-standards{font-size:10px;color:rgba(255,255,255,.35);margin-top:6px;letter-spacing:.3px;}
 </style>
+<script type="application/json" id="oao-lesson">
+{"grade": 3, "subject": "ela", "book": "wb", "week": 19, "day": 2, "bookTitle": "The Whipping Boy", "chapters": "Ch. 8–9"}
+</script>
+<script type="application/json" id="oao-data">
+{
+ "connector": "The outlaws think Jemmy is the prince, and Jemmy is going along with it. Today he writes the ransom note while Billy watches every word. Listen to how a street boy talks when he pretends to be a prince.",
+ "writingFocus": "flow",
+ "plate": {
+  "src": "art/wb/wb-scribe.jpg",
+  "alt": "An old painting of a man in a red robe writing in a big book at a wooden desk",
+  "credit": "Jean Miélot at his desk · unknown painter, Brussels, 1400s · Public domain",
+  "look": "A writer named Jean Miélot at his desk, painted by hand in a book more than 500 years ago. Long ago, few people could read or write, and writers like him used a feather pen called a quill. In Chapter 8, Jemmy writes the ransom note with a hawk’s feather and beet juice."
+ },
+ "dol": {
+  "a": {
+   "raw": "sign your name here ordered hold-your-nose billy",
+   "fixed": "<strong>“S</strong>ign your name here<strong>,”</strong> ordered <strong>H</strong>old-<strong>Y</strong>our-<strong>N</strong>ose <strong>B</strong>illy<strong>.</strong>",
+   "why": "Quotation marks go around Billy’s exact words, and Sign starts them with a capital. A comma goes inside the closing quotation mark. Hold-Your-Nose Billy is a name, so each part gets a capital. A period ends the sentence."
+  },
+  "b": {
+   "raw": "eat your bread whispered jemmy",
+   "fixed": "<strong>“E</strong>at your bread<strong>,”</strong> whispered <strong>J</strong>emmy<strong>.</strong>",
+   "why": "Quotation marks go around Jemmy’s exact words, and Eat starts them with a capital. A comma goes inside the closing quotation mark. Jemmy is a name, so it gets a capital. A period ends the sentence."
+  }
+ },
+ "miss": {
+  "match": {
+   "obliged": "Obliged is a feeling. Look for the meaning about being thankful.",
+   "scoundrel": "A scoundrel is a kind of person, and not a good one. Look for the villain meaning.",
+   "gallows": "Gallows is a thing made of wood. Look for the meaning about a frame.",
+   "scribblement": "Scribblement is Cutwater’s made-up word. Look for the meaning about writing."
+  }
+ },
+ "flags": {
+  "journal-q1": {
+   "quote": false,
+   "count": 1
+  },
+  "journal-q2": {
+   "quote": false,
+   "count": 1
+  },
+  "journal-q3": {
+   "quote": true,
+   "count": 1
+  }
+ },
+ "scholar": {
+  "journal-q1": "… and tell what the prince says about Jemmy’s letters.",
+  "journal-q2": "… and tell how Jemmy signs the note.",
+  "journal-q3": "… and explain why Jemmy might want the whipping boy to carry it."
+ },
+ "wordgame": {
+  "type": "wagon",
+  "title": "Fill the Wagon",
+  "sub": "Billy wants a wagonload of gold and jewels. Every right answer adds one.",
+  "look": "This is the outlaws’ wagon. In Chapter 8, Jemmy tells Billy to ask the king for a whole wagonload of gold and jewels. Each sack has a label. You get one thing to sort at a time. Every right answer drops a gold coin or a jewel into the wagon. You add 8 each day this week. On Day 4 the wagon is full.",
+  "todo": "Read the words on the card. Tap the sack where they belong. A right answer adds gold to the wagon.",
+  "win": "Today’s 8 are in the wagon. Come back next lesson to add more.",
+  "winWeek": "A wagonload of gold, with jewels mixed in! The wagon is full.",
+  "bins": [
+   {
+    "id": "yes",
+    "label": "Compound sentence"
+   },
+   {
+    "id": "no",
+    "label": "Not compound"
+   }
+  ],
+  "stepTitle": "Compound or not?",
+  "items": [
+   {
+    "t": "Billy wanted gold, but Jemmy wanted more.",
+    "bin": "yes",
+    "why": "Two complete thoughts joined by a comma and but.",
+    "miss": {
+     "no": "Cover the word but. Billy wanted gold. Jemmy wanted more. Both sides make sense alone."
+    }
+   },
+   {
+    "t": "Jemmy dipped the quill in beet juice.",
+    "bin": "no",
+    "why": "One complete thought. There is no joining word.",
+    "miss": {
+     "yes": "Look for a joining word like and, but, or so. This sentence has only one thought."
+    }
+   },
+   {
+    "t": "Cutwater gnawed on a pheasant, and Billy paced the hut.",
+    "bin": "yes",
+    "why": "Two thoughts joined by a comma and and.",
+    "miss": {
+     "no": "Cover the word and. Can each side stand alone as a sentence?"
+    }
+   },
+   {
+    "t": "The prince sat on the moldy straw.",
+    "bin": "no",
+    "why": "One complete thought.",
+    "miss": {
+     "yes": "There is only one thought here, and no joining word."
+    }
+   },
+   {
+    "t": "Billy could not read, so he tested Jemmy.",
+    "bin": "yes",
+    "why": "Two thoughts joined by a comma and so.",
+    "miss": {
+     "no": "Cover the word so. Billy could not read. He tested Jemmy. Two sentences!"
+    }
+   },
+   {
+    "t": "Jemmy read the note backward.",
+    "bin": "no",
+    "why": "One complete thought.",
+    "miss": {
+     "yes": "Look for a joining word with a whole thought on each side. It is not here."
+    }
+   },
+   {
+    "t": "The prince was hungry, so he nibbled the stale bread.",
+    "bin": "yes",
+    "why": "Two thoughts joined by a comma and so.",
+    "miss": {
+     "no": "Cover the word so. Does each side make sense on its own?"
+    }
+   },
+   {
+    "t": "Jemmy signed the note with a flourish.",
+    "bin": "no",
+    "why": "One complete thought.",
+    "miss": {
+     "yes": "This sentence has one thought and no joining word."
+    }
+   }
+  ]
+ },
+ "cards": [
+  {
+   "id": "backward",
+   "kind": "backward",
+   "tab": "reading",
+   "after": "^\\W*Read: Ch",
+   "title": "Read It Backward",
+   "sub": "Try Billy’s test from Chapter 9",
+   "look": "In Chapter 9, Billy wants to check the ransom note. He makes Jemmy read it backward, from the last word to the first. The real note ends with “Your Obedient Son,” so Jemmy starts with “Son Obedient Your.” Below are three short notes, already written backward.",
+   "todo": "Read each note out loud from the last word to the first. Then tap the words in the right order. Last, answer the question.",
+   "stepText": "Read the note out loud, starting with the last word. Then tap the words in the right order.",
+   "notes": [
+    {
+     "title": "Note 1",
+     "back": [
+      "hungry.",
+      "am",
+      "I"
+     ],
+     "done": "I am hungry. That is what the prince keeps saying!"
+    },
+    {
+     "title": "Note 2",
+     "back": [
+      "herring.",
+      "and",
+      "bread",
+      "Eat"
+     ],
+     "done": "Eat bread and herring. That is the outlaws’ breakfast."
+    },
+    {
+     "title": "Note 3",
+     "back": [
+      "garlic.",
+      "like",
+      "smells",
+      "Billy"
+     ],
+     "done": "Billy smells like garlic. He really does!"
+    }
+   ],
+   "q": {
+    "title": "Why read it backward?",
+    "text": "Why does Billy make Jemmy read the note backward?",
+    "opts": [
+     "Billy can’t read. If Jemmy had made up the words, he would trip over them backward.",
+     "Billy thinks the note sounds funnier backward.",
+     "The king can only read notes that are written backward."
+    ],
+    "a": 0,
+    "why": "Billy can’t check the words himself. Reading backward is hard to fake, so if Jemmy reads it smoothly, the words must really be on the paper.",
+    "miss": {
+     "1": "Billy is not trying to be funny. He wants to know if the note says what Jemmy told him.",
+     "2": "The king reads notes the normal way. This test is for Jemmy."
+    }
+   },
+   "finish": "Jemmy read the real note backward twice before Billy was satisfied."
+  }
+ ],
+ "glossary": [
+  {
+   "w": "whipping boy",
+   "cs": true,
+   "m": "a boy kept in the castle to be punished whenever the prince does something wrong"
+  },
+  {
+   "w": "ransom",
+   "m": "money that kidnappers ask for before they let someone go"
+  },
+  {
+   "w": "compound sentence",
+   "m": "a sentence made of two complete thoughts joined by a word like and, but, or so"
+  },
+  {
+   "w": "complete thought",
+   "m": "a group of words that makes sense on its own, like The outlaw growled."
+  },
+  {
+   "w": "root",
+   "m": "the main part of a word. Other parts are added to the front or the end."
+  },
+  {
+   "w": "syllable",
+   "m": "one beat in a word. Can-dle has two."
+  },
+  {
+   "w": "counterclaim",
+   "m": "what someone who disagrees with you might say"
+  },
+  {
+   "w": "conclusion",
+   "m": "the last sentence of a paragraph. It says your big idea in a new way."
+  }
+ ],
+ "sayWords": [
+  "obliged",
+  "scoundrel",
+  "gallows",
+  "scribblement"
+ ],
+ "transcripts": {
+  "welcome": "Welcome back, it’s Opti. The outlaws think Jemmy is the prince, and Jemmy is going along with it. Now he has to write a ransom note while two outlaws watch. As you read, think about this: how does a street boy act like a prince? And keep an eye on the real prince. He is not happy.",
+  "guide1": "Word study time. You’ll match more words that share the root that means carry. Then you’ll find the two complete thoughts hiding inside long sentences. Here’s a tip: cover the joining word with your finger. If both sides still make sense on their own, you found them.",
+  "guide2": "Before you read: Chapter 8 is all about the ransom note. Listen to how Jemmy talks when he pretends to be the prince. Then, in Chapter 9, Billy gives Jemmy a strange test. Watch closely, and ask yourself why Billy would think of it.",
+  "guide3": "Today you’re a listener. Read your paragraph out loud, slowly, like you’re reading it to a friend. Your ears will catch things your eyes miss. Is there a spot where the sentences bump? A transition word can smooth it right out.",
+  "card-backward": "Billy and Cutwater can’t read the note Jemmy wrote. So in Chapter 9, Billy makes Jemmy read it backward, from the last word to the first. Now you try it. Turn each note around. Then think about why Billy wanted it read that way."
+ },
+ "notes": {
+  "wordParts": "The root port means “carry.” transport = carry across, import = carry in, export = carry out, report = carry back, portable = able to be carried.",
+  "grammar": "A compound sentence joins two complete thoughts with a comma and a joining word: Jemmy wrote the note, and Billy watched.",
+  "spelling": "When a word ends in a consonant + le, that consonant goes with the le to make the last syllable: ta·ble, can·dle, sim·ple.",
+  "wgrd": "Good readers notice when a character does something unexpected, like being kind to someone who has not been kind to him.",
+  "vocab": [
+   [
+    "obliged",
+    "grateful; thankful for a favor done"
+   ],
+   [
+    "scoundrel",
+    "a dishonest or wicked person; a villain"
+   ],
+   [
+    "gallows",
+    "a wooden frame used to hang criminals as punishment"
+   ],
+   [
+    "scribblement",
+    "Cutwater’s word for writing"
+   ]
+  ]
+ }
+}
+</script>
 </head>
 <body>
 
@@ -2344,6 +2631,20 @@ body {
   <div class="header-badge"><span class="header-badge-icon">👑</span><span class="header-badge-text">Lesson 19.2</span></div>
 </div>
 
+<!-- ═══════════ STANDARDS ═══════════ -->
+<div class="standards-toggle-bar" onclick="this.classList.toggle('open');this.nextElementSibling.classList.toggle('open');">
+  <span class="standards-toggle-label">Standards Alignment</span>
+  <span class="standards-toggle-arrow">▼</span>
+</div>
+<div class="standards-panel">
+  <div class="standards-panel-inner">
+    <div class="standards-group">
+      <div class="standards-group-label">Florida B.E.S.T.</div>
+      <div class="standards-codes"><span class="fl-code">ELA.3.R.1.1</span> · <span class="fl-code">ELA.3.C.1.3</span> · <span class="fl-code">ELA.3.F.1.3</span> · <span class="fl-code">ELA.3.F.1.4</span> · <span class="fl-code">ELA.3.V.1.2</span> · <span class="fl-code">ELA.3.C.3.1</span> · <span class="fl-code">ELA.3.R.1.4</span></div>
+    </div>
+  </div>
+</div>
+
 <!-- ═══════════ INFO STRIP ═══════════ -->
 <div class="info-strip">
   <div class="info-cell"><div class="info-icon" style="background:#E3F8ED;">📚</div><div><div class="info-label">Unit</div><div class="info-value">Unit 3</div><div class="info-detail">The Whipping Boy</div></div></div>
@@ -2435,30 +2736,31 @@ body {
 
   <!-- What Good Readers Do -->
   <div class="activity bl-purple">
-    <div class="activity-head"><div class="activity-num" style="background:#8B6FC0;">1</div><div><div class="activity-title">📚 What Good Readers Do</div><div class="activity-sub">Set your reading lens for the week</div></div></div>
+    <div class="activity-head"><div class="activity-num" style="background:#8B6FC0;">1</div><div><div class="activity-title">📚 What Good Readers Do</div><div class="activity-sub">What to watch for while you read</div></div></div>
     <div class="activity-body">
-      <p>Good readers look for moments when a character does something unexpected. Watch for a moment where Jemmy does something surprising for someone who hasn't deserved it.</p>
+<p class="g3-do" data-say="readers"><b>What to do:</b> Read the tip. Think about it while you read today. You do not write anything here.</p>
+      <p>Good readers notice when a character does something they did not expect. Today, watch for a moment when Jemmy does something kind for the prince, even though the prince has not been kind to him.</p>
       <div class="key-concept" style="background:#F0F7FF;border-color:#C8DCEE;margin:10px 0;">
       <div class="key-concept-label" style="color:#3D5285;">&#x1F50D; How to Do It</div>
       <ol style="margin:6px 0 6px 20px;font-size:14px;color:#3A4A6B;line-height:1.8;">
-      <li><strong>Name what each character wants:</strong> Ask it separately for each one &mdash; right now, in this chapter.</li>
-      <li><strong>Find the action that proves it:</strong> Characters show what they want by what they do, not by announcing it.</li>
-      <li><strong>Ask whether the wants collide:</strong> When two characters want opposite things, that is where the trouble comes from.</li>
+      <li><strong>What does each boy want?</strong> Ask it for Jemmy. Then ask it for the prince.</li>
+      <li><strong>What does he do to get it?</strong> What a character does shows what he wants.</li>
+      <li><strong>Do their wants clash?</strong> When two characters want opposite things, trouble starts.</li>
       </ol>
       </div>
       <div class="socratic-box">
         <div class="socratic-label">🧠 As you read this week, watch for:</div>
-        <p class="socratic-q">Good readers look for moments when a character does something unexpected. Watch for a moment where Jemmy does something surprising for someone who hasn't deserved it.</p>
+        <p class="socratic-q"><strong>What does Jemmy do for the prince? Why might he do it?</strong></p>
       </div>
-      <div class="thinking-stop">💭 Think about this as you read today — you don't need to write anything here.</div>
+      
     </div>
   </div>
 
   <!-- DOL -->
   <div class="activity bl-cyan">
-    <div class="activity-head"><div class="activity-num" style="background:#5C2D91;">2</div><div><div class="activity-title">✏️ Daily Oral Language</div><div class="activity-sub">Study the model, then fix the sentence.</div></div></div>
+    <div class="activity-head"><div class="activity-num" style="background:#5C2D91;">2</div><div><div class="activity-title">✏️ Daily Oral Language</div><div class="activity-sub">Fix a sentence from the story.</div></div></div>
     <div class="activity-body">
-      <p>The first sentence is <strong>correct</strong>. Tap the parts you notice are done right &mdash; capital letters, punctuation, quotation marks, anything that follows the rules. Then use it as a model to fix the second sentence.</p>
+<p class="g3-do" data-say="dol"><b>What to do:</b> Tap the highlighted parts of the correct sentence to see why they are right. Then choose Sentence A or Sentence B, and type it the right way in the box.</p>
 
       <div class="task-box">
         <div class="dol-model-label">&#9989; Correct Model &mdash; from the novel</div>
@@ -2483,8 +2785,9 @@ body {
 
   <!-- poetry-corner:auto -->
 <div class="activity bl-rose">
-<div class="activity-head"><div class="activity-num" style="background:#c7627e;">🪶</div><div style="flex:1;"><div class="activity-title">🪶 Poetry</div><div class="activity-sub">Haiku: counting, and the turn at the end.</div></div></div>
-<div class="activity-body"><div class="poem-box">
+<div class="activity-head"><div class="activity-num" style="background:#c7627e;">🪶</div><div style="flex:1;"><div class="activity-title">🪶 Poetry</div><div class="activity-sub">A haiku has 3 lines: 5 syllables, then 7, then 5.</div></div></div>
+<div class="activity-body">
+<p class="g3-do" data-say="poem-turn"><b>What to do:</b> Read the two haiku out loud. Clap the syllables in each line: 5, then 7, then 5. Then find the word where each haiku changes direction.</p><div class="poem-box">
 <div class="poem-title">Two Haiku for a Cold Morning</div>
 <div class="poem-author">written for this lesson</div>
 <div class="poem-text">Five steps to the gate.
@@ -2496,11 +2799,11 @@ upside down and perfectly
 until the stone lands.</div>
 </div>
 <div class="callout callout-think"><span class="callout-icon">💡</span><p>Both of these follow the 5&ndash;7&ndash;5 shape. Notice that each one changes direction in the last line: the walk comes back to the fire; the still pond is broken by a stone. A haiku usually saves its surprise for the end.</p></div>
-<div class="socratic-box"><div class="socratic-label">🧠 Think About It</div><p class="socratic-q">Count the syllables in each line of both haiku. Then find the word in each one where things change.</p></div>
+<div class="socratic-box"><div class="socratic-label">🧠 Think About It</div><p class="socratic-q">Which word in each haiku is where things change?</p></div>
 </div></div>
 <!-- /poetry-corner:auto -->
 <div class="tab-next-wrap">
-    <p class="tab-transition-voice">Now that your mind is warmed up, let&rsquo;s sharpen your words and skills.</p>
+    <p class="tab-transition-voice">Next: word study.</p>
     <button class="tab-next-btn" onclick="switchTab('words')">Continue to 🔤 Word Study →</button>
   </div>
 </div><!-- /tab-warmup -->
@@ -2513,17 +2816,18 @@ until the stone lands.</div>
 
   <!-- MORPHOLOGY -->
   <div class="activity bl-purple">
-<div class="activity-head"><div class="activity-num" style="background:#8B6FC0;">1</div><div style="flex:1;"><div class="activity-title">🌱 Morphology: port</div><div class="activity-sub">Identify the skill<script>
+<div class="activity-head"><div class="activity-num" style="background:#8B6FC0;">1</div><div style="flex:1;"><div class="activity-title">🌱 Morphology: port</div><div class="activity-sub">Match each word to its meaning.<script>
 function morphMatchClick(item){var g=item.closest('.match-grid');if(!g)return;if(item.classList.contains('matched'))return;var sel=g.querySelector('.match-item.selected');if(!sel){item.classList.add('selected');return;}if(sel===item){sel.classList.remove('selected');return;}if(sel.getAttribute('data-match')===item.getAttribute('data-match')&&sel.classList.contains('is-word')!==item.classList.contains('is-word')){sel.classList.remove('selected');sel.classList.add('matched');item.classList.add('matched');if(g.querySelectorAll('.match-item.matched').length===g.querySelectorAll('.match-item').length){var fb=g.parentElement.querySelector('.match-feedback');if(fb)fb.classList.add('show');}}else{item.classList.add('wrong-flash');sel.classList.add('wrong-flash');setTimeout(function(){item.classList.remove('wrong-flash');sel.classList.remove('wrong-flash','selected');},500);}}
 </script>
 </div></div></div>
 <div class="activity-body">
-<div class="callout callout-info" style="margin-bottom:12px;"><span class="callout-icon">&#x1F50D;</span><p>Before you start: find the word part, then read what is left.</p></div>
+<p class="g3-do" data-say="morph2"><b>What to do:</b> Read the Remember box. Then tap a word, and tap what it means. Match all four words.</p>
+<div class="callout callout-info" style="margin-bottom:12px;"><span class="callout-icon">&#x1F50D;</span><p>Find port in each word. Then look at the part in front of it.</p></div>
 <div class="key-concept"><div class="key-concept-label">&#x1F4CC; Remember</div>
 <p><strong>port</strong> means <strong>carry</strong>.</p>
 <p><strong>transport</strong> = to carry across &middot; <strong>import</strong> = to carry in &middot; <strong>export</strong> = to carry out</p>
 </div>
-<div class="callout callout-info"><span class="callout-icon">&#x1F3AF;</span><p><strong>Practice: Match the Word to Its Meaning!</strong> Tap a word, then tap what it means.</p></div>
+<div class="callout callout-info"><span class="callout-icon">&#x1F3AF;</span><p><strong>Match the Word to Its Meaning!</strong></p></div>
 <div class="match-game" id="morphMatch"><div class="match-grid" id="morphMatchGrid">
 <div class="match-item is-word" data-match="A" onclick="morphMatchClick(this)">transport</div>
 <div class="match-item" data-match="A" onclick="morphMatchClick(this)">to carry across</div>
@@ -2538,8 +2842,9 @@ function morphMatchClick(item){var g=item.closest('.match-grid');if(!g)return;if
 
   <!-- VOCABULARY -->
   <div class="activity bl-cyan">
-    <div class="activity-head"><div class="activity-num" style="background:#5C2D91;">2</div><div><div class="activity-title">🔤 Vocabulary</div><div class="activity-sub">Words from this week's chapters.</div></div></div>
+    <div class="activity-head"><div class="activity-num" style="background:#5C2D91;">2</div><div><div class="activity-title">🔤 Vocabulary</div><div class="activity-sub">Four words from this week’s chapters</div></div></div>
     <div class="activity-body">
+<p class="g3-do" data-say="vocabflip"><b>What to do:</b> Read how we figured out the first word. Then read each sentence from the book, guess what the word means, and tap the card to check. Last, play the matching game.</p>
             <p>When you meet a word you don't know, use these three steps <em>in order</em>:</p>
 
       <!-- MODELED WORD -->
@@ -2567,7 +2872,7 @@ function morphMatchClick(item){var g=item.closest('.match-grid');if(!g)return;if
               <span class="decode-part-plus">+</span>
               <span class="decode-part decode-part-affix">-ed</span>
             </div>
-            <div class="decode-step-text">To <strong>oblige</strong> someone is to do them a favor, and <strong>-ed</strong> tells how someone feels. So being <em>obliged</em> means feeling you owe someone thanks.</div>
+            <div class="decode-step-text">To <strong>oblige</strong> someone is to do them a favor. When someone does you a favor, you feel <em>obliged</em>: you owe them thanks.</div>
           </div>
         </div>
         <div class="decode-step">
@@ -2580,7 +2885,7 @@ function morphMatchClick(item){var g=item.closest('.match-grid');if(!g)return;if
         </div>
       </div>
 
-      <div class="callout callout-info" style="margin-top:16px;"><span class="callout-icon">🎯</span><p><strong>Your turn!</strong> Each word below has its actual sentence from the book above it. Read the sentence, look for word parts, and guess what the word means. Then tap the card to check.</p></div>
+      
 
       <div class="vocab-grid" style="grid-template-columns:1fr 1fr;">
         <div class="vocab-decode-item">
@@ -2635,10 +2940,11 @@ function morphMatchClick(item){var g=item.closest('.match-grid');if(!g)return;if
 
   <!-- GRAMMAR -->
   <div class="activity bl-gold">
-    <div class="activity-head"><div class="activity-num" style="background:#B8860B;">3</div><div><div class="activity-title">✏️ Grammar: Compound Sentences</div><div class="activity-sub">Day 2: Identify &mdash; the answers are whole pieces, not single words.</div>
+    <div class="activity-head"><div class="activity-num" style="background:#B8860B;">3</div><div><div class="activity-title">✏️ Grammar: Compound Sentences</div><div class="activity-sub">Find the two complete thoughts in a sentence.</div>
 <!-- grammar-level -->
 <div style="margin-top:6px;"><span style="display:inline-block;background:#FFF8E8;color:#8A6212;border:1px solid #C7922C;border-radius:999px;padding:3px 10px;font-size:11px;font-weight:800;letter-spacing:.05em;text-transform:uppercase;">🧱 Grammar Level: Sentence Builder</span></div></div></div>
-    <div class="activity-body"><!-- grammar-notice-first -->
+    <div class="activity-body">
+<p class="g3-do" data-say="gram-halves"><b>What to do:</b> In each sentence, tap the two complete thoughts. Do not tap the joining word. Then answer the question in the box.</p><!-- grammar-notice-first -->
 <div class="key-concept" style="background:#F0F7FF;border-color:#C8DCEE;margin:0 0 14px;">
 <div class="key-concept-label" style="color:#3D5285;">&#x1F50E; What do you notice?</div>
 <p>Look at the two halves of this sentence and what holds them together.</p>
@@ -2656,10 +2962,10 @@ function morphMatchClick(item){var g=item.closest('.match-grid');if(!g)return;if
 </ol></div>
 <button class="dol-check-btn" onclick="document.getElementById('gramNotice').classList.toggle('show')">&#x1F50D; Now check your thinking</button>
 <div class="dol-answer" id="gramNotice">
-<p>Today we decide whether a sentence is <em>compound</em> (two complete thoughts joined by a conjunction) or <em>simple</em> (one thought).</p>
+<p>A <em>compound</em> sentence has two complete thoughts joined by a joining word. Today you find the two thoughts.</p>
 <p>A compound sentence: two complete thoughts joined by a comma and <strong>but</strong>. The <strong>but</strong> tells you the second half goes against the first.</p>
 </div>
-<div class="callout callout-info" style="margin-top:14px;"><span class="callout-icon">🎯</span><p><strong>Your turn.</strong> Tap <strong>both</strong> complete thoughts in each sentence &mdash; the joining word in the middle is not one of them.</p></div>
+<div class="callout callout-info" style="margin-top:14px;"><span class="callout-icon">🎯</span><p><strong>Your turn.</strong> Tap <strong>both</strong> complete thoughts in each sentence. The joining word is not part of either one.</p></div>
 <div class="spotter-game" id="grammarGame">
 <div class="spotter-sentence" id="gspot1" data-done="false"><span class="spotter-word" onclick="gramSpotAll(this,'gspot1')" data-correct="true">Jemmy ran</span> <span class="spotter-word" onclick="gramSpotAll(this,'gspot1')" data-correct="false">and</span> <span class="spotter-word" onclick="gramSpotAll(this,'gspot1')" data-correct="true">the outlaw followed close behind.</span><div class="spotter-result" id="gspot1-result"></div></div>
 <div class="spotter-sentence" id="gspot2" data-done="false"><span class="spotter-word" onclick="gramSpotAll(this,'gspot2')" data-correct="true">It was cold</span> <span class="spotter-word" onclick="gramSpotAll(this,'gspot2')" data-correct="false">so</span> <span class="spotter-word" onclick="gramSpotAll(this,'gspot2')" data-correct="true">they lit a fire in the clearing.</span><div class="spotter-result" id="gspot2-result"></div></div>
@@ -2667,7 +2973,7 @@ function morphMatchClick(item){var g=item.closest('.match-grid');if(!g)return;if
 <div class="spotter-sentence" id="gspot4" data-done="false"><span class="spotter-word" onclick="gramSpotAll(this,'gspot4')" data-correct="true">The prince shouted</span> <span class="spotter-word" onclick="gramSpotAll(this,'gspot4')" data-correct="false">and</span> <span class="spotter-word" onclick="gramSpotAll(this,'gspot4')" data-correct="true">Jemmy turned around slowly.</span><div class="spotter-result" id="gspot4-result"></div></div>
 </div>
 <div class="swyk"><div class="swyk-label">🪶 Show What You Know</div>
-<div class="swyk-prompt">Pick one sentence and write out its two halves as two separate sentences. Which version reads better, and why?</div>
+<div class="swyk-prompt">Choose one sentence above. Write its two thoughts as two separate sentences. Then write which way sounds better, and why.</div>
 <div class="journal-label">📓 Your answer <span class="saved-dot" id="dot-grammar"></span></div>
 <textarea class="journal-box" id="journal-grammar" data-label="Grammar response" placeholder="I noticed that..." oninput="autoSave(this,'dot-grammar')"></textarea></div>
 </div>
@@ -2677,10 +2983,11 @@ function morphMatchClick(item){var g=item.closest('.match-grid');if(!g)return;if
 
   <!-- SPELLING -->
   <div class="activity bl-navy">
-    <div class="activity-head"><div class="activity-num" style="background:#2A0A4A;">4</div><div><div class="activity-title">🔠 Spelling: Consonant-le Syllables</div><div class="activity-sub">Day 2: Identify the pattern by ear.</div></div></div>
+    <div class="activity-head"><div class="activity-num" style="background:#2A0A4A;">4</div><div><div class="activity-title">🔠 Spelling: Consonant-le Syllables</div><div class="activity-sub">Find the word that ends in consonant-le.</div></div></div>
     <div class="activity-body">
+<p class="g3-do" data-say="spell-find"><b>What to do:</b> Read the rule. Then in each row, tap the one word that ends in a consonant-le syllable.</p>
 <!-- spell-notice-first -->
-<div class="callout callout-info" style="margin-bottom:14px;"><span class="callout-icon">&#x1F442;</span><p>Before you start: listen to the last beat and notice how quiet it is.</p></div>
+<div class="callout callout-info" style="margin-bottom:14px;"><span class="callout-icon">&#x1F442;</span><p>Say each word out loud. Listen to the last beat.</p></div>
 <div class="callout callout-gold" style="margin-bottom:14px;background:#FFF8E8;border:2px solid #F5E6C8;border-left:5px solid #C7922C;border-radius:10px;padding:14px 18px;"><span class="callout-icon">📖</span><p style="font-size:15px;color:#0E1C42;line-height:1.6;"><strong>The Rule:</strong> When a word ends in a consonant plus <strong>-le</strong>, that consonant goes <em>with</em> the -le to make the last syllable: <em>ta&middot;ble</em>, <em>lit&middot;tle</em>, <em>can&middot;dle</em>. Count back three letters from the end and you have found the split.</p></div>
             <p>Find the consonant-le syllable in each word. Remember: it's always at the END — consonant + le.</p>
 
@@ -2697,13 +3004,10 @@ function morphMatchClick(item){var g=item.closest('.match-grid');if(!g)return;if
 
       <div class="socratic-box">
         <div class="socratic-label">&#x1F50D; What do you notice?</div>
-        <p class="socratic-q">Look at the last three letters of each word. What two of them are always the same?</p>
+        <p class="socratic-q">Look at the last three letters of each word. Which two letters are always the same?</p>
         <p class="socratic-q">What kind of letter comes just before the <em>-le</em>?</p>
-        <p class="socratic-q">Count back three letters from the end of each word. Where does the dot land?</p>
+        <p class="socratic-q">Count back three letters from the end of each word. Is that where the dot is?</p>
       </div>
-
-      <button class="dol-check-btn" style="margin:12px auto;display:block;" onclick="document.getElementById('spellReveal').classList.toggle('show')">🔍 See the Rule</button>
-      <div class="dol-answer" id="spellReveal"></div>
 
             <div class="callout callout-info"><span class="callout-icon">🔎</span><p><strong>Sound Detective!</strong> One word in each row ends in a consonant-le syllable.</p></div>
 <div class="spotter-game" id="spellGame">
@@ -2742,7 +3046,7 @@ function morphMatchClick(item){var g=item.closest('.match-grid');if(!g)return;if
   </div>
 
   <div class="tab-next-wrap">
-    <p class="tab-transition-voice">Your words and skills are sharp. Time to open the book.</p>
+    <p class="tab-transition-voice">Next: reading.</p>
     <button class="tab-next-btn" onclick="switchTab('reading')">Continue to 📖 Reading →</button>
   </div>
 </div><!-- /tab-words -->
@@ -2809,15 +3113,11 @@ function morphMatchClick(item){var g=item.closest('.match-grid');if(!g)return;if
       </div>
     </div>
     <div class="activity-body">
-      <div class="key-concept" style="background:#F0E8FF;border-color:#D8CCF0;margin-bottom:14px;">
-        <div class="key-concept-label" style="color:#6B4FB0;">💎 As you read, notice:</div>
-        <p>Good readers look for moments when a character does something unexpected. Watch for a moment where Jemmy does something surprising for someone who hasn't deserved it.</p>
-      </div>
       <div class="socratic-box">
         <div class="socratic-label">&#x1F451; Help with a second motive:</div>
         <p class="socratic-q" style="font-style:normal;">When the outlaws demand a ransom note, Prince Brat cannot write his own name. Jemmy takes the hawk&rsquo;s quill and writes it for him &mdash; not out of kindness, but because a scheme has leaped into his head. From the outside, helping someone and using someone can look exactly the same.</p>
       </div>
-      <div class="thinking-stop">💭 Think: How will your character help someone in your story?</div>
+      
     </div>
   </div>
 
@@ -2828,23 +3128,24 @@ function morphMatchClick(item){var g=item.closest('.match-grid');if(!g)return;if
   <div class="activity bl-green">
     <div class="activity-head"><div class="activity-num" style="background:#34B76F;">1</div><div><div class="activity-title">📕 Read: Ch. 8–9</div><div class="activity-sub">The ransom note; Revealing Jemmy's plan to trick the villains</div></div></div>
     <div class="activity-body">
+<p class="g3-do" data-say="read"><b>What to do:</b> Read the two Pause and Think questions first. Then read today’s chapters in your book. When you get to each question, stop and think of your answer. You do not write these answers.</p>
       
       <!-- pause-before-reading -->
-      <div class="callout callout-info" style="margin-bottom:14px;"><span class="callout-icon">&#x23F8;&#xFE0F;</span><p><strong>Read these first.</strong> Look them over before you open your book, then stop and answer each one when you reach that part.</p></div>
+      
       <div class="pause-columns">
         <div class="pause-col">
           <div class="socratic-box" style="margin-bottom:0;">
             <div class="socratic-label">⏸️ Pause &amp; Think — Part 1</div>
             <p class="socratic-q">Billy plans to ask for the prince&rsquo;s weight in gold. Why does Jemmy insist on a wagonload of gold and jewels instead?</p>
           </div>
-          <div class="thinking-stop">💭 Pause and think about this — no need to write.</div>
+          
         </div>
 <div class="pause-col">
           <div class="socratic-box" style="margin-bottom:0;">
             <div class="socratic-label">⏸️ Pause &amp; Think — Part 2</div>
             <p class="socratic-q">Billy makes Jemmy read the note out loud &mdash; backward. <strong>Why does Billy do this, and how does Jemmy pass the test?</strong></p>
           </div>
-          <div class="thinking-stop">💭 Pause and think about this — no need to write.</div>
+          
         </div>
       </div>
 
@@ -2864,30 +3165,26 @@ function morphMatchClick(item){var g=item.closest('.match-grid');if(!g)return;if
           </div>
         </div>
       </div>
-
-      <div class="callout callout-info" style="margin-bottom:14px;">
-        <span class="callout-icon">📕</span>
-        <p><strong>Open your novel to Ch. 8–9.</strong> Read at your own pace. The Pause &amp; Think prompts are above &mdash; look them over first, then stop at each one as you read.</p>
-      </div>
       </div>
   </div>
 
   <div class="rwm-box">
-<div class="rwm-header">📖 RWM &mdash; Read like a Reader, Read like a Writer, Mimic</div>
+<div class="rwm-header">📖 Read Like a Writer</div>
+<p class="g3-do" data-say="rwm"><b>What to do:</b> Read the sentence from the book. Then do the three parts in order. Write one sentence in each box.</p>
 <div class="rwm-sentence">&ldquo;He glared icily at the whipping boy who had seized his royal title.&rdquo;</div>
 <div class="rwm-step">
 <div class="rwm-step-label">📖 Read like a Reader</div>
 <div class="rwm-step-text">The outlaws think Jemmy is the prince, and Jemmy is playing along. How does the real prince feel about it?</div>
 <div class="textbox-prompt">Write 1 sentence: why is the prince glaring at Jemmy?</div>
 <div class="journal-label">📓 Your response <span class="saved-dot" id="dot-rwm-reader"></span></div>
-<textarea class="journal-box" id="journal-rwm-reader" data-label="RWM &mdash; Read like a Reader" placeholder="The prince is glaring because..." oninput="autoSave(this,'dot-rwm-reader');gatherAnswers();"></textarea>
+<textarea class="journal-box" id="journal-rwm-reader" data-label="Read like a reader" placeholder="The prince is glaring because..." oninput="autoSave(this,'dot-rwm-reader');gatherAnswers();"></textarea>
 </div>
 <div class="rwm-step">
 <div class="rwm-step-label">✏️ Read like a Writer</div>
 <div class="rwm-step-text">Two words are doing the work. <strong>Icily</strong> &mdash; a look with a temperature. And <strong>seized</strong>, a word for grabbing something by force, used here for a name. Fleischman picks words that are slightly too strong, and the prince&rsquo;s outrage comes through.</div>
 <div class="textbox-prompt">Write 1 sentence: what does the word <em>seized</em> tell you about how the prince sees it?</div>
 <div class="journal-label">📓 Your response <span class="saved-dot" id="dot-rwm-writer"></span></div>
-<textarea class="journal-box" id="journal-rwm-writer" data-label="RWM &mdash; Read like a Writer" placeholder="The word seized shows that the prince..." oninput="autoSave(this,'dot-rwm-writer');gatherAnswers();"></textarea>
+<textarea class="journal-box" id="journal-rwm-writer" data-label="Read like a writer" placeholder="The word seized shows that the prince..." oninput="autoSave(this,'dot-rwm-writer');gatherAnswers();"></textarea>
 </div>
 <div class="rwm-step">
 <div class="rwm-step-label">🖊️ Mimic</div>
@@ -2895,11 +3192,11 @@ function morphMatchClick(item){var g=item.closest('.match-grid');if(!g)return;if
 <div class="rwm-frame">Sentence frame: [Who] glared [adverb] at [whom] who had [too-strong verb] [the thing].</div>
 <div class="textbox-prompt">Write your own too-strong-word sentence.</div>
 <div class="journal-label">📓 Your sentence <span class="saved-dot" id="dot-rwm-mimic"></span></div>
-<textarea class="journal-box" id="journal-rwm-mimic" data-label="RWM &mdash; Mimic" placeholder="Write your sentence here..." oninput="autoSave(this,'dot-rwm-mimic');gatherAnswers();"></textarea>
+<textarea class="journal-box" id="journal-rwm-mimic" data-label="Write your own" placeholder="Write your sentence here..." oninput="autoSave(this,'dot-rwm-mimic');gatherAnswers();"></textarea>
 </div>
 </div>
 <div class="tab-next-wrap">
-    <p class="tab-transition-voice">You&rsquo;ve read and noticed. Now answer the questions and submit your work.</p>
+    <p class="tab-transition-voice">Next: answer the questions and turn in your work.</p>
     <button class="tab-next-btn" onclick="switchTab('assignment')">Continue to 📬 Assignment →</button>
   </div>
 </div><!-- /tab-reading -->
@@ -2918,8 +3215,9 @@ function morphMatchClick(item){var g=item.closest('.match-grid');if(!g)return;if
 
   <!-- Part A: Chapter Thinking -->
   <div class="activity bl-cyan">
-    <div class="activity-head"><div class="activity-num" style="background:#5C2D91;">A</div><div><div class="activity-title">📖 Chapter Thinking</div><div class="activity-sub">Answer in complete sentences with evidence from the text.</div></div></div>
+    <div class="activity-head"><div class="activity-num" style="background:#5C2D91;">A</div><div><div class="activity-title">📖 Chapter Thinking</div><div class="activity-sub">Answer in full sentences. Use details from the book.</div></div></div>
     <div class="activity-body">
+<p class="g3-do" data-say="chapter"><b>What to do:</b> Choose Explorer or Scholar. Then answer the three questions in full sentences. Use details from the book.</p>
       <div class="q-block"><div class="q-text"><span class="q-num">1</span>How does Jemmy convince the outlaws to let him write the ransom note?</div></div>
       <div class="textbox-prompt">What happens when Billy realizes the prince can't write?</div>
       <textarea class="journal-box" id="journal-q1" data-label="Q1: chapter thinking" placeholder="Jemmy convinces the outlaws by..." oninput="autoSave(this,'dot-q1');gatherAnswers();"></textarea>
@@ -2936,9 +3234,9 @@ function morphMatchClick(item){var g=item.closest('.match-grid');if(!g)return;if
 
   <!-- Part B: Word Study Connection -->
   <div class="activity bl-purple">
-    <div class="activity-head"><div class="activity-num" style="background:#8B6FC0;">B</div><div><div class="activity-title">🔤 Word Study Connection (Morphology)</div><div class="activity-sub">Your morphology response from the Word Study tab.</div></div></div>
+    <div class="activity-head"><div class="activity-num" style="background:#8B6FC0;">B</div><div><div class="activity-title">🔤 Word Study Check</div><div class="activity-sub">The word part work on the Word Study tab</div></div></div>
     <div class="activity-body">
-      <p style="font-size:15px;color:#7A88A8;">Your morphology answer was saved on the Word Study tab. It will appear in your gathered work below.</p>
+      <p style="font-size:15px;color:#7A88A8;">Finish the word part work on the Word Study tab. It shows in your work below.</p>
     </div>
   </div>
 
@@ -2952,6 +3250,7 @@ function morphMatchClick(item){var g=item.closest('.match-grid');if(!g)return;if
       </div>
     </div>
     <div class="activity-body">
+<p class="g3-do" data-say="ww-transition"><b>What to do:</b> Read your opinion paragraph out loud. Then write one of your sentences again with a transition word, like For example or Another reason is.</p>
       <div style="display:flex;flex-wrap:wrap;gap:4px;justify-content:flex-start;align-items:center;margin-bottom:10px;">
 <span style="background:#E8F1E8;color:#4A7C2E;padding:4px 8px;border-radius:6px;font-size:11px;">✓ Choose a Claim</span>
           <span style="background:#B8860B;color:#fff;padding:4px 8px;border-radius:6px;font-size:11px;">★ Add Reasons</span>
@@ -2959,12 +3258,11 @@ function morphMatchClick(item){var g=item.closest('.match-grid');if(!g)return;if
           <span style="background:#FAFBFF;color:#7A88A8;padding:4px 8px;border-radius:6px;font-size:11px;">○ Revise</span>
           <span style="background:#FAFBFF;color:#7A88A8;padding:4px 8px;border-radius:6px;font-size:11px;">○ Publish</span>
         </div>
-      <div class="callout callout-info" style="margin:0 0 14px 0;padding:10px 14px;"><span class="callout-icon">🎯</span><p style="font-size:14px;"><strong>Today&rsquo;s focus:</strong> Today: Read your draft aloud — does it flow?</p></div>
+      <div class="callout callout-info" style="margin:0 0 14px 0;padding:10px 14px;"><span class="callout-icon">🎯</span><p style="font-size:14px;"><strong>Today&rsquo;s focus:</strong> Read your draft aloud — does it flow?</p></div>
 
       <!-- WATCH HOW -->
       <div class="key-concept" style="background:#FFFEF7;border-color:#E8D5A0;margin-bottom:14px;">
-        <div class="key-concept-label" style="color:#B8860B;">👀 Watch How &mdash; Meet Today, our example writer</div>
-        <p style="font-size:14px;"><em>Today: Read your draft aloud — does it flow?</em></p>
+        <div class="key-concept-label" style="color:#B8860B;">👀 Watch How &mdash; Meet Clara, our example writer</div>
         <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:10px;">
           <div style="background:#FFF;border:1px solid #E8D5A0;border-radius:6px;padding:10px;">
             <div style="font-size:11px;color:#C7627E;font-weight:700;letter-spacing:0.5px;">BEFORE</div>
@@ -2998,7 +3296,6 @@ function morphMatchClick(item){var g=item.closest('.match-grid');if(!g)return;if
       </div>
 
       <!-- NOW YOU TRY -->
-      <div class="callout callout-info" style="background:#E8F1E8;border-color:#A8C8A8;margin:0 0 10px 0;padding:10px 14px;"><span class="callout-icon">📝</span><p style="font-size:14px;"><strong>Now you try.</strong> Read your opinion paragraph aloud. Then improve one sentence by adding a transition word.</p></div>
       <div class="textbox-prompt">Read your opinion paragraph aloud. Then improve one sentence by adding a transition word.</div>
       <textarea class="journal-box" id="journal-writing" data-label="Writing Connection" placeholder="The sentence I improved: [before] → [after with transition word]" oninput="autoSave(this,'dot-writing');gatherAnswers();"></textarea>
     </div>
@@ -3023,8 +3320,8 @@ function morphMatchClick(item){var g=item.closest('.match-grid');if(!g)return;if
     <div class="turn-in-header"><div class="turn-in-header-icon">📬</div><div><div class="turn-in-header-label">Ready?</div><div class="turn-in-header-title">Before You Submit</div></div></div>
     <div class="turn-in-body">
       <div class="turn-in-checklist">
-        <div class="turn-in-item" onclick="toggleCheck(this)"><div class="turn-in-check"></div><div class="turn-in-item-text">I answered all 3 chapter questions with evidence.</div></div>
-        <div class="turn-in-item" onclick="toggleCheck(this)"><div class="turn-in-check"></div><div class="turn-in-item-text">I completed my Morphology response.</div></div>
+        <div class="turn-in-item" onclick="toggleCheck(this)"><div class="turn-in-check"></div><div class="turn-in-item-text">I answered all 3 chapter questions with details from the book.</div></div>
+        <div class="turn-in-item" onclick="toggleCheck(this)"><div class="turn-in-check"></div><div class="turn-in-item-text">I finished the word part work on the Word Study tab.</div></div>
         <div class="turn-in-item" onclick="toggleCheck(this)"><div class="turn-in-check"></div><div class="turn-in-item-text">I revised one sentence in my paragraph.</div></div>
         <div class="turn-in-item" onclick="toggleCheck(this)"><div class="turn-in-check"></div><div class="turn-in-item-text">I copied or downloaded my work and submitted it to Canvas.</div></div>
       </div>
@@ -3037,6 +3334,7 @@ function morphMatchClick(item){var g=item.closest('.match-grid');if(!g)return;if
 <div class="footer">
   <div class="footer-main"><span>Optima Academy Online</span> · 3rd Grade ELA · Week 19 · Lesson 19.2</div>
   <div class="footer-sub"><em>The Whipping Boy</em> — Ch. 8–9</div>
+  <div class="footer-standards">FL: ELA.3.R.1.1, ELA.3.C.1.3, ELA.3.F.1.3, ELA.3.F.1.4, ELA.3.V.1.2, ELA.3.C.3.1, ELA.3.R.1.4</div>
   <div class="footer-copy">© Optima Academy Online · An Education Experience Company</div>
 </div>
 
@@ -3072,8 +3370,8 @@ function gatherAnswers() {
   var output = '';
   var sections = [
     { title: '📖 CHAPTER THINKING', ids: ['journal-q1','journal-q2','journal-q3'] },
-    { title: '📖 RWM — READ LIKE A READER / WRITER / MIMIC', ids: ['journal-rwm-reader', 'journal-rwm-writer', 'journal-rwm-mimic'] },
-    { title: '🔤 WORD STUDY CONNECTION (MORPHOLOGY)', ids: ['journal-morph'] },
+    { title: '📖 READ LIKE A WRITER', ids: ['journal-rwm-reader', 'journal-rwm-writer', 'journal-rwm-mimic'] },
+    { title: '🔤 WORD STUDY CHECK', ids: ['journal-morph'] },
     { title: '🪶 WRITING CONNECTION', ids: ['journal-writing'] }
   ];
 
@@ -3502,7 +3800,7 @@ function downloadJournal() {
 
   var sections = [
     { title: '📖 CHAPTER THINKING', ids: ['journal-q1','journal-q2','journal-q3'] },
-    { title: '🔤 WORD STUDY CONNECTION (MORPHOLOGY)', ids: ['journal-morph'] },
+    { title: '🔤 WORD STUDY CHECK', ids: ['journal-morph'] },
     { title: '🪶 WRITING CONNECTION', ids: ['journal-writing'] }
   ];
 
@@ -4403,4 +4701,9 @@ function gramSpotFix(word, sid){
 })();
 </script>
 
+
+<!-- ═════════ OAO SPARKLE LAYER (additive) ═════════ -->
+<link rel="stylesheet" href="g3-sparkle.css">
+<script src="g3-sparkle.js" defer></script>
+<!-- ═════════ END OAO SPARKLE ═════════ -->
 </body></html>
