@@ -4411,6 +4411,10 @@ function buildTeach() {
 function applyTeach(T) {
   if (document.body.classList.contains('g3-teaching')) return;
   document.body.classList.add('g3-teaching');
+  /* One step at a time (Nov 11 2026): same onestep.js as G4/G5 plus the G3 rules; ?steps=0 turns it off */
+  try { if (!/[?&]steps=0/.test(location.search) && !document.querySelector('script[src="onestep.js"]')) {
+    var osl = document.createElement('link'); osl.rel = 'stylesheet'; osl.href = 'onestep.css'; document.head.appendChild(osl);
+    var oss = document.createElement('script'); oss.src = 'onestep.js'; document.body.appendChild(oss); } } catch (e) {}
   /* the greeting rebuilds media after a name is typed, so hide by class */
   if (T.dropTurnNotes) document.body.classList.add('g3-no-turnnotes');
   (T.mods || []).forEach(function (m) {
