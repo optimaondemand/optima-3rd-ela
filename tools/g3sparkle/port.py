@@ -154,8 +154,7 @@ js = rep(js, "who + ' · Grade Four</text>';", "who + ' · Grade Three</text>';"
 js = rep(js, "Thirty-two weeks, one road, six worlds — and the shelf you fill as you go",
              "Thirty-two weeks, one road, seven stops, and the shelf you fill as you go")
 js = rep(js, "(LESSON.book === 'anne' ? 'Anne' : 'we')", "'Opti'")
-js = rep(js, "'<span>This is the owl who reads along with you. You\\u2019ll see it on the Reading Road.</span></div>'",
-             "'<span>This is Opti, the owl who reads along with you. You\\u2019ll see him on the Reading Road.</span></div>'")
+# (Nov 11 2026) the owl line is already "Opti ... him" in the G4 layer; no rewrite needed
 
 # ── the plate: G3 plates are public-domain art, credited, with a
 #    notice/wonder under the picture; one tap tells what it is

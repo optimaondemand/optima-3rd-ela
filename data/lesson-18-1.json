@@ -377,7 +377,7 @@
      ":scope > .callout:not(:has(+ .sort-game))"
     ],
     "script": "Some vowels like to work in pairs. When two vowels sit side by side in one beat and make one sound, we call them a vowel team. In feast, the e and the a team up to say ee. In groan, the o and the a say oh. Say each word out loud and clap the beats. Then tap Now name the pattern. Last, sort the words. Two vowels side by side? That's a team.",
-    "todo": "Say each word and clap. Tap Now name the pattern. Then sort the words."
+    "todo": "Tap Now name the pattern. Then say each word, clap its beats, and sort it."
    },
    {
     "id": "copia",

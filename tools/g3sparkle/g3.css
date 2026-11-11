@@ -345,3 +345,9 @@ button.g3-opt-btn:active, button.g3-tw-chip:active, button.spk-btn:active, butto
 .tab-next-btn, button.tab-next-btn, .gathered-btn.gathered-btn-copy { color: #fff !important; }
 .gathered-header-label { color: #E9D8FF !important; }
 .footer-main > span:first-child { color: #D9C2FF !important; }
+
+/* Nov 11 2026: one look for every listen button: a gold pill that carries the speaker */
+.g3-teach-sm .g3-teach-btn { background: #C8962E !important; }
+.g3-teaching .spk-audio-btn { background: #C8962E !important; border-color: #C8962E !important; color: #fff !important; }
+.g3-teaching .spk-audio-btn .spk-audio-label { color: #fff !important; }
+.g3-teach-btn::before, .g3-teaching .spk-audio-btn .spk-audio-label::before { content: '\1F50A\00A0'; }
