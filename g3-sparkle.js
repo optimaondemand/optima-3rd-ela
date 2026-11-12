@@ -127,7 +127,16 @@ var ART = {
   /* pen-and-ink spot ornaments. Used sparingly and always decoratively —
      none of them carries meaning, so all are aria-hidden / CSS-only.
      The set is closed; eight is enough that the rotation does not show. */
-  ornaments: {},
+  ornaments: {
+    divider: 'ornaments/divider.png',
+    corner:  'ornaments/corner.png',
+    quill:   'ornaments/quill.png',
+    blossom: 'ornaments/blossom.png',
+    books:   'ornaments/books.png',
+    letter:  'ornaments/letter.png',
+    sprig:   'ornaments/sprig.png',
+    divider2:'ornaments/divider-books.png'
+  },
 
   companions: { opti: 'companions/owl.png' }
 };
