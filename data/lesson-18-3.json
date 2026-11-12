@@ -323,8 +323,8 @@
      ":scope > .key-concept",
      ":scope > .socratic-box"
     ],
-    "todo": "Listen to Opti. Keep his question in your head while you read.",
-    "script": "[warmly] Here's today's reading tip. Good readers notice what a character does when he's in danger. In Chapter 5, two outlaws grab the boys. Watch Jemmy. Does he fight, does he try to trick them, or does he stay quiet? And think about why he makes that choice. You don't need to write anything. Just watch Jemmy closely while you read."
+    "todo": "Listen to Opti. Then tap the lens you will use today.",
+    "script": "[warmly] Here's today's reading tip. Good readers notice what a character does when he's in danger. In Chapter 5, two outlaws grab the boys. Watch Jemmy. Does he fight, does he try to trick them, or does he stay quiet? And think about why he makes that choice. Then tap one of the two lenses below to use while you read. You don't need to write anything."
    },
    {
     "id": "dol",
@@ -411,5 +411,26 @@
    }
   ],
   "cards": {}
+ },
+ "virtue": {
+  "name": "courage",
+  "title": "Courage Watch: Did they show courage?",
+  "items": [
+   {
+    "t": "The outlaws grab them, and the prince shouts, “Don’t you know who I am!”",
+    "ok": false,
+    "why": "Shouting is not the same as courage. It puts both boys in danger."
+   },
+   {
+    "t": "Jemmy jabs the prince with his elbow to make him stop talking.",
+    "ok": true,
+    "why": "Jemmy thinks fast to keep them both safe."
+   },
+   {
+    "t": "Jemmy tells the outlaws that his friend’s father is only a rat-catcher.",
+    "ok": true,
+    "why": "He stays calm and tries a trick to protect them. That takes courage."
+   }
+  ]
  }
 }

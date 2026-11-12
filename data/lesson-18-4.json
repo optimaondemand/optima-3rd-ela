@@ -260,8 +260,8 @@
      ":scope > .key-concept",
      ":scope > .socratic-box"
     ],
-    "todo": "Listen to Opti. Keep his question in your head while you read.",
-    "script": "[warmly] There are no new chapters today. Instead, good readers look back over everything they've read. Think about both boys in Chapters 1 to 5. The prince has velvet clothes and a king for a father. Jemmy has rags, and he gets whipped for the prince's pranks. Which boy has the harder life? Do you feel sorry for either one? Think about why. You don't need to write anything."
+    "todo": "Listen to Opti. Then tap the lens you will use today.",
+    "script": "[warmly] There are no new chapters today. Instead, good readers look back over everything they've read. Think about both boys in Chapters 1 to 5. The prince has velvet clothes and a king for a father. Jemmy has rags, and he gets whipped for the prince's pranks. Which boy has the harder life? Do you feel sorry for either one? Think about why. Then tap one of the two lenses below to use while you look back. You don't need to write anything."
    },
    {
     "id": "dol",
@@ -360,5 +360,26 @@
    }
   ],
   "cards": {}
+ },
+ "virtue": {
+  "name": "courage",
+  "title": "Courage Watch: Did they show courage?",
+  "items": [
+   {
+    "t": "Jemmy takes twenty whacks without a sound.",
+    "ok": true,
+    "why": "He stays strong when it hurts."
+   },
+   {
+    "t": "The prince runs away because he is bored.",
+    "ok": false,
+    "why": "That is not a brave reason."
+   },
+   {
+    "t": "Jemmy tries to trick the outlaws to keep the prince safe.",
+    "ok": true,
+    "why": "He is scared, but he still tries to help."
+   }
+  ]
  }
 }

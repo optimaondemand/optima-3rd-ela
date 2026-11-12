@@ -396,6 +396,20 @@
 "grade": "3",
 "subject": "ela",
 "voice": "opti",
+"file": "assets/audio/guide/opti/g3ela-how-lens.mp3",
+"text": "Read the two lenses. Tap the one you will use today.",
+"key": "read the two lenses. tap the one you will use today",
+"chars": 52,
+"kind": "speech",
+"script_source": "tools/clip-log-extra.json",
+"bytes": 81116,
+"md5": "d9d5b4e4cf1daf7f8cca95c67798b398"
+},
+{
+"repo": "optima-3rd-ela",
+"grade": "3",
+"subject": "ela",
+"voice": "opti",
 "file": "assets/audio/guide/opti/g3ela-how-morph1.mp3",
 "text": "Read the four words and their parts. Think about the three questions. Then tap See what each part means. Last, type each whole word and tap Check My Answers.",
 "key": "read the four words and their parts. think about the three questions. then tap see what each part means. last, type each whole word and tap check my answers",
@@ -600,6 +614,20 @@
 "script_source": "tools/g3sparkle/how_wk18.json",
 "bytes": 123330,
 "md5": "5e8fe92c3444565cc79653131397fd14"
+},
+{
+"repo": "optima-3rd-ela",
+"grade": "3",
+"subject": "ela",
+"voice": "opti",
+"file": "assets/audio/guide/opti/g3ela-how-virtue.mp3",
+"text": "Read each moment. Tap Yes or Not yet.",
+"key": "read each moment. tap yes or not yet",
+"chars": 37,
+"kind": "speech",
+"script_source": "tools/clip-log-extra.json",
+"bytes": 86132,
+"md5": "a61de66522362806fd4bc0c24f004a0b"
 },
 {
 "repo": "optima-3rd-ela",

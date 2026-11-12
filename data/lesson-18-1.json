@@ -331,8 +331,8 @@
      ":scope > .key-concept",
      ":scope > .socratic-box"
     ],
-    "script": "[warmly] Here's a trick good readers use. They ask, who's in charge here? This book has a king, a spoiled prince, and a boy named Jemmy who has no power at all. So while you read, watch for three things. Who gives the orders? Who has to obey? And who gets punished when the prince does something wrong? You don't need to write anything. Just keep those questions in your head.",
-    "todo": "Listen to Opti. Keep his three questions in your head while you read."
+    "script": "[warmly] Here's a trick good readers use. They ask, who's in charge here? This book has a king, a spoiled prince, and a boy named Jemmy who has no power at all. Below are two lenses. One asks, who gives the orders? The other asks, who gets what? Tap the one you will use while you read. You don't need to write anything.",
+    "todo": "Listen to Opti. Then tap the lens you will use today."
    },
    {
     "id": "dol",
@@ -436,5 +436,26 @@
    "forbidden": "Forbidden. And it was forbidden to spank, thrash, cuff, smack, or whip a prince. Forbidden means not allowed. It's against the rules.",
    "defiantly": "Defiantly. Defiantly biting back every yelp and cry, the whipping boy received the twenty whacks. Defiantly means boldly refusing to give in. Jemmy won't cry, because that's what the prince wants."
   }
+ },
+ "virtue": {
+  "name": "courage",
+  "title": "Courage Watch: Did they show courage?",
+  "items": [
+   {
+    "t": "Jemmy gets twenty whacks for the prince's prank. He does not make a sound.",
+    "ok": true,
+    "why": "Jemmy is hurting, but he stays strong. That takes courage."
+   },
+   {
+    "t": "The prince ties the guests' wigs to their chairs, then hides behind a servant.",
+    "ok": false,
+    "why": "Playing a trick and hiding is not courage."
+   },
+   {
+    "t": "The prince tells the tutor to give Jemmy ten whacks, good and hard.",
+    "ok": false,
+    "why": "Getting someone else hurt is not brave at all."
+   }
+  ]
  }
 }

@@ -4306,6 +4306,111 @@ function buildSpotlight() {
   });
 }
 
+
+/* ══════════════════════════════════════════════════════════════
+   THE READING LENS, 3rd-grade size (Bethany, Nov 12 2026: two lenses, tap only;
+   it gets them ready for the 4th and 5th grade version).
+   What Good Readers Do keeps its own words; the first TWO "How to Do It" lines
+   (<li><strong>Lens:</strong> tip</li>) become two big cards. One tap picks a
+   lens; it then shows as a bookmark inside the Read box on the Reading tab.
+   Nothing to write.
+   ══════════════════════════════════════════════════════════════ */
+function g3ActByTitle(re) {
+  var t = [].slice.call(document.querySelectorAll('.activity-title')).filter(function (x) { return re.test(x.textContent); })[0];
+  return t ? t.closest('.activity') : null;
+}
+function buildLens3() {
+  var act = g3ActByTitle(/What Good Readers Do/i); if (!act) return;
+  var kc = [].slice.call(act.querySelectorAll('.key-concept')).filter(function (k) { return /How to Do It/i.test(k.textContent) && k.querySelector('ol li strong'); })[0];
+  if (!kc) return;
+  var lenses = [];
+  [].slice.call(kc.querySelectorAll('ol > li')).slice(0, 2).forEach(function (li) {
+    var st = li.querySelector('strong'); if (!st) return;
+    lenses.push({ name: st.textContent.replace(/[:\s]+$/, '').trim(),
+                  tip: li.textContent.slice(li.textContent.indexOf(st.textContent) + st.textContent.length).trim() });
+  });
+  if (lenses.length < 2) return;
+  kc.style.display = 'none'; kc.classList.add('g3-lens-src');
+  var todo = act.querySelector('.g3-do');
+  if (todo) { todo.innerHTML = '<b>What to do:</b> Read the two lenses. Tap the one you will use today.'; todo.setAttribute('data-say', 'lens'); }
+  var KEY = 'oao.g3ela.lens', all = Sparkle.get(KEY, {}), pick = all[LID];
+  var box = document.createElement('div'); box.className = 'g3-lens';
+  box.innerHTML = '<div class="g3-lens-h">🔍 Pick your reading lens</div><div class="g3-lens-row"></div><p class="g3-lens-said" aria-live="polite"></p>';
+  var row = box.querySelector('.g3-lens-row'), said = box.querySelector('.g3-lens-said');
+  lenses.forEach(function (L2, i) {
+    var b = document.createElement('button'); b.type = 'button'; b.className = 'g3-lens-card';
+    b.innerHTML = '<span class="g3-lens-n">' + (i + 1) + '</span><span class="g3-lens-name">' + esc(L2.name) + '</span><span class="g3-lens-tip">' + esc(L2.tip) + '</span>';
+    b.onclick = function () { pick = i; all[LID] = i; Sparkle.set(KEY, all); paint(); };
+    row.appendChild(b);
+  });
+  kc.parentNode.insertBefore(box, kc);
+  var mark = null;
+  function placeMark() {
+    if (mark) mark.remove();
+    var rd = g3ActByTitle(/^\W*(Read|Look Back)\b/i); if (!rd) return;
+    var body = rd.querySelector(':scope > .activity-body') || rd;
+    mark = document.createElement('div'); mark.className = 'g3-lens-mark';
+    var first = body.querySelector(':scope > .g3-do, :scope > .g3-todo');
+    if (first) first.parentNode.insertBefore(mark, first.nextSibling); else body.insertBefore(mark, body.firstChild);
+  }
+  function paint() {
+    var L2 = typeof pick === 'number' ? lenses[pick] : null;
+    [].forEach.call(row.children, function (b, j) { b.setAttribute('aria-pressed', j === pick ? 'true' : 'false'); });
+    said.textContent = L2 ? 'Your lens today: ' + L2.name + ' Think about it while you read.' : '';
+    placeMark(); if (!mark) return;
+    mark.innerHTML = L2 ? '<span class="g3-lens-mark-ico" aria-hidden="true">🔍</span><span><b>Your lens:</b> ' + esc(L2.name) + '</span>'
+                        : '<span class="g3-lens-mark-ico" aria-hidden="true">🔍</span><span><b>Pick your lens first.</b> It is in What Good Readers Do.</span>';
+  }
+  paint();
+  window.addEventListener('load', function () { setTimeout(paint, 900); });
+}
+
+/* ══════════════════════════════════════════════════════════════
+   COURAGE WATCH, 3rd-grade size: after the reading, three moments from
+   today's chapters. Tap Yes or Not yet: did they show the virtue?
+   Opti's short "why" shows after each tap. DATA.virtue =
+   { name, title, items:[{t, ok, why}] }. Taps go into My Work.
+   ══════════════════════════════════════════════════════════════ */
+function buildVirtue3() {
+  var V = DATA.virtue; if (!V || !V.items) return;
+  var KEY = 'oao.g3ela.virtue', all = Sparkle.get(KEY, {}), mine = all[LID] || {};
+  var card = document.createElement('div'); card.className = 'g3-virtue';
+  card.innerHTML = '<div class="g3-virtue-head"><span class="g3-virtue-ico" aria-hidden="true">🏮</span><div><div class="g3-virtue-k">After you read</div>' +
+    '<div class="g3-virtue-t">' + esc(V.title) + '</div></div></div>' +
+    '<p class="g3-do" data-say="virtue"><b>What to do:</b> Read each moment. Tap Yes or Not yet.</p>';
+  V.items.forEach(function (it, i) {
+    var r = document.createElement('div'); r.className = 'g3-virtue-row';
+    r.innerHTML = '<p class="g3-virtue-moment">' + esc(it.t) + '</p><div class="g3-virtue-btns"></div><p class="g3-virtue-fb" aria-live="polite"></p>';
+    var btns = r.querySelector('.g3-virtue-btns'), fb = r.querySelector('.g3-virtue-fb');
+    [[true, '👆 Yes'], [false, '👆 Not yet']].forEach(function (pr) {
+      var b = document.createElement('button'); b.type = 'button'; b.className = 'g3-virtue-btn'; b.textContent = pr[1];
+      b.onclick = function () { mine[i] = pr[0]; all[LID] = mine; Sparkle.set(KEY, all); show(); if (window.gatherAnswers) try { window.gatherAnswers(); } catch (e) {} };
+      btns.appendChild(b);
+    });
+    function show() {
+      if (mine[i] === undefined) return;
+      var right = mine[i] === it.ok;
+      [].forEach.call(btns.children, function (b, j) { b.setAttribute('aria-pressed', (j === 0) === mine[i] ? 'true' : 'false'); });
+      fb.className = 'g3-virtue-fb ' + (right ? 'ok' : 'no');
+      fb.textContent = (right ? '✓ Right! ' : 'Think again. ') + it.why;
+    }
+    card.appendChild(r); show();
+  });
+  var rd = g3ActByTitle(/^\W*(Read|Look Back)\b/i), panel = document.getElementById('tab-reading');
+  if (rd) rd.parentNode.insertBefore(card, rd.nextSibling);
+  else if (panel) panel.insertBefore(card, panel.querySelector(':scope > .tab-next-wrap'));
+  var _orig = window.gatherAnswers;
+  if (typeof _orig === 'function') window.gatherAnswers = function () {
+    var r = _orig.apply(this, arguments), out = document.getElementById('gatheredOutput');
+    if (out) {
+      var t = '';
+      V.items.forEach(function (it, i) { if (mine[i] !== undefined) t += (mine[i] === it.ok ? '✅ ' : '⬜ ') + it.t + '\n'; });
+      if (t) out.value += '\n🏮 ' + V.title.toUpperCase() + '\n────────────────\n' + t;
+    }
+    return r;
+  };
+}
+
 /* ── Opti reads the directions ──────────────────────────────────────
    Every "What to do:" line carries data-say="<slug>". A 🔊 in front of
    it plays Opti saying exactly those words:
@@ -4533,6 +4638,8 @@ function boot() {
     ['bookflip',    buildBookFlip],
     ['readalong',   buildReadAlong],
     ['spotlight',   buildSpotlight],
+    ['lens',        buildLens3],
+    ['virtue',      buildVirtue3],
     ['saydo',       buildSayDo],
     ['watch',       liftWatchBlock],
     ['media',       buildMedia],

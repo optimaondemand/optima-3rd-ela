@@ -252,8 +252,8 @@
      ":scope > .key-concept",
      ":scope > .socratic-box"
     ],
-    "todo": "Listen to Opti. Keep his question in your head while you read.",
-    "script": "[warmly] Here's today's reading tip. Good readers notice when a character makes a bad choice, and then watch what that choice causes. Today the prince decides to run away, and Jemmy has to go with him. As you read, ask yourself: whose idea was this, and whose fault is the trouble that follows? Keep that question in your head. You don't need to write anything."
+    "todo": "Listen to Opti. Then tap the lens you will use today.",
+    "script": "[warmly] Here's today's reading tip. Good readers notice when a character makes a bad choice, and then watch what that choice causes. Today the prince decides to run away, and Jemmy has to go with him. As you read, ask yourself: whose idea was this, and whose fault is the trouble that follows? Then tap one of the two lenses below, and use it while you read. You don't need to write anything."
    },
    {
     "id": "dol",
@@ -355,5 +355,26 @@
    "strayed": "Strayed. A thick fog had swirled in, they'd strayed from the road, and trees had closed in on them. Strayed means wandered off the path by mistake.",
    "cutthroat": "Cutthroat. A cutthroat! he thought. A cutthroat is a dangerous criminal who would do anything for money."
   }
+ },
+ "virtue": {
+  "name": "courage",
+  "title": "Courage Watch: Did they show courage?",
+  "items": [
+   {
+    "t": "The prince runs away from the castle because he is bored.",
+    "ok": false,
+    "why": "Being bored is not a brave reason to run away."
+   },
+   {
+    "t": "In the dark, foggy forest, Jemmy starts to slip away on his own.",
+    "ok": true,
+    "why": "Going off alone into a scary forest takes courage."
+   },
+   {
+    "t": "The prince tells Jemmy to get down and lead the horse through the fog.",
+    "ok": false,
+    "why": "Giving orders is not brave. Jemmy is the one walking into the fog."
+   }
+  ]
  }
 }
