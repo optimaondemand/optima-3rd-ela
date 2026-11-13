@@ -1,6 +1,6 @@
 import json, re, subprocess, sys
 sys.path.insert(0, '.')
-from specs_wk19 import V  # wk19 specs; it pulls in specs18 (week 18) too
+import os; V = __import__(os.environ.get("SPECS", "specs_wk19")).V  # SPECS=specs_wk20 python timeline.py ...
 scripts = json.load(open(sys.argv[1] if len(sys.argv) > 1 else '/tmp/vid/scripts.json'))
 def silences(f):
     o = subprocess.run(['ffmpeg','-hide_banner','-i',f,'-af','silencedetect=noise=-35dB:d=0.28','-f','null','-'],capture_output=True,text=True).stderr

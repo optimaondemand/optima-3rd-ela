@@ -8,8 +8,8 @@ from pocketsphinx import Decoder
 EXTRA = {  # words the bundled dictionary lacks (CMU phones)
     'ment': 'M EH N T', 'opti': 'AA P T IY', 'contrite': 'K AH N T R AY T', 'jemmy': 'JH EH M IY', 'inter': 'IH N T ER',
     'cutwater': 'K AH T W AO T ER', 'ish': 'IH SH', 'tle': 'T AH L', 'dle': 'D AH L', 'mulishness': 'M Y UW L IH SH N AH S',
-    'flummox': 'F L AH M AH K S', 'copia': 'K OW P IY AH', 'asper': 'AE S P ER', 'teleport': 'T EH L AH P AO R T', 'ruffian': 'R AH F IY AH N', 'pud': 'P UH D', "jemmy's": 'JH EH M IY Z', 'rupt': 'R AH P T', 'clod': 'K L AA D'}
-NUM = {'1': 'one', '2': 'two', '3': 'three', '4': 'four', '5': 'five', '6': 'six', '7': 'seven', '8': 'eight', '9': 'nine', '10': 'ten', '11': 'eleven', '12': 'twelve'}
+    'flummox': 'F L AH M AH K S', 'copia': 'K OW P IY AH', 'asper': 'AE S P ER', 'teleport': 'T EH L AH P AO R T', 'ruffian': 'R AH F IY AH N', 'pud': 'P UH D', "jemmy's": 'JH EH M IY Z', 'rupt': 'R AH P T', 'clod': 'K L AA D', 'preposition': 'P R EH P AH Z IH SH AH N', 'prepositions': 'P R EH P AH Z IH SH AH N Z', 'spect': 'S P EH K T', 'ger': 'G ER', 'tas': 'T AE S', 'hel': 'HH EH L', 'mudlarking': 'M AH D L AA R K IH NG', 'tic': 'T IH K', 'bur': 'B ER', 'cop': 'K AA P', 'por': 'P AO R', 'tant': 'T AH N T', 'im': 'IH M', 'ba': 'B EY', 'wilder': 'W IH L D ER'}
+NUM = {'1': 'one', '2': 'two', '3': 'three', '4': 'four', '5': 'five', '6': 'six', '7': 'seven', '8': 'eight', '9': 'nine', '10': 'ten', '11': 'eleven', '12': 'twelve', '13': 'thirteen', '14': 'fourteen', '15': 'fifteen'}
 def words(t): return [NUM.get(w, w) for w in re.sub(r"[^a-z0-9' ]+", ' ', t.lower().replace('-', ' ')).split() if w]
 def align(mp3, text):
     raw = subprocess.run(['ffmpeg', '-loglevel', 'error', '-i', mp3, '-ar', '16000', '-ac', '1', '-f', 's16le', '-'], capture_output=True).stdout

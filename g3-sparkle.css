@@ -1912,6 +1912,7 @@ html[data-spk-tab="reading"] .spk-notes-fab:not(.hide) { display:block; }
 
 /* ── Fill the Wagon (week 19) ── */
 .g3-wagon { flex:0 0 230px; margin:0 auto; }
+.g3-chase { flex:1 1 300px; max-width:340px; margin:0 auto; }
 .g3-wagon svg.g3-clink { animation:g3clink .45s ease-out; }
 @keyframes g3clink { 0% { transform:translateY(0); } 35% { transform:translateY(3px); } 100% { transform:translateY(0); } }
 .g3-wg-item { font-family:Lora,Georgia,serif; font-size:20px; line-height:1.45; color:#24324F; background:#FFFDF4; border:2px dashed #C7922C;
