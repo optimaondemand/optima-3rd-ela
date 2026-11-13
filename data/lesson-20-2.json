@@ -1,0 +1,403 @@
+{
+ "connector": "At the end of Chapter 12, the prince told Cutwater where Jemmy was hiding. Today Jemmy runs for it. Watch what Jemmy and the prince say to each other when the chase is over, and listen for a voice in the forest.",
+ "writingFocus": "conclusion",
+ "plate": {
+  "src": "art/wb/wb-pine-forest.jpg",
+  "alt": "A painting of bear cubs climbing a broken, fallen pine tree in a misty forest",
+  "credit": "Morning in a Pine Forest · Ivan Shishkin and Konstantin Savitsky, 1889 · Public domain",
+  "look": "Bear cubs on a fallen pine tree, painted in 1889. Ivan Shishkin painted the forest, and Konstantin Savitsky painted the bears. In Chapter 13, Jemmy runs through a forest like this one and finds something by an upturned tree.",
+  "lookBtn": "Tap to learn about this forest painting"
+ },
+ "dol": {
+  "a": {
+   "raw": "the prince stumbled through the dark tangled undergrowth",
+   "fixed": "<strong>T</strong>he prince stumbled through the dark<strong>,</strong> tangled undergrowth<strong>.</strong>",
+   "why": "The starts the sentence, so it gets a capital T. Dark and tangled both describe the undergrowth, so a comma goes between them. A period ends it."
+  },
+  "b": {
+   "raw": "jemmy pushed through the thick thorny brambles",
+   "fixed": "<strong>J</strong>emmy pushed through the thick<strong>,</strong> thorny brambles<strong>.</strong>",
+   "why": "Jemmy starts the sentence and is a name, so it gets a capital J. Thick and thorny both describe the brambles, so a comma goes between them. A period ends it."
+  }
+ },
+ "miss": {
+  "match": {
+   "instinct": "Instinct is acting without stopping to think. Look for that meaning.",
+   "foliage": "Foliage is something you find in a forest. Look for the meaning about leaves.",
+   "tilt": "Jemmy ran at full tilt. Look for the meaning about going fast.",
+   "bramble": "Brambles tear the boys’ clothes. Look for the meaning about a thorny bush."
+  }
+ },
+ "flags": {
+  "journal-q1": {
+   "quote": false,
+   "count": 3
+  },
+  "journal-q2": {
+   "quote": true,
+   "count": 1
+  },
+  "journal-q3": {
+   "quote": false,
+   "count": 2
+  }
+ },
+ "scholar": {
+  "journal-q1": "… and tell what animal Jemmy meets in the clearing.",
+  "journal-q2": "… and tell what Jemmy says back to the prince.",
+  "journal-q3": "… and tell who Petunia is."
+ },
+ "wordgame": {
+  "type": "chase",
+  "title": "The Chase",
+  "sub": "Every right answer moves Jemmy one step closer to the hollow tree.",
+  "todo": "Read the question. Tap the answer you think is right. A right answer moves Jemmy one step closer to the hollow tree.",
+  "win": "Today’s 8 steps are done. Come back next lesson to keep running.",
+  "winWeek": "Jemmy dove into the hollow tree. Cutwater ran right past!",
+  "look": "In Chapter 13, Jemmy runs through the forest with Cutwater close behind. The stones are the path. Every right answer moves Jemmy one stone, and Cutwater stays three stones back. You run 8 stones each day this week. On Day 4 Jemmy reaches the hollow tree.",
+  "items": [
+   {
+    "title": "Where, when, or how?",
+    "q": "Jemmy ran <b>through the tangle</b>. What does <b>through the tangle</b> tell you?",
+    "opts": [
+     "where",
+     "when",
+     "how"
+    ],
+    "a": 0,
+    "why": "The tangle is a place in the forest. It tells where.",
+    "miss": {
+     "1": "Is the tangle a time? It is a place.",
+     "2": "It is not the way he ran. It is a place."
+    }
+   },
+   {
+    "title": "How many?",
+    "q": "How many prepositions? <i>Betsy came from the woods with a coil of rope.</i>",
+    "opts": [
+     "1",
+     "2",
+     "3"
+    ],
+    "a": 2,
+    "why": "From the woods, with a coil, of rope: three.",
+    "miss": {
+     "0": "Look again. Find from, with, and one more small word.",
+     "1": "Look again. There is one more small word after coil."
+    }
+   },
+   {
+    "title": "Find the preposition",
+    "q": "Which word is the preposition? <i>The prince followed Jemmy into the brambles.</i>",
+    "opts": [
+     "followed",
+     "into",
+     "brambles"
+    ],
+    "a": 1,
+    "why": "Into sits in front of the brambles and tells where.",
+    "miss": {
+     "0": "Followed is what the prince did. Look for the small word in front of the brambles.",
+     "2": "Brambles is a noun. Look for the small word in front of it."
+    }
+   },
+   {
+    "title": "Where, when, or how?",
+    "q": "The soldiers rode <b>along the river road</b>. What does it tell you?",
+    "opts": [
+     "where",
+     "when",
+     "how"
+    ],
+    "a": 0,
+    "why": "The river road is a place. It tells where.",
+    "miss": {
+     "1": "Is the river road a time? It is a place.",
+     "2": "It is not the way they rode. It is a place."
+    }
+   },
+   {
+    "title": "The root spect",
+    "q": "A <b>prospector</b> searches rivers and hills for gold. Which part of the word tells you he looks?",
+    "opts": [
+     "pro",
+     "spect",
+     "or"
+    ],
+    "a": 1,
+    "why": "Spect means look. A prospector looks for gold.",
+    "miss": {
+     "0": "Pro is at the front. Find the root that means look.",
+     "2": "Or means a person who. Find the root that means look."
+    }
+   },
+   {
+    "title": "Soft or hard?",
+    "q": "Say <b>cent</b>. Is the c soft or hard?",
+    "opts": [
+     "soft, like s",
+     "hard, like k"
+    ],
+    "a": 0,
+    "why": "The next letter is e, so the c is soft. Cent sounds like sent.",
+    "miss": {
+     "1": "Look at the letter after the c. It is e."
+    }
+   },
+   {
+    "title": "Soft or hard?",
+    "q": "Say <b>goose</b>. Is the g soft or hard?",
+    "opts": [
+     "soft, like j",
+     "hard, like g in go"
+    ],
+    "a": 1,
+    "why": "The next letter is o, so the g stays hard.",
+    "miss": {
+     "0": "Look at the letter after the g. It is o, not e, i, or y."
+    }
+   },
+   {
+    "title": "Count the beats",
+    "q": "Which word has three beats?",
+    "opts": [
+     "forest",
+     "banana",
+     "outlaw"
+    ],
+    "a": 1,
+    "why": "ba · na · na: three beats.",
+    "miss": {
+     "0": "Clap it: for, est. Two beats.",
+     "2": "Clap it: out, law. Two beats."
+    }
+   }
+  ]
+ },
+ "glossary": [
+  {
+   "w": "whipping boy",
+   "cs": true,
+   "m": "a boy kept in the castle to be punished whenever the prince does something wrong"
+  },
+  {
+   "w": "ransom",
+   "m": "money that kidnappers ask for before they let someone go"
+  },
+  {
+   "w": "preposition",
+   "m": "a small word in front of a noun that tells where, when, or how, like under, after, or with"
+  },
+  {
+   "w": "root",
+   "m": "the main part of a word. Other parts are added to the front or the end."
+  },
+  {
+   "w": "syllable",
+   "m": "one beat in a word. Im-por-tant has three."
+  },
+  {
+   "w": "conclusion",
+   "m": "the last sentence of a paragraph. It says your big idea in a new way."
+  },
+  {
+   "w": "claim",
+   "m": "the opinion your paragraph sets out to prove"
+  }
+ ],
+ "sayWords": [
+  "instinct",
+  "foliage",
+  "tilt",
+  "bramble"
+ ],
+ "transcripts": {
+  "welcome": "Welcome back, it’s Opti. The prince just gave away Jemmy’s hiding place. Now Jemmy has one chance, and he takes it. Today there’s a chase, a big surprise in a clearing, and an argument. As you read, ask yourself: does the prince have a point?",
+  "guide1": "Word study. You’ll match more words with the root that means look, and you’ll hunt for prepositions. Most sentences have more than one. There’s a bonus too: c and g can make two different sounds.",
+  "guide2": "Before you read: Chapter 13 moves fast, so hang on. After the chase, the boys argue. Listen to both sides. Then in Chapter 14, a girl comes through the woods calling for someone named Petunia.",
+  "guide3": "A strong ending gives your reader something to think about. Today, try ending with a question, or a challenge. Make it sound finished."
+ },
+ "notes": {
+  "wordParts": "The root spect means “look.” inspect = look closely into, spectator = one who looks on, respect = look again with care, inspector = one whose job is to look.",
+  "grammar": "A preposition sits in front of a noun and ties it to the sentence. It can tell where (under the straw), when (after the storm), or how (with great care).",
+  "spelling": "To read a long word, split it into beats: im·por·tant. The letters c and g go soft before e, i, or y: city, giant. Before other letters they stay hard: cave, goat.",
+  "wgrd": "Good readers notice what characters say and how they say it. When two characters argue, each one may have a point.",
+  "vocab": [
+   [
+    "instinct",
+    "a natural way of acting without stopping to think"
+   ],
+   [
+    "foliage",
+    "thick leaves and branches"
+   ],
+   [
+    "tilt",
+    "at full tilt means as fast as you can go"
+   ],
+   [
+    "bramble",
+    "a prickly, thorny bush"
+   ]
+  ]
+ },
+ "teach": {
+  "dropTurnNotes": true,
+  "mods": [
+   {
+    "id": "wgrd",
+    "find": "What Good Readers",
+    "fold": [
+     ":scope > p:not(.g3-do)",
+     ":scope > .key-concept",
+     ":scope > .socratic-box"
+    ],
+    "todo": "Listen to Opti. Then tap the lens you will use today.",
+    "script": "[warmly] Here's today's reading tip. When two people argue, listen to both sides. After the chase in Chapter 13, Jemmy and the prince argue. Jemmy is furious. But the prince has something to say too. Ask yourself: does each boy have a point? Then tap one of the two lenses below to use while you read. You don't need to write anything."
+   },
+   {
+    "id": "dol",
+    "find": "Daily Oral",
+    "fold": [],
+    "todo": "Tap the yellow parts. Then pick Sentence A or B and type it the right way.",
+    "script": "Let's fix a sentence. The correct one is from Chapter 13: Jemmy vanished into the wild green tangle. Jemmy is a name, so it starts with a capital. A period ends it. Now look at the sentence to fix. Dark and tangled both describe the same thing, so they need a comma between them. Tap the yellow parts. Then pick Sentence A or Sentence B, and type it the right way."
+   },
+   {
+    "id": "poem",
+    "find": "Poetry",
+    "fold": [
+     ":scope > .callout",
+     ":scope > .socratic-box"
+    ],
+    "todo": "Read the poem out loud and count its lines. Then give two reasons it is not a haiku.",
+    "script": "Here's a short poem about a little turtle. Is it a haiku? Let's check. A haiku has three lines: five beats, then seven, then five. And a haiku doesn't rhyme. Read the turtle poem out loud. Count the lines. Then listen to the ends of the lines. Do any of them rhyme? Now give two reasons it is not a haiku."
+   },
+   {
+    "id": "morph",
+    "find": "Morphology",
+    "fold": [
+     ":scope > .callout:not(:has(+ .match-game))",
+     ":scope > .key-concept"
+    ],
+    "todo": "Tap a word, then tap what it means. Match all four words.",
+    "script": "Quick reminder: spect means look. Now try a new one. Spectacular. Find spect. The fireworks were spectacular. So amazing that everybody had to look! Do the same with each word on the left. Find spect, look at the parts around it, then tap the meaning that fits.",
+    "video": "g3ela-20-2-teach-morph"
+   },
+   {
+    "id": "vocab",
+    "find": "Vocabulary",
+    "fold": [
+     ":scope > .g3-model-h",
+     ":scope > .decode-steps"
+    ],
+    "todo": "Listen to each card. Guess the meaning, then flip the card. Then play the matching game.",
+    "script": "Here's instinct, from Chapter 13. Jemmy acted on instinct. He didn't stop to think. He just ran! Instinct is what you do before your brain catches up. Listen to each card, guess the meaning, then flip it. Then match all four.",
+    "video": "g3ela-20-2-teach-vocab"
+   },
+   {
+    "id": "gram",
+    "find": "Grammar",
+    "fold": [
+     ":scope > .callout:not(:has(+ .spotter-game)):not(:has(+ .fillin-game)):not(:has(+ .sort-game)):not(:has(+ .dol-check-btn))"
+    ],
+    "todo": "Tap Check yourself. Then tap every preposition in each sentence. Last, answer the question in the box.",
+    "script": "Sentences love prepositions. Listen. The prince ran across the clearing to the edge of the woods. Across. To. Of. Three! Tap Check yourself. Then tap every preposition in each sentence. Keep going until you find them all.",
+    "video": "g3ela-20-2-teach-gram"
+   },
+   {
+    "id": "spell",
+    "find": "^\\s*\\S*\\s*Spelling: Multi",
+    "fold": [
+     ":scope > .socratic-box"
+    ],
+    "foldText": [
+     "^\\s*👂",
+     "^\\s*This week:",
+     "The Rule:",
+     "^\\s*Sort and explain"
+    ],
+    "todo": "Say each word and clap its beats. In each row, tap the word with three syllables.",
+    "script": "Clap this word: ham, bur, ger. Hamburger. Three beats! In each row, three words have two beats, and one word has three. Clap every word out loud, then tap the one with three beats.",
+    "video": "g3ela-20-2-teach-spell"
+   },
+   {
+    "id": "spell2",
+    "find": "Spelling Bonus",
+    "fold": [],
+    "todo": "Say the eight words. Tap Now name the pattern. Then sort each word: soft or hard.",
+    "script": "Here's a bonus. Say these two words: cat, and city. Both start with c. But they don't sound the same! The letter after the c is the clue. When c or g comes right before e, i, or y, it goes soft. C says s, and g says j. Before any other letter, they stay hard. Say the eight words in the sort, and think about the questions. Tap Now name the pattern. Then sort each word."
+   },
+   {
+    "id": "spotlight",
+    "find": "Character Spotlight",
+    "fold": [
+     ":scope > .socratic-box"
+    ],
+    "script": "Think about this before you read. The prince gave Jemmy away. Then, after the chase, the prince says, Then I forgive you. Forgive Jemmy? For what? Watch both boys while they argue. Each one thinks he is the one who got wronged."
+   },
+   {
+    "id": "read",
+    "find": "^\\s*\\S*\\s*Read:",
+    "fold": [],
+    "todo": "Read the two questions. Then read Ch. 13–14 in your book.",
+    "script": "Time to read Chapters 13 and 14. First, read the two Pause and Think questions below. Chapter 13 moves fast, so hang on. After the chase, listen to both sides of the argument. In Chapter 14, a girl comes through the woods calling for someone named Petunia. Then watch my video in the Read Like a Writer box before you try it."
+   },
+   {
+    "id": "rwm",
+    "sel": ".rwm-box",
+    "after": ":scope > .rwm-header",
+    "label": "Opti shows you how",
+    "fold": [],
+    "script": "[warmly] Read Like a Writer has three parts. Let me show you with a different sentence, from Chapter 14. Brambles, reaching out like cat's claws, tore at their fine garments. Part one, read like a reader. What is happening? The boys push through thorny bushes, and the thorns rip their fancy clothes. Part two, read like a writer. What does the author do? He says the brambles are like cat's claws, so we can almost feel the scratch. Part three, mimic. Here's mine: The snow, stinging like tiny bees, bit at my cheeks. Now it's your turn with the chase sentence. Write one sentence in each box.",
+    "video": "g3ela-20-2-teach-rwm"
+   },
+   {
+    "id": "chq",
+    "find": "Chapter Thinking",
+    "fold": [],
+    "todo": "Pick Explorer or Scholar. Answer the three questions in full sentences.",
+    "script": "Now answer in full sentences, with details from the book. One, tell Jemmy's escape step by step: how he gets out of the hut, what he does in the forest, and where he hides. Two, what does the prince say when Jemmy says, You betrayed me? Three, who is Betsy looking for, and which way does she point? For a challenge, pick Scholar, and add one more detail to each answer."
+   },
+   {
+    "id": "write",
+    "find": "Writer.s Workshop",
+    "fold": [
+     ":scope > .callout"
+    ],
+    "foldText": [
+     "watch how",
+     "today.s tool"
+    ],
+    "todo": "Write your conclusion again. End with a question or a challenge.",
+    "script": "Endings matter. Listen to Clara's first conclusion. It's fine, but it doesn't make you think. Her new one ends with a question: if no one ever teaches a prince to care about others, what kind of king will he become? Now that's an ending! Write your conclusion again. End with a question, or a challenge that starts with, If he never learns."
+   }
+  ],
+  "cards": {
+   "instinct": "Instinct. A thoroughbred of the streets, Jemmy acted on instinct. Instinct is doing something without stopping to think.",
+   "foliage": "Foliage. Jemmy turned to the right and beat his way back into the foliage. Foliage means the leaves and branches of plants.",
+   "tilt": "Tilt. Jemmy covered the ground at full tilt. At full tilt means as fast as you can go.",
+   "bramble": "Bramble. Brambles, reaching out like cat's claws, tore at their fine garments. A bramble is a prickly, thorny bush."
+  }
+ },
+ "virtue": {
+  "name": "courage",
+  "title": "Courage Watch: Did they show courage?",
+  "items": [
+   {
+    "t": "Jemmy bursts out of the straw and runs for the door before Cutwater can grab him.",
+    "ok": true,
+    "why": "He moves fast, even with an outlaw right there."
+   },
+   {
+    "t": "The prince tells Jemmy, “Then I forgive you,” when it was the prince who gave Jemmy away.",
+    "ok": false,
+    "why": "Forgiving someone for being angry with you is not courage."
+   },
+   {
+    "t": "Jemmy steps out of the trees and asks Betsy, a stranger, which way to the river.",
+    "ok": true,
+    "why": "He doesn’t know who she is, but he speaks up to get help."
+   }
+  ]
+ }
+}
