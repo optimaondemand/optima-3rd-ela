@@ -349,7 +349,8 @@
      ":scope > .socratic-box"
     ],
     "script": "Long words are often built from smaller parts, like a castle is built from stones. Today's parts are inter and sub. Think of the internet. It connects computers between each other. Now think of a subway. It's a train that runs under the city. So inter means between, and sub means under. Tap See what each part means to check. Then put the parts together, and type each whole word.",
-    "todo": "Tap See what each part means. Then type each whole word."
+    "todo": "Tap See what each part means. Then type each whole word.",
+    "video": "g3ela-18-1-teach-morph"
    },
    {
     "id": "vocab",
@@ -359,7 +360,8 @@
      ":scope > .decode-steps"
     ],
     "script": "When you meet a word you don't know, don't skip it. Be a word detective. Let's try exasperation. First, read the sentence around it. The prince is pretending to be sorry, but inside, something is building up toward Jemmy. Next, look at the parts. Asper means rough. So exasperation is a rough, fed-up feeling, like when someone won't stop poking you. Now tap Opti reads it on each card, guess what the word means, and flip the card to check. Then play the matching game.",
-    "todo": "Listen to each card. Guess the meaning, then flip the card. Then play the matching game."
+    "todo": "Listen to each card. Guess the meaning, then flip the card. Then play the matching game.",
+    "video": "g3ela-18-1-teach-vocab"
    },
    {
     "id": "gram",
@@ -368,7 +370,8 @@
      ":scope > .callout:not(:has(+ .sort-game))"
     ],
     "script": "Some little words do a big job. And, but, and so are joining words. They glue two ideas into one sentence. And adds one more idea: I'm hungry and I'm tired. But shows a difference: I'm hungry, but there's no food. So shows what happens next: I'm hungry, so I'll eat. Find the joining word in Jemmy's sentence. Then tap each sentence and drop it in and, but, or so. Say it out loud with each word to hear which one fits.",
-    "todo": "Find the joining word. Then sort the sentences. Then write three of your own."
+    "todo": "Find the joining word. Then sort the sentences. Then write three of your own.",
+    "video": "g3ela-18-1-teach-gram"
    },
    {
     "id": "spell",
@@ -377,7 +380,8 @@
      ":scope > .callout:not(:has(+ .sort-game))"
     ],
     "script": "Some vowels like to work in pairs. When two vowels sit side by side in one beat and make one sound, we call them a vowel team. In feast, the e and the a team up to say ee. In groan, the o and the a say oh. Say each word out loud and clap the beats. Then tap Now name the pattern. Last, sort the words. Two vowels side by side? That's a team.",
-    "todo": "Tap Now name the pattern. Then say each word, clap its beats, and sort it."
+    "todo": "Tap Now name the pattern. Then say each word, clap its beats, and sort it.",
+    "video": "g3ela-18-1-teach-spell"
    },
    {
     "id": "copia",

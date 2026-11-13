@@ -290,7 +290,8 @@
      "Before you roll"
     ],
     "todo": "Tap Roll the Dice. Say what the word means. Tap Check My Thinking. Roll all six words.",
-    "script": "Let's play with inter and sub one more time. Before you roll, say it out loud: inter means between, sub means under. Tap Roll the Dice. When a word comes up, find its first part, and say what the whole word means. Then tap Check My Thinking to see if you were right. Keep rolling until you've done all six words."
+    "script": "Let's play with inter and sub one more time. Before you roll, say it out loud: inter means between, sub means under. Tap Roll the Dice. When a word comes up, find its first part, and say what the whole word means. Then tap Check My Thinking to see if you were right. Keep rolling until you've done all six words.",
+    "video": "g3ela-18-4-teach-morph"
    },
    {
     "id": "vocab",
@@ -300,7 +301,8 @@
      ":scope > .decode-steps"
     ],
     "todo": "Fill in each sentence with a word from the word bank. Tap Check My Work. Then play the matching game.",
-    "script": "This week you met lots of new words. Today you'll use four of them. Let's start with contrite. The prince lowered his head so as to appear humbled and contrite. He's trying to look sorry. So contrite means truly sorry for something you did wrong. Now the others. Astonishment means great surprise. A ruffian is a rough, mean bully. And exasperation is a fed-up feeling that keeps building. Fill in each sentence from the word bank, then tap Check My Work."
+    "script": "This week you met lots of new words. Today you'll use four of them. Let's start with contrite. The prince lowered his head so as to appear humbled and contrite. He's trying to look sorry. So contrite means truly sorry for something you did wrong. Fill in each sentence from the word bank, then tap Check My Work.",
+    "video": "g3ela-18-4-teach-vocab"
    },
    {
     "id": "gram",
@@ -309,7 +311,8 @@
      ":scope > .callout:not(:has(+ .spotter-game)):not(:has(+ .fillin-game)):not(:has(+ .sort-game)):not(:has(+ .dol-check-btn))"
     ],
     "todo": "Tap the wrong joining word, or tap No mistake. Then answer the question in the box.",
-    "script": "Today you're the teacher, checking someone else's work. Some of these sentences use the wrong joining word. Remember: and adds an idea, but shows a difference, and so shows what happens because of something. Read each sentence out loud. If the joining word doesn't match the meaning, tap it. If the sentence is right, tap No mistake. Then tell which sentence had no mistake, and how you knew."
+    "script": "Today you're the teacher, checking someone else's work. Some of these sentences use the wrong joining word. Read each sentence out loud. If the joining word doesn't match the meaning, tap it. If the sentence is right, tap No mistake. Then tell which sentence had no mistake, and how you knew.",
+    "video": "g3ela-18-4-teach-gram"
    },
    {
     "id": "spell",
@@ -321,7 +324,8 @@
      "The Rule:"
     ],
     "todo": "Tap Roll the dice. Say the word and split it. Tap Check my answer. Roll all six words.",
-    "script": "Let's roll some vowel team words. Tap Roll the dice. When a word comes up, say it out loud and clap the syllables. Find the vowel team, and remember, the team never splits. Meadow: mead, ow. Then tap Check my answer to see if you split it the right way. Keep rolling until you've done all six words."
+    "script": "Let's roll some vowel team words. Tap Roll the dice. When a word comes up, say it out loud and clap the syllables. Find the vowel team, and remember, the team never splits. Meadow: mead, ow. Then tap Check my answer to see if you split it the right way.",
+    "video": "g3ela-18-4-teach-spell"
    },
    {
     "id": "spotlight",

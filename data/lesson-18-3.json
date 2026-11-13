@@ -341,7 +341,8 @@
      ":scope > .key-concept"
     ],
     "todo": "Type the whole word in each box. Then tap Check My Answers.",
-    "script": "Today you'll build words from their parts. Remember, inter means between, and sub means under. Say each pair of parts out loud, then say them together as one word. Inter, rupt: interrupt. Hear how the parts snap together? Type the whole word in each box, then tap Check My Answers. Look at the little meaning next to each one. It tells you what you just built."
+    "script": "Today you'll build words from their parts. Remember, inter means between, and sub means under. Say each pair of parts out loud, then say them together as one word. Inter, rupt: interrupt. Hear how the parts snap together? Type the whole word in each box, then tap Check My Answers. Look at the little meaning next to each one. It tells you what you just built.",
+    "video": "g3ela-18-3-teach-morph"
    },
    {
     "id": "vocab",
@@ -351,7 +352,8 @@
      ":scope > .decode-steps"
     ],
     "todo": "Fill in each sentence with a word from the word bank. Tap Check My Work. Then play the matching game.",
-    "script": "Here's a word from Chapter 5: ruffian. The prince calls Billy a clod and a ruffian. He's insulting him, so a ruffian must be someone rough and rude. Ruffian has no parts to help, so the sentence does the work. A ruffian is a rough, violent person, a bully. Now the other words in the word bank. An exploit is a bold, daring act. An heir is the person who will be king one day. And a ransom is money demanded to set a prisoner free. Fill in each sentence, then tap Check My Work."
+    "script": "Here's a word from Chapter 5: ruffian. The prince calls Billy a clod and a ruffian. He's insulting him, so a ruffian must be someone rough and rude. Ruffian has no parts to help, so the sentence does the work. A ruffian is a rough, violent person, a bully. Now the other words in the word bank. An exploit is a bold, daring act. An heir is the person who will be king one day. And a ransom is money demanded to set a prisoner free. Fill in each sentence, then tap Check My Work.",
+    "video": "g3ela-18-3-teach-vocab"
    },
    {
     "id": "gram",
@@ -360,7 +362,8 @@
      ":scope > .callout:not(:has(+ .spotter-game)):not(:has(+ .fillin-game)):not(:has(+ .sort-game)):not(:has(+ .dol-check-btn))"
     ],
     "todo": "Type and, but, or so in each blank. Tap Check My Answers. Then write a sentence that uses but.",
-    "script": "Today you'll do the joining yourself. Each pair has two short sentences. Glue them into one with and, but, or so. Ask yourself: am I adding an idea? Use and. Are the two ideas different, or surprising? Use but. Does the first thing cause the second? Use so. Read each one out loud with the word you picked. Then tap Check My Answers, and write your own sentence about Chapter 5 that uses but."
+    "script": "Today you'll do the joining yourself. Each pair has two short sentences. Glue them into one with and, but, or so. Ask yourself: am I adding an idea? Use and. Are the two ideas different, or surprising? Use but. Does the first thing cause the second? Use so. Read each one out loud with the word you picked. Then tap Check My Answers, and write your own sentence about Chapter 5 that uses but.",
+    "video": "g3ela-18-3-teach-gram"
    },
    {
     "id": "spell",
@@ -372,7 +375,8 @@
      "The Rule:"
     ],
     "todo": "Find the vowel team in each word. Then tap the word to split it.",
-    "script": "Remember vowel teams? Two vowels side by side making one sound. Here's today's rule: when you split a word into syllables, never split the team. The team always stays together. Rain, bow. Sea, son. Look at each word, find the vowel team, and think about where the split goes. Then tap the word to check. The split goes between the syllables, never through the team."
+    "script": "Here's today's rule: when you split a word into syllables, never split the team. The team always stays together. Rain, bow. Sea, son. Look at each word, find the vowel team, and think about where the split goes. Then tap the word to check.",
+    "video": "g3ela-18-3-teach-spell"
    },
    {
     "id": "spotlight",

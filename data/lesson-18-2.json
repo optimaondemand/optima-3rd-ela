@@ -280,7 +280,8 @@
      ":scope > .key-concept"
     ],
     "todo": "Tap a word, then tap what it means. Match all four words.",
-    "script": "You already know two word parts. Inter means between, like the internet connecting computers. Sub means under, like a subway under the city. When you see a long word, find the part at the start first, then read the rest. Tap a word in the game, then tap what it means. If you're stuck, look at the first part of the word. It gives you a big clue."
+    "script": "When you see a long word, find the part at the start first, then read the rest. Tap a word in the game, then tap what it means. If you're stuck, look at the first part of the word. It gives you a big clue.",
+    "video": "g3ela-18-2-teach-morph"
    },
    {
     "id": "vocab",
@@ -290,7 +291,8 @@
      ":scope > .decode-steps"
     ],
     "todo": "Listen to each card. Guess the meaning, then flip the card. Then play the matching game.",
-    "script": "Let's be word detectives again. Here's astonishment. Read the sentence: Jemmy stared at him with dreadful astonishment. Jemmy just heard something he never expected. Now look at the parts. Astonish means to surprise, and ment turns it into a thing. So astonishment is a feeling of great surprise. Now tap Opti reads it on each card, guess the meaning, and flip the card to check. Then play the matching game."
+    "script": "Let's be word detectives again. Here's astonishment. Read the sentence: Jemmy stared at him with dreadful astonishment. Jemmy just heard something he never expected. Now look at the parts. Astonish means to surprise, and ment turns it into a thing. So astonishment is a feeling of great surprise.",
+    "video": "g3ela-18-2-teach-vocab"
    },
    {
     "id": "gram",
@@ -299,7 +301,8 @@
      ":scope > .callout:not(:has(+ .spotter-game)):not(:has(+ .fillin-game)):not(:has(+ .sort-game)):not(:has(+ .dol-check-btn))"
     ],
     "todo": "Tap the joining word, then the part after it. Then write one sentence with a new joining word.",
-    "script": "Joining words are back, and today you're a joining-word spotter. Remember: and adds an idea, but shows a difference, and so shows what happens next. In each sentence, first tap the joining word. Then tap the part of the sentence that comes after it. That part is the new idea the joining word brings in. Last, pick one sentence and write it again with a different joining word. Notice how the meaning changes."
+    "script": "Joining words are back, and today you're a joining-word spotter. In each sentence, first tap the joining word. Then tap the part of the sentence that comes after it. That part is the new idea the joining word brings in. Last, pick one sentence and write it again with a different joining word. Notice how the meaning changes.",
+    "video": "g3ela-18-2-teach-gram"
    },
    {
     "id": "spell",
@@ -311,7 +314,8 @@
      "The Rule:"
     ],
     "todo": "Tap every word in the two sentences that has a vowel team.",
-    "script": "Let's go hunting for vowel teams. A vowel team is two vowels side by side that make one sound, like the o and a in coach, or the e and a in feast. The team always stays together. Read the two sentences slowly. Every time you see two vowels working together, tap that word. There's more than one, so keep looking until the game says you found them all."
+    "script": "Let's go hunting for vowel teams. Read the two sentences slowly. Every time you see two vowels working together, tap that word. There's more than one, so keep looking until the game says you found them all.",
+    "video": "g3ela-18-2-teach-spell"
    },
    {
     "id": "spotlight",
@@ -327,6 +331,15 @@
     "fold": [],
     "todo": "Read the two questions. Then read Ch. 3–4 in your book.",
     "script": "Time to read Chapters 3 and 4 in your book. First, read the two Pause and Think questions below, so you know where to stop. In Chapter 3, look for the prince's real reason for running away. In Chapter 4, a thick fog rolls in and two strangers appear. Ask yourself who Jemmy thinks they are, and why he's so scared. Stop at each question, think of your answer, and keep reading."
+   },
+   {
+    "id": "rwm",
+    "sel": ".rwm-box",
+    "after": ":scope > .rwm-header",
+    "label": "Opti shows you how",
+    "fold": [],
+    "script": "[warmly] Here's how Read Like a Writer works. I'll do one first, with a different sentence from Chapter 4. Like a snake striking, a ghostly hand darted through the fog and clutched his arm. Part one, read like a reader. What is happening? Someone in the fog grabs Jemmy, fast. Part two, read like a writer. What is the author doing? He says the hand moves like a snake striking, so we feel how quick and scary it is. Part three, mimic. Here's mine: Like a cat pouncing, my little sister grabbed the last cookie. Now it's your turn with the fog sentence. Write one sentence in each box.",
+    "video": "g3ela-18-2-teach-rwm"
    },
    {
     "id": "chq",
