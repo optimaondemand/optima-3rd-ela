@@ -4477,6 +4477,26 @@ function ttsSay(text, btn) {
   audioStopAll(); btn.classList.add('on'); _ttsBtn = btn; speechSynthesis.speak(u);
 }
 /* the player: Opti + one big button, real clip if it is there */
+/* Opti video (Nov 13 2026, week 19 pilot): a teach mod with `video`
+   shows Opti's short film (assets/video/<video>.mp4 + .jpg poster, same
+   recorded clip as the button) in place of the button. If the film
+   can't load, the button comes back, so nothing is lost. */
+function teachVideo(m) {
+  var src = (window.G3_VIDEO_SRC && window.G3_VIDEO_SRC[m.video]) || ('assets/video/' + m.video + '.mp4');
+  var poster = (window.G3_VIDEO_POSTER && window.G3_VIDEO_POSTER[m.video]) || ('assets/video/' + m.video + '.jpg');
+  var row = document.createElement('div'); row.className = 'g3-teach g3-teach-video';
+  row.innerHTML = '<div class="g3-teach-vk"><span class="g3-teach-face" aria-hidden="true">' + owlSVG('opti', 34) + '</span>' +
+    '<span><b>Watch Opti first.</b> Then do the activity.</span></div>';
+  var v = document.createElement('video'); v.className = 'g3-teach-v'; v.controls = true; v.preload = 'metadata';
+  v.setAttribute('playsinline', ''); v.poster = poster;
+  v.addEventListener('play', function () { if (window.speechSynthesis) speechSynthesis.cancel(); if (typeof audioStopAll === 'function') audioStopAll(); });
+  v.addEventListener('error', function () {
+    var b = teachPlayer(m.label || 'Opti teaches this', teachSrc('teach', m.id), m.script);
+    if (row.parentNode) row.parentNode.replaceChild(b, row);
+  });
+  v.src = src; row.appendChild(v);
+  return row;
+}
 function teachPlayer(label, src, text, cls) {
   /* One button. It plays Opti's recorded clip when the file is there;
      until it is, the browser reads Opti's words aloud instead, so the
@@ -4534,14 +4554,15 @@ function applyTeach(T) {
   (T.mods || []).forEach(function (m) {
     var mod = findMod(m); if (!mod) return;
     var body = mod.querySelector('.activity-body, .spk-card-body') || mod;
-    var row = m.script ? teachPlayer(m.label || 'Opti teaches this', teachSrc('teach', m.id), m.script) : null;
+    var row = m.script ? (m.video ? teachVideo(m) : teachPlayer(m.label || 'Opti teaches this', teachSrc('teach', m.id), m.script)) : null;
     var folds = [];
     (m.fold || []).forEach(function (s) { body.querySelectorAll(s).forEach(function (e) { if (folds.indexOf(e) < 0) folds.push(e); }); });
     (m.foldText || []).forEach(function (rx) {
       var re = new RegExp(rx, 'i');
       [].forEach.call(body.children, function (e) { if (re.test(e.textContent || '') && folds.indexOf(e) < 0) folds.push(e); });
     });
-    if (row) body.insertBefore(row, body.firstChild);
+    var aft = m.after && body.querySelector(m.after);
+    if (row) { if (aft) aft.parentNode.insertBefore(row, aft.nextSibling); else body.insertBefore(row, body.firstChild); }
     if (row || folds.length) {
       var d = document.createElement('details'); d.className = 'spk-note spk-readalong g3-fold';
       d.innerHTML = '<summary>' + (m.script ? '📄 Read Opti’s words' : '📖 Read more about this') + '</summary>';

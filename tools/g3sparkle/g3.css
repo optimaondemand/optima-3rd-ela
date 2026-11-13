@@ -351,3 +351,8 @@ button.g3-opt-btn:active, button.g3-tw-chip:active, button.spk-btn:active, butto
 .g3-teaching .spk-audio-btn { background: #C8962E !important; border-color: #C8962E !important; color: #fff !important; }
 .g3-teaching .spk-audio-btn .spk-audio-label { color: #fff !important; }
 .g3-teach-btn::before, .g3-teaching .spk-audio-btn .spk-audio-label::before { content: '\1F50A\00A0'; }
+
+/* Opti video in place of the teach button (Nov 13 2026) */
+.g3-teach-video { flex-direction:column; align-items:stretch; gap:6px; }
+.g3-teach-vk { display:flex; align-items:center; gap:8px; font-size:15px; color:#2A0A4A; }
+.g3-teach-v { width:100%; max-width:640px; aspect-ratio:16/9; border-radius:12px; background:#0E1C42; border:3px solid #C7922C; display:block; }
