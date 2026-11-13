@@ -2141,7 +2141,8 @@ body {
   "src": "art/wb/wb-crown.jpg",
   "alt": "An old painting of a golden crown covered in jewels, sitting on a red cushion",
   "credit": "The Imperial Crown · Johann Adam Delsenbach, 1751 · Public domain",
-  "look": "A real emperor’s crown, made of gold and covered in jewels, drawn and painted by Johann Adam Delsenbach about 275 years ago. In this week’s chapters, the prince’s golden crown ends up in the outlaws’ hands."
+  "look": "A real emperor’s crown, made of gold and covered in jewels, drawn and painted by Johann Adam Delsenbach about 275 years ago. In this week’s chapters, the prince’s golden crown ends up in the outlaws’ hands.",
+  "lookBtn": "Tap to learn about this golden crown painting"
  },
  "dol": {
   "a": {
@@ -2367,6 +2368,149 @@ body {
     "angling",
     "trying in a clever way to get something"
    ]
+  ]
+ },
+ "teach": {
+  "dropTurnNotes": true,
+  "mods": [
+   {
+    "id": "wgrd",
+    "find": "What Good Readers",
+    "fold": [
+     ":scope > p:not(.g3-do)",
+     ":scope > .key-concept",
+     ":scope > .socratic-box"
+    ],
+    "todo": "Listen to Opti. Then tap the lens you will use today.",
+    "script": "[warmly] There are no new chapters today. Instead, good readers look back at everything they've read so far. Think about Jemmy and the prince in Chapter 1, back at the castle. Now think about them in the outlaws' hut. How has each boy changed? Then tap one of the two lenses below to use while you look back. You don't need to write anything."
+   },
+   {
+    "id": "dol",
+    "find": "Daily Oral",
+    "fold": [],
+    "todo": "Tap the yellow parts. Then pick Sentence A or B and type it the right way.",
+    "script": "Let's fix a sentence. Look at the correct one first. The prince is talking, so his words go inside quotation marks. Doesn't has an apostrophe, because it's short for does not. And a comma goes before the closing quotation mark, because the sentence keeps going: Prince Brat said coldly. Tap the yellow parts to see each rule. Then pick Sentence A or Sentence B, and type it the right way. Watch out, the sentence you fix needs two apostrophes!"
+   },
+   {
+    "id": "poem",
+    "find": "Poetry",
+    "fold": [
+     ":scope > .callout",
+     ":scope > .socratic-box"
+    ],
+    "todo": "Make up a haiku about something outside your window. Count 5, 7, 5. Say it out loud.",
+    "script": "Here are the two cold-morning haiku again. Today, you'll make up your own. Look out your window. What do you see? A bird, a car, the rain, a tree? Make up three lines about it, and count the beats on your fingers. Five, then seven, then five. Try to save a little surprise for the last line. Say your haiku out loud. You don't need to write it."
+   },
+   {
+    "id": "morph",
+    "find": "Morphology",
+    "fold": [
+     ":scope > .key-concept"
+    ],
+    "foldText": [
+     "Before you roll"
+    ],
+    "todo": "Tap Roll the Dice. Say what the word means. Tap Check My Thinking. Roll all six words.",
+    "script": "Roll it, then crack it. Every word on the dice has port in it, so you already know half the meaning. Look at the part in front of port. That part is your clue. Say what the whole word means out loud, then tap Check My Thinking. Do all six.",
+    "video": "g3ela-19-4-teach-morph"
+   },
+   {
+    "id": "vocab",
+    "find": "Vocabulary",
+    "fold": [
+     ":scope > .g3-model-h",
+     ":scope > .decode-steps"
+    ],
+    "todo": "Fill in each sentence with a word from the word bank. Tap Check My Work. Then play the matching game.",
+    "script": "Last chance with this week's words: fathom, flummox, parley, and angling. Here's a trick. Read each sentence out loud with the word in the blank. If it sounds right and makes sense, keep it. Then tap Check My Work.",
+    "video": "g3ela-19-4-teach-vocab"
+   },
+   {
+    "id": "gram",
+    "find": "Grammar",
+    "fold": [
+     ":scope > .callout:not(:has(+ .spotter-game)):not(:has(+ .fillin-game)):not(:has(+ .sort-game)):not(:has(+ .dol-check-btn))"
+    ],
+    "todo": "Tap the word where the mistake is, or tap No mistake. Then tap See the answers and answer the question in the box.",
+    "script": "Can you spot what's wrong? The fog was thick but, they kept going. The comma jumped to the wrong side of but! It belongs right before it. Read each sentence. Tap the word where the mistake is, or tap No mistake if it's right.",
+    "video": "g3ela-19-4-teach-gram"
+   },
+   {
+    "id": "spell",
+    "find": "Spelling",
+    "fold": [
+     ":scope > .socratic-box",
+     ":scope > .dol-check-btn",
+     "#spellRuleReveal"
+    ],
+    "foldText": [
+     "^\\s*👂",
+     "^\\s*This week:",
+     "The Rule:",
+     "Remember: it.s always at the END",
+     "^\\s*Sort and explain"
+    ],
+    "todo": "Tap Roll the dice. Say the word and split it. Tap Check my answer. Roll all six words.",
+    "script": "Here's how to split one. Bottle. Count back three letters from the end: t, l, e. Bot, tle. That's the split. Tap Roll the dice. Say the word out loud and split it into syllables. Then tap Check my answer. Roll all six words.",
+    "video": "g3ela-19-4-teach-spell"
+   },
+   {
+    "id": "spotlight",
+    "find": "Character Spotlight",
+    "fold": [
+     ":scope > .socratic-box"
+    ],
+    "script": "Look back at the whole week. Jemmy wrote the ransom note, played the prince, and tricked two outlaws. Was he helping the prince, or helping himself? Maybe both! Now think about the prince. He could have gone home, and he said no. What do you think he really wants?"
+   },
+   {
+    "id": "read",
+    "find": "Look Back",
+    "fold": [],
+    "todo": "Read the two questions. Then look back through Ch. 6–11 in your book.",
+    "script": "There are no new chapters today. Instead, look back through Chapters 6 to 11 in your book. First, read the two Pause and Think questions below. One is about something Jemmy says to the prince: It's not me you think you're protecting, is it? The other asks if the prince has really changed. Flip back through the pages to find clues. Then do the Read Like a Writer box."
+   },
+   {
+    "id": "chq",
+    "find": "Chapter Thinking",
+    "fold": [],
+    "todo": "Pick Explorer or Scholar. Answer the three questions in full sentences.",
+    "script": "Now look back and answer in full sentences, with details from the book. One, Jemmy signs the note as the prince. How does that help him, and how could it hurt him? Two, describe one moment in Chapter 11 when the prince does something unexpected. Three, who is cleverer in Chapters 6 to 11, Jemmy or the prince? Give one example for each boy. For a challenge, pick Scholar, and add one more detail to each answer."
+   },
+   {
+    "id": "write",
+    "find": "Writer.s Workshop",
+    "fold": [
+     ":scope > .callout"
+    ],
+    "foldText": [
+     "watch how",
+     "today.s tool"
+    ],
+    "todo": "Write your paragraph with all five parts: claim, reason, example, the other side, and conclusion.",
+    "script": "Today you put it all together. Clara had five pieces: her claim, a reason, an example, the other side, and a conclusion. Then she put them in order to make one paragraph. Read hers and listen to how it flows. It starts with her claim, gives a reason, proves it with an example from Chapter 2, answers the other side, and ends with a conclusion. Now write your own paragraph in the box, with all five parts. Use your work from this week to help."
+   }
+  ],
+  "cards": {}
+ },
+ "virtue": {
+  "name": "courage",
+  "title": "Courage Watch: Did they show courage?",
+  "items": [
+   {
+    "t": "Jemmy writes the ransom note and signs it with the prince’s name.",
+    "ok": true,
+    "why": "He takes a big risk to trick the outlaws."
+   },
+   {
+    "t": "The prince gobbles an apple tart and says he will go back “when I choose.”",
+    "ok": false,
+    "why": "Doing what he wants is not the same as courage."
+   },
+   {
+    "t": "Billy pulls off his belt. Jemmy speaks up with the horse idea.",
+    "ok": true,
+    "why": "He is scared, but he speaks up to stop it."
+   }
   ]
  }
 }
@@ -2735,7 +2879,6 @@ body {
         <div class="dol-model-label">&#9989; Correct Model &mdash; from the novel</div>
         <div class="dol-sentence-wrap" id="dolModel" style="font-family:'Lora',Georgia,serif;font-size:16px;line-height:1.7;padding:12px 16px;background:#fff;border:1.5px solid #E2E8F4;border-left:4px solid #B8860B;border-radius:10px;"><span class="dol-highlight-word" onclick="dolHighlight(this,'The opening quotation mark, and a capital letter to start what the prince says.')">"It</span> <span class="dol-highlight-word" onclick="dolHighlight(this,'A contraction of &quot;does not.&quot; The apostrophe stands for the missing o.')">doesn't</span> please me to take orders from common <span class="dol-highlight-word" onclick="dolHighlight(this,'The comma goes INSIDE the closing quotation mark.')">rascals,"</span> <span class="dol-highlight-word" onclick="dolHighlight(this,'A name gets capital letters.')">Prince Brat</span> said <span class="dol-highlight-word" onclick="dolHighlight(this,'The period that ends the sentence.')">coldly.</span></div>
         <div id="dolExplain" style="min-height:24px;margin-top:6px;font-size:13px;color:#34B76F;font-weight:700;transition:opacity 0.2s;"></div>
-        <div class="dol-hint">Tap the highlighted parts to see what's correct about them.</div>
 
         <div class="dol-fix-label">🔧 Now fix this one</div>
         <div class="dol-sentence-wrap" style="border-left:4px solid #B8860B;">
@@ -2831,12 +2974,9 @@ r.textContent=diceWords[diceCurrentIdx].word+' = '+diceWords[diceCurrentIdx].mea
     <div class="activity-head"><div class="activity-num" style="background:#5C2D91;">2</div><div><div class="activity-title">🔤 Vocabulary</div><div class="activity-sub">Review four words from this week</div></div></div>
     <div class="activity-body">
 <p class="g3-do" data-say="vocabcloze"><b>What to do:</b> Read how we figured out the first word. Then fill in each sentence with a word from the word bank, and tap Check My Work. Last, play the matching game.</p>
-            <p>When you meet a word you don't know, use these three steps <em>in order</em>:</p>
 
       <!-- MODELED WORD -->
-      <div class="key-concept">
-        <div class="key-concept-label">📌 Let's try it together: "fathom"</div>
-      </div>
+      <div class="g3-model-h">Watch how we figure out <b>fathom</b>:</div>
 
       <div class="decode-steps">
         <div class="decode-step">
@@ -2902,10 +3042,6 @@ r.textContent=diceWords[diceCurrentIdx].word+' = '+diceWords[diceCurrentIdx].mea
 <div style="margin-top:6px;"><span style="display:inline-block;background:#FFF8E8;color:#8A6212;border:1px solid #C7922C;border-radius:999px;padding:3px 10px;font-size:11px;font-weight:800;letter-spacing:.05em;text-transform:uppercase;">🧱 Grammar Level: Sentence Builder</span></div></div></div>
     <div class="activity-body">
 <p class="g3-do" data-say="gram-hunt"><b>What to do:</b> Read each sentence. Tap the word where the mistake is, or tap No mistake. Then tap See the answers, and answer the question in the box.</p><!-- grammar-notice-first -->
-<div class="key-concept" style="background:#F0F7FF;border-color:#C8DCEE;margin:0 0 14px;">
-<div class="key-concept-label" style="color:#3D5285;">&#x1F50E; What do you notice?</div>
-<p>Look at the two halves of this sentence and what holds them together.</p>
-</div>
 
 <div class="task-box" style="background:#FFF8F0;border-color:#E8D5A0;">
         <div class="task-sentence" style="border-left-color:#B8860B;">He reached for the wicker basket, <strong>but</strong> Cutwater snatched it back.</div>
@@ -2914,8 +3050,6 @@ r.textContent=diceWords[diceCurrentIdx].word+' = '+diceWords[diceCurrentIdx].mea
 <div class="callout callout-info" style="margin-top:14px;"><span class="callout-icon">&#x1F4AD;</span><p><strong>Think it through.</strong></p>
 <ol style="margin:6px 0 0 20px;font-size:15px;color:#3A4A6B;line-height:1.8;">
 <li>Could each half stand alone as a complete sentence?</li>
-<li>What word joins them, and what punctuation comes just before it?</li>
-<li>What would happen if you took the joining word out and left the comma?</li>
 </ol></div>
 <button class="dol-check-btn" onclick="document.getElementById('gramNotice').classList.toggle('show')">&#x1F50D; Now check your thinking</button>
 <div class="dol-answer" id="gramNotice">

@@ -2141,7 +2141,8 @@ body {
   "src": "art/wb/wb-scribe.jpg",
   "alt": "An old painting of a man in a red robe writing in a big book at a wooden desk",
   "credit": "Jean Miélot at his desk · unknown painter, Brussels, 1400s · Public domain",
-  "look": "A writer named Jean Miélot at his desk, painted by hand in a book more than 500 years ago. Long ago, few people could read or write, and writers like him used a feather pen called a quill. In Chapter 8, Jemmy writes the ransom note with a hawk’s feather and beet juice."
+  "look": "A writer named Jean Miélot at his desk, painted by hand in a book more than 500 years ago. Long ago, few people could read or write, and writers like him used a feather pen called a quill. In Chapter 8, Jemmy writes the ransom note with a hawk’s feather and beet juice.",
+  "lookBtn": "Tap to learn about this old painting of a writer"
  },
  "dol": {
   "a": {
@@ -2398,6 +2399,165 @@ body {
     "scribblement",
     "Cutwater’s word for writing"
    ]
+  ]
+ },
+ "teach": {
+  "dropTurnNotes": true,
+  "mods": [
+   {
+    "id": "wgrd",
+    "find": "What Good Readers",
+    "fold": [
+     ":scope > p:not(.g3-do)",
+     ":scope > .key-concept",
+     ":scope > .socratic-box"
+    ],
+    "todo": "Listen to Opti. Then tap the lens you will use today.",
+    "script": "[warmly] Here's today's reading tip. Good readers notice when a character does something they didn't expect. Today, watch for a moment when Jemmy does something kind for the prince, even though the prince has not been kind to him. Then tap one of the two lenses below, and use it while you read. You don't need to write anything."
+   },
+   {
+    "id": "dol",
+    "find": "Daily Oral",
+    "fold": [],
+    "todo": "Tap the yellow parts. Then pick Sentence A or B and type it the right way.",
+    "script": "Let's fix a sentence. Look at the correct one first. Billy is giving an order, so his words go inside quotation marks, and a comma goes before the closing quotation mark. Hold-Your-Nose Billy is his name, so every part of it gets a capital letter, even with the little dashes in between. Tap the yellow parts to see each rule. Then pick Sentence A or Sentence B, and type it the right way."
+   },
+   {
+    "id": "poem",
+    "find": "Poetry",
+    "fold": [
+     ":scope > .callout",
+     ":scope > .socratic-box"
+    ],
+    "todo": "Read the two haiku out loud. Clap the beats: 5, then 7, then 5. Find where each one changes.",
+    "script": "Here are two haiku about a cold morning. Remember, a haiku has three lines. Five beats, then seven, then five. Read both out loud, and clap the beats in each line. Five, steps, to, the, gate. That's five! Then look at the last line of each haiku. A haiku often saves its surprise for the end. Find the word where each one changes direction."
+   },
+   {
+    "id": "morph",
+    "find": "Morphology",
+    "fold": [
+     ":scope > .callout:not(:has(+ .match-game))",
+     ":scope > .key-concept"
+    ],
+    "todo": "Tap a word, then tap what it means. Match all four words.",
+    "script": "Watch this. Support. Find port at the end. Now look at the part in front: sup, which means under. So to support something is to carry it from underneath, like holding up a heavy box. Use the same trick on each word. Tap a word, then tap what it means.",
+    "video": "g3ela-19-2-teach-morph"
+   },
+   {
+    "id": "vocab",
+    "find": "Vocabulary",
+    "fold": [
+     ":scope > .g3-model-h",
+     ":scope > .decode-steps"
+    ],
+    "todo": "Listen to each card. Guess the meaning, then flip the card. Then play the matching game.",
+    "script": "Here's a word Billy uses: obliged. He tells the prince his father will be ever so much obliged. Billy is pretending to be polite. Obliged means thankful. The cards work just like last time: listen, guess, then flip. Then match all four.",
+    "video": "g3ela-19-2-teach-vocab"
+   },
+   {
+    "id": "gram",
+    "find": "Grammar",
+    "fold": [
+     ":scope > .callout:not(:has(+ .spotter-game)):not(:has(+ .fillin-game)):not(:has(+ .sort-game)):not(:has(+ .dol-check-btn))"
+    ],
+    "todo": "Tap Now check your thinking. Then tap the two complete thoughts in each sentence. Skip the joining word.",
+    "script": "Here's one to take apart. The fog rolled in, and the boys got lost. First thought: the fog rolled in. Second thought: the boys got lost. The word and is just the glue, so skip it. In each sentence, tap the first thought, then the second.",
+    "video": "g3ela-19-2-teach-gram"
+   },
+   {
+    "id": "spell",
+    "find": "Spelling",
+    "fold": [
+     ":scope > .socratic-box"
+    ],
+    "foldText": [
+     "^\\s*👂",
+     "^\\s*This week:",
+     "The Rule:",
+     "Remember: it.s always at the END",
+     "^\\s*Sort and explain"
+    ],
+    "todo": "In each row, tap the one word that ends in a consonant-le syllable.",
+    "script": "Quick test. Cattle, kitten, carpet. Which one ends with a consonant and l, e? Say them. Cat, tle. That's the one. In each row, only one word ends that way. Say every word, listen to the last beat, and tap it.",
+    "video": "g3ela-19-2-teach-spell"
+   },
+   {
+    "id": "spotlight",
+    "find": "Character Spotlight",
+    "fold": [
+     ":scope > .socratic-box"
+    ],
+    "script": "Think about this before you read. Jemmy is writing the ransom note, and the outlaws think he is the prince. The real prince has to sit and watch. Jemmy's plan could set the prince free. It could also get Jemmy rid of the prince for good. Can helping someone and using someone look the same? Watch what Jemmy does, and think about why."
+   },
+   {
+    "id": "backward",
+    "sel": "#g3card-backward",
+    "fold": [],
+    "script": "Here's Billy's test from Chapter 9. Billy makes Jemmy read the ransom note backward, from the last word to the first. Now you try it! Each note below is written backward. Read it out loud, starting with the last word. Then tap the words in the right order to fix it. Last, answer the question. Why does Billy want the note read backward?"
+   },
+   {
+    "id": "read",
+    "find": "^\\s*\\S*\\s*Read:",
+    "fold": [],
+    "todo": "Read the two questions. Then read Ch. 8–9 in your book.",
+    "script": "Time to read Chapters 8 and 9 in your book. First, read the two Pause and Think questions below. In Chapter 8, Jemmy writes the ransom note. Billy wants to ask the king for the prince's weight in gold. Watch what Jemmy asks for instead, and why. In Chapter 9, Billy gives Jemmy a tricky test. Stop at each question, think of your answer, and keep reading. Then do the Read Like a Writer box, and try Read It Backward."
+   },
+   {
+    "id": "rwm",
+    "sel": ".rwm-box",
+    "after": ":scope > .rwm-header",
+    "label": "Opti shows you how",
+    "fold": [],
+    "script": "[warmly] Read Like a Writer has three parts. Let me show you with a different sentence from Chapter 9. Cutwater yanked Jemmy to his feet. Part one, read like a reader. What is happening? Cutwater is angry, so he pulls Jemmy up, hard. Part two, read like a writer. Which word does the work? Yanked. The author could have said pulled, but yanked is stronger, so we feel how rough Cutwater is. Part three, mimic. Now I write my own: My little brother yanked the blanket off my bed. Now it's your turn with the prince's sentence. Write one sentence in each box.",
+    "video": "g3ela-19-2-teach-rwm"
+   },
+   {
+    "id": "chq",
+    "find": "Chapter Thinking",
+    "fold": [],
+    "todo": "Pick Explorer or Scholar. Answer the three questions in full sentences.",
+    "script": "Now answer in full sentences, with details from the book. One, how does Jemmy get the outlaws to let him write the ransom note? Two, Jemmy signs the note Prince Horace, not Prince Brat. Why use the real name? Think about who will read the note. Three, at the end of Chapter 9, how does Jemmy say the note should get to the castle? And who would really go free? For a challenge, pick Scholar, and add one more detail to each answer."
+   },
+   {
+    "id": "write",
+    "find": "Writer.s Workshop",
+    "fold": [
+     ":scope > .callout"
+    ],
+    "foldText": [
+     "watch how",
+     "today.s tool"
+    ],
+    "todo": "Read your writing out loud. Write one sentence again with a transition word, like For example.",
+    "script": "Today, read your opinion out loud, like a real writer. Your ears catch things your eyes miss. Clara read hers out loud. She noticed that her sentences all started with He. She also noticed her example needed a transition word in front of it. Transition words help a reader follow you, like One reason is, Another reason is, and For example. Read your writing out loud. Then pick one sentence and write it again with a transition word."
+   }
+  ],
+  "cards": {
+   "obliged": "Obliged. He'll be ever so much obliged to know you're safe and hearty. Obliged means thankful for a favor.",
+   "scoundrel": "Scoundrel. Our captors are loyal subjects, but scoundrels by trade. A scoundrel is a dishonest, wicked person. Jemmy writes this about the outlaws, right in front of them!",
+   "gallows": "Gallows. Warn him we fear no gallows! A gallows is a wooden frame that was used long ago to punish criminals. Billy is bragging that he is not afraid.",
+   "scribblement": "Scribblement. But how are we going to do the scribblement? We can't write. Scribblement is Cutwater's own word for writing. He makes it up because he can't write."
+  }
+ },
+ "virtue": {
+  "name": "courage",
+  "title": "Courage Watch: Did they show courage?",
+  "items": [
+   {
+    "t": "Jemmy tells the outlaws a prince is worth a whole wagonload of gold.",
+    "ok": true,
+    "why": "He talks back to two outlaws to make his trick work. That is brave."
+   },
+   {
+    "t": "The prince hears he might get whipped, so he calls the outlaw “sir.”",
+    "ok": false,
+    "why": "He is only trying to save himself."
+   },
+   {
+    "t": "Billy makes Jemmy read the note backward. Jemmy stays calm and reads it all.",
+    "ok": true,
+    "why": "One slip could ruin his plan. He keeps calm and does it."
+   }
   ]
  }
 }
@@ -2766,7 +2926,6 @@ body {
         <div class="dol-model-label">&#9989; Correct Model &mdash; from the novel</div>
         <div class="dol-sentence-wrap" id="dolModel" style="font-family:'Lora',Georgia,serif;font-size:16px;line-height:1.7;padding:12px 16px;background:#fff;border:1.5px solid #E2E8F4;border-left:4px solid #B8860B;border-radius:10px;"><span class="dol-highlight-word" onclick="dolHighlight(this,'The opening quotation mark, and a capital letter to start the speech.')">"Tell</span> the king <span class="dol-highlight-word" onclick="dolHighlight(this,'The comma goes INSIDE the closing quotation mark.')">that,"</span> directed <span class="dol-highlight-word" onclick="dolHighlight(this,'A nickname used as a name — each important word capitalized, hyphens and all.')">Hold-Your-Nose Billy.</span></div>
         <div id="dolExplain" style="min-height:24px;margin-top:6px;font-size:13px;color:#34B76F;font-weight:700;transition:opacity 0.2s;"></div>
-        <div class="dol-hint">Tap the highlighted parts to see what's correct about them.</div>
 
         <div class="dol-fix-label">🔧 Now fix this one</div>
         <div class="dol-sentence-wrap" style="border-left:4px solid #B8860B;">
@@ -2845,12 +3004,9 @@ function morphMatchClick(item){var g=item.closest('.match-grid');if(!g)return;if
     <div class="activity-head"><div class="activity-num" style="background:#5C2D91;">2</div><div><div class="activity-title">🔤 Vocabulary</div><div class="activity-sub">Four words from this week’s chapters</div></div></div>
     <div class="activity-body">
 <p class="g3-do" data-say="vocabflip"><b>What to do:</b> Read how we figured out the first word. Then read each sentence from the book, guess what the word means, and tap the card to check. Last, play the matching game.</p>
-            <p>When you meet a word you don't know, use these three steps <em>in order</em>:</p>
 
       <!-- MODELED WORD -->
-      <div class="key-concept">
-        <div class="key-concept-label">📌 Let's try it together: "obliged"</div>
-      </div>
+      <div class="g3-model-h">Watch how we figure out <b>obliged</b>:</div>
 
       <div class="decode-steps">
         <div class="decode-step">
@@ -2946,10 +3102,6 @@ function morphMatchClick(item){var g=item.closest('.match-grid');if(!g)return;if
 <div style="margin-top:6px;"><span style="display:inline-block;background:#FFF8E8;color:#8A6212;border:1px solid #C7922C;border-radius:999px;padding:3px 10px;font-size:11px;font-weight:800;letter-spacing:.05em;text-transform:uppercase;">🧱 Grammar Level: Sentence Builder</span></div></div></div>
     <div class="activity-body">
 <p class="g3-do" data-say="gram-halves"><b>What to do:</b> In each sentence, tap the two complete thoughts. Do not tap the joining word. Then answer the question in the box.</p><!-- grammar-notice-first -->
-<div class="key-concept" style="background:#F0F7FF;border-color:#C8DCEE;margin:0 0 14px;">
-<div class="key-concept-label" style="color:#3D5285;">&#x1F50E; What do you notice?</div>
-<p>Look at the two halves of this sentence and what holds them together.</p>
-</div>
 
 <div class="task-box" style="background:#FFF8F0;border-color:#E8D5A0;">
         <div class="task-sentence" style="border-left-color:#B8860B;">He reached for the wicker basket, <strong>but</strong> Cutwater snatched it back.</div>
@@ -2958,8 +3110,6 @@ function morphMatchClick(item){var g=item.closest('.match-grid');if(!g)return;if
 <div class="callout callout-info" style="margin-top:14px;"><span class="callout-icon">&#x1F4AD;</span><p><strong>Think it through.</strong></p>
 <ol style="margin:6px 0 0 20px;font-size:15px;color:#3A4A6B;line-height:1.8;">
 <li>Could each half stand alone as a complete sentence?</li>
-<li>What word joins them, and what punctuation comes just before it?</li>
-<li>What would happen if you took the joining word out and left the comma?</li>
 </ol></div>
 <button class="dol-check-btn" onclick="document.getElementById('gramNotice').classList.toggle('show')">&#x1F50D; Now check your thinking</button>
 <div class="dol-answer" id="gramNotice">

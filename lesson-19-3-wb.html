@@ -2141,7 +2141,8 @@ body {
   "src": "art/wb/wb-horse.jpg",
   "alt": "A painting of a red-brown horse rearing up on its back legs against a plain background",
   "credit": "Whistlejacket (detail) · George Stubbs, about 1762 · Public domain",
-  "look": "A real racehorse named Whistlejacket, painted by George Stubbs about 260 years ago. He was painted life-size. The boys rode out of the castle on one of the king’s own horses."
+  "look": "A real racehorse named Whistlejacket, painted by George Stubbs about 260 years ago. He was painted life-size. The boys rode out of the castle on one of the king’s own horses.",
+  "lookBtn": "Tap to learn about this horse painting"
  },
  "dol": {
   "a": {
@@ -2387,6 +2388,135 @@ body {
     "contrary",
     "always doing the opposite; hard to deal with"
    ]
+  ]
+ },
+ "teach": {
+  "dropTurnNotes": true,
+  "mods": [
+   {
+    "id": "wgrd",
+    "find": "What Good Readers",
+    "fold": [
+     ":scope > p:not(.g3-do)",
+     ":scope > .key-concept",
+     ":scope > .socratic-box"
+    ],
+    "todo": "Listen to Opti. Then tap the lens you will use today.",
+    "script": "[warmly] Here's today's reading tip. Good readers notice when a character changes, even a little. In Chapter 11, the prince makes a choice that surprises Jemmy. Watch for it, and ask yourself: why would he choose that? Then tap one of the two lenses below to use while you read. You don't need to write anything."
+   },
+   {
+    "id": "dol",
+    "find": "Daily Oral",
+    "fold": [],
+    "todo": "Tap the yellow parts. Then pick Sentence A or B and type it the right way.",
+    "script": "Let's fix a sentence. Today's model is short: Jemmy was struck dumb. That means he was so surprised he couldn't speak. Nobody is talking in this sentence. The storyteller is telling us what happened, so there are no quotation marks. It needs a capital letter at the start and a period at the end. Tap the yellow parts to see each rule. Then pick Sentence A or Sentence B, and type it the right way."
+   },
+   {
+    "id": "morph",
+    "find": "Morphology",
+    "fold": [
+     ":scope > .callout:not(:has(+ .fillin-game))",
+     ":scope > .key-concept"
+    ],
+    "todo": "Say the parts out loud. Type the whole word in each box. Tap Check My Answers.",
+    "script": "Let's build a silly one first. Tele means far. Tele, plus port. Teleport! To carry something far away in a flash. Now you build the real ones. Say each pair of parts out loud. Type the whole word in the box. Then tap Check My Answers.",
+    "video": "g3ela-19-3-teach-morph"
+   },
+   {
+    "id": "vocab",
+    "find": "Vocabulary",
+    "fold": [
+     ":scope > .g3-model-h",
+     ":scope > .decode-steps"
+    ],
+    "todo": "Fill in each sentence with a word from the word bank. Tap Check My Work. Then play the matching game.",
+    "script": "Cutwater shouts, I'll whip the mulishness out of him! Mule, ish, ness: stubborn like a mule. Defiant, parley and contrary are in the word bank too. Read each sentence, try each word in the blank, and keep the one that makes sense. Then tap Check My Work.",
+    "video": "g3ela-19-3-teach-vocab"
+   },
+   {
+    "id": "gram",
+    "find": "Grammar",
+    "fold": [
+     ":scope > .callout:not(:has(+ .spotter-game)):not(:has(+ .fillin-game)):not(:has(+ .sort-game)):not(:has(+ .dol-check-btn))"
+    ],
+    "todo": "Tap Now check your thinking. Type the word the comma goes after. Tap Check My Answers. Then write your own.",
+    "script": "These sentences lost their commas. Listen. The horse was fast, but the outlaws were faster. Hear the little pause after fast? The comma goes there, right before but. Find that spot in each sentence and type the word that comes just before it.",
+    "video": "g3ela-19-3-teach-gram"
+   },
+   {
+    "id": "spell",
+    "find": "Spelling",
+    "fold": [
+     ":scope > .socratic-box"
+    ],
+    "foldText": [
+     "^\\s*👂",
+     "^\\s*This week:",
+     "The Rule:",
+     "Remember: it.s always at the END",
+     "^\\s*Sort and explain"
+    ],
+    "todo": "Tap the word parts in order to build each word.",
+    "script": "Two tiles, one word. Pud, dle. Puddle! The d sticks with the l, e. Build each word the same way. Tap the first part, then the last part. If a tile is in the wrong spot, it won't stick, so try the other one.",
+    "video": "g3ela-19-3-teach-spell"
+   },
+   {
+    "id": "spotlight",
+    "find": "Character Spotlight",
+    "fold": [
+     ":scope > .socratic-box"
+    ],
+    "script": "Think about the prince today. He gets a chance to go home, and he says no. Jemmy can't understand it. Is the prince just being a brat again? Or is something else going on inside him? Watch closely. Sometimes people do things for reasons they don't say out loud."
+   },
+   {
+    "id": "read",
+    "find": "^\\s*\\S*\\s*Read:",
+    "fold": [],
+    "todo": "Read the two questions. Then read Ch. 10–11 in your book.",
+    "script": "Time to read Chapters 10 and 11 in your book. First, read the two Pause and Think questions below. Remember, the outlaws think the real prince is the whipping boy! In Chapter 10, they decide to send him to the castle with the note. Watch what the prince says. In Chapter 11, Billy pulls off his belt. Watch what Jemmy does. Stop at each question, think of your answer, and keep reading. After you read, do the Read Like a Writer box."
+   },
+   {
+    "id": "chq",
+    "find": "Chapter Thinking",
+    "fold": [],
+    "todo": "Pick Explorer or Scholar. Answer the three questions in full sentences.",
+    "script": "Now answer in full sentences, with details from the book. One, Chapter 11 asks if the prince has sand for brains. What does the prince do that makes Jemmy think that? Two, why might the prince not want to go home? Look at what he says about his father. Three, when the outlaws step outside, what do Jemmy and the prince argue about, and what does the prince decide? For a challenge, pick Scholar, and add one more detail to each answer."
+   },
+   {
+    "id": "write",
+    "find": "Writer.s Workshop",
+    "fold": [
+     ":scope > .callout"
+    ],
+    "foldText": [
+     "watch how",
+     "today.s tool"
+    ],
+    "todo": "Write one conclusion sentence. Say your big idea in a new way.",
+    "script": "Every opinion needs an ending. It's called a conclusion. A good conclusion doesn't just repeat your first sentence. It says your big idea in a fresh way, and it gives your reader something to think about. Listen to the end of Clara's: A true prince would learn to use his power to protect, not to punish. Doesn't that sound like an ending? Now write a conclusion sentence for your own paragraph. Don't copy your first sentence word for word."
+   }
+  ],
+  "cards": {}
+ },
+ "virtue": {
+  "name": "courage",
+  "title": "Courage Watch: Did they show courage?",
+  "items": [
+   {
+    "t": "The prince tosses away his herring and shows no care for what happens to Jemmy.",
+    "ok": false,
+    "why": "Not caring about someone in danger is not courage."
+   },
+   {
+    "t": "Jemmy keeps up his trick so the outlaws will send the prince home.",
+    "ok": true,
+    "why": "He could be caught any minute, but he keeps trying to help."
+   },
+   {
+    "t": "Billy grabs his belt to whip the prince. Jemmy speaks up with a new idea: send the horse.",
+    "ok": true,
+    "why": "He speaks up to two angry outlaws to stop a whipping. That takes courage."
+   }
   ]
  }
 }
@@ -2755,7 +2885,6 @@ body {
         <div class="dol-model-label">&#9989; Correct Model &mdash; from the novel</div>
         <div class="dol-sentence-wrap" id="dolModel" style="font-family:'Lora',Georgia,serif;font-size:16px;line-height:1.7;padding:12px 16px;background:#fff;border:1.5px solid #E2E8F4;border-left:4px solid #B8860B;border-radius:10px;"><span class="dol-highlight-word" onclick="dolHighlight(this,'A name — capital J.')">Jemmy</span> <span class="dol-highlight-word" onclick="dolHighlight(this,'A past-tense verb that matches its singular subject.')">was</span> struck <span class="dol-highlight-word" onclick="dolHighlight(this,'A period ends the sentence.')">dumb.</span></div>
         <div id="dolExplain" style="min-height:24px;margin-top:6px;font-size:13px;color:#34B76F;font-weight:700;transition:opacity 0.2s;"></div>
-        <div class="dol-hint">Tap the highlighted parts to see what's correct about them.</div>
 
         <div class="dol-fix-label">🔧 Now fix this one</div>
         <div class="dol-sentence-wrap" style="border-left:4px solid #B8860B;">
@@ -2817,12 +2946,9 @@ if(all){var f=g.querySelector('.fillin-feedback');if(f)f.classList.add('show');}
     <div class="activity-head"><div class="activity-num" style="background:#5C2D91;">2</div><div><div class="activity-title">🔤 Vocabulary</div><div class="activity-sub">Four words from this week’s chapters</div></div></div>
     <div class="activity-body">
 <p class="g3-do" data-say="vocabcloze"><b>What to do:</b> Read how we figured out the first word. Then fill in each sentence with a word from the word bank, and tap Check My Work. Last, play the matching game.</p>
-            <p>When you meet a word you don't know, use these three steps <em>in order</em>:</p>
 
       <!-- MODELED WORD -->
-      <div class="key-concept">
-        <div class="key-concept-label">📌 Let's try it together: "mulishness"</div>
-      </div>
+      <div class="g3-model-h">Watch how we figure out <b>mulishness</b>:</div>
 
       <div class="decode-steps">
         <div class="decode-step">
@@ -2892,10 +3018,6 @@ if(all){var f=g.querySelector('.fillin-feedback');if(f)f.classList.add('show');}
 <div style="margin-top:6px;"><span style="display:inline-block;background:#FFF8E8;color:#8A6212;border:1px solid #C7922C;border-radius:999px;padding:3px 10px;font-size:11px;font-weight:800;letter-spacing:.05em;text-transform:uppercase;">🧱 Grammar Level: Sentence Builder</span></div></div></div>
     <div class="activity-body">
 <p class="g3-do" data-say="gram-comma"><b>What to do:</b> Find the last word of the first complete thought. Type it in the box, and tap Check My Answers. Then write your own compound sentence.</p><!-- grammar-notice-first -->
-<div class="key-concept" style="background:#F0F7FF;border-color:#C8DCEE;margin:0 0 14px;">
-<div class="key-concept-label" style="color:#3D5285;">&#x1F50E; What do you notice?</div>
-<p>Look at the two halves of this sentence and what holds them together.</p>
-</div>
 
 <div class="task-box" style="background:#FFF8F0;border-color:#E8D5A0;">
         <div class="task-sentence" style="border-left-color:#B8860B;">He reached for the wicker basket, <strong>but</strong> Cutwater snatched it back.</div>
@@ -2904,8 +3026,6 @@ if(all){var f=g.querySelector('.fillin-feedback');if(f)f.classList.add('show');}
 <div class="callout callout-info" style="margin-top:14px;"><span class="callout-icon">&#x1F4AD;</span><p><strong>Think it through.</strong></p>
 <ol style="margin:6px 0 0 20px;font-size:15px;color:#3A4A6B;line-height:1.8;">
 <li>Could each half stand alone as a complete sentence?</li>
-<li>What word joins them, and what punctuation comes just before it?</li>
-<li>What would happen if you took the joining word out and left the comma?</li>
 </ol></div>
 <button class="dol-check-btn" onclick="document.getElementById('gramNotice').classList.toggle('show')">&#x1F50D; Now check your thinking</button>
 <div class="dol-answer" id="gramNotice">

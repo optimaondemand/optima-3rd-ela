@@ -5,7 +5,8 @@
   "src": "art/wb/wb-forest-hut.jpg",
   "alt": "A painting of a small log hut in a clearing among tall pine trees",
   "credit": "Hut in the Forest · Ivan Shishkin, second half of the 1800s · Public domain",
-  "look": "A small hut deep in a pine forest, painted by Ivan Shishkin more than 100 years ago. In Chapter 6, the outlaws lead the boys through thick pines to their hideout, a rickety hut with a moldy roof."
+  "look": "A small hut deep in a pine forest, painted by Ivan Shishkin more than 100 years ago. In Chapter 6, the outlaws lead the boys through thick pines to their hideout, a rickety hut with a moldy roof.",
+  "lookBtn": "Tap to learn about this forest hut painting"
  },
  "dol": {
   "a": {
@@ -253,6 +254,138 @@
     "amiss",
     "wrong; not the way it should be"
    ]
+  ]
+ },
+ "teach": {
+  "dropTurnNotes": true,
+  "mods": [
+   {
+    "id": "wgrd",
+    "find": "What Good Readers",
+    "fold": [
+     ":scope > p:not(.g3-do)",
+     ":scope > .key-concept",
+     ":scope > .socratic-box"
+    ],
+    "todo": "Listen to Opti. Then tap the lens you will use today.",
+    "script": "[warmly] Here's today's reading tip. Good readers ask why characters do what they do. In Chapters 6 and 7, the outlaws take the boys to their hideout in the forest. Ask yourself: what does Jemmy want right now? And what does the prince want? Below are two lenses. Tap the one you will use while you read. You don't need to write anything."
+   },
+   {
+    "id": "dol",
+    "find": "Daily Oral",
+    "fold": [],
+    "todo": "Tap the yellow parts. Then pick Sentence A or B and type it the right way.",
+    "script": "Let's fix a sentence. Look at the correct one first. Billy is talking, so his words go inside quotation marks. There's has an apostrophe, because it's short for there is. Your Young Majesty gets capital letters, because it's a title, like a name. And a comma goes before the closing quotation mark, because the sentence keeps going: he said, chuckling. Tap the yellow parts to see each rule. Then pick Sentence A or Sentence B, and type it the right way."
+   },
+   {
+    "id": "morph",
+    "find": "Morphology",
+    "fold": [
+     ":scope > .callout:not(:has(+ .fillin-game)):not(:has(+ .dol-check-btn))"
+    ],
+    "todo": "Say the four words. Tap See if you cracked it. Then type the missing root in each box and tap Check My Work.",
+    "script": "Let's crack a word part. Here are four words: transport, import, export, report. Say them out loud. What part do all four words share? Now think about each word. In every one, something is being moved from one place to another. So what do you think that shared part means? Think of your answer. Then tap See if you cracked it to check. After that, type the missing root in each box, and tap Check My Work.",
+    "video": "g3ela-19-1-teach-morph"
+   },
+   {
+    "id": "vocab",
+    "find": "Vocabulary",
+    "fold": [
+     ":scope > .g3-model-h",
+     ":scope > .decode-steps"
+    ],
+    "todo": "Listen to each card. Guess the meaning, then flip the card. Then play the matching game.",
+    "script": "Let's be word detectives. Here's scheme. Read the sentence: A scheme had leaped into his head. Jemmy just thought of something, all of a sudden. Scheme has no prefix or suffix, so the sentence does the work. Something that leaps into your head when you're in trouble is probably a plan. A scheme is a clever plan, often a sneaky one. Now tap Opti reads it on each card. Guess the meaning, then flip the card to check. Then play the matching game.",
+    "video": "g3ela-19-1-teach-vocab"
+   },
+   {
+    "id": "gram",
+    "find": "Grammar",
+    "fold": [
+     ":scope > .callout:not(:has(+ .spotter-game)):not(:has(+ .fillin-game)):not(:has(+ .sort-game)):not(:has(+ .dol-check-btn))"
+    ],
+    "todo": "Tap Now check your thinking. Then sort each word group. Last, answer the question in the box.",
+    "script": "This week's sentences are compound sentences. A compound sentence is two complete thoughts, glued together with a comma and a joining word, like and, but, or so. Read the sentence from the book in the box. Could each half stand alone as its own sentence? Think about it, then tap Now check your thinking. Next, sort the word groups. Some are one thought. Some are two thoughts joined. And some are not sentences at all, because they leave you hanging. Tap a word group, then tap its column.",
+    "video": "g3ela-19-1-teach-gram"
+   },
+   {
+    "id": "spell",
+    "find": "Spelling",
+    "fold": [],
+    "todo": "Say the words in Group A and B. Tap See the Rule. Then sort the eight words.",
+    "script": "Say these words out loud: table, little, candle, simple. Listen to the last beat of each word. Now look at the last three letters, and look where the dot goes. What do you notice? Tap See the Rule to check your idea. Then tap each of the eight words, and tap the group it belongs in. Watch out! Not every word ends the same way.",
+    "video": "g3ela-19-1-teach-spell"
+   },
+   {
+    "id": "copia",
+    "sel": ".spk-copia-card",
+    "label": "Opti shows you how",
+    "fold": [],
+    "todo": "Write Billy’s sentence three new ways, one box at a time.",
+    "script": "[warmly] Remember copia? It means saying one idea in many ways. Watch me try one first, with a different sentence. Jemmy ate the bread. Box one, change the opener: In the gloomy hut, Jemmy ate the bread. Box two, swap the verb for a stronger one: Jemmy gobbled the bread. Box three, add a detail: Jemmy ate the stale bread with a herring on top. Same idea, three new ways. Now it's your turn with Billy's sentence, one box at a time. If you get stuck, tap Show one way."
+   },
+   {
+    "id": "spotlight",
+    "find": "Character Spotlight",
+    "fold": [
+     ":scope > .socratic-box"
+    ],
+    "script": "Here's something to think about. In Chapter 7, the outlaws want the prince to write a note to the king. But the prince can't write, and Jemmy can. So Jemmy offers to write it. Is he being kind to the prince? Or does he have a plan of his own? From the outside, helping someone and using someone can look the same. Watch what Jemmy really wants."
+   },
+   {
+    "id": "read",
+    "find": "^\\s*\\S*\\s*Read:",
+    "fold": [],
+    "todo": "Read the two questions. Then read Ch. 6–7 in your book.",
+    "script": "Time to read Chapters 6 and 7 in your book. First, read the two Pause and Think questions below, so you know where to stop. In Chapter 6, the outlaws open the prince's basket and find something that makes them very excited. In Chapter 7, the outlaws need someone to write a note to the king. Watch who can write and who can't, and what the outlaws decide because of it. Stop at each question, think of your answer, and keep reading."
+   },
+   {
+    "id": "chq",
+    "find": "Chapter Thinking",
+    "fold": [],
+    "todo": "Pick Explorer or Scholar. Answer the three questions in full sentences.",
+    "script": "Now show what you understood. Answer in full sentences, with details from the book. One, what valuable thing do the outlaws find in the basket, and why are they so excited? Two, the prince can't write his own name. How does that give Jemmy power, for once? Three, what scheme leaps into Jemmy's head? Want a challenge? Pick Scholar, and add one more detail to each answer."
+   },
+   {
+    "id": "write",
+    "find": "Writer.s Workshop",
+    "fold": [
+     ":scope > .callout"
+    ],
+    "foldText": [
+     "watch how",
+     "today.s tool"
+    ],
+    "todo": "Write one sentence: Some people might think ___, but I believe ___ because ___.",
+    "script": "Strong writers think about the other side. That means, what would someone who disagrees with you say? Listen to Clara. Her opinion is, Prince Brat is the most unfair character. Then she thought, someone might say Jemmy is more unfair, because he tricked the outlaws. But she still thinks she's right, because Prince Brat started everything by running away. Now you try. Write one sentence. Start with, Some people might think. Then add, but I believe, and tell why."
+   }
+  ],
+  "cards": {
+   "scheme": "Scheme. A scheme had leaped into his head. A scheme is a clever plan, often a sneaky one. Jemmy has a plan to trick the outlaws.",
+   "ransom": "Ransom. The outlaws want the king to pay gold to get his son back. That gold is a ransom. A ransom is money people demand before they will set a prisoner free.",
+   "flummox": "Flummox. I'm thinking these lads have mixed themselves up to flummox us. To flummox someone means to confuse them completely.",
+   "amiss": "Amiss. Something's amiss here. Amiss means wrong, not the way it should be. Billy can tell something doesn't add up."
+  }
+ },
+ "virtue": {
+  "name": "courage",
+  "title": "Courage Watch: Did they show courage?",
+  "items": [
+   {
+    "t": "The outlaws take the prince’s basket. He cries, “That’s mine!”",
+    "ok": false,
+    "why": "Shouting about your things is not courage."
+   },
+   {
+    "t": "Jemmy takes the hawk’s feather and offers to write the outlaws’ note himself.",
+    "ok": true,
+    "why": "He is in danger, but he steps up with a plan. That takes courage."
+   },
+   {
+    "t": "The outlaws decide Jemmy is the prince, and Jemmy plays along.",
+    "ok": true,
+    "why": "If the outlaws find out, he will be in big trouble. He does it anyway."
+   }
   ]
  }
 }
