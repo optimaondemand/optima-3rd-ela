@@ -5,7 +5,7 @@
      DATA.glossary  = [ {w, m, key} ]      dotted words, 🔊 on key words
      DATA.sayWords  = [ 'word', … ]          🔊 on the vocab cards (says just the word)
      DATA.cards     = [ {id, kind, tab, after, title, sub, look, todo, …} ]
-     DATA.wordgame  = {type:'tower'|'wagon'|'chase'|'sewer'|'castle'|'illuminate', …}  Up the North Tower / Fill the Wagon / The Chase / Out of the Sewer / Build the Castle / Illuminate the Page
+     DATA.wordgame  = {type:'tower'|'wagon'|'chase'|'sewer'|'castle'|'illuminate'|'market', …}  Up the North Tower / Fill the Wagon / The Chase / Out of the Sewer / Build the Castle / Illuminate the Page / Market Day
    The rules for 8-year-olds: every module opens with a "What to do:"
    line Opti reads, shows one step at a time, and every picture opens
    on notice/wonder before it says what it is.
@@ -913,6 +913,125 @@ WORDGAME.illuminate = function (cfg) {
   if (anchor) anchor.parentNode.insertBefore(card, anchor); else panel.appendChild(card);
 };
 
+/* ── Market Day: one round a day (week 24, medieval nonfiction) ──
+   DATA.wordgame = { type:'market', title, sub, look, todo, stepTitle, win, winWeek,
+     bins:[ {id, label, ic} ] (2-4 stalls), items:[ {t, bin, why, miss:{binId:'…'}} ] }
+   A market square in a medieval town: one striped stall per bin, each with
+   its picture sign. Read the word on the basket, tap the stall that sells
+   it (the buttons carry the words; nothing is written on the picture).
+   Each right answer puts a crate on that stall's counter and brings one
+   customer into the square. Day d starts with days 1…d-1's customers, so
+   the week fills one square. Practice only; never fills a graded box. */
+function marketSVG(have, day, per, bins, crates) {
+  var total = per * 4, n = bins.length, W = 320, H = 210;
+  var awn = [['#B5473A', '#F3E7C9'], ['#2F5D9E', '#F3E7C9'], ['#2F7A4A', '#F3E7C9'], ['#C7922C', '#F3E7C9']];
+  var s = '<svg viewBox="0 0 ' + W + ' ' + H + '" width="100%" style="max-width:360px" role="img" aria-label="' +
+    Math.min(have, total) + ' of ' + total + ' customers are at the market">' +
+    '<rect width="' + W + '" height="' + H + '" rx="12" fill="#DCEBF5"/>' +
+    /* town houses behind the square */
+    '<path d="M0 70 L20 52 L40 70 Z M40 70 L64 46 L88 70 Z M88 70 L106 54 L124 70 Z M196 70 L220 48 L244 70 Z M244 70 L266 54 L288 70 Z M288 70 L304 56 L320 70 Z" fill="#9E5A44"/>' +
+    '<rect x="0" y="70" width="124" height="34" fill="#E9D8B4"/><rect x="196" y="70" width="124" height="34" fill="#E9D8B4"/>' +
+    '<path d="M136 104 V56 L160 26 L184 56 V104 Z" fill="#CFC6B2" stroke="#8A7F68"/><path d="M152 104 v-14 a8 8 0 0 1 16 0 v14 Z" fill="#6B4423"/>' +
+    '<path d="M160 26 v-10 M155 20 h10" stroke="#6B4423" stroke-width="2"/>' +
+    [14, 54, 98, 206, 250, 292].map(function (x) { return '<rect x="' + x + '" y="80" width="10" height="12" fill="#6E8FB0"/>'; }).join('') +
+    /* cobbled square */
+    '<rect x="0" y="104" width="' + W + '" height="' + (H - 104) + '" fill="#C9B79A"/>' +
+    '<path d="M0 122 H320 M0 146 H320 M0 172 H320 M0 196 H320" stroke="#B3A083" stroke-width="1"/>';
+  var sw = Math.min(70, (W - 30) / n - 8), gap = (W - n * sw) / (n + 1);
+  bins.forEach(function (b, k) {
+    var x = gap + k * (sw + gap), c = awn[k % 4], top = 92, cy = 128;
+    /* posts stand on the cobbles */
+    s += '<rect x="' + (x + 3) + '" y="' + top + '" width="4" height="' + (cy + 22 - top) + '" fill="#6B4423"/>' +
+         '<rect x="' + (x + sw - 7) + '" y="' + top + '" width="4" height="' + (cy + 22 - top) + '" fill="#6B4423"/>';
+    /* striped awning */
+    for (var i = 0; i < 5; i++) {
+      var sx = x - 3 + i * (sw + 6) / 5;
+      s += '<path d="M' + sx.toFixed(1) + ' ' + top + ' h' + ((sw + 6) / 5).toFixed(1) + ' v14 q' + (-(sw + 6) / 10).toFixed(1) + ' 7 ' + (-(sw + 6) / 5).toFixed(1) + ' 0 Z" fill="' + c[i % 2] + '" stroke="#5E3D24" stroke-width=".6"/>';
+    }
+    /* picture sign hangs from the awning */
+    s += '<path d="M' + (x + sw / 2 - 6) + ' ' + (top + 14) + ' v6 M' + (x + sw / 2 + 6) + ' ' + (top + 14) + ' v6" stroke="#5E3D24" stroke-width="1"/>' +
+         '<rect x="' + (x + sw / 2 - 11) + '" y="' + (top + 19) + '" width="22" height="16" rx="3" fill="#F3E7C9" stroke="#5E3D24"/>' +
+         '<text x="' + (x + sw / 2) + '" y="' + (top + 31.5) + '" text-anchor="middle" font-size="11">' + (b.ic || '🧺') + '</text>';
+    /* counter */
+    s += '<rect x="' + (x - 2) + '" y="' + cy + '" width="' + (sw + 4) + '" height="22" fill="#8A5A2B" stroke="#4E3016" stroke-width="1.5"/>' +
+         '<path d="M' + (x - 2) + ' ' + (cy + 8) + ' h' + (sw + 4) + '" stroke="#6B4423"/>';
+    /* crates sold today sit on the counter */
+    var got = crates[b.id] || 0;
+    for (var j = 0; j < Math.min(got, 4); j++) {
+      var bx = x + 3 + j * ((sw - 6) / 4);
+      s += '<rect x="' + bx.toFixed(1) + '" y="' + (cy - 9) + '" width="' + ((sw - 6) / 4 - 2).toFixed(1) + '" height="9" fill="#C7922C" stroke="#6B4423" stroke-width="1"/>';
+    }
+  });
+  /* customers: two rows standing on the cobbles, feet on the ground line */
+  for (var p = 0; p < total; p++) {
+    var row = Math.floor(p / 16), col = p % 16;
+    var fx = 12 + col * 19 + (row ? 9 : 0), fy = row ? 205 : 180;
+    var today = p >= (day - 1) * per && p < day * per;
+    var tun = ['#7A3B69', '#2F5D9E', '#2F7A4A', '#B5473A', '#8A6212'][p % 5];
+    if (p < have) {
+      s += '<path d="M' + (fx - 2.5) + ' ' + fy + ' v-6 M' + (fx + 2.5) + ' ' + fy + ' v-6" stroke="#3B2A14" stroke-width="2"/>' +
+           '<path d="M' + (fx - 5) + ' ' + (fy - 5) + ' L' + (fx - 3.5) + ' ' + (fy - 15) + ' H' + (fx + 3.5) + ' L' + (fx + 5) + ' ' + (fy - 5) + ' Z" fill="' + tun + '"/>' +
+           '<circle cx="' + fx + '" cy="' + (fy - 18.5) + '" r="3.6" fill="#E8B98F" stroke="#7A5233" stroke-width=".6"/>';
+    } else if (today) {
+      s += '<path d="M' + (fx - 5) + ' ' + fy + ' L' + (fx - 3.5) + ' ' + (fy - 15) + ' H' + (fx + 3.5) + ' L' + (fx + 5) + ' ' + fy + ' Z" fill="none" stroke="#8A7A5A" stroke-width=".8" stroke-dasharray="2 2"/>' +
+           '<circle cx="' + fx + '" cy="' + (fy - 18.5) + '" r="3.6" fill="none" stroke="#8A7A5A" stroke-width=".8" stroke-dasharray="2 2"/>';
+    }
+  }
+  if (have >= total) s += '<rect x="96" y="6" width="128" height="22" rx="11" fill="#2F7A4A"/><text x="160" y="21.5" text-anchor="middle" font-family="Nunito,sans-serif" font-weight="800" font-size="13" fill="#fff">The square is full!</text>';
+  return s + '</svg>';
+}
+WORDGAME.market = function (cfg) {
+  var items = cfg.items || [], bins = cfg.bins || []; if (!items.length || bins.length < 2) return;
+  var panel = document.getElementById('tab-words'); if (!panel) return;
+  var anchor = panel.querySelector('.tab-next-wrap');
+  var day = dayNum(LESSON.day), PER = items.length;
+  var KEY = 'oao.g3ela.wg.' + LID;
+  var st = Sparkle.get(KEY, null) || { i: 0, misses: 0, c: {} };
+  if (!st.c) st.c = {};
+  if (st.i > PER) st.i = PER;
+  var card = cardShell({ id: 'market', kind: 'market', title: cfg.title || 'Market Day', sub: cfg.sub || '' }, '🧺');
+  var body = card.querySelector('.spk-card-body');
+  body.insertAdjacentHTML('beforeend', lookCard(cfg.look, cfg.todo) +
+    '<div class="g3-tw-grid"><div class="g3-market"></div><div class="g3-tw-play" aria-live="polite"></div></div>');
+  var mk = body.querySelector('.g3-market'), play = body.querySelector('.g3-tw-play');
+  function have() { return (day - 1) * PER + st.i; }
+  function paint(msg, ok, tried) {
+    mk.innerHTML = marketSVG(have(), day, PER, bins, st.c);
+    if (st.i >= PER) {
+      play.innerHTML = '<div class="g3-finish">✓ ' + esc(day === 4 ? (cfg.winWeek || cfg.win || '') : (cfg.win || '')) + '</div>' +
+        '<button type="button" class="spk-mini-btn g3-again">Play today’s round again</button>';
+      play.querySelector('.g3-again').onclick = function () { st = { i: 0, misses: 0, c: {} }; Sparkle.set(KEY, st); paint(); };
+      return;
+    }
+    var it = items[st.i];
+    var h = stepHead(st.i + 1, PER, cfg.stepTitle || 'Which stall sells it?') +
+      '<div class="g3-mk-basket"><span class="g3-mk-ic" aria-hidden="true">🧺</span><span>' + it.t + '</span></div><div class="g3-stalls">';
+    bins.forEach(function (b) {
+      h += '<button type="button" class="g3-stall' + (tried && tried.indexOf(b.id) >= 0 ? ' tried' : '') + '" data-b="' + esc(b.id) + '">' +
+           '<span class="g3-sack-ic" aria-hidden="true">' + esc(b.ic || '🧺') + '</span><span>' + esc(b.label) + '</span></button>';
+    });
+    h += '</div>';
+    if (msg) h += '<div class="g3-fb ' + (ok ? 'ok' : 'no') + '">' + msg + '</div>';
+    play.innerHTML = h;
+    play.querySelectorAll('.g3-stall').forEach(function (b) {
+      b.onclick = function () {
+        var id = b.getAttribute('data-b');
+        if (id === it.bin) {
+          st.i++; st.c[id] = (st.c[id] || 0) + 1; Sparkle.set(KEY, st); wgSfx(st.i >= PER ? 'win' : 'chime');
+          if (st.i >= PER) { paint(); return; }
+          paint('✓ ' + esc(it.why || 'Sold! A customer comes to the market.'), true);
+          var sv = mk.querySelector('svg'); if (sv) { sv.classList.remove('g3-clink'); void sv.getBoundingClientRect(); sv.classList.add('g3-clink'); }
+        } else {
+          st.misses++; Sparkle.set(KEY, st); wgSfx('bonk');
+          paint(esc((it.miss || {})[id] || 'Not that stall. Read the word again, then try another.'), false, (tried || []).concat([id]));
+        }
+      };
+    });
+  }
+  paint();
+  if (anchor) anchor.parentNode.insertBefore(card, anchor); else panel.appendChild(card);
+};
+
 /* ── Fill the Wagon: one round a day ────────────────────────────────
    DATA.wordgame = { type:'wagon', title, sub, look, todo, win, winWeek,
      bins:[ {id, label} ], items:[ {t, bin, why, miss:{binId:'…'}} ] }
@@ -1237,7 +1356,7 @@ function buildSpotlight() {
    assets/audio/guide/opti/g3ela-how-<slug>.mp3 (shared by every lesson
    that uses the same words). The button stays hidden until the file is
    really there, so a line without a recording just reads as text. */
-var SAY_FOR_CARD = { 'spk-copia-card': 'copia', 'g3card-tower': 'tower', 'g3card-wagon': 'wagon', 'g3card-chase': 'chase', 'g3card-sewer': 'sewer', 'g3card-castle': 'castle', 'g3card-illuminate': 'illuminate', 'g3card-backward': 'backward' };
+var SAY_FOR_CARD = { 'spk-copia-card': 'copia', 'g3card-tower': 'tower', 'g3card-wagon': 'wagon', 'g3card-chase': 'chase', 'g3card-sewer': 'sewer', 'g3card-castle': 'castle', 'g3card-illuminate': 'illuminate', 'g3card-market': 'market', 'g3card-backward': 'backward' };
 function buildSayDo() {
   document.querySelectorAll('.g3-todo:not([data-say])').forEach(function (p) {
     for (var k in SAY_FOR_CARD) {
