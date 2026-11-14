@@ -1,0 +1,420 @@
+{
+ "connector": "You just finished The Whipping Boy, a made-up story about a prince in a castle. This week you read true articles about real castles. Who lived there, and what did they do all day? Look for the one big idea the article keeps coming back to.",
+ "writingFocus": "inform",
+ "dol": {
+  "a": {
+   "raw": "king john stayed at windsor castle",
+   "fixed": "<strong>K</strong>ing <strong>J</strong>ohn stayed at <strong>W</strong>indsor <strong>C</strong>astle<strong>.</strong>",
+   "why": "King is a title right before his name, so it gets a capital K. John is a name. Windsor Castle is the name of one place, so both words get capitals. A period ends the sentence."
+  },
+  "b": {
+   "raw": "queen eleanor sailed to england",
+   "fixed": "<strong>Q</strong>ueen <strong>E</strong>leanor sailed to <strong>E</strong>ngland<strong>.</strong>",
+   "why": "Queen is a title right before her name, so it gets a capital Q. Eleanor is a name, and England is the name of a place. A period ends the sentence."
+  }
+ },
+ "hints": {
+  "fill1": {
+   "h1": "It means carry. You can find it in import and export.",
+   "why": "trans + port = transport: to carry across."
+  },
+  "fill2": {
+   "h1": "It means shape. A butterfly changes this.",
+   "why": "trans + form = transform: to change into a new shape."
+  },
+  "fill3": {
+   "h1": "Look at the word list above. It is the last word in the list.",
+   "why": "trans + late = translate: to carry words across into another language."
+  },
+  "fill4": {
+   "h1": "It is a six-letter word. Your mom or dad is one.",
+   "why": "trans + parent = transparent: you can see across, or through, it."
+  },
+  "vcloze1": {
+   "h1": "This place was built to keep enemies out. Look at the word with fort in it.",
+   "why": "A fortress is a strong building built to keep enemies out."
+  },
+  "vcloze2": {
+   "h1": "Find the word for the strongest tower inside the castle.",
+   "why": "The keep is the strongest inner tower."
+  },
+  "vcloze3": {
+   "h1": "These people cooked, cleaned and cared for the family.",
+   "why": "Servants worked in someone else’s home."
+  },
+  "vcloze4": {
+   "h1": "Find the word for a boy training to be a knight.",
+   "why": "A page trained in a noble’s home to become a knight."
+  }
+ },
+ "miss": {
+  "match": {
+   "fortress": "A fortress is a building. Look for the meaning about a strong building.",
+   "keep": "The keep is one part of a castle. Look for the meaning about a tower.",
+   "servant": "A servant is a person. Look for the meaning about working in someone’s home.",
+   "page": "A page is a boy. Look for the meaning about training to be a knight."
+  }
+ },
+ "flags": {
+  "journal-q1": {
+   "quote": false,
+   "count": 0
+  },
+  "journal-q2": {
+   "quote": false,
+   "count": 2
+  },
+  "journal-q3": {
+   "quote": false,
+   "count": 1
+  }
+ },
+ "copia": {
+  "look": "One plain sentence from the castle article, and three empty boxes. Each box asks you to say the same idea in a new way.",
+  "todo": "Rewrite the sentence three ways, one box at a time. Tap Show one way if you get stuck.",
+  "seed": "Many people <b>worked</b> inside the castle walls every day.",
+  "eg": [
+   "Every day, many people worked inside the castle walls.",
+   "Many people <i>labored</i> inside the castle walls every day.",
+   "Many busy people worked inside the thick castle walls every day."
+  ]
+ },
+ "wordgame": {
+  "type": "illuminate",
+  "title": "Illuminate the Page",
+  "sub": "Every right answer paints part of a medieval book page.",
+  "todo": "Read the question. Tap the answer you think is right. A right answer paints the next part of the page.",
+  "win": "Today’s 8 parts are painted. Come back next lesson to keep painting.",
+  "winWeek": "Your page is finished, from the gold letter to the last line!",
+  "look": "This week’s game is a page from a medieval book, before it is painted. Long ago, books were written and painted by hand. A painted page is called illuminated, because the gold makes it shine. Each right answer paints one part. Day 1 paints the big gold capital letter. Day 2 paints the border, Day 3 the little picture, and Day 4 the lines of writing.",
+  "items": [
+   {
+    "title": "The word part trans",
+    "q": "Which word has the word part <b>trans</b>, meaning across?",
+    "opts": [
+     "trance",
+     "transmit"
+    ],
+    "a": 1,
+    "why": "trans + mit: to send across. Trance starts with t r a n, but nothing goes across.",
+    "miss": {
+     "0": "Trance starts with t r a n, but nothing goes across. Look for trans."
+    }
+   },
+   {
+    "title": "The word part trans",
+    "q": "Which word part means <b>across</b>?",
+    "opts": [
+     "trans",
+     "un"
+    ],
+    "a": 0,
+    "why": "trans means across.",
+    "miss": {
+     "1": "un means not. Which one means across?"
+    }
+   },
+   {
+    "title": "Split the word",
+    "q": "Where does <b>lantern</b> split?",
+    "opts": [
+     "lan · tern",
+     "la · ntern"
+    ],
+    "a": 0,
+    "why": "n and t sit between the vowels. Split between them: lan · tern.",
+    "miss": {
+     "1": "Find the two consonants in the middle. Split between them."
+    }
+   },
+   {
+    "title": "Split the word",
+    "q": "Where does <b>market</b> split?",
+    "opts": [
+     "ma · rket",
+     "mar · ket"
+    ],
+    "a": 1,
+    "why": "r and k sit between the vowels: mar · ket.",
+    "miss": {
+     "0": "Find the two consonants in the middle. Split between them."
+    }
+   },
+   {
+    "title": "Capital letters",
+    "q": "Which one is the name of one real place, so it gets capitals?",
+    "opts": [
+     "a big castle",
+     "Dover Castle"
+    ],
+    "a": 1,
+    "why": "Dover Castle is the name of one real castle in England.",
+    "miss": {
+     "0": "A big castle could be any castle. Which one is a name?"
+    }
+   },
+   {
+    "title": "Capital letters",
+    "q": "Which is written the right way?",
+    "opts": [
+     "Lady Anne",
+     "lady Anne"
+    ],
+    "a": 0,
+    "why": "Lady is a title right before her name, so it gets a capital.",
+    "miss": {
+     "1": "When a title like this comes right before a name, it gets a capital too."
+    }
+   },
+   {
+    "title": "Split the word",
+    "q": "Which word has two consonants in the middle?",
+    "opts": [
+     "tiny",
+     "velvet"
+    ],
+    "a": 1,
+    "why": "vel · vet: l and v sit in the middle.",
+    "miss": {
+     "0": "Tiny has only one consonant, n, in the middle. Look for two."
+    }
+   },
+   {
+    "title": "The word part trans",
+    "q": "A <b>transcript</b> is a talk written down. Which part means across?",
+    "opts": [
+     "trans",
+     "script"
+    ],
+    "a": 0,
+    "why": "trans means across. The words move across, from talking to writing.",
+    "miss": {
+     "1": "Script means writing. Which part means across?"
+    }
+   }
+  ]
+ },
+ "glossary": [
+  {
+   "w": "central idea",
+   "m": "the most important point an author makes. The whole article keeps coming back to it.",
+   "key": true
+  },
+  {
+   "w": "detail",
+   "m": "one fact from the article that helps prove the central idea"
+  },
+  {
+   "w": "Middle Ages",
+   "cs": true,
+   "m": "a time in history about 500 to 1,500 years ago, when there were castles, knights and kings in Europe"
+  },
+  {
+   "w": "medieval",
+   "m": "from the Middle Ages",
+   "key": true
+  },
+  {
+   "w": "VCCV",
+   "cs": true,
+   "m": "vowel, consonant, consonant, vowel. A word with this pattern splits between the two consonants, like nap · kin."
+  },
+  {
+   "w": "syllable",
+   "m": "one beat in a word. Basket has two: bas · ket."
+  },
+  {
+   "w": "hyperbole",
+   "m": "stretching the truth on purpose, so much that nobody believes it, like “I’m so hungry I could eat a horse.”",
+   "key": true
+  },
+  {
+   "w": "expository",
+   "m": "writing that explains or teaches facts about a topic"
+  },
+  {
+   "w": "research question",
+   "m": "the question you want your notes to answer"
+  },
+  {
+   "w": "diligence",
+   "m": "working hard and carefully, and not giving up",
+   "key": true
+  }
+ ],
+ "sayWords": [],
+ "cards": [
+  {
+   "id": "job",
+   "kind": "info",
+   "tab": "reading",
+   "after": "Pause",
+   "before": true,
+   "icon": "⭐",
+   "title": "Job Spotlight: The Page",
+   "sub": "A real job in the Middle Ages",
+   "todo": "Read about this real job. Then read the two questions and the article.",
+   "text": [
+    "A page was a boy from a noble family. At about seven years old, he went to live in a lord’s castle.",
+    "He served at meals, carried messages, and learned to ride and to use a sword.",
+    "At about fourteen, a page could become a squire, the next step toward being a knight."
+   ]
+  }
+ ],
+ "transcripts": {
+  "welcome": "Hi, it’s Opti. You just finished The Whipping Boy. This week you read true articles about real life long ago. Today: a castle. Who lived there, and what did they do all day?",
+  "guide1": "Word work first. You’ll meet a word part that means across, sort names that get capital letters, and split words between two consonants.",
+  "guide2": "Read the castle article. Look for the one big idea it keeps coming back to.",
+  "guide3": "Today you pick your own topic about medieval life, one you will explain."
+ },
+ "notes": {
+  "wordParts": "The word part trans means across. transport = to carry across. translate = to carry words across into another language. Some words only start with t r a n, like tranquil (calm).",
+  "grammar": "Capital letters start every sentence and every important word in a name: people (Queen Eleanor), places (Tower of London) and titles. Small words like the, of and in stay small inside a name or title, unless they come first.",
+  "spelling": "VCCV means vowel, consonant, consonant, vowel. Split the word between the two consonants: bas · ket, tun · nel. Letters like ph and th stay together.",
+  "wgrd": "The central idea is the most important point an author makes. A detail is one fact that helps prove it.",
+  "vocab": [
+   [
+    "fortress",
+    "a large, strong building built to resist attack"
+   ],
+   [
+    "keep",
+    "the strongest, innermost tower of a castle"
+   ],
+   [
+    "servant",
+    "a person who works in someone else’s household"
+   ],
+   [
+    "page",
+    "a young boy in training at a noble household, learning to become a knight"
+   ]
+  ]
+ },
+ "plate": {
+  "src": "art/med/med-sept.jpg",
+  "alt": "An old painting of a tall white castle with pointed blue roofs on a hill, and people picking grapes in the field below",
+  "credit": "Les Très Riches Heures du Duc de Berry, September (detail) · Limbourg brothers and later painters, about 1412–1440 · Musée Condé, Chantilly · Public domain",
+  "look": "A page from a prayer book made for a French duke, painted about 600 years ago. The castle is the Château de Saumur, a real castle in France. Down below, workers pick grapes and load them on a cart. A castle needed many workers, inside its walls and out.",
+  "lookBtn": "Tap to learn about this painting of a real castle"
+ },
+ "teach": {
+  "dropTurnNotes": true,
+  "mods": [
+   {
+    "id": "wgrd",
+    "find": "What Good Readers",
+    "fold": [
+     ":scope > p:not(.g3-do)",
+     ":scope > .key-concept",
+     ":scope > .socratic-box"
+    ],
+    "todo": "Listen to Opti. Then tap the lens you will use today.",
+    "script": "[warmly] Here's today's reading tip. Every article has one big idea it keeps coming back to. That's the central idea. The other facts are details that help prove it. Then tap one of the two lenses below to use while you read. You don't need to write anything."
+   },
+   {
+    "id": "dol",
+    "find": "Daily Oral",
+    "fold": [],
+    "todo": "Tap the yellow parts. Then pick Sentence A or B and type it the right way.",
+    "script": "Let's fix a sentence. Look at the correct one first. King Henry lived in the Tower of London during the Middle Ages. King Henry is a person, the Tower of London is a place, and the Middle Ages is a time in history. Names get capitals. Tap the yellow parts. Then pick Sentence A or Sentence B, and type it the right way."
+   },
+   {
+    "id": "morph",
+    "find": "Morphology",
+    "fold": [
+     ":scope > .callout:not(:has(+ .fillin-game)):not(:has(+ .dol-check-btn))"
+    ],
+    "todo": "Think about the questions. Tap See if you cracked it. Type the missing part of each word.",
+    "script": "[curious] Have you ever walked across a bridge? You start on one side and end up on the other. There's a word part that means across. Trans. T, r, a, n, s. Trans, plus Pacific, makes transpacific: across the Pacific Ocean. But careful! Tranquil starts with t, r, a, n, and it just means calm. Nothing goes across. Read the three words, and think about the questions. Then tap See if you cracked it, and type the missing parts.",
+    "video": "g3ela-23-1-teach-morph"
+   },
+   {
+    "id": "vocab",
+    "find": "Vocabulary",
+    "fold": [
+     ":scope > .g3-model-h",
+     ":scope > .decode-steps"
+    ],
+    "todo": "Fill in each sentence with a word from the word bank. Tap Check My Work. Then play the matching game.",
+    "script": "Let's be word detectives with a word that's not in your bank. Chamber. Here's a sentence. The lord slept in a small chamber at the top of the tower. He slept in it, so a chamber must be a room. One, read the sentence. Two, look for word parts. Three, check that the meaning fits. Fill in each sentence with a word from the bank, and tap Check My Work. Then play the matching game.",
+    "video": "g3ela-23-1-teach-vocab"
+   },
+   {
+    "id": "gram",
+    "find": "Grammar",
+    "fold": [
+     ":scope > .callout:not(:has(+ .spotter-game)):not(:has(+ .fillin-game)):not(:has(+ .sort-game)):not(:has(+ .dol-check-btn))"
+    ],
+    "todo": "Tap Now check your thinking. Then sort each name: a person, a place, or a title.",
+    "script": "[warmly] Some words are names, and names get capital letters. Listen. Stories say Robin Hood lived in Sherwood Forest. Robin Hood names a person. Sherwood Forest names a place. Every important word in a name gets a capital. A book title does too, like The Wind in the Willows. But little words inside, like in and the, stay small. Tap Now check your thinking. Then sort each name: a person, a place, or a title.",
+    "video": "g3ela-23-1-teach-gram"
+   },
+   {
+    "id": "spell",
+    "find": "Spelling",
+    "fold": [],
+    "todo": "Say the words. Tap See the Rule. Then sort all eight words.",
+    "script": "Watch me split a long word. Puppet. Find the vowels: u, and e. In between sit two consonants, p and p. Vowel, consonant, consonant, vowel. That's V C C V! So I split right between the two consonants. Pup. Pet. Say the words in Group A and Group B out loud, and tap See the Rule. Then sort all eight words.",
+    "video": "g3ela-23-1-teach-spell"
+   },
+   {
+    "id": "copia",
+    "sel": ".spk-copia-card",
+    "label": "Opti shows you how",
+    "fold": [],
+    "todo": "Write the sentence three new ways, one box at a time.",
+    "script": "[warmly] Here's copia: one idea, said many ways. Let me try a different sentence first. The cook stirred the soup. Box one, change the opener: In the hot kitchen, the cook stirred the soup. Box two, a stronger verb: The cook swirled the soup. Box three, add a detail: The tired cook stirred the thick soup. Now it's your turn, one box at a time. If you get stuck, tap Show one way."
+   },
+   {
+    "id": "read",
+    "find": "Pause",
+    "fold": [],
+    "todo": "Read the two questions. Then read the article below.",
+    "script": "Read the two Pause and Think questions first. Then read the castle article below, with your lens in mind. When you finish, try the Diligence Watch right after the article. You don't write your Pause and Think answers."
+   },
+   {
+    "id": "chq",
+    "find": "Article Thinking",
+    "fold": [],
+    "todo": "Answer each question in full sentences. Use details from the article.",
+    "script": "Now answer in full sentences, with details from the article. One, what is the central idea? Say it in one sentence. Two, name two details that prove it. Three, how are the people in this castle like the people in The Whipping Boy's castle, and how are they different?"
+   },
+   {
+    "id": "write",
+    "find": "Writer.s Workshop",
+    "fold": [
+     ":scope > .callout"
+    ],
+    "foldText": [
+     "watch how",
+     "today.s tool"
+    ],
+    "todo": "Write your own topic: one thing about medieval life you want to explain.",
+    "script": "Clara started with castles. Too big! So she made it smaller: what servants did in a castle. A good topic is one thing you can explain. Write your own topic in the box. Use a sentence frame if you get stuck."
+   }
+  ],
+  "cards": {}
+ },
+ "virtue": {
+  "name": "diligence",
+  "title": "Diligence Watch: Is someone working hard?",
+  "items": [
+   {
+    "t": "Servants cooked food, cleaned, and cared for the horses.",
+    "ok": true,
+    "why": "They did hard jobs every day to keep the castle going."
+   },
+   {
+    "t": "The keep was the strongest part of the castle.",
+    "ok": false,
+    "why": "That is a fact about a building, not about someone working."
+   },
+   {
+    "t": "Young boys from noble families trained for years as pages.",
+    "ok": true,
+    "why": "Training for years takes steady, hard work."
+   }
+  ]
+ }
+}

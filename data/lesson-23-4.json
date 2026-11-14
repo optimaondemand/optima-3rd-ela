@@ -1,0 +1,407 @@
+{
+ "connector": "What did you eat today? Long ago, the answer depended on who you were. Today’s article shows two sides: the rich and the poor. Look for the words that split them apart.",
+ "writingFocus": "inform",
+ "dol": {
+  "a": {
+   "raw": "at the great feast lord neville served roast swan",
+   "fixed": "<strong>A</strong>t the great feast<strong>,</strong> <strong>L</strong>ord <strong>N</strong>eville served roast swan<strong>.</strong>",
+   "why": "At starts the sentence, so it gets a capital A. A comma comes after the opening part. Lord is a title right before his name, Neville. A period ends the sentence."
+  },
+  "b": {
+   "raw": "in the kitchens of dover castle the cooks baked pies",
+   "fixed": "<strong>I</strong>n the kitchens of <strong>D</strong>over <strong>C</strong>astle<strong>,</strong> the cooks baked pies<strong>.</strong>",
+   "why": "In starts the sentence. Dover Castle is the name of one place, so both words get capitals. A comma comes after the opening part. A period ends the sentence."
+  }
+ },
+ "hints": {
+  "vcloze1": {
+   "h1": "Poor families ate this thick soup.",
+   "why": "Pottage is a thick soup of grain and vegetables."
+  },
+  "vcloze2": {
+   "h1": "Find the word for a big, fancy meal.",
+   "why": "A feast is a large meal for a celebration."
+  },
+  "vcloze3": {
+   "h1": "This word means rough, not smooth.",
+   "why": "Coarse bread was rough and dark."
+  },
+  "vcloze4": {
+   "h1": "Find the word for a dull grey metal.",
+   "why": "Pewter is a grey metal used for plates and cups."
+  }
+ },
+ "miss": {
+  "match": {
+   "pottage": "Pottage is a food. Look for the meaning about soup.",
+   "feast": "A feast is a meal. Look for the meaning about a big meal.",
+   "coarse": "Coarse describes how something feels. Look for the meaning about rough.",
+   "pewter": "Pewter is a metal. Look for the meaning about plates and cups."
+  }
+ },
+ "flags": {
+  "journal-q1": {
+   "quote": false,
+   "count": 0
+  },
+  "journal-q2": {
+   "quote": false,
+   "count": 2
+  },
+  "journal-q3": {
+   "quote": false,
+   "count": 1
+  }
+ },
+ "wordgame": {
+  "type": "illuminate",
+  "title": "Illuminate the Page",
+  "sub": "Every right answer paints part of a medieval book page.",
+  "todo": "Read the question. Tap the answer you think is right. A right answer paints the next part of the page.",
+  "win": "Today’s 8 parts are painted. Come back next lesson to keep painting.",
+  "winWeek": "Your page is finished, from the gold letter to the last line!",
+  "look": "Each right answer paints one part of the page. Day 1 painted the big letter. Day 2 paints the border, Day 3 the picture, and Day 4 the lines of writing.",
+  "items": [
+   {
+    "title": "The word part trans",
+    "q": "Which word has the word part <b>trans</b>?",
+    "opts": [
+     "trumpet",
+     "transmit"
+    ],
+    "a": 1,
+    "why": "trans + mit: to send across.",
+    "miss": {
+     "0": "Trumpet starts with t r, but there is no trans in it."
+    }
+   },
+   {
+    "title": "The word part trans",
+    "q": "What does <b>trans</b> mean in <b>transcript</b>?",
+    "opts": [
+     "across",
+     "under"
+    ],
+    "a": 0,
+    "why": "trans means across. The words move across, from talking to writing.",
+    "miss": {
+     "1": "Under goes with sub. Which one goes with trans?"
+    }
+   },
+   {
+    "title": "Split the word",
+    "q": "Where does <b>lumber</b> split?",
+    "opts": [
+     "lu · mber",
+     "lum · ber"
+    ],
+    "a": 1,
+    "why": "m and b sit in the middle: lum · ber.",
+    "miss": {
+     "0": "Find the two consonants in the middle. Split between them."
+    }
+   },
+   {
+    "title": "Split the word",
+    "q": "Which word splits between two consonants?",
+    "opts": [
+     "river",
+     "mitten"
+    ],
+    "a": 1,
+    "why": "mit · ten.",
+    "miss": {
+     "0": "River has one consonant, v, between the vowels. Look for two."
+    }
+   },
+   {
+    "title": "Capital letters",
+    "q": "Find the mistake: <i>We visited warwick Castle.</i>",
+    "opts": [
+     "Castle",
+     "No mistake",
+     "warwick"
+    ],
+    "a": 2,
+    "why": "Warwick is part of the castle’s name, so it needs a capital W.",
+    "miss": {
+     "0": "Castle is part of the name, so its capital is right.",
+     "1": "Look again at every word in the name."
+    }
+   },
+   {
+    "title": "Capital letters",
+    "q": "Find the mistake: <i>The feast was in the Winter.</i>",
+    "opts": [
+     "Winter",
+     "feast",
+     "No mistake"
+    ],
+    "a": 0,
+    "why": "Seasons stay small: winter.",
+    "miss": {
+     "1": "Feast is not a name, so it stays small. That part is right.",
+     "2": "Look at the season."
+    }
+   },
+   {
+    "title": "Capital letters",
+    "q": "Which is written the right way?",
+    "opts": [
+     "duke William",
+     "Duke William"
+    ],
+    "a": 1,
+    "why": "Duke is a title right before his name, so it gets a capital.",
+    "miss": {
+     "0": "When a title like this comes right before a name, it gets a capital too."
+    }
+   },
+   {
+    "title": "Split the word",
+    "q": "Where does <b>blanket</b> split?",
+    "opts": [
+     "blan · ket",
+     "bla · nket"
+    ],
+    "a": 0,
+    "why": "n and k sit in the middle: blan · ket.",
+    "miss": {
+     "1": "Find the two consonants in the middle. Split between them."
+    }
+   }
+  ]
+ },
+ "glossary": [
+  {
+   "w": "central idea",
+   "m": "the most important point an author makes. The whole article keeps coming back to it.",
+   "key": true
+  },
+  {
+   "w": "detail",
+   "m": "one fact from the article that helps prove the central idea"
+  },
+  {
+   "w": "Middle Ages",
+   "cs": true,
+   "m": "a time in history about 500 to 1,500 years ago, when there were castles, knights and kings in Europe"
+  },
+  {
+   "w": "medieval",
+   "m": "from the Middle Ages",
+   "key": true
+  },
+  {
+   "w": "VCCV",
+   "cs": true,
+   "m": "vowel, consonant, consonant, vowel. A word with this pattern splits between the two consonants, like nap · kin."
+  },
+  {
+   "w": "syllable",
+   "m": "one beat in a word. Basket has two: bas · ket."
+  },
+  {
+   "w": "hyperbole",
+   "m": "stretching the truth on purpose, so much that nobody believes it, like “I’m so hungry I could eat a horse.”",
+   "key": true
+  },
+  {
+   "w": "expository",
+   "m": "writing that explains or teaches facts about a topic"
+  },
+  {
+   "w": "research question",
+   "m": "the question you want your notes to answer"
+  },
+  {
+   "w": "diligence",
+   "m": "working hard and carefully, and not giving up",
+   "key": true
+  }
+ ],
+ "sayWords": [],
+ "cards": [
+  {
+   "id": "job",
+   "kind": "info",
+   "tab": "reading",
+   "after": "Pause",
+   "before": true,
+   "icon": "⭐",
+   "title": "Job Spotlight: The Castle Cook",
+   "sub": "A real job in the Middle Ages",
+   "todo": "Read about this real job. Then read the two questions and the article.",
+   "text": [
+    "A big castle kitchen had a head cook and many helpers.",
+    "They baked bread, stirred pottage, and roasted meat over a huge open fire.",
+    "A kitchen boy sometimes had a hot job: turning the meat on a long spit, around and around, for hours."
+   ]
+  }
+ ],
+ "transcripts": {
+  "welcome": "Hi, it’s Opti. What did you eat today? Long ago, the answer depended on who you were. Today’s article shows two sides, the rich and the poor.",
+  "guide1": "Word study review. Roll trans words, hunt for capital-letter mistakes, and roll VCCV words.",
+  "guide2": "Read about medieval food. Look for the words that split the rich from the poor.",
+  "guide3": "Today you start writing: your topic sentence and one detail."
+ },
+ "notes": {
+  "wordParts": "The word part trans means across. transport = to carry across. translate = to carry words across into another language. Some words only start with t r a n, like tranquil (calm).",
+  "grammar": "Capital letters start every sentence and every important word in a name: people (Queen Eleanor), places (Tower of London) and titles. Small words like the, of and in stay small inside a name or title, unless they come first.",
+  "spelling": "VCCV means vowel, consonant, consonant, vowel. Split the word between the two consonants: bas · ket, tun · nel. Letters like ph and th stay together.",
+  "wgrd": "Some articles show two sides. Words like most and very differently tell you the author is switching sides.",
+  "vocab": [
+   [
+    "pottage",
+    "a thick soup of vegetables and grains"
+   ],
+   [
+    "feast",
+    "a large, fancy meal for a celebration"
+   ],
+   [
+    "coarse",
+    "rough in texture"
+   ],
+   [
+    "pewter",
+    "a dull grey metal used for plates and cups"
+   ]
+  ]
+ },
+ "plate": {
+  "src": "art/med/med-luttrell-dining.jpg",
+  "alt": "An old painting of a lord, his family and two friars eating at a long table, while two servants bring in food",
+  "credit": "Sir Geoffrey Luttrell at dinner, Luttrell Psalter (Add MS 42130, fol. 208r) · England, about 1325–1340 · British Library · Public domain",
+  "look": "A page from a prayer book made in England about 700 years ago for a rich lord, Sir Geoffrey Luttrell. He eats with his family and two friars, men of the church. Servants carry the food in. Look for the round loaves of bread and the bowls on the table.",
+  "lookBtn": "Tap to learn about this painting of a lord at dinner"
+ },
+ "teach": {
+  "dropTurnNotes": true,
+  "mods": [
+   {
+    "id": "wgrd",
+    "find": "What Good Readers",
+    "fold": [
+     ":scope > p:not(.g3-do)",
+     ":scope > .key-concept",
+     ":scope > .socratic-box"
+    ],
+    "todo": "Listen to Opti. Then tap the lens you will use today.",
+    "script": "[warmly] Here's today's reading tip. This article shows two sides, the rich and the poor. Watch for the words that tell you the author is switching sides. Then tap one of the two lenses below to use while you read. You don't need to write anything."
+   },
+   {
+    "id": "dol",
+    "find": "Daily Oral",
+    "fold": [],
+    "todo": "Tap the yellow parts. Then pick Sentence A or B and type it the right way.",
+    "script": "Let's fix a sentence. Look at the correct one first. At the feast of Saint George, Lord Pembroke served roasted boar and French wine. French gets a capital, because it comes from the name of a country, France. Tap the yellow parts. Then pick Sentence A or Sentence B, and type it the right way."
+   },
+   {
+    "id": "poem",
+    "find": "Poetry",
+    "fold": [
+     ":scope > .callout",
+     ":scope > .socratic-box"
+    ],
+    "todo": "Read the poem again. Then make up a hyperbole and say it out loud.",
+    "script": "Here's Lear's beard poem again. This time, you make the hyperbole! How long does a school day feel? Stretch it so far that nobody could believe it. Say your sentence out loud. You don't need to write it."
+   },
+   {
+    "id": "morph",
+    "find": "Morphology",
+    "fold": [
+     ":scope > .key-concept"
+    ],
+    "foldText": [
+     "Before you roll"
+    ],
+    "todo": "Tap Roll the Dice. Say what the word means. Tap Check My Thinking. Roll all six words.",
+    "script": "Riddle time. I come at the front of a word. I have five letters. And I mean across. What am I? Trans! Try this one. Transcribe. To write across, copying words from one place to another. Tap Roll the Dice. Say what each word means, and tap Check My Thinking. Roll all six.",
+    "video": "g3ela-23-4-teach-morph"
+   },
+   {
+    "id": "vocab",
+    "find": "Vocabulary",
+    "fold": [
+     ":scope > .g3-model-h",
+     ":scope > .decode-steps"
+    ],
+    "todo": "Fill in each sentence with a word from the word bank. Tap Check My Work. Then play the matching game.",
+    "script": "One more food word before you go. Trencher. The article says some people ate from thick slices of bread called trenchers. A plate you could eat! Read each sentence with a bank word in the blank. If it makes sense, keep it. Then play the matching game.",
+    "video": "g3ela-23-4-teach-vocab"
+   },
+   {
+    "id": "gram",
+    "find": "Grammar",
+    "fold": [
+     ":scope > .callout:not(:has(+ .spotter-game)):not(:has(+ .fillin-game)):not(:has(+ .sort-game)):not(:has(+ .dol-check-btn))"
+    ],
+    "todo": "Tap the wrong word, or tap No mistake. Then tap See the answers and answer the question in the box.",
+    "script": "Something looks funny here. We saw a Castle on the hill. Castle has a capital, but it isn't the name of one castle. It could be any castle! So it stays small. Read each sentence out loud. Tap the word that's wrong, or tap No mistake.",
+    "video": "g3ela-23-4-teach-gram"
+   },
+   {
+    "id": "spell",
+    "find": "Spelling",
+    "fold": [],
+    "foldText": [
+     "The Rule:",
+     "Before you roll"
+    ],
+    "todo": "Tap Roll the dice. Split the word. Tap Check my answer. Roll all six.",
+    "script": "Roll one with me. Window! The vowels are i and o. In the middle sit n and w. Split between them. Win. Dow. Tap Roll the dice. Say the word out loud and split it into syllables. Then tap Check my answer. Roll all six words.",
+    "video": "g3ela-23-4-teach-spell"
+   },
+   {
+    "id": "read",
+    "find": "Pause",
+    "fold": [],
+    "todo": "Read the two questions. Then read the article below.",
+    "script": "Read the two Pause and Think questions first. Then read about medieval food. Look for the two sides, the rich and the poor. Then try the Diligence Watch and the Read Like a Writer box."
+   },
+   {
+    "id": "chq",
+    "find": "Article Thinking",
+    "fold": [],
+    "todo": "Answer each question in full sentences. Use details from the article.",
+    "script": "Now answer in full sentences. One, the central idea, in one sentence. Two, one food the rich ate, and one food the poor ate. Three, think about Chapter 6 of The Whipping Boy. Why did the prince and Jemmy eat so differently?"
+   },
+   {
+    "id": "write",
+    "find": "Writer.s Workshop",
+    "fold": [
+     ":scope > .callout"
+    ],
+    "foldText": [
+     "watch how",
+     "today.s tool"
+    ],
+    "todo": "Write your topic sentence and at least one detail sentence. Use your plan from Day 3.",
+    "script": "Today you start writing! Clara's topic sentence tells the main idea, and it makes you want to read more. Write your topic sentence and at least one detail. Use your plan from Day 3."
+   }
+  ],
+  "cards": {}
+ },
+ "virtue": {
+  "name": "diligence",
+  "title": "Diligence Watch: Is someone working hard?",
+  "items": [
+   {
+    "t": "People grew their own food in gardens or small farm plots.",
+    "ok": true,
+    "why": "Growing food takes work every day, all season long."
+   },
+   {
+    "t": "A king's feast might include roasted meat, pies, fish, fruits, and sweet pastries.",
+    "ok": false,
+    "why": "That tells what was on the table, not who worked to make it."
+   },
+   {
+    "t": "Meat was a rare treat for most ordinary people.",
+    "ok": false,
+    "why": "That is a fact about food, not about someone working."
+   }
+  ]
+ }
+}
