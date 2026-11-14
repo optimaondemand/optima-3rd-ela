@@ -94,6 +94,9 @@ for key, spec in V.items():
     for m in re.finditer(r'[^.?!:]+[.?!:]?', text):
         s = m.group(0).strip()
         if s: caps.append({'t': t_of(s[:25], m.start() + (len(m.group(0)) - len(m.group(0).lstrip()))) if m.start() else 0.0, 'text': s})
+    # MERGE_SHORT: a caption of 3 letters or fewer (the S. of P.S.) joins the one before it
+    for i in range(len(caps)-1, 0, -1):
+        if len(caps[i]['text']) <= 3: caps[i-1]['text'] += caps[i]['text']; caps.pop(i)
     out[key] = {'title': spec['title'], 'sub': spec['sub'], 'dur': round(dur, 2), 'scenes': scenes, 'caps': caps, 'sil': sil}
     print(key, round(dur,1), 'aligned' if WT and not OV else 'pauses', [s['t'] for s in scenes])
 json.dump(out, open('timeline.json', 'w'), ensure_ascii=False)
