@@ -1,0 +1,374 @@
+{
+ "connector": "No new chapters today. You get to be the detective. Find the exact words Lewis uses for what Lucy feels and hears, and the strange lamp-post glowing in the wood. Those words are your evidence.",
+ "writingFocus": "literary response",
+ "dol": {
+  "a": {
+   "raw": "when lucy reached the lamp-post she heard a pitter patter of feet",
+   "fixed": "<strong>W</strong>hen <strong>L</strong>ucy reached the lamp-post<strong>,</strong> she heard a pitter patter of feet<strong>.</strong>",
+   "why": "When starts the part that cannot stand alone. A comma goes after it, before the main idea. Lucy is a name. A period ends it."
+  },
+  "b": {
+   "raw": "when lucy was tired of eating the faun began to talk",
+   "fixed": "<strong>W</strong>hen <strong>L</strong>ucy was tired of eating<strong>,</strong> the <strong>F</strong>aun began to talk<strong>.</strong>",
+   "why": "When starts the part that cannot stand alone, so a comma goes after eating. Lucy is a name, and the Faun is used as his name."
+  }
+ },
+ "hints": {
+  "mfill1": {
+   "h1": "Read the meaning beside it: sound from far away. Say tele, then phone.",
+   "why": "tele + phone = telephone."
+  },
+  "mfill2": {
+   "h1": "Read the meaning: seeing from far away. Say tele, then vision.",
+   "why": "tele + vision = television."
+  },
+  "mfill3": {
+   "h1": "Read the meaning: a tool for looking far away. Say tele, then scope.",
+   "why": "tele + scope = telescope."
+  },
+  "mfill4": {
+   "h1": "Read the meaning: a message written from far away. Say tele, then gram.",
+   "why": "tele + gram = telegram."
+  }
+ },
+ "flags": {
+  "journal-q1": {
+   "quote": true,
+   "count": 2
+  },
+  "journal-q2": {
+   "quote": false,
+   "count": 1
+  },
+  "journal-q3": {
+   "quote": false,
+   "count": 2
+  }
+ },
+ "wordgame": {
+  "type": "wardrobe",
+  "title": "Through the Wardrobe",
+  "sub": "Every right answer pushes a fur coat aside. What is behind them?",
+  "todo": "Read the word on the coat. Tap the vowel that makes its lazy schwa sound. A right answer pushes the coat aside.",
+  "stepTitle": "Which vowel says uh?",
+  "win": "All the coats are pushed aside, and the lamp-post is shining. Come back next lesson; more snow is falling.",
+  "winWeek": "You made it all the way through the wardrobe. The lamp-post is shining as bright as it can!",
+  "look": "Each coat has a word with a lazy uh beat. Say the word, then tap the vowel that makes the uh. Each right answer pushes one coat aside. The snow from earlier days is still falling behind the coats.",
+  "bins": [
+   {
+    "id": "a",
+    "label": "a says uh",
+    "ic": "a"
+   },
+   {
+    "id": "o",
+    "label": "o says uh",
+    "ic": "o"
+   },
+   {
+    "id": "i",
+    "label": "i says uh",
+    "ic": "i"
+   },
+   {
+    "id": "u",
+    "label": "u says uh",
+    "ic": "u"
+   }
+  ],
+  "items": [
+   {
+    "t": "parade",
+    "bin": "a",
+    "why": "pa·rade: the a in the first beat says uh.",
+    "miss": {
+     "o": "Say the word slowly and clap it. Find the quiet, lazy beat. Which vowel letter is in that beat?",
+     "i": "Say the word slowly and clap it. Find the quiet, lazy beat. Which vowel letter is in that beat?",
+     "u": "Say the word slowly and clap it. Find the quiet, lazy beat. Which vowel letter is in that beat?"
+    }
+   },
+   {
+    "t": "melon",
+    "bin": "o",
+    "why": "mel·on: the o says uh.",
+    "miss": {
+     "a": "Say the word slowly and clap it. Find the quiet, lazy beat. Which vowel letter is in that beat?",
+     "i": "Say the word slowly and clap it. Find the quiet, lazy beat. Which vowel letter is in that beat?",
+     "u": "Say the word slowly and clap it. Find the quiet, lazy beat. Which vowel letter is in that beat?"
+    }
+   },
+   {
+    "t": "walrus",
+    "bin": "u",
+    "why": "wal·rus: the u says uh.",
+    "miss": {
+     "a": "Say the word slowly and clap it. Find the quiet, lazy beat. Which vowel letter is in that beat?",
+     "o": "Say the word slowly and clap it. Find the quiet, lazy beat. Which vowel letter is in that beat?",
+     "i": "Say the word slowly and clap it. Find the quiet, lazy beat. Which vowel letter is in that beat?"
+    }
+   },
+   {
+    "t": "fossil",
+    "bin": "i",
+    "why": "fos·sil: the i says uh.",
+    "miss": {
+     "a": "Say the word slowly and clap it. Find the quiet, lazy beat. Which vowel letter is in that beat?",
+     "o": "Say the word slowly and clap it. Find the quiet, lazy beat. Which vowel letter is in that beat?",
+     "u": "Say the word slowly and clap it. Find the quiet, lazy beat. Which vowel letter is in that beat?"
+    }
+   },
+   {
+    "t": "comma",
+    "bin": "a",
+    "why": "com·ma: the a at the end says uh.",
+    "miss": {
+     "o": "Say the word slowly and clap it. Find the quiet, lazy beat. Which vowel letter is in that beat?",
+     "i": "Say the word slowly and clap it. Find the quiet, lazy beat. Which vowel letter is in that beat?",
+     "u": "Say the word slowly and clap it. Find the quiet, lazy beat. Which vowel letter is in that beat?"
+    }
+   },
+   {
+    "t": "gallon",
+    "bin": "o",
+    "why": "gal·lon: the o says uh.",
+    "miss": {
+     "a": "Say the word slowly and clap it. Find the quiet, lazy beat. Which vowel letter is in that beat?",
+     "i": "Say the word slowly and clap it. Find the quiet, lazy beat. Which vowel letter is in that beat?",
+     "u": "Say the word slowly and clap it. Find the quiet, lazy beat. Which vowel letter is in that beat?"
+    }
+   },
+   {
+    "t": "bonus",
+    "bin": "u",
+    "why": "bo·nus: the u says uh.",
+    "miss": {
+     "a": "Say the word slowly and clap it. Find the quiet, lazy beat. Which vowel letter is in that beat?",
+     "o": "Say the word slowly and clap it. Find the quiet, lazy beat. Which vowel letter is in that beat?",
+     "i": "Say the word slowly and clap it. Find the quiet, lazy beat. Which vowel letter is in that beat?"
+    }
+   },
+   {
+    "t": "stencil",
+    "bin": "i",
+    "why": "sten·cil: the i says uh.",
+    "miss": {
+     "a": "Say the word slowly and clap it. Find the quiet, lazy beat. Which vowel letter is in that beat?",
+     "o": "Say the word slowly and clap it. Find the quiet, lazy beat. Which vowel letter is in that beat?",
+     "u": "Say the word slowly and clap it. Find the quiet, lazy beat. Which vowel letter is in that beat?"
+    }
+   }
+  ]
+ },
+ "glossary": [
+  {
+   "w": "setting",
+   "m": "where and when a story happens",
+   "key": true
+  },
+  {
+   "w": "fantasy",
+   "m": "a story with magic or things that could not happen in real life"
+  },
+  {
+   "w": "schwa",
+   "m": "the lazy uh sound in a quiet beat of a long word. Any vowel letter can make it.",
+   "key": true
+  },
+  {
+   "w": "syllable",
+   "m": "one beat in a word. Lem-on has two syllables."
+  },
+  {
+   "w": "complex sentence",
+   "m": "a sentence with a main idea and a part that cannot stand alone, joined by a word like when, because or although",
+   "key": true
+  },
+  {
+   "w": "dependent",
+   "m": "needs another part to make sense. A dependent part cannot stand alone as a sentence."
+  },
+  {
+   "w": "personification",
+   "m": "talking about something that is not a person as if it were a person",
+   "key": true
+  },
+  {
+   "w": "Faun",
+   "cs": true,
+   "m": "a creature from very old stories. Stories say a faun is half person and half goat."
+  },
+  {
+   "w": "literary response",
+   "m": "writing that tells what you think about a book and proves it with details from the book"
+  },
+  {
+   "w": "honesty",
+   "m": "telling the truth, even when it is hard",
+   "key": true
+  }
+ ],
+ "sayWords": [],
+ "cards": [
+  {
+   "id": "world",
+   "kind": "info",
+   "tab": "reading",
+   "after": "Look Back",
+   "before": true,
+   "icon": "🌍",
+   "title": "World Notes: Lamp-Posts and Lamplighters",
+   "sub": "A real thing behind the story",
+   "todo": "Read the note. Then read the chapters with your lens in mind.",
+   "text": [
+    "Long ago, before electric lights, many streets in London were lit by gas lamps on tall posts.",
+    "Each evening a lamplighter walked from post to post to light them, and each morning he put them out.",
+    "A lamp-post on a city street was ordinary. A lamp-post alone in a snowy wood is very strange!"
+   ]
+  }
+ ],
+ "transcripts": {
+  "welcome": "Hi, it’s Opti. Detective day! Find the exact words Lewis uses to make Narnia feel real.",
+  "guide1": "Word work: build tele words, join two sentences, and find which vowel blurred.",
+  "guide2": "Look back at Chapters 1 to 3 for the exact words you need.",
+  "guide3": "Today you write two evidence sentences with short quotes."
+ },
+ "notes": {
+  "wordParts": "The word part tele means far. telephone = sound from far away. telescope = a tool for looking far away.",
+  "grammar": "A complex sentence has a main idea and a part that cannot stand alone, joined by a word like when, because or although. When that part comes first, put a comma after it.",
+  "spelling": "The schwa is a lazy uh sound in a quiet beat of a long word. Any vowel can make it: the a in sofa, the e in seven, the o in lemon.",
+  "wgrd": "Point to the exact words. Lewis tells what Lucy feels and hears: snow that is soft and powdery and extremely cold, and something crunching under her feet.",
+  "vocab": [
+   [
+    "inquisitive",
+    "eager to find out; very curious"
+   ],
+   [
+    "melancholy",
+    "a deep feeling of sadness or gloom"
+   ],
+   [
+    "peculiar",
+    "strange or unusual in a hard-to-explain way"
+   ]
+  ]
+ },
+ "plate": {
+  "src": "art/lww/lww-lamplight.jpg",
+  "alt": "A painting of a wet city street at dusk, with glowing street lamps and lit shop windows reflected on the road",
+  "credit": "Boar Lane, Leeds, by Lamplight · John Atkinson Grimshaw, 1881 · private collection · Public domain",
+  "look": "A painting by John Atkinson Grimshaw of a real street in Leeds, England, in 1881. Gas lamps on tall posts light up the wet road, and the shop windows glow. In a city, a lamp-post was an everyday thing. That is why one alone in a snowy wood is so strange.",
+  "lookBtn": "Tap to learn about this painting of a lamp-lit street"
+ },
+ "teach": {
+  "dropTurnNotes": true,
+  "mods": [
+   {
+    "id": "wgrd",
+    "find": "What Good Readers",
+    "fold": [
+     ":scope > p:not(.g3-do)",
+     ":scope > .key-concept",
+     ":scope > .socratic-box"
+    ],
+    "todo": "Listen to Opti. Then tap the lens you will use today.",
+    "script": "[warmly] Here's today's reading tip. Detectives point to proof. When you say Narnia feels real, point to Lewis's exact words: what Lucy felt, and what she heard. Then tap one of the two lenses below to use while you read. You don't need to write anything."
+   },
+   {
+    "id": "dol",
+    "find": "Daily Oral",
+    "fold": [],
+    "todo": "Tap the yellow parts. Then pick Sentence A or B and type it the right way.",
+    "script": "Let's fix a sentence. The correct one first. When Lucy stepped through the fur coats, she felt snow under her shoes. When starts the part that can't stand alone. The comma goes right where that part ends. Tap the yellow parts. Then pick Sentence A or Sentence B, and type it the right way."
+   },
+   {
+    "id": "morph",
+    "find": "Morphology",
+    "fold": [
+     ":scope > .callout:not(:has(+ .fillin-game))",
+     ":scope > .key-concept"
+    ],
+    "todo": "Say the parts out loud. Type the whole word in each box. Tap Check My Answers.",
+    "script": "Snap the parts together, like blocks. Tele. Photo. Telephoto! A telephoto lens on a camera takes pictures of things far away. Say each pair of parts out loud. Type the whole word in the box. Then tap Check My Answers.",
+    "video": "g3ela-25-3-teach-morph"
+   },
+   {
+    "id": "vocab",
+    "find": "Vocabulary",
+    "fold": [],
+    "todo": "Read each sentence. Pick the word that fits.",
+    "script": "Try each word in the blank, and keep the one that makes sense. Here's my sentence. Lucy took a quick blank back at the wardrobe. Spiteful? No. Glimpse? Yes! A glimpse is a quick look. Now pick the word that fits each sentence.",
+    "video": "g3ela-25-3-teach-vocab"
+   },
+   {
+    "id": "gram",
+    "find": "Grammar",
+    "fold": [
+     ":scope > .callout:not(:has(+ .spotter-game)):not(:has(+ .fillin-game)):not(:has(+ .sort-game)):not(:has(+ .dol-check-btn))"
+    ],
+    "todo": "Read the before and after. Join the two sentences in the box.",
+    "script": "Two short sentences can become one. The others did not believe Lucy. She was very unhappy. Put a joining word in front: Because the others did not believe her, comma, Lucy was very unhappy. Read the before and after. Then join the two sentences in the box.",
+    "video": "g3ela-25-3-teach-gram"
+   },
+   {
+    "id": "spell",
+    "find": "Spelling",
+    "fold": [],
+    "foldText": [
+     "The Rule:"
+    ],
+    "todo": "Read the rule. Tap each card to see which vowel blurred.",
+    "script": "Oops! I spelled lion like this: L, I, U, N. That's how it sounds. Li, un. But that lazy uh is spelled with an o. Lion. The schwa hides the real letter. Read the rule. Then tap each card to see which vowel blurred.",
+    "video": "g3ela-25-3-teach-spell"
+   },
+   {
+    "id": "read",
+    "find": "^\\W*(Read:|Look Back)",
+    "fold": [],
+    "todo": "Look back through Chapters 1 to 3. Then try the Truth Watch below.",
+    "script": "No new chapters today. Look back through Chapters 1 to 3, and find Lewis's exact words. Then try the Truth Watch and the three questions."
+   },
+   {
+    "id": "chq",
+    "find": "Q1 —",
+    "fold": [],
+    "todo": "Answer each question in full sentences. Use details from the book.",
+    "script": "Three questions, in full sentences. One, a detail you can touch and one you can hear, in Lewis's own words. Two, why the lamp-post is there, and how it makes you feel. Three, how the wardrobe seems ordinary at first, then magical."
+   },
+   {
+    "id": "write",
+    "find": "Writer.s Workshop",
+    "fold": [
+     ":scope > .callout"
+    ],
+    "foldText": [
+     "watch how",
+     "today.s tool"
+    ],
+    "todo": "Write two evidence sentences. Use a short quote and say what it shows.",
+    "script": "Today you add evidence. Clara used a short quote from the book, then told what it shows. Quote, then explain. Write two evidence sentences like that."
+   }
+  ],
+  "cards": {}
+ },
+ "virtue": {
+  "name": "honesty",
+  "title": "Truth Watch: Is someone being honest?",
+  "items": [
+   {
+    "t": "Lucy could have said the story was made up for fun, but she would not say it.",
+    "ok": true,
+    "why": "Lucy was a very truthful girl, even when it made her unhappy."
+   },
+   {
+    "t": "Edmund sneered and jeered, and asked if Lucy had found new countries in other cupboards.",
+    "ok": false,
+    "why": "He was being spiteful, not honest."
+   },
+   {
+    "t": "In Narnia, Edmund shouts, “I’m sorry I didn’t believe you. I see now you were right all along.”",
+    "ok": true,
+    "why": "He says out loud that he was wrong."
+   }
+  ]
+ }
+}
