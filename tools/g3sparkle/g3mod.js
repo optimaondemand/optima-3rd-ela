@@ -5,7 +5,7 @@
      DATA.glossary  = [ {w, m, key} ]      dotted words, 🔊 on key words
      DATA.sayWords  = [ 'word', … ]          🔊 on the vocab cards (says just the word)
      DATA.cards     = [ {id, kind, tab, after, title, sub, look, todo, …} ]
-     DATA.wordgame  = {type:'tower'|'wagon'|'chase'|'sewer', …}  Up the North Tower / Fill the Wagon / The Chase / Out of the Sewer
+     DATA.wordgame  = {type:'tower'|'wagon'|'chase'|'sewer'|'castle', …}  Up the North Tower / Fill the Wagon / The Chase / Out of the Sewer / Build the Castle
    The rules for 8-year-olds: every module opens with a "What to do:"
    line Opti reads, shows one step at a time, and every picture opens
    on notice/wonder before it says what it is.
@@ -714,6 +714,100 @@ WORDGAME.sewer = function (cfg) {
   if (anchor) anchor.parentNode.insertBefore(card, anchor); else panel.appendChild(card);
 };
 
+/* ── Build the Castle: one round a day (week 22, struct = build) ────
+   DATA.wordgame = { type:'castle', title, sub, look, todo, win, winWeek,
+     items:[ {title, q, opts:[…2 or 3], a, why, miss:{n:'…'}} ] }
+   Each right answer lays one stone in the castle wall, bottom row first,
+   so every stone sits on the row below it. Day d starts with days
+   1…d-1's stones laid, so the week builds one castle; day 4 adds the
+   towers, the gate and the flag. Practice only; never fills a graded box. */
+function castleSVG(laid, day, per) {
+  var total = per * 4, cols = 8, W = 27, H = 17, x0 = 52, g = 148;
+  var s = '<svg viewBox="0 0 320 180" width="100%" style="max-width:340px" role="img" aria-label="' + Math.min(laid, total) + ' of ' + total + ' stones are laid in the castle wall">' +
+    '<rect width="320" height="180" rx="12" fill="#DCEBF5"/>' +
+    '<path d="M0 ' + g + ' H320 V180 H0 Z" fill="#9DBF7E"/><path d="M0 ' + g + ' H320" stroke="#6E9254" stroke-width="2"/>';
+  var done = laid >= total;
+  /* towers: a dashed builder's plan until the wall is finished */
+  [[20, 32], [268, 32]].forEach(function (t) {
+    if (done) {
+      s += '<rect x="' + t[0] + '" y="52" width="' + t[1] + '" height="' + (g - 52) + '" fill="#B9AE9C" stroke="#6B6152" stroke-width="1.5"/>';
+      for (var yy = 60; yy < g; yy += 14) s += '<path d="M' + t[0] + ' ' + yy + ' h' + t[1] + '" stroke="#8D8272" stroke-width="1"/>';
+      for (var c = 0; c < 4; c++) s += '<rect x="' + (t[0] + c * 8.7) + '" y="44" width="5.5" height="9" fill="#B9AE9C" stroke="#6B6152" stroke-width="1.2"/>';
+      s += '<rect x="' + (t[0] + 12) + '" y="74" width="8" height="12" rx="4" fill="#3B3328"/>';
+    } else {
+      s += '<rect x="' + t[0] + '" y="52" width="' + t[1] + '" height="' + (g - 52) + '" fill="none" stroke="#7F93A6" stroke-width="1.2" stroke-dasharray="4 3"/>';
+    }
+  });
+  for (var k = 0; k < total; k++) {
+    var r = Math.floor(k / cols), c2 = k % cols;
+    var x = x0 + c2 * W, y = g - (r + 1) * H;
+    var today = k >= (day - 1) * per && k < day * per;
+    if (k < laid) {
+      var shade = ['#C8BDA9', '#BDB29E', '#D1C7B4'][(k * 7) % 3];
+      s += '<rect x="' + (x + 0.8) + '" y="' + (y + 0.8) + '" width="' + (W - 1.6) + '" height="' + (H - 1.6) + '" rx="2" fill="' + shade + '" stroke="#6B6152" stroke-width="1.2"/>';
+    } else {
+      s += '<rect x="' + (x + 0.8) + '" y="' + (y + 0.8) + '" width="' + (W - 1.6) + '" height="' + (H - 1.6) + '" rx="2" fill="none" stroke="' + (today ? '#8A6212' : '#9FB0C0') + '" stroke-width="1" stroke-dasharray="3 2" opacity="' + (today ? '.9' : '.5') + '"/>';
+    }
+  }
+  if (done) {
+    var top = g - 4 * H;
+    for (var b = 0; b < cols; b += 2) s += '<rect x="' + (x0 + b * W + 4) + '" y="' + (top - 9) + '" width="' + (W - 8) + '" height="9" fill="#C8BDA9" stroke="#6B6152" stroke-width="1.2"/>';
+    s += '<path d="M146 ' + g + ' V' + (g - 22) + ' a14 14 0 0 1 28 0 V' + g + ' Z" fill="#7A4E26" stroke="#4E3016" stroke-width="1.5"/>' +
+         '<path d="M160 ' + (g - 36) + ' V' + g + '" stroke="#4E3016" stroke-width="1"/>' +
+         '<path d="M284 44 V16" stroke="#4E3016" stroke-width="1.6"/><path d="M284 16 l16 5 l-16 5 Z" fill="#B5473A"/>' +
+         '<text x="160" y="30" text-anchor="middle" font-family="Nunito,sans-serif" font-weight="800" font-size="15" fill="#2E4A66">The castle is built!</text>';
+  }
+  return s + '</svg>';
+}
+WORDGAME.castle = function (cfg) {
+  var items = cfg.items || []; if (!items.length) return;
+  var panel = document.getElementById('tab-words'); if (!panel) return;
+  var anchor = panel.querySelector('.tab-next-wrap');
+  var day = dayNum(LESSON.day), PER = items.length;
+  var KEY = 'oao.g3ela.wg.' + LID;
+  var st = Sparkle.get(KEY, null) || { i: 0, misses: 0 };
+  if (st.i > PER) st.i = PER;
+  var card = cardShell({ id: 'castle', kind: 'castle', title: cfg.title || 'Build the Castle', sub: cfg.sub || '' }, '🏰');
+  var body = card.querySelector('.spk-card-body');
+  body.insertAdjacentHTML('beforeend', lookCard(cfg.look, cfg.todo) +
+    '<div class="g3-tw-grid"><div class="g3-castle"></div><div class="g3-tw-play" aria-live="polite"></div></div>');
+  var mapEl = body.querySelector('.g3-castle'), play = body.querySelector('.g3-tw-play');
+  function laid() { return (day - 1) * PER + st.i; }
+  function paint(msg, ok, tried) {
+    mapEl.innerHTML = castleSVG(laid(), day, PER);
+    if (st.i >= PER) {
+      play.innerHTML = '<div class="g3-finish">✓ ' + esc(day === 4 ? (cfg.winWeek || cfg.win || '') : (cfg.win || '')) + '</div>' +
+        '<button type="button" class="spk-mini-btn g3-again">Play today’s round again</button>';
+      play.querySelector('.g3-again').onclick = function () { st = { i: 0, misses: 0 }; Sparkle.set(KEY, st); paint(); };
+      return;
+    }
+    var it = items[st.i];
+    var h = stepHead(st.i + 1, PER, it.title || 'Lay a stone') + '<p class="g3-tw-q">' + it.q + '</p><div class="g3-opts">';
+    it.opts.forEach(function (o, n) {
+      h += '<button type="button" class="g3-opt-btn' + (tried && tried.indexOf(n) >= 0 ? ' tried' : '') + '" data-n="' + n + '">' + esc(o) + '</button>';
+    });
+    h += '</div>';
+    if (msg) h += '<div class="g3-fb ' + (ok ? 'ok' : 'no') + '">' + msg + '</div>';
+    play.innerHTML = h;
+    play.querySelectorAll('.g3-opt-btn').forEach(function (b) {
+      b.onclick = function () {
+        var n = +b.getAttribute('data-n');
+        if (n === it.a) {
+          st.i++; Sparkle.set(KEY, st); wgSfx(st.i >= PER ? 'win' : 'chime');
+          if (st.i >= PER) { paint(); return; }
+          paint('✓ ' + (it.why || 'The stone fits.'), true);
+        } else {
+          st.misses++; Sparkle.set(KEY, st); wgSfx('bonk');
+          var t = (tried || []).concat([n]);
+          paint('🧱 That stone won’t fit. ' + ((it.miss || {})[n] || 'Read it again, then try another answer.'), false, t);
+        }
+      };
+    });
+  }
+  paint();
+  if (anchor) anchor.parentNode.insertBefore(card, anchor); else panel.appendChild(card);
+};
+
 /* ── Fill the Wagon: one round a day ────────────────────────────────
    DATA.wordgame = { type:'wagon', title, sub, look, todo, win, winWeek,
      bins:[ {id, label} ], items:[ {t, bin, why, miss:{binId:'…'}} ] }
@@ -1038,7 +1132,7 @@ function buildSpotlight() {
    assets/audio/guide/opti/g3ela-how-<slug>.mp3 (shared by every lesson
    that uses the same words). The button stays hidden until the file is
    really there, so a line without a recording just reads as text. */
-var SAY_FOR_CARD = { 'spk-copia-card': 'copia', 'g3card-tower': 'tower', 'g3card-wagon': 'wagon', 'g3card-chase': 'chase', 'g3card-sewer': 'sewer', 'g3card-backward': 'backward' };
+var SAY_FOR_CARD = { 'spk-copia-card': 'copia', 'g3card-tower': 'tower', 'g3card-wagon': 'wagon', 'g3card-chase': 'chase', 'g3card-sewer': 'sewer', 'g3card-castle': 'castle', 'g3card-backward': 'backward' };
 function buildSayDo() {
   document.querySelectorAll('.g3-todo:not([data-say])').forEach(function (p) {
     for (var k in SAY_FOR_CARD) {
