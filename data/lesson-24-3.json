@@ -1,0 +1,427 @@
+{
+ "connector": "Close your eyes and picture a busy market: people shouting, animals in the street, bread in the oven. Today’s article takes you to a medieval town. Look for what made it so loud, so busy, and so smelly.",
+ "writingFocus": "inform",
+ "dol": {
+  "a": {
+   "raw": "in the town of york merchants sold wool every week",
+   "fixed": "<strong>I</strong>n the town of <strong>Y</strong>ork<strong>,</strong> merchants sold wool every week<strong>.</strong>",
+   "why": "In starts the sentence. York is the name of a place. A comma comes after the opening part, In the town of York. A period ends the sentence."
+  },
+  "b": {
+   "raw": "in old london bakers sold bread near the river thames",
+   "fixed": "<strong>I</strong>n old <strong>L</strong>ondon<strong>,</strong> bakers sold bread near the <strong>R</strong>iver <strong>T</strong>hames<strong>.</strong>",
+   "why": "In starts the sentence. London is a place. A comma comes after the opening part. River Thames is the name of one river, so both words get capitals. A period ends the sentence."
+  }
+ },
+ "hints": {
+  "mfill1": {
+   "h1": "There is only one part. Type it just as it is.",
+   "why": "script: the written words of a play."
+  },
+  "mfill2": {
+   "h1": "Say the two parts out loud, then say them fast as one word.",
+   "why": "de + scribe = describe."
+  },
+  "mfill3": {
+   "h1": "Say the two parts out loud, then say them fast as one word.",
+   "why": "manu + script = manuscript: written by hand."
+  },
+  "mfill4": {
+   "h1": "Say all three parts out loud. The last part makes the word a thing.",
+   "why": "in + script + ion = inscription."
+  },
+  "gfill1": {
+   "h1": "All three details are about young people learning a trade. Find that word in the bank.",
+   "why": "The details are all about apprentices."
+  },
+  "gfill2": {
+   "h1": "A cook, a stablehand and a guard. What did each one have in the castle?",
+   "why": "The details are all about castle jobs."
+  },
+  "gfill3": {
+   "h1": "Carts, roads and rivers: think about getting from place to place.",
+   "why": "The details are all about travel."
+  },
+  "gfill4": {
+   "h1": "Look at the first word of each detail.",
+   "why": "The details are all about guilds."
+  },
+  "vcloze1": {
+   "h1": "Find the word for a group of workers in the same trade.",
+   "why": "A guild was a group of craftsmen in one trade."
+  },
+  "vcloze2": {
+   "h1": "This person buys goods in one place and sells them in another.",
+   "why": "A merchant buys and sells goods."
+  },
+  "vcloze3": {
+   "h1": "These routes were for buying and selling goods.",
+   "why": "Trade routes were roads for buying and selling."
+  },
+  "vcloze4": {
+   "h1": "Find the word for a very big, important church.",
+   "why": "A cathedral is a large, important church."
+  }
+ },
+ "miss": {
+  "match": {
+   "guild": "A guild is a group. Look for the meaning about craftsmen in the same trade.",
+   "merchant": "A merchant is a person. Look for the meaning about buying and selling for profit.",
+   "trade": "Trade is something people do. Look for the meaning about buying and selling goods.",
+   "cathedral": "A cathedral is a building. Look for the meaning about a church."
+  }
+ },
+ "flags": {
+  "journal-q1": {
+   "quote": false,
+   "count": 0
+  },
+  "journal-q2": {
+   "quote": false,
+   "count": 3
+  },
+  "journal-q3": {
+   "quote": false,
+   "count": 1
+  },
+  "journal-q4": {
+   "quote": false,
+   "count": 2
+  }
+ },
+ "wordgame": {
+  "type": "market",
+  "title": "Market Day",
+  "sub": "Every right answer brings a customer to the medieval market.",
+  "todo": "Read the word on the basket. Tap the stall that sells it. A right answer brings a customer to the market.",
+  "stepTitle": "Which stall sells it?",
+  "win": "Today’s 8 customers are at the market. Come back next lesson for more.",
+  "winWeek": "The market square is full. Every stall did good business this week!",
+  "look": "Each stall sells words with one ending: -ful, -less, -ness or -ly. Read the word on the basket, then tap the stall that sells it. Each right answer brings one more customer. The customers from earlier days are still shopping.",
+  "bins": [
+   {
+    "id": "ful",
+    "label": "-ful (full of)",
+    "ic": "🍎"
+   },
+   {
+    "id": "less",
+    "label": "-less (without)",
+    "ic": "🧺"
+   },
+   {
+    "id": "ness",
+    "label": "-ness (names a thing)",
+    "ic": "🧀"
+   },
+   {
+    "id": "ly",
+    "label": "-ly (tells how)",
+    "ic": "🥖"
+   }
+  ],
+  "items": [
+   {
+    "t": "weakness",
+    "bin": "ness",
+    "why": "weak + ness: names being weak as a thing.",
+    "miss": {
+     "ful": "That stall sells words ending in -ful. Cover the base word. What ending is left?",
+     "less": "That stall sells words ending in -less. Cover the base word. What ending is left?",
+     "ly": "That stall sells words ending in -ly. Cover the base word. What ending is left?"
+    }
+   },
+   {
+    "t": "neatly",
+    "bin": "ly",
+    "why": "neat + ly: tells how something was done.",
+    "miss": {
+     "ful": "That stall sells words ending in -ful. Cover the base word. What ending is left?",
+     "less": "That stall sells words ending in -less. Cover the base word. What ending is left?",
+     "ness": "That stall sells words ending in -ness. Cover the base word. What ending is left?"
+    }
+   },
+   {
+    "t": "freshness",
+    "bin": "ness",
+    "why": "fresh + ness: the baker’s bread had freshness.",
+    "miss": {
+     "ful": "That stall sells words ending in -ful. Cover the base word. What ending is left?",
+     "less": "That stall sells words ending in -less. Cover the base word. What ending is left?",
+     "ly": "That stall sells words ending in -ly. Cover the base word. What ending is left?"
+    }
+   },
+   {
+    "t": "sweetly",
+    "bin": "ly",
+    "why": "sweet + ly: tells how. The minstrel sang sweetly.",
+    "miss": {
+     "ful": "That stall sells words ending in -ful. Cover the base word. What ending is left?",
+     "less": "That stall sells words ending in -less. Cover the base word. What ending is left?",
+     "ness": "That stall sells words ending in -ness. Cover the base word. What ending is left?"
+    }
+   },
+   {
+    "t": "fairness",
+    "bin": "ness",
+    "why": "fair + ness: names being fair as a thing.",
+    "miss": {
+     "ful": "That stall sells words ending in -ful. Cover the base word. What ending is left?",
+     "less": "That stall sells words ending in -less. Cover the base word. What ending is left?",
+     "ly": "That stall sells words ending in -ly. Cover the base word. What ending is left?"
+    }
+   },
+   {
+    "t": "firmly",
+    "bin": "ly",
+    "why": "firm + ly: tells how. He shook hands firmly.",
+    "miss": {
+     "ful": "That stall sells words ending in -ful. Cover the base word. What ending is left?",
+     "less": "That stall sells words ending in -less. Cover the base word. What ending is left?",
+     "ness": "That stall sells words ending in -ness. Cover the base word. What ending is left?"
+    }
+   },
+   {
+    "t": "useless",
+    "bin": "less",
+    "why": "use + less: without any use.",
+    "miss": {
+     "ful": "That stall sells words ending in -ful. Cover the base word. What ending is left?",
+     "ness": "That stall sells words ending in -ness. Cover the base word. What ending is left?",
+     "ly": "That stall sells words ending in -ly. Cover the base word. What ending is left?"
+    }
+   },
+   {
+    "t": "handful",
+    "bin": "ful",
+    "why": "hand + ful: as much as a hand is full of.",
+    "miss": {
+     "less": "That stall sells words ending in -less. Cover the base word. What ending is left?",
+     "ness": "That stall sells words ending in -ness. Cover the base word. What ending is left?",
+     "ly": "That stall sells words ending in -ly. Cover the base word. What ending is left?"
+    }
+   }
+  ]
+ },
+ "glossary": [
+  {
+   "w": "main idea",
+   "m": "what a whole paragraph is mostly about. It is often in the first sentence.",
+   "key": true
+  },
+  {
+   "w": "topic sentence",
+   "m": "the sentence that tells the main idea of a paragraph, often the first one"
+  },
+  {
+   "w": "detail",
+   "m": "one fact that helps prove the main idea"
+  },
+  {
+   "w": "off the topic",
+   "m": "a sentence that does not help the main idea, so it does not belong in that paragraph"
+  },
+  {
+   "w": "cause",
+   "m": "why something happens"
+  },
+  {
+   "w": "effect",
+   "m": "what happens because of a cause"
+  },
+  {
+   "w": "Middle Ages",
+   "cs": true,
+   "m": "a time in history about 500 to 1,500 years ago, when there were castles, knights and kings in Europe"
+  },
+  {
+   "w": "medieval",
+   "m": "from the Middle Ages",
+   "key": true
+  },
+  {
+   "w": "base word",
+   "m": "the main word before an ending is added. Hope is the base word in hopeful."
+  },
+  {
+   "w": "expository",
+   "m": "writing that explains or teaches facts about a topic"
+  },
+  {
+   "w": "diligence",
+   "m": "working hard and carefully, and not giving up",
+   "key": true
+  }
+ ],
+ "sayWords": [],
+ "cards": [
+  {
+   "id": "job",
+   "kind": "info",
+   "tab": "reading",
+   "after": "Pause",
+   "before": true,
+   "icon": "⭐",
+   "title": "Job Spotlight: The Barber-Surgeon",
+   "sub": "A real job in the Middle Ages",
+   "todo": "Read about this real job. Then read the two questions and the article.",
+   "text": [
+    "A barber in a medieval town did more than cut hair and shave beards.",
+    "Barbers also pulled bad teeth and treated cuts and wounds.",
+    "Stories say the red and white stripes on a barber pole are a reminder of that old job."
+   ]
+  }
+ ],
+ "transcripts": {
+  "welcome": "Hi, it’s Opti. Can you smell that? Today we visit a medieval town. It was loud, busy, and often smelly. Let’s find out why.",
+  "guide1": "Word study. Build script and scribe words, name what details are about, and break words apart.",
+  "guide2": "Read about medieval towns. Look for what you could see, hear and smell.",
+  "guide3": "Today you check your paragraph for capitals and periods."
+ },
+ "notes": {
+  "wordParts": "The root script or scribe means write. describe = to write about something. manuscript = written by hand. One root, two spellings.",
+  "grammar": "A paragraph has one main idea, often in the first sentence (the topic sentence). The other sentences are details that support it. A sentence that does not support it is off the topic.",
+  "spelling": "-ful means full of (hopeful). -less means without (hopeless). -ness turns a describing word into a thing (kindness). -ly tells how something was done (quickly).",
+  "wgrd": "Details you can see, hear and smell help you picture a place. Ask what caused each one.",
+  "vocab": [
+   [
+    "guild",
+    "a group of craftsmen or merchants in the same trade"
+   ],
+   [
+    "merchant",
+    "a person who buys and sells goods for profit"
+   ],
+   [
+    "trade",
+    "the buying and selling of goods"
+   ],
+   [
+    "cathedral",
+    "a large, important church"
+   ]
+  ]
+ },
+ "plate": {
+  "src": "art/med/med-town.jpg",
+  "alt": "An old wall painting of a town street: people dancing to a tambourine on the left, and shopkeepers at an open shop with a man and a donkey on the right",
+  "credit": "Effects of Good Government in the City (detail) · Ambrogio Lorenzetti, 1338–1339 · Palazzo Pubblico, Siena · Public domain",
+  "look": "Part of a huge wall painting in the town hall of Siena, Italy, painted almost 700 years ago. On the right, shopkeepers work at an open shop, and a man stands with a donkey. A rider passes by up above. On the left, people dance in the street to a tambourine. A medieval town was busy and full of life.",
+  "lookBtn": "Tap to learn about this painting of a busy town"
+ },
+ "teach": {
+  "dropTurnNotes": true,
+  "mods": [
+   {
+    "id": "wgrd",
+    "find": "What Good Readers",
+    "fold": [
+     ":scope > p:not(.g3-do)",
+     ":scope > .key-concept",
+     ":scope > .socratic-box"
+    ],
+    "todo": "Listen to Opti. Then tap the lens you will use today.",
+    "script": "[warmly] Here's today's reading tip. Today's article helps you see, hear and smell a medieval town. Every busy sound and bad smell had a cause. Ask what caused it. Then tap one of the two lenses below to use while you read. You don't need to write anything."
+   },
+   {
+    "id": "dol",
+    "find": "Daily Oral",
+    "fold": [],
+    "todo": "Tap the yellow parts. Then pick Sentence A or B and type it the right way.",
+    "script": "Let's fix a sentence. Look at the correct one first. In the market town of Shrewsbury, merchants from France sold silk and spices every Thursday. See the comma after Shrewsbury? It ends the opening part. And Thursday gets a capital, because the days of the week are names. Tap the yellow parts. Then pick Sentence A or Sentence B, and type it the right way."
+   },
+   {
+    "id": "morph",
+    "find": "Morphology",
+    "fold": [
+     ":scope > .callout:not(:has(+ .fillin-game))",
+     ":scope > .key-concept"
+    ],
+    "todo": "Say the parts out loud. Type the whole word in each box. Tap Check My Answers.",
+    "script": "Let's snap three parts together, like blocks. De. Script. Ion. Description! A description writes down what something is like. Say the parts out loud, then say them fast as one word. Type the whole word in each box, and tap Check My Answers.",
+    "video": "g3ela-24-3-teach-morph"
+   },
+   {
+    "id": "vocab",
+    "find": "Vocabulary",
+    "fold": [
+     ":scope > .g3-model-h",
+     ":scope > .decode-steps"
+    ],
+    "todo": "Fill in each sentence with a word from the word bank. Tap Check My Work. Then play the matching game.",
+    "script": "Listen for this word in a busy town. Stall. A merchant sold apples from his stall in the market square. He sold things from it, outside, so a stall must be a little shop with a table. Put a bank word in each blank. If the sentence makes sense, keep it. Then try the matching game.",
+    "video": "g3ela-24-3-teach-vocab"
+   },
+   {
+    "id": "gram",
+    "find": "Grammar",
+    "fold": [
+     ":scope > .callout:not(:has(+ .spotter-game)):not(:has(+ .fillin-game)):not(:has(+ .sort-game)):not(:has(+ .dol-check-btn))"
+    ],
+    "todo": "Read the Remember box. Type the one word each set of details is about.",
+    "script": "Three details, one topic. Bakers made bread. Weavers made cloth. Smiths made tools. What one word are they all about? Workers! That one word is the topic. Read the Remember box. Then read each set of details, and type the one word they're about.",
+    "video": "g3ela-24-3-teach-gram"
+   },
+   {
+    "id": "spell",
+    "find": "Spelling",
+    "fold": [],
+    "foldText": [
+     "The Rule:"
+    ],
+    "todo": "Read the rule. Tap each card to break the word apart.",
+    "script": "Oops! I split gladness like this: gladn, ess. That's not right. The base word is glad. So it breaks into glad, and ness. Glad is a describing word, and ness turns it into a thing. Read the rule. Then tap each card to break the word apart.",
+    "video": "g3ela-24-3-teach-spell"
+   },
+   {
+    "id": "read",
+    "find": "Pause",
+    "fold": [],
+    "todo": "Read the two questions. Then read the article below.",
+    "script": "Read the two Pause and Think questions first. Then read about medieval towns. Look for what you could see, hear and smell. Then try the Diligence Watch and the Read Like a Writer box."
+   },
+   {
+    "id": "chq",
+    "find": "Article Thinking",
+    "fold": [],
+    "todo": "Answer each question in full sentences. Use details from the article.",
+    "script": "Four questions today, in full sentences. One, the central idea. Two, why towns grew near cathedrals, rivers and trade routes. Three, which details from The Whipping Boy seem real? Four, find two details that prove a town was loud, busy and smelly."
+   },
+   {
+    "id": "write",
+    "find": "Writer.s Workshop",
+    "fold": [
+     ":scope > .callout"
+    ],
+    "foldText": [
+     "watch how",
+     "today.s tool"
+    ],
+    "todo": "Check your paragraph with the checklist. Write one mistake you fixed.",
+    "script": "Today you edit, like a careful scribe. Clara found two sentences with no capital at the start, and a number to write as a word. Check your paragraph with the checklist, one line at a time. Then write one mistake you fixed."
+   }
+  ],
+  "cards": {}
+ },
+ "virtue": {
+  "name": "diligence",
+  "title": "Diligence Watch: Is someone working hard?",
+  "items": [
+   {
+    "t": "Craftsmen hammered and shouted from their workshops.",
+    "ok": true,
+    "why": "They were busy at their work all day long."
+   },
+   {
+    "t": "Animals wandered the streets.",
+    "ok": false,
+    "why": "That is about animals, not about someone working."
+   },
+   {
+    "t": "Barbers pulled teeth and treated cuts.",
+    "ok": true,
+    "why": "Barbers did careful, hard jobs for the people in town."
+   }
+  ]
+ }
+}

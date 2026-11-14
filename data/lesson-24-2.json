@@ -1,0 +1,410 @@
+{
+ "connector": "Knights in stories always seem brave and perfect. Today’s article tells how a boy really became a knight, one step at a time, and what knights were supposed to be like. Look for why each step came before the next.",
+ "writingFocus": "inform",
+ "dol": {
+  "a": {
+   "raw": "sir henry trained as a squire in kent",
+   "fixed": "<strong>S</strong>ir <strong>H</strong>enry trained as a squire in <strong>K</strong>ent<strong>.</strong>",
+   "why": "Sir is a title right before his name, Henry, so both get capitals. Kent is the name of a place. Squire is not a name, so it stays small. A period ends the sentence."
+  },
+  "b": {
+   "raw": "the young page served lady margaret at windsor castle",
+   "fixed": "<strong>T</strong>he young page served <strong>L</strong>ady <strong>M</strong>argaret at <strong>W</strong>indsor <strong>C</strong>astle<strong>.</strong>",
+   "why": "The starts the sentence. Lady is a title right before her name, Margaret. Windsor Castle is the name of one castle. A period ends the sentence."
+  }
+ },
+ "hints": {
+  "vcloze1": {
+   "h1": "Find the word for the code of rules knights were supposed to follow.",
+   "why": "Chivalry was the code: be brave, loyal and kind to the weak."
+  },
+  "vcloze2": {
+   "h1": "This young helper polished armor and cared for the horse.",
+   "why": "A squire served a knight while training to become one."
+  },
+  "vcloze3": {
+   "h1": "Find the word for being made a knight with a tap of the sword.",
+   "why": "To be dubbed is to be made a knight in a ceremony."
+  },
+  "vcloze4": {
+   "h1": "Find the word for a contest where knights showed their skill.",
+   "why": "A tournament was a contest of knights before a crowd."
+  }
+ },
+ "miss": {
+  "match": {
+   "chivalry": "Chivalry is a set of rules. Look for the meaning about a code.",
+   "squire": "A squire is a person. Look for the meaning about helping a knight.",
+   "dubbed": "Dubbed is something that happens to you. Look for the meaning about the sword on the shoulder.",
+   "tournament": "A tournament is an event. Look for the meaning about a contest."
+  }
+ },
+ "flags": {
+  "journal-q1": {
+   "quote": false,
+   "count": 0
+  },
+  "journal-q2": {
+   "quote": false,
+   "count": 3
+  },
+  "journal-q3": {
+   "quote": false,
+   "count": 1
+  }
+ },
+ "wordgame": {
+  "type": "market",
+  "title": "Market Day",
+  "sub": "Every right answer brings a customer to the medieval market.",
+  "todo": "Read the word on the basket. Tap the stall that sells it. A right answer brings a customer to the market.",
+  "stepTitle": "Which stall sells it?",
+  "win": "Today’s 8 customers are at the market. Come back next lesson for more.",
+  "winWeek": "The market square is full. Every stall did good business this week!",
+  "look": "Each stall sells words with one ending: -ful, -less, -ness or -ly. Read the word on the basket, then tap the stall that sells it. Each right answer brings one more customer. The customers from earlier days are still shopping.",
+  "bins": [
+   {
+    "id": "ful",
+    "label": "-ful (full of)",
+    "ic": "🍎"
+   },
+   {
+    "id": "less",
+    "label": "-less (without)",
+    "ic": "🧺"
+   },
+   {
+    "id": "ness",
+    "label": "-ness (names a thing)",
+    "ic": "🧀"
+   },
+   {
+    "id": "ly",
+    "label": "-ly (tells how)",
+    "ic": "🥖"
+   }
+  ],
+  "items": [
+   {
+    "t": "playful",
+    "bin": "ful",
+    "why": "play + ful: full of play.",
+    "miss": {
+     "less": "That stall sells words ending in -less. Cover the base word. What ending is left?",
+     "ness": "That stall sells words ending in -ness. Cover the base word. What ending is left?",
+     "ly": "That stall sells words ending in -ly. Cover the base word. What ending is left?"
+    }
+   },
+   {
+    "t": "softness",
+    "bin": "ness",
+    "why": "soft + ness: names the soft feeling as a thing.",
+    "miss": {
+     "ful": "That stall sells words ending in -ful. Cover the base word. What ending is left?",
+     "less": "That stall sells words ending in -less. Cover the base word. What ending is left?",
+     "ly": "That stall sells words ending in -ly. Cover the base word. What ending is left?"
+    }
+   },
+   {
+    "t": "loudly",
+    "bin": "ly",
+    "why": "loud + ly: tells how something was done.",
+    "miss": {
+     "ful": "That stall sells words ending in -ful. Cover the base word. What ending is left?",
+     "less": "That stall sells words ending in -less. Cover the base word. What ending is left?",
+     "ness": "That stall sells words ending in -ness. Cover the base word. What ending is left?"
+    }
+   },
+   {
+    "t": "sleepless",
+    "bin": "less",
+    "why": "sleep + less: without sleep.",
+    "miss": {
+     "ful": "That stall sells words ending in -ful. Cover the base word. What ending is left?",
+     "ness": "That stall sells words ending in -ness. Cover the base word. What ending is left?",
+     "ly": "That stall sells words ending in -ly. Cover the base word. What ending is left?"
+    }
+   },
+   {
+    "t": "goodness",
+    "bin": "ness",
+    "why": "good + ness: names being good as a thing.",
+    "miss": {
+     "ful": "That stall sells words ending in -ful. Cover the base word. What ending is left?",
+     "less": "That stall sells words ending in -less. Cover the base word. What ending is left?",
+     "ly": "That stall sells words ending in -ly. Cover the base word. What ending is left?"
+    }
+   },
+   {
+    "t": "wishful",
+    "bin": "ful",
+    "why": "wish + ful: full of wishing.",
+    "miss": {
+     "less": "That stall sells words ending in -less. Cover the base word. What ending is left?",
+     "ness": "That stall sells words ending in -ness. Cover the base word. What ending is left?",
+     "ly": "That stall sells words ending in -ly. Cover the base word. What ending is left?"
+    }
+   },
+   {
+    "t": "proudly",
+    "bin": "ly",
+    "why": "proud + ly: tells how. The squire stood proudly.",
+    "miss": {
+     "ful": "That stall sells words ending in -ful. Cover the base word. What ending is left?",
+     "less": "That stall sells words ending in -less. Cover the base word. What ending is left?",
+     "ness": "That stall sells words ending in -ness. Cover the base word. What ending is left?"
+    }
+   },
+   {
+    "t": "cloudless",
+    "bin": "less",
+    "why": "cloud + less: a sky without clouds.",
+    "miss": {
+     "ful": "That stall sells words ending in -ful. Cover the base word. What ending is left?",
+     "ness": "That stall sells words ending in -ness. Cover the base word. What ending is left?",
+     "ly": "That stall sells words ending in -ly. Cover the base word. What ending is left?"
+    }
+   }
+  ]
+ },
+ "glossary": [
+  {
+   "w": "main idea",
+   "m": "what a whole paragraph is mostly about. It is often in the first sentence.",
+   "key": true
+  },
+  {
+   "w": "topic sentence",
+   "m": "the sentence that tells the main idea of a paragraph, often the first one"
+  },
+  {
+   "w": "detail",
+   "m": "one fact that helps prove the main idea"
+  },
+  {
+   "w": "off the topic",
+   "m": "a sentence that does not help the main idea, so it does not belong in that paragraph"
+  },
+  {
+   "w": "cause",
+   "m": "why something happens"
+  },
+  {
+   "w": "effect",
+   "m": "what happens because of a cause"
+  },
+  {
+   "w": "Middle Ages",
+   "cs": true,
+   "m": "a time in history about 500 to 1,500 years ago, when there were castles, knights and kings in Europe"
+  },
+  {
+   "w": "medieval",
+   "m": "from the Middle Ages",
+   "key": true
+  },
+  {
+   "w": "base word",
+   "m": "the main word before an ending is added. Hope is the base word in hopeful."
+  },
+  {
+   "w": "expository",
+   "m": "writing that explains or teaches facts about a topic"
+  },
+  {
+   "w": "diligence",
+   "m": "working hard and carefully, and not giving up",
+   "key": true
+  }
+ ],
+ "sayWords": [],
+ "cards": [
+  {
+   "id": "job",
+   "kind": "info",
+   "tab": "reading",
+   "after": "Pause",
+   "before": true,
+   "icon": "⭐",
+   "title": "Job Spotlight: The Squire",
+   "sub": "A real job in the Middle Ages",
+   "todo": "Read about this real job. Then read the two questions and the article.",
+   "text": [
+    "A squire was a teenage boy training to be a knight, often from about age fourteen.",
+    "He cleaned his knight’s armor, cared for his horses, and helped him dress for battle.",
+    "He practiced with sword, shield and lance almost every day, often for several years."
+   ]
+  }
+ ],
+ "transcripts": {
+  "welcome": "Welcome back, it’s Opti. How did a boy become a knight? Not overnight! Today’s article tells the steps, in order.",
+  "guide1": "Word study. Match script and scribe words, find main ideas, and hunt for endings.",
+  "guide2": "Read about knights. Then watch my video in the Read Like a Writer box.",
+  "guide3": "Today you fix your paragraph so every sentence fits your topic."
+ },
+ "notes": {
+  "wordParts": "The root script or scribe means write. describe = to write about something. manuscript = written by hand. One root, two spellings.",
+  "grammar": "A paragraph has one main idea, often in the first sentence (the topic sentence). The other sentences are details that support it. A sentence that does not support it is off the topic.",
+  "spelling": "-ful means full of (hopeful). -less means without (hopeless). -ness turns a describing word into a thing (kindness). -ly tells how something was done (quickly).",
+  "wgrd": "Look for why each step happens. A boy became a page, then a squire, then a knight. Each step got him ready for the next.",
+  "vocab": [
+   [
+    "chivalry",
+    "the code of honorable behavior for knights"
+   ],
+   [
+    "squire",
+    "a young man serving a knight while training to become one"
+   ],
+   [
+    "dubbed",
+    "made a knight in a ceremony, with the tap of a sword on the shoulder"
+   ],
+   [
+    "tournament",
+    "a contest where knights competed to show their skill"
+   ]
+  ]
+ },
+ "plate": {
+  "src": "art/med/med-joust.jpg",
+  "alt": "An old painting of two knights on horseback crashing together with long lances, while five ladies watch from a balcony above",
+  "credit": "Walther von Klingen, Codex Manesse (Cod. Pal. germ. 848, fol. 52r) · Zurich, about 1305–1315 · Heidelberg University Library · Public domain",
+  "look": "A page from a book of songs made in Switzerland about 700 years ago. Two knights on horseback meet in a joust, each with a long lance. Their helmets have tall decorations, and their shields and horse cloths show their colors, so people could tell who was who. Ladies watch from a balcony at the top.",
+  "lookBtn": "Tap to learn about this painting of two knights"
+ },
+ "teach": {
+  "dropTurnNotes": true,
+  "mods": [
+   {
+    "id": "wgrd",
+    "find": "What Good Readers",
+    "fold": [
+     ":scope > p:not(.g3-do)",
+     ":scope > .key-concept",
+     ":scope > .socratic-box"
+    ],
+    "todo": "Listen to Opti. Then tap the lens you will use today.",
+    "script": "[warmly] Here's today's reading tip. Becoming a knight happened in steps. Each step had a reason: it got a boy ready for the next one. Ask why each step came first. Then tap one of the two lenses below to use while you read. You don't need to write anything."
+   },
+   {
+    "id": "dol",
+    "find": "Daily Oral",
+    "fold": [],
+    "todo": "Tap the yellow parts. Then pick Sentence A or B and type it the right way.",
+    "script": "Let's fix a sentence. Look at the correct one first. Sir William of Bath was dubbed a knight by King Edward at Windsor Castle. Sir and King are titles right before names. But knight stays small. It isn't a name. Tap the yellow parts. Then pick Sentence A or Sentence B, and type it the right way."
+   },
+   {
+    "id": "poem",
+    "find": "Poetry",
+    "fold": [
+     ":scope > .callout",
+     ":scope > .socratic-box"
+    ],
+    "todo": "Read the poem out loud. Then find the real words and the made-up ones.",
+    "script": "Here's a very silly poem by Lewis Carroll. Read it out loud. Brillig? Slithy toves? Those aren't real words! But you can still tell the toves are some kind of creature, because they do things. Find the real words and the made-up ones. Then say how you can tell what a made-up word is doing."
+   },
+   {
+    "id": "morph",
+    "find": "Morphology",
+    "fold": [
+     ":scope > .callout:not(:has(+ .match-game))",
+     ":scope > .key-concept"
+    ],
+    "todo": "Tap a word, then tap what it means. Match all four words.",
+    "script": "Watch one match first. Script and scribe mean write, so look for them. Scriptwriter. A scriptwriter writes the words actors say in a movie. Script, writing. That's my match! Read the Remember box. Then tap a word, and tap what it means. Match all four words.",
+    "video": "g3ela-24-2-teach-morph"
+   },
+   {
+    "id": "vocab",
+    "find": "Vocabulary",
+    "fold": [
+     ":scope > .g3-model-h",
+     ":scope > .decode-steps"
+    ],
+    "todo": "Fill in each sentence with a word from the word bank. Tap Check My Work. Then play the matching game.",
+    "script": "Ever seen a joust? Two knights charge at each other on horseback, each holding a long wooden lance. Lance. They charge holding it, so a lance must be a long pole for fighting on a horse. Read how we figured out the first word. Then fill in each sentence with a word from the word bank, and tap Check My Work. Last, play the matching game.",
+    "video": "g3ela-24-2-teach-vocab"
+   },
+   {
+    "id": "gram",
+    "find": "Grammar",
+    "fold": [
+     ":scope > .callout:not(:has(+ .spotter-game)):not(:has(+ .fillin-game)):not(:has(+ .sort-game)):not(:has(+ .dol-check-btn))"
+    ],
+    "todo": "Read the Remember box. Then tap the main idea in each paragraph.",
+    "script": "Which one holds up the others? Bakers made bread. The castle kitchen was busy. Cooks roasted meat. It's the middle one! The kitchen was busy, and the other two show how. Read the Remember box. Then in each mixed-up paragraph, tap the main idea.",
+    "video": "g3ela-24-2-teach-gram"
+   },
+   {
+    "id": "spell",
+    "find": "Spelling",
+    "fold": [],
+    "foldText": [
+     "The Rule:"
+    ],
+    "todo": "Read the rule. In each row, tap the word with the named ending.",
+    "script": "Be a suffix detective. Which word means without? Mindful. Breathless. Fondness. Softly. Breathless! Breath, plus less: without breath. Read the rule. Then in each row, tap the one word with the ending named above it.",
+    "video": "g3ela-24-2-teach-spell"
+   },
+   {
+    "id": "read",
+    "find": "Pause",
+    "fold": [],
+    "todo": "Read the two questions. Then read the article below.",
+    "script": "Read the two Pause and Think questions first. Then read about knights. After that, try the Diligence Watch, and watch my video in the Read Like a Writer box before you write."
+   },
+   {
+    "id": "rwm",
+    "sel": ".rwm-box",
+    "after": ":scope > .rwm-header",
+    "label": "Opti shows you how",
+    "fold": [],
+    "script": "[warmly] Let's try all three parts with a different sentence from today's article. In reality, not every knight followed the code. Part one, read like a reader. Some knights broke the rules of chivalry. Part two, read like a writer. It's short, and In reality warns you a surprise is coming: the truth, not the story. Part three, mimic. Here's mine: In reality, not every owl stays up all night. Now it's your turn with the sentence about years of training. Write one sentence in each box.",
+    "video": "g3ela-24-2-teach-rwm"
+   },
+   {
+    "id": "chq",
+    "find": "Article Thinking",
+    "fold": [],
+    "todo": "Answer each question in full sentences. Use details from the article.",
+    "script": "Now answer in full sentences. One, what is the central idea? Two, tell the steps to becoming a knight, with first, then and finally. Three, in The Whipping Boy, who comes closest to acting with chivalry by the end? Give one example."
+   },
+   {
+    "id": "write",
+    "find": "Writer.s Workshop",
+    "fold": [
+     ":scope > .callout"
+    ],
+    "foldText": [
+     "watch how",
+     "today.s tool"
+    ],
+    "todo": "Read your paragraph out loud. Write the sentence you cut or fixed, and how you changed it.",
+    "script": "Clara read her paragraph out loud and found a problem. Her paragraph was about servants, but one sentence was about knights. So she cut it. Read your paragraph out loud. Find a sentence that doesn't fit your topic, and fix it or cut it."
+   }
+  ],
+  "cards": {}
+ },
+ "virtue": {
+  "name": "diligence",
+  "title": "Diligence Watch: Is someone working hard?",
+  "items": [
+   {
+    "t": "A squire cared for a knight's armor and horse, and trained with sword and horse.",
+    "ok": true,
+    "why": "Caring for armor and training every day is hard, steady work."
+   },
+   {
+    "t": "Becoming a knight took years of training.",
+    "ok": true,
+    "why": "Years of training take diligence."
+   },
+   {
+    "t": "In reality, not every knight followed the code.",
+    "ok": false,
+    "why": "That is about knights breaking rules, not about someone working hard."
+   }
+  ]
+ }
+}

@@ -1,0 +1,403 @@
+{
+ "connector": "You have read The Whipping Boy and two weeks of true articles. Now be a history detective. Which parts of the stories match real life long ago, and which parts did storytellers change? And why would they change them?",
+ "writingFocus": "inform",
+ "dol": {
+  "a": {
+   "raw": "historians study old books from england and france",
+   "fixed": "<strong>H</strong>istorians study old books from <strong>E</strong>ngland and <strong>F</strong>rance<strong>.</strong>",
+   "why": "Historians starts the sentence. England and France are names of places. A period ends the sentence."
+  },
+  "b": {
+   "raw": "scholars read stories about king arthur and his knights",
+   "fixed": "<strong>S</strong>cholars read stories about <strong>K</strong>ing <strong>A</strong>rthur and his knights<strong>.</strong>",
+   "why": "Scholars starts the sentence. King is a title right before his name, Arthur. Knights is not a name, so it stays small. A period ends the sentence."
+  }
+ },
+ "hints": {
+  "vcloze1": {
+   "h1": "Find the word for a person who studies the past.",
+   "why": "A historian studies old records to learn about the past."
+  },
+  "vcloze2": {
+   "h1": "Find the word that means true to the facts.",
+   "why": "Accurate means correct and true to the facts."
+  },
+  "vcloze3": {
+   "h1": "Find the word for making something seem more perfect than it was.",
+   "why": "To idealize is to make something seem better than it really was."
+  },
+  "vcloze4": {
+   "h1": "Find the word for facts that support a claim.",
+   "why": "Evidence is the facts that support a claim."
+  }
+ },
+ "miss": {
+  "match": {
+   "historian": "A historian is a person. Look for the meaning about someone who studies history.",
+   "accurate": "Accurate describes something. Look for the meaning about being true.",
+   "idealize": "Idealize is something you do. Look for the meaning about making it seem better.",
+   "evidence": "Evidence is information. Look for the meaning about supporting a claim."
+  }
+ },
+ "flags": {
+  "journal-q1": {
+   "quote": false,
+   "count": 0
+  },
+  "journal-q2": {
+   "quote": false,
+   "count": 3
+  },
+  "journal-q3": {
+   "quote": false,
+   "count": 1
+  }
+ },
+ "wordgame": {
+  "type": "market",
+  "title": "Market Day",
+  "sub": "Every right answer brings a customer to the medieval market.",
+  "todo": "Read the word on the basket. Tap the stall that sells it. A right answer brings a customer to the market.",
+  "stepTitle": "Which ending fits?",
+  "win": "Today’s 8 customers are at the market. Come back next lesson for more.",
+  "winWeek": "The market square is full. Every stall did good business this week!",
+  "look": "Each stall sells words with one ending: -ful, -less, -ness or -ly. Read the word on the basket, then tap the stall that sells it. Each right answer brings one more customer. The customers from earlier days are still shopping.",
+  "bins": [
+   {
+    "id": "ful",
+    "label": "-ful (full of)",
+    "ic": "🍎"
+   },
+   {
+    "id": "less",
+    "label": "-less (without)",
+    "ic": "🧺"
+   },
+   {
+    "id": "ness",
+    "label": "-ness (names a thing)",
+    "ic": "🧀"
+   },
+   {
+    "id": "ly",
+    "label": "-ly (tells how)",
+    "ic": "🥖"
+   }
+  ],
+  "items": [
+   {
+    "t": "The knight rode <b>bold___</b> into the tournament.",
+    "bin": "ly",
+    "why": "boldly: tells how he rode.",
+    "miss": {
+     "ful": "Read the sentence again. Does the word need to tell how, name a thing, mean full of, or mean without?",
+     "less": "Read the sentence again. Does the word need to tell how, name a thing, mean full of, or mean without?",
+     "ness": "Read the sentence again. Does the word need to tell how, name a thing, mean full of, or mean without?"
+    }
+   },
+   {
+    "t": "The bakery was full of <b>sweet___</b>.",
+    "bin": "ness",
+    "why": "sweetness: names the sweet smell as a thing.",
+    "miss": {
+     "ful": "Read the sentence again. Does the word need to tell how, name a thing, mean full of, or mean without?",
+     "less": "Read the sentence again. Does the word need to tell how, name a thing, mean full of, or mean without?",
+     "ly": "Read the sentence again. Does the word need to tell how, name a thing, mean full of, or mean without?"
+    }
+   },
+   {
+    "t": "A good squire was <b>use___</b> to his knight.",
+    "bin": "ful",
+    "why": "useful: full of use.",
+    "miss": {
+     "less": "Read the sentence again. Does the word need to tell how, name a thing, mean full of, or mean without?",
+     "ness": "Read the sentence again. Does the word need to tell how, name a thing, mean full of, or mean without?",
+     "ly": "Read the sentence again. Does the word need to tell how, name a thing, mean full of, or mean without?"
+    }
+   },
+   {
+    "t": "Arguing with the king was <b>point___</b>.",
+    "bin": "less",
+    "why": "pointless: without a point.",
+    "miss": {
+     "ful": "Read the sentence again. Does the word need to tell how, name a thing, mean full of, or mean without?",
+     "ness": "Read the sentence again. Does the word need to tell how, name a thing, mean full of, or mean without?",
+     "ly": "Read the sentence again. Does the word need to tell how, name a thing, mean full of, or mean without?"
+    }
+   },
+   {
+    "t": "The herald spoke <b>clear___</b> so the crowd could hear.",
+    "bin": "ly",
+    "why": "clearly: tells how he spoke.",
+    "miss": {
+     "ful": "Read the sentence again. Does the word need to tell how, name a thing, mean full of, or mean without?",
+     "less": "Read the sentence again. Does the word need to tell how, name a thing, mean full of, or mean without?",
+     "ness": "Read the sentence again. Does the word need to tell how, name a thing, mean full of, or mean without?"
+    }
+   },
+   {
+    "t": "The <b>damp___</b> of the old tower turned the stones green.",
+    "bin": "ness",
+    "why": "dampness: names being damp as a thing.",
+    "miss": {
+     "ful": "Read the sentence again. Does the word need to tell how, name a thing, mean full of, or mean without?",
+     "less": "Read the sentence again. Does the word need to tell how, name a thing, mean full of, or mean without?",
+     "ly": "Read the sentence again. Does the word need to tell how, name a thing, mean full of, or mean without?"
+    }
+   },
+   {
+    "t": "The merchant was <b>help___</b> to every customer.",
+    "bin": "ful",
+    "why": "helpful: full of help.",
+    "miss": {
+     "less": "Read the sentence again. Does the word need to tell how, name a thing, mean full of, or mean without?",
+     "ness": "Read the sentence again. Does the word need to tell how, name a thing, mean full of, or mean without?",
+     "ly": "Read the sentence again. Does the word need to tell how, name a thing, mean full of, or mean without?"
+    }
+   },
+   {
+    "t": "The page tried to walk <b>silent___</b> past the guards.",
+    "bin": "ly",
+    "why": "silently: tells how he walked.",
+    "miss": {
+     "ful": "Read the sentence again. Does the word need to tell how, name a thing, mean full of, or mean without?",
+     "less": "Read the sentence again. Does the word need to tell how, name a thing, mean full of, or mean without?",
+     "ness": "Read the sentence again. Does the word need to tell how, name a thing, mean full of, or mean without?"
+    }
+   }
+  ]
+ },
+ "glossary": [
+  {
+   "w": "main idea",
+   "m": "what a whole paragraph is mostly about. It is often in the first sentence.",
+   "key": true
+  },
+  {
+   "w": "topic sentence",
+   "m": "the sentence that tells the main idea of a paragraph, often the first one"
+  },
+  {
+   "w": "detail",
+   "m": "one fact that helps prove the main idea"
+  },
+  {
+   "w": "off the topic",
+   "m": "a sentence that does not help the main idea, so it does not belong in that paragraph"
+  },
+  {
+   "w": "cause",
+   "m": "why something happens"
+  },
+  {
+   "w": "effect",
+   "m": "what happens because of a cause"
+  },
+  {
+   "w": "Middle Ages",
+   "cs": true,
+   "m": "a time in history about 500 to 1,500 years ago, when there were castles, knights and kings in Europe"
+  },
+  {
+   "w": "medieval",
+   "m": "from the Middle Ages",
+   "key": true
+  },
+  {
+   "w": "base word",
+   "m": "the main word before an ending is added. Hope is the base word in hopeful."
+  },
+  {
+   "w": "expository",
+   "m": "writing that explains or teaches facts about a topic"
+  },
+  {
+   "w": "diligence",
+   "m": "working hard and carefully, and not giving up",
+   "key": true
+  }
+ ],
+ "sayWords": [],
+ "cards": [
+  {
+   "id": "job",
+   "kind": "info",
+   "tab": "reading",
+   "after": "Pause",
+   "before": true,
+   "icon": "⭐",
+   "title": "Job Spotlight: The Scribe",
+   "sub": "A real job in the Middle Ages",
+   "todo": "Read about this real job. Then read the two questions and the article.",
+   "text": [
+    "A scribe was a person whose job was writing. The root scribe means write!",
+    "Before there were printing presses, scribes copied every book by hand, letter by letter.",
+    "Scribes also wrote down laws, letters and records. Much of what historians know about the Middle Ages comes from what scribes wrote."
+   ]
+  }
+ ],
+ "transcripts": {
+  "welcome": "Hi, it’s Opti. Today you get to be a history detective. Stories borrow from real life, and then they change things. Let’s find out what is real.",
+  "guide1": "Word study review. Roll script and scribe words, find the sentence that wandered off, and pick endings.",
+  "guide2": "Read the last article. Sort what is real from what stories made up.",
+  "guide3": "Today you publish your paragraph."
+ },
+ "notes": {
+  "wordParts": "The root script or scribe means write. describe = to write about something. manuscript = written by hand. One root, two spellings.",
+  "grammar": "A paragraph has one main idea, often in the first sentence (the topic sentence). The other sentences are details that support it. A sentence that does not support it is off the topic.",
+  "spelling": "-ful means full of (hopeful). -less means without (hopeless). -ness turns a describing word into a thing (kindness). -ly tells how something was done (quickly).",
+  "wgrd": "Stories borrow from history but add imagination. Ask what is real, what was changed, and why a storyteller changed it.",
+  "vocab": [
+   [
+    "historian",
+    "a person who studies and writes about history using evidence"
+   ],
+   [
+    "accurate",
+    "correct; true to the facts"
+   ],
+   [
+    "idealize",
+    "to make something seem better or more perfect than it really is"
+   ],
+   [
+    "evidence",
+    "facts used to support a claim"
+   ]
+  ]
+ },
+ "plate": {
+  "src": "art/med/med-accolade.jpg",
+  "alt": "A painting of a queen in a white gown tapping the shoulder of a kneeling knight in red with a sword, while people watch",
+  "credit": "The Accolade · Edmund Blair Leighton, 1901 · private collection · Public domain",
+  "look": "This painting is not from the Middle Ages. Edmund Blair Leighton painted it in 1901, about 600 years after the time it shows. A queen taps a kneeling knight on the shoulder with a sword to make him a knight. Everything looks clean and perfect. This is how storytellers imagined knights: the ideal, not a record of real life.",
+  "lookBtn": "Tap to learn about this painting of a knight"
+ },
+ "teach": {
+  "dropTurnNotes": true,
+  "mods": [
+   {
+    "id": "wgrd",
+    "find": "What Good Readers",
+    "fold": [
+     ":scope > p:not(.g3-do)",
+     ":scope > .key-concept",
+     ":scope > .socratic-box"
+    ],
+    "todo": "Listen to Opti. Then tap the lens you will use today.",
+    "script": "[warmly] Here's today's reading tip. Think like a history detective. Stories change real life for a reason. When you find something a story changed, ask why the storyteller changed it. Then tap one of the two lenses below to use while you read. You don't need to write anything."
+   },
+   {
+    "id": "dol",
+    "find": "Daily Oral",
+    "fold": [],
+    "todo": "Tap the yellow parts. Then pick Sentence A or B and type it the right way.",
+    "script": "Let's fix a sentence. Look at the correct one first. Historians debate whether whipping boys really existed in the courts of England and France. England and France are names of countries, so they get capitals. Historians gets one too, because it starts the sentence. Tap the yellow parts. Then pick Sentence A or Sentence B, and type it the right way."
+   },
+   {
+    "id": "poem",
+    "find": "Poetry",
+    "fold": [
+     ":scope > .callout",
+     ":scope > .socratic-box"
+    ],
+    "todo": "Read the poem again. Then make up two words and use them in a sentence out loud.",
+    "script": "Here's Carroll's silly poem again. This time, you're the word maker! Make up two words of your own. Then use them in one sentence, so a listener can tell what they mean. Say it out loud. You don't need to write it."
+   },
+   {
+    "id": "morph",
+    "find": "Morphology",
+    "fold": [
+     ":scope > .key-concept"
+    ],
+    "foldText": [
+     "Before you roll"
+    ],
+    "todo": "Tap Roll the Dice. Say what the word means. Tap Check My Thinking. Roll all six words.",
+    "script": "Eyes closed for a second. What do script and scribe mean? Write! Keep that in your head. Here's a word that's not on the dice. Subscription. You write your name to sign up. Now tap Roll the Dice. Say what each word means, and tap Check My Thinking. Roll all six.",
+    "video": "g3ela-24-4-teach-morph"
+   },
+   {
+    "id": "vocab",
+    "find": "Vocabulary",
+    "fold": [
+     ":scope > .g3-model-h",
+     ":scope > .decode-steps"
+    ],
+    "todo": "Fill in each sentence with a word from the word bank. Tap Check My Work. Then play the matching game.",
+    "script": "Today's article talks about legends. A legend is an old story people told for years, like the stories of King Arthur. Did it really happen? Nobody knows for sure. Try each bank word in a blank, and keep the one that makes sense. Then finish with the matching game.",
+    "video": "g3ela-24-4-teach-vocab"
+   },
+   {
+    "id": "gram",
+    "find": "Grammar",
+    "fold": [
+     ":scope > .callout:not(:has(+ .spotter-game)):not(:has(+ .fillin-game)):not(:has(+ .sort-game)):not(:has(+ .dol-check-btn))"
+    ],
+    "todo": "Tap the off-topic sentence, or tap No mistake. Then tap See the answers and answer the question in the box.",
+    "script": "One of these wandered off. The market was busy. People bought fish. My cat is orange. Which one? My cat is orange! It isn't about the market. In each paragraph, tap the sentence that's off the topic. If every sentence fits, tap No mistake.",
+    "video": "g3ela-24-4-teach-gram"
+   },
+   {
+    "id": "spell",
+    "find": "Spelling",
+    "fold": [],
+    "foldText": [
+     "The Rule:"
+    ],
+    "todo": "Tap Roll the dice. Pick an ending and say why. Tap Check my answer. Roll all six.",
+    "script": "Here's my roll. Thought. Do I want full of thought? Then I pick ful: thoughtful. Without thought? Less: thoughtless. I choose the ending that does the job I need. Tap Roll the dice, pick an ending, and say why. Then tap Check my answer.",
+    "video": "g3ela-24-4-teach-spell"
+   },
+   {
+    "id": "read",
+    "find": "Pause",
+    "fold": [],
+    "todo": "Read the two questions. Then read the article below.",
+    "script": "Read the two Pause and Think questions first. Then read the last article. Sort what is real from what stories made up. Then try the Diligence Watch and the Read Like a Writer box."
+   },
+   {
+    "id": "chq",
+    "find": "Article Thinking",
+    "fold": [],
+    "todo": "Answer each question in full sentences. Use details from the article.",
+    "script": "Three questions to finish the unit, in full sentences. One, the central idea. Two, name two real things stories like The Whipping Boy get right, and one thing that might be made up. Three, what is the most important thing you learned, and how does it change the way you think about The Whipping Boy?"
+   },
+   {
+    "id": "write",
+    "find": "Writer.s Workshop",
+    "fold": [
+     ":scope > .callout"
+    ],
+    "foldText": [
+     "watch how",
+     "today.s tool"
+    ],
+    "todo": "Read your paragraph with the checklist. Then write what you are most proud of.",
+    "script": "Publishing day! Clara read her paragraph one last time with the checklist. Then she thought about what she did well, and what she'd change next time. Do the same with yours. Then write what you're most proud of."
+   }
+  ],
+  "cards": {}
+ },
+ "virtue": {
+  "name": "diligence",
+  "title": "Diligence Watch: Is someone working hard?",
+  "items": [
+   {
+    "t": "Apprentices really did spend years learning a trade.",
+    "ok": true,
+    "why": "Learning a trade for years takes diligence."
+   },
+   {
+    "t": "In real medieval life, most peasants never met a king.",
+    "ok": false,
+    "why": "That is about who met a king, not about someone working."
+   },
+   {
+    "t": "Whipping boys may or may not have existed.",
+    "ok": false,
+    "why": "That is something historians argue about, not someone working hard."
+   }
+  ]
+ }
+}
