@@ -241,6 +241,10 @@
 /* ── Market Day (week 24) ── */
 .g3-market { flex:1 1 300px; max-width:360px; margin:0 auto; }
 .g3-market svg.g3-clink { animation:g3clink .45s ease-out; }
+.g3-wardrobe { flex:1 1 300px; max-width:360px; margin:0 auto; }
+.g3-wardrobe svg.g3-clink { animation:g3clink .45s ease-out; }
+.g3-vowels { grid-template-columns:repeat(auto-fit, minmax(110px, 1fr)); }
+.g3-vowel-ic { display:inline-flex; align-items:center; justify-content:center; width:34px; height:34px; border-radius:50%; background:#0E1C42; color:#fff; font-family:Lora,Georgia,serif; font-size:22px; font-weight:700; }
 .g3-mk-basket { display:flex; align-items:center; gap:10px; font-family:Lora,Georgia,serif; font-size:22px; line-height:1.45; color:#24324F;
   background:#FFFDF4; border:2px dashed #C7922C; border-radius:12px; padding:12px 14px; margin:0 0 12px; }
 .g3-mk-ic { font-size:28px; }

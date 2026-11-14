@@ -5,7 +5,7 @@
      DATA.glossary  = [ {w, m, key} ]      dotted words, 🔊 on key words
      DATA.sayWords  = [ 'word', … ]          🔊 on the vocab cards (says just the word)
      DATA.cards     = [ {id, kind, tab, after, title, sub, look, todo, …} ]
-     DATA.wordgame  = {type:'tower'|'wagon'|'chase'|'sewer'|'castle'|'illuminate'|'market', …}  Up the North Tower / Fill the Wagon / The Chase / Out of the Sewer / Build the Castle / Illuminate the Page / Market Day
+     DATA.wordgame  = {type:'tower'|'wagon'|'chase'|'sewer'|'castle'|'illuminate'|'market'|'wardrobe', …}  Up the North Tower / Fill the Wagon / The Chase / Out of the Sewer / Build the Castle / Illuminate the Page  / Market Day / Through the Wardrobe
    The rules for 8-year-olds: every module opens with a "What to do:"
    line Opti reads, shows one step at a time, and every picture opens
    on notice/wonder before it says what it is.
@@ -1032,6 +1032,118 @@ WORDGAME.market = function (cfg) {
   if (anchor) anchor.parentNode.insertBefore(card, anchor); else panel.appendChild(card);
 };
 
+/* ── Through the Wardrobe: one round a day (week 25, LWW Ch. 1-3) ──
+   DATA.wordgame = { type:'wardrobe', title, sub, look, todo, stepTitle, win, winWeek,
+     bins:[ {id, label, ic} ] (2-4 vowels), items:[ {t, bin, why, miss:{binId:'…'}} ] }
+   The inside of an old wardrobe: a row of fur coats hangs on the rail and
+   hides what is behind. Read the word on the coat tag (in the play area,
+   never on the picture), tap the vowel that makes its lazy schwa. Each right
+   answer slides one coat to the side, so more of the snowy wood and the
+   lamp-post shows. Snow falls for every right answer all week; the lamp-post
+   glows brighter each day and shines when the day's coats are all aside.
+   Practice only; never fills a graded box. */
+function wardrobeSVG(have, day, per, done) {
+  var total = per * 4, W = 320, H = 220, ox = 34, ow = 252, oy = 22, oh = 180;
+  var lit = Math.min(1, ((day - 1) * per + done) / total), full = done >= per;
+  var s = '<svg viewBox="0 0 ' + W + ' ' + H + '" width="100%" style="max-width:360px" role="img" aria-label="' +
+    done + ' of ' + per + ' coats pushed aside today">' +
+    '<defs><radialGradient id="g3wdGlow"><stop offset="0" stop-color="#FFE9A8" stop-opacity="1"/><stop offset="1" stop-color="#FFE9A8" stop-opacity="0"/></radialGradient>' +
+    '<linearGradient id="g3wdSky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0E1C42"/><stop offset="1" stop-color="#2E4777"/></linearGradient></defs>' +
+    /* the wardrobe: dark wood frame, doors swung open at the sides, standing on its feet */
+    '<rect x="14" y="8" width="292" height="200" rx="6" fill="#5A3A22" stroke="#3B2414" stroke-width="2"/>' +
+    '<path d="M2 18 L32 22 V202 L2 206 Z" fill="#6E4A2C" stroke="#3B2414" stroke-width="1.5"/><path d="M318 18 L288 22 V202 L318 206 Z" fill="#6E4A2C" stroke="#3B2414" stroke-width="1.5"/>' +
+    '<rect x="22" y="208" width="14" height="10" fill="#3B2414"/><rect x="284" y="208" width="14" height="10" fill="#3B2414"/>' +
+    /* behind the coats: the snowy wood at night */
+    '<rect x="' + ox + '" y="' + oy + '" width="' + ow + '" height="' + oh + '" fill="url(#g3wdSky)"/>' +
+    [[50, 150, 26], [84, 140, 34], [236, 142, 32], [268, 152, 24], [118, 156, 20], [204, 158, 20]].map(function (t) {
+      return '<path d="M' + t[0] + ' ' + (t[1] - t[2] * 2) + ' L' + (t[0] + t[2] * .6) + ' ' + t[1] + ' H' + (t[0] - t[2] * .6) + ' Z" fill="#1F4A3A"/>' +
+             '<path d="M' + t[0] + ' ' + (t[1] - t[2] * 2) + ' l' + (t[2] * .25) + ' ' + (t[2] * .6) + ' h' + (-t[2] * .5) + ' Z" fill="#F4F8FF"/>' +
+             '<rect x="' + (t[0] - 2) + '" y="' + t[1] + '" width="4" height="12" fill="#3B2A1A"/>';
+    }).join('') +
+    '<path d="M' + ox + ' 168 Q160 156 ' + (ox + ow) + ' 168 V' + (oy + oh) + ' H' + ox + ' Z" fill="#EEF3FA"/>' +
+    /* the lamp-post stands in the snow; its glow grows all week */
+    '<circle cx="160" cy="98" r="' + (16 + 34 * lit + (full ? 10 : 0)) + '" fill="url(#g3wdGlow)" opacity="' + (0.25 + 0.75 * lit).toFixed(2) + '"/>' +
+    '<rect x="157.5" y="104" width="5" height="62" fill="#2B2B2B"/><rect x="152" y="162" width="16" height="5" rx="1" fill="#2B2B2B"/>' +
+    '<path d="M151 92 h18 l-3 12 h-12 Z" fill="' + (lit > 0 ? '#FFE28A' : '#8A8A70') + '" stroke="#2B2B2B" stroke-width="1.5"/><path d="M149 92 h22 l-11 -7 Z" fill="#2B2B2B"/>';
+  /* snow: one flake for every right answer this week */
+  for (var k = 0; k < Math.min(have, total); k++) {
+    var fx = ox + 8 + ((k * 73) % (ow - 16)), fy = oy + 8 + ((k * 47) % 140);
+    s += '<circle cx="' + fx + '" cy="' + fy + '" r="1.8" fill="#FFFFFF" opacity=".9"/>';
+  }
+  /* the rail, then the coats hanging from it by hooks */
+  s += '<rect x="' + ox + '" y="30" width="' + ow + '" height="4" rx="2" fill="#9A7A4A" stroke="#5E4426" stroke-width=".8"/>';
+  var furs = ['#7A5638', '#5E4A3E', '#8C6E52', '#4E3B30', '#9A7F66', '#6B5240', '#857060', '#594436'];
+  function coat(x, w, c) {
+    return '<path d="M' + (x + w / 2) + ' 34 v-5 a3 3 0 1 1 3 -3" fill="none" stroke="#3B3B3B" stroke-width="1.2"/>' +
+      '<path d="M' + (x + w / 2) + ' 34 L' + (x + 2) + ' 44 H' + (x + w - 2) + ' Z" fill="none" stroke="#3B3B3B" stroke-width="1.2"/>' +
+      '<path d="M' + (x + 3) + ' 42 Q' + (x + w / 2) + ' 36 ' + (x + w - 3) + ' 42 L' + (x + w) + ' 188 Q' + (x + w / 2) + ' 194 ' + x + ' 188 Z" fill="' + c + '" stroke="#2E2018" stroke-width="1"/>' +
+      '<path d="M' + (x + w * .3) + ' 60 v120 M' + (x + w * .62) + ' 54 v128" stroke="#000" stroke-opacity=".12" stroke-width="1.5"/>' +
+      '<path d="M' + (x + 1) + ' 182 Q' + (x + w / 2) + ' 192 ' + (x + w - 1) + ' 182" stroke="#E8DCCB" stroke-width="3" fill="none" opacity=".7"/>';
+  }
+  var cw = ow / per;
+  for (var i = 0; i < per; i++) {
+    if (i < done) {   /* pushed aside: squashed against the side walls */
+      var left = i % 2 === 0, slot = Math.floor(i / 2);
+      s += coat(left ? ox + slot * 6 : ox + ow - 10 - slot * 6, 10, furs[i % 8]);
+    } else {
+      s += coat(ox + i * cw - 2, cw + 4, furs[i % 8]);
+    }
+  }
+  if (full) s += '<rect x="86" y="196" width="148" height="20" rx="10" fill="#1F4A3A"/><text x="160" y="210" text-anchor="middle" font-family="Nunito,sans-serif" font-weight="800" font-size="12" fill="#fff">' +
+                 (day >= 4 ? 'All the way through!' : 'The lamp-post is shining!') + '</text>';
+  return s + '</svg>';
+}
+WORDGAME.wardrobe = function (cfg) {
+  var items = cfg.items || [], bins = cfg.bins || []; if (!items.length || bins.length < 2) return;
+  var panel = document.getElementById('tab-words'); if (!panel) return;
+  var anchor = panel.querySelector('.tab-next-wrap');
+  var day = dayNum(LESSON.day), PER = items.length;
+  var KEY = 'oao.g3ela.wg.' + LID;
+  var st = Sparkle.get(KEY, null) || { i: 0, misses: 0 };
+  if (st.i > PER) st.i = PER;
+  var card = cardShell({ id: 'wardrobe', kind: 'wardrobe', title: cfg.title || 'Through the Wardrobe', sub: cfg.sub || '' }, '🧥');
+  var body = card.querySelector('.spk-card-body');
+  body.insertAdjacentHTML('beforeend', lookCard(cfg.look, cfg.todo) +
+    '<div class="g3-tw-grid"><div class="g3-wardrobe"></div><div class="g3-tw-play" aria-live="polite"></div></div>');
+  var wd = body.querySelector('.g3-wardrobe'), play = body.querySelector('.g3-tw-play');
+  function have() { return (day - 1) * PER + st.i; }
+  function paint(msg, ok, tried) {
+    wd.innerHTML = wardrobeSVG(have(), day, PER, st.i);
+    if (st.i >= PER) {
+      play.innerHTML = '<div class="g3-finish">✓ ' + esc(day === 4 ? (cfg.winWeek || cfg.win || '') : (cfg.win || '')) + '</div>' +
+        '<button type="button" class="spk-mini-btn g3-again">Play today’s round again</button>';
+      play.querySelector('.g3-again').onclick = function () { st = { i: 0, misses: 0 }; Sparkle.set(KEY, st); paint(); };
+      return;
+    }
+    var it = items[st.i];
+    var h = stepHead(st.i + 1, PER, cfg.stepTitle || 'Which vowel says uh?') +
+      '<div class="g3-mk-basket g3-wd-tag"><span class="g3-mk-ic" aria-hidden="true">🧥</span><span>' + it.t + '</span></div><div class="g3-stalls g3-vowels">';
+    bins.forEach(function (b) {
+      h += '<button type="button" class="g3-stall' + (tried && tried.indexOf(b.id) >= 0 ? ' tried' : '') + '" data-b="' + esc(b.id) + '">' +
+           '<span class="g3-vowel-ic" aria-hidden="true">' + esc(b.ic || b.id) + '</span><span>' + esc(b.label) + '</span></button>';
+    });
+    h += '</div>';
+    if (msg) h += '<div class="g3-fb ' + (ok ? 'ok' : 'no') + '">' + msg + '</div>';
+    play.innerHTML = h;
+    play.querySelectorAll('.g3-stall').forEach(function (b) {
+      b.onclick = function () {
+        var id = b.getAttribute('data-b');
+        if (id === it.bin) {
+          st.i++; Sparkle.set(KEY, st); wgSfx(st.i >= PER ? 'win' : 'chime');
+          if (st.i >= PER) { paint(); return; }
+          paint('✓ ' + esc(it.why || 'Right! The coat slides aside.'), true);
+          var sv = wd.querySelector('svg'); if (sv) { sv.classList.remove('g3-clink'); void sv.getBoundingClientRect(); sv.classList.add('g3-clink'); }
+        } else {
+          st.misses++; Sparkle.set(KEY, st); wgSfx('bonk');
+          paint(esc((it.miss || {})[id] || 'Not that vowel. Say the word again, then try another.'), false, (tried || []).concat([id]));
+        }
+      };
+    });
+  }
+  paint();
+  if (anchor) anchor.parentNode.insertBefore(card, anchor); else panel.appendChild(card);
+};
+
 /* ── Fill the Wagon: one round a day ────────────────────────────────
    DATA.wordgame = { type:'wagon', title, sub, look, todo, win, winWeek,
      bins:[ {id, label} ], items:[ {t, bin, why, miss:{binId:'…'}} ] }
@@ -1356,7 +1468,7 @@ function buildSpotlight() {
    assets/audio/guide/opti/g3ela-how-<slug>.mp3 (shared by every lesson
    that uses the same words). The button stays hidden until the file is
    really there, so a line without a recording just reads as text. */
-var SAY_FOR_CARD = { 'spk-copia-card': 'copia', 'g3card-tower': 'tower', 'g3card-wagon': 'wagon', 'g3card-chase': 'chase', 'g3card-sewer': 'sewer', 'g3card-castle': 'castle', 'g3card-illuminate': 'illuminate', 'g3card-market': 'market', 'g3card-backward': 'backward' };
+var SAY_FOR_CARD = { 'spk-copia-card': 'copia', 'g3card-tower': 'tower', 'g3card-wagon': 'wagon', 'g3card-chase': 'chase', 'g3card-sewer': 'sewer', 'g3card-castle': 'castle', 'g3card-illuminate': 'illuminate', 'g3card-market': 'market', 'g3card-wardrobe': 'wardrobe', 'g3card-backward': 'backward' };
 function buildSayDo() {
   document.querySelectorAll('.g3-todo:not([data-say])').forEach(function (p) {
     for (var k in SAY_FOR_CARD) {

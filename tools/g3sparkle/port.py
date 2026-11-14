@@ -191,7 +191,7 @@ js = rep(js, """  var cfg = DATA.wordgame;
   if (!cfg || !WORDGAME[cfg.type]) return;              /* no themed game for this lesson */""",
 """  var cfg = DATA.wordgame;
   if (!cfg || !WORDGAME[cfg.type]) return;              /* no themed game for this lesson */
-  if (cfg.type === 'tower' || cfg.type === 'wagon' || cfg.type === 'chase' || cfg.type === 'sewer' || cfg.type === 'castle' || cfg.type === 'illuminate' || cfg.type === 'market') { WORDGAME[cfg.type](cfg); return; }   /* G3: self-contained, not built from a page game */""")
+  if (cfg.type === 'tower' || cfg.type === 'wagon' || cfg.type === 'chase' || cfg.type === 'sewer' || cfg.type === 'castle' || cfg.type === 'illuminate' || cfg.type === 'market' || cfg.type === 'wardrobe') { WORDGAME[cfg.type](cfg); return; }   /* G3: self-contained, not built from a page game */""")
 js = rep(js, "'guide/narrator/g3ela-'", "'guide/opti/g3ela-'")
 
 # ── the G4 book kits (bridge / NTS / Freedom Train) are G4's
