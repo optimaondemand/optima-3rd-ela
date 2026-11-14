@@ -2551,8 +2551,8 @@ function switchTab(tabId) {
   updateProgress();
 
   var intro = document.getElementById('introSection');
-  if (tabId === 'warmup') { intro.classList.remove('collapsed'); }
-  else { intro.classList.add('collapsed'); }
+  if (intro) { if (tabId === 'warmup') { intro.classList.remove('collapsed'); }
+  else { intro.classList.add('collapsed'); } }
 
   // Auto-gather answers when arriving at assignment tab
   if (tabId === 'assignment') { gatherAnswers(); }
