@@ -22,3 +22,9 @@ Every image here is public domain, found on Wikimedia Commons, resized/cropped f
 | wb/wb-fair.jpg | Southwark Fair | William Hogarth | 1733–1734 | CC0 (National Gallery of Art) | https://commons.wikimedia.org/wiki/File:William_Hogarth%2C_Southwark_Fair%2C_1733-1734%2C_NGA_30402.jpg |
 | wb/wb-throne-room.jpg | The Small Throne Room (Peter the Great Room), Winter Palace | Eduard Hau | 1863 | Public domain | https://commons.wikimedia.org/wiki/File:Gau_Peter_the_Great_%28Small_Throne%29_Room_1863.jpg |
 | wb/wb-ship.jpg | The ship Mountstuart Elphinstone offshore | William Adolphus Knell | 1840 | Public domain (Royal Museums Greenwich) | https://commons.wikimedia.org/wiki/File:The_ship_Mountstuart_Elphinstone_offshore_by_William_Adolphus_Knell_in_1840.jpg |
+
+## Week 22 (The Whipping Boy wrap-up)
+- `wb/wb-prince.jpg` (22.1): *Prince Balthasar Charles on Horseback*, Diego Velázquez, about 1635. Museo del Prado. Public domain. Wikimedia Commons: File:Diego Velázquez - Prince Baltasar Carlos on Horseback - WGA24414.jpg
+- `wb/wb-street-boys.jpg` (22.2): *Boys Eating Grapes and Melon*, Bartolomé Esteban Murillo, about 1645–1650. Alte Pinakothek, Munich. Public domain. Wikimedia Commons: File:Bartolomé Esteban Perez Murillo - Trauben- und Melonenesser.jpg
+- `wb/wb-laughing-audience.jpg` (22.3): *The Laughing Audience*, William Hogarth, 1733, etching. National Gallery of Art. CC0. Wikimedia Commons: File:William Hogarth, The Laughing Audience, 1733, NGA 30455.jpg
+- `wb/wb-printers.jpg` (22.4): *Der Buchdrucker (The Printer)*, Jost Amman, 1568, woodcut from the Ständebuch. Public domain. Wikimedia Commons: File:Buchdrucker-1568.png
