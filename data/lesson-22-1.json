@@ -1,0 +1,393 @@
+{
+ "connector": "You finished The Whipping Boy! This week there are no new chapters. Today, think about Jemmy and the prince on the first pages and on the last pages. Which boy changed more? Keep your book close so you can look back.",
+ "writingFocus": "compare",
+ "dol": {
+  "a": {
+   "raw": "then follow me said the prince",
+   "fixed": "“<strong>T</strong>hen follow me<strong>,”</strong> said the prince<strong>.</strong>",
+   "why": "The words the prince says go inside quotation marks. Then starts what he says, so it gets a capital T. A comma goes inside the closing quotation mark. A period ends the sentence."
+  },
+  "b": {
+   "raw": "rein in your beast the prince whispered",
+   "fixed": "“<strong>R</strong>ein in your beast<strong>,”</strong> the prince whispered<strong>.</strong>",
+   "why": "The words the prince says go inside quotation marks. Rein starts what he says, so it gets a capital R. A comma goes inside the closing quotation mark. A period ends the sentence."
+  }
+ },
+ "hints": {
+  "fill1": {
+   "h1": "Look at the word list above. Which six letters are in every word?",
+   "why": "con + struct = construct: to build something."
+  },
+  "fill2": {
+   "h1": "It is the same root as the first box.",
+   "why": "de + struct = destruct: to tear a structure apart."
+  },
+  "fill3": {
+   "h1": "Look at how structure is built in the word list. What comes after struct?",
+   "why": "struct + ure = structure: something that has been built."
+  },
+  "fill4": {
+   "h1": "Look at instruct in the word list. What comes after in?",
+   "why": "in + struct = instruct: to build knowledge; to teach."
+  }
+ },
+ "miss": {
+  "match": {
+   "transform": "Transform has form, which means shape. Look for the meaning about changing completely.",
+   "compare": "When you compare, you look at two things side by side. Look for sameness and difference.",
+   "contrast": "Contrast is only about what is different. Look for that meaning.",
+   "develop": "Develop is about growing over time. Look for that meaning."
+  }
+ },
+ "flags": {
+  "journal-q1": {
+   "quote": false,
+   "count": 2
+  },
+  "journal-q2": {
+   "quote": false,
+   "count": 2
+  },
+  "journal-q3": {
+   "quote": false,
+   "count": 1
+  }
+ },
+ "scholar": {
+  "journal-q1": "… and tell which chapter shows the biggest change.",
+  "journal-q2": "… and tell one thing about the prince that stayed the same.",
+  "journal-q3": "… and tell how that likeness helped them get home."
+ },
+ "copia": {
+  "look": "One plain sentence from the end of the book, and three empty boxes. Each box asks you to say the same idea in a new way.",
+  "todo": "Rewrite the sentence three ways, one box at a time. Tap Show one way if you get stuck.",
+  "seed": "Jemmy <b>walked</b> toward the golden doors.",
+  "eg": [
+   "Beside the prince, Jemmy walked toward the golden doors.",
+   "Jemmy <i>strode</i> toward the golden doors.",
+   "A happy Jemmy walked toward the tall golden doors."
+  ]
+ },
+ "wordgame": {
+  "type": "castle",
+  "title": "Build the Castle",
+  "sub": "Every right answer lays a stone in the castle wall.",
+  "todo": "Read the question. Tap the answer you think is right. A right answer lays the next stone in the castle.",
+  "win": "Today’s 8 stones are laid. Come back next lesson to keep building.",
+  "winWeek": "The castle is built, from the ground to the flag!",
+  "look": "This week’s game is a castle that is not built yet. The root struct means build, so this week you build! The dashed boxes show where each stone goes. Each right answer lays one stone, from the bottom row up. You lay 8 stones each day. On Day 4 the castle gets its towers, its gate and its flag.",
+  "items": [
+   {
+    "title": "Build words with struct",
+    "q": "Which word has the root <b>struct</b> in it?",
+    "opts": [
+     "distract",
+     "destructive"
+    ],
+    "a": 1,
+    "why": "de + struct + ive. Distract has s t r, but not all of struct.",
+    "miss": {
+     "0": "Look for all six letters: s t r u c t."
+    }
+   },
+   {
+    "title": "Build words with struct",
+    "q": "A storm can be <b>destructive</b>. What does destructive mean?",
+    "opts": [
+     "it tears things down",
+     "it builds things up"
+    ],
+    "a": 0,
+    "why": "de means down, and struct means build. Destructive things tear down what was built.",
+    "miss": {
+     "1": "Look at the front part, de. It means down or apart."
+    }
+   },
+   {
+    "title": "Compound words",
+    "q": "Which word is a compound word?",
+    "opts": [
+     "ransom",
+     "outlaw"
+    ],
+    "a": 1,
+    "why": "out + law = outlaw. Two real words.",
+    "miss": {
+     "0": "Can you split ransom into two real words? Try the other one."
+    }
+   },
+   {
+    "title": "Compound words",
+    "q": "Which word is a compound word?",
+    "opts": [
+     "riverbank",
+     "important"
+    ],
+    "a": 0,
+    "why": "river + bank = riverbank.",
+    "miss": {
+     "1": "Long is not the same as compound. Look for two real words."
+    }
+   },
+   {
+    "title": "Compound words",
+    "q": "Which word is a compound word?",
+    "opts": [
+     "greyhound",
+     "kettle"
+    ],
+    "a": 0,
+    "why": "grey + hound = greyhound, a very fast dog.",
+    "miss": {
+     "1": "Can you split kettle into two real words?"
+    }
+   },
+   {
+    "title": "Pronoun jobs",
+    "q": "Jemmy and ___ ran down the road.",
+    "opts": [
+     "him",
+     "he"
+    ],
+    "a": 1,
+    "why": "Cover Jemmy: he ran. He does the action.",
+    "miss": {
+     "0": "Cover Jemmy and say it. Him ran? Try the other one."
+    }
+   },
+   {
+    "title": "Pronoun jobs",
+    "q": "Betsy waved at Jemmy and ___.",
+    "opts": [
+     "he",
+     "him"
+    ],
+    "a": 1,
+    "why": "Cover Jemmy: waved at him. Him gets the action.",
+    "miss": {
+     "0": "Cover Jemmy. Waved at he? Say it out loud."
+    }
+   },
+   {
+    "title": "Build words with struct",
+    "q": "Which word has the root <b>struct</b> in it?",
+    "opts": [
+     "instructive",
+     "instrument"
+    ],
+    "a": 0,
+    "why": "in + struct + ive. Instrument has s t r, but not struct.",
+    "miss": {
+     "1": "Look for all six letters: s t r u c t."
+    }
+   }
+  ]
+ },
+ "glossary": [
+  {
+   "w": "whipping boy",
+   "cs": true,
+   "m": "a boy kept in the castle to be punished whenever the prince does something wrong"
+  },
+  {
+   "w": "theme",
+   "m": "the big lesson a story teaches. You can say it in one sentence."
+  },
+  {
+   "w": "root",
+   "m": "the main part of a word that holds its meaning, like struct in construct"
+  },
+  {
+   "w": "compound word",
+   "m": "two small words joined into one word, like rain + bow = rainbow"
+  },
+  {
+   "w": "pronoun",
+   "m": "a small word that takes the place of a name, like he, him, or his"
+  },
+  {
+   "w": "personification",
+   "m": "writing about a thing as if it were a person, like a cricket that is cheerful"
+  },
+  {
+   "w": "Reader’s Theater",
+   "cs": true,
+   "m": "reading a scene out loud like a play, with a voice for each character"
+  }
+ ],
+ "sayWords": [
+  "transform",
+  "compare",
+  "contrast",
+  "develop"
+ ],
+ "transcripts": {
+  "welcome": "Hi, it’s Opti. You finished The Whipping Boy! This week there are no new chapters. Today, look back at Jemmy and the prince on the very first pages, and on the very last. Which boy changed more?",
+  "guide1": "Word work first. You’ll meet a root that means build, sort pronouns by their jobs, and find compound words.",
+  "guide2": "No new chapters today. Look back through the whole book for the moments that changed each boy.",
+  "guide3": "Today you make one vague sentence in your comparison specific. Add a chapter number."
+ },
+ "notes": {
+  "wordParts": "The root struct means build. construct = to build together. structure = something built. instruct = to build knowledge in someone.",
+  "grammar": "A pronoun takes the place of a noun. Doing the action: I, he, she, we, they. Getting the action: me, him, her, us, them. Showing whose: my, his, her, their.",
+  "spelling": "A compound word is two small words joined into one: rain + bow = rainbow. Read each part on its own, then blend them. A long word is not always a compound word.",
+  "wgrd": "Good readers look back at a whole book and see how the characters grew.",
+  "vocab": [
+   [
+    "transform",
+    "to change completely"
+   ],
+   [
+    "compare",
+    "to look at two things side by side for sameness and difference"
+   ],
+   [
+    "contrast",
+    "to point out the differences between two things"
+   ],
+   [
+    "develop",
+    "to grow and change over time"
+   ]
+  ]
+ },
+ "plate": {
+  "src": "art/wb/wb-prince.jpg",
+  "alt": "A painting of a young boy in a black hat and gold sash riding a rearing brown horse, with mountains behind him",
+  "credit": "Prince Balthasar Charles on Horseback · Diego Velázquez, about 1635 · Museo del Prado · Public domain",
+  "look": "A painting by Diego Velázquez of a real prince of Spain, Balthasar Charles, made around 1635. He was about six years old. A real prince had his picture painted on a prancing horse. Prince Brat was a prince like this one, but he had a lot of growing up to do.",
+  "lookBtn": "Tap to learn about this painting of a young prince"
+ },
+ "teach": {
+  "dropTurnNotes": true,
+  "mods": [
+   {
+    "id": "wgrd",
+    "find": "What Good Readers",
+    "fold": [
+     ":scope > p:not(.g3-do)",
+     ":scope > .key-concept",
+     ":scope > .socratic-box"
+    ],
+    "todo": "Listen to Opti. Then tap the lens you will use today.",
+    "script": "[warmly] Here's today's reading tip. At the start of the book, Jemmy and the prince could hardly stand each other. By the end, they're friends. Good readers look back and ask: who changed, and what changed them? Then tap one of the two lenses below to use while you look back. You don't need to write anything."
+   },
+   {
+    "id": "dol",
+    "find": "Daily Oral",
+    "fold": [],
+    "todo": "Tap the yellow parts. Then pick Sentence A or B and type it the right way.",
+    "script": "Let's fix a sentence. The correct one is from Chapter 20. Dismissed, both of you, said the king. The king's words go inside quotation marks, and the comma goes inside too. Then comes who said it. Tap the yellow parts. Then pick Sentence A or Sentence B, and type it the right way."
+   },
+   {
+    "id": "morph",
+    "find": "Morphology",
+    "fold": [
+     ":scope > .callout:not(:has(+ .fillin-game)):not(:has(+ .dol-check-btn))"
+    ],
+    "todo": "Think about the questions. Tap See what was hiding. Type the missing word part in each box.",
+    "script": "[curious] What do a castle, a tower, and a bridge have in common? Somebody built them. Long ago, the Romans had a word for build, and we still use a piece of it. Struct. S, t, r, u, c, t. When you spot those six letters inside a long word, think: build. Read the three words, and think about the questions. Then tap See what was hiding, and type the missing parts.",
+    "video": "g3ela-22-1-teach-morph"
+   },
+   {
+    "id": "vocab",
+    "find": "Vocabulary",
+    "fold": [
+     ":scope > .g3-model-h",
+     ":scope > .decode-steps"
+    ],
+    "todo": "Listen to each card. Guess the meaning, then flip the card. Then play the matching game.",
+    "script": "Let's be word detectives with a word that's not on your cards. Unlikely. Un means not, and likely means it will probably happen. So unlikely means not likely at all. Jemmy and the prince were an unlikely pair of friends! Listen to each card, guess the meaning, and flip it. Then play the matching game.",
+    "video": "g3ela-22-1-teach-vocab"
+   },
+   {
+    "id": "gram",
+    "find": "Grammar",
+    "fold": [
+     ":scope > .callout:not(:has(+ .spotter-game)):not(:has(+ .fillin-game)):not(:has(+ .sort-game)):not(:has(+ .dol-check-btn))"
+    ],
+    "todo": "Tap Now check your thinking. Then sort each pronoun by its job.",
+    "script": "[warmly] Pronouns are little words that stand in for names, and each one has a job. Listen. We ran. Betsy helped us. It was our coach. We does the action. Us gets the action. Our shows whose coach. Here's a trick for pairs. Betsy and us laughed? Cover Betsy. Us laughed? No! We laughed. Tap Now check your thinking. Then sort each pronoun by its job.",
+    "video": "g3ela-22-1-teach-gram"
+   },
+   {
+    "id": "spell",
+    "find": "Spelling",
+    "fold": [],
+    "todo": "Say the words. Tap Now name the pattern. Then sort all eight words.",
+    "script": "Watch me take one apart. Cupcake. Cup, plus cake. Two real words, joined into one. That's a compound word. Now be careful. Beautiful is a long word, but can you split it into two real words? No. Long doesn't mean compound. Say the words out loud, and tap Now name the pattern. Then sort all eight.",
+    "video": "g3ela-22-1-teach-spell"
+   },
+   {
+    "id": "copia",
+    "sel": ".spk-copia-card",
+    "label": "Opti shows you how",
+    "fold": [],
+    "todo": "Write the sentence three new ways, one box at a time.",
+    "script": "[warmly] Here's copia again: one idea, said many ways. I'll try a different sentence first. The king smiled. Box one, change the opener: At the golden doors, the king smiled. Box two, a stronger verb: The king beamed. Box three, add a detail: The tired old king smiled. Now it's your turn, one box at a time. If you get stuck, tap Show one way."
+   },
+   {
+    "id": "spotlight",
+    "find": "Character Spotlight",
+    "fold": [
+     ":scope > .socratic-box"
+    ],
+    "script": "Here's something to think about. In Chapter 1, Jemmy takes the whacks for the prince's tricks. In Chapter 20, the prince tells his father that it's thanks to Jemmy he got home safe. That's a big change. What happened in between?"
+   },
+   {
+    "id": "read",
+    "find": "Looking Back",
+    "fold": [],
+    "todo": "Read the two questions. Then look back through the whole book.",
+    "script": "There are no new chapters today. Read the two Pause and Think questions first. Then flip back to Chapter 1, and then to Chapter 20. How did Jemmy talk about the prince at the start? How does he feel about him at the end? Think about your answers. You don't write them here."
+   },
+   {
+    "id": "chq",
+    "find": "Chapter Thinking",
+    "fold": [],
+    "todo": "Pick Explorer or Scholar. Answer the three questions in full sentences.",
+    "script": "Now answer in full sentences, with details from the book. One, how did Jemmy change? Use one detail from early and one from late. Two, how did the prince change? Three, how are the two boys alike? For a challenge, pick Scholar, and add one more detail to each answer."
+   },
+   {
+    "id": "write",
+    "find": "Writer.s Workshop",
+    "fold": [
+     ":scope > .callout"
+    ],
+    "foldText": [
+     "watch how",
+     "today.s tool"
+    ],
+    "todo": "Find one vague sentence in your comparison paragraph. Write it again with a chapter number.",
+    "script": "A vague sentence is fuzzy. Prince Brat changed a lot. Changed how? When? Clara made hers specific: she named Chapter 20, and said what the prince did there. Find one fuzzy sentence in your comparison paragraph. Write it again with a chapter number."
+   }
+  ],
+  "cards": {
+   "transform": "Transform. Both boys transform by the end of the story. Transform means to change completely.",
+   "compare": "Compare. When you compare two boys, you look at them side by side, for what is the same and what is different.",
+   "contrast": "Contrast. When you contrast two things, you point out only how they are different.",
+   "develop": "Develop. A character can develop over a whole book. Develop means to grow and change over time."
+  }
+ },
+ "virtue": {
+  "name": "courage",
+  "title": "Courage Watch: Did they show courage?",
+  "items": [
+   {
+    "t": "In Chapter 17, the prince gets up off the mud flat after his whipping. Jemmy sees “a cast-iron streak of pluck” in him.",
+    "ok": true,
+    "why": "He was hurt, and he got back up."
+   },
+   {
+    "t": "In Chapter 14, the prince says he may never go back to the castle. “This is the best time I ever had!”",
+    "ok": false,
+    "why": "He is having fun, but he is staying away from his father instead of facing him."
+   },
+   {
+    "t": "In Chapter 20, Jemmy stands alone in front of the king, who says, “You ought to be whipped.”",
+    "ok": true,
+    "why": "He is afraid, but he stays and answers, “Yes, My Lord.”"
+   }
+  ]
+ }
+}

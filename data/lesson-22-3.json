@@ -1,0 +1,403 @@
+{
+ "connector": "Today the book becomes a play. You pick a scene and read it out loud, with a voice for each character. Is the prince bossy or scared? Is Betsy calm or loud? Let the punctuation tell your voice what to do.",
+ "writingFocus": "compare",
+ "dol": {
+  "a": {
+   "raw": "does everyone hate me the prince asked",
+   "fixed": "“<strong>D</strong>oes everyone hate me<strong>?”</strong> the prince asked<strong>.</strong>",
+   "why": "The prince asks a question, so a question mark goes inside the closing quotation mark. Does gets a capital D. The word the stays small, because the sentence keeps going. A period ends it."
+  },
+  "b": {
+   "raw": "what about you the prince asked",
+   "fixed": "“<strong>W</strong>hat about you<strong>?”</strong> the prince asked<strong>.</strong>",
+   "why": "The prince asks a question, so a question mark goes inside the closing quotation mark. What gets a capital W. The word the stays small. A period ends it."
+  }
+ },
+ "hints": {
+  "mfill1": {
+   "h1": "Say con, then struct, then ion. Push them together.",
+   "why": "con + struct + ion = construction: the work of building."
+  },
+  "mfill2": {
+   "h1": "Say in, then struct, then ion. Push them together.",
+   "why": "in + struct + ion = instruction: teaching, or steps that tell you how."
+  },
+  "mfill3": {
+   "h1": "Say de, then struct, then ion. Push them together.",
+   "why": "de + struct + ion = destruction: tearing something down."
+  },
+  "mfill4": {
+   "h1": "Say ob, then struct. Push them together.",
+   "why": "ob + struct = obstruct: to block the way."
+  },
+  "vcloze1": {
+   "h1": "This one is about showing feelings with your voice and face.",
+   "why": "expression means showing feeling."
+  },
+  "vcloze2": {
+   "h1": "This one is the words the characters say to each other.",
+   "why": "dialogue is the words characters say."
+  },
+  "vcloze3": {
+   "h1": "This one is about reading smoothly, not choppy.",
+   "why": "fluency means reading smoothly at the right speed."
+  },
+  "vcloze4": {
+   "h1": "This one is the hardest word: rhythm, speed and stress.",
+   "why": "prosody is the rhythm and stress of your voice."
+  },
+  "gfill1": {
+   "h1": "The prince gets the map. Which word from the bank gets the action?",
+   "why": "Jemmy gave the map to him."
+  },
+  "gfill2": {
+   "h1": "Two people ran. Which bank word stands for both of them?",
+   "why": "They ran."
+  },
+  "gfill3": {
+   "h1": "The coach belongs to Captain Nips. Which bank word shows whose?",
+   "why": "It was his coach."
+  },
+  "gfill4": {
+   "h1": "Jemmy told someone. Which bank word gets the action?",
+   "why": "Jemmy told him about the bear."
+  }
+ },
+ "miss": {
+  "match": {
+   "expression": "Expression is showing feelings. Look for the meaning about voice, face, or body.",
+   "dialogue": "Dialogue is what characters say. Look for the meaning about spoken words.",
+   "fluency": "Fluency is about reading smoothly. Look for the meaning about pace.",
+   "prosody": "Prosody is the music of your voice. Look for the meaning about rhythm and stress."
+  }
+ },
+ "flags": {
+  "journal-q1": {
+   "quote": false,
+   "count": 1
+  },
+  "journal-q2": {
+   "quote": false,
+   "count": 1
+  },
+  "journal-q3": {
+   "quote": false,
+   "count": 2
+  }
+ },
+ "scholar": {
+  "journal-q1": "… and copy one line of dialogue from the scene.",
+  "journal-q2": "… and tell one place where you changed your voice on purpose.",
+  "journal-q3": "… and tell which punctuation mark helped you most."
+ },
+ "wordgame": {
+  "type": "castle",
+  "title": "Build the Castle",
+  "sub": "Every right answer lays a stone in the castle wall.",
+  "todo": "Read the question. Tap the answer you think is right. A right answer lays the next stone in the castle.",
+  "win": "Today’s 8 stones are laid. Come back next lesson to keep building.",
+  "winWeek": "The castle is built, from the ground to the flag!",
+  "look": "Each right answer lays one stone in the castle wall, from the bottom row up. You lay 8 stones each day. On Day 4 the castle gets its towers, its gate and its flag.",
+  "items": [
+   {
+    "title": "Build words with struct",
+    "q": "Which word has the root <b>struct</b> in it?",
+    "opts": [
+     "consonant",
+     "constructive"
+    ],
+    "a": 1,
+    "why": "con + struct + ive. Consonant starts with con too, but it has no struct.",
+    "miss": {
+     "0": "Look for all six letters: s t r u c t."
+    }
+   },
+   {
+    "title": "Build words with struct",
+    "q": "Kind, <b>constructive</b> words help a friend build a better story. What does constructive mean?",
+    "opts": [
+     "helping to build something better",
+     "tearing something down"
+    ],
+    "a": 0,
+    "why": "con + struct: to build together. Constructive words help build.",
+    "miss": {
+     "1": "Tearing down would be destructive. Constructive starts with con, not de."
+    }
+   },
+   {
+    "title": "Compound words",
+    "q": "Which word is a compound word?",
+    "opts": [
+     "sunshine",
+     "sewer"
+    ],
+    "a": 0,
+    "why": "sun + shine = sunshine.",
+    "miss": {
+     "1": "Can you split sewer into two real words?"
+    }
+   },
+   {
+    "title": "Compound words",
+    "q": "Put <b>night</b> and <b>gown</b> together. What word do you get?",
+    "opts": [
+     "nitegown",
+     "nightgown"
+    ],
+    "a": 1,
+    "why": "night + gown = nightgown. Both words keep their spelling.",
+    "miss": {
+     "0": "Look at night. Did it keep its spelling?"
+    }
+   },
+   {
+    "title": "Compound words",
+    "q": "Which word is a compound word?",
+    "opts": [
+     "elephant",
+     "footprint"
+    ],
+    "a": 1,
+    "why": "foot + print = footprint.",
+    "miss": {
+     "0": "Long is not the same as compound. Look for two real words."
+    }
+   },
+   {
+    "title": "Pronoun jobs",
+    "q": "The king smiled at ___.",
+    "opts": [
+     "them",
+     "they"
+    ],
+    "a": 0,
+    "why": "them gets the action: smiled at them.",
+    "miss": {
+     "1": "Smiled at they? Say it out loud."
+    }
+   },
+   {
+    "title": "Pronoun jobs",
+    "q": "___ and I found a map.",
+    "opts": [
+     "Him",
+     "He"
+    ],
+    "a": 1,
+    "why": "Cover and I: He found a map. He does the action.",
+    "miss": {
+     "0": "Cover and I. Him found a map? Try the other one."
+    }
+   },
+   {
+    "title": "Build words with struct",
+    "q": "In <b>instructive</b>, which part means build?",
+    "opts": [
+     "in",
+     "ive",
+     "struct"
+    ],
+    "a": 2,
+    "why": "struct means build.",
+    "miss": {
+     "0": "in is the front part. Find the six letters that mean build.",
+     "1": "ive is the ending. Find the six letters that mean build."
+    }
+   }
+  ]
+ },
+ "glossary": [
+  {
+   "w": "whipping boy",
+   "cs": true,
+   "m": "a boy kept in the castle to be punished whenever the prince does something wrong"
+  },
+  {
+   "w": "theme",
+   "m": "the big lesson a story teaches. You can say it in one sentence."
+  },
+  {
+   "w": "root",
+   "m": "the main part of a word that holds its meaning, like struct in construct"
+  },
+  {
+   "w": "compound word",
+   "m": "two small words joined into one word, like rain + bow = rainbow"
+  },
+  {
+   "w": "pronoun",
+   "m": "a small word that takes the place of a name, like he, him, or his"
+  },
+  {
+   "w": "personification",
+   "m": "writing about a thing as if it were a person, like a cricket that is cheerful"
+  },
+  {
+   "w": "Reader’s Theater",
+   "cs": true,
+   "m": "reading a scene out loud like a play, with a voice for each character"
+  }
+ ],
+ "sayWords": [],
+ "transcripts": {
+  "welcome": "Hi, it’s Opti. Today the book turns into a play! You pick a scene and read it out loud, with a voice for each character. Is the prince bossy? Is Betsy loud? Let the marks on the page tell your voice what to do.",
+  "guide1": "Word work. You’ll build four new struct words, use pronouns so a name isn’t said twice, and join small words into compound words.",
+  "guide2": "No new chapters today. Pick the scene you would most like to read out loud. Think about how each character sounds.",
+  "guide3": "Today you check the pronouns in your comparison paragraph."
+ },
+ "notes": {
+  "wordParts": "The root struct means build. construct = to build together. structure = something built. instruct = to build knowledge in someone.",
+  "grammar": "A pronoun takes the place of a noun. Doing the action: I, he, she, we, they. Getting the action: me, him, her, us, them. Showing whose: my, his, her, their.",
+  "spelling": "A compound word is two small words joined into one: rain + bow = rainbow. Read each part on its own, then blend them. A long word is not always a compound word.",
+  "wgrd": "Good readers hear each character’s voice. The marks on the page tell your voice when to rise, ask, or pause.",
+  "vocab": [
+   [
+    "expression",
+    "showing feelings with your voice, face, or body"
+   ],
+   [
+    "dialogue",
+    "the words characters say"
+   ],
+   [
+    "fluency",
+    "reading smoothly at the right speed"
+   ],
+   [
+    "prosody",
+    "the rhythm and stress of your voice"
+   ]
+  ]
+ },
+ "plate": {
+  "src": "art/wb/wb-laughing-audience.jpg",
+  "alt": "An old black-and-white print of a crowd in a theater laughing, with three serious musicians in the front row",
+  "credit": "The Laughing Audience · William Hogarth, 1733 · National Gallery of Art · CC0",
+  "look": "A print by William Hogarth, made in London in 1733. A crowd at a play is laughing hard. Look at the three men in front: they play music for the show, and they are not laughing at all! Today you bring a scene to life with your voice, like actors on a stage.",
+  "lookBtn": "Tap to learn about this picture of people watching a play"
+ },
+ "teach": {
+  "dropTurnNotes": true,
+  "mods": [
+   {
+    "id": "wgrd",
+    "find": "What Good Readers",
+    "fold": [
+     ":scope > p:not(.g3-do)",
+     ":scope > .key-concept",
+     ":scope > .socratic-box"
+    ],
+    "todo": "Listen to Opti. Then tap the lens you will use today.",
+    "script": "[warmly] Here's today's reading tip. Every character in this book sounds different. The prince sounds bossy, Betsy sounds bold, and Jemmy talks like the streets. Today you read a scene out loud, so listen for each voice. Then tap one of the two lenses below to use while you look back. You don't need to write anything."
+   },
+   {
+    "id": "dol",
+    "find": "Daily Oral",
+    "fold": [],
+    "todo": "Tap the yellow parts. Then pick Sentence A or B and type it the right way.",
+    "script": "Let's fix a sentence. The correct one is from Chapter 17. Steady on your legs? Jemmy asked. It's a question, so the question mark goes inside the quotation marks. And asked starts with a small letter, because the sentence keeps going. Tap the yellow parts. Then pick Sentence A or Sentence B, and type it the right way."
+   },
+   {
+    "id": "morph",
+    "find": "Morphology",
+    "fold": [
+     ":scope > .callout:not(:has(+ .fillin-game))",
+     ":scope > .key-concept"
+    ],
+    "todo": "Say the parts out loud. Type the whole word in each box. Tap Check My Answers.",
+    "script": "Look what one little ending can do. Act, plus i o n. Action! The ending i o n turns a doing word into a thing. Today you'll stick it on struct words, and you'll add some front parts too. Say the parts out loud, push them together, and type the whole word. Then tap Check My Answers.",
+    "video": "g3ela-22-3-teach-morph"
+   },
+   {
+    "id": "vocab",
+    "find": "Vocabulary",
+    "fold": [
+     ":scope > .g3-model-h",
+     ":scope > .decode-steps"
+    ],
+    "todo": "Fill in each sentence with a word from the word bank. Tap Check My Work. Then play the matching game.",
+    "script": "Here's a reading-aloud word that's not in your bank. Pause. When you pause, you stop for just a moment, like at a comma. Reader's Theater is full of pauses! Read how we figured out the first word. Then fill in each sentence with a word from the word bank, and tap Check My Work. Last, play the matching game.",
+    "video": "g3ela-22-3-teach-vocab"
+   },
+   {
+    "id": "gram",
+    "find": "Grammar",
+    "fold": [
+     ":scope > .callout:not(:has(+ .spotter-game)):not(:has(+ .fillin-game)):not(:has(+ .sort-game)):not(:has(+ .dol-check-btn))"
+    ],
+    "todo": "Read the Remember box. Type a pronoun from the word bank in each blank.",
+    "script": "Listen to this. Betsy fed Betsy's bear, and Betsy's bear licked Betsy. Clunky! Let's fix it. Betsy fed her bear, and the bear licked her. Much better. Read the Remember box. Then type a pronoun from the word bank in each blank, so no name is said twice.",
+    "video": "g3ela-22-3-teach-gram"
+   },
+   {
+    "id": "spell",
+    "find": "Spelling",
+    "fold": [],
+    "foldText": [
+     "The Rule:"
+    ],
+    "todo": "Tap each card to join the two small words. Then answer the question in the box.",
+    "script": "Oops. I wrote foot, then a space, then ball. But a football is one thing, so it's one word. Foot and ball join right up, with no space. Tap each card to join the two small words. Say the new word out loud. Then answer the question in the box.",
+    "video": "g3ela-22-3-teach-spell"
+   },
+   {
+    "id": "spotlight",
+    "find": "Character Spotlight",
+    "fold": [
+     ":scope > .socratic-box"
+    ],
+    "script": "Try reading this out loud. Which way is south? Straight on! You certain? Certain I'm certain. Jemmy sounds lost. Betsy sounds sure of herself. Can you hear the difference in your own voice?"
+   },
+   {
+    "id": "read",
+    "find": "Looking Back",
+    "fold": [],
+    "todo": "Read the two questions. Then look back through the whole book.",
+    "script": "There are no new chapters today. Read the two Pause and Think questions first. Then flip through the book and find the scene you'd most like to read out loud. Read it in your head first. How should each character sound? Then do the Read Like a Writer box."
+   },
+   {
+    "id": "chq",
+    "find": "Chapter Thinking",
+    "fold": [],
+    "todo": "Pick Explorer or Scholar. Answer the three questions in full sentences.",
+    "script": "Now answer in full sentences. One, which scene did you pick, and which chapter is it in? Two, read it out loud two times, and tell how your reading changed. Three, how should each character sound? For a challenge, pick Scholar, and add one more detail to each answer."
+   },
+   {
+    "id": "write",
+    "find": "Writer.s Workshop",
+    "fold": [
+     ":scope > .callout"
+    ],
+    "foldText": [
+     "watch how",
+     "today.s tool"
+    ],
+    "todo": "Find one pronoun in your comparison paragraph. Check it, and write the sentence the right way.",
+    "script": "Today you check your pronouns. Clara found this: Both him and Jemmy changed. Cover Jemmy. Him changed? No. He changed. So she fixed it. Find one pronoun in your comparison paragraph. Check it the same way, and write the sentence the right way."
+   }
+  ],
+  "cards": {}
+ },
+ "virtue": {
+  "name": "courage",
+  "title": "Courage Watch: Did they show courage?",
+  "items": [
+   {
+    "t": "In Chapter 18, Smudge holds out his hand. The prince shakes it, even though no one is allowed to shake a prince’s hand.",
+    "ok": true,
+    "why": "He tries something new and treats Smudge like a friend."
+   },
+   {
+    "t": "In Chapter 2, the prince tells the tutor, “I can always get someone to write my name for me.”",
+    "ok": false,
+    "why": "He won’t try something hard. He wants someone else to do it."
+   },
+   {
+    "t": "In Chapter 17, Betsy runs up to the two outlaws and shouts, “Stop it!”",
+    "ok": true,
+    "why": "She stands up to two bullies to help a boy she doesn’t even know."
+   }
+  ]
+ }
+}

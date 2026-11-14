@@ -1,0 +1,382 @@
+{
+ "connector": "Yesterday you looked at how the boys changed. Today, think about what the whole story teaches. That lesson is the theme. Find one moment early in the book and one late that show it.",
+ "writingFocus": "compare",
+ "dol": {
+  "a": {
+   "raw": "the prince didnt make a sound",
+   "fixed": "<strong>T</strong>he prince didn<strong>’</strong>t make a sound<strong>.</strong>",
+   "why": "The starts the sentence, so it gets a capital T. Didn’t is did not squeezed together, so it needs an apostrophe. A period ends it."
+  },
+  "b": {
+   "raw": "jemmy wasnt sure he trusted the prince",
+   "fixed": "<strong>J</strong>emmy wasn<strong>’</strong>t sure he trusted the prince<strong>.</strong>",
+   "why": "Jemmy starts the sentence and is a name, so it gets a capital J. Wasn’t is was not squeezed together, so it needs an apostrophe. A period ends it."
+  }
+ },
+ "miss": {
+  "match": {
+   "theme": "The theme is the big lesson. Look for the meaning about a message.",
+   "evidence": "Evidence is a detail that proves an idea. Look for that meaning.",
+   "resolution": "The resolution comes at the end. Look for the meaning about a problem being settled.",
+   "character development": "Development is growing. Look for the meaning about a character changing."
+  }
+ },
+ "flags": {
+  "journal-q1": {
+   "quote": false,
+   "count": 0
+  },
+  "journal-q2": {
+   "quote": false,
+   "count": 1
+  },
+  "journal-q3": {
+   "quote": false,
+   "count": 1
+  }
+ },
+ "scholar": {
+  "journal-q1": "… and say it so it fits any person, not only Jemmy.",
+  "journal-q2": "… and tell which chapter it comes from.",
+  "journal-q3": "… and tell how this moment is different from your early one."
+ },
+ "wordgame": {
+  "type": "castle",
+  "title": "Build the Castle",
+  "sub": "Every right answer lays a stone in the castle wall.",
+  "todo": "Read the question. Tap the answer you think is right. A right answer lays the next stone in the castle.",
+  "win": "Today’s 8 stones are laid. Come back next lesson to keep building.",
+  "winWeek": "The castle is built, from the ground to the flag!",
+  "look": "Each right answer lays one stone in the castle wall, from the bottom row up. You lay 8 stones each day. On Day 4 the castle gets its towers, its gate and its flag.",
+  "items": [
+   {
+    "title": "Build words with struct",
+    "q": "The root <b>struct</b> means…",
+    "opts": [
+     "carry",
+     "look",
+     "build"
+    ],
+    "a": 2,
+    "why": "struct means build. port means carry, and spect means look.",
+    "miss": {
+     "0": "Carry goes with port. Which one goes with struct?",
+     "1": "Look goes with spect. Which one goes with struct?"
+    }
+   },
+   {
+    "title": "Build words with struct",
+    "q": "A <b>structured</b> day has a plan, the way a building has a frame. Which part means build?",
+    "opts": [
+     "ed",
+     "struct"
+    ],
+    "a": 1,
+    "why": "struct means build. ed is an ending.",
+    "miss": {
+     "0": "ed is an ending. Find the six letters that mean build."
+    }
+   },
+   {
+    "title": "Compound words",
+    "q": "Which word is a compound word?",
+    "opts": [
+     "birdcage",
+     "castle"
+    ],
+    "a": 0,
+    "why": "bird + cage = birdcage.",
+    "miss": {
+     "1": "Can you split castle into two real words?"
+    }
+   },
+   {
+    "title": "Compound words",
+    "q": "<b>Fairground</b> is made of which two words?",
+    "opts": [
+     "fa + irground",
+     "fair + ground"
+    ],
+    "a": 1,
+    "why": "fair + ground. Both are real words.",
+    "miss": {
+     "0": "Is irground a real word? Split it into two words you know."
+    }
+   },
+   {
+    "title": "Compound words",
+    "q": "Which word is a compound word?",
+    "opts": [
+     "champion",
+     "cowboy"
+    ],
+    "a": 1,
+    "why": "cow + boy = cowboy.",
+    "miss": {
+     "0": "Long is not the same as compound. Look for two real words."
+    }
+   },
+   {
+    "title": "Pronoun jobs",
+    "q": "___ and Betsy walked to the fair.",
+    "opts": [
+     "She",
+     "Her"
+    ],
+    "a": 0,
+    "why": "Cover Betsy: She walked. She does the action.",
+    "miss": {
+     "1": "Cover Betsy. Her walked? Try the other one."
+    }
+   },
+   {
+    "title": "Pronoun jobs",
+    "q": "Petunia sniffed ___ boots.",
+    "opts": [
+     "his",
+     "him"
+    ],
+    "a": 0,
+    "why": "his shows whose boots they are.",
+    "miss": {
+     "1": "Him boots? The boots belong to him. Use the word that shows whose."
+    }
+   },
+   {
+    "title": "Build words with struct",
+    "q": "In <b>destructive</b>, which part means build?",
+    "opts": [
+     "de",
+     "struct"
+    ],
+    "a": 1,
+    "why": "struct means build. de means down or apart.",
+    "miss": {
+     "0": "de means down or apart. Find the six letters that mean build."
+    }
+   }
+  ]
+ },
+ "glossary": [
+  {
+   "w": "whipping boy",
+   "cs": true,
+   "m": "a boy kept in the castle to be punished whenever the prince does something wrong"
+  },
+  {
+   "w": "theme",
+   "m": "the big lesson a story teaches. You can say it in one sentence."
+  },
+  {
+   "w": "root",
+   "m": "the main part of a word that holds its meaning, like struct in construct"
+  },
+  {
+   "w": "compound word",
+   "m": "two small words joined into one word, like rain + bow = rainbow"
+  },
+  {
+   "w": "pronoun",
+   "m": "a small word that takes the place of a name, like he, him, or his"
+  },
+  {
+   "w": "personification",
+   "m": "writing about a thing as if it were a person, like a cricket that is cheerful"
+  },
+  {
+   "w": "Reader’s Theater",
+   "cs": true,
+   "m": "reading a scene out loud like a play, with a voice for each character"
+  }
+ ],
+ "sayWords": [
+  "theme",
+  "evidence",
+  "resolution",
+  "character development"
+ ],
+ "transcripts": {
+  "welcome": "Welcome back, it’s Opti. Today’s question is a big one. What is The Whipping Boy really about? Not what happened, but what it teaches. That lesson is called the theme.",
+  "guide1": "Word study. You’ll match struct words to their meanings, find every pronoun in a sentence, and pick out the compound words by ear.",
+  "guide2": "No new chapters today. Think of one moment early in the book and one moment late that show the same lesson.",
+  "guide3": "Today you add a sentence to your conclusion that says what the story teaches."
+ },
+ "notes": {
+  "wordParts": "The root struct means build. construct = to build together. structure = something built. instruct = to build knowledge in someone.",
+  "grammar": "A pronoun takes the place of a noun. Doing the action: I, he, she, we, they. Getting the action: me, him, her, us, them. Showing whose: my, his, her, their.",
+  "spelling": "A compound word is two small words joined into one: rain + bow = rainbow. Read each part on its own, then blend them. A long word is not always a compound word.",
+  "wgrd": "The lesson a story teaches is called its theme. Say it so it fits any person, not only the characters.",
+  "vocab": [
+   [
+    "theme",
+    "the big message or lesson of a story"
+   ],
+   [
+    "evidence",
+    "a detail from the book that proves your idea"
+   ],
+   [
+    "resolution",
+    "how the problem is settled at the end"
+   ],
+   [
+    "character development",
+    "how a character grows and changes"
+   ]
+  ]
+ },
+ "plate": {
+  "src": "art/wb/wb-street-boys.jpg",
+  "alt": "A painting of two barefoot boys in torn clothes sitting on the ground eating grapes and a slice of melon",
+  "credit": "Boys Eating Grapes and Melon · Bartolomé Esteban Murillo, about 1645–1650 · Alte Pinakothek, Munich · Public domain",
+  "look": "A painting by Bartolomé Esteban Murillo of two street boys in Spain, made almost 400 years ago. Their clothes are torn and their feet are bare, but they are sharing a meal. Jemmy grew up on the streets like these boys, with nothing but his wits.",
+  "lookBtn": "Tap to learn about this painting of two street boys"
+ },
+ "teach": {
+  "dropTurnNotes": true,
+  "mods": [
+   {
+    "id": "wgrd",
+    "find": "What Good Readers",
+    "fold": [
+     ":scope > p:not(.g3-do)",
+     ":scope > .key-concept",
+     ":scope > .socratic-box"
+    ],
+    "todo": "Listen to Opti. Then tap the lens you will use today.",
+    "script": "[warmly] Here's today's reading tip. A story is more than what happens. It also teaches a lesson, and that lesson is the theme. Today, say it in your own words, so it would fit anybody, not just Jemmy. Then tap one of the two lenses below to use while you look back. You don't need to write anything."
+   },
+   {
+    "id": "dol",
+    "find": "Daily Oral",
+    "fold": [],
+    "todo": "Tap the yellow parts. Then pick Sentence A or B and type it the right way.",
+    "script": "Let's fix a sentence. The correct one is from Chapter 17. Jemmy couldn't sort out his feelings. Couldn't is could not, squeezed together, and the apostrophe stands in for the missing o. Tap the yellow parts. Then pick Sentence A or Sentence B, and type it the right way."
+   },
+   {
+    "id": "poem",
+    "find": "Poetry",
+    "fold": [
+     ":scope > .callout",
+     ":scope > .socratic-box"
+    ],
+    "todo": "Read the poem out loud. Then find two creatures that act like people.",
+    "script": "Here's a short poem by Christina Rossetti. Read it out loud. Now look closer. Can a cricket really be cheerful? Can a gnat really dance? The poet gives little creatures feelings and actions that people have. That's personification. Find two creatures in the poem that act like people."
+   },
+   {
+    "id": "morph",
+    "find": "Morphology",
+    "fold": [
+     ":scope > .callout:not(:has(+ .match-game))",
+     ":scope > .key-concept"
+    ],
+    "todo": "Tap a word, then tap what it means. Match all four words.",
+    "script": "Remember, struct means build. Here's a word that's not on your list. Restructure. Cover the re at the front, and the u, r, e at the end. Struct is in the middle. Build! Re means again. So restructure means build again in a new way. Read the Remember box. Then tap a word, and tap what it means. Match all four words.",
+    "video": "g3ela-22-2-teach-morph"
+   },
+   {
+    "id": "vocab",
+    "find": "Vocabulary",
+    "fold": [
+     ":scope > .g3-model-h",
+     ":scope > .decode-steps"
+    ],
+    "todo": "Listen to each card. Guess the meaning, then flip the card. Then play the matching game.",
+    "script": "Here's a puzzle. What happens in a story, and what a story means, are two different things. Today's four words help you talk about what it means. Listen to each card, guess the meaning, and flip it. Then match all four.",
+    "video": "g3ela-22-2-teach-vocab"
+   },
+   {
+    "id": "gram",
+    "find": "Grammar",
+    "fold": [
+     ":scope > .callout:not(:has(+ .spotter-game)):not(:has(+ .fillin-game)):not(:has(+ .sort-game)):not(:has(+ .dol-check-btn))"
+    ],
+    "todo": "Read the Remember box. Then tap every pronoun in each sentence.",
+    "script": "Spot the pronouns with me. She gave us her map. She is doing the giving. Us gets the map. Her shows whose map it is. Three pronouns, three jobs, in one sentence. Read the Remember box. Then tap every pronoun in each sentence. Each one has three.",
+    "video": "g3ela-22-2-teach-gram"
+   },
+   {
+    "id": "spell",
+    "find": "Spelling",
+    "fold": [],
+    "foldText": [
+     "The Rule:"
+    ],
+    "todo": "Read the rule. In each row, tap the one compound word.",
+    "script": "Use your ears for this one. Kitten. Window. Doghouse. Paper. Which one is two small words? Dog, plus house. Doghouse! Say each word in the row out loud. Listen for two small words hiding inside. Then tap the compound word.",
+    "video": "g3ela-22-2-teach-spell"
+   },
+   {
+    "id": "spotlight",
+    "find": "Character Spotlight",
+    "fold": [
+     ":scope > .socratic-box"
+    ],
+    "script": "Think about this. In the dark sewer, the prince tells Jemmy, I wish I were like you. He thinks Jemmy is never afraid. But Jemmy says he is! What does that tell you about being brave?"
+   },
+   {
+    "id": "read",
+    "find": "Looking Back",
+    "fold": [],
+    "todo": "Read the two questions. Then look back through the whole book.",
+    "script": "There are no new chapters today. Read the two Pause and Think questions first. Then look back for two moments that show the same lesson, one early in the book and one late. After that, watch my video in the Read Like a Writer box before you try it."
+   },
+   {
+    "id": "rwm",
+    "sel": ".rwm-box",
+    "after": ":scope > .rwm-header",
+    "label": "Opti shows you how",
+    "fold": [],
+    "script": "[warmly] Let's try all three parts with a different sentence, from Chapter 19. Careful, he thought. Part one, read like a reader. Jemmy is in the dark sewer, choosing which tunnel to take. Part two, read like a writer. There are no quotation marks. We hear Jemmy's own word, careful, right inside his head. Part three, mimic. Here's mine: Hush, Opti thought, the story is just getting good. Now it's your turn with Jemmy's sentence. Write one sentence in each box.",
+    "video": "g3ela-22-2-teach-rwm"
+   },
+   {
+    "id": "chq",
+    "find": "Chapter Thinking",
+    "fold": [],
+    "todo": "Pick Explorer or Scholar. Answer the three questions in full sentences.",
+    "script": "Now answer in full sentences. One, say the theme in one sentence. It's a life lesson, not what happened. Two, find one moment from Chapters 1 to 10 that shows it. Three, find one from Chapters 11 to 20. For a challenge, pick Scholar, and add one more detail to each answer."
+   },
+   {
+    "id": "write",
+    "find": "Writer.s Workshop",
+    "fold": [
+     ":scope > .callout"
+    ],
+    "foldText": [
+     "watch how",
+     "today.s tool"
+    ],
+    "todo": "Write your conclusion again. Add a sentence that says what the story teaches.",
+    "script": "A conclusion can do more than end. It can say what the story teaches. Clara's first try was: both boys learned to trust each other. Then she added the lesson the whole book shows. Write your conclusion again, and add a sentence that says what The Whipping Boy teaches."
+   }
+  ],
+  "cards": {
+   "theme": "Theme. The theme is the big message or lesson of a story.",
+   "evidence": "Evidence. Evidence is a detail from the book that proves your idea is true.",
+   "resolution": "Resolution. The resolution is how the problem is settled at the end of a story.",
+   "character development": "Character development. That's how a character grows and changes across a story."
+  }
+ },
+ "virtue": {
+  "name": "courage",
+  "title": "Courage Watch: Did they show courage?",
+  "items": [
+   {
+    "t": "In Chapter 19, the prince’s voice is stiff with fear, but he tells Jemmy, “I won’t go back to the castle unless you go with me.”",
+    "ok": true,
+    "why": "He is scared, and he still sticks by his friend."
+   },
+   {
+    "t": "In Chapter 11, the prince says, “It doesn’t please me to take orders from common rascals.”",
+    "ok": false,
+    "why": "He is being proud and rude, not brave."
+   },
+   {
+    "t": "In Chapter 17, a big bear sniffs at the prince. He doesn’t move a muscle, and he whispers, “Rein in your beast.”",
+    "ok": true,
+    "why": "A bear is right next to him, and he stays calm."
+   }
+  ]
+ }
+}
