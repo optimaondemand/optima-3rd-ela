@@ -1868,7 +1868,7 @@ function wgWhy(why) {
 function buildWordGame() {
   var cfg = DATA.wordgame;
   if (!cfg || !WORDGAME[cfg.type]) return;              /* no themed game for this lesson */
-  if (cfg.type === 'tower' || cfg.type === 'wagon' || cfg.type === 'chase') { WORDGAME[cfg.type](cfg); return; }   /* G3: self-contained, not built from a page game */
+  if (cfg.type === 'tower' || cfg.type === 'wagon' || cfg.type === 'chase' || cfg.type === 'sewer') { WORDGAME[cfg.type](cfg); return; }   /* G3: self-contained, not built from a page game */
   var act = wgActivity(cfg.strand); if (!act) return;
   var game = act.querySelector('.fillin-game'); if (!game) return;
   var W = wgWords(game); if (W.length < 2) return;
@@ -3482,7 +3482,7 @@ function buildNav() {
      DATA.glossary  = [ {w, m, key} ]      dotted words, 🔊 on key words
      DATA.sayWords  = [ 'word', … ]          🔊 on the vocab cards (says just the word)
      DATA.cards     = [ {id, kind, tab, after, title, sub, look, todo, …} ]
-     DATA.wordgame  = {type:'tower'|'wagon'|'chase', …}  Up the North Tower / Fill the Wagon / The Chase
+     DATA.wordgame  = {type:'tower'|'wagon'|'chase'|'sewer', …}  Up the North Tower / Fill the Wagon / The Chase / Out of the Sewer
    The rules for 8-year-olds: every module opens with a "What to do:"
    line Opti reads, shows one step at a time, and every picture opens
    on notice/wonder before it says what it is.
@@ -4085,6 +4085,112 @@ WORDGAME.chase = function (cfg) {
   if (anchor) anchor.parentNode.insertBefore(card, anchor); else panel.appendChild(card);
 };
 
+/* ── Out of the Sewer: one round a day (week 21, Ch. 19) ────────────
+   DATA.wordgame = { type:'sewer', title, sub, look, todo, win, winWeek,
+     items:[ {title, q, opts:[left, right], a:0|1, why, miss:{n:'…'}} ] }
+   Each question is a fork with two tunnels. The right tunnel moves Jemmy
+   and the prince one lamp closer to daylight; the wrong one gets a squeak
+   from the brewery rats. Day d starts with days 1…d-1's lamps lit, so the
+   week is one escape and day 4 reaches the river. Practice only; never
+   fills a graded box. */
+function sewerSVG(lit, day, per) {
+  var total = per * 4, n = total / 2;
+  function pos(k) {
+    var row = k < n ? 0 : 1, c = row ? k - n : k;
+    var x = row ? 278 - c * (232 / (n - 1)) : 46 + c * (232 / (n - 1));
+    return { x: x, y: row ? 136 : 62 };
+  }
+  var s = '<svg viewBox="0 0 320 180" width="100%" style="max-width:340px" role="img" aria-label="Jemmy and the prince have passed ' + Math.min(lit, total) + ' of ' + total + ' lamps on the way out of the sewer">' +
+    '<rect width="320" height="180" rx="12" fill="#3A3330"/>';
+  /* brick courses */
+  for (var r = 0; r < 9; r++) for (var b = 0; b < 9; b++) {
+    s += '<rect x="' + (b * 38 - (r % 2 ? 19 : 0) + 2) + '" y="' + (r * 20 + 2) + '" width="34" height="16" rx="2" fill="' + ((r + b) % 3 ? '#4A403B' : '#544843') + '"/>';
+  }
+  /* the tunnel: two arched passages joined by a bend */
+  s += '<path d="M30 62 H290 Q308 62 308 99 Q308 136 290 136 H30" fill="none" stroke="#1E1A18" stroke-width="34" stroke-linecap="round"/>' +
+       '<path d="M30 70 H290 Q300 70 300 99 Q300 128 290 128" fill="none" stroke="#2F4A52" stroke-width="6" opacity=".9"/>' +
+       '<path d="M290 136 H30" fill="none" stroke="#2F4A52" stroke-width="6" transform="translate(0 8)" opacity=".9"/>';
+  /* side tunnels toward the brewery (where the rats are) */
+  [[96, 40], [196, 40], [140, 158], [240, 158]].forEach(function (t) {
+    s += '<path d="M' + (t[0] - 9) + ' ' + (t[1] + (t[1] < 99 ? 8 : -8)) + ' a9 9 0 0 1 18 0" fill="#141110" stroke="#1E1A18" stroke-width="2" transform="' + (t[1] > 99 ? 'rotate(180 ' + t[0] + ' ' + t[1] + ')' : '') + '"/>';
+  });
+  /* daylight at the river mouth (end of the bottom passage) */
+  var done = lit >= total;
+  s += '<circle cx="24" cy="136" r="' + (done ? 26 : 15) + '" fill="#FFE9A8" opacity="' + (done ? '.95' : (0.25 + 0.6 * Math.min(lit, total) / total).toFixed(2)) + '"/>' +
+       '<path d="M8 150 Q24 144 40 150" stroke="#6FA8C8" stroke-width="3" fill="none"/>';
+  for (var k = 0; k < total; k++) {
+    var p = pos(k), on = k < lit, today = k >= (day - 1) * per && k < day * per;
+    s += '<g transform="translate(' + p.x.toFixed(1) + ' ' + (p.y - 15) + ')">' +
+         (on ? '<circle r="7" fill="#FFD86B" opacity=".35"/>' : '') +
+         '<rect x="-2.5" y="-3" width="5" height="6" rx="1.5" fill="' + (on ? '#FFD86B' : (today ? '#8C8070' : '#5E5650')) + '" stroke="#211C19" stroke-width=".8"/></g>';
+  }
+  function person(x, y, col) {
+    return '<g transform="translate(' + x.toFixed(1) + ' ' + y.toFixed(1) + ')">' +
+      '<path d="M-3 0 L-4 -10 M3 0 L4 -10" stroke="#E8DCC8" stroke-width="2"/>' +
+      '<rect x="-5" y="-21" width="10" height="12" rx="3" fill="' + col + '"/>' +
+      '<circle cy="-25" r="4" fill="#E8C9A4" stroke="#211C19" stroke-width=".8"/></g>';
+  }
+  if (!done) {
+    var j = lit === 0 ? { x: 46, y: 62 } : pos(Math.min(lit, total) - 1);
+    var dir = (lit <= n) ? -1 : 1;
+    s += person(j.x + dir * 9, j.y + 10, '#B5473A') + person(j.x, j.y + 10, '#2E6FB5') +
+         '<path d="M' + (j.x + dir * 4).toFixed(1) + ' ' + (j.y - 4) + ' h' + (dir * 1) + '" stroke="#E8C9A4" stroke-width="2"/>';
+  } else {
+    s += person(30, 160, '#2E6FB5') + person(44, 160, '#B5473A') +
+         '<text x="176" y="104" text-anchor="middle" font-family="Nunito,sans-serif" font-weight="800" font-size="15" fill="#FFE9A8">Out into the sunshine!</text>';
+  }
+  return s + '</svg>';
+}
+WORDGAME.sewer = function (cfg) {
+  var items = cfg.items || []; if (!items.length) return;
+  var panel = document.getElementById('tab-words'); if (!panel) return;
+  var anchor = panel.querySelector('.tab-next-wrap');
+  var day = dayNum(LESSON.day), PER = items.length;
+  var KEY = 'oao.g3ela.wg.' + LID;
+  var st = Sparkle.get(KEY, null) || { i: 0, misses: 0 };
+  if (st.i > PER) st.i = PER;
+  var card = cardShell({ id: 'sewer', kind: 'sewer', title: cfg.title || 'Out of the Sewer', sub: cfg.sub || '' }, '🕯️');
+  var body = card.querySelector('.spk-card-body');
+  body.insertAdjacentHTML('beforeend', lookCard(cfg.look, cfg.todo) +
+    '<div class="g3-tw-grid"><div class="g3-sewer"></div><div class="g3-tw-play" aria-live="polite"></div></div>');
+  var mapEl = body.querySelector('.g3-sewer'), play = body.querySelector('.g3-tw-play');
+  function lit() { return (day - 1) * PER + st.i; }
+  function paint(msg, ok, tried) {
+    mapEl.innerHTML = sewerSVG(lit(), day, PER);
+    if (st.i >= PER) {
+      play.innerHTML = '<div class="g3-finish">✓ ' + esc(day === 4 ? (cfg.winWeek || cfg.win || '') : (cfg.win || '')) + '</div>' +
+        '<button type="button" class="spk-mini-btn g3-again">Play today’s round again</button>';
+      play.querySelector('.g3-again').onclick = function () { st = { i: 0, misses: 0 }; Sparkle.set(KEY, st); paint(); };
+      return;
+    }
+    var it = items[st.i], side = ['Left tunnel', 'Right tunnel'];
+    var h = stepHead(st.i + 1, PER, it.title || 'Pick a tunnel') + '<p class="g3-tw-q">' + it.q + '</p><div class="g3-opts g3-tunnels">';
+    it.opts.forEach(function (o, n) {
+      h += '<button type="button" class="g3-opt-btn g3-tunnel' + (tried && tried.indexOf(n) >= 0 ? ' tried' : '') + '" data-n="' + n + '">' +
+        '<span class="g3-tunnel-tag">' + side[n] + '</span><span class="g3-tunnel-txt">' + esc(o) + '</span></button>';
+    });
+    h += '</div>';
+    if (msg) h += '<div class="g3-fb ' + (ok ? 'ok' : 'no') + '">' + msg + '</div>';
+    play.innerHTML = h;
+    play.querySelectorAll('.g3-opt-btn').forEach(function (b) {
+      b.onclick = function () {
+        var n = +b.getAttribute('data-n');
+        if (n === it.a) {
+          st.i++; Sparkle.set(KEY, st); wgSfx(st.i >= PER ? 'win' : 'chime');
+          if (st.i >= PER) { paint(); return; }
+          paint('✓ ' + (it.why || 'That’s the way out.'), true);
+        } else {
+          st.misses++; Sparkle.set(KEY, st); wgSfx('bonk');
+          var t = (tried || []).concat([n]);
+          paint('🐀 Squeak! ' + ((it.miss || {})[n] || 'Rats down that way. Read it again, then try the other tunnel.'), false, t);
+        }
+      };
+    });
+  }
+  paint();
+  if (anchor) anchor.parentNode.insertBefore(card, anchor); else panel.appendChild(card);
+};
+
 /* ── Fill the Wagon: one round a day ────────────────────────────────
    DATA.wordgame = { type:'wagon', title, sub, look, todo, win, winWeek,
      bins:[ {id, label} ], items:[ {t, bin, why, miss:{binId:'…'}} ] }
@@ -4514,7 +4620,7 @@ function buildVirtue3() {
    assets/audio/guide/opti/g3ela-how-<slug>.mp3 (shared by every lesson
    that uses the same words). The button stays hidden until the file is
    really there, so a line without a recording just reads as text. */
-var SAY_FOR_CARD = { 'spk-copia-card': 'copia', 'g3card-tower': 'tower', 'g3card-wagon': 'wagon', 'g3card-chase': 'chase', 'g3card-backward': 'backward' };
+var SAY_FOR_CARD = { 'spk-copia-card': 'copia', 'g3card-tower': 'tower', 'g3card-wagon': 'wagon', 'g3card-chase': 'chase', 'g3card-sewer': 'sewer', 'g3card-backward': 'backward' };
 function buildSayDo() {
   document.querySelectorAll('.g3-todo:not([data-say])').forEach(function (p) {
     for (var k in SAY_FOR_CARD) {
