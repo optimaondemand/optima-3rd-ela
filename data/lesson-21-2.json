@@ -1,0 +1,380 @@
+{
+ "connector": "Betsy and Petunia chased the outlaws off, and the coach rolled into the city. Today the boys walk through a busy fair. Then a news seller shouts something that makes Jemmy run. Watch where he runs, and who follows him.",
+ "writingFocus": "compare",
+ "dol": {
+  "a": {
+   "raw": "the prince stumbled and grabbed jemmys sleeve",
+   "fixed": "<strong>T</strong>he prince stumbled and grabbed <strong>J</strong>emmy<strong>’</strong>s sleeve<strong>.</strong>",
+   "why": "The starts the sentence, so it gets a capital T. Jemmy is a name, so it gets a capital J. The sleeve belongs to Jemmy, so Jemmy’s needs an apostrophe. A period ends it."
+  },
+  "b": {
+   "raw": "betsy laughed and patted petunias head",
+   "fixed": "<strong>B</strong>etsy laughed and patted <strong>P</strong>etunia<strong>’</strong>s head<strong>.</strong>",
+   "why": "Betsy starts the sentence and is a name, so it gets a capital B. Petunia is a name too. The head belongs to Petunia, so Petunia’s needs an apostrophe. A period ends it."
+  }
+ },
+ "miss": {
+  "match": {
+   "merriment": "Merriment is something Jemmy hears when the prince laughs. Look for the meaning about laughter.",
+   "hubbub": "A hubbub is a noise. Look for the meaning about a busy crowd.",
+   "broadside": "The news seller sells broadsides. Look for the meaning about a printed sheet.",
+   "grain-fed": "The brewery rats eat the grain. Look for the meaning about being well fed."
+  }
+ },
+ "flags": {
+  "journal-q1": {
+   "quote": true,
+   "count": 1
+  },
+  "journal-q2": {
+   "quote": false,
+   "count": 1
+  },
+  "journal-q3": {
+   "quote": false,
+   "count": 2
+  }
+ },
+ "scholar": {
+  "journal-q1": "… and tell how Jemmy feels about fetching and carrying.",
+  "journal-q2": "… and tell what Jemmy does right after he hears it.",
+  "journal-q3": "… and tell what the prince says to Jemmy in the dark, just before."
+ },
+ "wordgame": {
+  "type": "sewer",
+  "title": "Out of the Sewer",
+  "sub": "Every right tunnel moves Jemmy and the prince closer to daylight.",
+  "todo": "Read the question. Tap the tunnel with the right answer. A right answer moves Jemmy and the prince closer to daylight.",
+  "win": "Today’s 8 lamps are lit. Come back next lesson to keep going.",
+  "winWeek": "Jemmy and the prince came out into the sunshine. The outlaws ran the wrong way!",
+  "look": "In Chapter 19, Jemmy and the prince hide from the outlaws in the dark sewer. The little lamps are the way out. Each question is a fork with two tunnels. The right tunnel moves the boys one lamp closer to daylight. You pass 8 lamps each day. On Day 4 you reach the river.",
+  "items": [
+   {
+    "title": "Front word parts",
+    "q": "Captain Nips could <b>reheat</b> the potatoes. What does <b>reheat</b> mean?",
+    "opts": [
+     "to not heat",
+     "to heat again"
+    ],
+    "a": 1,
+    "why": "re means again. Reheat means heat again.",
+    "miss": {
+     "0": "Look at the front part of reheat. Which meaning goes with re?"
+    }
+   },
+   {
+    "title": "Front word parts",
+    "q": "The cow lady said <b>unkind</b> things about Prince Brat. What does <b>unkind</b> mean?",
+    "opts": [
+     "not kind",
+     "kind again"
+    ],
+    "a": 0,
+    "why": "un means not. Unkind means not kind.",
+    "miss": {
+     "1": "Again would be re. Which word part is at the front of unkind?"
+    }
+   },
+   {
+    "title": "Sound-alike words",
+    "q": "The boys filled ___ kettle at the pump.",
+    "opts": [
+     "their",
+     "there"
+    ],
+    "a": 0,
+    "why": "their means it belongs to them: their kettle.",
+    "miss": {
+     "1": "there is a place. The kettle belongs to the boys."
+    }
+   },
+   {
+    "title": "Sound-alike words",
+    "q": "The big rats live down ___, by the brewery.",
+    "opts": [
+     "their",
+     "there"
+    ],
+    "a": 1,
+    "why": "there is a place: down there.",
+    "miss": {
+     "0": "their shows that something belongs to someone. Here you need a place."
+    }
+   },
+   {
+    "title": "Sound-alike words",
+    "q": "“___ coming!” Jemmy whispered.",
+    "opts": [
+     "Their",
+     "They’re"
+    ],
+    "a": 1,
+    "why": "They’re means they are: They are coming.",
+    "miss": {
+     "0": "Say they are in the blank. Does it fit? Pick the word with the apostrophe."
+    }
+   },
+   {
+    "title": "Sound-alike words",
+    "q": "Petunia balanced a hat on ___ nose.",
+    "opts": [
+     "its",
+     "it’s"
+    ],
+    "a": 0,
+    "why": "its shows belonging, with no apostrophe: its nose.",
+    "miss": {
+     "1": "it’s means it is. Say it is nose. Does that make sense?"
+    }
+   },
+   {
+    "title": "Sound-alike words",
+    "q": "“___ black as night in here!” said the prince.",
+    "opts": [
+     "Its",
+     "It’s"
+    ],
+    "a": 1,
+    "why": "It’s means it is: It is black as night.",
+    "miss": {
+     "0": "Say it is in the blank. It fits, so you need the apostrophe."
+    }
+   },
+   {
+    "title": "Prepositional phrases",
+    "q": "They sloshed through the dark sewer. Which part is the prepositional phrase?",
+    "opts": [
+     "through the dark sewer",
+     "They sloshed"
+    ],
+    "a": 0,
+    "why": "It starts with the preposition through and ends on the noun sewer.",
+    "miss": {
+     "1": "A prepositional phrase starts with a word like through or under."
+    }
+   }
+  ]
+ },
+ "glossary": [
+  {
+   "w": "whipping boy",
+   "cs": true,
+   "m": "a boy kept in the castle to be punished whenever the prince does something wrong"
+  },
+  {
+   "w": "theme",
+   "m": "the big lesson a story teaches. You can say it in one sentence."
+  },
+  {
+   "w": "prefix",
+   "m": "a word part at the front of a word that changes its meaning, like re in rebuild"
+  },
+  {
+   "w": "homophones",
+   "m": "words that sound the same but mean different things and are spelled differently, like to, two, and too"
+  },
+  {
+   "w": "prepositional phrase",
+   "m": "a group of words that starts with a preposition and ends on a noun, like under the straw"
+  },
+  {
+   "w": "personification",
+   "m": "writing about a thing as if it were a person, like a sea that crawls"
+  },
+  {
+   "w": "conclusion",
+   "m": "the last sentence of a paragraph. It says your big idea in a new way."
+  }
+ ],
+ "sayWords": [
+  "merriment",
+  "hubbub",
+  "broadside",
+  "grain-fed"
+ ],
+ "transcripts": {
+  "welcome": "Welcome back, it’s Opti. The coach made it to the city, and today there’s a fair, with jugglers, hot potatoes, and a dog-and-rat pit. But a news seller is shouting about the whipping boy. As you read, listen for one small word the prince uses.",
+  "guide1": "Word study. You’ll match words with front word parts to their meanings. Then it’s a double spelling day: their, there, and they’re, plus its and it’s.",
+  "guide2": "Before you read: at the fair, the prince carries something for the first time in his life. Then Jemmy runs for the sewers. Watch what the prince does in the dark.",
+  "guide3": "Today you write the first sentence of your comparison. Name both boys, and say how each one started."
+ },
+ "notes": {
+  "wordParts": "These word parts go at the front of a word. re = again (rebuild), un = not (unhappy), pre = before (preview), dis = not (disagree), mis = wrong (misread).",
+  "grammar": "A prepositional phrase starts with a preposition and ends on a noun: through the fog. It can tell where, when, or how.",
+  "spelling": "their = belongs to them, there = a place, they’re = they are. its = belongs to it, it’s = it is. The apostrophe always stands for missing letters.",
+  "wgrd": "Good readers notice small moments that mean a lot, like when a character calls someone a friend.",
+  "vocab": [
+   [
+    "merriment",
+    "happy laughing and fun"
+   ],
+   [
+    "hubbub",
+    "a loud, busy noise from a crowd"
+   ],
+   [
+    "broadside",
+    "a big printed news sheet sold in the street"
+   ],
+   [
+    "grain-fed",
+    "fed well on grain"
+   ]
+  ]
+ },
+ "plate": {
+  "src": "art/wb/wb-fair.jpg",
+  "alt": "An old black-and-white print of a crowded street fair with flags, signs, a tightrope walker and a stage falling down",
+  "credit": "Southwark Fair · William Hogarth, 1733–1734 · National Gallery of Art · CC0",
+  "look": "A print by William Hogarth of a real fair in London, made almost 300 years ago. Look for the tightrope walker, the drummer, and the stage that is falling down! In Chapter 18, Jemmy and the prince walk through a busy fair like this one.",
+  "lookBtn": "Tap to learn about this picture of an old fair"
+ },
+ "teach": {
+  "dropTurnNotes": true,
+  "mods": [
+   {
+    "id": "wgrd",
+    "find": "What Good Readers",
+    "fold": [
+     ":scope > p:not(.g3-do)",
+     ":scope > .key-concept",
+     ":scope > .socratic-box"
+    ],
+    "todo": "Listen to Opti. Then tap the lens you will use today.",
+    "script": "[warmly] Here's today's reading tip. Sometimes one small word means a lot. Today, listen for the word friend. Who says it, and how does the other boy answer? Then tap one of the two lenses below to use while you read. You don't need to write anything."
+   },
+   {
+    "id": "dol",
+    "find": "Daily Oral",
+    "fold": [],
+    "todo": "Tap the yellow parts. Then pick Sentence A or B and type it the right way.",
+    "script": "Let's fix a sentence. The correct one is from Chapter 18: The prince drained the mug and shuffled away. One person does two things, drained and shuffled, joined by and. No comma needed. Now look at the sentence to fix. Something belongs to someone there, so watch for an apostrophe. Tap the yellow parts. Then pick Sentence A or Sentence B, and type it the right way."
+   },
+   {
+    "id": "poem",
+    "find": "Poetry",
+    "fold": [
+     ":scope > .callout",
+     ":scope > .socratic-box"
+    ],
+    "todo": "Read the poem out loud. Then find two things in the poem that act like people.",
+    "script": "Here's a short poem about an eagle on a high rock. Read it out loud. Now look closer. Does an eagle really have hands? Can the sea really crawl? The poet writes about them as if they were people. That's called personification. Find two things in the poem that act like people."
+   },
+   {
+    "id": "morph",
+    "find": "Morphology",
+    "fold": [
+     ":scope > .callout:not(:has(+ .match-game))",
+     ":scope > .key-concept"
+    ],
+    "todo": "Tap a word, then tap what it means. Match all four words.",
+    "script": "Can you spot the front part in replay? Re. Cover it, and play is left. So replay means play again. Do that with every word on the left. Find the front part, then look at what is left. Read the Remember box. Then tap a word, and tap what it means. Match all four words.",
+    "video": "g3ela-21-2-teach-morph"
+   },
+   {
+    "id": "vocab",
+    "find": "Vocabulary",
+    "fold": [
+     ":scope > .g3-model-h",
+     ":scope > .decode-steps"
+    ],
+    "todo": "Listen to each card. Guess the meaning, then flip the card. Then play the matching game.",
+    "script": "At the fair, Jemmy hears something brand new. The prince laughs! The book calls that sound merriment. Merry, plus ment. Happy laughing and fun. Listen to each card, guess the meaning, then flip it. Then match all four.",
+    "video": "g3ela-21-2-teach-vocab"
+   },
+   {
+    "id": "spell2",
+    "find": "Spelling Bonus",
+    "fold": [],
+    "todo": "Read the two sentences. Tap Now check your thinking. Sort the words. Then pick the right spelling in each sentence.",
+    "script": "Here's a riddle. Which word has the word here hiding inside it? There! And there is a place, just like here. Their means it belongs to them, like their cart. They're is two words squished together: they are. The apostrophe stands in for the missing letter. Its and it's work the same way. Read the two sentences, and tap Now check your thinking. Then sort the words, and pick the right spelling in each sentence.",
+    "video": "g3ela-21-2-teach-spell2"
+   },
+   {
+    "id": "spell",
+    "find": "^\\s*\\S*\\s*Spelling: Homophones",
+    "fold": [],
+    "foldText": [
+     "^\\s*👂",
+     "^\\s*This week:",
+     "The Rule:",
+     "^\\s*Sort and explain"
+    ],
+    "todo": "Read each whole sentence. Tap the spelling that fits.",
+    "script": "Watch me pick one. Blank coats were torn. Try they are. They are coats were torn? No! Is it a place? No. The coats belong to the boys. So it's their, t h e i r. Read each whole sentence first. Then tap the spelling that fits.",
+    "video": "g3ela-21-2-teach-spell"
+   },
+   {
+    "id": "spotlight",
+    "find": "Character Spotlight",
+    "fold": [
+     ":scope > .socratic-box"
+    ],
+    "script": "Think about this before you read. At the fair, the prince gives himself a new name. And in the dark sewer, the boys end up holding hands. Not long ago, they couldn't stand each other. What changed?"
+   },
+   {
+    "id": "read",
+    "find": "^\\s*\\S*\\s*Read:",
+    "fold": [],
+    "todo": "Read the two questions. Then read Ch. 18–19 in your book.",
+    "script": "Time to read Chapters 18 and 19. First, read the two Pause and Think questions below. At the fair, the prince carries something for the first time in his life. Then a news seller shouts about the whipping boy, and Jemmy runs for the sewers. Watch who follows him. After you read, watch my video in the Read Like a Writer box before you try it."
+   },
+   {
+    "id": "rwm",
+    "sel": ".rwm-box",
+    "after": ":scope > .rwm-header",
+    "label": "Opti shows you how",
+    "fold": [],
+    "script": "[warmly] Read Like a Writer has three parts. Let me show you with a different sentence, from Chapter 18. The news seller appeared, his tongue wagging like a bell clapper. Part one, read like a reader. What is happening? A man is selling news, and he shouts and shouts. Part two, read like a writer. The author says his tongue is like a bell clapper, the part that swings inside a bell and bangs. Now we can hear how loud he is! Part three, mimic. Here's mine: The puppy's tail thumped like a drum. Now it's your turn with Jemmy's sentence. Write one sentence in each box.",
+    "video": "g3ela-21-2-teach-rwm"
+   },
+   {
+    "id": "chq",
+    "find": "Chapter Thinking",
+    "fold": [],
+    "todo": "Pick Explorer or Scholar. Answer the three questions in full sentences.",
+    "script": "Now answer in full sentences, with details from the book. One, what does the prince say when he carries the kettle, and what does it show? Two, what does the news seller shout, and how does Jemmy feel? Three, what happens between the boys in the dark sewer? For a challenge, pick Scholar, and add one more detail to each answer."
+   },
+   {
+    "id": "write",
+    "find": "Writer.s Workshop",
+    "fold": [
+     ":scope > .callout"
+    ],
+    "foldText": [
+     "watch how",
+     "today.s tool"
+    ],
+    "todo": "Write the opening sentence of your comparison. Name both boys.",
+    "script": "A comparison needs a strong first sentence. Clara's first try was: Jemmy and Prince Brat both changed. True, but short! Her new one tells how each boy started, and says they both changed. Now write your opening sentence. Name both boys, and say how each one started."
+   }
+  ],
+  "cards": {
+   "merriment": "Merriment. The sound of merriment lingered in his head. Merriment means happy laughing and fun.",
+   "hubbub": "Hubbub. Through the hubbub came a great squeaky voice. A hubbub is a loud, busy noise from a crowd.",
+   "broadside": "Broadside. The news seller had a bundle of broadsides under his arm. A broadside is a big printed news sheet.",
+   "grain-fed": "Grain-fed. Grain-fed rats were swarming over the two of them. Grain-fed means fed well on grain."
+  }
+ },
+ "virtue": {
+  "name": "courage",
+  "title": "Courage Watch: Did they show courage?",
+  "items": [
+   {
+    "t": "The prince is terrified of the dark, but he jumps into the black sewer after Jemmy.",
+    "ok": true,
+    "why": "He is scared, and he does it anyway."
+   },
+   {
+    "t": "Cutwater cries, “Mercy on us!” when he finds out they whipped the real prince.",
+    "ok": false,
+    "why": "He is afraid of what the king will do to him."
+   },
+   {
+    "t": "With the outlaws close by, the prince grabs the birdcage and throws it toward the brewery.",
+    "ok": true,
+    "why": "He acts fast to send the outlaws the wrong way."
+   }
+  ]
+ }
+}
