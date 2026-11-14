@@ -1,0 +1,164 @@
+{
+ "id": "g3-ela-wk24-checkin",
+ "title": "Week 24 Check-In · Medieval Nonfiction",
+ "description": "This week you read four true articles about the Middle Ages: how castles were built, knights, medieval towns, and what stories get right and wrong. You found main ideas and details, the root script/scribe (write), and the endings -ful, -less, -ness and -ly. Show what you know!",
+ "quarter": 3,
+ "chapters": "Articles 24.1–24.4",
+ "questions": [
+  {
+   "n": 1,
+   "section": "Grammar",
+   "type": "multiple_choice_question",
+   "points": 1,
+   "text": "Read this: “Castle builders dug deep foundations. They used stone, not wood. Stone walls could last for hundreds of years.” What is the main idea?",
+   "options": [
+    "Building with stone made castles strong and lasting.",
+    "Castles were built near rivers.",
+    "Workers dug deep holes first."
+   ],
+   "answer": 0,
+   "from": "24.1 sort, 24.2 find the main idea",
+   "status": "kept"
+  },
+  {
+   "n": 2,
+   "section": "Grammar",
+   "type": "essay_question",
+   "points": 1,
+   "text": "Read these details: “Workers carried stone in baskets. Teams of horses pulled heavy carts. Cranes made of wood lifted the largest blocks.” Write a main idea sentence for this paragraph.",
+   "from": "24.3 name the topic, then write a main idea sentence",
+   "status": "kept"
+  },
+  {
+   "n": 3,
+   "section": "Grammar",
+   "type": "essay_question",
+   "points": 1,
+   "text": "Write one main idea sentence and one detail sentence that supports it, about any topic you know well.",
+   "from": "24.1–24.4 Grammar; Writer’s Workshop paragraph",
+   "status": "kept (wording made plain)"
+  },
+  {
+   "n": 4,
+   "section": "Morphology",
+   "type": "essay_question",
+   "points": 1,
+   "text": "The root script or scribe means write. Break apart the word manuscript. What does it mean?",
+   "from": "24.1 crack the word, 24.2 match",
+   "status": "new (old Q4 tested the prefix sub-, never taught)"
+  },
+  {
+   "n": 5,
+   "section": "Morphology",
+   "type": "multiple_choice_question",
+   "points": 1,
+   "text": "Which word means “to write about something so others can see it”?",
+   "options": [
+    "describe",
+    "manuscript",
+    "inscription"
+   ],
+   "answer": 0,
+   "from": "24.2 match, 24.3 build the word",
+   "status": "new (old Q5 tested sub-)"
+  },
+  {
+   "n": 6,
+   "section": "Morphology",
+   "type": "essay_question",
+   "points": 1,
+   "text": "Choose one: script, inscription, or prescription. Write a sentence that shows what the word means.",
+   "from": "24.1 fill-in, 24.2 match, 24.4 dice",
+   "status": "new (old Q6 tested sub-)"
+  },
+  {
+   "n": 7,
+   "section": "Spelling",
+   "type": "multiple_choice_question",
+   "points": 1,
+   "text": "Which word means “without fear”?",
+   "options": [
+    "fearful",
+    "fearless",
+    "fear"
+   ],
+   "answer": 1,
+   "from": "24.1 Group A and sort, 24.2 Suffix Detective",
+   "status": "new (old Q7 tested VCCV, week 23)"
+  },
+  {
+   "n": 8,
+   "section": "Spelling",
+   "type": "essay_question",
+   "points": 1,
+   "text": "Add -ness or -ly so each word fits, and write the two sentences: “The knight was known for his kind___.” “The page walked quiet___ past the guards.”",
+   "from": "24.1 Group B, 24.3 break it apart, 24.4 dice",
+   "status": "new (old Q8 tested VCCV)"
+  },
+  {
+   "n": 9,
+   "section": "Spelling",
+   "type": "multiple_choice_question",
+   "points": 1,
+   "text": "Which ending turns a describing word into a thing you can talk about, like kindness?",
+   "options": [
+    "-ful",
+    "-ness",
+    "-ly"
+   ],
+   "answer": 1,
+   "from": "24.1 See the Rule, 24.2 Suffix Detective",
+   "status": "new (old Q9 tested a VCCV spelling)"
+  },
+  {
+   "n": 10,
+   "section": "Reading",
+   "type": "essay_question",
+   "points": 1,
+   "text": "What is the central idea of this passage? Use one detail from the passage to support your answer.",
+   "from": "24.1 Article Thinking Q1",
+   "status": "fixed (passage is now the 24.1 article’s own words)"
+  },
+  {
+   "n": 11,
+   "section": "Reading",
+   "type": "essay_question",
+   "points": 1,
+   "text": "The passage says a large castle could take many years to finish. Why do you think it took so long? Use details from the passage.",
+   "from": "24.1 Pause & Think 2, cause and effect",
+   "status": "fixed (old wording quoted words the passage invented)"
+  },
+  {
+   "n": 12,
+   "section": "Reading",
+   "type": "essay_question",
+   "points": 1,
+   "text": "Name one part of a castle’s design and explain how it helped keep enemies out. Use the word because.",
+   "from": "24.1 What Good Readers Do (cause and effect), Article Thinking Q2",
+   "status": "replaced (old Q12 asked about knights riding on top of the walls, which the article never says)"
+  },
+  {
+   "n": 13,
+   "section": "Writing",
+   "type": "essay_question",
+   "points": 1,
+   "text": "Model topic sentence: “Becoming a knight took years of training.” Six words set up a whole paragraph. Write your own short topic sentence about something that takes a long time to learn.",
+   "from": "24.2 Read Like a Writer; Writer’s Workshop topic sentence",
+   "status": "fixed (old model sentence was invented)"
+  },
+  {
+   "n": 14,
+   "section": "Writing",
+   "type": "essay_question",
+   "points": 1,
+   "text": "Imagine you are a worker helping build a castle in the Middle Ages. Write 1–2 sentences about what your job might be and what it would feel like.",
+   "from": "24.1 article + Job Spotlight: The Stonemason",
+   "status": "kept"
+  }
+ ],
+ "passage": {
+  "before": 10,
+  "title": "Reading passage (the 24.1 article, “How Castles Were Built”)",
+  "text": "Building a medieval castle was one of the biggest construction projects of its time. A large stone castle could take many years to finish, and some took more than thirty. Hundreds of workers — stonemasons, carpenters, blacksmiths, and laborers — worked on the site every day.\nCastles were built for defense. The walls were thick — often ten feet or more — to withstand attack. A deep ditch called a moat was often dug around the outside and filled with water. A drawbridge could be raised to block the entrance. Every part of the castle’s design was meant to make it as difficult as possible for an enemy to get inside."
+ }
+}
