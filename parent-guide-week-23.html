@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Week 23 Family Guide · Medieval Nonfiction · 3rd Grade ELA</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Nunito:wght@400;600;700;800;900&display=swap');
+:root{
+  --navy:#0E1C42; --ink:#3A4A6B; --muted:#5E6C8C; --line:#E2E8F4;
+  --sky:#55C8E8; --sky-bg:#EAF8FD; --gold:#C7922C; --gold-bg:#FFF3DC;
+  --green:#34B76F; --green-bg:#E3F8ED; --plum:#8B6FC0; --plum-bg:#F1ECFA;
+  --paper:#FAFBFF; --cream:#FFF8F0;
+}
+*{box-sizing:border-box;}
+html,body{margin:0;padding:0;}
+body{background:var(--paper);color:var(--ink);font-family:"Nunito",sans-serif;font-size:18px;line-height:1.6;}
+.wrap{max-width:880px;margin:0 auto;padding:24px 16px 48px;}
+h1,h2,h3{font-family:"Lora",Georgia,serif;color:var(--navy);margin:0;}
+p{margin:0 0 10px;}
+strong{color:var(--navy);}
+
+/* header */
+.hero{background:var(--navy);color:#fff;border-radius:18px;overflow:hidden;display:grid;grid-template-columns:1.25fr 1fr;}
+.hero-text{padding:28px 28px 26px;}
+.brand{display:flex;align-items:center;gap:10px;font-size:15px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:#BFD0EE;margin-bottom:14px;}
+.brand img{width:38px;height:38px;border-radius:50%;background:#fff;}
+.hero h1{color:#fff;font-size:34px;line-height:1.2;margin-bottom:6px;}
+.hero .sub{font-size:19px;color:#DCE6F7;margin-bottom:16px;}
+.chips{display:flex;flex-wrap:wrap;gap:8px;}
+.chip{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.25);border-radius:999px;padding:5px 13px;font-size:16px;font-weight:700;color:#fff;}
+.hero-art{background:#F5E6C8 center/cover no-repeat;min-height:240px;}
+
+/* cards */
+.card{background:#fff;border:1px solid var(--line);border-radius:16px;padding:22px 24px;margin-top:18px;}
+.card-head{display:flex;align-items:center;gap:12px;margin-bottom:12px;}
+.card-head .ico{font-size:26px;line-height:1;}
+.card-head h2{font-size:24px;}
+.card-head .tag{margin-left:auto;font-size:14px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);}
+
+.glance{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+.glance .box{border-radius:12px;padding:14px 16px;}
+.box-label{font-size:14px;font-weight:900;letter-spacing:.08em;text-transform:uppercase;margin-bottom:4px;}
+.b-sky{background:var(--sky-bg);} .b-sky .box-label{color:#1F8CB0;}
+.b-gold{background:var(--gold-bg);} .b-gold .box-label{color:#9A6C14;}
+.b-green{background:var(--green-bg);} .b-green .box-label{color:#1F8452;}
+.b-plum{background:var(--plum-bg);} .b-plum .box-label{color:#6A4FA3;}
+.quote{font-family:"Lora",Georgia,serif;font-style:italic;font-size:20px;color:var(--navy);border-left:4px solid var(--gold);padding:4px 0 4px 16px;margin:16px 0 0;}
+.quote small{display:block;font-family:"Nunito",sans-serif;font-style:normal;font-size:15px;color:var(--muted);margin-top:4px;}
+
+/* day table */
+.days{width:100%;border-collapse:collapse;}
+.days th{font-size:14px;font-weight:900;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);text-align:left;padding:8px 10px;border-bottom:2px solid var(--line);}
+.days td{padding:12px 10px;border-bottom:1px solid var(--line);vertical-align:top;}
+.days tr:last-child td{border-bottom:none;}
+.day-n{font-family:"Lora",Georgia,serif;font-weight:700;font-size:20px;color:var(--navy);white-space:nowrap;}
+.day-n span{display:block;font-family:"Nunito",sans-serif;font-size:15px;font-weight:700;color:var(--muted);}
+.ch{font-weight:800;color:var(--navy);}
+.small{font-size:16px;color:var(--muted);}
+.pill{display:inline-block;font-size:14px;font-weight:800;border-radius:999px;padding:2px 10px;margin:4px 4px 0 0;}
+.p-poem{background:var(--plum-bg);color:#6A4FA3;}
+.p-guide{background:var(--cream);color:#9A6C14;border:1px solid #F5E6C8;}
+.extra-row td{background:var(--paper);}
+
+/* words */
+.words{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;}
+.word{border:1px solid var(--line);border-radius:12px;padding:12px 16px;}
+.word b{font-family:"Lora",Georgia,serif;font-size:21px;color:var(--navy);display:block;}
+.word span{font-size:17px;}
+.skills{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:14px;}
+.skills .box{border-radius:12px;padding:14px 16px;font-size:17px;}
+.eg{display:block;margin-top:6px;font-weight:700;color:var(--navy);}
+
+/* poem */
+.poem-wrap{display:grid;grid-template-columns:1fr 1fr;gap:18px;align-items:center;}
+.poem{font-family:"Lora",Georgia,serif;font-size:22px;line-height:1.9;color:var(--navy);background:var(--plum-bg);border-radius:12px;padding:16px 22px;}
+.poem small{display:block;font-family:"Nunito",sans-serif;font-size:15px;color:var(--muted);line-height:1.4;margin-top:6px;}
+
+/* ask */
+.ask{list-style:none;margin:0;padding:0;counter-reset:q;}
+.ask li{counter-increment:q;position:relative;padding:12px 0 12px 50px;border-bottom:1px dashed var(--line);}
+.ask li:last-child{border-bottom:none;}
+.ask li::before{content:counter(q);position:absolute;left:0;top:11px;width:34px;height:34px;border-radius:50%;background:var(--gold-bg);color:#9A6C14;font-weight:900;display:flex;align-items:center;justify-content:center;font-size:17px;}
+.ask .q{font-weight:800;color:var(--navy);display:block;}
+.ask .listen{font-size:16px;color:var(--muted);}
+
+/* checklist */
+.check{list-style:none;margin:0;padding:0;}
+.check li{padding:7px 0 7px 34px;position:relative;}
+.check li::before{content:"✓";position:absolute;left:4px;top:6px;color:var(--green);font-weight:900;font-size:19px;}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:18px;}
+
+.next{background:var(--navy);color:#DCE6F7;border:none;}
+.next h2{color:#fff;}
+.next strong{color:#fff;}
+.foot{text-align:center;font-size:15px;color:var(--muted);margin-top:26px;}
+
+.print-btn{display:inline-block;margin-top:16px;background:var(--gold);color:#fff;border:none;border-radius:999px;padding:9px 18px;font-family:"Nunito",sans-serif;font-weight:800;font-size:16px;cursor:pointer;}
+
+@media (max-width:720px){
+  .hero{grid-template-columns:1fr;}
+  .hero-art{min-height:180px;order:-1;}
+  .glance,.words,.skills,.poem-wrap,.two{grid-template-columns:1fr;}
+  .days thead{display:none;}
+  .days tr{display:block;border-bottom:1px solid var(--line);padding:8px 0;}
+  .days td{display:block;border:none;padding:4px 0;}
+}
+@media print{
+  body{background:#fff;font-size:15px;}
+  .wrap{padding:0;}
+  .print-btn{display:none;}
+  .card{break-inside:avoid;margin-top:12px;padding:14px 16px;}
+  .hero,.next{-webkit-print-color-adjust:exact;print-color-adjust:exact;}
+}
+
+/* lesson mechanics */
+.howto{background:var(--cream);border:1px solid #F5E6C8;border-radius:16px;padding:18px 22px;margin-top:18px;}
+.howto h2{font-size:21px;margin-bottom:10px;}
+.howto ul{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:8px 22px;}
+.howto li{position:relative;padding-left:32px;font-size:17px;line-height:1.5;}
+.howto li span{position:absolute;left:0;top:0;font-size:20px;}
+@media (max-width:760px){.howto ul{grid-template-columns:1fr;}}
+@media print{.howto{break-inside:avoid;}}
+.b-rose{background:#FDEEEE;border-radius:12px;padding:14px 16px;} .b-rose .box-label{color:#A8434A;}
+
+.p-museum{background:var(--sky-bg);color:#1F6F8C;}
+.p-extra{background:var(--green-bg);color:#1F8452;}
+.extras{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
+.extras .box{border-radius:12px;padding:14px 16px;font-size:17px;}
+.essay{display:flex;flex-wrap:wrap;gap:6px;margin:4px 0 12px;}
+.essay span{font-size:15px;font-weight:800;border-radius:999px;padding:4px 12px;background:var(--paper);border:1px solid var(--line);color:var(--muted);}
+.essay span.now{background:var(--gold-bg);border-color:#F5E6C8;color:#9A6C14;}
+.essay span.done{background:var(--green-bg);border-color:#CDEFDB;color:#1F8452;}
+@media (max-width:720px){.extras{grid-template-columns:1fr;}}
+.unit-link{margin:12px 0 0;font-size:16px;}.unit-link a{color:#BFD0EE;font-weight:800;}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="hero">
+<div class="hero-text">
+<div class="brand"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy Online">Family Guide · 3rd Grade ELA</div>
+<h1>Week 23: Illuminate the Page</h1>
+<div class="sub">Medieval Nonfiction: four true articles about life in the Middle Ages</div>
+<div class="chips">
+<span class="chip">4 lessons</span>
+<span class="chip">4 short articles</span>
+<span class="chip">No novel this week</span>
+<span class="chip">Check-In at week’s end</span>
+</div>
+<button class="print-btn" onclick="window.print()">🖨️ Print this guide</button>
+</div>
+<div class="hero-art" style="background-image:url('https://optimaondemand.github.io/optima-3rd-ela/assets/art/med/med-sept.jpg');background-position:center 30%;" role="img" aria-label="An old painting of a tall white castle on a hill above a grape harvest"></div>
+</header>
+
+<section class="howto">
+<h2>🧭 How the Lesson Pages Work</h2>
+<ul>
+<li><span>▶️</span><strong>Start here.</strong> The gold <strong>Start here</strong> box at the top of each page holds a short video from Opti that shows how the page works.</li>
+<li><span>🗂️</span><strong>Four tabs, in order:</strong> Warm-Up → Word Study → Reading → Assignment. Each tab shows one step at a time. Tap <strong>👆 Next</strong> to go on, or <strong>Back</strong> to look again.</li>
+<li><span>🦉</span><strong>Opti the owl teaches each activity.</strong> Before each one, Opti explains what it is and what to do. On Word Study, Opti teaches in a short video. Every activity also has a <strong>What to do</strong> line.</li>
+<li><span>👆</span><strong>Anything with a 👆 can be tapped.</strong> Words with a dotted line show what they mean when tapped. The 🔊 buttons read words out loud.</li>
+<li><span>💾</span><strong>Answers save as you type</strong>, but only in that browser on that computer. Switching computers or clearing the browser loses them.</li>
+<li><span>📋</span><strong>Turning in work:</strong> at the end of the Assignment tab, 1. tap <strong>Copy my work</strong>, 2. go back to this lesson’s assignment in Canvas, 3. paste the work in the box, then tap Submit. A lesson isn’t turned in until it’s submitted there.</li>
+<li><span>🗺️</span><strong>The Reading Road</strong> on the Reading tab is a map of the whole year. Opti stands on this week.</li>
+</ul>
+</section>
+
+<section class="card">
+<div class="card-head"><span class="ico">🧭</span><h2>This Week at a Glance</h2></div>
+<p>Your student just finished <em>The Whipping Boy</em>, a made-up story set long ago. This week and next, your student reads true articles about real life in the Middle Ages. Each lesson has one short article, right on the page, so there is no book to have nearby. Day 1 visits a castle. Day 2 is about how children learned a job by working. Day 3 explains the strict rules of a royal court. Day 4 compares what rich and poor people ate.</p>
+<div class="glance">
+<div class="box b-sky"><div class="box-label">Reading skill</div><strong>Central idea.</strong> The central idea is the most important point an author makes. A detail is one fact that helps prove it.</div>
+<div class="box b-green"><div class="box-label">Big idea</div><strong>Real life long ago.</strong> What was it really like to live in a castle, learn a trade, or sit at a king’s table?</div>
+</div>
+<p class="quote">“A medieval castle was not just a home — it was a fortress, a workplace, and a whole community.”<small>Life in a Medieval Castle, Day 1</small></p>
+</section>
+
+<section class="card">
+<div class="card-head"><span class="ico">📅</span><h2>Day by Day</h2></div>
+<table class="days">
+<thead><tr><th>Lesson</th><th>Reading</th><th>Big question</th></tr></thead>
+<tbody>
+<tr>
+<td class="day-n">23.1<span>Day 1</span></td>
+<td><span class="ch">Life in a Medieval Castle</span><br>Your student finds the central idea of the article and two details that prove it, then picks a medieval topic to write about.<br><span class="pill p-guide">Guide: Opti</span><span class="pill p-extra">Sentence rewrite</span></td>
+<td>You just read about Prince Brat living in a castle. What do you think it was actually like to live in one?</td>
+</tr>
+<tr>
+<td class="day-n">23.2<span>Day 2</span></td>
+<td><span class="ch">Servants and Apprentices</span><br>Your student finds the central idea of each paragraph and compares how boys and girls learned to work.<br><span class="pill p-guide">Guide: Opti</span><span class="pill p-poem">Poetry</span><span class="pill p-extra">Read Like a Writer video</span></td>
+<td>If you lived in medieval times, what job do you think you would have? What would you learn, and how?</td>
+</tr>
+<tr>
+<td class="day-n">23.3<span>Day 3</span></td>
+<td><span class="ch">Royal Courts: Power and Protocol</span><br>Your student explains the central idea and why the author wrote the article.<br><span class="pill p-guide">Guide: Opti</span><span class="pill p-extra">Read Like a Writer</span></td>
+<td>In The Whipping Boy, the prince can do whatever he wants without punishment. Today’s article might explain why. What do you predict?</td>
+</tr>
+<tr>
+<td class="day-n">23.4<span>Day 4</span></td>
+<td><span class="ch">What Did Medieval People Eat?</span><br>Your student compares what the rich and the poor ate, using details from the article.<br><span class="pill p-guide">Guide: Opti</span><span class="pill p-poem">Poetry</span><span class="pill p-extra">Read Like a Writer</span></td>
+<td>In The Whipping Boy, the prince runs away with a basket of food from the king’s table. What do you remember was inside?</td>
+</tr>
+<tr class="extra-row">
+<td class="day-n">📋<span>Check-In</span></td>
+<td colspan="2">A 14-point check on the week, in Canvas: capital letters, the word part trans, splitting VCCV words, the Day 1 castle article, and a short writing response.</td>
+</tr>
+</tbody>
+</table>
+</section>
+
+<section class="card">
+<div class="card-head"><span class="ico">🔤</span><h2>Words to Know</h2><span class="tag">Use them at home!</span></div>
+<div class="words">
+<div class="word"><b>fortress</b><span>a large, strong building built to resist attack</span></div>
+<div class="word"><b>keep</b><span>the strongest, innermost tower of a castle</span></div>
+<div class="word"><b>servant</b><span>a person who works in someone else’s household</span></div>
+<div class="word"><b>page</b><span>a young boy in training at a noble household, learning to become a knight</span></div>
+<div class="word"><b>apprentice</b><span>a person learning a trade by working under an expert</span></div>
+<div class="word"><b>craftsman</b><span>a skilled worker who makes things by hand</span></div>
+<div class="word"><b>pottage</b><span>a thick soup of vegetables and grains</span></div>
+<div class="word"><b>embroider</b><span>to decorate cloth with needle and thread</span></div>
+<div class="word"><b>protocol</b><span>official rules for how to behave in formal situations</span></div>
+<div class="word"><b>rank</b><span>a person’s position or level of importance</span></div>
+<div class="word"><b>noble</b><span>a person of high birth, below a king or queen</span></div>
+<div class="word"><b>courteous</b><span>polite, respectful and well-mannered</span></div>
+<div class="word"><b>feast</b><span>a large, fancy meal for a celebration</span></div>
+<div class="word"><b>coarse</b><span>rough in texture</span></div>
+<div class="word"><b>pewter</b><span>a dull grey metal used for plates and cups</span></div>
+</div>
+<div class="skills">
+<div class="box b-sky"><div class="box-label">Word parts</div>The word part <strong>trans</strong> means <strong>across</strong>. Careful: some words only start with t-r-a-n, like tranquil (calm).<span class="eg">transport · transform · translate · transfer</span></div>
+<div class="box b-gold"><div class="box-label">Spelling</div><strong>VCCV</strong> means vowel, consonant, consonant, vowel. Split the word between the two consonants.<span class="eg">bas · ket · tun · nel · nap · kin</span></div>
+<div class="box b-green"><div class="box-label">Grammar</div>Names of people, places and titles get <strong>capital letters</strong>. Small words like the, of and in stay small inside a name or title, unless they come first.<span class="eg">Queen Eleanor lived near the Tower of London.</span></div>
+</div>
+</section>
+
+<section class="card">
+<div class="card-head"><span class="ico">✨</span><h2>New in the Lessons</h2></div>
+<div class="extras">
+<div class="box b-plum"><div class="box-label">🖌️ Illuminate the Page</div>This week’s word game. Long ago, books were written and painted by hand. Each right answer paints one part of a medieval book page: the big gold capital letter on Day 1, the border on Day 2, a little castle picture on Day 3, and the lines of writing on Day 4.</div>
+<div class="box b-gold"><div class="box-label">🎬 Opti’s videos</div>Every Word Study activity, all four days, starts with a short video where Opti shows how it works. On Day 2, Opti also shows how to do Read Like a Writer with a different sentence from the article.</div>
+<div class="box b-sky"><div class="box-label">⭐ Job Spotlight</div>Each day opens the Reading tab with a real medieval job: a page, an apprentice, a herald, and a castle cook.</div>
+<div class="box b-green"><div class="box-label">🏮 Diligence Watch</div>After reading, your student decides if three facts from the article show someone working hard: Yes or Not yet. Diligence means working hard and carefully.</div>
+</div>
+<p class="small" style="margin-top:12px;">Each day opens with a real painting from the Middle Ages: a French castle above a grape harvest, a baker at his oven in Nuremberg, a king’s feast in Paris in 1378, and an English lord at dinner. Your student looks first, then taps to learn about it.</p>
+</section>
+
+<section class="card">
+<div class="card-head"><span class="ico">✍️</span><h2>Your Student’s Writing</h2><span class="tag">Writer’s Workshop</span></div>
+<div class="essay"><span class="now">Wk 23 · Choose &amp; take notes</span><span>Wk 24 · Draft, revise &amp; publish</span></div>
+<p>This week your student starts an informational paragraph about one part of medieval life. Day 1: <strong>choose a topic</strong> that is not too big. Day 2: write a <strong>research question</strong> and take notes from <strong>two articles</strong>. Day 3: <strong>plan the paragraph</strong> (topic sentence, two details, closing). Day 4: <strong>write the topic sentence</strong> and at least one detail. Week 24 finishes it.</p>
+<p class="small">An example writer named Clara shows each step first.</p>
+</section>
+
+<section class="card">
+<div class="card-head"><span class="ico">💬</span><h2>Ask at Home</h2></div>
+<ol class="ask">
+<li><span class="q">What was the central idea of today’s article? What is one detail that proves it?</span><span class="listen">Listen for: one big point, not just a fact, and a fact that backs it up.</span></li>
+<li><span class="q">How did children learn a job in the Middle Ages?</span><span class="listen">Listen for: by working, often as an apprentice to a master.</span></li>
+<li><span class="q">What does trans mean? Can you name a word with it?</span><span class="listen">Listen for: across, and a word like transport or translate.</span></li>
+<li><span class="q">What topic are you writing about? What is your research question?</span><span class="listen">Listen for: one small part of medieval life, and a question that starts with What, How or Why.</span></li>
+</ol>
+</section>
+
+<div class="two">
+<section class="card">
+<div class="card-head"><span class="ico">📬</span><h2>What Gets Turned In</h2></div>
+<ul class="check">
+<li>Each lesson’s Assignment tab: the article questions and the day’s writing step, copied and pasted into Canvas</li>
+<li>The Week 23 Check-In in Canvas</li>
+</ul>
+</section>
+<section class="card">
+<div class="card-head"><span class="ico">🏡</span><h2>Try at Home</h2></div>
+<ul class="check">
+<li>Make up silly hyperbole together: “I’m so hungry I could eat a castle!”</li>
+<li>Look at a book cover or street sign and find the words with capital letters</li>
+<li>Talk about a job your family knows. How did someone learn it?</li>
+</ul>
+</section>
+</div>
+
+<section class="card">
+<div class="card-head"><span class="ico">🎒</span><h2>Have on Hand</h2></div>
+<ul class="check">
+<li>Nothing extra: all four articles are on the lesson pages</li>
+</ul>
+</section>
+
+<section class="card next">
+<div class="card-head"><span class="ico">⏭️</span><h2>Coming Up in Week 24</h2></div>
+<p><strong>More medieval nonfiction.</strong> How castles were built, knights, busy medieval towns, and the Middle Ages in stories. Word study: the root script/scribe (write). Your student finishes the informational paragraph.</p>
+</section>
+
+<p class="foot">Optima Academy Online · 3rd Grade ELA · Week 23 Family Guide</p>
+</div>
+</body>
+</html>
