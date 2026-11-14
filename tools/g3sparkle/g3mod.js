@@ -5,7 +5,7 @@
      DATA.glossary  = [ {w, m, key} ]      dotted words, 🔊 on key words
      DATA.sayWords  = [ 'word', … ]          🔊 on the vocab cards (says just the word)
      DATA.cards     = [ {id, kind, tab, after, title, sub, look, todo, …} ]
-     DATA.wordgame  = {type:'tower'|'wagon'|'chase'|'sewer'|'castle', …}  Up the North Tower / Fill the Wagon / The Chase / Out of the Sewer / Build the Castle
+     DATA.wordgame  = {type:'tower'|'wagon'|'chase'|'sewer'|'castle'|'illuminate', …}  Up the North Tower / Fill the Wagon / The Chase / Out of the Sewer / Build the Castle / Illuminate the Page
    The rules for 8-year-olds: every module opens with a "What to do:"
    line Opti reads, shows one step at a time, and every picture opens
    on notice/wonder before it says what it is.
@@ -808,6 +808,111 @@ WORDGAME.castle = function (cfg) {
   if (anchor) anchor.parentNode.insertBefore(card, anchor); else panel.appendChild(card);
 };
 
+/* ── Illuminate the Page: one round a day (week 23, medieval nonfiction) ──
+   DATA.wordgame = { type:'illuminate', title, sub, look, todo, win, winWeek,
+     items:[ {title, q, opts:[…2 or 3], a, why, miss:{n:'…'}} ] }
+   A medieval book page lies on a wooden desk, drawn in pencil. Each right
+   answer paints one part: day 1 the big gold capital, day 2 the border,
+   day 3 the little castle picture, day 4 the lines of writing. Day d starts
+   with days 1…d-1 painted, so the week finishes one page. Practice only;
+   never fills a graded box. */
+function illumPieces() {
+  function R(x, y, w, h, f) { return { t: 'rect', a: 'x="' + x + '" y="' + y + '" width="' + w + '" height="' + h + '"', f: f }; }
+  function P(d, f) { return { t: 'path', a: 'd="' + d + '"', f: f }; }
+  function G(pts, f) { return { t: 'polygon', a: 'points="' + pts + '"', f: f }; }
+  function C(x, y, r, f) { return { t: 'circle', a: 'cx="' + x + '" cy="' + y + '" r="' + r + '"', f: f }; }
+  function Ln(x1, x2, y) { return { t: 'ink', x1: x1, x2: x2, y: y }; }
+  return [
+    /* day 1: the big capital M */
+    R(84, 22, 56, 56, '#2F4F8F'), P('M82 20h60v60h-60z M86 24v52h52v-52z', '#C9A227'),
+    R(94, 34, 7, 34, '#E3B93A'), G('94,34 101,34 116,55 112,61', '#E3B93A'), G('123,34 130,34 112,61 108,55', '#E3B93A'),
+    R(123, 34, 7, 34, '#E3B93A'), { t: 'dots', f: '#B5473A' }, R(82, 84, 60, 3, '#C9A227'),
+    /* day 2: the border */
+    R(74, 12, 88, 5, '#2F5D9E'), R(162, 12, 84, 5, '#B5473A'), R(241, 17, 5, 85, '#2F5D9E'), R(241, 102, 5, 86, '#B5473A'),
+    R(160, 183, 86, 5, '#2F5D9E'), R(74, 183, 86, 5, '#B5473A'), R(74, 100, 5, 83, '#2F5D9E'), R(74, 17, 5, 83, '#B5473A'),
+    /* day 3: the little picture */
+    R(84, 92, 70, 44, '#8DB6E0'), R(84, 136, 70, 26, '#6E9E4E'), R(96, 112, 46, 26, '#CFC6B2'), R(92, 100, 12, 38, '#BDB29E'),
+    R(134, 100, 12, 38, '#BDB29E'), P('M113 138v-12a6 6 0 0 1 12 0v12z', '#6B4423'), P('M98 100V88l10 3-10 3', '#B5473A'), C(120, 101, 6, '#F2C94C'),
+    /* day 4: the lines of writing */
+    Ln(148, 236, 32), Ln(148, 236, 44), Ln(148, 236, 56), Ln(148, 236, 68),
+    Ln(162, 236, 102), Ln(162, 236, 116), Ln(162, 236, 130), Ln(162, 236, 144)
+  ];
+}
+function illumSVG(laid, day, per) {
+  var total = per * 4, pcs = illumPieces();
+  var s = '<svg viewBox="0 0 320 200" width="100%" style="max-width:340px" role="img" aria-label="' + Math.min(laid, total) + ' of ' + total + ' parts of the page are painted">' +
+    '<rect width="320" height="200" rx="12" fill="#8B5E3C"/>' +
+    '<path d="M0 40 H320 M0 95 H320 M0 150 H320" stroke="#7A5233" stroke-width="1.5"/>' +
+    '<rect x="73" y="11" width="180" height="184" fill="#5E3D24" opacity=".45"/>' +
+    '<rect x="70" y="8" width="180" height="184" fill="#F3E7C9" stroke="#C8B48A" stroke-width="1"/>';
+  pcs.forEach(function (p, k) {
+    if (k >= total) return;
+    var on = k < laid, today = k >= (day - 1) * per && k < day * per;
+    var ghost = 'fill="none" stroke="' + (today ? '#8A6212' : '#B8A57F') + '" stroke-width="' + (today ? 1.2 : 0.9) + '" stroke-dasharray="3 2"';
+    if (p.t === 'ink') {
+      if (on) s += '<rect x="' + p.x1 + '" y="' + (p.y - 1.5) + '" width="6" height="4" fill="#B5473A"/>' +
+                   '<path d="M' + (p.x1 + 8) + ' ' + p.y + ' H' + p.x2 + '" stroke="#3B2A14" stroke-width="2.4" stroke-dasharray="9 2 14 2 6 2" stroke-linecap="round"/>';
+      else s += '<path d="M' + p.x1 + ' ' + p.y + ' H' + p.x2 + '" stroke="' + (today ? '#8A6212' : '#C2B08A') + '" stroke-width=".8" stroke-dasharray="3 2"/>';
+    } else if (p.t === 'dots') {
+      [[82, 20], [142, 20], [82, 80], [142, 80]].forEach(function (c) {
+        s += '<circle cx="' + c[0] + '" cy="' + c[1] + '" r="4" ' + (on ? 'fill="' + p.f + '" stroke="#6B2A22" stroke-width="1"' : ghost) + '/>';
+      });
+    } else {
+      s += '<' + p.t + ' ' + p.a + ' ' + (on ? 'fill="' + p.f + '" stroke="#4A3A24" stroke-width="0.8"' : ghost) + '/>';
+    }
+  });
+  if (laid >= total) s += '<circle cx="226" cy="168" r="11" fill="#9E2B25" stroke="#6B1A16" stroke-width="1.5"/><path d="M220 168l4 4 8-8" stroke="#F3E7C9" stroke-width="2.4" fill="none" stroke-linecap="round"/>';
+  return s + '</svg>';
+}
+WORDGAME.illuminate = function (cfg) {
+  var items = cfg.items || []; if (!items.length) return;
+  var panel = document.getElementById('tab-words'); if (!panel) return;
+  var anchor = panel.querySelector('.tab-next-wrap');
+  var day = dayNum(LESSON.day), PER = items.length;
+  var KEY = 'oao.g3ela.wg.' + LID;
+  var st = Sparkle.get(KEY, null) || { i: 0, misses: 0 };
+  if (st.i > PER) st.i = PER;
+  var card = cardShell({ id: 'illuminate', kind: 'illuminate', title: cfg.title || 'Illuminate the Page', sub: cfg.sub || '' }, '🖌️');
+  var body = card.querySelector('.spk-card-body');
+  body.insertAdjacentHTML('beforeend', lookCard(cfg.look, cfg.todo) +
+    '<div class="g3-tw-grid"><div class="g3-illum"></div><div class="g3-tw-play" aria-live="polite"></div></div>');
+  var mapEl = body.querySelector('.g3-illum'), play = body.querySelector('.g3-tw-play');
+  function laid() { return (day - 1) * PER + st.i; }
+  function paint(msg, ok, tried) {
+    mapEl.innerHTML = illumSVG(laid(), day, PER);
+    if (st.i >= PER) {
+      play.innerHTML = '<div class="g3-finish">✓ ' + esc(day === 4 ? (cfg.winWeek || cfg.win || '') : (cfg.win || '')) + '</div>' +
+        '<button type="button" class="spk-mini-btn g3-again">Play today’s round again</button>';
+      play.querySelector('.g3-again').onclick = function () { st = { i: 0, misses: 0 }; Sparkle.set(KEY, st); paint(); };
+      return;
+    }
+    var it = items[st.i];
+    var h = stepHead(st.i + 1, PER, it.title || 'Paint a part') + '<p class="g3-tw-q">' + it.q + '</p><div class="g3-opts">';
+    it.opts.forEach(function (o, n) {
+      h += '<button type="button" class="g3-opt-btn' + (tried && tried.indexOf(n) >= 0 ? ' tried' : '') + '" data-n="' + n + '">' + esc(o) + '</button>';
+    });
+    h += '</div>';
+    if (msg) h += '<div class="g3-fb ' + (ok ? 'ok' : 'no') + '">' + msg + '</div>';
+    play.innerHTML = h;
+    play.querySelectorAll('.g3-opt-btn').forEach(function (b) {
+      b.onclick = function () {
+        var n = +b.getAttribute('data-n');
+        if (n === it.a) {
+          st.i++; Sparkle.set(KEY, st); wgSfx(st.i >= PER ? 'win' : 'chime');
+          if (st.i >= PER) { paint(); return; }
+          paint('✓ ' + (it.why || 'The paint goes on.'), true);
+        } else {
+          st.misses++; Sparkle.set(KEY, st); wgSfx('bonk');
+          var t = (tried || []).concat([n]);
+          paint('🖌️ Not that one. ' + ((it.miss || {})[n] || 'Read it again, then try another answer.'), false, t);
+        }
+      };
+    });
+  }
+  paint();
+  if (anchor) anchor.parentNode.insertBefore(card, anchor); else panel.appendChild(card);
+};
+
 /* ── Fill the Wagon: one round a day ────────────────────────────────
    DATA.wordgame = { type:'wagon', title, sub, look, todo, win, winWeek,
      bins:[ {id, label} ], items:[ {t, bin, why, miss:{binId:'…'}} ] }
@@ -1132,7 +1237,7 @@ function buildSpotlight() {
    assets/audio/guide/opti/g3ela-how-<slug>.mp3 (shared by every lesson
    that uses the same words). The button stays hidden until the file is
    really there, so a line without a recording just reads as text. */
-var SAY_FOR_CARD = { 'spk-copia-card': 'copia', 'g3card-tower': 'tower', 'g3card-wagon': 'wagon', 'g3card-chase': 'chase', 'g3card-sewer': 'sewer', 'g3card-castle': 'castle', 'g3card-backward': 'backward' };
+var SAY_FOR_CARD = { 'spk-copia-card': 'copia', 'g3card-tower': 'tower', 'g3card-wagon': 'wagon', 'g3card-chase': 'chase', 'g3card-sewer': 'sewer', 'g3card-castle': 'castle', 'g3card-illuminate': 'illuminate', 'g3card-backward': 'backward' };
 function buildSayDo() {
   document.querySelectorAll('.g3-todo:not([data-say])').forEach(function (p) {
     for (var k in SAY_FOR_CARD) {

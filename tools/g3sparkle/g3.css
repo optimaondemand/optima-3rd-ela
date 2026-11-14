@@ -360,6 +360,7 @@ button.g3-opt-btn:active, button.g3-tw-chip:active, button.spk-btn:active, butto
 /* Out of the Sewer (week 21) */
 .g3-sewer { flex:1 1 300px; max-width:340px; margin:0 auto; }
 .g3-castle { flex:1 1 300px; max-width:340px; margin:0 auto; }
+.g3-illum { flex:1 1 300px; max-width:340px; margin:0 auto; }
 .g3-tunnels { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
 button.g3-opt-btn.g3-tunnel { display:flex; flex-direction:column; align-items:center; gap:6px; text-align:center;
   border-radius:60px 60px 12px 12px; padding:16px 12px 14px; background:#F3EEE6; border:3px solid #5A4E46; min-height:96px; }
