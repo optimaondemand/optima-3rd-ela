@@ -20,7 +20,7 @@ Q = {
   {"n":6,"section":"Morphology","type":"essay_question","points":1,"text":"Choose one: structure, instruct, or destruction. Write a sentence that shows what the word means.",
    "from":"22.2 match, 22.4 dice","status":"new (old Q6 tested port and spect)"},
   {"n":7,"section":"Spelling","type":"multiple_choice_question","points":1,"text":"Which word is a compound word?",
-   "options":["journey","sidewalk","letter"],"answer":1,"from":"22.1 sort, 22.2 find the compound word","status":"new (old Q7 tested syllable types, taught in week 22)"},
+   "options":["journey","sidewalk","letter"],"answer":1,"from":"22.1 sort, 22.2 find the compound word","status":"new (old Q7 tested syllable types, taught in week 21)"},
   {"n":8,"section":"Spelling","type":"essay_question","points":1,"text":"Write the two small words that make each compound word: railroad, notebook, daylight.",
    "from":"22.3 join the words, 22.4 dice","status":"new (old Q8 tested long-word reading)"},
   {"n":9,"section":"Spelling","type":"multiple_choice_question","points":1,"text":"Which word is NOT a compound word?",
