@@ -87,7 +87,7 @@ L = {
  {"id": "vocab", "find": "Vocabulary", "fold": VOCAB_FOLD, "todo": VOCAB_CLOZE_TODO,
   "script": "Listen for this word in a busy town. Stall. A merchant sold apples from his stall in the market square. He sold things from it, outside, so a stall must be a little shop with a table. Put a bank word in each blank. If the sentence makes sense, keep it. Then try the matching game."},
  {"id": "gram", "find": "Grammar", "fold": GRAM_FOLD, "todo": "Read the Remember box. Type the one word each set of details is about.",
-  "script": "Three details, one topic. Bakers made bread. Weavers made cloth. Smiths made tools. What one word are they all about? Workers! That one word is the topic. Read the Remember box. Then read each set of details, and type the one word they're about."},
+  "script": "Three details, one topic. Smiths made tools. Weavers made cloth. Potters made bowls. What one word are they all about? Workers! That one word is the topic. Read the Remember box. Then read each set of details, and type the one word they're about."},
  {"id": "spell", "find": "Spelling", "fold": [], "foldText": ["The Rule:"], "todo": "Read the rule. Tap each card to break the word apart.",
   "script": "Oops! I split gladness like this: gladn, ess. That's not right. The base word is glad. So it breaks into glad, and ness. Glad is a describing word, and ness turns it into a thing. Read the rule. Then tap each card to break the word apart."},
  {"id": "read", "find": "Pause", "fold": [], "todo": READ_TODO,
