@@ -1,0 +1,164 @@
+{
+ "id": "g3-ela-wk25-checkin",
+ "title": "Week 25 Check-In · The Lion, the Witch and the Wardrobe",
+ "description": "This week you started The Lion, the Witch and the Wardrobe (Ch. 1–3) and followed Lucy through the wardrobe into a snowy wood. You practiced complex sentences, the word part tele (far), and the lazy schwa sound. Show what you know!",
+ "quarter": 4,
+ "chapters": "Ch. 1–3",
+ "questions": [
+  {
+   "n": 1,
+   "section": "Grammar",
+   "type": "multiple_choice_question",
+   "points": 1,
+   "text": "Which is a complex sentence?",
+   "options": [
+    "Lucy opened the wardrobe and found coats.",
+    "Lucy opened the wardrobe, but it was dark inside.",
+    "Although the others did not believe her, Lucy knew what she had seen."
+   ],
+   "answer": 2,
+   "from": "25.1 The Rule, 25.2 find the connecting word",
+   "status": "kept"
+  },
+  {
+   "n": 2,
+   "section": "Grammar",
+   "type": "essay_question",
+   "points": 1,
+   "text": "Join these two sentences into one complex sentence. Use when, because or although, and remember the comma: “Lucy stepped through the wardrobe. She felt cold snow under her feet.”",
+   "from": "25.3 join two sentences",
+   "status": "kept (wording made plain; joining words match the week)"
+  },
+  {
+   "n": 3,
+   "section": "Grammar",
+   "type": "essay_question",
+   "points": 1,
+   "text": "Write your own complex sentence about a character in Chapters 1 to 3. Start it with when, because, although or if, and put the comma in the right place.",
+   "from": "25.1–25.4 Grammar",
+   "status": "kept (old list had after, which the week doesn’t teach)"
+  },
+  {
+   "n": 4,
+   "section": "Morphology",
+   "type": "essay_question",
+   "points": 1,
+   "text": "The word part tele means far. Break apart the word television. What does it mean?",
+   "from": "25.1 build the word, 25.2 match",
+   "status": "new (old Q4 tested the prefix inter-, never taught)"
+  },
+  {
+   "n": 5,
+   "section": "Morphology",
+   "type": "multiple_choice_question",
+   "points": 1,
+   "text": "A telescope is a tool for —",
+   "options": [
+    "looking at things far away",
+    "hearing sounds close by",
+    "writing a message by hand"
+   ],
+   "answer": 0,
+   "from": "25.1 See what was hiding, 25.3 build, 25.4 dice",
+   "status": "new (old Q5 tested inter-)"
+  },
+  {
+   "n": 6,
+   "section": "Morphology",
+   "type": "essay_question",
+   "points": 1,
+   "text": "Choose one: telephone, telegram or telescope. Write a sentence that shows what the word means.",
+   "from": "25.1–25.4 Morphology",
+   "status": "new (old Q6 tested inter-)"
+  },
+  {
+   "n": 7,
+   "section": "Spelling",
+   "type": "multiple_choice_question",
+   "points": 1,
+   "text": "Say the word lemon. Which letter makes the lazy uh sound, the schwa?",
+   "options": [
+    "e",
+    "o",
+    "m"
+   ],
+   "answer": 1,
+   "from": "25.1 sort, 25.3 Find the Schwa",
+   "status": "new (old Q7 tested drop-the-e, not this week)"
+  },
+  {
+   "n": 8,
+   "section": "Spelling",
+   "type": "essay_question",
+   "points": 1,
+   "text": "What is a schwa? Explain in your own words why it makes long words tricky to spell.",
+   "from": "25.1 Now name the pattern, 25.4 objective",
+   "status": "new (old Q8 tested drop-the-e)"
+  },
+  {
+   "n": 9,
+   "section": "Spelling",
+   "type": "multiple_choice_question",
+   "points": 1,
+   "text": "One word is spelled wrong. Which one?",
+   "options": [
+    "about",
+    "problum",
+    "moment"
+   ],
+   "answer": 1,
+   "from": "25.1 sort, 25.2 tap the schwa",
+   "status": "new (old Q9 tested drop-the-e)"
+  },
+  {
+   "n": 10,
+   "section": "Reading",
+   "type": "essay_question",
+   "points": 1,
+   "text": "Lucy is in a brand-new place. Name two details from the passage that tell you what this place is like.",
+   "from": "25.1 Q1 setting details, 25.3 Q1 touch and sound",
+   "status": "fixed (passage is now the book’s own words)"
+  },
+  {
+   "n": 11,
+   "section": "Reading",
+   "type": "essay_question",
+   "points": 1,
+   "text": "The passage says Lucy has two feelings at the same time. Name both feelings, and tell why she might feel each one.",
+   "from": "25.1 Q2 Lucy’s feelings",
+   "status": "replaced (old Q11 quoted a line the passage invented)"
+  },
+  {
+   "n": 12,
+   "section": "Reading",
+   "type": "essay_question",
+   "points": 1,
+   "text": "Why don’t Peter, Susan and Edmund believe Lucy’s story when she first comes back? Use details from Chapter 3.",
+   "from": "25.2 Q2 Lucy’s story; Truth Watch",
+   "status": "kept (wording made plain)"
+  },
+  {
+   "n": 13,
+   "section": "Writing",
+   "type": "essay_question",
+   "points": 1,
+   "text": "Model sentence: “A moment later she found that she was standing in the middle of a wood at night-time with snow under her feet and snowflakes falling through the air.” Lewis tells what Lucy feels under her feet and what falls through the air. Write your own setting sentence with at least two details you could feel, see or hear.",
+   "from": "25.3 Writer’s Workshop evidence; 25.1 banner",
+   "status": "fixed (old model sentence misquoted the book)"
+  },
+  {
+   "n": 14,
+   "section": "Writing",
+   "type": "essay_question",
+   "points": 1,
+   "text": "Lucy discovers something wonderful, but no one believes her. Write 1–2 sentences about how that might feel.",
+   "from": "25.2 Q2; Truth Watch",
+   "status": "kept"
+  }
+ ],
+ "passage": {
+  "before": 10,
+  "title": "Reading passage (The Lion, the Witch and the Wardrobe, Chapter 1)",
+  "text": "Lucy felt a little frightened, but she felt very inquisitive and excited as well. She looked back over her shoulder and there, between the dark tree trunks, she could still see the open doorway of the wardrobe and even catch a glimpse of the empty room from which she had set out. (She had, of course, left the door open, for she knew that it is a very silly thing to shut oneself into a wardrobe.) It seemed to be still daylight there. “I can always get back if anything goes wrong,” thought Lucy. She began to walk forward, crunch-crunch over the snow and through the wood towards the other light. In about ten minutes she reached it and found it was a lamp-post.\n— C.S. Lewis, The Lion, the Witch and the Wardrobe, Chapter 1"
+ }
+}
