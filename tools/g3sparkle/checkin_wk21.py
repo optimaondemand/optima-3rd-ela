@@ -1,0 +1,62 @@
+#!/usr/bin/env python3
+"""Week 21 check-in as a Canvas quiz: JSON source of truth + readable key."""
+import json, io, html
+Q = {
+ "id": "g3-ela-wk21-checkin",
+ "title": "Week 21 Check-In · The Whipping Boy",
+ "description": "This week the prince took a whipping without a sound, the boys walked through the fair and escaped through the sewer, and the story ended in the king’s throne room. You practiced prepositional phrases, the word parts re, un, pre, dis, and mis, and homophones. Show what you know!",
+ "quarter": 3, "chapters": "Ch. 16–20",
+ "questions": [
+  {"n":1,"section":"Grammar","type":"multiple_choice_question","points":1,"text":"Which sentence has a prepositional phrase?",
+   "options":["Jemmy ran quickly.","Jemmy ran through the dark sewer.","Jemmy was clever and fast."],"answer":1,"from":"21.1 sort, 21.3 noun at the end, 21.4 find the mistake","status":"fixed (asked about an “underlined” group, but nothing was underlined)"},
+  {"n":2,"section":"Grammar","type":"essay_question","points":1,"text":"Write the prepositional phrase in this sentence: “Betsy stood at the top of the embankment.” Does it tell where, when, or how?",
+   "from":"21.1 Grammar (where, when, how)","status":"fixed (the old sentence had two prepositional phrases but asked for one)"},
+  {"n":3,"section":"Grammar","type":"essay_question","points":1,"text":"Write a sentence about a character that includes a prepositional phrase telling where or when.",
+   "from":"21.1–21.3 Grammar","status":"kept"},
+  {"n":4,"section":"Morphology","type":"essay_question","points":1,"text":"Break apart the word unkind. What does the front part mean, and what does the whole word mean?",
+   "from":"21.1 notice, 21.2 match (un = not)","status":"new (old Q4 tested the root spect from week 20)"},
+  {"n":5,"section":"Morphology","type":"multiple_choice_question","points":1,"text":"Which word means “to read wrong”?",
+   "options":["reread","misread","preread"],"answer":1,"from":"21.1 build the word (mis = wrong)","status":"new (old Q5 tested spect)"},
+  {"n":6,"section":"Morphology","type":"essay_question","points":1,"text":"Choose one: rebuild, preview, or disagree. Write a sentence that shows what the word means.",
+   "from":"21.2 match, 21.4 dice","status":"new (old Q6 tested spect)"},
+  {"n":7,"section":"Spelling","type":"multiple_choice_question","points":1,"text":"Which word fits? “Jemmy and the prince ate ___ potatoes with salt.”",
+   "options":["there","their","they’re"],"answer":1,"from":"21.2 Spelling Bonus + Spelling (their, there, they’re)","status":"new (old Q7 tested syllable types, not taught this week)"},
+  {"n":8,"section":"Spelling","type":"multiple_choice_question","points":1,"text":"Which sentence is spelled correctly?",
+   "options":["The bear was too big to hide.","The bear was two big to hide.","The bear was to big to hide."],"answer":0,"from":"21.1 sort, 21.3 and 21.4 (to, two, too)","status":"new (old Q8 tested syllable types)"},
+  {"n":9,"section":"Spelling","type":"essay_question","points":1,"text":"Write one sentence that uses to and one sentence that uses two.",
+   "from":"21.1 Spelling (to, two, too)","status":"new (old Q9 tested syllable types)"},
+  {"n":10,"section":"Reading","type":"essay_question","points":1,"text":"What does the prince do differently in this passage compared to how he acted at the start of the book?",
+   "from":"21.1 Chapter Thinking Q1","status":"kept"},
+  {"n":11,"section":"Reading","type":"essay_question","points":1,"text":"The passage says the prince set his jaw “just as Jemmy always had.” What do you think this means? What is changing for the prince?",
+   "from":"21.1 Chapter Thinking Q1–Q2","status":"kept"},
+  {"n":12,"section":"Reading","type":"essay_question","points":1,"text":"Do you think the prince has truly changed, or is he just acting differently because of the situation? Use details from the book to support your opinion.",
+   "from":"21.3 Chapter Thinking Q2, 21.4 Q3 (theme)","status":"kept"},
+  {"n":13,"section":"Writing","type":"essay_question","points":1,"text":"Model sentence: “For the first time in his life, the prince took a whipping himself, and like Jemmy, he did not make a sound.” Notice how the author shows the change through what the prince does NOT do. Write your own sentence about a character changing using this technique.",
+   "from":"21.1–21.4 Writer’s Workshop (compare characters)","status":"kept"},
+  {"n":14,"section":"Writing","type":"essay_question","points":1,"text":"Write 2–3 sentences describing how the prince changed from the beginning of the book to the end. Use specific details.",
+   "from":"21.2–21.4 Writer’s Workshop (comparison)","status":"fixed (“to now” → “to the end”: the book ends this week)"}
+ ],
+ "passage": {"before": 10, "title": "Reading passage (summary of Ch. 16)",
+   "text": "Hold-Your-Nose Billy thought the prince was only the whipping boy, so he raised Captain Nips’s horsewhip and brought it down on the prince’s back. Jemmy had dreamed of seeing the prince whipped, but now he found no satisfaction in it. “Bawl out!” he shouted. The prince set his jaw, just as Jemmy always had, and not a sound escaped his lips. He only got ready for the next blow."}
+}
+io.open('assessments/g3-ela-wk21-checkin.json', 'w', encoding='utf-8').write(json.dumps(Q, ensure_ascii=False, indent=1))
+e = html.escape
+rows = ''
+for q in Q['questions']:
+    if q['n'] == Q['passage']['before']:
+        rows += '<div class="psg"><b>%s</b><p>%s</p></div>' % (e(Q['passage']['title']), e(Q['passage']['text']))
+    opts = ''
+    if 'options' in q:
+        opts = '<ol type="A">' + ''.join('<li%s>%s%s</li>' % (' class="ok"' if i == q['answer'] else '', e(o), ' ✓' if i == q['answer'] else '') for i, o in enumerate(q['options'])) + '</ol>'
+    kind = 'Multiple choice (auto-graded)' if q['type'] != 'essay_question' else 'Written (teacher-graded)'
+    rows += ('<div class="q %s"><div class="h"><span class="n">%d</span> %s · %s · %d pt</div><p>%s</p>%s<div class="m">Taught in: %s<br>Audit: %s</div></div>'
+             % ('new' if q['status'].startswith('new') else '', q['n'], e(q['section']), kind, q['points'], e(q['text']), opts, e(q['from']), e(q['status'])))
+page = '''<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Week 21 Check-In Key</title>
+<style>body{font:16px/1.5 system-ui,sans-serif;max-width:820px;margin:0 auto;padding:16px;background:#F0F2F8;color:#24324F}
+h1{font-size:22px;color:#0E1C42}.q,.psg{background:#fff;border:1px solid #D9E0F0;border-radius:10px;padding:12px 16px;margin:12px 0}
+.q.new{border-left:5px solid #2B5BA8}.psg{background:#FFF8E6}.h{font-weight:700;color:#0E1C42}.n{display:inline-block;background:#0E1C42;color:#fff;border-radius:50%%;width:26px;height:26px;text-align:center;line-height:26px;margin-right:6px}
+.ok{color:#24502A;font-weight:700}.m{font-size:13px;color:#6B7690;margin-top:6px}</style></head><body>
+<h1>%s</h1><p>%s</p><p><b>Quarter 3 · %s · %d questions · %d points.</b> Blue edge = new question (the old one tested something week 21 doesn’t teach).</p>%s</body></html>''' % (
+    e(Q['title']), e(Q['description']), e(Q['chapters']), len(Q['questions']), sum(q['points'] for q in Q['questions']), rows)
+io.open('assessments/g3-ela-wk21-checkin-key.html', 'w', encoding='utf-8').write(page)
+print('ok')
