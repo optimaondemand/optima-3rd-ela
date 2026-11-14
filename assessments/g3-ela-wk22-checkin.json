@@ -1,0 +1,164 @@
+{
+ "id": "g3-ela-wk22-checkin",
+ "title": "Week 22 Check-In · The Whipping Boy",
+ "description": "This week you looked back at the whole book: how Jemmy and the prince changed, what the story teaches, a scene read out loud, and your finished comparison paragraph. You practiced pronouns, the root struct, and compound words. Show what you know!",
+ "quarter": 3,
+ "chapters": "Ch. 1–20 review",
+ "questions": [
+  {
+   "n": 1,
+   "section": "Grammar",
+   "type": "multiple_choice_question",
+   "points": 1,
+   "text": "Which sentence uses the correct pronoun?",
+   "options": [
+    "Jemmy and him escaped into the forest.",
+    "Jemmy and he escaped into the forest.",
+    "Him and Jemmy escaped into the forest."
+   ],
+   "answer": 1,
+   "from": "22.1 sort (does the action), 22.4 find the mistake",
+   "status": "kept"
+  },
+  {
+   "n": 2,
+   "section": "Grammar",
+   "type": "essay_question",
+   "points": 1,
+   "text": "Fix the pronoun mistake and write the sentence the right way: “The prince gave Jemmy and I a chance to escape.”",
+   "from": "22.1 trick for pairs, 22.4 find the mistake",
+   "status": "kept (asks them to write the fixed sentence)"
+  },
+  {
+   "n": 3,
+   "section": "Grammar",
+   "type": "essay_question",
+   "points": 1,
+   "text": "Write a sentence about two characters. Use one pronoun that does the action (he, she, they) and one that gets the action (him, her, them).",
+   "from": "22.1–22.3 Grammar",
+   "status": "kept"
+  },
+  {
+   "n": 4,
+   "section": "Morphology",
+   "type": "essay_question",
+   "points": 1,
+   "text": "The root struct means build. Break apart the word construct. What does it mean?",
+   "from": "22.1 notice, 22.2 match",
+   "status": "new (old Q4 tested port from week 19)"
+  },
+  {
+   "n": 5,
+   "section": "Morphology",
+   "type": "multiple_choice_question",
+   "points": 1,
+   "text": "Which word means “the work of building something”?",
+   "options": [
+    "construction",
+    "instruction",
+    "destruction"
+   ],
+   "answer": 0,
+   "from": "22.3 build the word",
+   "status": "new (old Q5 tested spect)"
+  },
+  {
+   "n": 6,
+   "section": "Morphology",
+   "type": "essay_question",
+   "points": 1,
+   "text": "Choose one: structure, instruct, or destruction. Write a sentence that shows what the word means.",
+   "from": "22.2 match, 22.4 dice",
+   "status": "new (old Q6 tested port and spect)"
+  },
+  {
+   "n": 7,
+   "section": "Spelling",
+   "type": "multiple_choice_question",
+   "points": 1,
+   "text": "Which word is a compound word?",
+   "options": [
+    "journey",
+    "sidewalk",
+    "letter"
+   ],
+   "answer": 1,
+   "from": "22.1 sort, 22.2 find the compound word",
+   "status": "new (old Q7 tested syllable types, taught in week 22)"
+  },
+  {
+   "n": 8,
+   "section": "Spelling",
+   "type": "essay_question",
+   "points": 1,
+   "text": "Write the two small words that make each compound word: railroad, notebook, daylight.",
+   "from": "22.3 join the words, 22.4 dice",
+   "status": "new (old Q8 tested long-word reading)"
+  },
+  {
+   "n": 9,
+   "section": "Spelling",
+   "type": "multiple_choice_question",
+   "points": 1,
+   "text": "Which word is NOT a compound word?",
+   "options": [
+    "birthday",
+    "compass",
+    "postcard"
+   ],
+   "answer": 1,
+   "from": "22.1 sort (long is not the same as compound)",
+   "status": "new (old Q9 tested a misspelled long word)"
+  },
+  {
+   "n": 10,
+   "section": "Reading",
+   "type": "essay_question",
+   "points": 1,
+   "text": "How is the prince different in this passage from how he acted at the start of the book? Use a detail from the passage.",
+   "from": "22.1 Chapter Thinking Q2",
+   "status": "fixed (passage is now the book’s own words from Chapter 17)"
+  },
+  {
+   "n": 11,
+   "section": "Reading",
+   "type": "essay_question",
+   "points": 1,
+   "text": "Jemmy says, “I did. But maybe I don’t.” What is Jemmy saying about how he feels about the prince? What is changing?",
+   "from": "22.1 Chapter Thinking Q1, Q3",
+   "status": "new (old Q11 asked about an invented line, “a crown is not the same thing as a character”)"
+  },
+  {
+   "n": 12,
+   "section": "Reading",
+   "type": "essay_question",
+   "points": 1,
+   "text": "What do you think is the most important lesson of The Whipping Boy? Use one event from the book to explain.",
+   "from": "22.2 theme, Chapter Thinking Q1–Q3",
+   "status": "kept"
+  },
+  {
+   "n": 13,
+   "section": "Writing",
+   "type": "essay_question",
+   "points": 1,
+   "text": "Model sentence (a theme statement): “Being a true friend takes more courage than giving orders, and the prince finally learned that.” Notice how it says a life lesson and still names the character. Write your own theme statement about The Whipping Boy.",
+   "from": "22.2 Writer’s Workshop (theme in the conclusion)",
+   "status": "fixed (asked about any book this year; now The Whipping Boy)"
+  },
+  {
+   "n": 14,
+   "section": "Writing",
+   "type": "essay_question",
+   "points": 1,
+   "text": "Write 2–3 sentences that say what Jemmy learned and what the prince learned. Use one detail from the book for each boy.",
+   "from": "22.1–22.4 Writer’s Workshop (comparison)",
+   "status": "kept (wording made plain)"
+  }
+ ],
+ "passage": {
+  "before": 10,
+  "title": "Reading passage (from Chapter 17)",
+  "text": "Jemmy watched the prince slowly raise himself off the mud flat. He felt a growing amazement. … There was a cast-iron streak of pluck in him.\n“Steady on your legs?” Jemmy asked.\n“Steady.”\n… “Does everyone hate me?”\n“More’n likely.”\n“What about you?”\nJemmy hesitated for a moment. “I did. But maybe I don’t.” Jemmy couldn’t sort out his feelings."
+ }
+}
