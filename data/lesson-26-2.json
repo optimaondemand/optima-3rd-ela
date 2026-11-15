@@ -1,0 +1,347 @@
+{
+ "connector": "Lucy and Edmund are back, and this time Edmund has been to Narnia too. Will he tell the truth? In Chapter 5, watch the choice he makes when Peter asks him, and what it costs Lucy.",
+ "writingFocus": "literary response",
+ "dol": {
+  "a": {
+   "raw": "edmund gave lucy a superior look but he said nothing kind",
+   "fixed": "<strong>E</strong>dmund gave <strong>L</strong>ucy a superior look<strong>,</strong> but he said nothing kind<strong>.</strong>",
+   "why": "Edmund and Lucy are names. A comma goes before but, because it joins two complete thoughts. Gave and said are both past tense."
+  },
+  "b": {
+   "raw": "peter went to the professor and he told him the whole story",
+   "fixed": "<strong>P</strong>eter went to the <strong>P</strong>rofessor<strong>,</strong> and he told him the whole story<strong>.</strong>",
+   "why": "Peter is a name, and the Professor is used as his name. A comma goes before and. Went and told are both past tense."
+  }
+ },
+ "hints": {},
+ "miss": {
+  "match": {
+   "enchanted": "Enchanted is about magic. Look for the meaning with a spell.",
+   "dominions": "Dominions are places. Look for the meaning about lands.",
+   "wretched": "Wretched is a feeling. Look for the unhappy meaning.",
+   "treachery": "Treachery is about trust. Look for the meaning about betraying someone."
+  }
+ },
+ "flags": {
+  "journal-q1": {
+   "quote": false,
+   "count": 1
+  },
+  "journal-q2": {
+   "quote": false,
+   "count": 1
+  },
+  "journal-q3": {
+   "quote": false,
+   "count": 1
+  }
+ },
+ "wordgame": {
+  "type": "delight",
+  "title": "The Turkish Delight Box",
+  "sub": "Every right answer puts a sweet in the Queen's box.",
+  "todo": "Read what is on the sweet. Tap the right answer. A right answer adds a sweet to the box.",
+  "win": "Today's 8 sweets are in the box. Come back next lesson to fill more.",
+  "winWeek": "The box is full! Unlike Edmund, you earned every sweet.",
+  "look": "Today each sweet comes with a sentence. Read every verb. If all the verbs stay in the same time, tap Stays in one time. If one verb slips into a different time, tap A verb slips. The sweets from earlier days are still in the box.",
+  "stepTitle": "Stays, or slips?",
+  "bins": [
+   {
+    "id": "stays",
+    "label": "Stays in one time",
+    "ic": "✅"
+   },
+   {
+    "id": "slips",
+    "label": "A verb slips",
+    "ic": "🌀"
+   }
+  ],
+  "items": [
+   {
+    "t": "The Queen gave Edmund a box, and he opened it.",
+    "bin": "stays",
+    "why": "gave, opened: both past.",
+    "miss": {
+     "slips": "Look at every verb. Are they all in the same time?"
+    }
+   },
+   {
+    "t": "Edmund ate the Turkish Delight and wants more.",
+    "bin": "slips",
+    "why": "ate is past, but wants is now. It should be wanted.",
+    "miss": {
+     "stays": "Find each verb. Is one of them in a different time from the others?"
+    }
+   },
+   {
+    "t": "Lucy gave Edmund one look and rushed out of the room.",
+    "bin": "stays",
+    "why": "gave, rushed: both past.",
+    "miss": {
+     "slips": "Look at every verb. Are they all in the same time?"
+    }
+   },
+   {
+    "t": "Peter turned on Edmund and tells him to shut up.",
+    "bin": "slips",
+    "why": "turned is past, but tells is now. It should be told.",
+    "miss": {
+     "stays": "Find each verb. Is one of them in a different time from the others?"
+    }
+   },
+   {
+    "t": "The Professor listens and asked them a question.",
+    "bin": "slips",
+    "why": "listens is now, but asked is past.",
+    "miss": {
+     "stays": "Find each verb. Is one of them in a different time from the others?"
+    }
+   },
+   {
+    "t": "The children put on the coats and walked into the forest.",
+    "bin": "stays",
+    "why": "put, walked: both past.",
+    "miss": {
+     "slips": "Look at every verb. Are they all in the same time?"
+    }
+   },
+   {
+    "t": "Susan wanted to go home, but Lucy says they must help.",
+    "bin": "slips",
+    "why": "wanted is past, but says is now. It should be said.",
+    "miss": {
+     "stays": "Find each verb. Is one of them in a different time from the others?"
+    }
+   },
+   {
+    "t": "The robin flew from tree to tree, and the children followed it.",
+    "bin": "stays",
+    "why": "flew, followed: both past.",
+    "miss": {
+     "slips": "Look at every verb. Are they all in the same time?"
+    }
+   }
+  ]
+ },
+ "glossary": [
+  {
+   "w": "consequence",
+   "m": "what happens because of a choice",
+   "key": true
+  },
+  {
+   "w": "tense",
+   "m": "the time a verb tells about: past (walked) or present (walks)",
+   "key": true
+  },
+  {
+   "w": "verb",
+   "m": "an action word, like ate, walks or said"
+  },
+  {
+   "w": "syllable",
+   "m": "one beat in a word. Ev-i-dence has three syllables."
+  },
+  {
+   "w": "Turkish Delight",
+   "cs": true,
+   "m": "a real soft, sweet candy, often dusted with powdered sugar"
+  },
+  {
+   "w": "literary response",
+   "m": "writing that tells what you think about a book and proves it with details from the book"
+  },
+  {
+   "w": "honesty",
+   "m": "telling the truth, even when it is hard",
+   "key": true
+  }
+ ],
+ "sayWords": [],
+ "cards": [
+  {
+   "id": "world",
+   "kind": "info",
+   "tab": "reading",
+   "after": "Read:|Look Back",
+   "before": true,
+   "icon": "🌍",
+   "title": "World Notes: Old Country Houses",
+   "sub": "A real thing behind the story",
+   "todo": "Read the note. Then read the chapter with your lens in mind.",
+   "text": [
+    "The Professor's house is a big, old country house. In England, some very old houses are so famous that people come to see them.",
+    "In Chapter 5, the housekeeper, Mrs. Macready, shows groups of visitors around the house.",
+    "That is why the children have to hide when the visitors come, and why they end up in the wardrobe!"
+   ]
+  }
+ ],
+ "transcripts": {
+  "welcome": "Hi, it's Opti. Edmund has been to Narnia too. Will he tell the truth? Watch his choice in Chapter 5.",
+  "guide1": "Word work: match form words, fix verbs that slip, and hear the beats.",
+  "guide2": "Read Chapter 5. Then try my video in Read Like a Writer.",
+  "guide3": "Today you make the link between a choice and what it causes clearer."
+ },
+ "notes": {
+  "wordParts": "The root form means shape. uniform = one shape for everyone. transform = to change shape.",
+  "grammar": "Keep your verbs in the same time. If a story starts in the past (walked, ate), every verb stays in the past.",
+  "spelling": "Every beat in a word has one vowel sound. Count the sounds, not the letters: de-tail has two beats.",
+  "wgrd": "A choice can cost someone else. Edmund's lie made Lucy look like she was not telling the truth.",
+  "vocab": [
+   [
+    "enchanted",
+    "under a magic spell; bewitched"
+   ],
+   [
+    "dominions",
+    "the lands ruled by someone"
+   ],
+   [
+    "wretched",
+    "very unhappy or miserable"
+   ],
+   [
+    "treachery",
+    "betraying someone's trust in a serious way"
+   ]
+  ]
+ },
+ "plate": {
+  "src": "art/lww/lww-country-house.jpg",
+  "alt": "A painting of a green park with cows, a lake with swans and a boat, and a large country house far back among the trees",
+  "credit": "Wivenhoe Park, Essex · John Constable, 1816 · National Gallery of Art, Washington · Public domain",
+  "look": "A painting by John Constable of a real country house in England, in 1816. The house stands far back across the park, with a lake, swans and cows in front. Big old houses like this had so many rooms that visitors came to see them, just like the Professor's house in Chapter 5.",
+  "lookBtn": "Tap to learn about this painting of a country house"
+ },
+ "teach": {
+  "dropTurnNotes": true,
+  "mods": [
+   {
+    "id": "wgrd",
+    "find": "What Good Readers",
+    "fold": [
+     ":scope > p:not(.g3-do)",
+     ":scope > .key-concept",
+     ":scope > .socratic-box"
+    ],
+    "todo": "Listen to Opti. Then tap the lens you will use today.",
+    "script": "[warmly] Here's today's reading tip. A choice can cost someone else. Watch what Edmund says when Peter asks him about Narnia, and who pays for it. Then tap one of the two lenses below to use while you read. You don't need to write anything."
+   },
+   {
+    "id": "dol",
+    "find": "Daily Oral",
+    "fold": [],
+    "todo": "Tap the yellow parts. Then pick Sentence A or B and type it the right way.",
+    "script": "Let's fix a sentence. The correct one first. Edmund had been to Narnia, but he told Peter and Susan it was only a game. Been and told both point to the past, so the sentence never slips. Tap the yellow parts. Then pick Sentence A or Sentence B, and type it the right way."
+   },
+   {
+    "id": "poem",
+    "find": "Poetry",
+    "fold": [
+     ":scope > .callout"
+    ],
+    "todo": "Read the poem out loud. Then answer the question.",
+    "script": "[curious] Here's a poem by Robert Louis Stevenson. Read it out loud. Who is riding by, all night long, in the dark and wet? You never see him. Then answer the question."
+   },
+   {
+    "id": "morph",
+    "find": "Morphology",
+    "fold": [
+     ":scope > .callout:not(:has(+ .match-game))",
+     ":scope > .key-concept"
+    ],
+    "todo": "Tap a word, then tap what it means. Match all four words.",
+    "script": "Watch one match first. Find form, and remember: it means shape. Formless. Form, plus less, without. Formless means without a shape, like a cloud of fog. That's my match! Read the Remember box. Then tap a word, and tap what it means. Match all four words.",
+    "video": "g3ela-26-2-teach-morph"
+   },
+   {
+    "id": "vocab",
+    "find": "Vocabulary",
+    "fold": [],
+    "todo": "Tap a word, then tap its meaning. Match all four words.",
+    "script": "Here's a strong word from Chapter 5. Beastly. Peter says Edmund has been perfectly beastly to Lu. Acting like a beast? Very mean! Now tap a word, then tap its meaning. Match all four.",
+    "video": "g3ela-26-2-teach-vocab"
+   },
+   {
+    "id": "gram",
+    "find": "Grammar",
+    "fold": [
+     ":scope > .callout:not(:has(+ .spotter-game)):not(:has(+ .fillin-game)):not(:has(+ .sort-game)):not(:has(+ .dol-check-btn))"
+    ],
+    "todo": "Find the verb that slipped. Tap Now check your thinking. Then tap every word that is wrong.",
+    "script": "Which verb slipped? Susan looked inside and sees only coats. Looked is past. Sees is now. Sees slipped! It should be saw. Find the slipped verb in each sentence, and tap Now check your thinking. Then fix the paragraph.",
+    "video": "g3ela-26-2-teach-gram"
+   },
+   {
+    "id": "spell",
+    "find": "Spelling",
+    "fold": [],
+    "foldText": [
+     "The Rule:"
+    ],
+    "todo": "Read the rule. In each row, tap the word that matches.",
+    "script": "Beat detective time! Which word has two beats? Wardrobe. Lamp. Enchanted. Clap them. Ward, robe: two! Lamp: one. En, chant, ed: three. Wardrobe it is. Read the rule. Then in each row, tap the one word that matches.",
+    "video": "g3ela-26-2-teach-spell"
+   },
+   {
+    "id": "read",
+    "find": "^\\W*(Read:|Look Back)",
+    "fold": [],
+    "todo": "Read Chapter 5 in your book. Then try the Truth Watch below.",
+    "script": "Read Chapter 5 in your book, with your lens in mind. Then try the Truth Watch, and watch my video in the Read Like a Writer box before you write."
+   },
+   {
+    "id": "rwm",
+    "sel": ".rwm-box",
+    "after": ":scope > .rwm-header",
+    "label": "Opti shows you how",
+    "fold": [],
+    "script": "[warmly] Let's try all three parts with a different sentence from Chapter 5. Edmund, who was becoming a nastier person every minute, thought that he had scored a great success. Part one, read like a reader. Edmund thinks he won, but he hurt Lucy. Part two, read like a writer. Lewis tucks a fact about Edmund into the middle, with who. Part three, mimic. Here's mine: Opti, who was getting sleepier every minute, thought that one more chapter would do. Now it's your turn with the sentence about Edmund being tired. Write one sentence in each box.",
+    "video": "g3ela-26-2-teach-rwm"
+   },
+   {
+    "id": "chq",
+    "find": "Q1 —",
+    "fold": [],
+    "todo": "Answer each question in full sentences. Use details from the book.",
+    "script": "Three questions, in full sentences. One, what Edmund says, and what it does to Lucy. Two, how Peter answers him. Three, the Professor's main argument about Lucy's story."
+   },
+   {
+    "id": "write",
+    "find": "Writer.s Workshop",
+    "fold": [
+     ":scope > .callout"
+    ],
+    "foldText": [
+     "watch how",
+     "today.s tool"
+    ],
+    "todo": "Add one connecting word, like because or as a result.",
+    "script": "Today you make the link clearer. Clara's draft was three short sentences. Her revision joins the choice to what it causes, with words like because. Add one connecting word to your paragraph."
+   }
+  ],
+  "cards": {}
+ },
+ "virtue": {
+  "name": "honesty",
+  "title": "Truth Watch: Is someone being honest?",
+  "items": [
+   {
+    "t": "Edmund says he and Lucy were only pretending.",
+    "ok": false,
+    "why": "That was a lie. He had been to Narnia too."
+   },
+   {
+    "t": "Peter and Susan tell the Professor the whole story.",
+    "ok": true,
+    "why": "They are honest about what has been happening."
+   },
+   {
+    "t": "Peter says that, until now, he would always have said Lucy was the more truthful one.",
+    "ok": true,
+    "why": "He tells the truth about Lucy, even after an argument."
+   }
+  ]
+ }
+}
