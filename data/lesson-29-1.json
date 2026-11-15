@@ -1,0 +1,400 @@
+{
+ "connector": "Has anyone ever said to you, “Let’s not talk about it anymore”? In Chapter 13, Edmund is rescued, and Aslan tells his family there is no need to talk about what is past. Watch for big ideas forming: forgiveness, loyalty, and what is fair.",
+ "writingFocus": "literary response",
+ "dol": {
+  "a": {
+   "raw": "\"here is your brother\" said aslan",
+   "fixed": "\"<strong>H</strong>ere is your brother<strong>,</strong>\" said <strong>A</strong>slan<strong>.</strong>",
+   "why": "Here starts the spoken words, so it gets a capital. The comma goes inside the quotation mark. Aslan is a name."
+  },
+  "b": {
+   "raw": "\"im sorry\" said edmund",
+   "fixed": "\"<strong>I</strong><strong>’</strong>m sorry<strong>,</strong>\" said <strong>E</strong>dmund<strong>.</strong>",
+   "why": "I’m starts the spoken words and joins I and am. The comma goes inside the quotation mark. Edmund is a name."
+  }
+ },
+ "hints": {
+  "fill1": {
+   "h1": "Look at the table of four words. Which four letters are in every one?",
+   "why": "The root is ject."
+  },
+  "fill2": {
+   "h1": "Look at the table of four words. Which four letters are in every one?",
+   "why": "The root is ject."
+  },
+  "fill3": {
+   "h1": "Look at the table of four words. Which four letters are in every one?",
+   "why": "The root is ject."
+  },
+  "fill4": {
+   "h1": "Look at the table of four words. Which four letters are in every one?",
+   "why": "The root is ject."
+  },
+  "vcloze1": {
+   "h1": "The Witch says Edmund turned against his own side. Look back at the word Opti figured out with you.",
+   "why": "A traitor betrays the trust of their own side."
+  },
+  "vcloze2": {
+   "h1": "This word is about making up for a wrong. Look at the meanings in the matching game.",
+   "why": "To atone is to make up for a wrong you have done."
+  },
+  "vcloze3": {
+   "h1": "Mom gave up her free day to help others. Find the word about giving something up.",
+   "why": "A sacrifice is giving up something precious for something more important."
+  }
+ },
+ "miss": {
+  "match": {
+   "traitor": "A traitor turns against his own side. Look for the meaning about trust.",
+   "atone": "Atone is about making up for a wrong. Look for that meaning.",
+   "sacrifice": "A sacrifice means giving something up. Look for the meaning about giving up."
+  }
+ },
+ "flags": {
+  "journal-q1": {
+   "quote": false,
+   "count": 1
+  },
+  "journal-q2": {
+   "quote": false,
+   "count": 1
+  },
+  "journal-q3": {
+   "quote": false,
+   "count": 1
+  }
+ },
+ "copia": {
+  "look": "One plain sentence from Chapter 13, and three empty boxes. Each box asks you to say the same idea in a new way.",
+  "todo": "Rewrite the sentence three ways, one box at a time. Tap Show one way if you get stuck.",
+  "seed": "Edmund <b>looked</b> at Aslan.",
+  "eg": [
+   "In the bright sunshine, Edmund looked at Aslan.",
+   "Edmund <i>gazed</i> at Aslan.",
+   "Edmund looked at Aslan’s golden face and did not look away."
+  ]
+ },
+ "wordgame": {
+  "type": "skip",
+  "title": "Skipping Stones",
+  "sub": "Every right answer throws a stone into the river.",
+  "todo": "Read the word on the stone. Tap the right answer. A right answer skips the stone across the river.",
+  "win": "Today's 8 stones are in the river. Come back next lesson to throw more.",
+  "winWeek": "The stepping stones reach all the way across the river!",
+  "look": "This week's game is a river at a shallow crossing, called a ford. Each stone has a sentence with a ject word in it. Remember: ject means throw. Tap which way something is thrown: back, into, out or forward. Each right answer skips a stone into the river. Over four days you build a path of stepping stones across.",
+  "stepTitle": "Which way is it thrown?",
+  "bins": [
+   {
+    "id": "back",
+    "label": "Thrown back",
+    "ic": "👆"
+   },
+   {
+    "id": "into",
+    "label": "Thrown into",
+    "ic": "👆"
+   },
+   {
+    "id": "out",
+    "label": "Thrown out",
+    "ic": "👆"
+   },
+   {
+    "id": "fwd",
+    "label": "Thrown forward",
+    "ic": "👆"
+   }
+  ],
+  "items": [
+   {
+    "t": "The goalie rejected the shot and sent it flying back.",
+    "bin": "back",
+    "why": "rejected: re- means back.",
+    "miss": {
+     "into": "Look at the part in front of ject. What does that front part mean?",
+     "out": "Look at the part in front of ject. What does that front part mean?",
+     "fwd": "Look at the part in front of ject. What does that front part mean?"
+    }
+   },
+   {
+    "t": "The pilot ejected from the plane and floated down with a parachute.",
+    "bin": "out",
+    "why": "ejected: e- means out.",
+    "miss": {
+     "back": "Look at the part in front of ject. What does that front part mean?",
+     "into": "Look at the part in front of ject. What does that front part mean?",
+     "fwd": "Look at the part in front of ject. What does that front part mean?"
+    }
+   },
+   {
+    "t": "The nurse injected the medicine with a tiny needle.",
+    "bin": "into",
+    "why": "injected: in- means into.",
+    "miss": {
+     "back": "Look at the part in front of ject. What does that front part mean?",
+     "out": "Look at the part in front of ject. What does that front part mean?",
+     "fwd": "Look at the part in front of ject. What does that front part mean?"
+    }
+   },
+   {
+    "t": "The movie was projected onto the big screen.",
+    "bin": "fwd",
+    "why": "projected: pro- means forward.",
+    "miss": {
+     "back": "Look at the part in front of ject. What does that front part mean?",
+     "into": "Look at the part in front of ject. What does that front part mean?",
+     "out": "Look at the part in front of ject. What does that front part mean?"
+    }
+   },
+   {
+    "t": "The printer ejected the jammed paper.",
+    "bin": "out",
+    "why": "ejected: e- means out.",
+    "miss": {
+     "back": "Look at the part in front of ject. What does that front part mean?",
+     "into": "Look at the part in front of ject. What does that front part mean?",
+     "fwd": "Look at the part in front of ject. What does that front part mean?"
+    }
+   },
+   {
+    "t": "The store rejected the broken toy and sent it back to the maker.",
+    "bin": "back",
+    "why": "rejected: re- means back.",
+    "miss": {
+     "into": "Look at the part in front of ject. What does that front part mean?",
+     "out": "Look at the part in front of ject. What does that front part mean?",
+     "fwd": "Look at the part in front of ject. What does that front part mean?"
+    }
+   },
+   {
+    "t": "The teacher projected her voice to the back of the room.",
+    "bin": "fwd",
+    "why": "projected: pro- means forward.",
+    "miss": {
+     "back": "Look at the part in front of ject. What does that front part mean?",
+     "into": "Look at the part in front of ject. What does that front part mean?",
+     "out": "Look at the part in front of ject. What does that front part mean?"
+    }
+   },
+   {
+    "t": "The vet injected the puppy’s shot.",
+    "bin": "into",
+    "why": "injected: in- means into.",
+    "miss": {
+     "back": "Look at the part in front of ject. What does that front part mean?",
+     "out": "Look at the part in front of ject. What does that front part mean?",
+     "fwd": "Look at the part in front of ject. What does that front part mean?"
+    }
+   }
+  ]
+ },
+ "glossary": [
+  {
+   "w": "theme",
+   "m": "the big lesson a story teaches, said as a full sentence",
+   "key": true
+  },
+  {
+   "w": "topic",
+   "m": "what a story is about, in a word or two, like loyalty or winter"
+  },
+  {
+   "w": "dialogue",
+   "m": "the words characters say out loud in a story",
+   "key": true
+  },
+  {
+   "w": "quotation marks",
+   "m": "the marks “ and ” that go around the exact words someone says",
+   "key": true
+  },
+  {
+   "w": "dialogue tag",
+   "m": "the part that tells who is talking, like said Lucy"
+  },
+  {
+   "w": "root",
+   "m": "the main part of a word that holds its meaning, like ject, which means throw",
+   "key": true
+  },
+  {
+   "w": "affix",
+   "m": "a part added to the front or the end of a word, like un- or -ed"
+  },
+  {
+   "w": "honesty",
+   "m": "telling the truth, even when it is hard",
+   "key": true
+  }
+ ],
+ "sayWords": [],
+ "cards": [
+  {
+   "id": "world",
+   "kind": "info",
+   "tab": "reading",
+   "after": "Read:|Look Back",
+   "before": true,
+   "icon": "🌍",
+   "title": "World Notes: A Lion’s Roar",
+   "sub": "A real thing behind the story",
+   "todo": "Read the note. Then read the chapter with your lens in mind.",
+   "text": [
+    "A real lion’s roar is one of the loudest sounds any animal makes. On a quiet night it can be heard about five miles away.",
+    "Lions roar to tell other lions, This is our land. They also roar to call their family group, called a pride, back together.",
+    "In Chapter 13, Aslan gives a great roar, and the Witch runs for her life."
+   ]
+  }
+ ],
+ "transcripts": {
+  "welcome": "Hi, it's Opti. In Chapter 13, Edmund is rescued, and the Witch comes to talk with Aslan. Watch for big ideas forming.",
+  "guide1": "Word work first: the root ject, the marks around spoken words, and long words built from parts.",
+  "guide2": "Read Chapter 13 with your lens. Then answer three questions.",
+  "guide3": "Today you brainstorm possible themes."
+ },
+ "notes": {
+  "wordParts": "The root ject means throw. reject = throw back. inject = throw into. eject = throw out. project = throw forward.",
+  "grammar": "Quotation marks go around the exact words someone says. The first word gets a capital. The comma or period goes inside the closing mark: “Let him approach,” said Aslan.",
+  "spelling": "A long word is often a root with parts added. Find the root first: un + expect + ed = unexpected.",
+  "wgrd": "A topic is one word, like loyalty. A theme is a full sentence about it: The story shows that forgiveness can give someone a fresh start.",
+  "vocab": [
+   [
+    "traitor",
+    "someone who betrays the trust of their own side"
+   ],
+   [
+    "atone",
+    "to make up for a wrong you have done"
+   ],
+   [
+    "sacrifice",
+    "giving up something precious for something or someone more important"
+   ]
+  ]
+ },
+ "plate": {
+  "src": "art/lww/lww-dolmen-snow.jpg",
+  "alt": "A painting of a snowy hilltop with three old, bare oak trees around a low table of big stones",
+  "credit": "Dolmen in the Snow · Caspar David Friedrich, 1807 · Galerie Neue Meister, Dresden · Public domain",
+  "look": "A painting by Caspar David Friedrich, a German painter, from 1807. Under the old oak trees is a dolmen: a big flat stone resting on standing stones, built by people more than 5,000 years ago. In Chapter 13, the Witch comes to meet Aslan on the hill beside the Stone Table.",
+  "lookBtn": "Tap to learn about this painting of an old stone table"
+ },
+ "teach": {
+  "dropTurnNotes": true,
+  "mods": [
+   {
+    "id": "wgrd",
+    "find": "What Good Readers",
+    "fold": [
+     ":scope > p:not(.g3-do)",
+     ":scope > .key-concept",
+     ":scope > .socratic-box"
+    ],
+    "todo": "Listen to Opti. Then tap the lens you will use today.",
+    "script": "[warmly] Here's this week's reading tip. A topic is one word, like loyalty. A theme is the big lesson, said as a full sentence. Watch for big ideas in Chapter 13. Then tap one of the two lenses below to use while you read. You don't need to write anything."
+   },
+   {
+    "id": "dol",
+    "find": "Daily Oral",
+    "fold": [],
+    "todo": "Tap the yellow parts. Then pick Sentence A or B and type it the right way.",
+    "script": "Let's fix a sentence. The correct one first. Let him approach, said Aslan. The words Aslan says sit inside the quotation marks. Let starts with a capital, and the comma goes inside, before the closing mark. Tap the yellow parts. Then pick Sentence A or Sentence B, and type it the right way."
+   },
+   {
+    "id": "morph",
+    "find": "Morphology",
+    "fold": [],
+    "todo": "Think about the question. Tap See if you were right. Type the missing part in each box.",
+    "script": "[curious] A throw is hiding inside this word. Projectile. Pro means forward. Ject means throw. A projectile is something thrown forward, like a snowball. Read the four words and their parts, and tap See if you were right. Then type the missing part in each box.",
+    "video": "g3ela-29-1-teach-morph"
+   },
+   {
+    "id": "vocab",
+    "find": "Vocabulary",
+    "fold": [
+     ":scope > .g3-model-h",
+     ":scope > .decode-steps",
+     ":scope > .key-concept"
+    ],
+    "todo": "Fill in each sentence from the word bank. Tap Check My Work. Then play the matching game.",
+    "script": "Be a word detective with me. Earnestly. Here's the sentence. The Lion and the Witch talked earnestly together in low voices. One, read the sentence: everyone is waiting, and worried. Two, look for word parts: earnest, l y. Three, check it. Earnestly means in a very serious way. Read how we figured out the first word. Then fill in each sentence with a word from the word bank, and tap Check My Work. Last, play the matching game.",
+    "video": "g3ela-29-1-teach-vocab"
+   },
+   {
+    "id": "gram",
+    "find": "Grammar",
+    "fold": [
+     ":scope > .callout:not(:has(+ .spotter-game)):not(:has(+ .fillin-game)):not(:has(+ .sort-game)):not(:has(+ .dol-check-btn))"
+    ],
+    "todo": "Tap Now check your thinking. Then tap the three words with a dialogue mistake.",
+    "script": "[warmly] When someone talks in a story, their words get a little house. We're home, said Mom. Quotation marks go around We're home. We're gets a capital. The comma goes inside, before the closing mark. Tap Now check your thinking. Then find the three dialogue mistakes.",
+    "video": "g3ela-29-1-teach-gram"
+   },
+   {
+    "id": "spell",
+    "find": "Spelling",
+    "fold": [],
+    "todo": "Think about the questions. Tap Now name the pattern. Then sort all eight words.",
+    "script": "Big words come apart! Unbreakable. Find the root first: break. The front part is un. The end part is able. Un, break, able. Think about the questions, and tap Now name the pattern. Then sort the words.",
+    "video": "g3ela-29-1-teach-spell"
+   },
+   {
+    "id": "copia",
+    "sel": ".spk-copia-card",
+    "label": "Opti shows you how",
+    "fold": [],
+    "todo": "Write the sentence three new ways, one box at a time.",
+    "script": "[warmly] Here's copia: one idea, said many ways. Let me try a different sentence first. Lucy cried. Box one, change the opener: On the quiet hilltop, Lucy cried. Box two, a stronger verb: Lucy sobbed. Box three, add a detail: Lucy cried for her brother Edmund. Now it's your turn, one box at a time. If you get stuck, tap Show one way."
+   },
+   {
+    "id": "read",
+    "find": "^\\W*(Read:|Look Back)",
+    "fold": [],
+    "todo": "Read Chapter 13 in your book. Then try the Truth Watch below.",
+    "script": "Read Chapter 13 in your book, with your lens in mind. At the start, the Witch tries to hurt Edmund, but Aslan's friends rescue him in time. Then try the Truth Watch and the three questions."
+   },
+   {
+    "id": "chq",
+    "find": "Q1 —",
+    "fold": [],
+    "todo": "Answer each question in full sentences. Use details from the book.",
+    "script": "Three questions, in full sentences, with details from the book. One, what the Deep Magic is, in your own words. Two, what you think Aslan offered the Witch, and why. Three, a big idea you see forming."
+   },
+   {
+    "id": "write",
+    "find": "Writer.s Workshop",
+    "fold": [
+     ":scope > .callout"
+    ],
+    "foldText": [
+     "watch how",
+     "today.s tool"
+    ],
+    "todo": "Write two or three possible themes, each as a full sentence.",
+    "script": "Today you brainstorm themes. Clara's first try was just: being good. Her new list says each theme as a full sentence that starts, The story shows that. Write two or three of your own."
+   }
+  ],
+  "cards": {}
+ },
+ "virtue": {
+  "name": "honesty",
+  "title": "Truth Watch: Is someone being honest?",
+  "items": [
+   {
+    "t": "Edmund says “I’m sorry” to each of his brother and sisters.",
+    "ok": true,
+    "why": "He tells the truth about what he did wrong."
+   },
+   {
+    "t": "Aslan says the Witch is right about the Deep Magic, even though it is bad news.",
+    "ok": true,
+    "why": "He does not pretend, even when the truth is hard."
+   },
+   {
+    "t": "The Witch makes herself look like a big rock so the rescuers will not find her.",
+    "ok": false,
+    "why": "She tricks them by making things look like what they are not."
+   }
+  ]
+ }
+}
