@@ -1,0 +1,454 @@
+{
+ "connector": "Have you ever seen a sign that something good was coming? In Chapter 10, the children hear jingling bells in the morning. Is it the Witch, or something better? Watch for signs that the long winter is starting to end.",
+ "writingFocus": "literary response",
+ "dol": {
+  "a": {
+   "raw": "mrs beavers sewing machine couldnt come with them",
+   "fixed": "<strong>M</strong>rs<strong>.</strong> <strong>B</strong>eaver<strong>’</strong>s sewing machine couldn<strong>’</strong>t come with them<strong>.</strong>",
+   "why": "Mrs. Beaver is a title and a name. Beaver’s shows the machine belongs to her. Couldn’t joins could and not."
+  },
+  "b": {
+   "raw": "peter didnt say a word when he got his shield and sword",
+   "fixed": "<strong>P</strong>eter didn<strong>’</strong>t say a word when he got his shield and sword<strong>.</strong>",
+   "why": "Peter is a name. Didn’t joins did and not, and the apostrophe sits where the o was."
+  }
+ },
+ "hints": {
+  "mfill1": {
+   "h1": "Say the two parts out loud, then push them together.",
+   "why": "com + bine = combine."
+  },
+  "mfill2": {
+   "h1": "Say the two parts out loud, then push them together.",
+   "why": "con + nect = connect."
+  },
+  "mfill3": {
+   "h1": "Keep both parts. Do not drop any letters.",
+   "why": "com + pany = company."
+  },
+  "mfill4": {
+   "h1": "Keep both parts. Do not drop any letters.",
+   "why": "con + versation = conversation."
+  },
+  "vcloze1": {
+   "h1": "They slept and woke up fresh. Look at the meaning in the matching game about new.",
+   "why": "Renewed means made fresh and new again."
+  },
+  "vcloze2": {
+   "h1": "The robin was like a sign that good news was coming. Find the word for that.",
+   "why": "A herald announces that something important is coming."
+  },
+  "vcloze3": {
+   "h1": "Glad, but also very serious. Find the word for serious.",
+   "why": "Solemn means serious and sincere."
+  }
+ },
+ "miss": {
+  "match": {
+   "renewed": "Renewed is about something made fresh again. Look for the meaning about new.",
+   "herald": "A herald tells that something is coming. Look for the meaning about announcing.",
+   "solemn": "Solemn is about being serious. Look for that meaning."
+  }
+ },
+ "flags": {
+  "journal-q1": {
+   "quote": false,
+   "count": 1
+  },
+  "journal-q2": {
+   "quote": false,
+   "count": 2
+  },
+  "journal-q3": {
+   "quote": false,
+   "count": 1
+  }
+ },
+ "copia": {
+  "look": "One plain sentence from Chapter 10, and three empty boxes. Each box asks you to say the same idea in a new way.",
+  "todo": "Rewrite the sentence three ways, one box at a time. Tap Show one way if you get stuck.",
+  "seed": "Father Christmas <b>gave</b> the children presents.",
+  "eg": [
+   "In the snowy morning, Father Christmas gave the children presents.",
+   "Father Christmas <i>handed</i> the children presents.",
+   "Father Christmas gave the three children very special presents."
+  ]
+ },
+ "wordgame": {
+  "type": "thaw",
+  "title": "The Great Thaw",
+  "sub": "Every right answer melts a snow patch.",
+  "todo": "Read the word on the snow patch. Tap the right answer. A right answer melts the snow, and a flower comes up.",
+  "win": "Today's 8 snow patches have melted. Come back next lesson to melt more.",
+  "winWeek": "The whole glade has thawed. Spring has come to Narnia!",
+  "look": "This week's game is a snowy glade in Narnia. Each snow patch has a word that starts with com- or con-. Tap what the word means. Remember: com- and con- mean with or together. Each right answer melts a patch, and a spring flower comes up. Over four days you thaw the whole glade.",
+  "stepTitle": "What does it mean?",
+  "bins": [],
+  "items": [
+   {
+    "t": "concert",
+    "bin": "r",
+    "bins": [
+     {
+      "id": "r",
+      "label": "music played by people together",
+      "ic": "👆"
+     },
+     {
+      "id": "w",
+      "label": "music one person hums alone",
+      "ic": "👆"
+     }
+    ],
+    "why": "concert: music played by people together.",
+    "miss": {
+     "w": "Remember: com- and con- mean with or together. Which meaning has that idea?"
+    }
+   },
+   {
+    "t": "compound",
+    "bin": "r",
+    "bins": [
+     {
+      "id": "w",
+      "label": "something with only one part",
+      "ic": "👆"
+     },
+     {
+      "id": "r",
+      "label": "something made of parts put together",
+      "ic": "👆"
+     }
+    ],
+    "why": "compound: something made of parts put together.",
+    "miss": {
+     "w": "Remember: com- and con- mean with or together. Which meaning has that idea?"
+    }
+   },
+   {
+    "t": "compress",
+    "bin": "r",
+    "bins": [
+     {
+      "id": "r",
+      "label": "to press things together into a smaller space",
+      "ic": "👆"
+     },
+     {
+      "id": "w",
+      "label": "to pull things far apart",
+      "ic": "👆"
+     }
+    ],
+    "why": "compress: to press things together into a smaller space.",
+    "miss": {
+     "w": "Remember: com- and con- mean with or together. Which meaning has that idea?"
+    }
+   },
+   {
+    "t": "convoy",
+    "bin": "r",
+    "bins": [
+     {
+      "id": "w",
+      "label": "one car driving alone",
+      "ic": "👆"
+     },
+     {
+      "id": "r",
+      "label": "cars or ships traveling together",
+      "ic": "👆"
+     }
+    ],
+    "why": "convoy: cars or ships traveling together.",
+    "miss": {
+     "w": "Remember: com- and con- mean with or together. Which meaning has that idea?"
+    }
+   },
+   {
+    "t": "conference",
+    "bin": "r",
+    "bins": [
+     {
+      "id": "r",
+      "label": "a meeting where people talk together",
+      "ic": "👆"
+     },
+     {
+      "id": "w",
+      "label": "quiet time by yourself",
+      "ic": "👆"
+     }
+    ],
+    "why": "conference: a meeting where people talk together.",
+    "miss": {
+     "w": "Remember: com- and con- mean with or together. Which meaning has that idea?"
+    }
+   },
+   {
+    "t": "compose",
+    "bin": "r",
+    "bins": [
+     {
+      "id": "w",
+      "label": "to erase words",
+      "ic": "👆"
+     },
+     {
+      "id": "r",
+      "label": "to put words or music together",
+      "ic": "👆"
+     }
+    ],
+    "why": "compose: to put words or music together.",
+    "miss": {
+     "w": "Remember: com- and con- mean with or together. Which meaning has that idea?"
+    }
+   },
+   {
+    "t": "confluence",
+    "bin": "r",
+    "bins": [
+     {
+      "id": "r",
+      "label": "the place where two rivers flow together",
+      "ic": "👆"
+     },
+     {
+      "id": "w",
+      "label": "the start of one small stream",
+      "ic": "👆"
+     }
+    ],
+    "why": "confluence: the place where two rivers flow together.",
+    "miss": {
+     "w": "Remember: com- and con- mean with or together. Which meaning has that idea?"
+    }
+   },
+   {
+    "t": "compact",
+    "bin": "r",
+    "bins": [
+     {
+      "id": "w",
+      "label": "spread far apart",
+      "ic": "👆"
+     },
+     {
+      "id": "r",
+      "label": "packed tightly together",
+      "ic": "👆"
+     }
+    ],
+    "why": "compact: packed tightly together.",
+    "miss": {
+     "w": "Remember: com- and con- mean with or together. Which meaning has that idea?"
+    }
+   }
+  ]
+ },
+ "glossary": [
+  {
+   "w": "symbol",
+   "m": "a thing in a story that stands for a bigger idea, like snow standing for the Witch's cold power",
+   "key": true
+  },
+  {
+   "w": "contraction",
+   "m": "two words joined into one, with an apostrophe where letters were left out, like didn't",
+   "key": true
+  },
+  {
+   "w": "possessive",
+   "m": "a word that shows who something belongs to, like Lucy's bottle",
+   "key": true
+  },
+  {
+   "w": "apostrophe",
+   "m": "the little mark ’ that joins two words or shows belonging"
+  },
+  {
+   "w": "base word",
+   "m": "a word that can stand on its own before an ending is added. Hope is the base word in hoping."
+  },
+  {
+   "w": "limerick",
+   "m": "a funny poem with five lines and a bouncy beat"
+  },
+  {
+   "w": "honesty",
+   "m": "telling the truth, even when it is hard",
+   "key": true
+  }
+ ],
+ "sayWords": [],
+ "cards": [
+  {
+   "id": "world",
+   "kind": "info",
+   "tab": "reading",
+   "after": "Read:|Look Back",
+   "before": true,
+   "icon": "🌍",
+   "title": "World Notes: Father Christmas",
+   "sub": "A real thing behind the story",
+   "todo": "Read the note. Then read the chapter with your lens in mind.",
+   "text": [
+    "Father Christmas is an old English name for the spirit of Christmas. Stories say he brings gifts in the middle of winter.",
+    "Old English pictures often show him in a long robe with a crown of holly. In America, a figure like him is called Santa Claus.",
+    "In Narnia, the Witch made it always winter and never Christmas. So when Father Christmas gets in, it is big news."
+   ]
+  }
+ ],
+ "transcripts": {
+  "welcome": "Hi, it's Opti. In Chapter 10, the children hear jingling bells. Watch for signs that the long winter is starting to end.",
+  "guide1": "Word work first: two word parts that mean together, two jobs for an apostrophe, and endings that change a word.",
+  "guide2": "Read Chapter 10 with your lens. Then answer three questions.",
+  "guide3": "Today you write a paragraph about one symbol."
+ },
+ "notes": {
+  "wordParts": "The word parts com- and con- both mean with or together. combine = to join together. connect = to tie together.",
+  "grammar": "An apostrophe has two jobs. It joins two words: did + not = didn’t. It shows belonging: Lucy’s bottle is the bottle that belongs to Lucy.",
+  "spelling": "Some endings change the base word. Double the last letter: run → running. Drop the silent e: hope → hoping. Change y to i: carry → carried.",
+  "wgrd": "A symbol is a thing in a story that stands for a bigger idea. Father Christmas getting into Narnia is a sign that the Witch's winter is weakening.",
+  "vocab": [
+   [
+    "renewed",
+    "made new again; restored to a fresh state"
+   ],
+   [
+    "herald",
+    "a person or thing that announces something important is coming"
+   ],
+   [
+    "solemn",
+    "serious, formal, and sincere"
+   ]
+  ]
+ },
+ "plate": {
+  "src": "art/lww/lww-father-christmas.jpg",
+  "alt": "An old black-and-white drawing of Father Christmas: an old man with a long white beard and a crown of holly, carrying a big log on his back and a bowl in his arms",
+  "credit": "Christmas with the Yule Log · The Illustrated London News, 23 December 1848 · Public domain",
+  "look": "A drawing from a London newspaper printed at Christmas in 1848, more than 175 years ago. It shows Father Christmas the old English way: a long white beard, a crown of holly, and a Christmas log on his back. In Chapter 10, Father Christmas finally gets into Narnia with presents for everyone.",
+  "lookBtn": "Tap to learn about this old drawing of Santa Claus"
+ },
+ "teach": {
+  "dropTurnNotes": true,
+  "mods": [
+   {
+    "id": "wgrd",
+    "find": "What Good Readers",
+    "fold": [
+     ":scope > p:not(.g3-do)",
+     ":scope > .key-concept",
+     ":scope > .socratic-box"
+    ],
+    "todo": "Listen to Opti. Then tap the lens you will use today.",
+    "script": "[warmly] Here's this week's reading tip. Some things in a story stand for a bigger idea. Watch for things that keep coming back, like the snow, or Aslan's name. Then tap one of the two lenses below to use while you read. You don't need to write anything."
+   },
+   {
+    "id": "dol",
+    "find": "Daily Oral",
+    "fold": [],
+    "todo": "Tap the yellow parts. Then pick Sentence A or B and type it the right way.",
+    "script": "Let's fix a sentence. The correct one first. Lucy's coat wasn't warm enough, but she didn't complain about the cold. Lucy's shows belonging. Wasn't and didn't each join two words. Tap the yellow parts. Then pick Sentence A or Sentence B, and type it the right way."
+   },
+   {
+    "id": "morph",
+    "find": "Morphology",
+    "fold": [],
+    "todo": "Think about the question. Tap See what was hiding. Type each whole word.",
+    "script": "[curious] Look up at the night sky! Constellation. A constellation is a group of stars together in the sky. The front part, con, means with or together. Its twin, com, means the same thing. Read the four words, and tap See what was hiding. Then type each whole word.",
+    "video": "g3ela-28-1-teach-morph"
+   },
+   {
+    "id": "vocab",
+    "find": "Vocabulary",
+    "fold": [
+     ":scope > .g3-model-h",
+     ":scope > .decode-steps",
+     ":scope > .key-concept"
+    ],
+    "todo": "Fill in each sentence from the word bank. Tap Check My Work. Then play the matching game.",
+    "script": "Be a word detective with me. Uncombed. Here's the sentence. The children came out of the cave unbrushed and uncombed. One, read the sentence: they just woke up. Two, look for word parts: un, comb, e d. Three, check it. Uncombed means not combed. Read how we figured out the first word. Then fill in each sentence with a word from the word bank, and tap Check My Work. Last, play the matching game.",
+    "video": "g3ela-28-1-teach-vocab"
+   },
+   {
+    "id": "gram",
+    "find": "Grammar",
+    "fold": [
+     ":scope > .callout:not(:has(+ .spotter-game)):not(:has(+ .fillin-game)):not(:has(+ .sort-game)):not(:has(+ .dol-check-btn))"
+    ],
+    "todo": "Tap Now check your thinking. Then tap the five words that need an apostrophe.",
+    "script": "[warmly] An apostrophe has two jobs. Job one: it joins two words. Can, plus not, makes can't. The apostrophe sits where the letters left. Job two: it shows belonging. The dog's bone is the bone that belongs to the dog. Tap Now check your thinking. Then find the five words that need an apostrophe.",
+    "video": "g3ela-28-1-teach-gram"
+   },
+   {
+    "id": "spell",
+    "find": "Spelling",
+    "fold": [],
+    "todo": "Think about the questions. Tap Now name the pattern. Then sort all eight words.",
+    "script": "Three spelling changes, coming up! Swim, swimming: the m doubles. Bake, baking: the e drops off. Try, tried: the y turns into i. Think about the questions, and tap Now name the pattern. Then sort the words.",
+    "video": "g3ela-28-1-teach-spell"
+   },
+   {
+    "id": "copia",
+    "sel": ".spk-copia-card",
+    "label": "Opti shows you how",
+    "fold": [],
+    "todo": "Write the sentence three new ways, one box at a time.",
+    "script": "[warmly] Here's copia: one idea, said many ways. Let me try a different sentence first. Peter smiled. Box one, change the opener: In the cold morning, Peter smiled. Box two, a stronger verb: Peter beamed. Box three, add a detail: Peter smiled at his shining new shield. Now it's your turn, one box at a time. If you get stuck, tap Show one way."
+   },
+   {
+    "id": "read",
+    "find": "^\\W*(Read:|Look Back)",
+    "fold": [],
+    "todo": "Read Chapter 10 in your book. Then try the Truth Watch below.",
+    "script": "Read Chapter 10 in your book, with your lens in mind. Listen for the jingling bells, and watch who arrives. Then try the Truth Watch and the three questions."
+   },
+   {
+    "id": "chq",
+    "find": "Q1 —",
+    "fold": [],
+    "todo": "Answer each question in full sentences. Use details from the book.",
+    "script": "Three questions, in full sentences, with details from the book. One, what Father Christmas's arrival stands for. Two, why each child gets a different kind of gift. Three, what Aslan seems to stand for so far."
+   },
+   {
+    "id": "write",
+    "find": "Writer.s Workshop",
+    "fold": [
+     ":scope > .callout"
+    ],
+    "foldText": [
+     "watch how",
+     "today.s tool"
+    ],
+    "todo": "Write two or three sentences about one symbol from Chapter 10.",
+    "script": "Today you write a symbol paragraph. Clara's first try just said Father Christmas came. Her new paragraph names the symbol, says what it stands for, and why it matters. Write yours the same way."
+   }
+  ],
+  "cards": {}
+ },
+ "virtue": {
+  "name": "honesty",
+  "title": "Truth Watch: Is someone being honest?",
+  "items": [
+   {
+    "t": "Mrs. Beaver tells the children plainly that they cannot reach the Stone Table before the Witch, but they still have a hope.",
+    "ok": true,
+    "why": "She tells the hard truth, and the hopeful part too."
+   },
+   {
+    "t": "Father Christmas tells Peter that his presents are tools, not toys.",
+    "ok": true,
+    "why": "He is honest about what the sword and shield are for."
+   },
+   {
+    "t": "Lucy says she is not sure, but she thinks she could be brave enough.",
+    "ok": true,
+    "why": "She says how she really feels, even the part she is not sure about."
+   }
+  ]
+ }
+}

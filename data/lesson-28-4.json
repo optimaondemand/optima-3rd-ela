@@ -1,0 +1,358 @@
+{
+ "connector": "No new chapters today. Look back at Chapters 10 to 12. Father Christmas, the melting snow, the flowers, Peter's sword: Lewis keeps bringing back signs of hope. Today you pick one symbol and finish your literary response.",
+ "writingFocus": "literary response",
+ "dol": {
+  "a": {
+   "raw": "its spring in narnia and the witchs winter is over",
+   "fixed": "<strong>I</strong>t<strong>’</strong>s spring in <strong>N</strong>arnia<strong>,</strong> and the <strong>W</strong>itch<strong>’</strong>s winter is over<strong>.</strong>",
+   "why": "It’s means it is. Narnia is a place name. Witch’s shows the winter was hers. A comma goes before and."
+  },
+  "b": {
+   "raw": "mr beaver couldnt say a word when he heard about his dam",
+   "fixed": "<strong>M</strong>r<strong>.</strong> <strong>B</strong>eaver couldn<strong>’</strong>t say a word when he heard about his dam<strong>.</strong>",
+   "why": "Mr. Beaver is a title and a name. Couldn’t joins could and not."
+  }
+ },
+ "hints": {},
+ "flags": {
+  "journal-q1": {
+   "quote": false,
+   "count": 1
+  },
+  "journal-q2": {
+   "quote": false,
+   "count": 1
+  },
+  "journal-q3": {
+   "quote": false,
+   "count": 1
+  }
+ },
+ "wordgame": {
+  "type": "thaw",
+  "title": "The Great Thaw",
+  "sub": "Every right answer melts a snow patch.",
+  "todo": "Read the word on the snow patch. Tap the right answer. A right answer melts the snow, and a flower comes up.",
+  "win": "Today's 8 snow patches have melted. Come back next lesson to melt more.",
+  "winWeek": "The whole glade has thawed. Spring has come to Narnia!",
+  "look": "Eight more patches. This time some base words need no change at all. Look at the end of each base word before you tap. Melt these and the whole glade has thawed.",
+  "stepTitle": "Which change, or none?",
+  "bins": [
+   {
+    "id": "dbl",
+    "label": "Double the last letter",
+    "ic": "✌️"
+   },
+   {
+    "id": "dropE",
+    "label": "Drop the silent e",
+    "ic": "✂️"
+   },
+   {
+    "id": "yi",
+    "label": "Change y to i",
+    "ic": "🔁"
+   },
+   {
+    "id": "none",
+    "label": "No change",
+    "ic": "✔️"
+   }
+  ],
+  "items": [
+   {
+    "t": "melt + ing",
+    "bin": "none",
+    "why": "melt + ing = melting.",
+    "miss": {
+     "dbl": "Look at the end of the base word. Is there a short vowel and one consonant, a silent e, or a y? If not, think again.",
+     "dropE": "Look at the end of the base word. Is there a short vowel and one consonant, a silent e, or a y? If not, think again.",
+     "yi": "Look at the end of the base word. Is there a short vowel and one consonant, a silent e, or a y? If not, think again."
+    }
+   },
+   {
+    "t": "tidy + ed",
+    "bin": "yi",
+    "why": "tidy + ed = tidied.",
+    "miss": {
+     "dbl": "Look at the last letter of the base word, and the letter just before it.",
+     "dropE": "Look at the last letter of the base word, and the letter just before it.",
+     "none": "Look at the last letter of the base word, and the letter just before it."
+    }
+   },
+   {
+    "t": "trot + ing",
+    "bin": "dbl",
+    "why": "trot + ing = trotting.",
+    "miss": {
+     "dropE": "Look at the end of the base word. How many vowels, and how many consonants?",
+     "yi": "Look at the end of the base word. How many vowels, and how many consonants?",
+     "none": "Look at the end of the base word. How many vowels, and how many consonants?"
+    }
+   },
+   {
+    "t": "race + ing",
+    "bin": "dropE",
+    "why": "race + ing = racing.",
+    "miss": {
+     "dbl": "Look at the last letter of the base word. Do you hear it when you say the word?",
+     "yi": "Look at the last letter of the base word. Do you hear it when you say the word?",
+     "none": "Look at the last letter of the base word. Do you hear it when you say the word?"
+    }
+   },
+   {
+    "t": "bloom + ed",
+    "bin": "none",
+    "why": "bloom + ed = bloomed.",
+    "miss": {
+     "dbl": "Look at the end of the base word. Is there a short vowel and one consonant, a silent e, or a y? If not, think again.",
+     "dropE": "Look at the end of the base word. Is there a short vowel and one consonant, a silent e, or a y? If not, think again.",
+     "yi": "Look at the end of the base word. Is there a short vowel and one consonant, a silent e, or a y? If not, think again."
+    }
+   },
+   {
+    "t": "muddy + er",
+    "bin": "yi",
+    "why": "muddy + er = muddier.",
+    "miss": {
+     "dbl": "Look at the last letter of the base word, and the letter just before it.",
+     "dropE": "Look at the last letter of the base word, and the letter just before it.",
+     "none": "Look at the last letter of the base word, and the letter just before it."
+    }
+   },
+   {
+    "t": "skip + ed",
+    "bin": "dbl",
+    "why": "skip + ed = skipped.",
+    "miss": {
+     "dropE": "Look at the end of the base word. How many vowels, and how many consonants?",
+     "yi": "Look at the end of the base word. How many vowels, and how many consonants?",
+     "none": "Look at the end of the base word. How many vowels, and how many consonants?"
+    }
+   },
+   {
+    "t": "glide + ing",
+    "bin": "dropE",
+    "why": "glide + ing = gliding.",
+    "miss": {
+     "dbl": "Look at the last letter of the base word. Do you hear it when you say the word?",
+     "yi": "Look at the last letter of the base word. Do you hear it when you say the word?",
+     "none": "Look at the last letter of the base word. Do you hear it when you say the word?"
+    }
+   }
+  ]
+ },
+ "glossary": [
+  {
+   "w": "symbol",
+   "m": "a thing in a story that stands for a bigger idea, like snow standing for the Witch's cold power",
+   "key": true
+  },
+  {
+   "w": "contraction",
+   "m": "two words joined into one, with an apostrophe where letters were left out, like didn't",
+   "key": true
+  },
+  {
+   "w": "possessive",
+   "m": "a word that shows who something belongs to, like Lucy's bottle",
+   "key": true
+  },
+  {
+   "w": "apostrophe",
+   "m": "the little mark ’ that joins two words or shows belonging"
+  },
+  {
+   "w": "base word",
+   "m": "a word that can stand on its own before an ending is added. Hope is the base word in hoping."
+  },
+  {
+   "w": "limerick",
+   "m": "a funny poem with five lines and a bouncy beat"
+  },
+  {
+   "w": "honesty",
+   "m": "telling the truth, even when it is hard",
+   "key": true
+  }
+ ],
+ "sayWords": [],
+ "cards": [
+  {
+   "id": "world",
+   "kind": "info",
+   "tab": "reading",
+   "after": "Look Back",
+   "before": true,
+   "icon": "🌍",
+   "title": "World Notes: Real Wolves",
+   "sub": "A real thing behind the story",
+   "todo": "Read the note. Then read the chapter with your lens in mind.",
+   "text": [
+    "Real gray wolves live in family groups called packs. They are shy and usually stay far away from people.",
+    "Old fairy tales often made wolves the villains, like the wolf in Little Red Riding Hood.",
+    "In the story, Maugrim is a made-up wolf who works for the Witch. Real wolves are not like him."
+   ]
+  }
+ ],
+ "transcripts": {
+  "welcome": "Hi, it's Opti. Look back at Chapters 10 to 12. Lewis keeps bringing back signs of hope. Pick the one that matters most to you.",
+  "guide1": "Word work: roll together words, fix a passage in passes, and roll words with endings.",
+  "guide2": "Look back at Chapters 10 to 12 for your best details.",
+  "guide3": "Today you polish your literary response."
+ },
+ "notes": {
+  "wordParts": "The word parts com- and con- both mean with or together. combine = to join together. connect = to tie together.",
+  "grammar": "An apostrophe has two jobs. It joins two words: did + not = didn’t. It shows belonging: Lucy’s bottle is the bottle that belongs to Lucy.",
+  "spelling": "Some endings change the base word. Double the last letter: run → running. Drop the silent e: hope → hoping. Change y to i: carry → carried.",
+  "wgrd": "Lewis keeps bringing back signs of hope: Father Christmas, the thaw, the spring flowers. A symbol lets the reader feel the idea, not just hear it.",
+  "vocab": [
+   [
+    "renewed",
+    "made new again; restored to a fresh state"
+   ],
+   [
+    "herald",
+    "a person or thing that announces something important is coming"
+   ],
+   [
+    "solemn",
+    "serious, formal, and sincere"
+   ],
+   [
+    "jovial",
+    "cheerful and friendly; in high spirits"
+   ]
+  ]
+ },
+ "plate": {
+  "src": "art/lww/lww-almond-blossom.jpg",
+  "alt": "A painting of branches covered in white blossoms against a bright blue sky",
+  "credit": "Almond Blossom · Vincent van Gogh, 1890 · Van Gogh Museum, Amsterdam · Public domain",
+  "look": "A painting by Vincent van Gogh from 1890. He made it for his brother, whose baby son had just been born. Almond trees are among the first to bloom in spring, so the blossoms stood for new life. A real symbol! In Chapters 11 and 12, spring flowers stand for the end of the Witch's winter.",
+  "lookBtn": "Tap to learn about this painting of blossoms"
+ },
+ "teach": {
+  "dropTurnNotes": true,
+  "mods": [
+   {
+    "id": "wgrd",
+    "find": "What Good Readers",
+    "fold": [
+     ":scope > p:not(.g3-do)",
+     ":scope > .key-concept",
+     ":scope > .socratic-box"
+    ],
+    "todo": "Listen to Opti. Then tap the lens you will use today.",
+    "script": "[warmly] Here's today's reading tip. Look back at the things Lewis kept bringing back this week. Pick the one you think matters most. Then tap one of the two lenses below to use while you read. You don't need to write anything."
+   },
+   {
+    "id": "dol",
+    "find": "Daily Oral",
+    "fold": [],
+    "todo": "Tap the yellow parts. Then pick Sentence A or B and type it the right way.",
+    "script": "Let's fix a sentence. The correct one first. It's Susan's horn, and Peter doesn't stop to think. It's means it is. Susan's shows belonging. Tap the yellow parts. Then pick Sentence A or Sentence B, and type it the right way."
+   },
+   {
+    "id": "poem",
+    "find": "Poetry",
+    "fold": [
+     ":scope > .callout"
+    ],
+    "todo": "Make up your own limerick. Say it out loud.",
+    "script": "Your turn to be the poet. Start with: There once was a. Lines one, two and five rhyme. Lines three and four are short, and they rhyme with each other. Say your limerick out loud."
+   },
+   {
+    "id": "morph",
+    "find": "Morphology",
+    "fold": [
+     ":scope > .key-concept"
+    ],
+    "foldText": [
+     "Before you roll"
+    ],
+    "todo": "Tap Roll the Dice. Say what the word means. Tap Check My Thinking. Roll all six words.",
+    "script": "Quick question: what do com and con mean? With, or together! Here's a word that's not on the dice. Community. A community is people who live together. Now tap Roll the Dice. Say what each word means, and tap Check My Thinking. Roll all six.",
+    "video": "g3ela-28-4-teach-morph"
+   },
+   {
+    "id": "vocab",
+    "find": "Vocabulary",
+    "fold": [],
+    "todo": "Choose one word. Write one sentence about Chapters 10 to 12.",
+    "script": "Here's how I'd use a word about the story. Solemn. Peter was silent and solemn when Father Christmas handed him a sword. One word, one moment. Now choose one of your words and write your own sentence about Chapters 10 to 12.",
+    "video": "g3ela-28-4-teach-vocab"
+   },
+   {
+    "id": "gram",
+    "find": "Grammar",
+    "fold": [
+     ":scope > .callout:not(:has(+ .spotter-game)):not(:has(+ .fillin-game)):not(:has(+ .sort-game)):not(:has(+ .dol-check-btn))"
+    ],
+    "todo": "Tap Check yourself. Tap every word that needs fixing. Then tap See the answers.",
+    "script": "Two passes, like an editor. mr beavers tail was the last thing lucy saw. Pass one, capitals: Mr., Beaver and Lucy. Pass two, apostrophes: Beaver's tail. Now do your passes, and tap every word that needs fixing.",
+    "video": "g3ela-28-4-teach-gram"
+   },
+   {
+    "id": "spell",
+    "find": "Spelling",
+    "fold": [],
+    "foldText": [
+     "The Rule:"
+    ],
+    "todo": "Tap Roll the dice. Decide which change the word needs. Tap Check my answer.",
+    "script": "Here's my roll. Fry, plus e d. Fry ends in y after a consonant, so the y turns into i. Fried! Tap Roll the dice, decide which change the word needs, or none, and tap Check my answer.",
+    "video": "g3ela-28-4-teach-spell"
+   },
+   {
+    "id": "read",
+    "find": "^\\W*(Read:|Look Back)",
+    "fold": [],
+    "todo": "Look back at Chapters 10 to 12. Then try the Truth Watch below.",
+    "script": "No new chapters today. Look back at Chapters 10 to 12, and find the thing Lewis keeps bringing back. Then try the Truth Watch and the three questions."
+   },
+   {
+    "id": "chq",
+    "find": "Q1 —",
+    "fold": [],
+    "todo": "Answer each question in full sentences. Use details from the book.",
+    "script": "Three questions to finish the week, in full sentences. One, your symbol and what it stands for. Two, why showing the thaw is stronger than just saying it. Three, a detail Lewis keeps bringing back, and why."
+   },
+   {
+    "id": "write",
+    "find": "Writer.s Workshop",
+    "fold": [
+     ":scope > .callout"
+    ],
+    "foldText": [
+     "watch how",
+     "today.s tool"
+    ],
+    "todo": "Polish your response. Add a closing sentence about what the symbols do.",
+    "script": "Last step: polish. Clara ended with what the symbols do for the reader. Read your whole response, and add your own closing sentence."
+   }
+  ],
+  "cards": {}
+ },
+ "virtue": {
+  "name": "honesty",
+  "title": "Truth Watch: Is someone being honest?",
+  "items": [
+   {
+    "t": "The dwarf tells the Witch the truth: this is no thaw, this is Spring, and it is Aslan's doing.",
+    "ok": true,
+    "why": "He tells her the truth, even though she will not like it."
+   },
+   {
+    "t": "The Witch tells the Fox he will be forgiven if he says he has been lying.",
+    "ok": false,
+    "why": "She wants him to call the truth a lie."
+   },
+   {
+    "t": "Aslan tells Peter he has forgotten to clean his sword, and Peter blushes because it is true.",
+    "ok": true,
+    "why": "Peter does not make excuses. He fixes it."
+   }
+  ]
+ }
+}

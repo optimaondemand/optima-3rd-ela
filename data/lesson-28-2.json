@@ -1,0 +1,432 @@
+{
+ "connector": "In Chapter 11, the story follows Edmund on the Witch's sledge. It is a long, cold ride. Then he hears a sound he has not heard in Narnia before: running water. Watch what happens to the snow, and what it might stand for.",
+ "writingFocus": "literary response",
+ "dol": {
+  "a": {
+   "raw": "the witchs dwarf couldnt make the sledge move",
+   "fixed": "<strong>T</strong>he <strong>W</strong>itch<strong>’</strong>s dwarf couldn<strong>’</strong>t make the sledge move<strong>.</strong>",
+   "why": "The begins the sentence. Witch’s shows the dwarf works for her. Couldn’t joins could and not."
+  },
+  "b": {
+   "raw": "edmund didnt want the dry bread but he ate it",
+   "fixed": "<strong>E</strong>dmund didn<strong>’</strong>t want the dry bread<strong>,</strong> but he ate it<strong>.</strong>",
+   "why": "Edmund is a name. Didn’t joins did and not. A comma goes before but."
+  }
+ },
+ "hints": {},
+ "miss": {
+  "match": {
+   "renewed": "Renewed is about something made fresh again. Look for the meaning about new.",
+   "herald": "A herald tells that something is coming. Look for the meaning about announcing.",
+   "solemn": "Solemn is about being serious. Look for that meaning.",
+   "jovial": "Jovial is about being cheerful. Look for the happy meaning."
+  }
+ },
+ "flags": {
+  "journal-q1": {
+   "quote": false,
+   "count": 1
+  },
+  "journal-q2": {
+   "quote": false,
+   "count": 1
+  },
+  "journal-q3": {
+   "quote": false,
+   "count": 1
+  }
+ },
+ "wordgame": {
+  "type": "thaw",
+  "title": "The Great Thaw",
+  "sub": "Every right answer melts a snow patch.",
+  "todo": "Read the word on the snow patch. Tap the right answer. A right answer melts the snow, and a flower comes up.",
+  "win": "Today's 8 snow patches have melted. Come back next lesson to melt more.",
+  "winWeek": "The whole glade has thawed. Spring has come to Narnia!",
+  "look": "Eight new snow patches with eight new words. Tap what each word means. Remember what com- and con- mean. The flowers from Day 1 are still blooming.",
+  "stepTitle": "What does it mean?",
+  "bins": [],
+  "items": [
+   {
+    "t": "compile",
+    "bin": "r",
+    "bins": [
+     {
+      "id": "r",
+      "label": "to gather things together in one place",
+      "ic": "👆"
+     },
+     {
+      "id": "w",
+      "label": "to throw things away",
+      "ic": "👆"
+     }
+    ],
+    "why": "compile: to gather things together in one place.",
+    "miss": {
+     "w": "Remember: com- and con- mean with or together. Which meaning has that idea?"
+    }
+   },
+   {
+    "t": "congregate",
+    "bin": "r",
+    "bins": [
+     {
+      "id": "w",
+      "label": "to scatter in every direction",
+      "ic": "👆"
+     },
+     {
+      "id": "r",
+      "label": "to gather together in a crowd",
+      "ic": "👆"
+     }
+    ],
+    "why": "congregate: to gather together in a crowd.",
+    "miss": {
+     "w": "Remember: com- and con- mean with or together. Which meaning has that idea?"
+    }
+   },
+   {
+    "t": "commotion",
+    "bin": "r",
+    "bins": [
+     {
+      "id": "r",
+      "label": "noise and rushing about all together",
+      "ic": "👆"
+     },
+     {
+      "id": "w",
+      "label": "perfect quiet",
+      "ic": "👆"
+     }
+    ],
+    "why": "commotion: noise and rushing about all together.",
+    "miss": {
+     "w": "Remember: com- and con- mean with or together. Which meaning has that idea?"
+    }
+   },
+   {
+    "t": "convention",
+    "bin": "r",
+    "bins": [
+     {
+      "id": "w",
+      "label": "a walk all by yourself",
+      "ic": "👆"
+     },
+     {
+      "id": "r",
+      "label": "a big meeting where people come together",
+      "ic": "👆"
+     }
+    ],
+    "why": "convention: a big meeting where people come together.",
+    "miss": {
+     "w": "Remember: com- and con- mean with or together. Which meaning has that idea?"
+    }
+   },
+   {
+    "t": "conjoin",
+    "bin": "r",
+    "bins": [
+     {
+      "id": "r",
+      "label": "to join together",
+      "ic": "👆"
+     },
+     {
+      "id": "w",
+      "label": "to split in two",
+      "ic": "👆"
+     }
+    ],
+    "why": "conjoin: to join together.",
+    "miss": {
+     "w": "Remember: com- and con- mean with or together. Which meaning has that idea?"
+    }
+   },
+   {
+    "t": "combat",
+    "bin": "r",
+    "bins": [
+     {
+      "id": "w",
+      "label": "a nap after lunch",
+      "ic": "👆"
+     },
+     {
+      "id": "r",
+      "label": "a fight with an enemy",
+      "ic": "👆"
+     }
+    ],
+    "why": "combat: a fight with an enemy.",
+    "miss": {
+     "w": "Remember: com- and con- mean with or together. Which meaning has that idea?"
+    }
+   },
+   {
+    "t": "convene",
+    "bin": "r",
+    "bins": [
+     {
+      "id": "r",
+      "label": "to come together for a meeting",
+      "ic": "👆"
+     },
+     {
+      "id": "w",
+      "label": "to leave a meeting early",
+      "ic": "👆"
+     }
+    ],
+    "why": "convene: to come together for a meeting.",
+    "miss": {
+     "w": "Remember: com- and con- mean with or together. Which meaning has that idea?"
+    }
+   },
+   {
+    "t": "comrade",
+    "bin": "r",
+    "bins": [
+     {
+      "id": "w",
+      "label": "a stranger you never meet",
+      "ic": "👆"
+     },
+     {
+      "id": "r",
+      "label": "a friend who works or fights with you",
+      "ic": "👆"
+     }
+    ],
+    "why": "comrade: a friend who works or fights with you.",
+    "miss": {
+     "w": "Remember: com- and con- mean with or together. Which meaning has that idea?"
+    }
+   }
+  ]
+ },
+ "glossary": [
+  {
+   "w": "symbol",
+   "m": "a thing in a story that stands for a bigger idea, like snow standing for the Witch's cold power",
+   "key": true
+  },
+  {
+   "w": "contraction",
+   "m": "two words joined into one, with an apostrophe where letters were left out, like didn't",
+   "key": true
+  },
+  {
+   "w": "possessive",
+   "m": "a word that shows who something belongs to, like Lucy's bottle",
+   "key": true
+  },
+  {
+   "w": "apostrophe",
+   "m": "the little mark ’ that joins two words or shows belonging"
+  },
+  {
+   "w": "base word",
+   "m": "a word that can stand on its own before an ending is added. Hope is the base word in hoping."
+  },
+  {
+   "w": "limerick",
+   "m": "a funny poem with five lines and a bouncy beat"
+  },
+  {
+   "w": "honesty",
+   "m": "telling the truth, even when it is hard",
+   "key": true
+  }
+ ],
+ "sayWords": [],
+ "cards": [
+  {
+   "id": "world",
+   "kind": "info",
+   "tab": "reading",
+   "after": "Read:|Look Back",
+   "before": true,
+   "icon": "🌍",
+   "title": "World Notes: Spring Flowers",
+   "sub": "A real thing behind the story",
+   "todo": "Read the note. Then read the chapter with your lens in mind.",
+   "text": [
+    "Snowdrops are often the first flowers of the year. They can push up while snow is still on the ground.",
+    "Celandines are small yellow flowers. They open in sunshine and close up when it turns cloudy.",
+    "Crocuses come up in late winter and early spring, in purple, white and gold. Edmund sees all three as the snow melts."
+   ]
+  }
+ ],
+ "transcripts": {
+  "welcome": "Hi, it's Opti. Edmund rides with the Witch, and then he hears running water. Watch what happens to the snow in Chapter 11.",
+  "guide1": "Word work: match together words, find what each apostrophe does, and spot endings that change a word.",
+  "guide2": "Read Chapter 11. Then watch my video in Read Like a Writer.",
+  "guide3": "Today you make your symbol paragraph more precise."
+ },
+ "notes": {
+  "wordParts": "The word parts com- and con- both mean with or together. combine = to join together. connect = to tie together.",
+  "grammar": "An apostrophe has two jobs. It joins two words: did + not = didn’t. It shows belonging: Lucy’s bottle is the bottle that belongs to Lucy.",
+  "spelling": "Some endings change the base word. Double the last letter: run → running. Drop the silent e: hope → hoping. Change y to i: carry → carried.",
+  "wgrd": "The snow has been in every chapter. In Chapter 11 it melts. The thaw stands for the Witch's power breaking.",
+  "vocab": [
+   [
+    "renewed",
+    "made new again; restored to a fresh state"
+   ],
+   [
+    "herald",
+    "a person or thing that announces something important is coming"
+   ],
+   [
+    "solemn",
+    "serious, formal, and sincere"
+   ],
+   [
+    "jovial",
+    "cheerful and friendly; in high spirits"
+   ]
+  ]
+ },
+ "plate": {
+  "src": "art/lww/lww-levitan-march.jpg",
+  "alt": "A painting of a sunny day in early spring: melting snow, bare birch trees, a wooden house, and a horse with a sledge waiting by the porch",
+  "credit": "March · Isaac Levitan, 1895 · State Tretyakov Gallery · Public domain",
+  "look": "A painting by Isaac Levitan, a Russian painter, from 1895. It is March. The sun is warm, the sky is blue, and the snow is starting to melt. A horse with a sledge waits by the house. In Chapter 11, the snow melts so fast that the Witch's sledge cannot go on.",
+  "lookBtn": "Tap to learn about this painting of melting snow"
+ },
+ "teach": {
+  "dropTurnNotes": true,
+  "mods": [
+   {
+    "id": "wgrd",
+    "find": "What Good Readers",
+    "fold": [
+     ":scope > p:not(.g3-do)",
+     ":scope > .key-concept",
+     ":scope > .socratic-box"
+    ],
+    "todo": "Listen to Opti. Then tap the lens you will use today.",
+    "script": "[warmly] Here's today's reading tip. Snow has been in every chapter so far. Watch what happens to it in Chapter 11, and what that might mean. Then tap one of the two lenses below to use while you read. You don't need to write anything."
+   },
+   {
+    "id": "dol",
+    "find": "Daily Oral",
+    "fold": [],
+    "todo": "Tap the yellow parts. Then pick Sentence A or B and type it the right way.",
+    "script": "Let's fix a sentence. The correct one first. The Witch's wand turned the feasting creatures to stone, and the dwarf's whip couldn't make the reindeer go any faster. Witch's and dwarf's show belonging. Couldn't joins two words. Tap the yellow parts. Then pick Sentence A or Sentence B, and type it the right way."
+   },
+   {
+    "id": "poem",
+    "find": "Poetry",
+    "fold": [
+     ":scope > .callout"
+    ],
+    "todo": "Read the limerick out loud. Check it against A, A, B, B, A.",
+    "script": "[curious] Here's a limerick by Edward Lear, the man who made them famous. Read it out loud, and listen to the last word of each line. Does it follow the pattern A, A, B, B, A? Answer out loud."
+   },
+   {
+    "id": "morph",
+    "find": "Morphology",
+    "fold": [
+     ":scope > .callout:not(:has(+ .match-game))",
+     ":scope > .key-concept"
+    ],
+    "todo": "Tap a word, then tap what it means. Match all four words.",
+    "script": "Watch one match first. Companion. Find the front part: com. It means with. A companion is a friend who goes along with you. That's my match! Read the Remember box. Then tap a word, and tap what it means. Match all four words.",
+    "video": "g3ela-28-2-teach-morph"
+   },
+   {
+    "id": "vocab",
+    "find": "Vocabulary",
+    "fold": [],
+    "todo": "Tap a word, then tap its meaning. Match all four words.",
+    "script": "Ever seen a grin that made you want to look away? Repulsive. The dwarf grins at Edmund in a repulsive way. Repulsive means so nasty you want to turn away. Now tap a word, then tap its meaning. Match all four.",
+    "video": "g3ela-28-2-teach-vocab"
+   },
+   {
+    "id": "gram",
+    "find": "Grammar",
+    "fold": [
+     ":scope > .callout:not(:has(+ .spotter-game)):not(:has(+ .fillin-game)):not(:has(+ .sort-game)):not(:has(+ .dol-check-btn))"
+    ],
+    "todo": "Find what each apostrophe does. Tap Now check your thinking. Then tap every word that is wrong.",
+    "script": "Spot the apostrophe. Mrs. Beaver's sewing machine was too heavy to bring. Beaver's, with an apostrophe s, shows belonging. Find the apostrophes in each of the four sentences, and tap Now check your thinking. Then fix the paragraph.",
+    "video": "g3ela-28-2-teach-gram"
+   },
+   {
+    "id": "spell",
+    "find": "Spelling",
+    "fold": [],
+    "foldText": [
+     "The Rule:"
+    ],
+    "todo": "Read the rule. In each row, tap the word that matches.",
+    "script": "Detective question! Which of these doubled its last letter: fatter, or faster? Fatter! Fat has a short vowel and one t, so the t doubles. Read the rule. Then in each row, tap the one word that matches what the row asks for.",
+    "video": "g3ela-28-2-teach-spell"
+   },
+   {
+    "id": "read",
+    "find": "^\\W*(Read:|Look Back)",
+    "fold": [],
+    "todo": "Read Chapter 11 in your book. Then try the Truth Watch below.",
+    "script": "Read Chapter 11 in your book, with your lens in mind. Then try the Truth Watch, and watch my video in the Read Like a Writer box before you write."
+   },
+   {
+    "id": "rwm",
+    "sel": ".rwm-box",
+    "after": ":scope > .rwm-header",
+    "label": "Opti shows you how",
+    "fold": [],
+    "script": "Let's try all three parts with a sentence from Chapter 11. The snow was again falling as they came into the courtyard, but she took no notice of that and made Edmund sit beside her on the sledge. Part one, read like a reader. The Witch doesn't care about the snow. Part two, read like a writer. Weather first, then but turns to the story. Part three, mimic. Here's mine: The rain was pouring as we left school, but Mom took no notice and made us run to the car. Now it's your turn with the sentence about the snow and the moon. Write one sentence in each box.",
+    "video": "g3ela-28-2-teach-rwm"
+   },
+   {
+    "id": "chq",
+    "find": "Q1 —",
+    "fold": [],
+    "todo": "Answer each question in full sentences. Use details from the book.",
+    "script": "Three questions, in full sentences. One, how the Witch acts when the snow melts. Two, one thing that keeps coming back, and what it stands for. Three, how Edmund has changed by the end of Chapter 11."
+   },
+   {
+    "id": "write",
+    "find": "Writer.s Workshop",
+    "fold": [
+     ":scope > .callout"
+    ],
+    "foldText": [
+     "watch how",
+     "today.s tool"
+    ],
+    "todo": "Make one vague phrase in your symbol paragraph more precise.",
+    "script": "Today you make it precise. Clara swapped things are getting better for hope overcoming despair. Find one vague phrase in yours, and make it sharper."
+   }
+  ],
+  "cards": {}
+ },
+ "virtue": {
+  "name": "honesty",
+  "title": "Truth Watch: Is someone being honest?",
+  "items": [
+   {
+    "t": "The Witch gives Edmund dry bread instead of the Turkish Delight she promised him.",
+    "ok": false,
+    "why": "She does not keep her promise."
+   },
+   {
+    "t": "A little squirrel says Father Christmas really did come, even when the Witch says to call it a lie.",
+    "ok": true,
+    "why": "He tells the truth, even though the Witch is angry."
+   },
+   {
+    "t": "Edmund starts to see that the things he told himself about the Witch being good sound silly now.",
+    "ok": true,
+    "why": "He is finally being honest with himself."
+   }
+  ]
+ }
+}
