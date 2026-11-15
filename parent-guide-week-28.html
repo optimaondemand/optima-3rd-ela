@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Week 28 Family Guide · The Lion, the Witch and the Wardrobe · 3rd Grade ELA</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Nunito:wght@400;600;700;800;900&display=swap');
+:root{
+  --navy:#0E1C42; --ink:#3A4A6B; --muted:#5E6C8C; --line:#E2E8F4;
+  --sky:#55C8E8; --sky-bg:#EAF8FD; --gold:#C7922C; --gold-bg:#FFF3DC;
+  --green:#34B76F; --green-bg:#E3F8ED; --plum:#8B6FC0; --plum-bg:#F1ECFA;
+  --paper:#FAFBFF; --cream:#FFF8F0;
+}
+*{box-sizing:border-box;}
+html,body{margin:0;padding:0;}
+body{background:var(--paper);color:var(--ink);font-family:"Nunito",sans-serif;font-size:18px;line-height:1.6;}
+.wrap{max-width:880px;margin:0 auto;padding:24px 16px 48px;}
+h1,h2,h3{font-family:"Lora",Georgia,serif;color:var(--navy);margin:0;}
+p{margin:0 0 10px;}
+strong{color:var(--navy);}
+
+/* header */
+.hero{background:var(--navy);color:#fff;border-radius:18px;overflow:hidden;display:grid;grid-template-columns:1.25fr 1fr;}
+.hero-text{padding:28px 28px 26px;}
+.brand{display:flex;align-items:center;gap:10px;font-size:15px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:#BFD0EE;margin-bottom:14px;}
+.brand img{width:38px;height:38px;border-radius:50%;background:#fff;}
+.hero h1{color:#fff;font-size:34px;line-height:1.2;margin-bottom:6px;}
+.hero .sub{font-size:19px;color:#DCE6F7;margin-bottom:16px;}
+.chips{display:flex;flex-wrap:wrap;gap:8px;}
+.chip{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.25);border-radius:999px;padding:5px 13px;font-size:16px;font-weight:700;color:#fff;}
+.hero-art{background:#F5E6C8 center/cover no-repeat;min-height:240px;}
+
+/* cards */
+.card{background:#fff;border:1px solid var(--line);border-radius:16px;padding:22px 24px;margin-top:18px;}
+.card-head{display:flex;align-items:center;gap:12px;margin-bottom:12px;}
+.card-head .ico{font-size:26px;line-height:1;}
+.card-head h2{font-size:24px;}
+.card-head .tag{margin-left:auto;font-size:14px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);}
+
+.glance{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+.glance .box{border-radius:12px;padding:14px 16px;}
+.box-label{font-size:14px;font-weight:900;letter-spacing:.08em;text-transform:uppercase;margin-bottom:4px;}
+.b-sky{background:var(--sky-bg);} .b-sky .box-label{color:#1F8CB0;}
+.b-gold{background:var(--gold-bg);} .b-gold .box-label{color:#9A6C14;}
+.b-green{background:var(--green-bg);} .b-green .box-label{color:#1F8452;}
+.b-plum{background:var(--plum-bg);} .b-plum .box-label{color:#6A4FA3;}
+.quote{font-family:"Lora",Georgia,serif;font-style:italic;font-size:20px;color:var(--navy);border-left:4px solid var(--gold);padding:4px 0 4px 16px;margin:16px 0 0;}
+.quote small{display:block;font-family:"Nunito",sans-serif;font-style:normal;font-size:15px;color:var(--muted);margin-top:4px;}
+
+/* day table */
+.days{width:100%;border-collapse:collapse;}
+.days th{font-size:14px;font-weight:900;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);text-align:left;padding:8px 10px;border-bottom:2px solid var(--line);}
+.days td{padding:12px 10px;border-bottom:1px solid var(--line);vertical-align:top;}
+.days tr:last-child td{border-bottom:none;}
+.day-n{font-family:"Lora",Georgia,serif;font-weight:700;font-size:20px;color:var(--navy);white-space:nowrap;}
+.day-n span{display:block;font-family:"Nunito",sans-serif;font-size:15px;font-weight:700;color:var(--muted);}
+.ch{font-weight:800;color:var(--navy);}
+.small{font-size:16px;color:var(--muted);}
+.pill{display:inline-block;font-size:14px;font-weight:800;border-radius:999px;padding:2px 10px;margin:4px 4px 0 0;}
+.p-poem{background:var(--plum-bg);color:#6A4FA3;}
+.p-guide{background:var(--cream);color:#9A6C14;border:1px solid #F5E6C8;}
+.extra-row td{background:var(--paper);}
+
+/* words */
+.words{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;}
+.word{border:1px solid var(--line);border-radius:12px;padding:12px 16px;}
+.word b{font-family:"Lora",Georgia,serif;font-size:21px;color:var(--navy);display:block;}
+.word span{font-size:17px;}
+.skills{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:14px;}
+.skills .box{border-radius:12px;padding:14px 16px;font-size:17px;}
+.eg{display:block;margin-top:6px;font-weight:700;color:var(--navy);}
+
+/* poem */
+.poem-wrap{display:grid;grid-template-columns:1fr 1fr;gap:18px;align-items:center;}
+.poem{font-family:"Lora",Georgia,serif;font-size:22px;line-height:1.9;color:var(--navy);background:var(--plum-bg);border-radius:12px;padding:16px 22px;}
+.poem small{display:block;font-family:"Nunito",sans-serif;font-size:15px;color:var(--muted);line-height:1.4;margin-top:6px;}
+
+/* ask */
+.ask{list-style:none;margin:0;padding:0;counter-reset:q;}
+.ask li{counter-increment:q;position:relative;padding:12px 0 12px 50px;border-bottom:1px dashed var(--line);}
+.ask li:last-child{border-bottom:none;}
+.ask li::before{content:counter(q);position:absolute;left:0;top:11px;width:34px;height:34px;border-radius:50%;background:var(--gold-bg);color:#9A6C14;font-weight:900;display:flex;align-items:center;justify-content:center;font-size:17px;}
+.ask .q{font-weight:800;color:var(--navy);display:block;}
+.ask .listen{font-size:16px;color:var(--muted);}
+
+/* checklist */
+.check{list-style:none;margin:0;padding:0;}
+.check li{padding:7px 0 7px 34px;position:relative;}
+.check li::before{content:"✓";position:absolute;left:4px;top:6px;color:var(--green);font-weight:900;font-size:19px;}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:18px;}
+
+.next{background:var(--navy);color:#DCE6F7;border:none;}
+.next h2{color:#fff;}
+.next strong{color:#fff;}
+.foot{text-align:center;font-size:15px;color:var(--muted);margin-top:26px;}
+
+.print-btn{display:inline-block;margin-top:16px;background:var(--gold);color:#fff;border:none;border-radius:999px;padding:9px 18px;font-family:"Nunito",sans-serif;font-weight:800;font-size:16px;cursor:pointer;}
+
+@media (max-width:720px){
+  .hero{grid-template-columns:1fr;}
+  .hero-art{min-height:180px;order:-1;}
+  .glance,.words,.skills,.poem-wrap,.two{grid-template-columns:1fr;}
+  .days thead{display:none;}
+  .days tr{display:block;border-bottom:1px solid var(--line);padding:8px 0;}
+  .days td{display:block;border:none;padding:4px 0;}
+}
+@media print{
+  body{background:#fff;font-size:15px;}
+  .wrap{padding:0;}
+  .print-btn{display:none;}
+  .card{break-inside:avoid;margin-top:12px;padding:14px 16px;}
+  .hero,.next{-webkit-print-color-adjust:exact;print-color-adjust:exact;}
+}
+
+/* lesson mechanics */
+.howto{background:var(--cream);border:1px solid #F5E6C8;border-radius:16px;padding:18px 22px;margin-top:18px;}
+.howto h2{font-size:21px;margin-bottom:10px;}
+.howto ul{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:8px 22px;}
+.howto li{position:relative;padding-left:32px;font-size:17px;line-height:1.5;}
+.howto li span{position:absolute;left:0;top:0;font-size:20px;}
+@media (max-width:760px){.howto ul{grid-template-columns:1fr;}}
+@media print{.howto{break-inside:avoid;}}
+.b-rose{background:#FDEEEE;border-radius:12px;padding:14px 16px;} .b-rose .box-label{color:#A8434A;}
+
+.p-museum{background:var(--sky-bg);color:#1F6F8C;}
+.p-extra{background:var(--green-bg);color:#1F8452;}
+.extras{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
+.extras .box{border-radius:12px;padding:14px 16px;font-size:17px;}
+.essay{display:flex;flex-wrap:wrap;gap:6px;margin:4px 0 12px;}
+.essay span{font-size:15px;font-weight:800;border-radius:999px;padding:4px 12px;background:var(--paper);border:1px solid var(--line);color:var(--muted);}
+.essay span.now{background:var(--gold-bg);border-color:#F5E6C8;color:#9A6C14;}
+.essay span.done{background:var(--green-bg);border-color:#CDEFDB;color:#1F8452;}
+@media (max-width:720px){.extras{grid-template-columns:1fr;}}
+.unit-link{margin:12px 0 0;font-size:16px;}.unit-link a{color:#BFD0EE;font-weight:800;}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="hero">
+<div class="hero-text">
+<div class="brand"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy Online">Family Guide · 3rd Grade ELA</div>
+<h1>Week 28: Signs of Spring</h1>
+<div class="sub"><em>The Lion, the Witch and the Wardrobe</em>, Chapters 10–12: noticing symbols and ideas that come back</div>
+<div class="chips">
+<span class="chip">4 lessons</span>
+<span class="chip">Chapters 10–12</span>
+<span class="chip">Fluency page</span>
+<span class="chip">Check-In at week’s end</span>
+</div>
+<button class="print-btn" onclick="window.print()">🖨️ Print this guide</button>
+<p class="unit-link"><a href="parent-guide-lww-unit.html">Read the unit guide for The Lion, the Witch and the Wardrobe →</a></p>
+</div>
+<div class="hero-art" style="background-image:url('https://optimaondemand.github.io/optima-3rd-ela/assets/art/lww/lww-levitan-march.jpg');background-position:center 60%;" role="img" aria-label="A painting of melting snow on a sunny early spring day, with birch trees and a horse waiting by a house"></div>
+</header>
+
+<section class="howto">
+<h2>🧭 How the Lesson Pages Work</h2>
+<ul>
+<li><span>▶️</span><strong>Start here.</strong> The gold <strong>Start here</strong> box at the top of each page holds a short video from Opti that shows how the page works.</li>
+<li><span>🗂️</span><strong>Four tabs, in order:</strong> Warm-Up → Word Study → Reading → Assignment. Each tab shows one step at a time. Tap <strong>👆 Next</strong> to go on, or <strong>Back</strong> to look again.</li>
+<li><span>🦉</span><strong>Opti the owl teaches each activity.</strong> Before each one, Opti explains what it is and what to do. On Word Study, Opti teaches in a short video. Every activity also has a <strong>What to do</strong> line.</li>
+<li><span>👆</span><strong>Anything with a 👆 can be tapped.</strong> Words with a dotted line show what they mean when tapped. The 🔊 buttons read words out loud.</li>
+<li><span>💾</span><strong>Answers save as you type</strong>, but only in that browser on that computer. Switching computers or clearing the browser loses them.</li>
+<li><span>📋</span><strong>Turning in work:</strong> at the end of the Assignment tab, 1. tap <strong>Copy my work</strong>, 2. go back to this lesson’s assignment in Canvas, 3. paste the work in the box, then tap Submit. A lesson isn’t turned in until it’s submitted there.</li>
+<li><span>🎙️</span><strong>Fluency is a separate page</strong> in the Canvas module, because recording doesn’t work inside a lesson. Keep the novel nearby.</li>
+<li><span>🗺️</span><strong>The Reading Road</strong> on the Reading tab is a map of the whole year. Opti stands on this week.</li>
+</ul>
+</section>
+
+<section class="card">
+<div class="card-head"><span class="ico">🧭</span><h2>This Week at a Glance</h2></div>
+<p>In Chapter 10, the Beavers and the children escape in the night. In the morning they hear sleigh bells, but it is not the Witch: it is Father Christmas, who gives each of them a gift and says the Witch’s magic is weakening. Chapter 11 follows Edmund on the Witch’s sledge, until the snow starts to melt so fast that the sledge gets stuck and spring comes to Narnia. In Chapter 12, the others reach the Stone Table and meet Aslan, and Peter fights his first battle. Day 1 reads Chapter 10, Day 2 Chapter 11, Day 3 Chapter 12, and Day 4 looks back at all three.</p>
+<div class="glance">
+<div class="box b-sky"><div class="box-label">Reading skill</div><strong>Symbols and repeated ideas.</strong> A symbol is a thing in a story that stands for a bigger idea. Good readers notice what keeps coming back and ask what it stands for.</div>
+<div class="box b-green"><div class="box-label">Big idea</div><strong>What does it mean when something in a story stands for more than just itself?</strong> The snow, the thaw and Father Christmas all point to something bigger.</div>
+</div>
+<p class="quote">“Aslan is on the move. The Witch’s magic is weakening.”<small>Father Christmas, Chapter 10</small></p>
+</section>
+
+<section class="card">
+<div class="card-head"><span class="ico">📅</span><h2>Day by Day</h2></div>
+<table class="days">
+<thead><tr><th>Lesson</th><th>Reading</th><th>Big question</th></tr></thead>
+<tbody>
+<tr><td class="day-n">28.1<span>Day 1</span></td>
+<td><span class="ch">Chapter 10: The Spell Begins to Break</span><br>Your student explains what Father Christmas’s arrival and his gifts might stand for, then writes a short paragraph about one symbol.<br><span class="pill p-guide">Guide: Opti</span><span class="pill p-extra">Sentence rewrite</span></td>
+<td>What does it mean when something in a story stands for more than just itself?</td></tr>
+<tr><td class="day-n">28.2<span>Day 2</span></td>
+<td><span class="ch">Chapter 11: Aslan Is Nearer</span><br>Your student tracks the thaw through Edmund’s eyes and how the Witch reacts, then makes the symbol paragraph more precise.<br><span class="pill p-guide">Guide: Opti</span><span class="pill p-poem">Poetry</span><span class="pill p-extra">Read Like a Writer video</span></td>
+<td>How do you recognize a symbol, something that stands for more than just itself?</td></tr>
+<tr><td class="day-n">28.3<span>Day 3</span></td>
+<td><span class="ch">Chapter 12: Peter’s First Battle</span><br>Your student explains what Peter does, how Aslan answers, and how it connects to the four thrones, then adds the symbol paragraph to the full response.<br><span class="pill p-guide">Guide: Opti</span><span class="pill p-extra">Read Like a Writer</span></td>
+<td>How does the battle in Chapter 12 connect to the bigger symbols in the story?</td></tr>
+<tr><td class="day-n">28.4<span>Day 4</span></td>
+<td><span class="ch">Look back: Chapters 10–12</span><br>Your student names one symbol, backs it up with details, and polishes the literary response.<br><span class="pill p-guide">Guide: Opti</span><span class="pill p-poem">Poetry</span><span class="pill p-extra">Read Like a Writer</span></td>
+<td>Why do authors use symbols? What can a symbol do that saying it straight out cannot?</td></tr>
+<tr class="extra-row"><td class="day-n">🎙️<span>Fluency</span></td>
+<td colspan="2">The thaw in Chapter 11, seen through Edmund’s eyes: “Every moment the patches of green grew bigger and the patches of snow grew smaller.” Your student reads it three times (right words, then smooth, then letting the “Every moment” sentences speed up like the thaw), then <strong>records and submits in Canvas.</strong></td></tr>
+<tr class="extra-row"><td class="day-n">📋<span>Check-In</span></td>
+<td colspan="2">A 14-point check on the week, in Canvas: apostrophes, the word parts com- and con-, endings that change a word, a short passage from Chapter 11, and a short writing response.</td></tr>
+</tbody>
+</table>
+</section>
+
+<section class="card">
+<div class="card-head"><span class="ico">🔤</span><h2>Words to Know</h2><span class="tag">Use them at home!</span></div>
+<div class="words">
+<div class="word"><b>renewed</b><span>made new again; restored to a fresh state</span></div>
+<div class="word"><b>herald</b><span>a person or thing that announces something important is coming</span></div>
+<div class="word"><b>solemn</b><span>serious, formal, and sincere</span></div>
+<div class="word"><b>jovial</b><span>cheerful and friendly; in high spirits</span></div>
+</div>
+<div class="skills">
+<div class="box b-sky"><div class="box-label">Word parts</div>The word parts <strong>com-</strong> and <strong>con-</strong> both mean <strong>with</strong> or <strong>together</strong>.<span class="eg">combine · connect · company · conversation</span></div>
+<div class="box b-gold"><div class="box-label">Spelling</div>Some endings change the base word first: <strong>double</strong> the last letter, <strong>drop</strong> the silent e, or change <strong>y to i</strong>.<span class="eg">run → running · hope → hoping · carry → carried</span></div>
+<div class="box b-green"><div class="box-label">Grammar</div>An <strong>apostrophe</strong> has two jobs. It joins two words, or it shows who something belongs to.<span class="eg">did not → didn’t · the bottle that belongs to Lucy → Lucy’s bottle</span></div>
+</div>
+</section>
+
+<section class="card">
+<div class="card-head"><span class="ico">✨</span><h2>New in the Lessons</h2></div>
+<div class="extras">
+<div class="box b-plum"><div class="box-label">🌼 The Great Thaw</div>This week’s word game is a snowy glade in Narnia. On Days 1 and 2 your student picks what a com- or con- word means. On Days 3 and 4 they decide which change a base word needs before an ending goes on (double, drop the e, change y to i, or none). Each right answer melts a snow patch and a spring flower from Chapter 11 comes up, and by Day 4 the whole glade has thawed.</div>
+<div class="box b-gold"><div class="box-label">🎬 Opti’s videos</div>Every Word Study activity, all four days, starts with a short video where Opti shows how it works. On Day 2, Opti also shows Read Like a Writer with a different sentence from Chapter 11. The videos have captions for now; Opti’s voice will be added later.</div>
+<div class="box b-sky"><div class="box-label">🌍 World Notes</div>Each day opens the Reading tab with a real thing behind the story: the old English Father Christmas, the real spring flowers Edmund sees (snowdrops, celandines, crocuses), how knights were made long ago, and real wolves, which are shy of people and not like the villains in old stories.</div>
+<div class="box b-green"><div class="box-label">🏮 Truth Watch</div>After reading, your student decides if three moments show someone being honest: Yes or Not yet. This week includes the Witch’s broken promise to Edmund, a little squirrel who tells the truth, and Peter owning up to his part in Edmund going wrong.</div>
+</div>
+<p class="small" style="margin-top:12px;">Each day opens with real art, never pictures from the book: Father Christmas from a London newspaper at Christmas in 1848, Isaac Levitan’s painting of melting snow in March (1895), Edmund Blair Leighton’s <em>The Accolade</em>, a painting of a knight being made (1901), and Vincent van Gogh’s <em>Almond Blossom</em> (1890), which he painted for a newborn baby as a sign of new life. Your student looks first, then taps to learn about it.</p>
+</section>
+
+<section class="card">
+<div class="card-head"><span class="ico">⚠️</span><h2>Good to Know</h2></div>
+<p>Chapter 11 is hard for Edmund: the Witch is cruel to him, slaps him, ties his hands, and turns a happy party of animals into stone. In Chapter 12, a huge wolf named Maugrim chases Susan up a tree, and Peter fights it with his sword and kills it. The fight is short, but it is the scariest part of the book so far. Peter is not hurt, and afterward Aslan makes him a knight. If your student is worried, it helps to talk about how Peter was scared and did the brave thing anyway.</p>
+</section>
+
+<section class="card">
+<div class="card-head"><span class="ico">✍️</span><h2>Your Student’s Writing</h2><span class="tag">Writer’s Workshop</span></div>
+<div class="essay"><span>Wk 27 · Compare two characters’ perspectives</span><span class="now">Wk 28 · Add a symbol paragraph</span></div>
+<p>This week your student adds a paragraph about a symbol to the literary response. Day 1: <strong>write</strong> two or three sentences about one symbol from Chapter 10 (name it, say what it stands for, and why it matters). Day 2: <strong>revise</strong> one vague phrase with a precise idea and a word like <em>represents</em> or <em>suggests</em>. Day 3: <strong>add</strong> the paragraph to the whole response with a joining phrase like <em>In addition</em>. Day 4: <strong>polish</strong> and add a closing sentence about what the symbols do for the reader.</p>
+<p class="small">An example writer named Clara shows each step first.</p>
+</section>
+
+<section class="card">
+<div class="card-head"><span class="ico">💬</span><h2>Ask at Home</h2></div>
+<ol class="ask">
+<li><span class="q">Why was it such big news when Father Christmas got into Narnia?</span><span class="listen">Listen for: the Witch made it always winter and never Christmas; her magic is weakening.</span></li>
+<li><span class="q">What does the melting snow stand for?</span><span class="listen">Listen for: the Witch losing her power, hope, Aslan coming; any answer with a reason from the book.</span></li>
+<li><span class="q">Was Peter brave in Chapter 12, even though he felt sick with fear?</span><span class="listen">Listen for: yes, because he did what he had to do anyway.</span></li>
+<li><span class="q">Where does the apostrophe go in “didnt”? And in “Lucys bottle”?</span><span class="listen">Listen for: didn’t (where the o was), Lucy’s (the bottle belongs to Lucy).</span></li>
+</ol>
+</section>
+
+<div class="two">
+<section class="card">
+<div class="card-head"><span class="ico">📬</span><h2>What Gets Turned In</h2></div>
+<ul class="check">
+<li>Each lesson’s Assignment tab: the chapter questions and the day’s writing step, copied and pasted into Canvas</li>
+<li>The Week 28 fluency recording</li>
+<li>The Week 28 Check-In in Canvas</li>
+</ul>
+</section>
+<section class="card">
+<div class="card-head"><span class="ico">🏡</span><h2>Try at Home</h2></div>
+<ul class="check">
+<li>Spot symbols around you: what does a red light, a birthday candle or a flag stand for?</li>
+<li>Play “together” words: who can name a com- or con- word that means with or together?</li>
+<li>Write a grocery list with words that change: bake → baking, try → tried, shop → shopping</li>
+</ul>
+</section>
+</div>
+
+<section class="card">
+<div class="card-head"><span class="ico">🎒</span><h2>Have on Hand</h2></div>
+<ul class="check">
+<li><em>The Lion, the Witch and the Wardrobe</em> by C.S. Lewis</li>
+</ul>
+</section>
+
+<section class="card next">
+<div class="card-head"><span class="ico">⏭️</span><h2>Coming Up in Week 29</h2></div>
+<p><strong>Chapters 13–15.</strong> Reading skill: explaining a story’s theme with details from across the book. Word parts: the root <strong>ject</strong>, which means throw. Chapter 14 has the saddest part of the book; the unit guide tells what happens so you can be ready.</p>
+</section>
+
+<p class="foot">Optima Academy Online · 3rd Grade ELA · Week 28 Family Guide</p>
+</div>
+</body>
+</html>
