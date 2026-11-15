@@ -52,3 +52,7 @@ Every image here is public domain, found on Wikimedia Commons, resized/cropped f
 | lww/lww-levitan-march.jpg | March | Isaac Levitan | 1895 | Public domain | https://commons.wikimedia.org/wiki/File:Mart_levitan.jpg |
 | lww/lww-accolade.jpg | The Accolade | Edmund Blair Leighton | 1901 | Public domain | https://commons.wikimedia.org/wiki/File:Edmund_blair_leighton_accolade.jpg |
 | lww/lww-almond-blossom.jpg | Almond Blossom | Vincent van Gogh | 1890 | Public domain | https://commons.wikimedia.org/wiki/File:Vincent_van_Gogh_-_Almond_blossom_-_Google_Art_Project.jpg |
+| lww/lww-dolmen-snow.jpg | Dolmen in the Snow (Cairn in Snow) | Caspar David Friedrich | 1807 | Public domain | https://commons.wikimedia.org/wiki/File:Caspar_David_Friedrich_-_Cairn_in_Snow_-_Google_Art_Project.jpg |
+| lww/lww-moonrise-sea.jpg | Moonrise over the Sea | Caspar David Friedrich | 1822 | Public domain | https://commons.wikimedia.org/wiki/File:Caspar_David_Friedrich_-_Mondaufgang_am_Meer_-_Google_Art_Project.jpg |
+| lww/lww-impression-sunrise.jpg | Impression, Sunrise | Claude Monet | 1872 | Public domain | https://commons.wikimedia.org/wiki/File:Monet_-_Impression,_Sunrise.jpg |
+| lww/lww-bonheur-lion.jpg | Portrait of a Lion (El Cid) | Rosa Bonheur | 1879 | Public domain | https://commons.wikimedia.org/wiki/File:Rosa_Bonheur_-_Portrait_of_a_Lion_-_Prado.jpg |
