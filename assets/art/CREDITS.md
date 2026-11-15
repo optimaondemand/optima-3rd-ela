@@ -48,3 +48,7 @@ Every image here is public domain, found on Wikimedia Commons, resized/cropped f
 | lww/lww-bird-trap.jpg | Winter Landscape with Skaters and a Bird Trap | Pieter Bruegel the Elder | 1565 | Public domain | https://commons.wikimedia.org/wiki/File:Pieter_Bruegel_the_Elder_-_Winter_Landscape_with_Skaters_and_Bird_Trap_-_WGA03333.jpg |
 | lww/lww-spired-castle.jpg | Neuschwanstein Castle, Bavaria, Germany (photochrom print) | Unknown photographer | between 1890 and 1905 | Public domain | https://commons.wikimedia.org/wiki/File:Neuschwanstein_Castle_LOC_print_rotated.jpg |
 | lww/lww-moonlight-forest.jpg | Moonlight Spots in the Forest. Winter | Arkhip Kuindzhi | 1898–1908 | Public domain | https://commons.wikimedia.org/wiki/File:Kuindzhi_Moonlight_spots_in_a_forest_Winter_1898_1908.jpg |
+| lww/lww-father-christmas.jpg | Christmas with the Yule Log | The Illustrated London News (artist not named) | 23 December 1848 | Public domain | https://commons.wikimedia.org/wiki/File:Christmas_with_the_Yule_Log,_Illustrated_London_News,_23_Dec_1848.jpg |
+| lww/lww-levitan-march.jpg | March | Isaac Levitan | 1895 | Public domain | https://commons.wikimedia.org/wiki/File:Mart_levitan.jpg |
+| lww/lww-accolade.jpg | The Accolade | Edmund Blair Leighton | 1901 | Public domain | https://commons.wikimedia.org/wiki/File:Edmund_blair_leighton_accolade.jpg |
+| lww/lww-almond-blossom.jpg | Almond Blossom | Vincent van Gogh | 1890 | Public domain | https://commons.wikimedia.org/wiki/File:Vincent_van_Gogh_-_Almond_blossom_-_Google_Art_Project.jpg |
