@@ -5,7 +5,7 @@
      DATA.glossary  = [ {w, m, key} ]      dotted words, 🔊 on key words
      DATA.sayWords  = [ 'word', … ]          🔊 on the vocab cards (says just the word)
      DATA.cards     = [ {id, kind, tab, after, title, sub, look, todo, …} ]
-     DATA.wordgame  = {type:'tower'|'wagon'|'chase'|'sewer'|'castle'|'illuminate'|'market'|'wardrobe'|'delight', …}  Up the North Tower / Fill the Wagon / The Chase / Out of the Sewer / Build the Castle / Illuminate the Page  / Market Day / Through the Wardrobe
+     DATA.wordgame  = {type:'tower'|'wagon'|'chase'|'sewer'|'castle'|'illuminate'|'market'|'wardrobe'|'delight'|'icehole', …}  Up the North Tower / Fill the Wagon / The Chase / Out of the Sewer / Build the Castle / Illuminate the Page  / Market Day / Through the Wardrobe
    The rules for 8-year-olds: every module opens with a "What to do:"
    line Opti reads, shows one step at a time, and every picture opens
    on notice/wonder before it says what it is.
@@ -1233,6 +1233,104 @@ WORDGAME.delight = function (cfg) {
   if (anchor) anchor.parentNode.insertBefore(card, anchor); else panel.appendChild(card);
 };
 
+/* ── Mr. Beaver's Ice Hole: one round a day (week 27, LWW Ch. 7-9) ──
+   DATA.wordgame = { type:'icehole', title, sub, look, todo, stepTitle, win, winWeek,
+     bins:[ {id, label, ic} ] (2-4), items:[ {t, bin, why, miss:{binId:'…'}} ] }
+   A frozen pool with Mr. Beaver's fishing hole and his pail. Read the word
+   on the fish (in the play area, never on the picture), tap the right
+   answer. Each right answer lays one trout on the ice beside the hole;
+   day d starts with days 1…d-1's fish, so the week lands one catch
+   (4 rows of 8). Practice only; never fills a graded box. */
+function iceholeSVG(have, day, per) {
+  var total = per * 4, W = 320, H = 210;
+  var s = '<svg viewBox="0 0 ' + W + ' ' + H + '" width="100%" style="max-width:360px" role="img" aria-label="' +
+    Math.min(have, total) + ' of ' + total + ' fish are on the ice">' +
+    '<rect width="' + W + '" height="' + H + '" rx="12" fill="#DCE6F2"/>' +
+    /* far bank of snow and dark pines behind the pool */
+    '<path d="M0 44 Q80 30 160 40 T320 38 V62 H0 Z" fill="#FFFFFF"/>' +
+    '<path d="M18 46 l9 -24 l9 24 Z M46 44 l7 -18 l7 18 Z M262 42 l9 -26 l9 26 Z M290 44 l7 -18 l7 18 Z" fill="#2E4A3A"/>' +
+    /* the frozen pool: one flat sheet of dark green ice */
+    '<path d="M0 62 H320 V210 H0 Z" fill="#B9CFC9"/>' +
+    '<path d="M0 62 H320 V74 Q160 68 0 74 Z" fill="#A7C0B9"/>' +
+    '<path d="M30 150 l40 -6 M190 96 l50 -5 M120 182 l60 -7" stroke="#D7E6E1" stroke-width="2" stroke-linecap="round"/>' +
+    /* the hole Mr. Beaver keeps open with his hatchet, with a rim of chipped ice */
+    '<ellipse cx="74" cy="112" rx="40" ry="14" fill="#E9F1EE"/>' +
+    '<ellipse cx="74" cy="112" rx="33" ry="10" fill="#1F3B4D"/>' +
+    '<ellipse cx="68" cy="110" rx="16" ry="3" fill="none" stroke="#3E6378" stroke-width="1.4"/>' +
+    /* a wooden pail standing on the ice */
+    '<path d="M28 150 h30 l-4 30 h-22 Z" fill="#9A6A3C" stroke="#5E3F21" stroke-width="1.6"/>' +
+    '<path d="M29 158 h28 M30 170 h26" stroke="#5E3F21" stroke-width="1.4"/>' +
+    '<path d="M30 151 q13 -16 26 0" fill="none" stroke="#444" stroke-width="1.6"/>';
+  /* the catch, laid in rows on the ice to the right of the hole */
+  var x0 = 128, y0 = 104, cw = 23, ch = 24;
+  for (var k = 0; k < total; k++) {
+    var row = Math.floor(k / 8), col = k % 8;
+    var x = x0 + col * cw, y = y0 + row * ch;
+    var today = k >= (day - 1) * per && k < day * per;
+    if (k < have) {
+      s += '<ellipse cx="' + (x + 9) + '" cy="' + (y + 14) + '" rx="2" ry="1.2" fill="#9AB4AD" opacity=".7"/>' +
+           '<path d="M' + x + ' ' + (y + 11) + ' q9 -7 17 0 q-8 7 -17 0 Z" fill="#8A9A63" stroke="#4E5A33" stroke-width=".8"/>' +
+           '<path d="M' + (x + 17) + ' ' + (y + 11) + ' l5 -4 v8 Z" fill="#7A8A55" stroke="#4E5A33" stroke-width=".8"/>' +
+           '<path d="M' + (x + 3) + ' ' + (y + 11.5) + ' h11" stroke="#D98C7A" stroke-width="1.2"/>' +
+           '<circle cx="' + (x + 3) + '" cy="' + (y + 10) + '" r=".9" fill="#222"/>';
+    } else if (today) {
+      s += '<path d="M' + x + ' ' + (y + 11) + ' q9 -7 17 0 q-8 7 -17 0 Z M' + (x + 17) + ' ' + (y + 11) + ' l5 -4 v8 Z" fill="none" stroke="#7E9A92" stroke-width=".9" stroke-dasharray="2 2"/>';
+    }
+  }
+  if (have >= total) s += '<rect x="96" y="184" width="128" height="20" rx="10" fill="#2F5A7A"/><text x="160" y="198" text-anchor="middle" font-family="Nunito,sans-serif" font-weight="800" font-size="12" fill="#fff">A fine catch of fish!</text>';
+  return s + '</svg>';
+}
+WORDGAME.icehole = function (cfg) {
+  var items = cfg.items || [], bins = cfg.bins || []; if (!items.length || bins.length < 2) return;
+  var panel = document.getElementById('tab-words'); if (!panel) return;
+  var anchor = panel.querySelector('.tab-next-wrap');
+  var day = dayNum(LESSON.day), PER = items.length;
+  var KEY = 'oao.g3ela.wg.' + LID;
+  var st = Sparkle.get(KEY, null) || { i: 0, misses: 0 };
+  if (st.i > PER) st.i = PER;
+  var card = cardShell({ id: 'icehole', kind: 'icehole', title: cfg.title || 'Mr. Beaver’s Ice Hole', sub: cfg.sub || '' }, '🐟');
+  var body = card.querySelector('.spk-card-body');
+  body.insertAdjacentHTML('beforeend', lookCard(cfg.look, cfg.todo) +
+    '<div class="g3-tw-grid"><div class="g3-icehole"></div><div class="g3-tw-play" aria-live="polite"></div></div>');
+  var bx = body.querySelector('.g3-icehole'), play = body.querySelector('.g3-tw-play');
+  function have() { return (day - 1) * PER + st.i; }
+  function paint(msg, ok, tried) {
+    bx.innerHTML = iceholeSVG(have(), day, PER);
+    if (st.i >= PER) {
+      play.innerHTML = '<div class="g3-finish">✓ ' + esc(day === 4 ? (cfg.winWeek || cfg.win || '') : (cfg.win || '')) + '</div>' +
+        '<button type="button" class="spk-mini-btn g3-again">Play today’s round again</button>';
+      play.querySelector('.g3-again').onclick = function () { st = { i: 0, misses: 0 }; Sparkle.set(KEY, st); paint(); };
+      return;
+    }
+    var it = items[st.i];
+    var h = stepHead(st.i + 1, PER, cfg.stepTitle || 'Which one is right?') +
+      '<div class="g3-mk-basket"><span class="g3-mk-ic" aria-hidden="true">🐟</span><span>' + it.t + '</span></div><div class="g3-stalls">';
+    bins.forEach(function (b) {
+      h += '<button type="button" class="g3-stall' + (tried && tried.indexOf(b.id) >= 0 ? ' tried' : '') + '" data-b="' + esc(b.id) + '">' +
+           '<span class="g3-sack-ic" aria-hidden="true">' + esc(b.ic || '🪣') + '</span><span>' + esc(b.label) + '</span></button>';
+    });
+    h += '</div>';
+    if (msg) h += '<div class="g3-fb ' + (ok ? 'ok' : 'no') + '">' + msg + '</div>';
+    play.innerHTML = h;
+    play.querySelectorAll('.g3-stall').forEach(function (b) {
+      b.onclick = function () {
+        var id = b.getAttribute('data-b');
+        if (id === it.bin) {
+          st.i++; Sparkle.set(KEY, st); wgSfx(st.i >= PER ? 'win' : 'chime');
+          if (st.i >= PER) { paint(); return; }
+          paint('✓ ' + esc(it.why || 'Right! The fish lands on the ice.'), true);
+          var sv = bx.querySelector('svg'); if (sv) { sv.classList.remove('g3-clink'); void sv.getBoundingClientRect(); sv.classList.add('g3-clink'); }
+        } else {
+          st.misses++; Sparkle.set(KEY, st); wgSfx('bonk');
+          paint(esc((it.miss || {})[id] || 'Not that one. Read it again, then try another.'), false, (tried || []).concat([id]));
+        }
+      };
+    });
+  }
+  paint();
+  if (anchor) anchor.parentNode.insertBefore(card, anchor); else panel.appendChild(card);
+};
+
 /* ── Fill the Wagon: one round a day ────────────────────────────────
    DATA.wordgame = { type:'wagon', title, sub, look, todo, win, winWeek,
      bins:[ {id, label} ], items:[ {t, bin, why, miss:{binId:'…'}} ] }
@@ -1557,7 +1655,7 @@ function buildSpotlight() {
    assets/audio/guide/opti/g3ela-how-<slug>.mp3 (shared by every lesson
    that uses the same words). The button stays hidden until the file is
    really there, so a line without a recording just reads as text. */
-var SAY_FOR_CARD = { 'spk-copia-card': 'copia', 'g3card-tower': 'tower', 'g3card-wagon': 'wagon', 'g3card-chase': 'chase', 'g3card-sewer': 'sewer', 'g3card-castle': 'castle', 'g3card-illuminate': 'illuminate', 'g3card-market': 'market', 'g3card-wardrobe': 'wardrobe', 'g3card-delight': 'delight', 'g3card-backward': 'backward' };
+var SAY_FOR_CARD = { 'spk-copia-card': 'copia', 'g3card-tower': 'tower', 'g3card-wagon': 'wagon', 'g3card-chase': 'chase', 'g3card-sewer': 'sewer', 'g3card-castle': 'castle', 'g3card-illuminate': 'illuminate', 'g3card-market': 'market', 'g3card-wardrobe': 'wardrobe', 'g3card-delight': 'delight', 'g3card-icehole': 'icehole', 'g3card-backward': 'backward' };
 function buildSayDo() {
   document.querySelectorAll('.g3-todo:not([data-say])').forEach(function (p) {
     for (var k in SAY_FOR_CARD) {
