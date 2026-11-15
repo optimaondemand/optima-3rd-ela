@@ -1,0 +1,343 @@
+{
+ "connector": "After dinner at the Beavers' house, Mr. Beaver tells the children about Aslan. But someone at the table is not listening the way the others are. In Chapter 8, look for clues about what Edmund is thinking.",
+ "writingFocus": "literary response",
+ "dol": {
+  "a": {
+   "raw": "lucy saw that edmund was gone and she told the others",
+   "fixed": "<strong>L</strong>ucy saw that <strong>E</strong>dmund was gone<strong>,</strong> and she told the others<strong>.</strong>",
+   "why": "Lucy and Edmund are names. A comma goes before and. Saw and told are irregular past verbs."
+  },
+  "b": {
+   "raw": "peter wanted to look for edmund but mr beaver said there was no use",
+   "fixed": "<strong>P</strong>eter wanted to look for <strong>E</strong>dmund<strong>,</strong> but <strong>M</strong>r<strong>.</strong> <strong>B</strong>eaver said there was no use<strong>.</strong>",
+   "why": "Peter, Edmund and Mr. Beaver are names. A comma goes before but. Said is an irregular past verb."
+  }
+ },
+ "hints": {},
+ "miss": {
+  "match": {
+   "authority": "Authority is about being in charge. Look for the meaning about power.",
+   "prophecy": "A prophecy is about the future. Look for that meaning.",
+   "betray": "Betray is about trust. Look for the meaning about being disloyal.",
+   "treachery": "Treachery is a very serious kind of betraying. Look for the meaning that says very serious."
+  }
+ },
+ "flags": {
+  "journal-q1": {
+   "quote": false,
+   "count": 1
+  },
+  "journal-q2": {
+   "quote": false,
+   "count": 1
+  },
+  "journal-q3": {
+   "quote": false,
+   "count": 1
+  }
+ },
+ "wordgame": {
+  "type": "icehole",
+  "title": "Mr. Beaver’s Ice Hole",
+  "sub": "Every right answer lands a fish on the ice.",
+  "todo": "Read the word on the fish. Tap the right answer. A right answer lands the fish on the ice.",
+  "win": "Today's 8 fish are on the ice. Come back next lesson to catch more.",
+  "winWeek": "A fine catch! Mrs. Beaver will have the frying pan ready.",
+  "look": "Eight new fish with eight new words. Which word part makes each one mean not: in- or im-? Remember: im- goes before m or p. The fish from Day 1 are still on the ice.",
+  "stepTitle": "in- or im-?",
+  "bins": [
+   {
+    "id": "in",
+    "label": "in- (not)",
+    "ic": "🪣"
+   },
+   {
+    "id": "im",
+    "label": "im- (not)",
+    "ic": "🪣"
+   }
+  ],
+  "items": [
+   {
+    "t": "measurable",
+    "bin": "im",
+    "why": "im + measurable = immeasurable: too big to measure.",
+    "miss": {
+     "in": "Look at the first letter of the word. Is it m or p?"
+    }
+   },
+   {
+    "t": "dependent",
+    "bin": "in",
+    "why": "in + dependent = independent: not depending on others.",
+    "miss": {
+     "im": "Look at the first letter of the word. The other word part only goes before m or p."
+    }
+   },
+   {
+    "t": "practical",
+    "bin": "im",
+    "why": "im + practical = impractical: not practical.",
+    "miss": {
+     "in": "Look at the first letter of the word. Is it m or p?"
+    }
+   },
+   {
+    "t": "secure",
+    "bin": "in",
+    "why": "in + secure = insecure: not feeling safe.",
+    "miss": {
+     "im": "Look at the first letter of the word. The other word part only goes before m or p."
+    }
+   },
+   {
+    "t": "mortal",
+    "bin": "im",
+    "why": "im + mortal = immortal: living forever.",
+    "miss": {
+     "in": "Look at the first letter of the word. Is it m or p?"
+    }
+   },
+   {
+    "t": "justice",
+    "bin": "in",
+    "why": "in + justice = injustice: something unfair.",
+    "miss": {
+     "im": "Look at the first letter of the word. The other word part only goes before m or p."
+    }
+   },
+   {
+    "t": "personal",
+    "bin": "im",
+    "why": "im + personal = impersonal: not personal.",
+    "miss": {
+     "in": "Look at the first letter of the word. Is it m or p?"
+    }
+   },
+   {
+    "t": "flexible",
+    "bin": "in",
+    "why": "in + flexible = inflexible: not able to bend.",
+    "miss": {
+     "im": "Look at the first letter of the word. The other word part only goes before m or p."
+    }
+   }
+  ]
+ },
+ "glossary": [
+  {
+   "w": "perspective",
+   "m": "how one character sees and feels about what happens",
+   "key": true
+  },
+  {
+   "w": "prefix",
+   "m": "a word part added to the front of a word that changes its meaning",
+   "key": true
+  },
+  {
+   "w": "base word",
+   "m": "a word that can stand on its own before a prefix is added. Happy is the base word in unhappy."
+  },
+  {
+   "w": "irregular verb",
+   "m": "a verb that does not add -ed for the past, like go and went",
+   "key": true
+  },
+  {
+   "w": "limerick",
+   "m": "a funny poem with five lines and a bouncy beat"
+  },
+  {
+   "w": "honesty",
+   "m": "telling the truth, even when it is hard",
+   "key": true
+  }
+ ],
+ "sayWords": [],
+ "cards": [
+  {
+   "id": "world",
+   "kind": "info",
+   "tab": "reading",
+   "after": "Read:|Look Back",
+   "before": true,
+   "icon": "🌍",
+   "title": "World Notes: Ice Fishing",
+   "sub": "A real thing behind the story",
+   "todo": "Read the note. Then read the chapter with your lens in mind.",
+   "text": [
+    "In very cold places, people fish through a hole they cut in thick ice.",
+    "Mr. Beaver keeps his hole open every day with his hatchet, so it does not freeze over.",
+    "Thick ice can hold a person, but thin ice cannot. Never walk on ice unless a grown-up says it is safe."
+   ]
+  }
+ ],
+ "transcripts": {
+  "welcome": "Hi, it's Opti. After dinner, Mr. Beaver tells about Aslan. Look for clues about what Edmund is thinking in Chapter 8.",
+  "guide1": "Word work: match not words, fix wrong verbs, and hunt for prefixes.",
+  "guide2": "Read Chapter 8. Then watch my video in Read Like a Writer.",
+  "guide3": "Today you draft your comparison."
+ },
+ "notes": {
+  "wordParts": "The word parts in- and im- both mean not. inactive = not active. impolite = not polite. Use im- before words that start with m or p.",
+  "grammar": "An irregular verb does not add -ed for the past. You learn each one: say → said, see → saw, sit → sat.",
+  "spelling": "A prefix goes on the front of a base word, and the base word keeps its spelling. Peel the prefix off to read the base: un + happy.",
+  "wgrd": "Lewis shows what Edmund is thinking through what he does. He slips away while the others are listening.",
+  "vocab": [
+   [
+    "authority",
+    "the right or power to give orders and make decisions"
+   ],
+   [
+    "prophecy",
+    "a statement that something will happen in the future"
+   ],
+   [
+    "betray",
+    "to be disloyal to someone who trusted you"
+   ],
+   [
+    "treachery",
+    "betraying someone's trust in a very serious way"
+   ]
+  ]
+ },
+ "plate": {
+  "src": "art/lww/lww-bird-trap.jpg",
+  "alt": "An old painting of a snowy village beside a frozen river, with many small people skating and playing on the ice",
+  "credit": "Winter Landscape with Skaters and a Bird Trap · Pieter Bruegel the Elder, 1565 · Royal Museums of Fine Arts of Belgium · Public domain",
+  "look": "A painting by Pieter Bruegel from 1565, more than 450 years ago. The river is frozen so hard that a whole village can skate and play on it. In Chapters 7 and 8, the Beavers' house sits on a dam above a river frozen just like this one.",
+  "lookBtn": "Tap to learn about this painting of a frozen river"
+ },
+ "teach": {
+  "dropTurnNotes": true,
+  "mods": [
+   {
+    "id": "wgrd",
+    "find": "What Good Readers",
+    "fold": [
+     ":scope > p:not(.g3-do)",
+     ":scope > .key-concept",
+     ":scope > .socratic-box"
+    ],
+    "todo": "Listen to Opti. Then tap the lens you will use today.",
+    "script": "[warmly] Here's today's reading tip. Lewis doesn't always tell you what Edmund is thinking. Watch what Edmund does and says at dinner, and figure it out. Then tap one of the two lenses below to use while you read. You don't need to write anything."
+   },
+   {
+    "id": "dol",
+    "find": "Daily Oral",
+    "fold": [],
+    "todo": "Tap the yellow parts. Then pick Sentence A or B and type it the right way.",
+    "script": "Let's fix a sentence. The correct one first. Mr. Beaver told the children about Aslan, and nobody saw Edmund go. Told and saw are past, with no e d. Tap the yellow parts. Then pick Sentence A or Sentence B, and type it the right way."
+   },
+   {
+    "id": "poem",
+    "find": "Poetry",
+    "fold": [
+     ":scope > .callout"
+    ],
+    "todo": "Read the first limerick out loud. Then answer the question out loud.",
+    "script": "[curious] Here's a limerick, a funny poem with five lines and a bouncy beat. Read the first one out loud, and listen to the last word of each line. Which lines rhyme together? Answer out loud."
+   },
+   {
+    "id": "morph",
+    "find": "Morphology",
+    "fold": [
+     ":scope > .callout:not(:has(+ .match-game))",
+     ":scope > .key-concept"
+    ],
+    "todo": "Tap a word, then tap what it means. Match all four words.",
+    "script": "Watch one match first. Incomplete. Find the word part at the front. It means not. What's left? Complete. So incomplete means not complete, like a puzzle with a missing piece. That's my match! Read the Remember box. Then tap a word, and tap what it means. Match all four words.",
+    "video": "g3ela-27-2-teach-morph"
+   },
+   {
+    "id": "vocab",
+    "find": "Vocabulary",
+    "fold": [],
+    "todo": "Tap a word, then tap its meaning. Match all four words.",
+    "script": "Here's a cozy word from Chapter 7. Snug. Lucy thinks the Beavers have a very snug little home. Warm, cozy and safe! Now tap a word, then tap its meaning. Match all four.",
+    "video": "g3ela-27-2-teach-vocab"
+   },
+   {
+    "id": "gram",
+    "find": "Grammar",
+    "fold": [
+     ":scope > .callout:not(:has(+ .spotter-game)):not(:has(+ .fillin-game)):not(:has(+ .sort-game)):not(:has(+ .dol-check-btn))"
+    ],
+    "todo": "Find the wrong verbs. Tap Now check your thinking. Then tap every word that is wrong.",
+    "script": "Spot the wrong verb. The children drinked hot tea. Drinked? That's not a word! The past of drink is drank. The children drank hot tea. Check the verb in each of the four sentences, and tap Now check your thinking. Then fix the paragraph.",
+    "video": "g3ela-27-2-teach-gram"
+   },
+   {
+    "id": "spell",
+    "find": "Spelling",
+    "fold": [],
+    "foldText": [
+     "The Rule:"
+    ],
+    "todo": "Read the rule. Tap every word built from a prefix and a base word.",
+    "script": "Prefix hunt! Here's my sentence. Mom will preview the movie, then rewind the best part. Preview. Pre, plus view. Rewind. Re, plus wind. Two prefix words! Read the rule. Then tap every word built from a prefix and a base word.",
+    "video": "g3ela-27-2-teach-spell"
+   },
+   {
+    "id": "read",
+    "find": "^\\W*(Read:|Look Back)",
+    "fold": [],
+    "todo": "Read Chapter 8 in your book. Then try the Truth Watch below.",
+    "script": "Read Chapter 8 in your book, with your lens in mind. Then try the Truth Watch, and watch my video in the Read Like a Writer box before you write."
+   },
+   {
+    "id": "rwm",
+    "sel": ".rwm-box",
+    "after": ":scope > .rwm-header",
+    "label": "Opti shows you how",
+    "fold": [],
+    "script": "[warmly] Let's try all three parts with a different sentence from Chapter 8. He is our brother after all, even if he is rather a little beast. Part one, read like a reader. Peter is cross with Edmund, but he still wants to find him. Part two, read like a writer. After all, and even if, let Peter hold two feelings in one sentence. Part three, mimic. Here's mine: She is my best friend after all, even if she eats the last cookie. Now it's your turn with the sentence about the whiskered face. Write one sentence in each box.",
+    "video": "g3ela-27-2-teach-rwm"
+   },
+   {
+    "id": "chq",
+    "find": "Q1 —",
+    "fold": [],
+    "todo": "Answer each question in full sentences. Use details from the book.",
+    "script": "Three questions, in full sentences. One, what Edmund does near the end of Chapter 8, and when the others notice. Two, how the Beavers react. Three, one detail that shows Edmund's choice is a bad one."
+   },
+   {
+    "id": "write",
+    "find": "Writer.s Workshop",
+    "fold": [
+     ":scope > .callout"
+    ],
+    "foldText": [
+     "watch how",
+     "today.s tool"
+    ],
+    "todo": "Write your comparison in full sentences.",
+    "script": "Today you draft. Clara's first try said Lucy is good and Edmund is bad. Her draft says how each one feels, and uses the word reveals. Write your draft in full sentences."
+   }
+  ],
+  "cards": {}
+ },
+ "virtue": {
+  "name": "honesty",
+  "title": "Truth Watch: Is someone being honest?",
+  "items": [
+   {
+    "t": "Mr. Beaver tells the children the hard truth: Aslan is not safe, but he is good.",
+    "ok": true,
+    "why": "He tells them what is true, even though it is a little scary."
+   },
+   {
+    "t": "Lucy admits, almost in a whisper, that Edmund has been in Narnia alone before.",
+    "ok": true,
+    "why": "She tells the truth, even though it is about her own brother."
+   },
+   {
+    "t": "Edmund slips out of the Beavers' house without telling anyone.",
+    "ok": false,
+    "why": "Sneaking away in secret is not being honest with his family."
+   }
+  ]
+ }
+}
