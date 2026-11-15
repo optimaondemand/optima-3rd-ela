@@ -4754,7 +4754,7 @@ function iceholeSVG(have, day, per) {
       s += '<path d="M' + x + ' ' + (y + 11) + ' q9 -7 17 0 q-8 7 -17 0 Z M' + (x + 17) + ' ' + (y + 11) + ' l5 -4 v8 Z" fill="none" stroke="#7E9A92" stroke-width=".9" stroke-dasharray="2 2"/>';
     }
   }
-  if (have >= total) s += '<rect x="96" y="184" width="128" height="20" rx="10" fill="#2F5A7A"/><text x="160" y="198" text-anchor="middle" font-family="Nunito,sans-serif" font-weight="800" font-size="12" fill="#fff">A fine catch of fish!</text>';
+  if (have >= total) s += '<rect x="96" y="8" width="128" height="20" rx="10" fill="#2F5A7A"/><text x="160" y="22" text-anchor="middle" font-family="Nunito,sans-serif" font-weight="800" font-size="12" fill="#fff">A fine catch of fish!</text>';
   return s + '</svg>';
 }
 WORDGAME.icehole = function (cfg) {
