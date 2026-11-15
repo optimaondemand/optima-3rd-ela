@@ -40,3 +40,7 @@ Every image here is public domain, found on Wikimedia Commons, resized/cropped f
 | lww/lww-hunters-snow.jpg | The Hunters in the Snow (Winter) | Pieter Bruegel the Elder | 1565 | Public domain | https://commons.wikimedia.org/wiki/File:Pieter_Bruegel_the_Elder_-_Hunters_in_the_Snow_(Winter)_-_Google_Art_Project.jpg |
 | lww/lww-lamplight.jpg | Boar Lane, Leeds, by Lamplight | John Atkinson Grimshaw | 1881 | Public domain | https://commons.wikimedia.org/wiki/File:John_Atkinson_Grimshaw_Boar_Lane_Leeds_by_lamplight_1881.jpg |
 | lww/lww-reindeer-sledges.jpg | Crossing Russian Lapland (BM 1977,0611.107), for A Winter in Lapland and Sweden (crop: picture area) | William Westall | 1827 | Public domain | https://commons.wikimedia.org/wiki/File:Crossing_Russian_Lapland_(BM_1977,0611.107).jpg |
+| lww/lww-skaters.jpg | A Winter Scene with Skaters near a Castle | Hendrick Avercamp | about 1608–1609 | Public domain | https://commons.wikimedia.org/wiki/File:Hendrick_Averkamp_A_Winter_Scene_with_Skaters_near_a_Castle.jpg |
+| lww/lww-country-house.jpg | Wivenhoe Park, Essex | John Constable | 1816 | Public domain | https://commons.wikimedia.org/wiki/File:John_Constable_-_Wivenhoe_Park,_Essex,_1816.jpg |
+| lww/lww-robin.jpg | Robin, The Birds of Europe, vol. II (crop: the birds) | John and Elizabeth Gould | 1837 | Public domain | https://commons.wikimedia.org/wiki/File:GouldBirdsEuropeIIRobin.jpg |
+| lww/lww-wild-north.jpg | In the Wild North | Ivan Shishkin | 1891 | Public domain | https://commons.wikimedia.org/wiki/File:Шишкин_И._И._(1891)_На_севере_диком.jpg |
