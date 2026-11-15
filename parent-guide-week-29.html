@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Week 29 Family Guide · The Lion, the Witch and the Wardrobe · 3rd Grade ELA</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Nunito:wght@400;600;700;800;900&display=swap');
+:root{
+  --navy:#0E1C42; --ink:#3A4A6B; --muted:#5E6C8C; --line:#E2E8F4;
+  --sky:#55C8E8; --sky-bg:#EAF8FD; --gold:#C7922C; --gold-bg:#FFF3DC;
+  --green:#34B76F; --green-bg:#E3F8ED; --plum:#8B6FC0; --plum-bg:#F1ECFA;
+  --paper:#FAFBFF; --cream:#FFF8F0;
+}
+*{box-sizing:border-box;}
+html,body{margin:0;padding:0;}
+body{background:var(--paper);color:var(--ink);font-family:"Nunito",sans-serif;font-size:18px;line-height:1.6;}
+.wrap{max-width:880px;margin:0 auto;padding:24px 16px 48px;}
+h1,h2,h3{font-family:"Lora",Georgia,serif;color:var(--navy);margin:0;}
+p{margin:0 0 10px;}
+strong{color:var(--navy);}
+
+/* header */
+.hero{background:var(--navy);color:#fff;border-radius:18px;overflow:hidden;display:grid;grid-template-columns:1.25fr 1fr;}
+.hero-text{padding:28px 28px 26px;}
+.brand{display:flex;align-items:center;gap:10px;font-size:15px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:#BFD0EE;margin-bottom:14px;}
+.brand img{width:38px;height:38px;border-radius:50%;background:#fff;}
+.hero h1{color:#fff;font-size:34px;line-height:1.2;margin-bottom:6px;}
+.hero .sub{font-size:19px;color:#DCE6F7;margin-bottom:16px;}
+.chips{display:flex;flex-wrap:wrap;gap:8px;}
+.chip{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.25);border-radius:999px;padding:5px 13px;font-size:16px;font-weight:700;color:#fff;}
+.hero-art{background:#F5E6C8 center/cover no-repeat;min-height:240px;}
+
+/* cards */
+.card{background:#fff;border:1px solid var(--line);border-radius:16px;padding:22px 24px;margin-top:18px;}
+.card-head{display:flex;align-items:center;gap:12px;margin-bottom:12px;}
+.card-head .ico{font-size:26px;line-height:1;}
+.card-head h2{font-size:24px;}
+.card-head .tag{margin-left:auto;font-size:14px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);}
+
+.glance{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+.glance .box{border-radius:12px;padding:14px 16px;}
+.box-label{font-size:14px;font-weight:900;letter-spacing:.08em;text-transform:uppercase;margin-bottom:4px;}
+.b-sky{background:var(--sky-bg);} .b-sky .box-label{color:#1F8CB0;}
+.b-gold{background:var(--gold-bg);} .b-gold .box-label{color:#9A6C14;}
+.b-green{background:var(--green-bg);} .b-green .box-label{color:#1F8452;}
+.b-plum{background:var(--plum-bg);} .b-plum .box-label{color:#6A4FA3;}
+.quote{font-family:"Lora",Georgia,serif;font-style:italic;font-size:20px;color:var(--navy);border-left:4px solid var(--gold);padding:4px 0 4px 16px;margin:16px 0 0;}
+.quote small{display:block;font-family:"Nunito",sans-serif;font-style:normal;font-size:15px;color:var(--muted);margin-top:4px;}
+
+/* day table */
+.days{width:100%;border-collapse:collapse;}
+.days th{font-size:14px;font-weight:900;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);text-align:left;padding:8px 10px;border-bottom:2px solid var(--line);}
+.days td{padding:12px 10px;border-bottom:1px solid var(--line);vertical-align:top;}
+.days tr:last-child td{border-bottom:none;}
+.day-n{font-family:"Lora",Georgia,serif;font-weight:700;font-size:20px;color:var(--navy);white-space:nowrap;}
+.day-n span{display:block;font-family:"Nunito",sans-serif;font-size:15px;font-weight:700;color:var(--muted);}
+.ch{font-weight:800;color:var(--navy);}
+.small{font-size:16px;color:var(--muted);}
+.pill{display:inline-block;font-size:14px;font-weight:800;border-radius:999px;padding:2px 10px;margin:4px 4px 0 0;}
+.p-poem{background:var(--plum-bg);color:#6A4FA3;}
+.p-guide{background:var(--cream);color:#9A6C14;border:1px solid #F5E6C8;}
+.extra-row td{background:var(--paper);}
+
+/* words */
+.words{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;}
+.word{border:1px solid var(--line);border-radius:12px;padding:12px 16px;}
+.word b{font-family:"Lora",Georgia,serif;font-size:21px;color:var(--navy);display:block;}
+.word span{font-size:17px;}
+.skills{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:14px;}
+.skills .box{border-radius:12px;padding:14px 16px;font-size:17px;}
+.eg{display:block;margin-top:6px;font-weight:700;color:var(--navy);}
+
+/* poem */
+.poem-wrap{display:grid;grid-template-columns:1fr 1fr;gap:18px;align-items:center;}
+.poem{font-family:"Lora",Georgia,serif;font-size:22px;line-height:1.9;color:var(--navy);background:var(--plum-bg);border-radius:12px;padding:16px 22px;}
+.poem small{display:block;font-family:"Nunito",sans-serif;font-size:15px;color:var(--muted);line-height:1.4;margin-top:6px;}
+
+/* ask */
+.ask{list-style:none;margin:0;padding:0;counter-reset:q;}
+.ask li{counter-increment:q;position:relative;padding:12px 0 12px 50px;border-bottom:1px dashed var(--line);}
+.ask li:last-child{border-bottom:none;}
+.ask li::before{content:counter(q);position:absolute;left:0;top:11px;width:34px;height:34px;border-radius:50%;background:var(--gold-bg);color:#9A6C14;font-weight:900;display:flex;align-items:center;justify-content:center;font-size:17px;}
+.ask .q{font-weight:800;color:var(--navy);display:block;}
+.ask .listen{font-size:16px;color:var(--muted);}
+
+/* checklist */
+.check{list-style:none;margin:0;padding:0;}
+.check li{padding:7px 0 7px 34px;position:relative;}
+.check li::before{content:"✓";position:absolute;left:4px;top:6px;color:var(--green);font-weight:900;font-size:19px;}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:18px;}
+
+.next{background:var(--navy);color:#DCE6F7;border:none;}
+.next h2{color:#fff;}
+.next strong{color:#fff;}
+.foot{text-align:center;font-size:15px;color:var(--muted);margin-top:26px;}
+
+.print-btn{display:inline-block;margin-top:16px;background:var(--gold);color:#fff;border:none;border-radius:999px;padding:9px 18px;font-family:"Nunito",sans-serif;font-weight:800;font-size:16px;cursor:pointer;}
+
+@media (max-width:720px){
+  .hero{grid-template-columns:1fr;}
+  .hero-art{min-height:180px;order:-1;}
+  .glance,.words,.skills,.poem-wrap,.two{grid-template-columns:1fr;}
+  .days thead{display:none;}
+  .days tr{display:block;border-bottom:1px solid var(--line);padding:8px 0;}
+  .days td{display:block;border:none;padding:4px 0;}
+}
+@media print{
+  body{background:#fff;font-size:15px;}
+  .wrap{padding:0;}
+  .print-btn{display:none;}
+  .card{break-inside:avoid;margin-top:12px;padding:14px 16px;}
+  .hero,.next{-webkit-print-color-adjust:exact;print-color-adjust:exact;}
+}
+
+/* lesson mechanics */
+.howto{background:var(--cream);border:1px solid #F5E6C8;border-radius:16px;padding:18px 22px;margin-top:18px;}
+.howto h2{font-size:21px;margin-bottom:10px;}
+.howto ul{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:8px 22px;}
+.howto li{position:relative;padding-left:32px;font-size:17px;line-height:1.5;}
+.howto li span{position:absolute;left:0;top:0;font-size:20px;}
+@media (max-width:760px){.howto ul{grid-template-columns:1fr;}}
+@media print{.howto{break-inside:avoid;}}
+.b-rose{background:#FDEEEE;border-radius:12px;padding:14px 16px;} .b-rose .box-label{color:#A8434A;}
+
+.p-museum{background:var(--sky-bg);color:#1F6F8C;}
+.p-extra{background:var(--green-bg);color:#1F8452;}
+.extras{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
+.extras .box{border-radius:12px;padding:14px 16px;font-size:17px;}
+.essay{display:flex;flex-wrap:wrap;gap:6px;margin:4px 0 12px;}
+.essay span{font-size:15px;font-weight:800;border-radius:999px;padding:4px 12px;background:var(--paper);border:1px solid var(--line);color:var(--muted);}
+.essay span.now{background:var(--gold-bg);border-color:#F5E6C8;color:#9A6C14;}
+.essay span.done{background:var(--green-bg);border-color:#CDEFDB;color:#1F8452;}
+@media (max-width:720px){.extras{grid-template-columns:1fr;}}
+.unit-link{margin:12px 0 0;font-size:16px;}.unit-link a{color:#BFD0EE;font-weight:800;}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="hero">
+<div class="hero-text">
+<div class="brand"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy Online">Family Guide · 3rd Grade ELA</div>
+<h1>Week 29: Deep Magic, Deeper Magic</h1>
+<div class="sub"><em>The Lion, the Witch and the Wardrobe</em>, Chapters 13–15: finding the theme with details from across the whole story</div>
+<div class="chips">
+<span class="chip">4 lessons</span>
+<span class="chip">Chapters 13–15</span>
+<span class="chip">Fluency page</span>
+<span class="chip">Check-In at week’s end</span>
+</div>
+<button class="print-btn" onclick="window.print()">🖨️ Print this guide</button>
+<p class="unit-link"><a href="parent-guide-lww-unit.html">Read the unit guide for The Lion, the Witch and the Wardrobe →</a></p>
+</div>
+<div class="hero-art" style="background-image:url('https://optimaondemand.github.io/optima-3rd-ela/assets/art/lww/lww-impression-sunrise.jpg');background-position:center 50%;" role="img" aria-label="A painting of a misty harbor at sunrise, with a small orange sun and its reflection on the water"></div>
+</header>
+
+<section class="howto">
+<h2>🧭 How the Lesson Pages Work</h2>
+<ul>
+<li><span>▶️</span><strong>Start here.</strong> The gold <strong>Start here</strong> box at the top of each page holds a short video from Opti that shows how the page works.</li>
+<li><span>🗂️</span><strong>Four tabs, in order:</strong> Warm-Up → Word Study → Reading → Assignment. Each tab shows one step at a time. Tap <strong>👆 Next</strong> to go on, or <strong>Back</strong> to look again.</li>
+<li><span>🦉</span><strong>Opti the owl teaches each activity.</strong> Before each one, Opti explains what it is and what to do. On Word Study, Opti teaches in a short video. Every activity also has a <strong>What to do</strong> line.</li>
+<li><span>👆</span><strong>Anything with a 👆 can be tapped.</strong> Words with a dotted line show what they mean when tapped. The 🔊 buttons read words out loud.</li>
+<li><span>💾</span><strong>Answers save as you type</strong>, but only in that browser on that computer. Switching computers or clearing the browser loses them.</li>
+<li><span>📋</span><strong>Turning in work:</strong> at the end of the Assignment tab, 1. tap <strong>Copy my work</strong>, 2. go back to this lesson’s assignment in Canvas, 3. paste the work in the box, then tap Submit. A lesson isn’t turned in until it’s submitted there.</li>
+<li><span>🎙️</span><strong>Fluency is a separate page</strong> in the Canvas module, because recording doesn’t work inside a lesson. Keep the novel nearby.</li>
+<li><span>🗺️</span><strong>The Reading Road</strong> on the Reading tab is a map of the whole year. Opti stands on this week.</li>
+</ul>
+</section>
+
+<section class="card">
+<div class="card-head"><span class="ico">🧭</span><h2>This Week at a Glance</h2></div>
+<p>In Chapter 13, Aslan’s rescuers save Edmund from the Witch, and Aslan tells the others there is no need to talk about what is past. Then the Witch comes to claim Edmund under the Deep Magic, an old law that says every traitor belongs to her. Aslan talks with her alone, and she gives up her claim. In Chapter 14 we learn the price: Aslan gives his own life in Edmund’s place. Chapter 15 begins on that sad night and ends at sunrise, when the Stone Table cracks and Aslan is alive again, because of a deeper magic the Witch did not know. Day 1 reads Chapter 13, Day 2 Chapter 14, Day 3 Chapter 15, and Day 4 looks back at the whole book so far.</p>
+<div class="glance">
+<div class="box b-sky"><div class="box-label">Reading skill</div><strong>Explaining the theme.</strong> A theme is the big lesson a story teaches, said as a full sentence. A topic is one word, like <em>loyalty</em>. Good readers back up a theme with details from the beginning, the middle and the end.</div>
+<div class="box b-green"><div class="box-label">Big idea</div><strong>What is the most important proof for your theme across the whole book?</strong> Edmund’s betrayal, his rescue and forgiveness, and Aslan’s choice all point to the same big lesson.</div>
+</div>
+<p class="quote">“Though the Witch knew the Deep Magic, there is a magic deeper still which she did not know.”<small>Aslan, Chapter 15</small></p>
+</section>
+
+<section class="card">
+<div class="card-head"><span class="ico">📅</span><h2>Day by Day</h2></div>
+<table class="days">
+<thead><tr><th>Lesson</th><th>Reading</th><th>Big question</th></tr></thead>
+<tbody>
+<tr><td class="day-n">29.1<span>Day 1</span></td>
+<td><span class="ch">Chapter 13: Deep Magic From the Dawn of Time</span><br>Your student explains the Deep Magic, guesses what Aslan offered the Witch, and brainstorms two or three possible themes.<br><span class="pill p-guide">Guide: Opti</span><span class="pill p-extra">Sentence rewrite</span></td>
+<td>What is the difference between a topic and a theme in a story?</td></tr>
+<tr><td class="day-n">29.2<span>Day 2</span></td>
+<td><span class="ch">Chapter 14: The Triumph of the Witch</span><br>Your student tells what happens at the Stone Table and how Lucy and Susan stay loyal, then drafts a literary response on theme.<br><span class="pill p-guide">Guide: Opti</span><span class="pill p-poem">Poetry</span><span class="pill p-extra">Read Like a Writer video</span></td>
+<td>How can you find proof for a theme by looking at what happens to characters across the whole story?</td></tr>
+<tr><td class="day-n">29.3<span>Day 3</span></td>
+<td><span class="ch">Chapter 15: Deeper Magic From Before the Dawn of Time</span><br>Your student explains the Deeper Magic and how Lucy and Susan feel at sunrise, then adds proof from Chapter 15 to the response.<br><span class="pill p-guide">Guide: Opti</span><span class="pill p-extra">Read Like a Writer</span></td>
+<td>How does the Deeper Magic in Chapter 15 change what everything before it means?</td></tr>
+<tr><td class="day-n">29.4<span>Day 4</span></td>
+<td><span class="ch">Look back: the whole book so far</span><br>Your student writes the theme as a full sentence, picks three moments from different chapters, and finishes the literary response.<br><span class="pill p-guide">Guide: Opti</span><span class="pill p-poem">Poetry</span><span class="pill p-extra">Read Like a Writer</span></td>
+<td>What is the most important proof for your theme across the whole book so far?</td></tr>
+<tr class="extra-row"><td class="day-n">🎙️<span>Fluency</span></td>
+<td colspan="2">A quiet passage from Chapter 14: Lucy and Susan walk beside Aslan in the moonlight, and he tells them, “I am sad and lonely.” Your student reads it three times (right words, then smooth, then slow and gentle, letting the girls’ questions sound worried), then <strong>records and submits in Canvas.</strong></td></tr>
+<tr class="extra-row"><td class="day-n">📋<span>Check-In</span></td>
+<td colspan="2">A 14-point check on the week, in Canvas: punctuating dialogue, the root ject, long words built from parts, a short passage from Chapter 15, and a short writing response on theme.</td></tr>
+</tbody>
+</table>
+</section>
+
+<section class="card">
+<div class="card-head"><span class="ico">🔤</span><h2>Words to Know</h2><span class="tag">Use them at home!</span></div>
+<div class="words">
+<div class="word"><b>traitor</b><span>someone who betrays the trust of their own side</span></div>
+<div class="word"><b>atone</b><span>to make up for a wrong you have done</span></div>
+<div class="word"><b>sacrifice</b><span>giving up something precious for something or someone more important</span></div>
+<div class="word"><b>resurrection</b><span>coming back to life after death</span></div>
+</div>
+<div class="skills">
+<div class="box b-sky"><div class="box-label">Word parts</div>The root <strong>ject</strong> means <strong>throw</strong>. The part in front tells which way.<span class="eg">reject (back) · inject (into) · eject (out) · project (forward)</span></div>
+<div class="box b-gold"><div class="box-label">Spelling</div>Long words are often a <strong>root</strong> with parts added to the front, the end, or both. Find the root first.<span class="eg">un + expect + ed = unexpected</span></div>
+<div class="box b-green"><div class="box-label">Grammar</div>In <strong>dialogue</strong>, quotation marks go around the exact words, the first word gets a capital, and the comma or period goes inside the closing mark.<span class="eg">“Let him approach,” said Aslan.</span></div>
+</div>
+</section>
+
+<section class="card">
+<div class="card-head"><span class="ico">✨</span><h2>New in the Lessons</h2></div>
+<div class="extras">
+<div class="box b-plum"><div class="box-label">🪨 Skipping Stones</div>This week’s word game is a river at a shallow crossing. On Days 1 and 2 your student reads a sentence with a ject word and taps which way something is thrown: back, into, out or forward. On Days 3 and 4 they find the root in the middle of a long word: ject, script or scribe, spect, or port. Each right answer skips a stone into the river, and by Day 4 the stepping stones fill the crossing.</div>
+<div class="box b-gold"><div class="box-label">🎬 Opti’s videos</div>Every Word Study activity, all four days, starts with a short video where Opti shows how it works. On Day 2, Opti also shows Read Like a Writer with a gentle sentence from Chapter 14. The videos have captions for now; Opti’s voice will be added later.</div>
+<div class="box b-sky"><div class="box-label">🌍 World Notes</div>Each day opens the Reading tab with a real thing behind the story: how far a real lion’s roar carries, real stone tables called dolmens built more than 5,000 years ago, field mice and the morning star (the planet Venus), and why male lions grow manes.</div>
+<div class="box b-green"><div class="box-label">🏮 Truth Watch</div>After reading, your student decides if three moments show someone being honest: Yes or Not yet. This week includes Edmund saying “I’m sorry,” Aslan refusing to make a promise he may not keep, and the Witch hiding by making herself look like a rock.</div>
+</div>
+<p class="small" style="margin-top:12px;">Each day opens with real art, never pictures from the book: Caspar David Friedrich’s <em>Dolmen in the Snow</em> (1807) and <em>Moonrise over the Sea</em> (1822), Claude Monet’s <em>Impression, Sunrise</em> (1872), and Rosa Bonheur’s <em>Portrait of a Lion</em> (1879). Your student looks first, then taps to learn about it.</p>
+</section>
+
+<section class="card">
+<div class="card-head"><span class="ico">⚠️</span><h2>Good to Know</h2></div>
+<p><strong>This is the hardest week of the book.</strong> At the start of Chapter 13, the Witch has Edmund tied to a tree and gets ready to kill him, but Aslan’s rescuers arrive in time. In Chapter 14, Aslan dies. He walks to the Stone Table at night and lets the Witch and her creatures tie him up, shave his mane, make fun of him, and then the Witch kills him with a knife, in Edmund’s place. Lucy and Susan watch from the bushes and cover their eyes at the moment he dies. Chapter 15 begins with the girls crying beside him through the night. At sunrise the Stone Table cracks, and Aslan is alive again.</p>
+<p>The lessons keep all of this gentle: Opti tells students before Chapter 14 that it is the saddest chapter, that it is okay to feel sad, and that the story is not over yet. Your student may want to read Chapter 14 with you, or to know ahead of time that Aslan comes back to life in Chapter 15. It is fine to tell them. The <a href="parent-guide-lww-unit.html">unit guide</a> has more about this part of the book.</p>
+</section>
+
+<section class="card">
+<div class="card-head"><span class="ico">✍️</span><h2>Your Student’s Writing</h2><span class="tag">Writer’s Workshop</span></div>
+<div class="essay"><span>Wk 28 · Add a symbol paragraph</span><span class="now">Wk 29 · A literary response on theme</span></div>
+<p>This week your student writes a literary response about the story’s theme. Day 1: <strong>brainstorm</strong> two or three possible themes, each as a full sentence that starts “The story shows that…”. Day 2: <strong>draft</strong> the response with proof from two parts of the story. Day 3: <strong>revise</strong> by adding two sentences of proof from Chapter 15. Day 4: <strong>finish</strong> the whole response, with proof from three different chapters and a closing sentence.</p>
+<p class="small">An example writer named Clara shows each step first.</p>
+</section>
+
+<section class="card">
+<div class="card-head"><span class="ico">💬</span><h2>Ask at Home</h2></div>
+<ol class="ask">
+<li><span class="q">What is the difference between a topic and a theme?</span><span class="listen">Listen for: a topic is a word, like loyalty; a theme is a full sentence about it, like “The story shows that…”.</span></li>
+<li><span class="q">What did Aslan say to the others about Edmund after the rescue?</span><span class="listen">Listen for: there is no need to talk about what is past; they forgave him.</span></li>
+<li><span class="q">What was the Deeper Magic the Witch did not know?</span><span class="listen">Listen for: when someone who did nothing wrong gives his life for a traitor, death works backwards.</span></li>
+<li><span class="q">Where does the comma go in “Let him approach, said Aslan”?</span><span class="listen">Listen for: inside the closing quotation mark, after approach.</span></li>
+</ol>
+</section>
+
+<div class="two">
+<section class="card">
+<div class="card-head"><span class="ico">📬</span><h2>What Gets Turned In</h2></div>
+<ul class="check">
+<li>Each lesson’s Assignment tab: the chapter questions and the day’s writing step, copied and pasted into Canvas</li>
+<li>The Week 29 fluency recording</li>
+<li>The Week 29 Check-In in Canvas</li>
+</ul>
+</section>
+<section class="card">
+<div class="card-head"><span class="ico">🏡</span><h2>Try at Home</h2></div>
+<ul class="check">
+<li>Name the theme of a favorite movie or family story as one sentence: “The story shows that…”</li>
+<li>Throw a soft ball back, out, and forward, and name the ject word each time: reject, eject, project</li>
+<li>Write a short conversation between two family members, with quotation marks and commas in the right places</li>
+</ul>
+</section>
+</div>
+
+<section class="card">
+<div class="card-head"><span class="ico">🎒</span><h2>Have on Hand</h2></div>
+<ul class="check">
+<li><em>The Lion, the Witch and the Wardrobe</em> by C.S. Lewis</li>
+</ul>
+</section>
+
+<section class="card next">
+<div class="card-head"><span class="ico">⏭️</span><h2>Coming Up in Week 30</h2></div>
+<p><strong>Chapters 16–17, the end of the book.</strong> Reading skill: how the ending shows the theme. Word study: a review of the roots and word parts from the whole year. Writing: the final revision of the literary response.</p>
+</section>
+
+<p class="foot">Optima Academy Online · 3rd Grade ELA · Week 29 Family Guide</p>
+</div>
+</body>
+</html>
