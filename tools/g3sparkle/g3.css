@@ -247,6 +247,8 @@
 .g3-delight svg.g3-clink { animation:g3clink .45s ease-out; }
 .g3-icehole { flex:1 1 300px; max-width:360px; margin:0 auto; }
 .g3-icehole svg.g3-clink { animation:g3clink .45s ease-out; }
+.g3-thaw { flex:1 1 300px; max-width:360px; margin:0 auto; }
+.g3-thaw svg.g3-clink { animation:g3clink .45s ease-out; }
 .g3-vowels { grid-template-columns:repeat(auto-fit, minmax(110px, 1fr)); }
 .g3-vowel-ic { display:inline-flex; align-items:center; justify-content:center; width:34px; height:34px; border-radius:50%; background:#0E1C42; color:#fff; font-family:Lora,Georgia,serif; font-size:22px; font-weight:700; }
 .g3-mk-basket { display:flex; align-items:center; gap:10px; font-family:Lora,Georgia,serif; font-size:22px; line-height:1.45; color:#24324F;

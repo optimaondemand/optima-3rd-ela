@@ -5,7 +5,7 @@
      DATA.glossary  = [ {w, m, key} ]      dotted words, 🔊 on key words
      DATA.sayWords  = [ 'word', … ]          🔊 on the vocab cards (says just the word)
      DATA.cards     = [ {id, kind, tab, after, title, sub, look, todo, …} ]
-     DATA.wordgame  = {type:'tower'|'wagon'|'chase'|'sewer'|'castle'|'illuminate'|'market'|'wardrobe'|'delight'|'icehole', …}  Up the North Tower / Fill the Wagon / The Chase / Out of the Sewer / Build the Castle / Illuminate the Page  / Market Day / Through the Wardrobe
+     DATA.wordgame  = {type:'tower'|'wagon'|'chase'|'sewer'|'castle'|'illuminate'|'market'|'wardrobe'|'delight'|'icehole'|'thaw', …}  Up the North Tower / Fill the Wagon / The Chase / Out of the Sewer / Build the Castle / Illuminate the Page  / Market Day / Through the Wardrobe
    The rules for 8-year-olds: every module opens with a "What to do:"
    line Opti reads, shows one step at a time, and every picture opens
    on notice/wonder before it says what it is.
@@ -1331,6 +1331,104 @@ WORDGAME.icehole = function (cfg) {
   if (anchor) anchor.parentNode.insertBefore(card, anchor); else panel.appendChild(card);
 };
 
+/* ── The Great Thaw: one round a day (week 28, LWW Ch. 10-12) ──
+   DATA.wordgame = { type:'thaw', title, sub, look, todo, stepTitle, win, winWeek,
+     bins:[ {id, label, ic} ] (2-4), items:[ {t, bin, why, miss:{binId:'…'}, bins:[…] optional per-item choices} ] }
+   A snowy glade in Narnia. Read the word on the snow patch (in the play
+   area, never on the picture), tap the right answer. Each right answer
+   melts one patch on the ground and a Ch. 11 spring flower comes up
+   (snowdrop, celandine, crocus, primrose). The sky turns bluer and the
+   firs drop their snow as more patches melt; day d starts with days
+   1…d-1's flowers, so the week thaws the whole glade (4 rows of 8).
+   Practice only; never fills a graded box. */
+function thawFlower(x, y, k) {
+  var t = k % 4, s = '<ellipse cx="' + x + '" cy="' + (y + 1) + '" rx="10" ry="3.4" fill="#7FB069"/>' +
+    '<path d="M' + x + ' ' + y + ' v-9" stroke="#3F7A3A" stroke-width="1.4"/>' +
+    '<path d="M' + x + ' ' + (y - 3) + ' q-4 -2 -5 -6 M' + x + ' ' + (y - 2) + ' q4 -2 5 -6" stroke="#4E8A45" stroke-width="1.2" fill="none"/>';
+  if (t === 0) s += '<path d="M' + x + ' ' + (y - 9) + ' q3 0 3 3" stroke="#3F7A3A" stroke-width="1.1" fill="none"/><ellipse cx="' + (x + 3) + '" cy="' + (y - 4.5) + '" rx="2" ry="3" fill="#FFFFFF" stroke="#C9D3D9" stroke-width=".6"/>';
+  else if (t === 1) { for (var a = 0; a < 5; a++) { var r = a * 1.2566; s += '<ellipse cx="' + (x + 2.4 * Math.cos(r)).toFixed(1) + '" cy="' + (y - 10 + 2.4 * Math.sin(r)).toFixed(1) + '" rx="1.7" ry="1.7" fill="#F4C430"/>'; } s += '<circle cx="' + x + '" cy="' + (y - 10) + '" r="1.1" fill="#B8860B"/>'; }
+  else if (t === 2) s += '<path d="M' + (x - 3) + ' ' + (y - 14) + ' q3 -2 6 0 l-1 5 h-4 Z" fill="#8E5BB5" stroke="#5E3A80" stroke-width=".6"/>';
+  else s += '<circle cx="' + x + '" cy="' + (y - 11) + '" r="3.2" fill="#F7E7A1"/><circle cx="' + x + '" cy="' + (y - 11) + '" r="1.1" fill="#E0A21B"/>';
+  return s;
+}
+function thawSVG(have, day, per) {
+  var total = per * 4, W = 320, H = 210, f = Math.min(have, total) / total;
+  function mix(a, b) { var o = '#'; for (var i = 1; i < 7; i += 2) { var v = Math.round(parseInt(a.substr(i, 2), 16) * (1 - f) + parseInt(b.substr(i, 2), 16) * f); o += ('0' + v.toString(16)).slice(-2); } return o; }
+  var s = '<svg viewBox="0 0 ' + W + ' ' + H + '" width="100%" style="max-width:360px" role="img" aria-label="' +
+    Math.min(have, total) + ' of ' + total + ' snow patches have melted">' +
+    '<rect width="' + W + '" height="' + H + '" rx="12" fill="' + mix('#C9D1DA', '#9FD0F0') + '"/>';
+  if (f >= 0.5) s += '<circle cx="268" cy="30" r="14" fill="#FFE08A" opacity="' + (0.5 + f / 2).toFixed(2) + '"/>';
+  /* firs standing on the far edge of the glade; their snow slides off as the thaw goes on */
+  [[30, 78, 30], [64, 80, 24], [250, 78, 32], [292, 80, 24]].forEach(function (t) {
+    var x = t[0], b = t[1], h = t[2];
+    s += '<rect x="' + (x - 2) + '" y="' + (b - 6) + '" width="4" height="8" fill="#5A3E2B"/>' +
+      '<path d="M' + x + ' ' + (b - h) + ' l' + (h * 0.4) + ' ' + (h - 6) + ' h-' + (h * 0.8) + ' Z" fill="#24503A"/>';
+    if (f < 0.5) s += '<path d="M' + x + ' ' + (b - h) + ' l' + (h * 0.22) + ' ' + (h * 0.4) + ' q-' + (h * 0.22) + ' -4 -' + (h * 0.44) + ' 0 Z" fill="#FFFFFF"/>';
+  });
+  /* the ground: the glade floor, snow on top, green showing through where it melts */
+  s += '<path d="M0 80 Q160 70 320 80 V210 H0 Z" fill="' + mix('#F4F7FA', '#CFE3B8') + '"/>';
+  var y0 = 108, rh = 28, x0 = 26, cw = 38;
+  for (var k = 0; k < total; k++) {
+    var row = Math.floor(k / 8), col = k % 8;
+    var x = x0 + col * cw + (row % 2 ? 10 : 0), y = y0 + row * rh;
+    var today = k >= (day - 1) * per && k < day * per;
+    if (k < have) s += thawFlower(x, y, k);
+    else s += '<ellipse cx="' + x + '" cy="' + y + '" rx="12" ry="5" fill="#FFFFFF" stroke="' + (today ? '#7E9AB2' : '#DDE5EC') + '" stroke-width="1"' + (today ? ' stroke-dasharray="2 2"' : '') + '/>';
+  }
+  if (have >= total) s += '<rect x="96" y="8" width="128" height="20" rx="10" fill="#3F7A3A"/><text x="160" y="22" text-anchor="middle" font-family="Nunito,sans-serif" font-weight="800" font-size="12" fill="#fff">Spring has come!</text>';
+  return s + '</svg>';
+}
+WORDGAME.thaw = function (cfg) {
+  var items = cfg.items || [], bins = cfg.bins || []; if (!items.length) return;
+  var panel = document.getElementById('tab-words'); if (!panel) return;
+  var anchor = panel.querySelector('.tab-next-wrap');
+  var day = dayNum(LESSON.day), PER = items.length;
+  var KEY = 'oao.g3ela.wg.' + LID;
+  var st = Sparkle.get(KEY, null) || { i: 0, misses: 0 };
+  if (st.i > PER) st.i = PER;
+  var card = cardShell({ id: 'thaw', kind: 'thaw', title: cfg.title || 'The Great Thaw', sub: cfg.sub || '' }, '🌼');
+  var body = card.querySelector('.spk-card-body');
+  body.insertAdjacentHTML('beforeend', lookCard(cfg.look, cfg.todo) +
+    '<div class="g3-tw-grid"><div class="g3-thaw"></div><div class="g3-tw-play" aria-live="polite"></div></div>');
+  var bx = body.querySelector('.g3-thaw'), play = body.querySelector('.g3-tw-play');
+  function have() { return (day - 1) * PER + st.i; }
+  function paint(msg, ok, tried) {
+    bx.innerHTML = thawSVG(have(), day, PER);
+    if (st.i >= PER) {
+      play.innerHTML = '<div class="g3-finish">✓ ' + esc(day === 4 ? (cfg.winWeek || cfg.win || '') : (cfg.win || '')) + '</div>' +
+        '<button type="button" class="spk-mini-btn g3-again">Play today’s round again</button>';
+      play.querySelector('.g3-again').onclick = function () { st = { i: 0, misses: 0 }; Sparkle.set(KEY, st); paint(); };
+      return;
+    }
+    var it = items[st.i];
+    var h = stepHead(st.i + 1, PER, cfg.stepTitle || 'Which one is right?') +
+      '<div class="g3-mk-basket"><span class="g3-mk-ic" aria-hidden="true">❄️</span><span>' + it.t + '</span></div><div class="g3-stalls">';
+    (it.bins || bins).forEach(function (b) {
+      h += '<button type="button" class="g3-stall' + (tried && tried.indexOf(b.id) >= 0 ? ' tried' : '') + '" data-b="' + esc(b.id) + '">' +
+           '<span class="g3-sack-ic" aria-hidden="true">' + esc(b.ic || '🌼') + '</span><span>' + esc(b.label) + '</span></button>';
+    });
+    h += '</div>';
+    if (msg) h += '<div class="g3-fb ' + (ok ? 'ok' : 'no') + '">' + msg + '</div>';
+    play.innerHTML = h;
+    play.querySelectorAll('.g3-stall').forEach(function (b) {
+      b.onclick = function () {
+        var id = b.getAttribute('data-b');
+        if (id === it.bin) {
+          st.i++; Sparkle.set(KEY, st); wgSfx(st.i >= PER ? 'win' : 'chime');
+          if (st.i >= PER) { paint(); return; }
+          paint('✓ ' + esc(it.why || 'Right! The snow melts and a flower comes up.'), true);
+          var sv = bx.querySelector('svg'); if (sv) { sv.classList.remove('g3-clink'); void sv.getBoundingClientRect(); sv.classList.add('g3-clink'); }
+        } else {
+          st.misses++; Sparkle.set(KEY, st); wgSfx('bonk');
+          paint(esc((it.miss || {})[id] || 'Not that one. Read it again, then try another.'), false, (tried || []).concat([id]));
+        }
+      };
+    });
+  }
+  paint();
+  if (anchor) anchor.parentNode.insertBefore(card, anchor); else panel.appendChild(card);
+};
+
 /* ── Fill the Wagon: one round a day ────────────────────────────────
    DATA.wordgame = { type:'wagon', title, sub, look, todo, win, winWeek,
      bins:[ {id, label} ], items:[ {t, bin, why, miss:{binId:'…'}} ] }
@@ -1655,7 +1753,7 @@ function buildSpotlight() {
    assets/audio/guide/opti/g3ela-how-<slug>.mp3 (shared by every lesson
    that uses the same words). The button stays hidden until the file is
    really there, so a line without a recording just reads as text. */
-var SAY_FOR_CARD = { 'spk-copia-card': 'copia', 'g3card-tower': 'tower', 'g3card-wagon': 'wagon', 'g3card-chase': 'chase', 'g3card-sewer': 'sewer', 'g3card-castle': 'castle', 'g3card-illuminate': 'illuminate', 'g3card-market': 'market', 'g3card-wardrobe': 'wardrobe', 'g3card-delight': 'delight', 'g3card-icehole': 'icehole', 'g3card-backward': 'backward' };
+var SAY_FOR_CARD = { 'spk-copia-card': 'copia', 'g3card-tower': 'tower', 'g3card-wagon': 'wagon', 'g3card-chase': 'chase', 'g3card-sewer': 'sewer', 'g3card-castle': 'castle', 'g3card-illuminate': 'illuminate', 'g3card-market': 'market', 'g3card-wardrobe': 'wardrobe', 'g3card-delight': 'delight', 'g3card-icehole': 'icehole', 'g3card-thaw': 'thaw', 'g3card-backward': 'backward' };
 function buildSayDo() {
   document.querySelectorAll('.g3-todo:not([data-say])').forEach(function (p) {
     for (var k in SAY_FOR_CARD) {
