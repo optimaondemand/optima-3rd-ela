@@ -1868,7 +1868,7 @@ function wgWhy(why) {
 function buildWordGame() {
   var cfg = DATA.wordgame;
   if (!cfg || !WORDGAME[cfg.type]) return;              /* no themed game for this lesson */
-  if (cfg.type === 'tower' || cfg.type === 'wagon' || cfg.type === 'chase' || cfg.type === 'sewer' || cfg.type === 'castle' || cfg.type === 'illuminate' || cfg.type === 'market' || cfg.type === 'wardrobe') { WORDGAME[cfg.type](cfg); return; }   /* G3: self-contained, not built from a page game */
+  if (cfg.type === 'tower' || cfg.type === 'wagon' || cfg.type === 'chase' || cfg.type === 'sewer' || cfg.type === 'castle' || cfg.type === 'illuminate' || cfg.type === 'market' || cfg.type === 'wardrobe' || cfg.type === 'delight') { WORDGAME[cfg.type](cfg); return; }   /* G3: self-contained, not built from a page game */
   var act = wgActivity(cfg.strand); if (!act) return;
   var game = act.querySelector('.fillin-game'); if (!game) return;
   var W = wgWords(game); if (W.length < 2) return;
@@ -3482,7 +3482,7 @@ function buildNav() {
      DATA.glossary  = [ {w, m, key} ]      dotted words, 🔊 on key words
      DATA.sayWords  = [ 'word', … ]          🔊 on the vocab cards (says just the word)
      DATA.cards     = [ {id, kind, tab, after, title, sub, look, todo, …} ]
-     DATA.wordgame  = {type:'tower'|'wagon'|'chase'|'sewer'|'castle'|'illuminate'|'market'|'wardrobe', …}  Up the North Tower / Fill the Wagon / The Chase / Out of the Sewer / Build the Castle / Illuminate the Page  / Market Day / Through the Wardrobe
+     DATA.wordgame  = {type:'tower'|'wagon'|'chase'|'sewer'|'castle'|'illuminate'|'market'|'wardrobe'|'delight', …}  Up the North Tower / Fill the Wagon / The Chase / Out of the Sewer / Build the Castle / Illuminate the Page  / Market Day / Through the Wardrobe
    The rules for 8-year-olds: every module opens with a "What to do:"
    line Opti reads, shows one step at a time, and every picture opens
    on notice/wonder before it says what it is.
@@ -4621,6 +4621,95 @@ WORDGAME.wardrobe = function (cfg) {
   if (anchor) anchor.parentNode.insertBefore(card, anchor); else panel.appendChild(card);
 };
 
+/* ── The Turkish Delight Box: one round a day (week 26, LWW Ch. 4-6) ──
+   DATA.wordgame = { type:'delight', title, sub, look, todo, stepTitle, win, winWeek,
+     bins:[ {id, label, ic} ] (2-4), items:[ {t, bin, why, miss:{binId:'…'}} ] }
+   The Queen's round box, tied with green silk ribbon, sits open on the snow.
+   Read what is on the sweet (in the play area, never on the picture), tap
+   the right answer. Each right answer puts one sweet in its place; day d
+   starts with days 1…d-1's sweets, so the week fills one box (4 rows of
+   8). Practice only; never fills a graded box. */
+function delightSVG(have, day, per) {
+  var total = per * 4, W = 320, H = 210;
+  var s = '<svg viewBox="0 0 ' + W + ' ' + H + '" width="100%" style="max-width:360px" role="img" aria-label="' +
+    Math.min(have, total) + ' of ' + total + ' sweets are in the box">' +
+    '<rect width="' + W + '" height="' + H + '" rx="12" fill="#E8EEF7"/>' +
+    /* snow the box sits on */
+    '<path d="M0 168 Q160 150 320 168 V210 H0 Z" fill="#FFFFFF"/>' +
+    /* lid leaning behind, with its green silk ribbon */
+    '<path d="M44 22 H276 L268 58 H52 Z" fill="#B23A48" stroke="#6E1F2A" stroke-width="2"/>' +
+    '<path d="M154 22 h12 l-2 36 h-8 Z" fill="#2F7A4A"/>' +
+    '<path d="M160 30 q-26 -22 -30 2 q6 8 30 -2 q26 -22 30 2 q-6 8 -30 -2" fill="#3C9A5D" stroke="#1E5C35" stroke-width="1.2"/>' +
+    /* the open box: wooden-red sides, cream paper inside, standing on the snow */
+    '<path d="M30 70 H290 L282 170 H38 Z" fill="#8E2A36" stroke="#5A1520" stroke-width="2"/>' +
+    '<rect x="44" y="78" width="232" height="84" rx="4" fill="#F6EBDD"/>';
+  var cw = 232 / 8, ch = 84 / 4;
+  for (var k = 0; k < total; k++) {
+    var row = Math.floor(k / 8), col = k % 8;
+    var x = 44 + col * cw + 3, y = 78 + row * ch + 3, w2 = cw - 6, h2 = ch - 6;
+    var today = k >= (day - 1) * per && k < day * per;
+    if (k < have) {
+      var c = ['#F4B6C2', '#FBE3B0', '#F7F2EA', '#C9E7C5'][k % 4];
+      s += '<rect x="' + x.toFixed(1) + '" y="' + y.toFixed(1) + '" width="' + w2.toFixed(1) + '" height="' + h2.toFixed(1) + '" rx="3" fill="' + c + '" stroke="#C8A9A0" stroke-width=".8"/>' +
+           '<circle cx="' + (x + w2 * .3).toFixed(1) + '" cy="' + (y + h2 * .35).toFixed(1) + '" r="1.3" fill="#fff"/><circle cx="' + (x + w2 * .7).toFixed(1) + '" cy="' + (y + h2 * .6).toFixed(1) + '" r="1.1" fill="#fff"/>';
+    } else if (today) {
+      s += '<rect x="' + x.toFixed(1) + '" y="' + y.toFixed(1) + '" width="' + w2.toFixed(1) + '" height="' + h2.toFixed(1) + '" rx="3" fill="none" stroke="#B9A08F" stroke-width=".9" stroke-dasharray="2 2"/>';
+    }
+  }
+  if (have >= total) s += '<rect x="92" y="180" width="136" height="22" rx="11" fill="#2F7A4A"/><text x="160" y="195.5" text-anchor="middle" font-family="Nunito,sans-serif" font-weight="800" font-size="13" fill="#fff">The box is full!</text>';
+  return s + '</svg>';
+}
+WORDGAME.delight = function (cfg) {
+  var items = cfg.items || [], bins = cfg.bins || []; if (!items.length || bins.length < 2) return;
+  var panel = document.getElementById('tab-words'); if (!panel) return;
+  var anchor = panel.querySelector('.tab-next-wrap');
+  var day = dayNum(LESSON.day), PER = items.length;
+  var KEY = 'oao.g3ela.wg.' + LID;
+  var st = Sparkle.get(KEY, null) || { i: 0, misses: 0 };
+  if (st.i > PER) st.i = PER;
+  var card = cardShell({ id: 'delight', kind: 'delight', title: cfg.title || 'The Turkish Delight Box', sub: cfg.sub || '' }, '🍬');
+  var body = card.querySelector('.spk-card-body');
+  body.insertAdjacentHTML('beforeend', lookCard(cfg.look, cfg.todo) +
+    '<div class="g3-tw-grid"><div class="g3-delight"></div><div class="g3-tw-play" aria-live="polite"></div></div>');
+  var bx = body.querySelector('.g3-delight'), play = body.querySelector('.g3-tw-play');
+  function have() { return (day - 1) * PER + st.i; }
+  function paint(msg, ok, tried) {
+    bx.innerHTML = delightSVG(have(), day, PER);
+    if (st.i >= PER) {
+      play.innerHTML = '<div class="g3-finish">✓ ' + esc(day === 4 ? (cfg.winWeek || cfg.win || '') : (cfg.win || '')) + '</div>' +
+        '<button type="button" class="spk-mini-btn g3-again">Play today’s round again</button>';
+      play.querySelector('.g3-again').onclick = function () { st = { i: 0, misses: 0 }; Sparkle.set(KEY, st); paint(); };
+      return;
+    }
+    var it = items[st.i];
+    var h = stepHead(st.i + 1, PER, cfg.stepTitle || 'Which one is right?') +
+      '<div class="g3-mk-basket"><span class="g3-mk-ic" aria-hidden="true">🍬</span><span>' + it.t + '</span></div><div class="g3-stalls">';
+    bins.forEach(function (b) {
+      h += '<button type="button" class="g3-stall' + (tried && tried.indexOf(b.id) >= 0 ? ' tried' : '') + '" data-b="' + esc(b.id) + '">' +
+           '<span class="g3-sack-ic" aria-hidden="true">' + esc(b.ic || '🍬') + '</span><span>' + esc(b.label) + '</span></button>';
+    });
+    h += '</div>';
+    if (msg) h += '<div class="g3-fb ' + (ok ? 'ok' : 'no') + '">' + msg + '</div>';
+    play.innerHTML = h;
+    play.querySelectorAll('.g3-stall').forEach(function (b) {
+      b.onclick = function () {
+        var id = b.getAttribute('data-b');
+        if (id === it.bin) {
+          st.i++; Sparkle.set(KEY, st); wgSfx(st.i >= PER ? 'win' : 'chime');
+          if (st.i >= PER) { paint(); return; }
+          paint('✓ ' + esc(it.why || 'Right! A sweet goes in the box.'), true);
+          var sv = bx.querySelector('svg'); if (sv) { sv.classList.remove('g3-clink'); void sv.getBoundingClientRect(); sv.classList.add('g3-clink'); }
+        } else {
+          st.misses++; Sparkle.set(KEY, st); wgSfx('bonk');
+          paint(esc((it.miss || {})[id] || 'Not that one. Read it again, then try another.'), false, (tried || []).concat([id]));
+        }
+      };
+    });
+  }
+  paint();
+  if (anchor) anchor.parentNode.insertBefore(card, anchor); else panel.appendChild(card);
+};
+
 /* ── Fill the Wagon: one round a day ────────────────────────────────
    DATA.wordgame = { type:'wagon', title, sub, look, todo, win, winWeek,
      bins:[ {id, label} ], items:[ {t, bin, why, miss:{binId:'…'}} ] }
@@ -5050,7 +5139,7 @@ function buildVirtue3() {
    assets/audio/guide/opti/g3ela-how-<slug>.mp3 (shared by every lesson
    that uses the same words). The button stays hidden until the file is
    really there, so a line without a recording just reads as text. */
-var SAY_FOR_CARD = { 'spk-copia-card': 'copia', 'g3card-tower': 'tower', 'g3card-wagon': 'wagon', 'g3card-chase': 'chase', 'g3card-sewer': 'sewer', 'g3card-castle': 'castle', 'g3card-illuminate': 'illuminate', 'g3card-market': 'market', 'g3card-wardrobe': 'wardrobe', 'g3card-backward': 'backward' };
+var SAY_FOR_CARD = { 'spk-copia-card': 'copia', 'g3card-tower': 'tower', 'g3card-wagon': 'wagon', 'g3card-chase': 'chase', 'g3card-sewer': 'sewer', 'g3card-castle': 'castle', 'g3card-illuminate': 'illuminate', 'g3card-market': 'market', 'g3card-wardrobe': 'wardrobe', 'g3card-delight': 'delight', 'g3card-backward': 'backward' };
 function buildSayDo() {
   document.querySelectorAll('.g3-todo:not([data-say])').forEach(function (p) {
     for (var k in SAY_FOR_CARD) {
