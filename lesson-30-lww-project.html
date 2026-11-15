@@ -7,11 +7,11 @@
 <!-- G3 ELA · Narnia unit project (one day, after Lesson 30.4): The Lamp-Post Museum.
      Three museum labels (object, real quote, what happens, why it matters) + a Curator's Note
      ("The ending shows that..."). Every quote checked against Planning docs/lww_text.txt.
-     Pictures are drawn inline SVG (no book illustrations).
+     Pictures: AI-generated for OAO (ElevenLabs gpt-image-2.5-sunburst, Nov 15 2026), assets/art/lww/project/*.jpg; no book illustrations.
      Audio (hidden until the file exists): assets/audio/guide/opti/g3ela-proj-lww-<slot>.mp3
      Turn-in: one PDF (one page) in Canvas. -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400&family=Nunito:wght@400;600;700;800;900&family=Rye&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400&family=Nunito:wght@400;600;700;800;900&family=Rye&family=Cinzel:wght@500;700&display=swap" rel="stylesheet">
 <style>
 :root{
   --navy:#0E1C42; --ink:#24324F; --muted:#6B7690; --sky:#55C8E8; --gold:#C7922C; --gold2:#E9C46A;
@@ -257,15 +257,56 @@ details.ex .exbody{padding:10px 14px;font-size:15px}
 @media print{.exh,.note,.exh .art{-webkit-print-color-adjust:exact;print-color-adjust:exact}.hall{gap:8px}}
 @media(max-width:600px){.hall{grid-template-columns:1fr}}
 details.ex .exh .art svg{width:90px}
+/* ── embellished museum look (v2) ── */
+body{background:radial-gradient(ellipse at top,#2C4A3B 0%,#1B2F26 60%,#14231C 100%) fixed}
+.page{box-shadow:0 0 0 1px #B8923A,0 0 60px rgba(0,0,0,.45)}
+.hdr.museum{position:relative;min-height:330px;display:flex;flex-direction:column;justify-content:flex-end;
+  background:linear-gradient(180deg,rgba(14,28,66,.15) 0%,rgba(14,28,66,.55) 45%,rgba(10,20,48,.94) 100%),url('assets/art/lww/project/hero.jpg') center 30%/cover no-repeat;
+  border-bottom:0;box-shadow:inset 0 -6px 0 #C7922C}
+.hdr.museum .brand{position:absolute;top:18px;left:28px;margin:0}
+.hdr.museum h1{font-family:'Cinzel',Georgia,serif;font-weight:700;font-size:34px;letter-spacing:.02em;text-shadow:0 2px 12px rgba(0,0,0,.6)}
+.hdr.museum h1 small{display:block;font-family:'Lora',Georgia,serif;font-style:italic;font-weight:400;font-size:16px;color:#F3DFA6;letter-spacing:0;margin-bottom:4px}
+.hdr.museum .sub{color:#E4EAF6;text-shadow:0 1px 6px rgba(0,0,0,.6)}
+.hdr.museum .tag{background:linear-gradient(135deg,#F4D27A,#C7922C);box-shadow:0 2px 8px rgba(0,0,0,.35)}
+@media(max-width:520px){.hdr.museum{min-height:280px}.hdr.museum h1{font-size:25px}.hdr.museum .brand{left:16px}}
+.orn{display:flex;align-items:center;gap:12px;color:#C7922C;font-size:18px;margin:4px 0 16px}
+.orn::before,.orn::after{content:'';flex:1;height:2px;background:linear-gradient(90deg,transparent,#C7922C,transparent)}
+.step{border:3px double #C7922C;background:linear-gradient(180deg,#FFFEF9,#FFF9EA);box-shadow:0 8px 24px rgba(80,55,20,.10)}
+.stephead{background:linear-gradient(135deg,#0E1C42,#1D3366);box-shadow:inset 0 0 0 1px #C7922C}
+.opti{border:2px solid #D9B65E;box-shadow:0 6px 18px rgba(199,146,44,.15)}
+.opti h2{font-family:'Cinzel',Georgia,serif}
+/* gilt frames */
+.gilt{display:block;padding:6px;background:linear-gradient(135deg,#8A6420 0%,#F3D98A 22%,#B88A2E 45%,#FBE7A6 62%,#9C7224 82%,#E6C66E 100%);border-radius:3px;box-shadow:0 4px 12px rgba(60,40,10,.35),inset 0 0 0 1px rgba(255,255,255,.35)}
+.gilt img{display:block;width:100%;height:auto;border:2px solid #5A4114}
+.tile{background:#FFFDF6;border-color:#E3D3A8}
+.tile .gilt{margin:0 0 8px}
+.tile .tname{font-family:'Cinzel',Georgia,serif;font-size:15px}
+.tile .num{z-index:2;top:14px;left:14px;background:#7A2E1E;box-shadow:0 0 0 2px #F3D98A}
+.tile.tap::after{z-index:2;top:12px;right:14px;background:rgba(255,255,255,.85);border-radius:50%;width:26px;height:26px;display:flex;align-items:center;justify-content:center}
+.exh{background:#FFFDF7;border:1px solid #D8C38E}
+.exh .art{background:linear-gradient(180deg,#24402F,#1C3326);padding:14px 14px 12px}
+.exh .art .gilt{max-width:300px;margin:0 auto}
+.exh .plaque{margin:-2px auto 0;background:linear-gradient(180deg,#F6E2A2,#C99A3C 55%,#B6862C);color:#3B2A0C;text-align:center;font-family:'Cinzel',Georgia,serif;font-weight:700;font-size:17px;padding:7px 10px;border-top:1px solid #FFF1C2;border-bottom:2px solid #7D5A18;letter-spacing:.03em}
+.exh .lbl{border-top:0}
+.hall .exh .art{padding:8px}
+.hall .exh .plaque{font-size:13px;padding:5px 6px}
+.note{border:2px solid #C7922C;box-shadow:0 6px 16px rgba(80,55,20,.12),inset 0 0 0 4px #FFFDF6,inset 0 0 0 5px #E2C77E}
+.note h4{font-family:'Cinzel',Georgia,serif}
+.museum-title .t{font-family:'Cinzel',Georgia,serif}
+.sheet .banner{height:120px;border-radius:4px;background:url('assets/art/lww/project/hero.jpg') center 35%/cover;margin-bottom:12px;box-shadow:inset 0 -40px 40px rgba(14,28,66,.35)}
+.artcredit{font-size:12px;color:var(--muted);text-align:center;padding:0 16px 6px}
+@media print{.gilt,.exh .plaque,.sheet .banner{-webkit-print-color-adjust:exact;print-color-adjust:exact}}
+.hdr.museum .tag{align-self:flex-start}
+@media print{body{background:#fff!important}}
 </style>
 </head>
 <body>
 <div class="page">
   <div class="prog"><span class="prog-l">🏛️ Project progress</span><div class="prog-t"><div class="prog-f" id="progF"></div></div><span class="prog-p" id="progP">0%</span></div>
-  <header class="hdr">
+  <header class="hdr museum">
     <div class="brand"><div class="logo"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy"></div><div><div class="org">Optima Academy Online</div><div class="orgsub">An Education Experience Company</div></div></div>
     <div class="tag">⭐ Unit Project</div>
-    <h1>The Lion, the Witch and the Wardrobe — The Lamp-Post Museum</h1>
+    <h1><small>The Lion, the Witch and the Wardrobe</small>The Lamp-Post Museum</h1>
     <div class="sub">Choose three objects from the book, write a museum label for each one, then tell what the ending shows.</div>
   </header>
   <!-- STANDARDS -->
@@ -312,9 +353,11 @@ details.ex .exh .art svg{width:90px}
       <div class="rnote">Each label has four parts: the object’s name, a quote from the book, what happens, and why it matters.</div>
     </details>
 
+    <div class="orn" aria-hidden="true">❦</div>
     <nav class="chips" id="chips" aria-label="Project steps"></nav>
     <section class="step" id="step" aria-live="polite"></section>
   </main>
+  <div class="artcredit">Museum pictures made for Optima Academy Online with AI image generation (not book illustrations).</div>
   <div class="foot">Optima Academy Online · 3rd Grade ELA · The Lion, the Witch and the Wardrobe · Unit Project<br>FL: ELA.3.R.1.1, ELA.3.R.1.2, ELA.3.C.1.4, ELA.3.C.1.5, ELA.3.C.3.1, ELA.K12.EE.1.1</div>
 </div>
 
@@ -336,53 +379,9 @@ try { S = JSON.parse(localStorage.getItem(KEY) || '{}') || {}; } catch (e) { S =
 S.objs = S.objs || []; S.lab = S.lab || {};
 function save() { try { localStorage.setItem(KEY, JSON.stringify(S)); } catch (e) {} progress(); }
 
-/* ── the pictures (drawn for this page; every object rests on a stand or the floor) ── */
-var PLINTH = '<rect x="22" y="112" width="76" height="6" rx="1" fill="#BDB6A7"/><rect x="28" y="118" width="64" height="18" fill="#D9D3C5"/><rect x="22" y="136" width="76" height="4" fill="#A59E8F"/>';
-var FLOOR = '<rect x="0" y="134" width="120" height="6" fill="#C9BFA8"/>';
-function svg(inner, label) { return '<svg viewBox="0 0 120 140" role="img" aria-label="' + esc(label) + '">' + inner + '</svg>'; }
-var PIC = {
-  wardrobe: FLOOR +
-    '<rect x="26" y="8" width="68" height="8" rx="2" fill="#5E3717"/>' +
-    '<rect x="30" y="16" width="60" height="114" fill="#7A4A22"/>' +
-    '<rect x="34" y="22" width="23" height="102" rx="2" fill="#8B5A2B"/><rect x="38" y="28" width="15" height="40" rx="2" fill="none" stroke="#6B4019" stroke-width="2"/><rect x="38" y="76" width="15" height="40" rx="2" fill="none" stroke="#6B4019" stroke-width="2"/>' +
-    '<rect x="63" y="22" width="23" height="102" rx="2" fill="#CFE3EE" stroke="#6B4019" stroke-width="2"/><path d="M68 30 L80 46 M68 40 L76 51" stroke="#fff" stroke-width="2" opacity=".8"/>' +
-    '<circle cx="55" cy="74" r="2" fill="#E9C46A"/><circle cx="65" cy="74" r="2" fill="#E9C46A"/>' +
-    '<rect x="32" y="130" width="8" height="5" fill="#5E3717"/><rect x="80" y="130" width="8" height="5" fill="#5E3717"/>',
-  lamppost: PLINTH +
-    '<circle cx="60" cy="26" r="17" fill="#FFE9A0" opacity=".55"/>' +
-    '<rect x="51" y="100" width="18" height="12" rx="2" fill="#2B2B2B"/><rect x="57.5" y="36" width="5" height="66" fill="#2B2B2B"/>' +
-    '<rect x="53" y="34" width="14" height="4" fill="#2B2B2B"/>' +
-    '<rect x="51" y="16" width="18" height="18" fill="#FFD86B" stroke="#2B2B2B" stroke-width="2"/><path d="M60 16 V34" stroke="#2B2B2B" stroke-width="1.5"/>' +
-    '<polygon points="47,17 73,17 60,7" fill="#2B2B2B"/><path d="M50 15 Q60 6 70 15 Q60 11 50 15Z" fill="#fff"/>',
-  delight: PLINTH +
-    '<ellipse cx="60" cy="110" rx="27" ry="6" fill="#E6D6B8"/><rect x="33" y="92" width="54" height="18" fill="#F2E6D0"/>' +
-    '<rect x="33" y="99" width="54" height="5" fill="#3E8E5A"/>' +
-    '<ellipse cx="60" cy="92" rx="27" ry="7" fill="#FFF6E6" stroke="#E6D6B8"/>' +
-    '<rect x="42" y="82" width="10" height="9" rx="1.5" fill="#F4A6C0"/><rect x="54" y="80" width="10" height="10" rx="1.5" fill="#F7B7CC"/><rect x="66" y="82" width="10" height="9" rx="1.5" fill="#F4A6C0"/><rect x="48" y="86" width="10" height="8" rx="1.5" fill="#F9C6D6"/><rect x="61" y="87" width="10" height="7" rx="1.5" fill="#F4A6C0"/>' +
-    '<circle cx="45" cy="84" r=".9" fill="#fff"/><circle cx="58" cy="82" r=".9" fill="#fff"/><circle cx="70" cy="84" r=".9" fill="#fff"/><circle cx="52" cy="89" r=".9" fill="#fff"/><circle cx="65" cy="89" r=".9" fill="#fff"/>' +
-    '<path d="M60 101 q-8 -8 -12 0 q4 6 12 0 q8 -8 12 0 q-4 6 -12 0" fill="#2F7449"/>',
-  cordial: PLINTH +
-    '<rect x="53" y="52" width="14" height="7" rx="2" fill="#C7922C"/><rect x="55" y="59" width="10" height="14" fill="#CDEBF7" stroke="#6AA9C9" stroke-width="1.5"/>' +
-    '<polygon points="60,72 77,88 71,111 49,111 43,88" fill="#CDEBF7" stroke="#6AA9C9" stroke-width="1.5"/>' +
-    '<polygon points="46,93 74,93 70,109 50,109" fill="#E2563B" opacity=".85"/>' +
-    '<path d="M60 72 L60 111 M43 88 L77 88 M51 80 L49 111 M69 80 L71 111" stroke="#6AA9C9" stroke-width="1" opacity=".7"/>' +
-    '<path d="M82 66 v8 M78 70 h8 M36 78 v6 M33 81 h6" stroke="#E9C46A" stroke-width="1.6"/>',
-  wand: PLINTH +
-    '<ellipse cx="60" cy="107" rx="36" ry="7" fill="#7E2433"/><ellipse cx="60" cy="104" rx="33" ry="5" fill="#9E3346"/>' +
-    '<circle cx="25" cy="109" r="2.5" fill="#E9C46A"/><circle cx="95" cy="109" r="2.5" fill="#E9C46A"/>' +
-    '<line x1="27" y1="101" x2="93" y2="97" stroke="#A7801C" stroke-width="5" stroke-linecap="round"/><line x1="27" y1="100" x2="93" y2="96" stroke="#E2B83A" stroke-width="3" stroke-linecap="round"/>',
-  table: '<rect x="0" y="128" width="120" height="12" fill="#8FA66B"/>' +
-    '<rect x="38" y="90" width="11" height="40" fill="#7E7A70"/><rect x="71" y="90" width="11" height="40" fill="#7E7A70"/>' +
-    '<rect x="16" y="76" width="88" height="15" rx="1" fill="#A19D93"/><rect x="16" y="76" width="88" height="3" fill="#B8B4AA"/>' +
-    '<rect x="22" y="91" width="14" height="40" fill="#938F85"/><rect x="84" y="91" width="14" height="40" fill="#938F85"/>' +
-    '<path d="M24 84 h6 v-3 h4 M40 86 q4 -4 8 0 M74 83 h5 l3 3 h5 M90 85 q3 -3 6 0" stroke="#6E6A60" stroke-width="1.2" fill="none"/>' +
-    '<polyline points="61,76 58,80 62,84 59,91" fill="none" stroke="#3B382F" stroke-width="2"/>',
-  umbrella: PLINTH +
-    '<path d="M60 112 V58" stroke="#3B2A14" stroke-width="3"/><path d="M60 112 q0 6 -6 6" stroke="#3B2A14" stroke-width="3" fill="none"/>' +
-    '<path d="M28 60 Q60 22 92 60 Q84 55 76 60 Q68 55 60 60 Q52 55 44 60 Q36 55 28 60Z" fill="#3E5E8E"/>' +
-    '<path d="M32 52 Q60 22 88 52 Q74 40 60 41 Q46 40 32 52Z" fill="#fff"/>'
-};
-/* The umbrella is the example only (Ch. 1); it is not one of the six choices. */
+/* ── the pictures: AI-generated museum art in assets/art/lww/project/ (umbrella = example only) ── */
+var ART = 'assets/art/lww/project/';
+function pic(id, label) { return '<span class="gilt"><img src="' + ART + id + '.jpg" alt="' + esc(label) + '"></span>'; }
 
 /* ── the six objects (every quote checked against Planning docs/lww_text.txt; American spelling) ── */
 var OBJ = [
@@ -511,8 +510,8 @@ function exhibitHTML(k, ex) {
   if (ex) { o = { id: 'umbrella', name: 'Mr. Tumnus’s Umbrella' }; L = ex; }
   else { o = obj(S.objs[k]); L = S.lab[o.id] || {}; }
   var q = ex ? ex.qq : (L.q != null ? o.q[L.q] : null);
-  return '<div class="exh"><div class="art">' + svg(PIC[o.id], o.name) + '</div><div class="lbl">' +
-    '<div class="no">' + (ex ? 'Example label' : 'Exhibit ' + (k + 1)) + '</div><h4>' + esc(o.name) + '</h4>' +
+  return '<div class="exh"><div class="art">' + pic(o.id, o.name) + '</div><div class="plaque">' + esc(o.name) + '</div><div class="lbl">' +
+    '<div class="no">' + (ex ? 'Example label' : 'Exhibit ' + (k + 1)) + '</div>' +
     '<div class="q">' + (q ? '“' + esc(q.t) + '”<small>' + esc(q.ch) + '</small>' : '<span class="blank">Tap a quote…</span>') + '</div>' +
     '<div class="k2">What happens</div><p>' + (L.what ? esc(L.what) : '<span class="blank">What happens with it…</span>') + '</p>' +
     '<div class="k2">Why it matters</div><p>' + (L.why ? esc(L.why) : '<span class="blank">Why it matters…</span>') + '</p>' +
@@ -524,10 +523,10 @@ var EXAMPLE = { qq: { t: 'he carried over his head an umbrella, white with snow.
 
 /* ── step renderers ── */
 function pickStep(i) {
-  var h = '<div class="ctx"><b>👀 What am I looking at?</b> Six objects from the book, each on a museum stand. A <b>curator</b> is the person who chooses what goes in a museum. You choose three. Pick objects you can tell a lot about.</div>' +
+  var h = '<div class="ctx"><b>👀 What am I looking at?</b> Six objects from the book, each in a museum frame. A <b>curator</b> is the person who chooses what goes in a museum. You choose three. Pick objects you can tell a lot about.</div>' +
     '<div class="tiles" id="tiles">' + OBJ.map(function (o) {
       var k = S.objs.indexOf(o.id);
-      return '<button type="button" class="tile tap" data-id="' + o.id + '" aria-pressed="' + (k >= 0) + '"><span class="num">' + (k >= 0 ? k + 1 : '') + '</span>' + svg(PIC[o.id], o.name) + esc(o.name) + '</button>';
+      return '<button type="button" class="tile tap" data-id="' + o.id + '" aria-pressed="' + (k >= 0) + '"><span class="num">' + (k >= 0 ? k + 1 : '') + '</span>' + pic(o.id, o.name) + '<span class="tname">' + esc(o.name) + '</span></button>';
     }).join('') + '</div><div class="pickfb" id="pfb" role="status"></div>';
   $('#step').innerHTML = shell(i, h);
   var upd = wireNav(i, 'Choose three objects to go on.');
@@ -610,7 +609,7 @@ function openSave() {
     '<li>Upload the PDF to the <b>Narnia Unit Project</b> assignment in Canvas.</li></ol>' +
     '<div class="save-actions"><button type="button" class="btn gold" id="printBtn">Save as PDF</button><button type="button" class="btn ghost" id="closeSave">Back to my project</button></div></div>' +
     '<section class="sheet"><div class="k">The Lion, the Witch and the Wardrobe · Unit Project · ' + esc(nm || 'Name: ________________') + '</div>' +
-    '<div class="museum-title"><div class="t">The Lamp-Post Museum</div><div class="s">Curator: ' + esc(nm || '________________') + '</div></div>' +
+    '<div class="banner" role="img" aria-label="The Lamp-Post Museum hall"></div><div class="museum-title"><div class="t">The Lamp-Post Museum</div><div class="s">Curator: ' + esc(nm || '________________') + '</div></div>' +
     '<div class="hall">' + [0, 1, 2].map(function (k) { return S.objs[k] ? exhibitHTML(k) : ''; }).join('') + '</div>' + noteHTML() + '</section>';
   v.classList.add('open'); document.body.style.overflow = 'hidden';
   $('#printBtn').onclick = function () { try { window.print(); } catch (e) {} };

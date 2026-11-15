@@ -60,3 +60,6 @@ Every image here is public domain, found on Wikimedia Commons, resized/cropped f
 | lww/lww-trafalgar-lions.jpg | Trafalgar Square and National Gallery, London (photochrom print; crop: the lions) | Unknown photographer (Photoglob Co.) | between 1890 and 1900 | Public domain | https://commons.wikimedia.org/wiki/File:Trafalgar_Square_and_National_Gallery,_London,_England-LCCN2002696934.jpg |
 | lww/lww-bamburgh.jpg | Bamburgh Castle, Northumberland | John Varley | early 1800s | Public domain (CC0, Yale Center for British Art) | https://commons.wikimedia.org/wiki/File:John_Varley_-_Bamburgh_Castle,_Northumberland_-_B1975.3.944_-_Yale_Center_for_British_Art.jpg |
 | lww/lww-white-hart.jpg | The Wilton Diptych, outer panel (crop: the white hart) | Unknown artist | about 1395–1399 | Public domain | https://commons.wikimedia.org/wiki/File:Wilton_diptych2.jpg |
+
+## Narnia unit project (lesson-30-lww-project.html) — assets/art/lww/project/
+AI-generated for Optima Academy Online on Nov 15 2026 (ElevenLabs Flows, model gpt-image-2.5-sunburst; flow "G3 ELA Narnia project — Lamp-Post Museum art"). Not book illustrations; objects described from the novel's text. hero.jpg (museum hall), wardrobe, lamppost, delight (Turkish Delight), cordial, wand, table (Stone Table, as a framed painting), umbrella (example label).
