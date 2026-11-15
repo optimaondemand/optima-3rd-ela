@@ -74,7 +74,7 @@ js = block(js, 'var WRITING_ARCS = [', '''var WRITING_ARCS = [
   { weeks:[8,17],  name:'a story response',      gloss:'writing about what happens in a book and why' },
   { weeks:[18,22], name:'an opinion paragraph',  gloss:'writing where you say what you think and give reasons' },
   { weeks:[23,24], name:'an informational piece',gloss:'writing that teaches facts about a topic' },
-  { weeks:[25,30], name:'a fantasy story',       gloss:'a made-up story with magic in it' },
+  { weeks:[25,30], name:'a literary response', gloss:'writing that explains your thinking about a book, with details from the book' },
   { weeks:[31,32], name:'your year-end project', gloss:'looking back at the books you read this year' }
 ];''')
 js = block(js, 'var REGION = {', '''var REGION = {
