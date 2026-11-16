@@ -69,3 +69,9 @@ AI-generated for Optima Academy Online on Nov 15 2026 (ElevenLabs Flows, model g
 - ext-bridge-narni.jpg — The Bridge at Narni, Jean-Baptiste-Camille Corot, 1827 (Louvre). Public domain (Wikimedia Commons).
 - ext-lighthouse-balke.jpg — Lighthouse on the Norwegian Coast, Peder Balke, about 1855 (National Museum, Oslo). Public domain (Wikimedia Commons, Google Art Project).
 - ext-darling-rescue-parker.jpg — William and Grace Darling Going to the Rescue of the SS 'Forfarshire', Henry Perlee Parker (RNLI Grace Darling Museum). Public domain (Wikimedia Commons).
+
+## Week 32 (Year-End Culmination: The 7 Pillars of Virtue) — assets/art/ext/
+- ext-parthenon-church.jpg — The Parthenon, Frederic Edwin Church, 1871 (The Metropolitan Museum of Art). Public domain (Wikimedia Commons, "Parthenon (1871) Frederic Edwin Church.jpg").
+- ext-edward-holbein.jpg — Edward VI as a Child, Hans Holbein the Younger, about 1538 (National Gallery of Art). Public domain (Wikimedia Commons, Google Art Project).
+- ext-godspeed-leighton.jpg — God Speed!, Edmund Blair Leighton, 1900. Public domain (Wikimedia Commons, "Leighton-God Speed!.jpg").
+- ext-reader-fragonard.jpg — A Young Girl Reading, Jean-Honoré Fragonard, about 1769 (National Gallery of Art). Public domain (Wikimedia Commons, "Fragonard, The Reader.jpg").
