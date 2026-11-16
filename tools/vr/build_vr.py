@@ -68,16 +68,30 @@ def say_p(slot, inner, cls='do'):
 models_html = ''.join(
     '<li class="model"><span class="mi" aria-hidden="true">%s</span><span><b>%s</b>%s<span class="why">%s</span></span></li>'
     % (ICONS.get(m['icon'], ''), e(m['name']), ('<small>type: %s</small>' % e(m['type'])) if m.get('type', m['name']) != m['name'] else '', e(m['why'])) for m in (D.get('models') or D['lookfors']))
+# Shared words (Bethany, Nov 16 2026): the same Go in / Snap and submit clips every week from week 19 on, recorded once:
+# assets/audio/guide/opti/g3ela-vr-shared-{go,submit}.mp3, copied to each week's step2 / step5 file name.
+SHARED_GO = ('Put on your headset and open the <b>On-Demand</b> app. Click <b>Explore</b>, type today’s map in <b>Filter environments</b>, '
+             'and click it. Then click <b>Begin Solo</b>.')
+SHARED_SUBMIT = ('Stand back so it all fits. Open your menu: <b>Library</b>, then <b>Camera</b>, then <b>Take photo</b>. '
+                 'Click the <b>Canvas</b> tab, pick this week’s VR assignment, and click <b>Choose from My Files</b>. '
+                 'Pick your photo, click <b>Use this file</b>, then <b>Submit to Canvas</b>. Look for the green <b>Submitted</b> tag. '
+                 'Then press the <b>Meta button</b> and click <b>Quit</b>.')
 HOWTO_MOVE = ('<div class="howto">✋ <b>To move a model:</b> grab it with the <b>palm trigger</b> (the button under your middle finger). '
               'Use <b>both</b> palm triggers to make it bigger or smaller.</div>')
 steps_html = ''
 for i, s in enumerate(D['steps']):
     n = i + 1
-    if s.get('submit'):
+    if s.get('submit') and D.get('sharedSubmit'):
+        body = SHARED_SUBMIT
+        s['_spoken'] = plain(re.sub(r'<[^>]+>', '', body))
+    elif s.get('submit'):
         body = ('Stand back so you can see %s. Open your menu, click <b>Library</b>, then <b>Camera</b>. Move the tablet until it all fits, then click <b>Take photo</b>. '
                 'Now click the <b>Canvas</b> tab and pick <b>%s</b>. Click <b>Choose from My Files</b>, pick your photo, click <b>Use this file</b>, then <b>Submit to Canvas</b>. '
                 'Look for the green <b>Submitted</b> tag. Last, press the <b>Meta button</b> and click <b>Quit</b>.') % (e(s['fits']), e(CANVAS))
         s['_spoken'] = s.get('spoken') or plain(re.sub(r'<[^>]+>', '', body))
+    elif s.get('shared') == 'go':
+        body = SHARED_GO
+        s['_spoken'] = plain(re.sub(r'<[^>]+>', '', body))
     else:
         body = md(s['text'])
         s['_spoken'] = s.get('spoken') or (plain(s['text']) + ((' ' + s['frame']) if s.get('frame') else ''))
@@ -90,6 +104,10 @@ for i, s in enumerate(D['steps']):
         extra += HOWTO_MOVE
     if s.get('frame'):
         extra += '<div class="howto say-it">🗣 ' + e(s['frame']) + '</div>'
+    if s.get('note'):
+        extra += '<div class="howto">' + md(s['note']) + '</div>'
+    if s.get('submit') and D.get('sharedSubmit'):
+        extra += '<div class="howto">📸 Your photo shows %s. In Canvas, pick <b>%s</b>.</div>' % (e(s['fits']), e(CANVAS))
     if s.get('submit'):
         extra += '<div class="howto">🔁 Want to fix it? Take a new photo and submit again.</div>'
     steps_html += ('<li class="step" data-n="%d" hidden><div class="step-n">Step %d of %d · %s</div>%s%s'
