@@ -1,0 +1,217 @@
+{
+ "week": 28,
+ "day": 2,
+ "book": "The Lion, the Witch and the Wardrobe",
+ "chapters": "Chapters 10–12",
+ "title": "Father Christmas’s Gifts",
+ "pattern": "A",
+ "map": "Winter Maze",
+ "mapFilter": "Winter",
+ "stamp": {
+  "name": "Father Christmas",
+  "art": "🎁"
+ },
+ "emoji": {
+  "sword2": "⚔️",
+  "shield": "🛡️",
+  "bow": "🏹",
+  "bottle": "🧪",
+  "sew": "🧵",
+  "deer": "🦌",
+  "peter": "🧑",
+  "susan": "👩",
+  "lucy": "👧",
+  "mrsb": "🦫",
+  "mrb": "🪵"
+ },
+ "brief": "Hoo! Let’s step off the Reading Road and into Narnia. In Chapter 10, Father Christmas brings gifts, and the Witch’s winter starts to break. Build the gifts, then take a photo for your teacher.",
+ "look": "This stop is the snowy wood where Father Christmas stops his sledge, from Chapter 10. He says the gifts are “tools not toys.”",
+ "models": [
+  {
+   "name": "Great Sword (Optima Domi)",
+   "type": "Great Sword",
+   "why": "Peter’s gift",
+   "icon": "sword2"
+  },
+  {
+   "name": "Medieval Shield",
+   "type": "Shield",
+   "why": "Peter’s gift, with a red lion",
+   "icon": "shield"
+  },
+  {
+   "name": "Bow (Optima Domi)",
+   "type": "Bow",
+   "why": "Susan’s gift",
+   "icon": "bow"
+  },
+  {
+   "name": "Potion Bottle",
+   "type": "Potion Bottle",
+   "why": "Lucy’s cordial",
+   "icon": "bottle"
+  },
+  {
+   "name": "Willoughsby Sewing Machine",
+   "type": "Sewing Machine",
+   "why": "Mrs. Beaver’s new one",
+   "icon": "sew"
+  }
+ ],
+ "steps": [
+  {
+   "title": "Know your models",
+   "say": "step1",
+   "text": "These are your five models. Say each name out loud. This list is also in VR, in the **Canvas** tab."
+  },
+  {
+   "title": "Go in",
+   "say": "step2",
+   "first": true,
+   "shared": "go",
+   "text": "",
+   "note": "🗺️ Today’s map: **Winter Maze** (type **Winter**)."
+  },
+  {
+   "title": "Build it",
+   "say": "step3",
+   "howto": "move",
+   "text": "Press the **top button on your right controller** and click **Models**. Put the **sword** and **shield** together for Peter. Put the **bow** for Susan. Put the **bottle** for Lucy. Put the **sewing machine** for Mrs. Beaver."
+  },
+  {
+   "title": "Say it out loud",
+   "say": "step4",
+   "frame": "“The gift I would want is ___ because ___.”",
+   "text": "Point to one gift and say this out loud:",
+   "spoken": "Point to one gift and say this out loud. The gift I would want is… because…"
+  },
+  {
+   "title": "Snap and submit",
+   "say": "step5",
+   "submit": true,
+   "fits": "the sword, the shield, the bow, the bottle and the sewing machine",
+   "text": ""
+  }
+ ],
+ "extra": {
+  "say": "extra",
+  "icon": "deer",
+  "text": "Add an **Animated Deer** to pull Father Christmas’s sledge. Say what he called out as he left."
+ },
+ "points": "Your photo shows the sword, the shield, the bow, the bottle and the sewing machine.",
+ "mapday": {
+  "say": "mapday",
+  "intro": "No headset today? It’s Road Map Day. Read about each gift and tap who got it. Then finish two sentences about the gifts.",
+  "repeat": true,
+  "right": "✓ Yes! That was for {name}.",
+  "miss": "Not that one. Think about who got each gift in Chapter 10.",
+  "done": "✓ Every gift found its owner. Now finish the two sentences.",
+  "names": {
+   "peter": "Peter",
+   "susan": "Susan",
+   "lucy": "Lucy",
+   "mrsb": "Mrs. Beaver",
+   "mrb": "Mr. Beaver"
+  },
+  "scene": {
+   "bg": "snow",
+   "aria": "A snowy wood with a spot for each person who gets a gift",
+   "slots": [
+    {
+     "id": "peter",
+     "left": "3%",
+     "top": "60%",
+     "label": "?"
+    },
+    {
+     "id": "susan",
+     "left": "23%",
+     "top": "66%",
+     "label": "?"
+    },
+    {
+     "id": "lucy",
+     "left": "43%",
+     "top": "66%",
+     "label": "?"
+    },
+    {
+     "id": "mrsb",
+     "left": "63%",
+     "top": "66%",
+     "label": "?"
+    },
+    {
+     "id": "mrb",
+     "left": "83%",
+     "top": "60%",
+     "label": "?"
+    }
+   ]
+  },
+  "clues": [
+   {
+    "q": "“…a new and better sewing machine…”",
+    "ch": "Chapter 10",
+    "a": "mrsb"
+   },
+   {
+    "q": "“…you will find your dam finished and mended…”",
+    "ch": "Chapter 10",
+    "a": "mrb"
+   },
+   {
+    "q": "“…a shield and a sword.”",
+    "ch": "Chapter 10",
+    "a": "peter"
+   },
+   {
+    "q": "“…a bow and a quiver full of arrows…”",
+    "ch": "Chapter 10",
+    "a": "susan"
+   },
+   {
+    "q": "“…a little ivory horn.”",
+    "ch": "Chapter 10",
+    "a": "susan"
+   },
+   {
+    "q": "“…a little bottle of what looked like glass…”",
+    "ch": "Chapter 10",
+    "a": "lucy"
+   },
+   {
+    "q": "“…and a small dagger.”",
+    "ch": "Chapter 10",
+    "a": "lucy"
+   }
+  ],
+  "choices": [
+   "peter",
+   "susan",
+   "lucy",
+   "mrsb",
+   "mrb"
+  ],
+  "frames": [
+   {
+    "start": "Father Christmas says the gifts are",
+    "hints": [
+     "tools, not toys",
+     "for great need",
+     "not for fun"
+    ]
+   },
+   {
+    "start": "The gift I would want most is",
+    "hints": [
+     "Lucy’s cordial, because",
+     "Susan’s horn, because",
+     "Peter’s shield, because"
+    ]
+   }
+  ],
+  "minWords": 20
+ },
+ "sharedSubmit": true
+}

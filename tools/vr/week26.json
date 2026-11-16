@@ -1,0 +1,231 @@
+{
+ "week": 26,
+ "day": 2,
+ "book": "The Lion, the Witch and the Wardrobe",
+ "chapters": "Chapters 4–6",
+ "title": "The Witch’s Sledge",
+ "pattern": "A",
+ "map": "Winter Maze",
+ "mapFilter": "Winter",
+ "stamp": {
+  "name": "The Witch’s Sledge",
+  "art": "❄️"
+ },
+ "emoji": {
+  "deer": "🦌",
+  "crown": "👑",
+  "bottle": "🧪",
+  "cup": "☕",
+  "box": "🎁",
+  "snow": "⚪",
+  "witch": "❄️",
+  "edmund": "👦",
+  "lucy": "👧",
+  "peter": "🧑",
+  "susan": "👩",
+  "professor": "👴"
+ },
+ "brief": "Hoo! Let’s step off the Reading Road and into Narnia. In Chapter 4, Edmund meets the White Witch on her sledge. Build the sledge stop, then take a photo for your teacher.",
+ "look": "This stop is a snowy wood, from Chapter 4. The Witch makes a hot drink and Turkish Delight appear in the snow.",
+ "models": [
+  {
+   "name": "Animated Deer",
+   "type": "Deer",
+   "why": "reindeer pulled her sledge",
+   "icon": "deer"
+  },
+  {
+   "name": "Rich Royal Crown (Optima Domi)",
+   "type": "Royal Crown",
+   "why": "“a golden crown on her head”",
+   "icon": "crown"
+  },
+  {
+   "name": "Potion Bottle",
+   "type": "Potion Bottle",
+   "why": "her small magic bottle",
+   "icon": "bottle"
+  },
+  {
+   "name": "Cup",
+   "type": "Cup",
+   "why": "the cup of hot drink",
+   "icon": "cup"
+  },
+  {
+   "name": "Present",
+   "type": "Present",
+   "why": "the box of Turkish Delight",
+   "icon": "box"
+  }
+ ],
+ "steps": [
+  {
+   "title": "Know your models",
+   "say": "step1",
+   "text": "These are your five models. Say each name out loud. This list is also in VR, in the **Canvas** tab."
+  },
+  {
+   "title": "Go in",
+   "say": "step2",
+   "first": true,
+   "shared": "go",
+   "text": "",
+   "note": "🗺️ Today’s map: **Winter Maze** (type **Winter**)."
+  },
+  {
+   "title": "Build it",
+   "say": "step3",
+   "howto": "move",
+   "text": "Press the **top button on your right controller** and click **Models**. Put the **deer** in the snow. Put the **crown** up high beside it. Put the **bottle**, **cup** and **box** in the snow."
+  },
+  {
+   "title": "Say it out loud",
+   "say": "step4",
+   "frame": "“The Witch was nice to Edmund because ___. He should not trust her because ___.”",
+   "text": "Point to the crown and say this out loud:",
+   "spoken": "Point to the crown and say this out loud. The Witch was nice to Edmund because… He should not trust her because…"
+  },
+  {
+   "title": "Snap and submit",
+   "say": "step5",
+   "submit": true,
+   "fits": "the deer, the crown, the bottle, the cup and the box",
+   "text": ""
+  }
+ ],
+ "extra": {
+  "say": "extra",
+  "icon": "snow",
+  "text": "Add four **Snowballs**, one for each child the Witch asks about. Say why she wants all four."
+ },
+ "points": "Your photo shows the deer, the crown, the bottle, the cup and the box in the snow.",
+ "mapday": {
+  "say": "mapday",
+  "intro": "No headset today? It’s Road Map Day. Read each line from the book and tap who said it. Then finish two sentences about telling the truth.",
+  "repeat": true,
+  "right": "✓ Yes! {name} said it.",
+  "miss": "Not that one. Think about who talks like that in Chapters 4 and 5.",
+  "done": "✓ You found every speaker. Now finish the two sentences.",
+  "names": {
+   "witch": "the White Witch",
+   "edmund": "Edmund",
+   "lucy": "Lucy",
+   "peter": "Peter",
+   "susan": "Susan",
+   "professor": "the Professor"
+  },
+  "scene": {
+   "bg": "snow",
+   "aria": "A snowy wood with a lamp-post and a spot for each person who talks",
+   "slots": [
+    {
+     "id": "witch",
+     "left": "3%",
+     "top": "60%",
+     "label": "?"
+    },
+    {
+     "id": "edmund",
+     "left": "19%",
+     "top": "66%",
+     "label": "?"
+    },
+    {
+     "id": "lucy",
+     "left": "35%",
+     "top": "66%",
+     "label": "?"
+    },
+    {
+     "id": "peter",
+     "left": "51%",
+     "top": "66%",
+     "label": "?"
+    },
+    {
+     "id": "susan",
+     "left": "67%",
+     "top": "66%",
+     "label": "?"
+    },
+    {
+     "id": "professor",
+     "left": "83%",
+     "top": "60%",
+     "label": "?"
+    }
+   ]
+  },
+  "clues": [
+   {
+    "q": "“Are you human?”",
+    "ch": "Chapter 4",
+    "a": "witch"
+   },
+   {
+    "q": "“Turkish Delight, please, your Majesty.”",
+    "ch": "Chapter 4",
+    "a": "edmund"
+   },
+   {
+    "q": "“Next time! Next time! Don’t forget. Come soon.”",
+    "ch": "Chapter 4",
+    "a": "witch"
+   },
+   {
+    "q": "“She is a perfectly terrible person.”",
+    "ch": "Chapter 4",
+    "a": "lucy"
+   },
+   {
+    "q": "“You can’t always believe what Fauns say.”",
+    "ch": "Chapter 4",
+    "a": "edmund"
+   },
+   {
+    "q": "“Do stop it.”",
+    "ch": "Chapter 5",
+    "a": "susan"
+   },
+   {
+    "q": "“Logic! … Why don’t they teach logic at these schools?”",
+    "ch": "Chapter 5",
+    "a": "professor"
+   },
+   {
+    "q": "“But do you really mean, sir, that there could be other worlds…?”",
+    "ch": "Chapter 5",
+    "a": "peter"
+   }
+  ],
+  "choices": [
+   "witch",
+   "edmund",
+   "lucy",
+   "peter",
+   "susan",
+   "professor"
+  ],
+  "frames": [
+   {
+    "start": "Edmund lied about Narnia because",
+    "hints": [
+     "he wanted to tease Lucy",
+     "he didn’t want to look silly",
+     "he wanted more Turkish Delight"
+    ]
+   },
+   {
+    "start": "The Professor thinks Lucy is telling the truth because",
+    "hints": [
+     "Lucy is the more truthful one",
+     "she isn’t mad",
+     "logic says so"
+    ]
+   }
+  ],
+  "minWords": 20
+ },
+ "sharedSubmit": true
+}

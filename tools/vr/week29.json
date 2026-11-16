@@ -1,0 +1,196 @@
+{
+ "week": 29,
+ "day": 2,
+ "book": "The Lion, the Witch and the Wardrobe",
+ "chapters": "Chapters 13–15",
+ "title": "The Stone Table Hill",
+ "pattern": "B",
+ "map": "The Countryside",
+ "mapFilter": "Countryside",
+ "stamp": {
+  "name": "The Stone Table",
+  "art": "🦁"
+ },
+ "emoji": {
+  "hill": "⛰️",
+  "open": "🌿",
+  "view": "👀",
+  "slab": "🪨",
+  "sun": "🌅",
+  "aslan": "🦁",
+  "witch": "❄️",
+  "lucy": "👧",
+  "susan": "👩"
+ },
+ "brief": "Hoo! Let’s step off the Reading Road and into Narnia. The Stone Table stands on an open hilltop. Find a hilltop like it, then take a photo for your teacher.",
+ "look": "This stop is the hill of the Stone Table. The book says it is “a green open space” where you can see the forest “in every direction.” This time you don’t build. You find a place.",
+ "lookfors": [
+  {
+   "name": "On top of a hill",
+   "why": "they climb uphill to reach it",
+   "icon": "hill"
+  },
+  {
+   "name": "Open and green",
+   "why": "“a green open space”",
+   "icon": "open"
+  },
+  {
+   "name": "A view all around",
+   "why": "you can see far in every direction",
+   "icon": "view"
+  },
+  {
+   "name": "Room for a big stone slab",
+   "why": "“a great grim slab of grey stone”",
+   "icon": "slab"
+  }
+ ],
+ "steps": [
+  {
+   "title": "Know what to look for",
+   "say": "step1",
+   "text": "You won’t build today. You will find a hilltop like the Stone Table’s. Read the four things to look for. This list is also in VR, in the **Canvas** tab."
+  },
+  {
+   "title": "Go in",
+   "say": "step2",
+   "first": true,
+   "shared": "go",
+   "text": "",
+   "note": "🗺️ Today’s map: **The Countryside** (type **Countryside**)."
+  },
+  {
+   "title": "Find it",
+   "say": "step3",
+   "text": "Walk and teleport to high ground. Find a green, open hilltop where you can see far in every direction."
+  },
+  {
+   "title": "Look closely",
+   "say": "step4",
+   "frame": "“This could be the Stone Table hill because ___. When Aslan came back, Lucy and Susan felt ___.”",
+   "text": "Stand on your hilltop and say this out loud:",
+   "spoken": "Stand on your hilltop and say this out loud. This could be the Stone Table hill because… When Aslan came back, Lucy and Susan felt…"
+  },
+  {
+   "title": "Snap and submit",
+   "say": "step5",
+   "submit": true,
+   "fits": "your hilltop and the view",
+   "text": ""
+  }
+ ],
+ "extra": {
+  "say": "extra",
+  "icon": "sun",
+  "text": "Turn to where the sun comes up. Say what Lucy and Susan saw at sunrise."
+ },
+ "points": "Your photo shows an open, green hilltop with a view.",
+ "mapday": {
+  "say": "mapday",
+  "intro": "No headset today? It’s Road Map Day. Read each line from the book and tap who said it. Then finish two sentences about Aslan.",
+  "repeat": true,
+  "right": "✓ Yes! {name} said it.",
+  "miss": "Not that one. Think about who talks like that in Chapters 13 to 15.",
+  "done": "✓ You found every speaker. Now finish the two sentences.",
+  "names": {
+   "aslan": "Aslan",
+   "witch": "the White Witch",
+   "lucy": "Lucy",
+   "susan": "Susan"
+  },
+  "scene": {
+   "bg": "clearing",
+   "aria": "An open hilltop with a spot for each person who talks",
+   "slots": [
+    {
+     "id": "aslan",
+     "left": "3%",
+     "top": "60%",
+     "label": "?"
+    },
+    {
+     "id": "witch",
+     "left": "30%",
+     "top": "66%",
+     "label": "?"
+    },
+    {
+     "id": "lucy",
+     "left": "56%",
+     "top": "66%",
+     "label": "?"
+    },
+    {
+     "id": "susan",
+     "left": "83%",
+     "top": "60%",
+     "label": "?"
+    }
+   ]
+  },
+  "clues": [
+   {
+    "q": "“You have a traitor there, Aslan.”",
+    "ch": "Chapter 13",
+    "a": "witch"
+   },
+   {
+    "q": "“Fall back, all of you, and I will talk to the Witch alone.”",
+    "ch": "Chapter 13",
+    "a": "aslan"
+   },
+   {
+    "q": "“Can’t you get to sleep either?”",
+    "ch": "Chapter 14",
+    "a": "susan"
+   },
+   {
+    "q": "“They’re nibbling away at the cords!”",
+    "ch": "Chapter 15",
+    "a": "susan"
+   },
+   {
+    "q": "“I think they’re friendly mice.”",
+    "ch": "Chapter 15",
+    "a": "lucy"
+   },
+   {
+    "q": "“It is more magic.”",
+    "ch": "Chapter 15",
+    "a": "aslan"
+   },
+   {
+    "q": "“Aren’t you dead then, dear Aslan?”",
+    "ch": "Chapter 15",
+    "a": "lucy"
+   }
+  ],
+  "choices": [
+   "aslan",
+   "witch",
+   "lucy",
+   "susan"
+  ],
+  "frames": [
+   {
+    "start": "Aslan came back to life because",
+    "hints": [
+     "of a magic deeper still",
+     "he took Edmund’s place",
+     "he did nothing wrong"
+    ]
+   },
+   {
+    "start": "When Lucy and Susan saw Aslan alive, they felt",
+    "hints": [
+     "glad",
+     "surprised",
+     "a little afraid"
+    ]
+   }
+  ],
+  "minWords": 20
+ },
+ "sharedSubmit": true
+}

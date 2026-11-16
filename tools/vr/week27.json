@@ -1,0 +1,195 @@
+{
+ "week": 27,
+ "day": 2,
+ "book": "The Lion, the Witch and the Wardrobe",
+ "chapters": "Chapters 7–9",
+ "title": "Dinner at the Beavers’",
+ "pattern": "A",
+ "map": "Tranquil Forest",
+ "mapFilter": "Tranquil",
+ "stamp": {
+  "name": "Dinner at the Beavers’",
+  "art": "🦫"
+ },
+ "emoji": {
+  "fire": "🔥",
+  "rocker": "🪑",
+  "pot": "🍲",
+  "table": "🪵",
+  "net": "🎣",
+  "hatchet": "🪓",
+  "yes": "📖",
+  "no": "❌"
+ },
+ "brief": "Hoo! Let’s step off the Reading Road and into Narnia. In Chapter 7, the Beavers make the children a warm dinner. Build the Beavers’ dinner, then take a photo for your teacher.",
+ "look": "This stop is the Beavers’ snug little house on the dam, from Chapter 7. Fish, potatoes, butter and a sticky marmalade roll!",
+ "models": [
+  {
+   "name": "Optima Domi Fire",
+   "type": "Fire",
+   "why": "the cooking fire",
+   "icon": "fire"
+  },
+  {
+   "name": "Rocking Chair (Optima Domi)",
+   "type": "Rocking Chair",
+   "why": "Mrs. Beaver’s own special chair",
+   "icon": "rocker"
+  },
+  {
+   "name": "Soup Pot",
+   "type": "Soup Pot",
+   "why": "“The potatoes are on boiling”",
+   "icon": "pot"
+  },
+  {
+   "name": "Wooden Table",
+   "type": "Wooden Table",
+   "why": "for the fish dinner",
+   "icon": "table"
+  },
+  {
+   "name": "Fishing Net",
+   "type": "Fishing Net",
+   "why": "hung on the Beavers’ walls",
+   "icon": "net"
+  }
+ ],
+ "steps": [
+  {
+   "title": "Know your models",
+   "say": "step1",
+   "text": "These are your five models. Say each name out loud. This list is also in VR, in the **Canvas** tab."
+  },
+  {
+   "title": "Go in",
+   "say": "step2",
+   "first": true,
+   "shared": "go",
+   "text": "",
+   "note": "🗺️ Today’s map: **Tranquil Forest** (type **Tranquil**)."
+  },
+  {
+   "title": "Build it",
+   "say": "step3",
+   "howto": "move",
+   "text": "Press the **top button on your right controller** and click **Models**. Put the **fire** down first. Put the **rocking chair** beside it. Put the **table** near the fire and the **pot** on it. Put the **net** nearby."
+  },
+  {
+   "title": "Say it out loud",
+   "say": "step4",
+   "frame": "“The Beavers help the children because ___. Edmund is quiet because ___.”",
+   "text": "Point to the table and say this out loud:",
+   "spoken": "Point to the table and say this out loud. The Beavers help the children because… Edmund is quiet because…"
+  },
+  {
+   "title": "Snap and submit",
+   "say": "step5",
+   "submit": true,
+   "fits": "the fire, the rocking chair, the table, the pot and the net",
+   "text": ""
+  }
+ ],
+ "extra": {
+  "say": "extra",
+  "icon": "hatchet",
+  "text": "Add a **Medieval Hatchet**. Say how Mr. Beaver used it to get fish."
+ },
+ "points": "Your photo shows the fire, the rocking chair, the table, the pot and the net.",
+ "mapday": {
+  "say": "mapday",
+  "intro": "No headset today? It’s Road Map Day. Read each sentence and decide: is it in the book, or not? Then finish two sentences about Aslan and Edmund.",
+  "repeat": true,
+  "right": "✓ Right! {name}.",
+  "miss": "Not quite. Think back to Chapters 7, 8 and 9.",
+  "done": "✓ You sorted every sentence. Now finish the two sentences.",
+  "names": {
+   "yes": "It’s in the book",
+   "no": "Not in the book"
+  },
+  "scene": {
+   "bg": "snow",
+   "aria": "A snowy wood with a spot for In the book and a spot for Not in the book",
+   "slots": [
+    {
+     "id": "yes",
+     "left": "20%",
+     "top": "52%",
+     "label": "In the book"
+    },
+    {
+     "id": "no",
+     "left": "65%",
+     "top": "52%",
+     "label": "Not in the book"
+    }
+   ]
+  },
+  "clues": [
+   {
+    "q": "Mr. Beaver catches trout through a hole in the ice.",
+    "ch": "Chapter 7",
+    "a": "yes"
+   },
+   {
+    "q": "Peter helps Mrs. Beaver catch the fish.",
+    "ch": "Chapter 7",
+    "a": "no"
+   },
+   {
+    "q": "Mrs. Beaver is working at her sewing machine.",
+    "ch": "Chapter 7",
+    "a": "yes"
+   },
+   {
+    "q": "The Beavers’ house has a shelf full of books.",
+    "ch": "Chapter 7",
+    "a": "no"
+   },
+   {
+    "q": "Dinner ends with a sticky marmalade roll.",
+    "ch": "Chapter 7",
+    "a": "yes"
+   },
+   {
+    "q": "Mr. Beaver says Aslan is a tame, safe lion.",
+    "ch": "Chapter 8",
+    "a": "no"
+   },
+   {
+    "q": "Edmund slips away to find the Witch.",
+    "ch": "Chapter 8",
+    "a": "yes"
+   },
+   {
+    "q": "Edmund draws a mustache on a stone lion.",
+    "ch": "Chapter 9",
+    "a": "yes"
+   }
+  ],
+  "choices": [
+   "yes",
+   "no"
+  ],
+  "frames": [
+   {
+    "start": "Mr. Beaver says Aslan isn’t safe, but",
+    "hints": [
+     "he’s good",
+     "he’s the King",
+     "the children can trust him"
+    ]
+   },
+   {
+    "start": "Edmund slipped away because",
+    "hints": [
+     "he wanted Turkish Delight",
+     "he wanted to be a king",
+     "he was jealous of Peter"
+    ]
+   }
+  ],
+  "minWords": 20
+ },
+ "sharedSubmit": true
+}
