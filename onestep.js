@@ -253,6 +253,7 @@
     function empty(s, j) {
       return !(s.steps[j] || []).some(function (n) {
         if (n.hidden) return false;
+        if (!s.body.contains(n)) return false;   // audit Nov 16 2026: a part another builder moved out of this activity leaves a blank step
         if (n.matches('.spk-guide-wrap, .spk-guide')) return !!n.querySelector('.spk-audio:not([hidden]), .spk-media:not([hidden]), .spk-yt:not([hidden])') || (n.matches('.spk-guide') && !n.hidden);
         return true;
       });
