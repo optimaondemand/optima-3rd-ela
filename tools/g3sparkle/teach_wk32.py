@@ -3,8 +3,8 @@
 Writes DATA.teach, plate.lookBtn and DATA.virtue (Pillar Watch, Bethany Nov 16 2026; every moment checked in the novel
 texts in Planning docs) into data/lesson-32-N.json AND the page's oao-data block. Word Study scripts are written for the
 Opti films: Day 1 teaches each idea; Days 2-4 show that day's activity with an example that is not an answer anywhere in
-the week (kindness, joyous, generous, maya and leo, unhappy/thankful; joyous, fair, when the bell rang, raking; joyful,
-courtesy, my dogs bowl, puddel; restart, respect, my sisters cat, hiking), and no two films open the same way.
+the week (kindness, joyous, generous, maya and leo, unhappy/thankful; thoughtful, fair, when the bell rang, raking; sadness,
+courtesy, my dogs bowl, puddel; restart, loyalty (Arthur pumps Stanley back up, Ch. 5), my sisters cat, hiking), and no two films open the same way.
 Day 2 Read Like a Writer works a different real line ("Nothing." in The Tale of Despereaux), never Mrs. Lambchop's.
 NO RECORDINGS (Bethany, Nov 14 2026): films are built silent with captions; scripts stay written to the budget.
 
@@ -54,7 +54,7 @@ L = {
  {"id": "poem", "find": "Poetry", "fold": [":scope > .callout"], "todo": "Read the first four lines two times: slowly, then fast. Which one sounds like a train?",
   "script": "[curious] Here's a poem by Robert Louis Stevenson about riding on a train. Read the first four lines slowly. Now read them fast. Which one sounds like a train?"},
  {"id": "morph", "find": "Morphology", "fold": [":scope > .callout:not(:has(+ .match-game))", ":scope > .key-concept"], "todo": "Tap a word, then tap what it means. Match all four words.",
-  "script": "Watch one match first. Joyous. Find the ending: ous. It means full of. So joyous means full of joy. That's my match! +how:morph2"},
+  "script": "Watch one match first. Thoughtful. Find the ending: ful. It means full of. So thoughtful means full of kind thoughts. That's my match! +how:morph2"},
  {"id": "vocab", "find": "Vocabulary", "fold": [], "todo": "Tap a word, then tap its meaning. Match all four words.",
   "script": "Here's a good-character word that isn't in the game. Fair. Being fair means everyone plays by the same rules. Now tap a word, then tap its meaning. Match all four."},
  {"id": "gram", "find": "Grammar", "fold": GRAM_FOLD, "todo": "Read the four sentences. Tap Now check your thinking. Then tap the five words that are wrong.",
@@ -78,7 +78,7 @@ L = {
  dict(WGRD, script="[warmly] Here's today's reading tip. Give your proof: remember a time this year when you used a reading skill all on your own. " + LENS_END),
  dol("By the last page of the novel, every character had changed in some way. By the last page of the novel is the opening part, so a comma closes it."),
  {"id": "morph", "find": "Morphology", "fold": [":scope > .callout:not(:has(+ .fillin-game))", ":scope > .key-concept"], "todo": "Say the parts out loud. Type the whole word in each box. Tap Check My Answers.",
-  "script": "Snap the parts together. Joy. Ful. Joyful! Full of joy. +how:morph3"},
+  "script": "Snap the parts together. Sad. Ness. Sadness! Being sad. +how:morph3"},
  {"id": "vocab", "find": "Vocabulary", "fold": [], "todo": "Read each sentence. Pick the word that fits.",
   "script": "Try each word in the blank, and keep the one that makes sense. Mia said thank you and held the door. That shows blank. Courage? Hmm, not quite. Courtesy? Yes! Now pick the word that fits each sentence."},
  {"id": "gram", "find": "Grammar", "fold": GRAM_FOLD, "todo": "Read the before and after. Say the gray sentence the right way. Tap Check your sentence.",
@@ -104,7 +104,7 @@ L = {
  {"id": "morph", "find": "Morphology", "fold": [], "todo": "Say what one part means. Roll the dice. Say what each word means, then check.",
   "script": "Quick question: what does re mean? Again! Here's a word that isn't on the dice. Restart. To start again. +how:morph-dice"},
  {"id": "vocab", "find": "Vocabulary", "fold": [], "todo": "Choose one word. Write one sentence about your character and you.",
-  "script": "Watch me connect a word to a book and to me. Respect. Mrs. Lambchop and I both show respect: she stands up for Stanley, and I listen to my friends. Now choose your word, and write one sentence about your character and you."},
+  "script": "Watch me connect a word to a book and to me. Loyalty. Arthur and I both show loyalty: he helps his brother Stanley get round again, and I stick by my friends. Now choose your word, and write one sentence about your character and you."},
  {"id": "gram", "find": "Grammar", "fold": GRAM_FOLD, "todo": "Fix it in passes. Then tap all seven words that need fixing.",
   "script": "Three passes, like an editor. my sisters cat runned under the bed. Pass one, capitals: My. Pass two, apostrophes: sister's. Pass three, verbs: runned should be ran. Now do your passes, and tap all seven words that need fixing."},
  {"id": "spell", "find": "Spelling", "fold": [], "foldText": ["The Rule:"], "todo": "Roll the dice. Say the word and think of its rule. Then check.",
