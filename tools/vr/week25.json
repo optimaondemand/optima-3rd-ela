@@ -1,0 +1,223 @@
+{
+ "week": 25,
+ "day": 2,
+ "book": "The Lion, the Witch and the Wardrobe",
+ "chapters": "Chapters 1–3",
+ "title": "Tea with Mr. Tumnus",
+ "pattern": "A",
+ "map": "Ice Caverns",
+ "mapFilter": "Ice",
+ "stamp": {
+  "name": "Tea with Mr. Tumnus",
+  "art": "🫖"
+ },
+ "emoji": {
+  "fire": "🔥",
+  "table": "🪵",
+  "chair": "🪑",
+  "toast": "🍞",
+  "cup": "☕",
+  "coat": "🧥",
+  "lamp": "🏮",
+  "umbrella": "☂️",
+  "parcels": "📦",
+  "flute": "🎵",
+  "crown": "👑",
+  "book": "📚"
+ },
+ "brief": "Hoo! Let’s step off the Reading Road and into Narnia. In Chapter 2, Mr. Tumnus invites Lucy to tea in his cave. Build the tea, then take a photo for your teacher.",
+ "look": "This stop is Mr. Tumnus’s cave, from Chapter 2. He promised Lucy “a roaring fire – and toast – and sardines – and cake.”",
+ "models": [
+  {
+   "name": "Optima Domi Fire",
+   "type": "Fire",
+   "why": "the roaring wood fire",
+   "icon": "fire"
+  },
+  {
+   "name": "Small Table",
+   "type": "Small Table",
+   "why": "for the tea things",
+   "icon": "table"
+  },
+  {
+   "name": "Small Chair",
+   "type": "Small Chair",
+   "why": "“one for me and one for a friend”",
+   "icon": "chair"
+  },
+  {
+   "name": "Toast Loaf",
+   "type": "Toast",
+   "why": "sardines on toast, toast with honey",
+   "icon": "toast"
+  },
+  {
+   "name": "Cup",
+   "type": "Cup",
+   "why": "for the tea",
+   "icon": "cup"
+  }
+ ],
+ "steps": [
+  {
+   "title": "Know your models",
+   "say": "step1",
+   "text": "These are your five models. Say each name out loud. This list is also in VR, in the **Canvas** tab."
+  },
+  {
+   "title": "Go in",
+   "say": "step2",
+   "first": true,
+   "shared": "go",
+   "text": "",
+   "note": "🗺️ Today’s map: **Ice Caverns** (type **Ice**)."
+  },
+  {
+   "title": "Build it",
+   "say": "step3",
+   "howto": "move",
+   "text": "Press the **top button on your right controller** and click **Models**. Put the **fire** by a wall and the **table** near it. Add **two chairs**. Put the **toast** and **cup** on the table."
+  },
+  {
+   "title": "Say it out loud",
+   "say": "step4",
+   "frame": "“Mr. Tumnus seems kind because ___. But he has a secret: ___.”",
+   "text": "Sit in a chair and say this out loud:",
+   "spoken": "Sit in a chair and say this out loud. Mr. Tumnus seems kind because… But he has a secret…"
+  },
+  {
+   "title": "Snap and submit",
+   "say": "step5",
+   "submit": true,
+   "fits": "the fire, the table, two chairs, the toast and the cup",
+   "text": ""
+  }
+ ],
+ "extra": {
+  "say": "extra",
+  "icon": "book",
+  "text": "Add an **HTKAM - Literature Book** for Mr. Tumnus’s shelf. Make up a title and say it."
+ },
+ "points": "Your photo shows the fire, the table, two chairs, the toast and the cup in the cave.",
+ "mapday": {
+  "say": "mapday",
+  "intro": "No headset today? It’s Road Map Day. Read each clue from the book and tap the thing it names. Then finish two sentences about Lucy and Mr. Tumnus.",
+  "right": "✓ Yes! {name}.",
+  "done": "✓ You found every one. Now finish the two sentences.",
+  "names": {
+   "coat": "the fur coats",
+   "lamp": "the lamp-post",
+   "umbrella": "the umbrella",
+   "parcels": "the parcels",
+   "toast": "the toast",
+   "flute": "the flute",
+   "sword": "a sword",
+   "crown": "a crown"
+  },
+  "scene": {
+   "bg": "cave",
+   "aria": "Mr. Tumnus’s cave, with a spot for each thing from the book",
+   "slots": [
+    {
+     "id": "coat",
+     "left": "3%",
+     "top": "60%",
+     "label": "?"
+    },
+    {
+     "id": "lamp",
+     "left": "19%",
+     "top": "66%",
+     "label": "?"
+    },
+    {
+     "id": "umbrella",
+     "left": "35%",
+     "top": "70%",
+     "label": "?"
+    },
+    {
+     "id": "parcels",
+     "left": "51%",
+     "top": "70%",
+     "label": "?"
+    },
+    {
+     "id": "toast",
+     "left": "67%",
+     "top": "66%",
+     "label": "?"
+    },
+    {
+     "id": "flute",
+     "left": "83%",
+     "top": "60%",
+     "label": "?"
+    }
+   ]
+  },
+  "clues": [
+   {
+    "q": "“…mostly long fur coats.”",
+    "ch": "Chapter 1",
+    "a": "coat"
+   },
+   {
+    "q": "“…she reached it and found it was a lamp-post.”",
+    "ch": "Chapter 1",
+    "a": "lamp"
+   },
+   {
+    "q": "“…he carried over his head an umbrella, white with snow.”",
+    "ch": "Chapter 1",
+    "a": "umbrella"
+   },
+   {
+    "q": "“…he dropped all his parcels.”",
+    "ch": "Chapter 1",
+    "a": "parcels"
+   },
+   {
+    "q": "“…sardines on toast, and then buttered toast…”",
+    "ch": "Chapter 2",
+    "a": "toast"
+   },
+   {
+    "q": "“…a strange little flute that looked as if it were made of straw…”",
+    "ch": "Chapter 2",
+    "a": "flute"
+   }
+  ],
+  "choices": [
+   "coat",
+   "sword",
+   "lamp",
+   "umbrella",
+   "crown",
+   "parcels",
+   "toast",
+   "flute"
+  ],
+  "frames": [
+   {
+    "start": "Mr. Tumnus felt sad because",
+    "hints": [
+     "he worked for the White Witch",
+     "he was supposed to kidnap Lucy",
+     "Lucy was kind to him"
+    ]
+   },
+   {
+    "start": "Lucy would not say Narnia was a game because",
+    "hints": [
+     "she was a very truthful girl",
+     "it really happened",
+     "she knew it was real"
+    ]
+   }
+  ],
+  "minWords": 20
+ },
+ "sharedSubmit": true
+}
