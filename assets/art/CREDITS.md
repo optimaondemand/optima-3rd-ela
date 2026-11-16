@@ -63,3 +63,9 @@ Every image here is public domain, found on Wikimedia Commons, resized/cropped f
 
 ## Narnia unit project (lesson-30-lww-project.html) — assets/art/lww/project/
 AI-generated for Optima Academy Online on Nov 15 2026 (ElevenLabs Flows, model gpt-image-2.5-sunburst; flow "G3 ELA Narnia project — Lamp-Post Museum art"). Not book illustrations; objects described from the novel's text. hero.jpg (museum hall), wardrobe, lamppost, delight (Turkish Delight), cordial, wand, table (Stone Table, as a framed painting), umbrella (example label).
+
+## Week 31 (Paired Texts: The Courage to Act) — assets/art/ext/
+- ext-grace-darling-joy.jpg — Grace Darling, Thomas Musgrave Joy, 1839. Public domain (Wikimedia Commons, "Grace Darling Thomas Musgrave Joy.jpg").
+- ext-bridge-narni.jpg — The Bridge at Narni, Jean-Baptiste-Camille Corot, 1827 (Louvre). Public domain (Wikimedia Commons).
+- ext-lighthouse-balke.jpg — Lighthouse on the Norwegian Coast, Peder Balke, about 1855 (National Museum, Oslo). Public domain (Wikimedia Commons, Google Art Project).
+- ext-darling-rescue-parker.jpg — William and Grace Darling Going to the Rescue of the SS 'Forfarshire', Henry Perlee Parker (RNLI Grace Darling Museum). Public domain (Wikimedia Commons).
