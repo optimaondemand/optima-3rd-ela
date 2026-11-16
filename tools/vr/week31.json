@@ -1,0 +1,167 @@
+{
+ "week": 31,
+ "day": 2,
+ "book": "Paired Texts",
+ "chapters": "The Courage to Act",
+ "title": "Mira’s Bridge",
+ "pattern": "B",
+ "map": "Medieval Town (Sunny)",
+ "mapFilter": "Town",
+ "stamp": {
+  "name": "Mira’s Bridge",
+  "art": "🌉"
+ },
+ "emoji": {
+  "narrow": "🌉",
+  "sides": "↔️",
+  "step": "👣",
+  "heart": "💛",
+  "t1": "📘",
+  "t2": "🌉"
+ },
+ "brief": "Hoo! Let’s step off the Reading Road. In “The Choice at the Bridge,” Mira walks onto a narrow bridge to help a boy. Find a crossing like hers, then take a photo for your teacher.",
+ "look": "This stop is a narrow bridge like Mira’s. Text 1 says courage means you act even when you are afraid. This time you don’t build. You find a place.",
+ "lookfors": [
+  {
+   "name": "A narrow crossing",
+   "why": "a bridge, a narrow street or a thin path",
+   "icon": "narrow"
+  },
+  {
+   "name": "Two sides",
+   "why": "Mira on one side, the boys on the other",
+   "icon": "sides"
+  },
+  {
+   "name": "Room to step forward",
+   "why": "“She walked onto the bridge.”",
+   "icon": "step"
+  }
+ ],
+ "steps": [
+  {
+   "title": "Know what to look for",
+   "say": "step1",
+   "text": "You won’t build today. You will find a crossing like Mira’s. Read the three things to look for. This list is also in VR, in the **Canvas** tab."
+  },
+  {
+   "title": "Go in",
+   "say": "step2",
+   "first": true,
+   "shared": "go",
+   "text": "",
+   "note": "🗺️ Today’s map: **Medieval Town (Sunny)** (type **Town**)."
+  },
+  {
+   "title": "Find it",
+   "say": "step3",
+   "text": "Walk and teleport through the town. Find a narrow place to cross, with one side and another side. No bridge? A narrow street works."
+  },
+  {
+   "title": "Look closely",
+   "say": "step4",
+   "frame": "“Mira was brave because ___. Courage means ___.”",
+   "text": "Stand at your crossing and say this out loud:",
+   "spoken": "Stand at your crossing and say this out loud. Mira was brave because… Courage means…"
+  },
+  {
+   "title": "Snap and submit",
+   "say": "step5",
+   "submit": true,
+   "fits": "your narrow crossing",
+   "text": ""
+  }
+ ],
+ "extra": {
+  "say": "extra",
+  "icon": "heart",
+  "text": "Take one step forward, like Mira. Say one brave thing a kid your age could do."
+ },
+ "points": "Your photo shows a narrow crossing with two sides.",
+ "mapday": {
+  "say": "mapday",
+  "intro": "No headset today? It’s Road Map Day. Read each line and tap which text it comes from. Then finish two sentences about courage.",
+  "repeat": true,
+  "right": "✓ Yes! That’s from {name}.",
+  "miss": "Not that one. Is it a fact about courage, or part of Mira’s story?",
+  "done": "✓ You sorted every line. Now finish the two sentences.",
+  "names": {
+   "t1": "Text 1, What Is Courage?",
+   "t2": "Text 2, The Choice at the Bridge"
+  },
+  "scene": {
+   "bg": "town",
+   "aria": "A town with a spot for Text 1 and a spot for Text 2",
+   "slots": [
+    {
+     "id": "t1",
+     "left": "20%",
+     "top": "58%",
+     "label": "Text 1"
+    },
+    {
+     "id": "t2",
+     "left": "65%",
+     "top": "58%",
+     "label": "Text 2"
+    }
+   ]
+  },
+  "clues": [
+   {
+    "q": "“Courage is not the same as having no fear.”",
+    "ch": "Informational",
+    "a": "t1"
+   },
+   {
+    "q": "“Mira’s heart hammered.”",
+    "ch": "Fiction",
+    "a": "t2"
+   },
+   {
+    "q": "“In fact, most courageous acts involve fear.”",
+    "ch": "Informational",
+    "a": "t1"
+   },
+   {
+    "q": "“Leave him alone,” she said.",
+    "ch": "Fiction",
+    "a": "t2"
+   },
+   {
+    "q": "Plato named courage as one of the four most important virtues.",
+    "ch": "Informational",
+    "a": "t1"
+   },
+   {
+    "q": "“I just decided that he mattered more than my fear did.”",
+    "ch": "Fiction",
+    "a": "t2"
+   }
+  ],
+  "choices": [
+   "t1",
+   "t2"
+  ],
+  "frames": [
+   {
+    "start": "Mira chose to act anyway because",
+    "hints": [
+     "the boy mattered more than her fear",
+     "it was the right thing",
+     "she decided to be brave"
+    ]
+   },
+   {
+    "start": "One time I chose to be brave was when",
+    "hints": [
+     "I told the truth",
+     "I tried again",
+     "I stood up for someone"
+    ]
+   }
+  ],
+  "minWords": 20
+ },
+ "sharedSubmit": true
+}

@@ -1,0 +1,212 @@
+{
+ "week": 32,
+ "day": 2,
+ "book": "Year-End",
+ "chapters": "The 7 Pillars of Virtue",
+ "title": "The Hall of Pillars",
+ "pattern": "A",
+ "map": "The Great Hall",
+ "mapFilter": "Great Hall",
+ "stamp": {
+  "name": "Hall of Pillars",
+  "art": "🏛️"
+ },
+ "emoji": {
+  "pillar": "🏛️",
+  "pillar2": "🗿",
+  "bcour": "📕",
+  "binteg": "📗",
+  "bcomm": "📘",
+  "joy": "📙",
+  "honesty": "🗣️",
+  "courtesy": "🤝",
+  "responsibility": "🙋",
+  "courage": "🦁",
+  "service": "🍽️"
+ },
+ "brief": "Hoo! You made it to the end of the Reading Road! Build a Hall of Pillars for the 7 Pillars of Virtue, then take a photo for your teacher.",
+ "look": "This stop is a great hall. Each pillar stands for good character, like the people we met in our books this year.",
+ "models": [
+  {
+   "name": "Castle - Pillar 1",
+   "type": "Pillar",
+   "why": "the first pillar of your hall",
+   "icon": "pillar"
+  },
+  {
+   "name": "Castle - Pillar 2",
+   "type": "Pillar",
+   "why": "add two or more",
+   "icon": "pillar2"
+  },
+  {
+   "name": "Book - Courage",
+   "type": "Book",
+   "why": "courage: acting even when you are afraid",
+   "icon": "bcour"
+  },
+  {
+   "name": "Book - Integrity",
+   "type": "Book",
+   "why": "like honesty: telling the truth",
+   "icon": "binteg"
+  },
+  {
+   "name": "Book - Community",
+   "type": "Book",
+   "why": "like service: helping others",
+   "icon": "bcomm"
+  }
+ ],
+ "steps": [
+  {
+   "title": "Know your models",
+   "say": "step1",
+   "text": "These are your five models. Say each name out loud. This list is also in VR, in the **Canvas** tab."
+  },
+  {
+   "title": "Go in",
+   "say": "step2",
+   "first": true,
+   "shared": "go",
+   "text": "",
+   "note": "🗺️ Today’s map: **The Great Hall** (type **Great Hall**)."
+  },
+  {
+   "title": "Build it",
+   "say": "step3",
+   "howto": "move",
+   "text": "Press the **top button on your right controller** and click **Models**. Put the **pillars** in a row. Put one **book** at the foot of each pillar."
+  },
+  {
+   "title": "Say it out loud",
+   "say": "step4",
+   "frame": "“This pillar is ___. A character who showed it this year is ___.”",
+   "text": "Stand by one pillar and say this out loud:",
+   "spoken": "Stand by one pillar and say this out loud. This pillar is… A character who showed it this year is…"
+  },
+  {
+   "title": "Snap and submit",
+   "say": "step5",
+   "submit": true,
+   "fits": "your pillars and the three books",
+   "text": ""
+  }
+ ],
+ "extra": {
+  "say": "extra",
+  "icon": "joy",
+  "text": "Add a **Book - Joy**. Say the most joyful part of your reading year."
+ },
+ "points": "Your photo shows a row of pillars with a book at each one.",
+ "mapday": {
+  "say": "mapday",
+  "intro": "No headset today? It’s Road Map Day. Read what each character did and tap the pillar it shows. Then finish two sentences about your year.",
+  "repeat": true,
+  "right": "✓ Yes! That shows {name}.",
+  "miss": "Not that one. Look at the 7 pillars again and think.",
+  "done": "✓ You matched every pillar. Now finish the two sentences.",
+  "names": {
+   "honesty": "honesty",
+   "courtesy": "courtesy",
+   "responsibility": "responsibility",
+   "courage": "courage",
+   "service": "service"
+  },
+  "scene": {
+   "bg": "castle",
+   "aria": "A castle with a spot for each pillar",
+   "slots": [
+    {
+     "id": "honesty",
+     "left": "3%",
+     "top": "60%",
+     "label": "?"
+    },
+    {
+     "id": "courtesy",
+     "left": "23%",
+     "top": "66%",
+     "label": "?"
+    },
+    {
+     "id": "responsibility",
+     "left": "43%",
+     "top": "66%",
+     "label": "?"
+    },
+    {
+     "id": "courage",
+     "left": "63%",
+     "top": "66%",
+     "label": "?"
+    },
+    {
+     "id": "service",
+     "left": "83%",
+     "top": "60%",
+     "label": "?"
+    }
+   ]
+  },
+  "clues": [
+   {
+    "q": "Lucy will not say Narnia was a game, because it was true.",
+    "ch": "The Lion, the Witch and the Wardrobe",
+    "a": "honesty"
+   },
+   {
+    "q": "The prince shakes Smudge’s hand: “Glad to shake your hand, Smudge.”",
+    "ch": "The Whipping Boy",
+    "a": "courtesy"
+   },
+   {
+    "q": "Edmund says “I’m sorry” to each of his brother and sisters.",
+    "ch": "The Lion, the Witch and the Wardrobe",
+    "a": "responsibility"
+   },
+   {
+    "q": "Mira walks onto the bridge, even though she is afraid.",
+    "ch": "The Choice at the Bridge",
+    "a": "courage"
+   },
+   {
+    "q": "Mr. Beaver catches fish so the children can eat.",
+    "ch": "The Lion, the Witch and the Wardrobe",
+    "a": "service"
+   },
+   {
+    "q": "Jemmy tells Hold-Your-Nose Billy, “Lay down the whip.”",
+    "ch": "The Whipping Boy",
+    "a": "courage"
+   }
+  ],
+  "choices": [
+   "honesty",
+   "courtesy",
+   "responsibility",
+   "courage",
+   "service"
+  ],
+  "frames": [
+   {
+    "start": "The pillar that matters most to me is",
+    "hints": [
+     "honesty, because",
+     "courage, because",
+     "service, because"
+    ]
+   },
+   {
+    "start": "Next year, I want to practice",
+    "hints": [
+     "perseverance, by",
+     "respect, by",
+     "responsibility, by"
+    ]
+   }
+  ],
+  "minWords": 20
+ },
+ "sharedSubmit": true
+}

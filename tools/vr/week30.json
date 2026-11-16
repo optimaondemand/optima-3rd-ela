@@ -1,0 +1,217 @@
+{
+ "week": 30,
+ "day": 2,
+ "book": "The Lion, the Witch and the Wardrobe",
+ "chapters": "Chapters 16–17",
+ "title": "Crowned at Cair Paravel",
+ "pattern": "A",
+ "map": "The Great Hall",
+ "mapFilter": "Great Hall",
+ "stamp": {
+  "name": "Cair Paravel",
+  "art": "👑"
+ },
+ "emoji": {
+  "throne": "🪑",
+  "crown": "👑",
+  "crown2": "💎",
+  "flower": "🌸",
+  "lion": "🦁",
+  "stag": "🦌",
+  "peter": "🧑",
+  "susan": "👩",
+  "edmund": "👦",
+  "lucy": "👧",
+  "aslan": "🦁"
+ },
+ "brief": "Hoo! Let’s step into Narnia one last time. In Chapter 17, Aslan crowns the four children at Cair Paravel. Build the crowning, then take a photo for your teacher.",
+ "look": "This stop is the Great Hall of Cair Paravel, from Chapter 17. Aslan led the children “to the four thrones.”",
+ "models": [
+  {
+   "name": "Optima Domi Medieval Chair",
+   "type": "Medieval Chair",
+   "why": "add four, for the four thrones",
+   "icon": "throne"
+  },
+  {
+   "name": "Gold Crown (Optima Domi)",
+   "type": "Gold Crown",
+   "why": "add two, for Peter and Edmund",
+   "icon": "crown"
+  },
+  {
+   "name": "Rich Royal Crown (Optima Domi)",
+   "type": "Royal Crown",
+   "why": "for Queen Susan",
+   "icon": "crown2"
+  },
+  {
+   "name": "Flower Crown",
+   "type": "Flower Crown",
+   "why": "for Queen Lucy",
+   "icon": "flower"
+  },
+  {
+   "name": "Lion (OptimaED)",
+   "type": "Lion",
+   "why": "Aslan crowned them",
+   "icon": "lion"
+  }
+ ],
+ "steps": [
+  {
+   "title": "Know your models",
+   "say": "step1",
+   "text": "These are your five models. Say each name out loud. This list is also in VR, in the **Canvas** tab."
+  },
+  {
+   "title": "Go in",
+   "say": "step2",
+   "first": true,
+   "shared": "go",
+   "text": "",
+   "note": "🗺️ Today’s map: **The Great Hall** (type **Great Hall**)."
+  },
+  {
+   "title": "Build it",
+   "say": "step3",
+   "howto": "move",
+   "text": "Press the **top button on your right controller** and click **Models**. Put **four chairs** in a row. Put a **crown** on or by each chair. Put the **lion** in front of the thrones."
+  },
+  {
+   "title": "Say it out loud",
+   "say": "step4",
+   "frame": "“This throne is for ___. They were called ‘the ___’ because ___.”",
+   "text": "Point to one throne and say this out loud:",
+   "spoken": "Point to one throne and say this out loud. This throne is for… They were called the… because…"
+  },
+  {
+   "title": "Snap and submit",
+   "say": "step5",
+   "submit": true,
+   "fits": "the four thrones, the four crowns and the lion",
+   "text": ""
+  }
+ ],
+ "extra": {
+  "say": "extra",
+  "icon": "stag",
+  "text": "Add an **Animated Deer** for the White Stag. Say what happened when the kings and queens followed it."
+ },
+ "points": "Your photo shows four thrones, four crowns and the lion.",
+ "mapday": {
+  "say": "mapday",
+  "intro": "No headset today? It’s Road Map Day. Read each clue and tap who it is about. Then finish two sentences about the end of the story.",
+  "repeat": true,
+  "right": "✓ Yes! That’s {name}.",
+  "miss": "Not that one. Think back to Chapters 16 and 17.",
+  "done": "✓ You know every king and queen. Now finish the two sentences.",
+  "names": {
+   "peter": "Peter",
+   "susan": "Susan",
+   "edmund": "Edmund",
+   "lucy": "Lucy",
+   "aslan": "Aslan"
+  },
+  "scene": {
+   "bg": "castle",
+   "aria": "The castle, with a spot for each king, queen and Aslan",
+   "slots": [
+    {
+     "id": "peter",
+     "left": "3%",
+     "top": "60%",
+     "label": "?"
+    },
+    {
+     "id": "susan",
+     "left": "23%",
+     "top": "66%",
+     "label": "?"
+    },
+    {
+     "id": "edmund",
+     "left": "43%",
+     "top": "66%",
+     "label": "?"
+    },
+    {
+     "id": "lucy",
+     "left": "63%",
+     "top": "66%",
+     "label": "?"
+    },
+    {
+     "id": "aslan",
+     "left": "83%",
+     "top": "60%",
+     "label": "?"
+    }
+   ]
+  },
+  "clues": [
+   {
+    "q": "He breathes on the stone statues, and they come back to life.",
+    "ch": "Chapter 16",
+    "a": "aslan"
+   },
+   {
+    "q": "He smashes the Witch’s wand with his sword.",
+    "ch": "Chapter 17",
+    "a": "edmund"
+   },
+   {
+    "q": "She uses her cordial to help Edmund.",
+    "ch": "Chapter 17",
+    "a": "lucy"
+   },
+   {
+    "q": "Called “the Magnificent.”",
+    "ch": "Chapter 17",
+    "a": "peter"
+   },
+   {
+    "q": "Called “the Gentle.”",
+    "ch": "Chapter 17",
+    "a": "susan"
+   },
+   {
+    "q": "Called “the Just.”",
+    "ch": "Chapter 17",
+    "a": "edmund"
+   },
+   {
+    "q": "Called “the Valiant.”",
+    "ch": "Chapter 17",
+    "a": "lucy"
+   }
+  ],
+  "choices": [
+   "peter",
+   "susan",
+   "edmund",
+   "lucy",
+   "aslan"
+  ],
+  "frames": [
+   {
+    "start": "Edmund was called “the Just” because",
+    "hints": [
+     "he learned from his mistakes",
+     "he was fair",
+     "he was great in council"
+    ]
+   },
+   {
+    "start": "If I were crowned in Narnia, I would be called",
+    "hints": [
+     "the Brave, because",
+     "the Kind, because",
+     "the Honest, because"
+    ]
+   }
+  ],
+  "minWords": 20
+ },
+ "sharedSubmit": true
+}
