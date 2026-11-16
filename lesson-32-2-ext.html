@@ -2601,10 +2601,6 @@ function morphMatchClick(item){var g=item.closest('.match-grid');if(!g)return;if
 <div class="spotter-game" id="grammarGame">
 <div class="spotter-sentence" id="gspot1" data-done="false" style="font-family:Georgia,serif;line-height:2.2;"><span class="spotter-word" onclick="gramSpotAll(this,'gspot1')" data-correct="true">stanley</span> <span class="spotter-word" onclick="gramSpotAll(this,'gspot1')" data-correct="true">goed</span> <span class="spotter-word" onclick="gramSpotAll(this,'gspot1')" data-correct="false">to</span> <span class="spotter-word" onclick="gramSpotAll(this,'gspot1')" data-correct="true">california</span> <span class="spotter-word" onclick="gramSpotAll(this,'gspot1')" data-correct="false">in</span> <span class="spotter-word" onclick="gramSpotAll(this,'gspot1')" data-correct="false">an</span> <span class="spotter-word" onclick="gramSpotAll(this,'gspot1')" data-correct="false">envelope.</span> <span class="spotter-word" onclick="gramSpotAll(this,'gspot1')" data-correct="true">the</span> <span class="spotter-word" onclick="gramSpotAll(this,'gspot1')" data-correct="false">sneak</span> <span class="spotter-word" onclick="gramSpotAll(this,'gspot1')" data-correct="false">thieves</span> <span class="spotter-word" onclick="gramSpotAll(this,'gspot1')" data-correct="true">didnt</span> <span class="spotter-word" onclick="gramSpotAll(this,'gspot1')" data-correct="false">get</span> <span class="spotter-word" onclick="gramSpotAll(this,'gspot1')" data-correct="false">away.</span><div class="spotter-result" id="gspot1-result"></div></div>
 </div>
-<div class="swyk"><div class="swyk-label">🪶 Show What You Know</div>
-<div class="swyk-prompt">How many different rules did this paragraph break? List them.</div>
-<div class="journal-label">📓 Your answer <span class="saved-dot" id="dot-grammar"></span></div>
-<textarea class="journal-box" id="journal-grammar" data-label="Grammar response" placeholder="I noticed that..." oninput="autoSave(this,'dot-grammar')"></textarea></div>
 </div>
 </div>
 <!-- SPELLING -->
@@ -2679,7 +2675,7 @@ function morphMatchClick(item){var g=item.closest('.match-grid');if(!g)return;if
 
 Structure for your response:
 • Opening: Name your character, their novel, and your main claim about which pillar is most central to them.
-• Body paragraphs: Write one paragraph for each of the 4 pillars you identified. Each paragraph needs: the pillar, a specific example from the novel, and one sentence explaining what it shows.
+• Body paragraphs: Write one paragraph for each of your 2 pillars. Each paragraph needs: the pillar, a specific example from the novel, and one sentence explaining what it shows.
 • Closing: Explain what this character's growth teaches us about good character.
 
 Use Clara's model to see how this looks.</p></div>
@@ -2702,14 +2698,6 @@ Use Clara's model to see how this looks.</p></div>
             <div class="socratic-box"><div class="socratic-label">💭 Think &amp; Write</div><p class="socratic-q">Write two body paragraphs — one for each of two different pillars. Each needs: the pillar name, an example, and an explanation.</p></div>
             <div class="textbox-prompt">Use a detail from your character&rsquo;s book.</div>
             <textarea class="journal-box" id="journal-q2" data-label="Q2: two body paragraphs" placeholder="One pillar [Character] demonstrates is ___. This is shown when... This reveals that..." oninput="autoSave(this,'dot-journal-q2');gatherAnswers();"></textarea>
-          </div>
-        </div>
-        <div class="activity bl-cyan" style="margin-bottom:14px;">
-          <div class="activity-head"><div class="activity-num" style="background:#1B7A4E;font-size:14px;">Q3</div><div><div class="activity-title">Q3 — Two More Body Paragraphs</div></div></div>
-          <div class="activity-body">
-            <div class="socratic-box"><div class="socratic-label">💭 Think &amp; Write</div><p class="socratic-q">Write two more body paragraphs for your other two pillars.</p></div>
-            <div class="textbox-prompt">Use a detail from your character&rsquo;s book.</div>
-            <textarea class="journal-box" id="journal-q3" data-label="Q3: two more body paragraphs" placeholder="[Character] also shows the pillar of ___. For example..." oninput="autoSave(this,'dot-journal-q3');gatherAnswers();"></textarea>
           </div>
         </div>
   <div class="rwm-box">
@@ -2783,12 +2771,8 @@ Clara's draft paragraph on Courage: Edmund also shows Courage in the final battl
       </div>
       <p style="margin-top:10px;font-size:13px;color:#3A4A6B;"><strong>Notice:</strong> Clara wrote a full paragraph for each pillar. She named the pillar, gave a specific example, and then explained what it reveals about the character. Notice she connected two pillars (courage and service) in the same paragraph — when pillars overlap, you can show that.</p>
     </div>
-    <div class="callout callout-info" style="background:#E8F1E8;border-color:#A8C8A8;margin-bottom:10px;padding:10px 14px;"><span class="callout-icon">📝</span><p style="font-size:14px;"><strong>Now you try.</strong> Write the full body of your culmination response. Use one paragraph per pillar. Name the pillar, give an example from the novel, and explain what it reveals.</p></div>
+    <div class="callout callout-info" style="background:#E8F1E8;border-color:#A8C8A8;margin-bottom:10px;padding:10px 14px;"><span class="callout-icon">📝</span><p style="font-size:14px;"><strong>Now you try.</strong> Your draft is your answers to Q1 and Q2 on the Reading tab. There is nothing more to write here.</p></div>
     <div class="textbox-prompt">Write your response below. Use complete sentences.</div>
-    <textarea class="journal-box" id="journal-writing" data-label="Writing Workshop: DRAFT Response" placeholder="[Character] demonstrates the pillar of ___ when...
-This shows that...
-
-[Character] also shows ___ because..." oninput="autoSave(this,'dot-writing');gatherAnswers();"></textarea>
   </div>
 </div>
   <div class="gathered-card" style="margin-top:18px;">
@@ -2805,7 +2789,7 @@ This shows that...
   </div>
   <div class="turn-in-card" style="margin-top:18px;">
     <div class="turn-in-header"><div class="turn-in-header-icon">📬</div><div><div class="turn-in-header-label">Ready?</div><div class="turn-in-header-title">Before You Submit</div></div></div>
-    <div class="turn-in-body"><div class="turn-in-checklist"><div class="turn-in-item" onclick="toggleCheck(this)"><div class="turn-in-check"></div><div class="turn-in-item-text">I wrote my opening paragraph with a clear claim.</div></div><div class="turn-in-item" onclick="toggleCheck(this)"><div class="turn-in-check"></div><div class="turn-in-item-text">I wrote at least four body paragraphs — one per pillar.</div></div><div class="turn-in-item" onclick="toggleCheck(this)"><div class="turn-in-check"></div><div class="turn-in-item-text">I used specific examples from the novel in each paragraph.</div></div><div class="turn-in-item" onclick="toggleCheck(this)"><div class="turn-in-check"></div><div class="turn-in-item-text">I copied or downloaded my work and submitted it to Canvas.</div></div></div></div>
+    <div class="turn-in-body"><div class="turn-in-checklist"><div class="turn-in-item" onclick="toggleCheck(this)"><div class="turn-in-check"></div><div class="turn-in-item-text">I wrote my opening paragraph with a clear claim.</div></div><div class="turn-in-item" onclick="toggleCheck(this)"><div class="turn-in-check"></div><div class="turn-in-item-text">I wrote two body paragraphs — one per pillar.</div></div><div class="turn-in-item" onclick="toggleCheck(this)"><div class="turn-in-check"></div><div class="turn-in-item-text">I used specific examples from the novel in each paragraph.</div></div><div class="turn-in-item" onclick="toggleCheck(this)"><div class="turn-in-check"></div><div class="turn-in-item-text">I copied or downloaded my work and submitted it to Canvas.</div></div></div></div>
   </div>
 </div>
 <div class="footer">

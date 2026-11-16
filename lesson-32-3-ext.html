@@ -2584,12 +2584,10 @@ if(all){var f=g.querySelector('.fillin-feedback');if(f)f.classList.add('show');}
 </div>
 <p style="margin-top:10px;font-size:13px;color:#3A4A6B;"><strong>Notice:</strong> a capital, two apostrophes doing two different jobs, a comma before <em>and</em>, and an irregular past form. Five rules, one sentence.</p>
 </div>
-<div class="callout callout-info" style="margin-top:14px;background:#E8F1E8;border-color:#A8C8A8;"><span class="callout-icon">📝</span><p><strong>Now you.</strong> Fix everything, then check it twice &mdash; once for capitals, once for punctuation.</p></div>
+<div class="callout callout-info" style="margin-top:14px;background:#E8F1E8;border-color:#A8C8A8;"><span class="callout-icon">📝</span><p><strong>Now you.</strong> Say the sentence the right way, out loud. Then tap Check your sentence.</p></div>
 <div style="background:#FAFBFF;border:2px dashed #BFC8E0;border-radius:8px;padding:14px;margin-top:8px;font-size:14px;font-style:italic;font-family:Georgia,serif;">despereauxs sister showed him the library and he readed a book about a knight.</div>
-<div class="swyk"><div class="swyk-label">🪶 Show What You Know</div>
-<div class="swyk-prompt">Write out your corrected sentence. Then write one sentence of your own that uses all five of those rules correctly on purpose.</div>
-<div class="journal-label">📓 Your answer <span class="saved-dot" id="dot-grammar"></span></div>
-<textarea class="journal-box" id="journal-grammar" data-label="Grammar response" placeholder="I noticed that..." oninput="autoSave(this,'dot-grammar')"></textarea></div>
+<button class="dol-check-btn" onclick="document.getElementById('gram3Fix').classList.toggle('show')">&#x1F50D; Check your sentence</button>
+<div class="dol-answer" id="gram3Fix"><p>Despereaux&rsquo;s sister showed him the library, and he read a book about a knight.</p><p style="font-size:13px;color:#7A88A8;">Six changes: <strong>Despereaux&rsquo;s</strong> (capital + apostrophe), a comma before <em>and</em>, <strong>read</strong> (not readed), and a capital at the start.</p></div>
 </div>
 </div>
 <!-- SPELLING -->
@@ -2670,7 +2668,7 @@ function proofPick(el){if(el.dataset.done)return;el.dataset.done="1";var box=el.
   <div class="activity bl-purple" style="margin-bottom:18px;">
     <div class="activity-head"><div class="activity-num" style="background:#8B6FC0;">📖</div><div><div class="activity-title">Reading: Week 32</div><div class="activity-sub">Reflect on how reading skills have grown.</div></div></div>
     <div class="activity-body">
-      <div class="callout callout-info"><span class="callout-icon">📖</span><p style="white-space:pre-line;">Today you revise your culmination response using the checklist below and prepare for your oral presentation.
+      <div class="callout callout-info"><span class="callout-icon">📖</span><p style="white-space:pre-line;">Today you revise your culmination response using the checklist below and get ready to share it out loud.
 
 Revision checklist:
 ✅ Does my opening have a clear claim about my character and their most important pillar?
@@ -2764,7 +2762,7 @@ Revised paragraph: [Character] demonstrates ___ when... This reveals that..." on
   <div class="activity-body">
     <div style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:12px;"><div class="wp-step done"><div class="wp-step-mark">✓</div><div class="wp-step-name">Plan the Project</div><div class="wp-step-wk">Day 1</div></div><div class="wp-step done"><div class="wp-step-mark">✓</div><div class="wp-step-name">Draft Response</div><div class="wp-step-wk">Day 2</div></div><div class="wp-step current"><div class="wp-step-mark">★</div><div class="wp-step-name">Revise and Prepare</div><div class="wp-step-wk">Day 3</div></div><div class="wp-step"><div class="wp-step-mark">○</div><div class="wp-step-name">Published</div><div class="wp-step-wk">Day 4</div></div></div><div class="key-concept" style="background:#FFFEF7;border-color:#F5E6C8;margin-bottom:14px;">
       <div class="key-concept-label" style="color:#C7922C;">👀 Watch How &mdash; Clara, our example writer</div>
-      <p style="font-size:14px;margin-bottom:8px;">Clara revises her culmination response and prepares her oral presentation notes.</p>
+      <p style="font-size:14px;margin-bottom:8px;">Clara revises her closing.</p>
       <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:10px;">
         <div style="background:#FFF;border:1px solid #F5E6C8;border-radius:6px;padding:10px;">
           <div style="font-size:11px;color:#C7627E;font-weight:700;letter-spacing:0.5px;margin-bottom:4px;">BEFORE</div>
@@ -2772,25 +2770,21 @@ Revised paragraph: [Character] demonstrates ___ when... This reveals that..." on
         </div>
         <div style="background:#FFF;border:1px solid #F5E6C8;border-radius:6px;padding:10px;">
           <div style="font-size:11px;color:#4A7C2E;font-weight:700;letter-spacing:0.5px;margin-bottom:4px;">AFTER</div>
-          <div style="font-style:italic;font-size:13px;">Clara's revised closing: Edmund begins The Lion, the Witch and the Wardrobe as perhaps the least virtuous character in the story. He lies, betrays his family, and chooses Turkish Delight over everything he loves. But by the final chapter, he has shown responsibility, courage, service, and perseverance — not because someone forced him to, but because the events of Narnia gave him the chance to choose differently. Edmund's story reminds us that good character is not where you start. It is what you decide to build, one choice at a time.</div>
+          <div style="font-style:italic;font-size:13px;">Clara's revised closing: Edmund begins The Lion, the Witch and the Wardrobe as perhaps the least virtuous character in the story. He lies, betrays his family, and chooses Turkish Delight over everything he loves. But by the final chapter, he has shown responsibility and courage — not because someone forced him to, but because the events of Narnia gave him the chance to choose differently. Edmund's story reminds us that good character is not where you start. It is what you decide to build, one choice at a time.</div>
         </div>
       </div>
-      <p style="margin-top:10px;font-size:13px;color:#3A4A6B;"><strong>Notice:</strong> Clara's closing connects back to the opening idea (one choice at a time), names several pillars, and ends with a sentence that the reader will remember. That is the mark of a finished piece of writing.</p>
+      <p style="margin-top:10px;font-size:13px;color:#3A4A6B;"><strong>Notice:</strong> Clara's closing connects back to the opening idea (one choice at a time), names her pillars, and ends with a sentence that the reader will remember. That is the mark of a finished piece of writing.</p>
     </div>
-    <div class="key-concept" style="background:#EAF6FB;border-color:#B6DCEB;margin-bottom:14px;"><div class="key-concept-label" style="color:#0E5A7A;">🖼️ Add Two Multimedia Pieces</div><p style="font-size:14px;">A presentation is stronger when your listener can see or hear something too. Pick <strong>two</strong> of these to use while you present:</p><ul style="margin:6px 0 6px 18px;font-size:14px;"><li>a picture you draw of your character</li><li>the cover of your character&rsquo;s book</li><li>a short sound or piece of music that fits your character</li><li>a slide or poster with your pillar in big letters</li></ul><p style="font-size:14px;">Add a line to your notes for each one: what it is, and the moment you will show or play it.</p></div>
-    <div class="callout callout-info" style="background:#E8F1E8;border-color:#A8C8A8;margin-bottom:10px;padding:10px 14px;"><span class="callout-icon">📝</span><p style="font-size:14px;"><strong>Now you try.</strong> Write your final revised closing paragraph. Then prepare 3–5 bullet points for your oral presentation, and name your two multimedia pieces and when you will use each.</p></div>
+    <div class="key-concept" style="background:#EAF6FB;border-color:#B6DCEB;margin-bottom:14px;"><div class="key-concept-label" style="color:#0E5A7A;">🖼️ Add One Thing to Show</div><p style="font-size:14px;">Sharing is more fun when your listener can see something too. Pick <strong>one</strong> of these to show while you share:</p><ul style="margin:6px 0 6px 18px;font-size:14px;"><li>a picture you draw of your character</li><li>the cover of your character&rsquo;s book</li><li>a short sound or piece of music that fits your character</li><li>a slide or poster with your pillar in big letters</li></ul><p style="font-size:14px;">Add a line to your notes: what it is, and when you will show it.</p></div>
+    <div class="callout callout-info" style="background:#E8F1E8;border-color:#A8C8A8;margin-bottom:10px;padding:10px 14px;"><span class="callout-icon">📝</span><p style="font-size:14px;"><strong>Now you try.</strong> Your closing is Q3 on the Reading tab. Here, write 3 short notes for sharing out loud, and name the one thing you will show.</p></div>
     <div class="textbox-prompt">Write your response below. Use complete sentences.</div>
-    <textarea class="journal-box" id="journal-writing" data-label="Writing Workshop: REVISE and PREPARE" placeholder="My revised closing:
-Ultimately, [Character]'s story teaches us that...
-
-My oral presentation notes:
+    <textarea class="journal-box" id="journal-writing" data-label="Writing Workshop: notes for sharing" placeholder="My notes for sharing:
 • My character is...
-• The most important pillar is...
-• My best evidence is...
+• My most important pillar is...
+• My best detail is...
 
-My two multimedia pieces:
-1. ___ (I will show/play it when ___)
-2. ___ (I will show/play it when ___)" oninput="autoSave(this,'dot-writing');gatherAnswers();"></textarea>
+The one thing I will show:
+___ (I will show it when ___)" oninput="autoSave(this,'dot-writing');gatherAnswers();"></textarea>
   </div>
 </div>
   <div class="gathered-card" style="margin-top:18px;">
@@ -2807,7 +2801,7 @@ My two multimedia pieces:
   </div>
   <div class="turn-in-card" style="margin-top:18px;">
     <div class="turn-in-header"><div class="turn-in-header-icon">📬</div><div><div class="turn-in-header-label">Ready?</div><div class="turn-in-header-title">Before You Submit</div></div></div>
-    <div class="turn-in-body"><div class="turn-in-checklist"><div class="turn-in-item" onclick="toggleCheck(this)"><div class="turn-in-check"></div><div class="turn-in-item-text">I revised my opening, at least one body paragraph, and wrote my closing.</div></div><div class="turn-in-item" onclick="toggleCheck(this)"><div class="turn-in-check"></div><div class="turn-in-item-text">I completed a full editing pass for grammar and conventions.</div></div><div class="turn-in-item" onclick="toggleCheck(this)"><div class="turn-in-check"></div><div class="turn-in-item-text">I prepared my oral presentation notes and chose two multimedia pieces.</div></div><div class="turn-in-item" onclick="toggleCheck(this)"><div class="turn-in-check"></div><div class="turn-in-item-text">I copied or downloaded my work and submitted it to Canvas.</div></div></div></div>
+    <div class="turn-in-body"><div class="turn-in-checklist"><div class="turn-in-item" onclick="toggleCheck(this)"><div class="turn-in-check"></div><div class="turn-in-item-text">I revised my opening, at least one body paragraph, and wrote my closing.</div></div><div class="turn-in-item" onclick="toggleCheck(this)"><div class="turn-in-check"></div><div class="turn-in-item-text">I completed a full editing pass for grammar and conventions.</div></div><div class="turn-in-item" onclick="toggleCheck(this)"><div class="turn-in-check"></div><div class="turn-in-item-text">I wrote my sharing notes and chose one thing to show.</div></div><div class="turn-in-item" onclick="toggleCheck(this)"><div class="turn-in-check"></div><div class="turn-in-item-text">I copied or downloaded my work and submitted it to Canvas.</div></div></div></div>
   </div>
 </div>
 <div class="footer">
