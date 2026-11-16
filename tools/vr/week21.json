@@ -1,0 +1,203 @@
+{
+ "week": 21,
+ "day": 2,
+ "book": "The Whipping Boy",
+ "chapters": "Chapters 18–19",
+ "title": "The Fair by the River",
+ "pattern": "A",
+ "map": "Medieval Town (Sunny)",
+ "mapFilter": "Town",
+ "stamp": {
+  "name": "Fair by the River",
+  "art": "🎪"
+ },
+ "emoji": {
+  "bear": "🐻",
+  "potato": "🥔",
+  "pot": "🍲",
+  "tent": "🎪",
+  "rat": "🐀"
+ },
+ "brief": "Hoo! Let’s step off the Reading Road. In Chapter 18, Jemmy and the prince reach the fair by the river. Build the fair, then take a photo for your teacher.",
+ "look": "This stop is the busy fair from Chapter 18. Captain Nips boils potatoes, Smudge has his dog, and Petunia does tricks.",
+ "models": [
+  {
+   "name": "Potato Sack",
+   "type": "Potato",
+   "why": "Captain Nips’ hot potatoes",
+   "icon": "potato"
+  },
+  {
+   "name": "Fire Pot Soup",
+   "type": "Fire Pot",
+   "why": "the iron kettle for the potatoes",
+   "icon": "pot"
+  },
+  {
+   "name": "Dog",
+   "type": "Dog",
+   "why": "Smudge’s black terrier",
+   "icon": "dog"
+  },
+  {
+   "name": "Bear (OptimaED)",
+   "type": "Bear",
+   "why": "Petunia passes the hat",
+   "icon": "bear"
+  },
+  {
+   "name": "Optima Domi Tent",
+   "type": "Tent",
+   "why": "a stall at the fair",
+   "icon": "tent"
+  }
+ ],
+ "steps": [
+  {
+   "title": "Know your models",
+   "say": "step1",
+   "text": "These are your five models. Say each name out loud. This list is also in VR, in the **Canvas** tab."
+  },
+  {
+   "title": "Go in",
+   "say": "step2",
+   "first": true,
+   "shared": "go",
+   "text": "",
+   "note": "🗺️ Today’s map: **Medieval Town (Sunny)** (type **Town**)."
+  },
+  {
+   "title": "Build it",
+   "say": "step3",
+   "howto": "move",
+   "text": "Press the **top button on your right controller** and click **Models**. Put the **tent** in the square. Put the **pot** and the **potatoes** in front. Put the **dog** and the **bear** nearby."
+  },
+  {
+   "title": "Say it out loud",
+   "say": "step4",
+   "frame": "“At the fair, the prince learns ___. I know because ___.”",
+   "text": "Point to the tent and say this out loud:",
+   "spoken": "Point to the tent and say this out loud. At the fair, the prince learns… I know because…"
+  },
+  {
+   "title": "Snap and submit",
+   "say": "step5",
+   "submit": true,
+   "fits": "the tent, the pot, the potatoes, the dog and the bear",
+   "text": ""
+  }
+ ],
+ "extra": {
+  "say": "extra",
+  "icon": "rat",
+  "text": "Add an **OptimaEd Rat** by the dog. Say what kind of rats Smudge wants Jemmy to catch."
+ },
+ "points": "Your photo shows the tent, the pot, the potatoes, the dog and the bear at the fair.",
+ "mapday": {
+  "say": "mapday",
+  "intro": "No headset today? It’s Road Map Day. Read each clue from the book and tap the thing it names. Then finish two sentences about the fair.",
+  "right": "✓ Yes! {name}.",
+  "done": "✓ The fair is ready. Now finish the two sentences.",
+  "names": {
+   "potato": "hot potatoes",
+   "pot": "the iron kettle",
+   "dog": "the terrier",
+   "bear": "the bear",
+   "tent": "the fair stalls",
+   "sword": "a sword",
+   "moon": "the moon"
+  },
+  "scene": {
+   "bg": "town",
+   "aria": "A town square with a spot for each thing at the fair",
+   "slots": [
+    {
+     "id": "tent",
+     "left": "8%",
+     "top": "52%",
+     "label": "?"
+    },
+    {
+     "id": "pot",
+     "left": "26%",
+     "top": "62%",
+     "label": "?"
+    },
+    {
+     "id": "potato",
+     "left": "43%",
+     "top": "64%",
+     "label": "?"
+    },
+    {
+     "id": "dog",
+     "left": "60%",
+     "top": "62%",
+     "label": "?"
+    },
+    {
+     "id": "bear",
+     "left": "78%",
+     "top": "54%",
+     "label": "?"
+    }
+   ]
+  },
+  "clues": [
+   {
+    "q": "“…the festive stalls and banners of the fair.”",
+    "ch": "Chapter 18",
+    "a": "tent"
+   },
+   {
+    "q": "“…a black terrier leashed to a post.”",
+    "ch": "Chapter 18",
+    "a": "dog"
+   },
+   {
+    "q": "“It took the two of them to carry the iron kettle, now full of water.”",
+    "ch": "Chapter 18",
+    "a": "pot"
+   },
+   {
+    "q": "“And then the bear began passing the hat for tips.”",
+    "ch": "Chapter 18",
+    "a": "bear"
+   },
+   {
+    "q": "“Hot-hot-hot potatoes! Captain Nips’ hot-hot potatoes!”",
+    "ch": "Chapter 18",
+    "a": "potato"
+   }
+  ],
+  "choices": [
+   "potato",
+   "sword",
+   "pot",
+   "dog",
+   "moon",
+   "bear",
+   "tent"
+  ],
+  "frames": [
+   {
+    "start": "At the fair, the prince learns that",
+    "hints": [
+     "people call him Prince Brat",
+     "he likes carrying water",
+     "potatoes taste good"
+    ]
+   },
+   {
+    "start": "If I could visit the fair, I would",
+    "hints": [
+     "eat a hot potato",
+     "watch Petunia do tricks",
+     "see the juggler"
+    ]
+   }
+  ],
+  "minWords": 20
+ },
+ "sharedSubmit": true
+}

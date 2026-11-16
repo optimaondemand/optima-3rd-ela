@@ -1,0 +1,231 @@
+{
+ "week": 22,
+ "day": 2,
+ "book": "The Whipping Boy",
+ "chapters": "The whole book",
+ "title": "My Favorite Scene",
+ "pattern": "A",
+ "map": "Medieval Forest",
+ "mapFilter": "Medieval",
+ "stamp": {
+  "name": "My Favorite Scene",
+  "art": "👑"
+ },
+ "emoji": {
+  "crown": "👑",
+  "ink": "🖋️",
+  "potato": "🥔",
+  "bear": "🐻",
+  "betsy": "👧",
+  "nips": "🧑‍🍳"
+ },
+ "brief": "Hoo! We finished The Whipping Boy! Pick your favorite scene from the whole book. Build it with four models, then take a photo for your teacher.",
+ "look": "This stop is your choice. Pick a scene from the castle, the forest or the fair, then pick the four models that fit it best.",
+ "models": [
+  {
+   "name": "Gold Crown (Optima Domi)",
+   "type": "Gold Crown",
+   "why": "for Prince Brat",
+   "icon": "crown"
+  },
+  {
+   "name": "White Horse - Idle",
+   "type": "White Horse",
+   "why": "the runaways’ ride",
+   "icon": "horse"
+  },
+  {
+   "name": "Bear (OptimaED)",
+   "type": "Bear",
+   "why": "Petunia, the dancing bear",
+   "icon": "bear"
+  },
+  {
+   "name": "Brass Ink Well",
+   "type": "Ink Well",
+   "why": "Jemmy learns to read and write",
+   "icon": "ink"
+  },
+  {
+   "name": "Potato Sack",
+   "type": "Potato",
+   "why": "Captain Nips’ hot potatoes",
+   "icon": "potato"
+  },
+  {
+   "name": "Dog",
+   "type": "Dog",
+   "why": "Smudge’s terrier",
+   "icon": "dog"
+  }
+ ],
+ "steps": [
+  {
+   "title": "Pick your models",
+   "say": "step1",
+   "text": "Pick a scene from the book. Then pick **four** of these six models that fit it. This list is also in VR, in the **Canvas** tab."
+  },
+  {
+   "title": "Go in",
+   "say": "step2",
+   "first": true,
+   "shared": "go",
+   "text": "",
+   "note": "🗺️ Type **Medieval** and pick the map that fits your scene: forest, town or castle."
+  },
+  {
+   "title": "Build it",
+   "say": "step3",
+   "howto": "move",
+   "text": "Press the **top button on your right controller** and click **Models**. Add your **four** models. Set them up the way they look in your scene."
+  },
+  {
+   "title": "Say it out loud",
+   "say": "step4",
+   "frame": "“My favorite scene is when ___. I picked it because ___.”",
+   "text": "Point to your scene and say this out loud:",
+   "spoken": "Point to your scene and say this out loud. My favorite scene is when… I picked it because…"
+  },
+  {
+   "title": "Snap and submit",
+   "say": "step5",
+   "submit": true,
+   "fits": "all four of your models",
+   "text": ""
+  }
+ ],
+ "extra": {
+  "say": "extra",
+  "icon": "crown",
+  "text": "Build a **second** scene with the other two models. Say which part of the book it shows."
+ },
+ "points": "Your photo shows four models that fit one scene from the book.",
+ "mapday": {
+  "say": "mapday",
+  "intro": "No headset today? It’s Road Map Day. Read what happened in the book and tap who did it. Then finish two sentences about the whole story.",
+  "repeat": true,
+  "right": "✓ Yes! {name} did it.",
+  "miss": "Not that one. Think back through the whole book.",
+  "done": "✓ You know who did it all. Now finish the two sentences.",
+  "names": {
+   "prince": "Prince Brat",
+   "jemmy": "Jemmy",
+   "billy": "Hold-Your-Nose Billy",
+   "cutwater": "Cutwater",
+   "betsy": "Betsy",
+   "nips": "Captain Nips"
+  },
+  "scene": {
+   "bg": "castle",
+   "aria": "The castle, with a spot for each character",
+   "slots": [
+    {
+     "id": "prince",
+     "left": "3%",
+     "top": "58%",
+     "label": "?"
+    },
+    {
+     "id": "jemmy",
+     "left": "19%",
+     "top": "64%",
+     "label": "?"
+    },
+    {
+     "id": "billy",
+     "left": "35%",
+     "top": "66%",
+     "label": "?"
+    },
+    {
+     "id": "cutwater",
+     "left": "51%",
+     "top": "66%",
+     "label": "?"
+    },
+    {
+     "id": "betsy",
+     "left": "67%",
+     "top": "64%",
+     "label": "?"
+    },
+    {
+     "id": "nips",
+     "left": "83%",
+     "top": "58%",
+     "label": "?"
+    }
+   ]
+  },
+  "clues": [
+   {
+    "q": "Dumped bullfrogs in the moat so no one could sleep.",
+    "ch": "Chapter 3",
+    "a": "prince"
+   },
+   {
+    "q": "Ate garlic to “fend off the plague.”",
+    "ch": "Chapter 9",
+    "a": "billy"
+   },
+   {
+    "q": "Chased Jemmy through the forest, “breathing like a bellows.”",
+    "ch": "Chapter 13",
+    "a": "cutwater"
+   },
+   {
+    "q": "Hid from Cutwater inside a hollow tree.",
+    "ch": "Chapter 13",
+    "a": "jemmy"
+   },
+   {
+    "q": "Called through the woods, “Pet-Pet-Petunia!”",
+    "ch": "Chapter 14",
+    "a": "betsy"
+   },
+   {
+    "q": "Snapped the whip across the prince’s back.",
+    "ch": "Chapter 16",
+    "a": "billy"
+   },
+   {
+    "q": "Called out, “Hot-hot-hot potatoes!”",
+    "ch": "Chapter 18",
+    "a": "nips"
+   },
+   {
+    "q": "Asked the king to make Petunia the Official Dancing Bear.",
+    "ch": "Chapter 20",
+    "a": "prince"
+   }
+  ],
+  "choices": [
+   "prince",
+   "jemmy",
+   "billy",
+   "cutwater",
+   "betsy",
+   "nips"
+  ],
+  "frames": [
+   {
+    "start": "The prince changed in the story because",
+    "hints": [
+     "he made a real friend",
+     "he heard what people called him",
+     "he had to take care of himself"
+    ]
+   },
+   {
+    "start": "My favorite character is",
+    "hints": [
+     "Jemmy, because",
+     "Betsy, because",
+     "Captain Nips, because"
+    ]
+   }
+  ],
+  "minWords": 20
+ },
+ "sharedSubmit": true
+}

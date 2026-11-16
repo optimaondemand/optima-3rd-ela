@@ -1,0 +1,182 @@
+{
+ "week": 20,
+ "day": 2,
+ "book": "The Whipping Boy",
+ "chapters": "Chapters 13–14",
+ "title": "Betsy’s Runaway Bear",
+ "pattern": "A",
+ "map": "Medieval Forest",
+ "mapFilter": "Forest",
+ "stamp": {
+  "name": "Runaway Bear",
+  "art": "🐻"
+ },
+ "emoji": {
+  "bear": "🐻",
+  "rope": "🪢",
+  "bee": "🐝",
+  "tree": "🌳",
+  "yes": "📖",
+  "no": "❌"
+ },
+ "brief": "Hoo! Let’s step off the Reading Road. In Chapter 13, Jemmy runs into a bear in a forest clearing. Build the clearing, then take a photo for your teacher.",
+ "look": "This stop is a clearing in the forest, from Chapters 13 and 14. Jemmy meets a bear there. Then Betsy comes looking for it.",
+ "models": [
+  {
+   "name": "Bear (OptimaED)",
+   "type": "Bear",
+   "why": "Petunia, Betsy’s dancing bear",
+   "icon": "bear"
+  },
+  {
+   "name": "Rope 1",
+   "type": "Rope",
+   "why": "Betsy carries a coiled rope",
+   "icon": "rope"
+  },
+  {
+   "name": "Bee",
+   "type": "Bee",
+   "why": "for Betsy’s comb honey",
+   "icon": "bee"
+  },
+  {
+   "name": "White Horse - Running",
+   "type": "White Horse",
+   "why": "soldiers ride on the river road",
+   "icon": "horse"
+  }
+ ],
+ "steps": [
+  {
+   "title": "Know your models",
+   "say": "step1",
+   "text": "These are your four models. Say each name out loud. This list is also in VR, in the **Canvas** tab."
+  },
+  {
+   "title": "Go in",
+   "say": "step2",
+   "first": true,
+   "shared": "go",
+   "text": "",
+   "note": "🗺️ Today’s map: **Medieval Forest** (type **Forest**)."
+  },
+  {
+   "title": "Build it",
+   "say": "step3",
+   "howto": "move",
+   "text": "Press the **top button on your right controller** and click **Models**. Put the **bear** in an open spot. Put the **rope** and the **bee** by the bear. Put the **horse** off to the side."
+  },
+  {
+   "title": "Say it out loud",
+   "say": "step4",
+   "frame": "“The prince won’t go back with the soldiers because ___. I know because ___.”",
+   "text": "Point to the horse and say this out loud:",
+   "spoken": "Point to the horse and say this out loud. The prince won’t go back with the soldiers because… I know because…"
+  },
+  {
+   "title": "Snap and submit",
+   "say": "step5",
+   "submit": true,
+   "fits": "the bear, the rope, the bee and the horse",
+   "text": ""
+  }
+ ],
+ "extra": {
+  "say": "extra",
+  "icon": "tree",
+  "text": "Find a big tree. Pretend it is **hollow**, like Jemmy’s. Say why it was a smart place to hide."
+ },
+ "points": "Your photo shows the bear, the rope, the bee and the horse in a forest clearing.",
+ "mapday": {
+  "say": "mapday",
+  "intro": "No headset today? It’s Road Map Day. Read each sentence and decide: is it in the book, or not? Then finish two sentences about the prince.",
+  "repeat": true,
+  "right": "✓ Right! {name}.",
+  "miss": "Not quite. Think back to Chapters 13 and 14.",
+  "done": "✓ You sorted every sentence. Now finish the two sentences.",
+  "names": {
+   "yes": "It’s in the book",
+   "no": "Not in the book"
+  },
+  "scene": {
+   "bg": "clearing",
+   "aria": "A forest clearing with a spot for In the book and a spot for Not in the book",
+   "slots": [
+    {
+     "id": "yes",
+     "left": "22%",
+     "top": "50%",
+     "label": "In the book"
+    },
+    {
+     "id": "no",
+     "left": "63%",
+     "top": "50%",
+     "label": "Not in the book"
+    }
+   ]
+  },
+  "clues": [
+   {
+    "q": "Jemmy hides from Cutwater inside a hollow tree.",
+    "ch": "Chapter 13",
+    "a": "yes"
+   },
+   {
+    "q": "The bear chases Jemmy up a tree.",
+    "ch": "Chapter 13",
+    "a": "no"
+   },
+   {
+    "q": "Betsy calls, “Pet-Pet-Petunia!”",
+    "ch": "Chapter 14",
+    "a": "yes"
+   },
+   {
+    "q": "Betsy holds out a chunk of comb honey.",
+    "ch": "Chapter 14",
+    "a": "yes"
+   },
+   {
+    "q": "Betsy says the river is due north.",
+    "ch": "Chapter 14",
+    "a": "no"
+   },
+   {
+    "q": "The prince runs to the soldiers so he can go home.",
+    "ch": "Chapter 14",
+    "a": "no"
+   },
+   {
+    "q": "The prince says, “This is the best time I ever had!”",
+    "ch": "Chapter 14",
+    "a": "yes"
+   }
+  ],
+  "choices": [
+   "yes",
+   "no"
+  ],
+  "frames": [
+   {
+    "start": "The prince won’t go home because",
+    "hints": [
+     "he is having fun",
+     "no one fusses about his dirty clothes",
+     "his father doesn’t notice him"
+    ]
+   },
+   {
+    "start": "When Jemmy saw the bear, he",
+    "hints": [
+     "was scared",
+     "hid in a hollow tree",
+     "waited for it to run away"
+    ]
+   }
+  ],
+  "minWords": 20
+ },
+ "sharedSubmit": true
+}

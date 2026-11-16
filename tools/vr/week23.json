@@ -1,0 +1,211 @@
+{
+ "week": 23,
+ "day": 2,
+ "book": "Life in the Middle Ages",
+ "chapters": "Servants and Apprentices",
+ "title": "The Master’s Workshop",
+ "pattern": "A",
+ "map": "Medieval Town (Sunny)",
+ "mapFilter": "Town",
+ "stamp": {
+  "name": "Master’s Workshop",
+  "art": "🔨"
+ },
+ "emoji": {
+  "bench": "🪵",
+  "anvil": "⚒️",
+  "hammer": "🔨",
+  "candle": "🕯️",
+  "barrel": "🛢️",
+  "smith": "⚒️",
+  "baker": "🍞",
+  "carpenter": "🪚",
+  "weaver": "🧵",
+  "cook": "🍲"
+ },
+ "brief": "Hoo! Let’s step into the Middle Ages. Most children did not go to school. Many became apprentices. Build a master’s workshop, then take a photo for your teacher.",
+ "look": "This stop is a shoemaker’s workshop in a medieval town. An apprentice worked for a master craftsman for several years, learning every part of the job.",
+ "models": [
+  {
+   "name": "Williamsburg - Shoemaker's Workbench",
+   "type": "Workbench",
+   "why": "where the master works",
+   "icon": "bench"
+  },
+  {
+   "name": "Williamsburg - Shoemaker's Anvil",
+   "type": "Anvil",
+   "why": "to shape the shoe",
+   "icon": "anvil"
+  },
+  {
+   "name": "Williamsburg - Shoemaker's Hammer",
+   "type": "Hammer",
+   "why": "to tap the leather",
+   "icon": "hammer"
+  },
+  {
+   "name": "Williamsburg - Candle Stick",
+   "type": "Candle Stick",
+   "why": "light for the work",
+   "icon": "candle"
+  }
+ ],
+ "steps": [
+  {
+   "title": "Know your models",
+   "say": "step1",
+   "text": "These are your four models. Say each name out loud. This list is also in VR, in the **Canvas** tab."
+  },
+  {
+   "title": "Go in",
+   "say": "step2",
+   "first": true,
+   "shared": "go",
+   "text": "",
+   "note": "🗺️ Today’s map: **Medieval Town (Sunny)** (type **Town**)."
+  },
+  {
+   "title": "Build it",
+   "say": "step3",
+   "howto": "move",
+   "text": "Press the **top button on your right controller** and click **Models**. Put the **workbench** by a building. Put the **anvil**, **hammer** and **candle** on or by the bench."
+  },
+  {
+   "title": "Say it out loud",
+   "say": "step4",
+   "frame": "“An apprentice learns a trade by ___. In this shop, my job would be ___.”",
+   "text": "Stand by the bench and say this out loud:",
+   "spoken": "Stand by the bench and say this out loud. An apprentice learns a trade by… In this shop, my job would be…"
+  },
+  {
+   "title": "Snap and submit",
+   "say": "step5",
+   "submit": true,
+   "fits": "the workbench, the anvil, the hammer and the candle",
+   "text": ""
+  }
+ ],
+ "extra": {
+  "say": "extra",
+  "icon": "barrel",
+  "text": "Add a **Wooden Barrel**. Say what the master might keep in it."
+ },
+ "points": "Your photo shows the workbench, the anvil, the hammer and the candle.",
+ "mapday": {
+  "say": "mapday",
+  "intro": "No headset today? It’s Road Map Day. Read what each worker says and tap the job. Then finish two sentences about apprentices.",
+  "right": "✓ Yes! That’s the {name}.",
+  "done": "✓ You matched every job. Now finish the two sentences.",
+  "names": {
+   "smith": "blacksmith",
+   "baker": "baker",
+   "carpenter": "carpenter",
+   "weaver": "weaver",
+   "cook": "cook",
+   "horse": "stablehand"
+  },
+  "scene": {
+   "bg": "town",
+   "aria": "A medieval town street with a spot for each worker",
+   "slots": [
+    {
+     "id": "smith",
+     "left": "3%",
+     "top": "58%",
+     "label": "?"
+    },
+    {
+     "id": "baker",
+     "left": "19%",
+     "top": "64%",
+     "label": "?"
+    },
+    {
+     "id": "carpenter",
+     "left": "35%",
+     "top": "66%",
+     "label": "?"
+    },
+    {
+     "id": "weaver",
+     "left": "51%",
+     "top": "66%",
+     "label": "?"
+    },
+    {
+     "id": "cook",
+     "left": "67%",
+     "top": "64%",
+     "label": "?"
+    },
+    {
+     "id": "horse",
+     "left": "83%",
+     "top": "58%",
+     "label": "?"
+    }
+   ]
+  },
+  "clues": [
+   {
+    "q": "“I shape hot iron with my hammer.”",
+    "ch": "A trade",
+    "a": "smith"
+   },
+   {
+    "q": "“I bake bread in a big oven.”",
+    "ch": "A trade",
+    "a": "baker"
+   },
+   {
+    "q": "“I build tables and doors out of wood.”",
+    "ch": "A trade",
+    "a": "carpenter"
+   },
+   {
+    "q": "“I make cloth and sew it.”",
+    "ch": "Work at home",
+    "a": "weaver"
+   },
+   {
+    "q": "“I cook pottage for the castle.”",
+    "ch": "Castle work",
+    "a": "cook"
+   },
+   {
+    "q": "“I feed the horses at first light.”",
+    "ch": "Castle work",
+    "a": "horse"
+   }
+  ],
+  "choices": [
+   "smith",
+   "baker",
+   "carpenter",
+   "weaver",
+   "cook",
+   "horse"
+  ],
+  "frames": [
+   {
+    "start": "An apprentice learns a trade by",
+    "hints": [
+     "working for a master",
+     "watching and helping",
+     "practicing for years"
+    ]
+   },
+   {
+    "start": "If I were an apprentice, I would pick",
+    "hints": [
+     "baking, because",
+     "blacksmithing, because",
+     "carpentry, because"
+    ]
+   }
+  ],
+  "minWords": 20
+ },
+ "sharedSubmit": true
+}

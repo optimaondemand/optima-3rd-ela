@@ -1,0 +1,179 @@
+{
+ "week": 24,
+ "day": 2,
+ "book": "Life in the Middle Ages",
+ "chapters": "Knights: Warriors and Gentlemen",
+ "title": "From Page to Knight",
+ "pattern": "A",
+ "map": "Medieval Castle (Day)",
+ "mapFilter": "Castle",
+ "stamp": {
+  "name": "Page to Knight",
+  "art": "🛡️"
+ },
+ "emoji": {
+  "knight": "🏇",
+  "shield": "🛡️",
+  "sword2": "⚔️",
+  "page": "🧒",
+  "squire": "🧑"
+ },
+ "brief": "Hoo! Let’s visit a castle. Becoming a knight took years of training. Build a knight ready for the castle, then take a photo for your teacher.",
+ "look": "This stop is a castle in the Middle Ages. A boy began as a page, became a squire, and then was dubbed a knight.",
+ "models": [
+  {
+   "name": "Optima Domi Knight",
+   "type": "Knight",
+   "why": "he was dubbed in a ceremony",
+   "icon": "knight"
+  },
+  {
+   "name": "Medieval Shield",
+   "type": "Shield",
+   "why": "part of the knight’s gear",
+   "icon": "shield"
+  },
+  {
+   "name": "Great Sword (Optima Domi)",
+   "type": "Great Sword",
+   "why": "squires trained with swords",
+   "icon": "sword2"
+  },
+  {
+   "name": "White Horse - Idle",
+   "type": "White Horse",
+   "why": "the squire cared for it",
+   "icon": "horse"
+  }
+ ],
+ "steps": [
+  {
+   "title": "Know your models",
+   "say": "step1",
+   "text": "These are your four models. Say each name out loud. This list is also in VR, in the **Canvas** tab."
+  },
+  {
+   "title": "Go in",
+   "say": "step2",
+   "first": true,
+   "shared": "go",
+   "text": "",
+   "note": "🗺️ Today’s map: **Medieval Castle (Day)** (type **Castle**)."
+  },
+  {
+   "title": "Build it",
+   "say": "step3",
+   "howto": "move",
+   "text": "Press the **top button on your right controller** and click **Models**. Put the **knight** by the castle gate. Put the **shield** and **sword** by him. Put the **horse** next to him."
+  },
+  {
+   "title": "Say it out loud",
+   "say": "step4",
+   "frame": "“A squire took care of ___. A knight had to be ___.”",
+   "text": "Point to the knight and say this out loud:",
+   "spoken": "Point to the knight and say this out loud. A squire took care of… A knight had to be…"
+  },
+  {
+   "title": "Snap and submit",
+   "say": "step5",
+   "submit": true,
+   "fits": "the knight, the shield, the sword and the horse",
+   "text": ""
+  }
+ ],
+ "extra": {
+  "say": "extra",
+  "icon": "sword2",
+  "text": "Hold the **sword** over the knight’s shoulder, like he is being **dubbed**. Say the three things chivalry asked of him."
+ },
+ "points": "Your photo shows the knight, the shield, the sword and the horse at the castle.",
+ "mapday": {
+  "say": "mapday",
+  "intro": "No headset today? It’s Road Map Day. Read each clue and tap page, squire or knight. Then finish two sentences about knights.",
+  "repeat": true,
+  "right": "✓ Yes! That’s the {name}.",
+  "miss": "Not that one. Remember the order: page, squire, knight.",
+  "done": "✓ Page, squire, knight! Now finish the two sentences.",
+  "names": {
+   "page": "page",
+   "squire": "squire",
+   "knight": "knight"
+  },
+  "scene": {
+   "bg": "castle",
+   "aria": "A castle with three spots in order: first, second and third",
+   "slots": [
+    {
+     "id": "page",
+     "left": "12%",
+     "top": "58%",
+     "label": "1st"
+    },
+    {
+     "id": "squire",
+     "left": "42%",
+     "top": "62%",
+     "label": "2nd"
+    },
+    {
+     "id": "knight",
+     "left": "72%",
+     "top": "58%",
+     "label": "3rd"
+    }
+   ]
+  },
+  "clues": [
+   {
+    "q": "First, he serves in a noble household and learns basic skills.",
+    "ch": "Step 1",
+    "a": "page"
+   },
+   {
+    "q": "Around age fourteen, he becomes a knight’s helper.",
+    "ch": "Step 2",
+    "a": "squire"
+   },
+   {
+    "q": "He cares for the knight’s armor and horse.",
+    "ch": "Step 2",
+    "a": "squire"
+   },
+   {
+    "q": "He is dubbed in a formal ceremony.",
+    "ch": "Step 3",
+    "a": "knight"
+   },
+   {
+    "q": "He must follow chivalry: be brave, loyal and courteous.",
+    "ch": "Step 3",
+    "a": "knight"
+   }
+  ],
+  "choices": [
+   "page",
+   "squire",
+   "knight"
+  ],
+  "frames": [
+   {
+    "start": "To become a knight, a boy",
+    "hints": [
+     "started as a page",
+     "became a squire at about fourteen",
+     "was dubbed in a ceremony"
+    ]
+   },
+   {
+    "start": "In The Whipping Boy, the one who acts with chivalry is",
+    "hints": [
+     "Jemmy, because",
+     "the prince at the end, because",
+     "Betsy, because"
+    ]
+   }
+  ],
+  "minWords": 20
+ },
+ "sharedSubmit": true
+}
