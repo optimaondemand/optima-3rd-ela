@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Week 31 Family Guide · Paired Texts: The Courage to Act · 3rd Grade ELA</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Nunito:wght@400;600;700;800;900&display=swap');
+:root{
+  --navy:#0E1C42; --ink:#3A4A6B; --muted:#5E6C8C; --line:#E2E8F4;
+  --sky:#55C8E8; --sky-bg:#EAF8FD; --gold:#C7922C; --gold-bg:#FFF3DC;
+  --green:#34B76F; --green-bg:#E3F8ED; --plum:#8B6FC0; --plum-bg:#F1ECFA;
+  --paper:#FAFBFF; --cream:#FFF8F0;
+}
+*{box-sizing:border-box;}
+html,body{margin:0;padding:0;}
+body{background:var(--paper);color:var(--ink);font-family:"Nunito",sans-serif;font-size:18px;line-height:1.6;}
+.wrap{max-width:880px;margin:0 auto;padding:24px 16px 48px;}
+h1,h2,h3{font-family:"Lora",Georgia,serif;color:var(--navy);margin:0;}
+p{margin:0 0 10px;}
+strong{color:var(--navy);}
+
+/* header */
+.hero{background:var(--navy);color:#fff;border-radius:18px;overflow:hidden;display:grid;grid-template-columns:1.25fr 1fr;}
+.hero-text{padding:28px 28px 26px;}
+.brand{display:flex;align-items:center;gap:10px;font-size:15px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:#BFD0EE;margin-bottom:14px;}
+.brand img{width:38px;height:38px;border-radius:50%;background:#fff;}
+.hero h1{color:#fff;font-size:34px;line-height:1.2;margin-bottom:6px;}
+.hero .sub{font-size:19px;color:#DCE6F7;margin-bottom:16px;}
+.chips{display:flex;flex-wrap:wrap;gap:8px;}
+.chip{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.25);border-radius:999px;padding:5px 13px;font-size:16px;font-weight:700;color:#fff;}
+.hero-art{background:#F5E6C8 center/cover no-repeat;min-height:240px;}
+
+/* cards */
+.card{background:#fff;border:1px solid var(--line);border-radius:16px;padding:22px 24px;margin-top:18px;}
+.card-head{display:flex;align-items:center;gap:12px;margin-bottom:12px;}
+.card-head .ico{font-size:26px;line-height:1;}
+.card-head h2{font-size:24px;}
+.card-head .tag{margin-left:auto;font-size:14px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);}
+
+.glance{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+.glance .box{border-radius:12px;padding:14px 16px;}
+.box-label{font-size:14px;font-weight:900;letter-spacing:.08em;text-transform:uppercase;margin-bottom:4px;}
+.b-sky{background:var(--sky-bg);} .b-sky .box-label{color:#1F8CB0;}
+.b-gold{background:var(--gold-bg);} .b-gold .box-label{color:#9A6C14;}
+.b-green{background:var(--green-bg);} .b-green .box-label{color:#1F8452;}
+.b-plum{background:var(--plum-bg);} .b-plum .box-label{color:#6A4FA3;}
+.quote{font-family:"Lora",Georgia,serif;font-style:italic;font-size:20px;color:var(--navy);border-left:4px solid var(--gold);padding:4px 0 4px 16px;margin:16px 0 0;}
+.quote small{display:block;font-family:"Nunito",sans-serif;font-style:normal;font-size:15px;color:var(--muted);margin-top:4px;}
+
+/* day table */
+.days{width:100%;border-collapse:collapse;}
+.days th{font-size:14px;font-weight:900;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);text-align:left;padding:8px 10px;border-bottom:2px solid var(--line);}
+.days td{padding:12px 10px;border-bottom:1px solid var(--line);vertical-align:top;}
+.days tr:last-child td{border-bottom:none;}
+.day-n{font-family:"Lora",Georgia,serif;font-weight:700;font-size:20px;color:var(--navy);white-space:nowrap;}
+.day-n span{display:block;font-family:"Nunito",sans-serif;font-size:15px;font-weight:700;color:var(--muted);}
+.ch{font-weight:800;color:var(--navy);}
+.small{font-size:16px;color:var(--muted);}
+.pill{display:inline-block;font-size:14px;font-weight:800;border-radius:999px;padding:2px 10px;margin:4px 4px 0 0;}
+.p-poem{background:var(--plum-bg);color:#6A4FA3;}
+.p-guide{background:var(--cream);color:#9A6C14;border:1px solid #F5E6C8;}
+.extra-row td{background:var(--paper);}
+
+/* words */
+.words{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;}
+.word{border:1px solid var(--line);border-radius:12px;padding:12px 16px;}
+.word b{font-family:"Lora",Georgia,serif;font-size:21px;color:var(--navy);display:block;}
+.word span{font-size:17px;}
+.skills{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:14px;}
+.skills .box{border-radius:12px;padding:14px 16px;font-size:17px;}
+.eg{display:block;margin-top:6px;font-weight:700;color:var(--navy);}
+
+/* poem */
+.poem-wrap{display:grid;grid-template-columns:1fr 1fr;gap:18px;align-items:center;}
+.poem{font-family:"Lora",Georgia,serif;font-size:22px;line-height:1.9;color:var(--navy);background:var(--plum-bg);border-radius:12px;padding:16px 22px;}
+.poem small{display:block;font-family:"Nunito",sans-serif;font-size:15px;color:var(--muted);line-height:1.4;margin-top:6px;}
+
+/* ask */
+.ask{list-style:none;margin:0;padding:0;counter-reset:q;}
+.ask li{counter-increment:q;position:relative;padding:12px 0 12px 50px;border-bottom:1px dashed var(--line);}
+.ask li:last-child{border-bottom:none;}
+.ask li::before{content:counter(q);position:absolute;left:0;top:11px;width:34px;height:34px;border-radius:50%;background:var(--gold-bg);color:#9A6C14;font-weight:900;display:flex;align-items:center;justify-content:center;font-size:17px;}
+.ask .q{font-weight:800;color:var(--navy);display:block;}
+.ask .listen{font-size:16px;color:var(--muted);}
+
+/* checklist */
+.check{list-style:none;margin:0;padding:0;}
+.check li{padding:7px 0 7px 34px;position:relative;}
+.check li::before{content:"✓";position:absolute;left:4px;top:6px;color:var(--green);font-weight:900;font-size:19px;}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:18px;}
+
+.next{background:var(--navy);color:#DCE6F7;border:none;}
+.next h2{color:#fff;}
+.next strong{color:#fff;}
+.foot{text-align:center;font-size:15px;color:var(--muted);margin-top:26px;}
+
+.print-btn{display:inline-block;margin-top:16px;background:var(--gold);color:#fff;border:none;border-radius:999px;padding:9px 18px;font-family:"Nunito",sans-serif;font-weight:800;font-size:16px;cursor:pointer;}
+
+@media (max-width:720px){
+  .hero{grid-template-columns:1fr;}
+  .hero-art{min-height:180px;order:-1;}
+  .glance,.words,.skills,.poem-wrap,.two{grid-template-columns:1fr;}
+  .days thead{display:none;}
+  .days tr{display:block;border-bottom:1px solid var(--line);padding:8px 0;}
+  .days td{display:block;border:none;padding:4px 0;}
+}
+@media print{
+  body{background:#fff;font-size:15px;}
+  .wrap{padding:0;}
+  .print-btn{display:none;}
+  .card{break-inside:avoid;margin-top:12px;padding:14px 16px;}
+  .hero,.next{-webkit-print-color-adjust:exact;print-color-adjust:exact;}
+}
+
+/* lesson mechanics */
+.howto{background:var(--cream);border:1px solid #F5E6C8;border-radius:16px;padding:18px 22px;margin-top:18px;}
+.howto h2{font-size:21px;margin-bottom:10px;}
+.howto ul{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:8px 22px;}
+.howto li{position:relative;padding-left:32px;font-size:17px;line-height:1.5;}
+.howto li span{position:absolute;left:0;top:0;font-size:20px;}
+@media (max-width:760px){.howto ul{grid-template-columns:1fr;}}
+@media print{.howto{break-inside:avoid;}}
+.b-rose{background:#FDEEEE;border-radius:12px;padding:14px 16px;} .b-rose .box-label{color:#A8434A;}
+
+.p-museum{background:var(--sky-bg);color:#1F6F8C;}
+.p-extra{background:var(--green-bg);color:#1F8452;}
+.extras{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
+.extras .box{border-radius:12px;padding:14px 16px;font-size:17px;}
+.essay{display:flex;flex-wrap:wrap;gap:6px;margin:4px 0 12px;}
+.essay span{font-size:15px;font-weight:800;border-radius:999px;padding:4px 12px;background:var(--paper);border:1px solid var(--line);color:var(--muted);}
+.essay span.now{background:var(--gold-bg);border-color:#F5E6C8;color:#9A6C14;}
+.essay span.done{background:var(--green-bg);border-color:#CDEFDB;color:#1F8452;}
+@media (max-width:720px){.extras{grid-template-columns:1fr;}}
+.unit-link{margin:12px 0 0;font-size:16px;}.unit-link a{color:#BFD0EE;font-weight:800;}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="hero">
+<div class="hero-text">
+<div class="brand"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy Online">Family Guide · 3rd Grade ELA</div>
+<h1>Week 31: The Courage to Act</h1>
+<div class="sub">Two texts about courage: comparing how two authors write about the same topic</div>
+<div class="chips">
+<span class="chip">4 lessons</span>
+<span class="chip">Text 1 + Text 2</span>
+<span class="chip">Check-In at week’s end</span>
+</div>
+<button class="print-btn" onclick="window.print()">🖨️ Print this guide</button>
+</div>
+<div class="hero-art" style="background-image:url('https://optimaondemand.github.io/optima-3rd-ela/assets/art/ext/ext-darling-rescue-parker.jpg');background-position:center 55%;" role="img" aria-label="A painting of two people rowing a small boat through stormy waves"></div>
+</header>
+
+<section class="howto">
+<h2>🧭 How the Lesson Pages Work</h2>
+<ul>
+<li><span>▶️</span><strong>Start here.</strong> The gold <strong>Start here</strong> box at the top of each page holds a short video from Opti that shows how the page works.</li>
+<li><span>🗂️</span><strong>Four tabs, in order:</strong> Warm-Up → Word Study → Reading → Assignment. Each tab shows one step at a time. Tap <strong>👆 Next</strong> to go on, or <strong>Back</strong> to look again.</li>
+<li><span>🦉</span><strong>Opti the owl teaches each activity.</strong> Before each one, Opti explains what it is and what to do. On Word Study, Opti teaches in a short video. Every activity also has a <strong>What to do</strong> line.</li>
+<li><span>👆</span><strong>Anything with a 👆 can be tapped.</strong> Words with a dotted line show what they mean when tapped. The 🔊 buttons read words out loud.</li>
+<li><span>💾</span><strong>Answers save as you type</strong>, but only in that browser on that computer. Switching computers or clearing the browser loses them.</li>
+<li><span>📋</span><strong>Turning in work:</strong> at the end of the Assignment tab, 1. tap <strong>Copy my work</strong>, 2. go back to this lesson’s assignment in Canvas, 3. paste the work in the box, then tap Submit. A lesson isn’t turned in until it’s submitted there.</li>
+<li><span>🗺️</span><strong>The Reading Road</strong> on the Reading tab is a map of the whole year. Opti stands on this week.</li>
+</ul>
+</section>
+
+<section class="card">
+<div class="card-head"><span class="ico">🧭</span><h2>This Week at a Glance</h2></div>
+<p>The novels are finished, and this is an extension week. Your student reads two short texts about courage, both written for Optima Academy Online. <strong>Text 1, “What Is Courage?”</strong> is informational: it explains that courage is not the same as having no fear, but choosing to act anyway because it matters. <strong>Text 2, “The Choice at the Bridge,”</strong> is a made-up story about a girl named Mira who stands up for a smaller boy on an old, narrow bridge, even though she is scared. All week your student compares how the two authors write about the same topic, and builds a comparison response.</p>
+<div class="glance">
+<div class="box b-sky"><div class="box-label">Reading skill</div><strong>Compare how two authors write about the same topic.</strong> One text explains courage with facts and ideas. The other shows it through a character’s actions.</div>
+<div class="box b-green"><div class="box-label">Big idea</div><strong>What does it mean to be truly courageous?</strong> On Day 4, your student thinks back over every book read this year.</div>
+</div>
+<p class="quote">“I just decided that he mattered more than my fear did.”<small>Mira, Text 2</small></p>
+</section>
+
+<section class="card">
+<div class="card-head"><span class="ico">📅</span><h2>Day by Day</h2></div>
+<table class="days">
+<thead><tr><th>Lesson</th><th>Reading</th><th>Big question</th></tr></thead>
+<tbody>
+<tr><td class="day-n">31.1<span>Day 1</span></td>
+<td><span class="ch">Text 1: What Is Courage?</span><br>Your student explains what Text 1 says courage is, finds a big moment and a quiet moment of courage in the text, and picks a character from this year’s books who fits. Then plans the comparison and writes a claim.<br><span class="pill p-guide">Guide: Opti</span><span class="pill p-extra">Sentence rewrite</span></td>
+<td>What does it mean to be truly courageous?</td></tr>
+<tr><td class="day-n">31.2<span>Day 2</span></td>
+<td><span class="ch">Text 2: The Choice at the Bridge</span><br>Your student finds how the author shows Mira’s courage without using the word brave, compares Mira with Text 1, and drafts the opening of the comparison. Also a short poem by Amy Lowell.<br><span class="pill p-guide">Guide: Opti</span><span class="pill p-poem">Poetry</span><span class="pill p-extra">Read Like a Writer video</span></td>
+<td>How does a fiction author show courage differently from the way an informational author explains it?</td></tr>
+<tr><td class="day-n">31.3<span>Day 3</span></td>
+<td><span class="ch">Look back: both texts</span><br>Your student collects the best detail from each text and drafts one paragraph about each.<br><span class="pill p-guide">Guide: Opti</span><span class="pill p-extra">Read Like a Writer</span></td>
+<td>How do you use details from two different texts in the same response?</td></tr>
+<tr><td class="day-n">31.4<span>Day 4</span></td>
+<td><span class="ch">Look back: both texts</span><br>Your student writes the closing, finishes the comparison response, picks the character from this year who showed the most courage, and talks it over with someone at home.<br><span class="pill p-guide">Guide: Opti</span><span class="pill p-poem">Poetry</span><span class="pill p-extra">Read Like a Writer</span></td>
+<td>After a whole year of reading, what do you think courage really means?</td></tr>
+<tr class="extra-row"><td class="day-n">📋<span>Check-In</span></td>
+<td colspan="2">A 14-point check on the week, in Canvas: grammar from the whole year, prefixes and suffixes, splitting long words into syllables, a short passage from Text 1, and a comparison of the two texts.</td></tr>
+</tbody>
+</table>
+</section>
+
+<section class="card">
+<div class="card-head"><span class="ico">🔤</span><h2>Words to Know</h2><span class="tag">Use them at home!</span></div>
+<div class="words">
+<div class="word"><b>courageous</b><span>having or showing courage; willing to act even when afraid</span></div>
+<div class="word"><b>perseverance</b><span>continuing to try even when things are hard</span></div>
+<div class="word"><b>virtue</b><span>a quality that shows good character</span></div>
+<div class="word"><b>integrity</b><span>doing the right thing even when no one is watching</span></div>
+</div>
+<div class="skills">
+<div class="box b-sky"><div class="box-label">Word parts</div>A review of this year’s <strong>prefixes and suffixes</strong>: re- (again), un- (not), trans- (across), inter- (between), -ful (full of), -less (without).<span class="eg">rebuild · unkind · hopeful · endless</span></div>
+<div class="box b-gold"><div class="box-label">Spelling</div><strong>Long words</strong>: find the vowels, split between them, read each chunk, then push the chunks together.<span class="eg">in·vi·ta·tion · dis·cov·er·y</span></div>
+<div class="box b-green"><div class="box-label">Grammar</div>A <strong>review of the whole year</strong>: capitals, commas after an opening part, apostrophes, irregular past forms, and simple, compound and complex sentences.<span class="eg">although mira was scared she goed → Although Mira was scared, she went</span></div>
+</div>
+</section>
+
+<section class="card">
+<div class="card-head"><span class="ico">✨</span><h2>New in the Lessons</h2></div>
+<div class="extras">
+<div class="box b-plum"><div class="box-label">🚣 Row to the Wreck</div>This week’s word game follows a real rescue. Each right answer is one pull on the oars as Grace Darling and her father row through the storm to a wrecked ship. On Days 1 and 2 your student picks what a word with a prefix or suffix means. On Days 3 and 4 your student counts the beats (syllables) in long words. By Day 4 the boat reaches the wreck.</div>
+<div class="box b-gold"><div class="box-label">🎬 Opti’s videos</div>Every Word Study activity, all four days, starts with a short video where Opti shows how it works. On Day 2, Opti also shows Read Like a Writer with a different sentence from Text 2. The videos are silent with captions for now.</div>
+<div class="box b-sky"><div class="box-label">🌍 World Notes</div>Each day opens the Reading tab with a real story of courage: Grace Darling, who in 1838, at age 22, rowed with her father from the Longstone Lighthouse to save nine people from a shipwreck; how a lighthouse works; rowing through rough water; and the stone monument in Bamburgh, England, that shows her holding an oar.</div>
+<div class="box b-green"><div class="box-label">🦁 Courage Watch</div>After reading, your student decides if three moments show someone being brave: Yes or Not yet. For example: Mira walks onto the bridge even though her feet want to turn around (Yes), or someone who is never scared of anything (Not yet: Text 1 says brave people feel fear and act anyway).</div>
+</div>
+<p class="small" style="margin-top:12px;">Each day opens with real art: Thomas Musgrave Joy’s portrait of Grace Darling (1839), Camille Corot’s painting of the old bridge at Narni in Italy (1827), Peder Balke’s lighthouse on the coast of Norway (about 1855), and Henry Perlee Parker’s painting of Grace and her father rowing to the rescue.</p>
+</section>
+
+<section class="card">
+<div class="card-head"><span class="ico">✍️</span><h2>Your Student’s Writing</h2><span class="tag">Writer’s Workshop</span></div>
+<div class="essay"><span class="done">Wk 30 · Literary response, published</span><span class="now">Wk 31 · A comparison response: two texts on courage</span><span>Wk 32 · Year-end</span></div>
+<p>This week your student writes a <strong>comparison response</strong>. Day 1: <strong>plan</strong> what Text 1 says courage is, a character who shows it, and a claim. Day 2: draft the <strong>opening</strong>, naming both texts and what they agree on. Day 3: draft <strong>one paragraph for each text</strong>, plus a sentence that connects them. Day 4: write the <strong>closing</strong> and put the whole response together.</p>
+<p class="small">An example writer named Clara shows each step first.</p>
+</section>
+
+<section class="card">
+<div class="card-head"><span class="ico">💬</span><h2>Ask at Home</h2></div>
+<ol class="ask">
+<li><span class="q">What does Text 1 say courage is?</span><span class="listen">Listen for: not having no fear, but choosing to act anyway because it is important or right; something you practice, one choice at a time.</span></li>
+<li><span class="q">How does the author show that Mira is scared, without using the word scared?</span><span class="listen">Listen for: her heart hammered, her feet wanted to turn around, she took a breath.</span></li>
+<li><span class="q">How are the two texts alike? How are they different?</span><span class="listen">Listen for: both say courage means acting even when afraid; one explains it, the other shows it in a story.</span></li>
+<li><span class="q">Which character from this year’s books showed the most courage?</span><span class="listen">Listen for: a character and one thing they did, like Despereaux going into the dungeon or Lucy telling the truth about Narnia.</span></li>
+</ol>
+</section>
+
+<div class="two">
+<section class="card">
+<div class="card-head"><span class="ico">📬</span><h2>What Gets Turned In</h2></div>
+<ul class="check">
+<li>Each lesson’s Assignment tab: the reading questions and the day’s writing step, copied and pasted into Canvas</li>
+<li>The finished comparison response on Day 4</li>
+<li>The Week 31 Check-In in Canvas</li>
+</ul>
+</section>
+<section class="card">
+<div class="card-head"><span class="ico">🏡</span><h2>Try at Home</h2></div>
+<ul class="check">
+<li>Share a time you did something brave while you were scared</li>
+<li>Read Text 2 aloud together and point to every sentence that shows fear without saying it</li>
+<li>Look up a photo of a lighthouse near you, or one you have visited</li>
+</ul>
+</section>
+</div>
+
+<section class="card next">
+<div class="card-head"><span class="ico">⏭️</span><h2>Coming Up in Week 32</h2></div>
+<p><strong>The last week of the year.</strong> Your student looks back at the books read this year and the seven pillars of virtue, then writes, revises and shares a year-end response.</p>
+</section>
+
+<p class="foot">Optima Academy Online · 3rd Grade ELA · Week 31 Family Guide</p>
+</div>
+</body>
+</html>
