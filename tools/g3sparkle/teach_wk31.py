@@ -4,7 +4,7 @@ Writes DATA.teach, plate.lookBtn and DATA.virtue (Courage Watch, as week 18; eac
 Days 3-4 from both texts) into data/lesson-31-N.json AND the page's oao-data block. Word Study scripts are written for the
 Opti films: Day 1 teaches each idea; Days 2-4 show that day's activity with an example that is not an answer anywhere in
 the week (replay, painless, daring, grace telled; unsafe, loyal, rowed/although, wonderful; repaint, integrity, the boats
-oars, everyone; unbroken, integrity-Lucy, the keepers daughter, rescue-boat), and no two films open the same way.
+oars, everyone; unbroken, integrity-Lucy, the keepers daughter, lifeboat), and no two films open the same way.
 NO RECORDINGS (Bethany, Nov 14 2026): films are built silent with captions; scripts stay written to the budget.
 
     python tools/g3sparkle/teach_wk31.py [--count]
@@ -107,7 +107,7 @@ L = {
  {"id": "gram", "find": "Grammar", "fold": GRAM_FOLD, "todo": "Fix it in passes. Then tap all seven words that need fixing.",
   "script": "Two passes, like an editor. the keepers daughter was brave and she rowed hard. Pass one, capitals: The. Pass two, apostrophes and commas: keeper's, and a comma before and. Now do your passes, and tap every word that needs fixing."},
  {"id": "spell", "find": "Spelling", "fold": [], "foldText": ["The Rule:"], "todo": "Roll the dice. Count the beats and say where they split. Then check.",
-  "script": "Dice roll: rescue boat! Rescue: res, cue. Two beats. Boat: one beat. Tap Roll the dice, say the word, count its beats and say where they split. Then tap Check my answer."},
+  "script": "Dice roll: lifeboat! Life, boat. Two beats. Tap Roll the dice, say the word, count its beats and say where they split. Then tap Check my answer."},
  dict(READ, todo="Read both texts one more time. Then try the Courage Watch below.",
   script="No new text today. Read both texts one last time, and pick your strongest detail for your closing. Then try the Courage Watch and the questions."),
  chq("Answer each question in full sentences. Use details from the texts and the books.",
