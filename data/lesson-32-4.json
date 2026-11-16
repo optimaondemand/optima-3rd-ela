@@ -1,0 +1,573 @@
+{
+ "connector": "You read four whole books this year. Today you share what you wrote, look back down the Reading Road, and get a certificate from me.",
+ "writingFocus": "culmination response",
+ "dol": {
+  "a": {
+   "raw": "the four novels we read this year taught us about courage honesty perseverance and what it means to grow up",
+   "fixed": "<strong>T</strong>he four novels we read this year taught us about courage<strong>,</strong> honesty<strong>,</strong> perseverance<strong>,</strong> and what it means to grow up<strong>.</strong>",
+   "why": "The starts the sentence. Commas go between things in a list."
+  },
+  "b": {
+   "raw": "this year we met a flat boy a brave mouse a whipping boy and four children in narnia",
+   "fixed": "<strong>T</strong>his year we met a flat boy<strong>,</strong> a brave mouse<strong>,</strong> a whipping boy<strong>,</strong> and four children in <strong>N</strong>arnia<strong>.</strong>",
+   "why": "This starts the sentence. Commas go between things in a list. Narnia is a name."
+  }
+ },
+ "hints": {},
+ "flags": {
+  "journal-q1": {
+   "quote": false,
+   "count": 2
+  },
+  "journal-q2": {
+   "quote": false,
+   "count": 1
+  },
+  "journal-q3": {
+   "quote": false,
+   "count": 1
+  }
+ },
+ "wordgame": {
+  "type": "pillars",
+  "title": "Raise the 7 Pillars",
+  "names": [
+   "Honesty",
+   "Respect",
+   "Courtesy",
+   "Responsibility",
+   "Courage",
+   "Service",
+   "Perseverance"
+  ],
+  "sub": "Every right answer raises the temple a little more.",
+  "todo": "Read the word on the temple. Tap the right answer. Each right answer raises the pillars.",
+  "win": "Today's 8 are done. Come back next lesson to raise the pillars higher.",
+  "winWeek": "All 7 pillars stand, and the roof is on. Your year of words built this!",
+  "look": "Eight more words. Tap the spelling rule for each one. Finish the temple today and the roof goes on.",
+  "stepTitle": "Which spelling rule?",
+  "bins": [],
+  "items": [
+   {
+    "t": "baking",
+    "bin": "e",
+    "bins": [
+     {
+      "id": "e",
+      "label": "Drop the silent e",
+      "ic": "👆"
+     },
+     {
+      "id": "d",
+      "label": "Double the last letter",
+      "ic": "👆"
+     },
+     {
+      "id": "y",
+      "label": "Change y to i",
+      "ic": "👆"
+     },
+     {
+      "id": "es",
+      "label": "Add -es",
+      "ic": "👆"
+     }
+    ],
+    "why": "baking comes from bake: drop the silent e.",
+    "miss": {
+     "d": "Look at the base word. Is it short, with one vowel and one last consonant?",
+     "y": "Look at the base word. Does it end in y?",
+     "es": "Look at the base word. Does it end in s, x, sh or ch?"
+    }
+   },
+   {
+    "t": "swimming",
+    "bin": "d",
+    "bins": [
+     {
+      "id": "d",
+      "label": "Double the last letter",
+      "ic": "👆"
+     },
+     {
+      "id": "y",
+      "label": "Change y to i",
+      "ic": "👆"
+     },
+     {
+      "id": "es",
+      "label": "Add -es",
+      "ic": "👆"
+     },
+     {
+      "id": "e",
+      "label": "Drop the silent e",
+      "ic": "👆"
+     }
+    ],
+    "why": "swimming comes from swim: double the last letter.",
+    "miss": {
+     "y": "Look at the base word. Does it end in y?",
+     "es": "Look at the base word. Does it end in s, x, sh or ch?",
+     "e": "Look at the base word. Does it end in a silent e?"
+    }
+   },
+   {
+    "t": "tried",
+    "bin": "y",
+    "bins": [
+     {
+      "id": "y",
+      "label": "Change y to i",
+      "ic": "👆"
+     },
+     {
+      "id": "es",
+      "label": "Add -es",
+      "ic": "👆"
+     },
+     {
+      "id": "e",
+      "label": "Drop the silent e",
+      "ic": "👆"
+     },
+     {
+      "id": "d",
+      "label": "Double the last letter",
+      "ic": "👆"
+     }
+    ],
+    "why": "tried comes from try: change y to i.",
+    "miss": {
+     "es": "Look at the base word. Does it end in s, x, sh or ch?",
+     "e": "Look at the base word. Does it end in a silent e?",
+     "d": "Look at the base word. Is it short, with one vowel and one last consonant?"
+    }
+   },
+   {
+    "t": "glasses",
+    "bin": "es",
+    "bins": [
+     {
+      "id": "es",
+      "label": "Add -es",
+      "ic": "👆"
+     },
+     {
+      "id": "e",
+      "label": "Drop the silent e",
+      "ic": "👆"
+     },
+     {
+      "id": "d",
+      "label": "Double the last letter",
+      "ic": "👆"
+     },
+     {
+      "id": "y",
+      "label": "Change y to i",
+      "ic": "👆"
+     }
+    ],
+    "why": "glasses comes from glass: add -es.",
+    "miss": {
+     "e": "Look at the base word. Does it end in a silent e?",
+     "d": "Look at the base word. Is it short, with one vowel and one last consonant?",
+     "y": "Look at the base word. Does it end in y?"
+    }
+   },
+   {
+    "t": "riding",
+    "bin": "e",
+    "bins": [
+     {
+      "id": "e",
+      "label": "Drop the silent e",
+      "ic": "👆"
+     },
+     {
+      "id": "d",
+      "label": "Double the last letter",
+      "ic": "👆"
+     },
+     {
+      "id": "y",
+      "label": "Change y to i",
+      "ic": "👆"
+     },
+     {
+      "id": "es",
+      "label": "Add -es",
+      "ic": "👆"
+     }
+    ],
+    "why": "riding comes from ride: drop the silent e.",
+    "miss": {
+     "d": "Look at the base word. Is it short, with one vowel and one last consonant?",
+     "y": "Look at the base word. Does it end in y?",
+     "es": "Look at the base word. Does it end in s, x, sh or ch?"
+    }
+   },
+   {
+    "t": "skipped",
+    "bin": "d",
+    "bins": [
+     {
+      "id": "d",
+      "label": "Double the last letter",
+      "ic": "👆"
+     },
+     {
+      "id": "y",
+      "label": "Change y to i",
+      "ic": "👆"
+     },
+     {
+      "id": "es",
+      "label": "Add -es",
+      "ic": "👆"
+     },
+     {
+      "id": "e",
+      "label": "Drop the silent e",
+      "ic": "👆"
+     }
+    ],
+    "why": "skipped comes from skip: double the last letter.",
+    "miss": {
+     "y": "Look at the base word. Does it end in y?",
+     "es": "Look at the base word. Does it end in s, x, sh or ch?",
+     "e": "Look at the base word. Does it end in a silent e?"
+    }
+   },
+   {
+    "t": "pennies",
+    "bin": "y",
+    "bins": [
+     {
+      "id": "y",
+      "label": "Change y to i",
+      "ic": "👆"
+     },
+     {
+      "id": "es",
+      "label": "Add -es",
+      "ic": "👆"
+     },
+     {
+      "id": "e",
+      "label": "Drop the silent e",
+      "ic": "👆"
+     },
+     {
+      "id": "d",
+      "label": "Double the last letter",
+      "ic": "👆"
+     }
+    ],
+    "why": "pennies comes from penny: change y to i.",
+    "miss": {
+     "es": "Look at the base word. Does it end in s, x, sh or ch?",
+     "e": "Look at the base word. Does it end in a silent e?",
+     "d": "Look at the base word. Is it short, with one vowel and one last consonant?"
+    }
+   },
+   {
+    "t": "buses",
+    "bin": "es",
+    "bins": [
+     {
+      "id": "es",
+      "label": "Add -es",
+      "ic": "👆"
+     },
+     {
+      "id": "e",
+      "label": "Drop the silent e",
+      "ic": "👆"
+     },
+     {
+      "id": "d",
+      "label": "Double the last letter",
+      "ic": "👆"
+     },
+     {
+      "id": "y",
+      "label": "Change y to i",
+      "ic": "👆"
+     }
+    ],
+    "why": "buses comes from bus: add -es.",
+    "miss": {
+     "e": "Look at the base word. Does it end in a silent e?",
+     "d": "Look at the base word. Is it short, with one vowel and one last consonant?",
+     "y": "Look at the base word. Does it end in y?"
+    }
+   }
+  ]
+ },
+ "glossary": [
+  {
+   "w": "pillar",
+   "m": "a tall post that holds up a building. The 7 pillars hold up good character.",
+   "key": true
+  },
+  {
+   "w": "virtue",
+   "m": "a quality that shows good character, like honesty or courage",
+   "key": true
+  },
+  {
+   "w": "courtesy",
+   "m": "being polite and kind with your words and actions"
+  },
+  {
+   "w": "prefix",
+   "m": "a word part added to the front of a word, like un- in unkind",
+   "key": true
+  },
+  {
+   "w": "suffix",
+   "m": "a word part added to the end of a word, like -ful in hopeful",
+   "key": true
+  },
+  {
+   "w": "base word",
+   "m": "the main word before a prefix or suffix is added. Hope is the base word in hopeful."
+  },
+  {
+   "w": "claim",
+   "m": "the main idea you want to prove in your writing",
+   "key": true
+  },
+  {
+   "w": "body paragraph",
+   "m": "a paragraph in the middle of your writing that gives one reason and an example"
+  }
+ ],
+ "sayWords": [],
+ "cards": [
+  {
+   "id": "world",
+   "kind": "info",
+   "tab": "reading",
+   "after": "Read:|Look Back",
+   "before": true,
+   "icon": "🌍",
+   "title": "World Notes: The Real Wardrobe",
+   "sub": "A real thing behind one of our books",
+   "todo": "Read the note. Then read with your lens in mind.",
+   "text": [
+    "In <i>The Lion, the Witch and the Wardrobe</i>, the way into Narnia is a wardrobe.",
+    "C.S. Lewis really grew up with a big wooden wardrobe. His grandfather, Richard Lewis, made it by hand in the 1800s. It stood in the family&rsquo;s house in Belfast, and later in Lewis&rsquo;s home in England.",
+    "Today it is in a museum at Wheaton College, in Illinois. Some people think it helped give Lewis the idea for the wardrobe in Narnia."
+   ]
+  },
+  {
+   "id": "lookback",
+   "kind": "lookback",
+   "tab": "reading",
+   "after": "Q1 —",
+   "title": "The Reading Road: Look Back",
+   "sub": "Your whole year, one stop at a time",
+   "todo": "Tap each stop on the road to see what you learned there. Then tap your favorite book.",
+   "win": "What a year of reading!",
+   "stops": [
+    {
+     "book": "Flat Stanley",
+     "ic": "✉️",
+     "color": "#2A9BC0",
+     "learned": "You learned to find the characters, the setting and the problem, and how events change a character."
+    },
+    {
+     "book": "The Tale of Despereaux",
+     "ic": "🐭",
+     "color": "#C7922C",
+     "learned": "You learned that different characters see things in different ways, and that a small character can be very brave."
+    },
+    {
+     "book": "The Whipping Boy",
+     "ic": "🏰",
+     "color": "#7B2E3B",
+     "learned": "You learned how two characters can change each other, and how to compare them."
+    },
+    {
+     "book": "The Lion, the Witch and the Wardrobe",
+     "ic": "🦁",
+     "color": "#1B7A4E",
+     "learned": "You learned about symbols and themes: what a story teaches, and how a character like Edmund can change."
+    }
+   ]
+  },
+  {
+   "id": "cert",
+   "kind": "cert",
+   "tab": "assignment",
+   "title": "Your 3rd Grade Certificate",
+   "sub": "From Opti, for a whole year of reading",
+   "todo": "Tap the pillar you will take to 4th grade. Check your name. Then save your certificate.",
+   "head": "Story Map Explorer",
+   "line": "who walked the whole Reading Road: four books in 3rd grade ELA.",
+   "pillars": [
+    "Honesty",
+    "Respect",
+    "Courtesy",
+    "Responsibility",
+    "Courage",
+    "Service",
+    "Perseverance"
+   ]
+  }
+ ],
+ "transcripts": {
+  "welcome": "Hi, it's Opti. Last day! Share your writing, look back at the year, and get your certificate.",
+  "guide1": "Word work: roll word-part words, one last editing pass, and roll spelling words.",
+  "guide2": "Finish your response, look back down the Reading Road, and write to a new 3rd grader.",
+  "guide3": "Give your response a title and share it out loud. Then get your certificate."
+ },
+ "notes": {
+  "wordParts": "Word parts I know: -y and -ness mean being something, -ous means full of, -ful means full of, -less means without, un- means not, re- means again.",
+  "grammar": "Editing checklist: capitals on names and the first word, apostrophes for belonging and joined words, a comma before and/but/so when it joins two complete thoughts, and the right past form, like went.",
+  "spelling": "Find the base word first. Then check what was added: drop the silent e (hope, hoping), double the last letter (hop, hopping), change y to i (cry, cried), or add -es (box, boxes).",
+  "wgrd": "Good readers look back at how they have grown. Name one skill that was hard in the fall and is easy for you now.",
+  "vocab": [
+   [
+    "integrity",
+    "doing the right thing even when no one is watching"
+   ],
+   [
+    "empathy",
+    "understanding and sharing the feelings of another person"
+   ],
+   [
+    "resilience",
+    "the ability to keep going after something hard"
+   ]
+  ]
+ },
+ "plate": {
+  "src": "art/ext/ext-reader-fragonard.jpg",
+  "alt": "A painting of a girl in a yellow dress sitting by a cushion, reading a small book",
+  "credit": "A Young Girl Reading · Jean-Honoré Fragonard, about 1769 · National Gallery of Art · Public domain",
+  "look": "A painting by Jean-Honoré Fragonard of a girl lost in a book, painted more than 250 years ago. Look at her face. You read four whole books this year, just like this.",
+  "lookBtn": "Tap to learn about this painting of a girl reading"
+ },
+ "teach": {
+  "dropTurnNotes": true,
+  "mods": [
+   {
+    "id": "wgrd",
+    "find": "What Good Readers",
+    "fold": [
+     ":scope > p:not(.g3-do)",
+     ":scope > .key-concept",
+     ":scope > .socratic-box"
+    ],
+    "todo": "Listen to Opti. Then tap the lens you will use today.",
+    "script": "[warmly] Last reading tip of the year. You read four whole books. Think about how much your reading has grown. Then tap one of the two lenses below to use while you read. You don't need to write anything."
+   },
+   {
+    "id": "dol",
+    "find": "Daily Oral",
+    "fold": [],
+    "todo": "Tap the yellow parts. Then pick Sentence A or B and type it the right way.",
+    "script": "Let's fix a sentence. The correct one first. This year we read about mice, rats, lions, and one very brave whipping boy. Commas go between the things in a list, even before and. Tap the yellow parts. Then pick Sentence A or Sentence B, and type it the right way."
+   },
+   {
+    "id": "poem",
+    "find": "Poetry",
+    "fold": [
+     ":scope > .callout"
+    ],
+    "todo": "Choose a poem from this year. Read it out loud to someone.",
+    "script": "Last poem of the year. Pick any poem you liked, and read it out loud to someone. Make your voice fit the poem: fast or slow, soft or loud."
+   },
+   {
+    "id": "morph",
+    "find": "Morphology",
+    "fold": [],
+    "todo": "Say what one part means. Roll the dice. Say what each word means, then check.",
+    "script": "Quick question: what does re mean? Again! Here's a word that isn't on the dice. Restart. To start again. Say what the word part means. Then tap Roll the Dice. Say what the word means, and tap Check My Thinking. Roll all six words.",
+    "video": "g3ela-32-4-teach-morph"
+   },
+   {
+    "id": "vocab",
+    "find": "Vocabulary",
+    "fold": [],
+    "todo": "Choose one word. Write one sentence about your character and you.",
+    "script": "Watch me connect a word to a book and to me. Respect. Mrs. Lambchop and I both show respect: she stands up for Stanley, and I listen to my friends. Now choose your word, and write one sentence about your character and you.",
+    "video": "g3ela-32-4-teach-vocab"
+   },
+   {
+    "id": "gram",
+    "find": "Grammar",
+    "fold": [
+     ":scope > .callout:not(:has(+ .spotter-game)):not(:has(+ .fillin-game)):not(:has(+ .sort-game)):not(:has(+ .dol-check-btn))"
+    ],
+    "todo": "Fix it in passes. Then tap all seven words that need fixing.",
+    "script": "Three passes, like an editor. my sisters cat runned under the bed. Pass one, capitals: My. Pass two, apostrophes: sister's. Pass three, verbs: runned should be ran. Now do your passes, and tap all seven words that need fixing.",
+    "video": "g3ela-32-4-teach-gram"
+   },
+   {
+    "id": "spell",
+    "find": "Spelling",
+    "fold": [],
+    "foldText": [
+     "The Rule:"
+    ],
+    "todo": "Roll the dice. Say the word and think of its rule. Then check.",
+    "script": "Dice roll: hiking! The base word is hike. It ended in a silent e, so the e dropped. Tap Roll the dice, say the word, and think: which rule is at work? Then tap Check my answer.",
+    "video": "g3ela-32-4-teach-spell"
+   },
+   {
+    "id": "read",
+    "find": "^\\W*(Read:|Look Back)",
+    "fold": [],
+    "todo": "Read how to share. Then try the Pillar Watch below.",
+    "script": "Today you share. Read how to share your response. Then try the Pillar Watch, look back down the Reading Road, and answer the questions."
+   },
+   {
+    "id": "chq",
+    "find": "Q1 —",
+    "fold": [],
+    "todo": "Answer each question in full sentences.",
+    "script": "Three questions today. One, your finished response. Two, the reading skill that grew the most for you. Three, a short letter to a new 3rd grader."
+   },
+   {
+    "id": "write",
+    "find": "Writer.s Workshop",
+    "fold": [
+     ":scope > .callout"
+    ],
+    "foldText": [
+     "watch how",
+     "today.s tool"
+    ],
+    "todo": "Read Clara's title. Type your title. Then share your response out loud.",
+    "script": "Clara gave her response a title that tells her big idea. Give yours a title, then share it out loud. Then save your certificate."
+   }
+  ],
+  "cards": {}
+ },
+ "virtue": {
+  "name": "pillars",
+  "title": "Pillar Watch: Does it show a pillar?",
+  "items": [
+   {
+    "t": "Despereaux goes down into the dark dungeon to save the princess. (The Tale of Despereaux)",
+    "ok": true,
+    "why": "Courage and perseverance: he keeps going in the dark."
+   },
+   {
+    "t": "The Princess Pea asks Roscuro, “Would you like some soup?” (The Tale of Despereaux)",
+    "ok": true,
+    "why": "Courtesy: she is kind to someone who hurt her."
+   },
+   {
+    "t": "At the start of the book, Prince Brat calls Jemmy a rascal. (The Whipping Boy)",
+    "ok": false,
+    "why": "Calling names is not respect. The prince changes by the end."
+   }
+  ]
+ }
+}

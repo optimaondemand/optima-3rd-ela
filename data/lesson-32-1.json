@@ -1,0 +1,469 @@
+{
+ "connector": "Which character from our books would you want as a friend? This week you pick one character and show the good character inside them. First, meet the 7 pillars.",
+ "writingFocus": "culmination response",
+ "dol": {
+  "a": {
+   "raw": "honesty means telling the truth even when its difficult and thats one of the hardest things a person can do",
+   "fixed": "<strong>H</strong>onesty means telling the truth even when it<strong>’</strong>s difficult<strong>,</strong> and that<strong>’</strong>s one of the hardest things a person can do<strong>.</strong>",
+   "why": "Honesty starts the sentence. It’s and that’s are joined words. A comma goes before and."
+  },
+  "b": {
+   "raw": "lucy told the truth about narnia but her brothers and sister didnt believe her",
+   "fixed": "<strong>L</strong>ucy told the truth about <strong>N</strong>arnia<strong>,</strong> but her brothers and sister didn<strong>’</strong>t believe her<strong>.</strong>",
+   "why": "Lucy and Narnia are names. A comma goes before but. Didn’t joins did and not."
+  }
+ },
+ "hints": {
+  "fill1": {
+   "h1": "Honest is the base word. Which ending means being honest?",
+   "why": "honest + y = honesty."
+  },
+  "fill2": {
+   "h1": "Which ending means full of?",
+   "why": "courage + ous = courageous."
+  },
+  "fill3": {
+   "h1": "Look at the table at the top for the ending on perseverance.",
+   "why": "persevere + ance = perseverance (the e drops)."
+  },
+  "fill4": {
+   "h1": "Re- is the front part. What comes after it in respect?",
+   "why": "re + spect = respect."
+  },
+  "vcloze1": {
+   "h1": "Look back at the word Opti figured out with you.",
+   "why": "Integrity means doing right even when no one is watching."
+  },
+  "vcloze2": {
+   "h1": "Which word means feeling what other people feel?",
+   "why": "Empathy means understanding and sharing someone's feelings."
+  },
+  "vcloze3": {
+   "h1": "Which word means bouncing back and keeping going?",
+   "why": "Resilience means you keep going after something hard."
+  }
+ },
+ "miss": {
+  "match": {
+   "integrity": "Integrity is about doing right when no one sees. Look for that meaning.",
+   "empathy": "Empathy is about feeling what someone else feels. Look for that meaning.",
+   "resilience": "Resilience is about bouncing back after something hard. Look for that meaning.",
+   "perseverance": "Perseverance is about not giving up. Look for that meaning."
+  }
+ },
+ "flags": {
+  "journal-q1": {
+   "quote": false,
+   "count": 1
+  },
+  "journal-q2": {
+   "quote": false,
+   "count": 2
+  },
+  "journal-q3": {
+   "quote": false,
+   "count": 1
+  }
+ },
+ "copia": {
+  "look": "One plain sentence about a pillar, and three empty boxes. Each box asks you to say the same idea in a new way.",
+  "todo": "Rewrite the sentence three ways, one box at a time. Tap Show one way if you get stuck.",
+  "seed": "Courage <b>means</b> acting even when you are afraid.",
+  "eg": [
+   "Even when you are afraid, courage means acting anyway.",
+   "Courage <i>is</i> doing the right thing while your knees shake.",
+   "Courage means acting even when you are afraid, because something matters more than your fear."
+  ]
+ },
+ "wordgame": {
+  "type": "pillars",
+  "title": "Raise the 7 Pillars",
+  "names": [
+   "Honesty",
+   "Respect",
+   "Courtesy",
+   "Responsibility",
+   "Courage",
+   "Service",
+   "Perseverance"
+  ],
+  "sub": "Every right answer raises the temple a little more.",
+  "todo": "Read the word on the temple. Tap the right answer. Each right answer raises the pillars.",
+  "win": "Today's 8 are done. Come back next lesson to raise the pillars higher.",
+  "winWeek": "All 7 pillars stand, and the roof is on. Your year of words built this!",
+  "look": "Seven stone pillars, one for each pillar of good character. Each word has a prefix or a suffix. Tap what the word means, and the pillars rise.",
+  "stepTitle": "What does it mean?",
+  "bins": [],
+  "items": [
+   {
+    "t": "helpful",
+    "bin": "r",
+    "bins": [
+     {
+      "id": "r",
+      "label": "full of help",
+      "ic": "👆"
+     },
+     {
+      "id": "w",
+      "label": "without any help",
+      "ic": "👆"
+     }
+    ],
+    "why": "helpful: full of help.",
+    "miss": {
+     "w": "Find the prefix or suffix. What does that part mean?"
+    }
+   },
+   {
+    "t": "careless",
+    "bin": "r",
+    "bins": [
+     {
+      "id": "w",
+      "label": "full of care",
+      "ic": "👆"
+     },
+     {
+      "id": "r",
+      "label": "without care",
+      "ic": "👆"
+     }
+    ],
+    "why": "careless: without care.",
+    "miss": {
+     "w": "Find the prefix or suffix. What does that part mean?"
+    }
+   },
+   {
+    "t": "redo",
+    "bin": "r",
+    "bins": [
+     {
+      "id": "r",
+      "label": "to do again",
+      "ic": "👆"
+     },
+     {
+      "id": "w",
+      "label": "to never do",
+      "ic": "👆"
+     }
+    ],
+    "why": "redo: to do again.",
+    "miss": {
+     "w": "Find the prefix or suffix. What does that part mean?"
+    }
+   },
+   {
+    "t": "unfair",
+    "bin": "r",
+    "bins": [
+     {
+      "id": "w",
+      "label": "very fair",
+      "ic": "👆"
+     },
+     {
+      "id": "r",
+      "label": "not fair",
+      "ic": "👆"
+     }
+    ],
+    "why": "unfair: not fair.",
+    "miss": {
+     "w": "Find the prefix or suffix. What does that part mean?"
+    }
+   },
+   {
+    "t": "darkness",
+    "bin": "r",
+    "bins": [
+     {
+      "id": "r",
+      "label": "being dark",
+      "ic": "👆"
+     },
+     {
+      "id": "w",
+      "label": "getting lighter",
+      "ic": "👆"
+     }
+    ],
+    "why": "darkness: being dark.",
+    "miss": {
+     "w": "Find the prefix or suffix. What does that part mean?"
+    }
+   },
+   {
+    "t": "uncover",
+    "bin": "r",
+    "bins": [
+     {
+      "id": "w",
+      "label": "to cover it more",
+      "ic": "👆"
+     },
+     {
+      "id": "r",
+      "label": "to take the cover off",
+      "ic": "👆"
+     }
+    ],
+    "why": "uncover: to take the cover off.",
+    "miss": {
+     "w": "Find the prefix or suffix. What does that part mean?"
+    }
+   },
+   {
+    "t": "truthful",
+    "bin": "r",
+    "bins": [
+     {
+      "id": "r",
+      "label": "full of truth",
+      "ic": "👆"
+     },
+     {
+      "id": "w",
+      "label": "without the truth",
+      "ic": "👆"
+     }
+    ],
+    "why": "truthful: full of truth.",
+    "miss": {
+     "w": "Find the prefix or suffix. What does that part mean?"
+    }
+   },
+   {
+    "t": "rewrite",
+    "bin": "r",
+    "bins": [
+     {
+      "id": "w",
+      "label": "to stop writing",
+      "ic": "👆"
+     },
+     {
+      "id": "r",
+      "label": "to write again",
+      "ic": "👆"
+     }
+    ],
+    "why": "rewrite: to write again.",
+    "miss": {
+     "w": "Find the prefix or suffix. What does that part mean?"
+    }
+   }
+  ]
+ },
+ "glossary": [
+  {
+   "w": "pillar",
+   "m": "a tall post that holds up a building. The 7 pillars hold up good character.",
+   "key": true
+  },
+  {
+   "w": "virtue",
+   "m": "a quality that shows good character, like honesty or courage",
+   "key": true
+  },
+  {
+   "w": "courtesy",
+   "m": "being polite and kind with your words and actions"
+  },
+  {
+   "w": "prefix",
+   "m": "a word part added to the front of a word, like un- in unkind",
+   "key": true
+  },
+  {
+   "w": "suffix",
+   "m": "a word part added to the end of a word, like -ful in hopeful",
+   "key": true
+  },
+  {
+   "w": "base word",
+   "m": "the main word before a prefix or suffix is added. Hope is the base word in hopeful."
+  },
+  {
+   "w": "claim",
+   "m": "the main idea you want to prove in your writing",
+   "key": true
+  },
+  {
+   "w": "body paragraph",
+   "m": "a paragraph in the middle of your writing that gives one reason and an example"
+  }
+ ],
+ "sayWords": [],
+ "cards": [
+  {
+   "id": "world",
+   "kind": "info",
+   "tab": "reading",
+   "after": "Read:|Look Back",
+   "before": true,
+   "icon": "🌍",
+   "title": "World Notes: The Real Flat Stanley Project",
+   "sub": "A real thing behind one of our books",
+   "todo": "Read the note. Then read with your lens in mind.",
+   "text": [
+    "In 1995, a 3rd grade teacher in Canada named Dale Hubert had an idea. His class read <i>Flat Stanley</i>. Then each student colored a paper Stanley and mailed him to a friend or family member far away.",
+    "The person who got the paper Stanley took a picture with him and wrote back about his adventures.",
+    "Today, kids all over the world still mail paper Stanleys, just like Stanley traveled in an envelope in the book."
+   ]
+  }
+ ],
+ "transcripts": {
+  "welcome": "Hi, it's Opti. This is our last week together. You pick one character and show the good character inside them.",
+  "guide1": "Word work first: word parts from the year, three big words, and one last editing job.",
+  "guide2": "Read about the 7 pillars. Then choose your character.",
+  "guide3": "Today you plan: your character and two pillars."
+ },
+ "notes": {
+  "wordParts": "Word parts I know: -y and -ness mean being something, -ous means full of, -ful means full of, -less means without, un- means not, re- means again.",
+  "grammar": "Editing checklist: capitals on names and the first word, apostrophes for belonging and joined words, a comma before and/but/so when it joins two complete thoughts, and the right past form, like went.",
+  "spelling": "Find the base word first. Then check what was added: drop the silent e (hope, hoping), double the last letter (hop, hopping), change y to i (cry, cried), or add -es (box, boxes).",
+  "wgrd": "The 7 pillars of good character are honesty, respect, courtesy, responsibility, courage, service and perseverance. Our books show all of them.",
+  "vocab": [
+   [
+    "integrity",
+    "doing the right thing even when no one is watching"
+   ],
+   [
+    "empathy",
+    "understanding and sharing the feelings of another person"
+   ],
+   [
+    "resilience",
+    "the ability to keep going after something hard"
+   ]
+  ]
+ },
+ "plate": {
+  "src": "art/ext/ext-parthenon-church.jpg",
+  "alt": "A painting of an old stone temple with rows of tall pillars on a hill, under a blue sky",
+  "credit": "The Parthenon · Frederic Edwin Church, 1871 · The Metropolitan Museum of Art · Public domain",
+  "look": "A painting by Frederic Edwin Church of the Parthenon, a real temple in Athens, Greece, built about 2,400 years ago. Count the stone pillars holding up the roof. This week, 7 pillars hold up good character.",
+  "lookBtn": "Tap to learn about this painting of an old temple"
+ },
+ "teach": {
+  "dropTurnNotes": true,
+  "mods": [
+   {
+    "id": "wgrd",
+    "find": "What Good Readers",
+    "fold": [
+     ":scope > p:not(.g3-do)",
+     ":scope > .key-concept",
+     ":scope > .socratic-box"
+    ],
+    "todo": "Listen to Opti. Then tap the lens you will use today.",
+    "script": "[warmly] Here's this week's reading tip. Look back at how your reading has grown. Think about all four books, and one skill that is easy for you now. Then tap one of the two lenses below to use while you read. You don't need to write anything."
+   },
+   {
+    "id": "dol",
+    "find": "Daily Oral",
+    "fold": [],
+    "todo": "Tap the yellow parts. Then pick Sentence A or B and type it the right way.",
+    "script": "Let's fix a sentence. The correct one first. Kindness costs nothing, and it's the one thing everybody remembers. It's joins it and is. A comma goes before and, because and joins two complete thoughts. Tap the yellow parts. Then pick Sentence A or Sentence B, and type it the right way."
+   },
+   {
+    "id": "morph",
+    "find": "Morphology",
+    "fold": [],
+    "todo": "Think about the questions. Tap See if you were right. Type the missing part in each box.",
+    "script": "[curious] Every word part this year was a tool. Kindness. Kind, plus ness: being kind. Joyous. Joy, plus ous: full of joy. Find the base word first, then the part. Read the words and their parts, tap See if you were right, then type the missing part of each word.",
+    "video": "g3ela-32-1-teach-morph"
+   },
+   {
+    "id": "vocab",
+    "find": "Vocabulary",
+    "fold": [
+     ":scope > .g3-model-h",
+     ":scope > .decode-steps",
+     ":scope > .key-concept"
+    ],
+    "todo": "Fill in each sentence from the word bank. Tap Check My Work. Then play the matching game.",
+    "script": "Be a word detective with me. Generous. Here's my sentence. Maya gave half her lunch to a new friend; she was generous. One, read the sentence: she shared. Two, look for word parts: ous means full of. Three, check it. Generous means happy to give and share. Now fill in each sentence from the word bank, and play the matching game.",
+    "video": "g3ela-32-1-teach-vocab"
+   },
+   {
+    "id": "gram",
+    "find": "Grammar",
+    "fold": [
+     ":scope > .callout:not(:has(+ .spotter-game)):not(:has(+ .fillin-game)):not(:has(+ .sort-game)):not(:has(+ .dol-check-btn))"
+    ],
+    "todo": "Tap Now check your thinking. Then tap all seven words that need fixing.",
+    "script": "[warmly] One sentence, four fixes. maya and leo goed to the library on monday. Maya and Leo are names: capitals. Monday is a day: capital M. And goed should be went. Read The Rule box, and tap Now check your thinking. Then tap all seven words in the passage that need fixing.",
+    "video": "g3ela-32-1-teach-gram"
+   },
+   {
+    "id": "spell",
+    "find": "Spelling",
+    "fold": [],
+    "todo": "Think about the questions. Tap Now name the pattern. Then sort all eight words.",
+    "script": "Front or back? Unhappy: the part un is at the front, so it's a prefix. Thankful: the part ful is at the end, so it's a suffix. Think about the questions, and tap Now name the pattern. Then sort the words: prefix at the front, or suffix at the end.",
+    "video": "g3ela-32-1-teach-spell"
+   },
+   {
+    "id": "copia",
+    "sel": ".spk-copia-card",
+    "label": "Opti shows you how",
+    "fold": [],
+    "todo": "Write the sentence three new ways, one box at a time.",
+    "script": "[warmly] Here's copia: one idea, said many ways. Let me try a different sentence first. Lucy told the truth. Box one, change the opener: Even when no one believed her, Lucy told the truth. Box two, a stronger verb: Lucy insisted it was true. Box three, add a detail: Lucy told the truth about the lamp-post in the snowy wood. Now you try it with the sentence about courage."
+   },
+   {
+    "id": "read",
+    "find": "^\\W*(Read:|Look Back)",
+    "fold": [],
+    "todo": "Read about the 7 pillars. Then try the Pillar Watch below.",
+    "script": "Read about the 7 pillars with your lens in mind. Each one has a real example from a book we read. Then try the Pillar Watch and the three questions."
+   },
+   {
+    "id": "chq",
+    "find": "Q1 —",
+    "fold": [],
+    "todo": "Answer each question in full sentences. Use a detail from your character's book.",
+    "script": "Three questions, in full sentences. One, your character, and why you chose them. Two, two pillars your character shows, with an example for each. Three, the one pillar that matters most for your character."
+   },
+   {
+    "id": "write",
+    "find": "Writer.s Workshop",
+    "fold": [
+     ":scope > .callout"
+    ],
+    "foldText": [
+     "watch how",
+     "today.s tool"
+    ],
+    "todo": "Read Clara's plan. Your plan is your answers on the Reading tab.",
+    "script": "Clara chose Edmund and two pillars. Your plan is your answers on the Reading tab, so there's nothing more to write here."
+   }
+  ],
+  "cards": {}
+ },
+ "virtue": {
+  "name": "pillars",
+  "title": "Pillar Watch: Does it show a pillar?",
+  "items": [
+   {
+    "t": "Lucy keeps saying Narnia is real, even when the others think she is making it up. (The Lion, the Witch and the Wardrobe)",
+    "ok": true,
+    "why": "Honesty: she tells the truth even when it is hard."
+   },
+   {
+    "t": "Edmund tells Peter and Susan that he and Lucy were only pretending about Narnia. (The Lion, the Witch and the Wardrobe)",
+    "ok": false,
+    "why": "That was a lie, so it is not honesty. Edmund changes later in the book."
+   },
+   {
+    "t": "Stanley stays in a picture frame all night to help catch the sneak thieves. (Flat Stanley)",
+    "ok": true,
+    "why": "Service: he helps the museum and asks for nothing back."
+   }
+  ]
+ }
+}
