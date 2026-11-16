@@ -13,10 +13,11 @@ errs, notes = [], []
 # 1. models + map exist in the asset list
 rows = list(csv.reader(open(os.path.join(ROOT, 'Planning docs', 'vr-assets.csv'), encoding='utf-8-sig')))
 names = {c.strip() for r in rows for c in r}
-for m in D['models']:
+for m in D.get('models', []):
     if m['name'] not in names: errs.append('model not in CSV: ' + m['name'])
 if D['map'] not in names: errs.append('map not in CSV: ' + D['map'])
-if not 4 <= len(D['models']) <= 6: errs.append('need 4-6 models, have %d' % len(D['models']))
+if D['pattern'] == 'A' and not 4 <= len(D['models']) <= 6: errs.append('need 4-6 models, have %d' % len(D['models']))
+if D['pattern'] == 'B' and not 3 <= len(D.get('lookfors', [])) <= 6: errs.append('Pattern B needs 3-6 look-fors')
 
 # 2. always Day 2, 5 steps
 if D['day'] != 2: errs.append('VR must be Day 2')

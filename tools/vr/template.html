@@ -152,7 +152,7 @@ textarea:focus{outline:none;border-color:var(--blue)}
   <section class="look"><h2>👀 What am I looking at?</h2><p>{{LOOK}}</p></section>
 
   <div class="paths" role="group" aria-label="Choose your path">
-    <button type="button" class="path" id="pathVR" aria-pressed="true"><b>🥽 I have a headset</b><small>Build it in VR.</small></button>
+    <button type="button" class="path" id="pathVR" aria-pressed="true"><b>🥽 I have a headset</b><small>{{VR_SUB}}</small></button>
     <button type="button" class="path" id="pathMap" aria-pressed="false"><b>📋 No headset today?</b><small>Play Road Map Day on this page.</small></button>
   </div>
 
@@ -204,18 +204,7 @@ textarea:focus{outline:none;border-color:var(--blue)}
   <section class="card" id="map" hidden>
     <h2>📋 Road Map Day</h2>
     <p data-say="mapday" class="step-t">{{MAP_INTRO}}</p>
-    <div class="scene" aria-label="A forest at night, waiting for the runaways' things">
-      <svg class="bg" viewBox="0 0 600 320" aria-hidden="true"><defs><linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#12204A"/><stop offset="1" stop-color="#2E4470"/></linearGradient></defs>
-        <rect width="600" height="320" fill="url(#sky)"/><g fill="#fff" opacity=".7"><circle cx="60" cy="40" r="1.4"/><circle cx="160" cy="22" r="1.2"/><circle cx="250" cy="60" r="1.1"/><circle cx="330" cy="30" r="1.4"/><circle cx="560" cy="70" r="1.2"/></g>
-        <path d="M0 250 Q150 230 300 248 T600 244 V320 H0Z" fill="#1E3324"/>
-        <g fill="#16291C"><path d="M20 260 L60 120 L100 260Z"/><path d="M80 262 L118 150 L156 262Z"/><path d="M470 258 L512 130 L554 258Z"/><path d="M530 262 L566 160 L600 262Z"/><path d="M380 256 L410 170 L440 256Z"/></g>
-        <path d="M0 290 Q300 270 600 292 V320 H0Z" fill="#284430"/>
-      </svg>
-      <div class="slot" id="slot-moon" style="left:66%;top:6%">moon</div>
-      <div class="slot" id="slot-horse" style="left:30%;top:52%">horse</div>
-      <div class="slot" id="slot-basket" style="left:48%;top:62%">basket</div>
-      <div class="slot" id="slot-cloak" style="left:14%;top:60%">cloak</div>
-    </div>
+    {{SCENE}}
     <div class="clue" id="clue"><div class="q" id="clueQ"></div><div class="ch" id="clueCh"></div></div>
     <div class="objs" id="objs">{{CHOICES}}</div>
     <div class="fb" id="mfb" role="status"></div>
@@ -282,12 +271,12 @@ $('#help').addEventListener('toggle',function(){ var f=$('.hd-frame',this); if(t
 var C=V.clues; S.placed=S.placed||[];
 function slotFill(o){ var sl=$('#slot-'+o); if(sl){ sl.innerHTML=V.icons[o]; sl.classList.add('filled'); } }
 function showClue(){ var k=S.placed.length;
-  S.placed.forEach(slotFill); $$('.obj').forEach(function(b){ b.disabled=S.placed.indexOf(b.getAttribute('data-o'))>=0; });
-  if(k>=C.length){ $('#clue').hidden=true; $('#objs').hidden=true; $('#mfb').className='fb ok'; $('#mfb').textContent='✓ The scene is ready. Now finish the two sentences.'; $('#frames').hidden=false; return; }
+  S.placed.forEach(slotFill); $$('.obj').forEach(function(b){ b.disabled=!V.repeat&&S.placed.indexOf(b.getAttribute('data-o'))>=0; });
+  if(k>=C.length){ $('#clue').hidden=true; $('#objs').hidden=true; $('#mfb').className='fb ok'; $('#mfb').textContent=V.done||'✓ The scene is ready. Now finish the two sentences.'; $('#frames').hidden=false; return; }
   $('#clueQ').textContent=C[k].q; $('#clueCh').textContent='Clue '+(k+1)+' of '+C.length+' · '+C[k].ch; }
 $$('.obj').forEach(function(b){ b.onclick=function(){ var k=S.placed.length; if(k>=C.length) return; var o=b.getAttribute('data-o');
-  if(o===C[k].a){ S.placed.push(o); save(); $('#mfb').className='fb ok'; $('#mfb').textContent='✓ Yes! '+V.names[o].charAt(0).toUpperCase()+V.names[o].slice(1)+'.'; showClue(); }
-  else { b.classList.remove('shake'); void b.offsetWidth; b.classList.add('shake'); $('#mfb').className='fb bad'; $('#mfb').textContent='Not that one. Read the clue again and look for the thing it names.'; } }; });
+  if(o===C[k].a){ S.placed.push(o); save(); $('#mfb').className='fb ok'; $('#mfb').textContent=V.right?V.right.replace('{name}',V.names[o].replace(/^an? /,'')):'✓ Yes! '+V.names[o].charAt(0).toUpperCase()+V.names[o].slice(1)+'.'; showClue(); }
+  else { b.classList.remove('shake'); void b.offsetWidth; b.classList.add('shake'); $('#mfb').className='fb bad'; $('#mfb').textContent=V.miss||'Not that one. Read the clue again and look for the thing it names.'; } }; });
 showClue();
 
 /* the two sentence frames */
@@ -304,7 +293,7 @@ $('#savePdf').onclick=function(){
   var v=$('#saveview'), starts=tas.map(function(t){return t.getAttribute('data-start');});
   v.innerHTML='<div class="save-bar"><b>Save your page</b><ol><li>Tap <b>Save as PDF</b>. A print window opens.</li><li>Next to <b>Destination</b>, choose <b>Save as PDF</b>, then tap <b>Save</b>.</li><li>Upload the PDF to <b>'+esc(V.canvas)+'</b> in Canvas.</li></ol><button type="button" class="btn gold" id="pp">Save as PDF</button> <button type="button" class="btn ghost" id="pc">Back</button></div>'+
     '<section class="sheet"><div class="k">Road Map Day · '+esc(S.name||'Name: ______________')+'</div><h3>'+esc(V.title)+'</h3><p class="k">'+esc(V.canvas)+'</p>'+
-    '<p class="k">The scene: '+S.placed.map(function(o){return esc(V.names[o]);}).join(', ')+'</p>'+
+    (V.repeat?'':'<p class="k">The scene: '+S.placed.map(function(o){return esc(V.names[o]);}).join(', ')+'</p>')+
     tas.map(function(t,i){return '<p class="ans"><b>'+esc(starts[i])+'</b> '+esc(t.value.replace(new RegExp('^'+starts[i].replace(/[.*+?^${}()|[\]\\]/g,'\\$&')+'\\s*','i'),''))+'</p>';}).join('')+
     $('#mapDone svg').outerHTML+'</section>';
   v.classList.add('open'); stamp('map'); $('#mapDone').classList.add('show');

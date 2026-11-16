@@ -1,0 +1,120 @@
+{
+ "week": 19,
+ "day": 2,
+ "book": "The Whipping Boy",
+ "chapters": "Chapters 8–9",
+ "title": "The Outlaws’ Hideout",
+ "pattern": "B",
+ "map": "Medieval Forest",
+ "mapFilter": "Forest",
+ "stamp": {
+  "name": "Outlaws’ Hideout",
+  "art": "hut"
+ },
+ "brief": "Hoo! Let’s step off the Reading Road and into the book. In Chapters 8 and 9, the outlaws hide the boys in a hut in the forest. Find a spot where a hut could hide, then take a photo for your teacher.",
+ "look": "This stop is the outlaws’ hiding place in the forest, from Chapters 8 and 9. Hold-Your-Nose Billy says, “We’re well hid, Cutwater.” This time you don’t build. You find a place.",
+ "lookfors": [
+  {
+   "name": "Trees close together",
+   "why": "so no one can see in",
+   "icon": "trees"
+  },
+  {
+   "name": "Far from the path",
+   "why": "so travelers don’t walk by",
+   "icon": "nopath"
+  },
+  {
+   "name": "Deep shade",
+   "why": "so it is hard to spot",
+   "icon": "shade"
+  },
+  {
+   "name": "Room for a small hut",
+   "why": "where the outlaws keep the boys",
+   "icon": "hut"
+  }
+ ],
+ "steps": [
+  {
+   "title": "Know what to look for",
+   "say": "step1",
+   "text": "You won’t build today. You will find a good hiding spot. Read the four things to look for. This list is also in VR: open your menu, click the **Canvas** tab, then pick our assignment."
+  },
+  {
+   "title": "Go in",
+   "say": "step2",
+   "first": true,
+   "text": "Put on your headset and open the **On-Demand** app. Click the **Explore** tab. Type **Forest** in the **Filter environments** box and click **Medieval Forest**. Then click **Begin Solo**."
+  },
+  {
+   "title": "Find it",
+   "say": "step3",
+   "text": "Walk and teleport through the forest. Find a spot with trees close together, far from the path, in deep shade, with room for a small hut."
+  },
+  {
+   "title": "Look closely",
+   "say": "step4",
+   "frame": "“This is a good hideout because ___. The king’s soldiers would not find it because ___.”",
+   "text": "Stand in your spot and say this out loud:",
+   "spoken": "Stand in your spot and say this out loud. This is a good hideout because… and finish the sentence. The king’s soldiers would not find it because… and finish that one too."
+  },
+  {
+   "title": "Snap and submit",
+   "say": "step5",
+   "submit": true,
+   "fits": "the trees around your hiding spot",
+   "text": ""
+  }
+ ],
+ "extra": {
+  "say": "extra",
+  "icon": "nopath",
+  "text": "Find a spot that would be a **bad** hideout. Say why the outlaws would not hide there."
+ },
+ "points": "Your photo shows a hidden spot with trees close together, away from the path.",
+ "mapday": {
+  "say": "mapday",
+  "intro": "No headset today? That’s okay. It’s Road Map Day. Read each line from the book and tap who said it. Then finish two sentences about the hideout.",
+  "repeat": true,
+  "right": "✓ Yes! {name} said it.",
+  "miss": "Not that one. Think about who talks like that in Chapters 8 and 9.",
+  "done": "✓ You found every speaker. Now finish the two sentences.",
+  "names": {
+   "billy": "Hold-Your-Nose Billy",
+   "cutwater": "Cutwater",
+   "jemmy": "Jemmy",
+   "prince": "Prince Brat"
+  },
+  "scene": {
+   "bg": "hut-day",
+   "aria": "The outlaws’ hut in the forest, with a spot for each person who talks",
+   "slots": [
+    {"id": "billy", "left": "6%", "top": "52%", "label": "?"},
+    {"id": "cutwater", "left": "22%", "top": "60%", "label": "?"},
+    {"id": "jemmy", "left": "68%", "top": "56%", "label": "?"},
+    {"id": "prince", "left": "84%", "top": "60%", "label": "?"}
+   ]
+  },
+  "clues": [
+   {"q": "“Aye. That sounds proper respectful.”", "ch": "Chapter 8", "a": "billy"},
+   {"q": "“A prince is worth a prince’s ransom!”", "ch": "Chapter 8", "a": "jemmy"},
+   {"q": "“We did forget about jewels, Billy.”", "ch": "Chapter 8", "a": "cutwater"},
+   {"q": "“The bread’s stale.”", "ch": "Chapter 9", "a": "prince"},
+   {"q": "“Eat hearty, little fellers.”", "ch": "Chapter 9", "a": "cutwater"},
+   {"q": "“Send it to the castle in the hands of my whipping boy.”", "ch": "Chapter 9", "a": "jemmy"}
+  ],
+  "choices": ["billy", "cutwater", "jemmy", "prince"],
+  "frames": [
+   {
+    "start": "The outlaws hide in the forest because",
+    "hints": ["they don’t want to get caught", "the king’s soldiers are looking", "they have the prince"]
+   },
+   {
+    "start": "If I were Jemmy, I would",
+    "hints": ["keep pretending to be the prince", "look for a way to escape", "trick the outlaws"]
+   }
+  ],
+  "minWords": 20
+ }
+}
