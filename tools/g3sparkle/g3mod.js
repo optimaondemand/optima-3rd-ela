@@ -1428,6 +1428,20 @@ WORDGAME.pillars = function (cfg) {
 };
 
 /* ── Year-end cards (week 32). Taps go into My Work through one gatherAnswers wrapper per card. */
+function g3OwlImage(x, y, h) {
+  var u = window.__g3OwlData || artURL(ART.companions[resolveCompanion('opti')]);
+  return u ? '<image href="' + u + '" x="' + x + '" y="' + y + '" height="' + h + '" width="' + Math.round(h * 0.8) + '" preserveAspectRatio="xMidYMid meet"/>' : '';
+}
+function g3OwlPreload() {
+  if (window.__g3OwlData) return;
+  try {
+    var ou = artURL(ART.companions[resolveCompanion('opti')]); if (!ou) return;
+    if (ou.indexOf('data:') === 0) { window.__g3OwlData = ou; return; }
+    fetch(ou).then(function (r) { return r.blob(); }).then(function (bl) {
+      var fr = new FileReader(); fr.onload = function () { window.__g3OwlData = fr.result; }; fr.readAsDataURL(bl);
+    }).catch(function () {});
+  } catch (e) {}
+}
 function g3AddToWork(label, fn) {
   var _orig = window.gatherAnswers;
   if (typeof _orig !== 'function') return;
@@ -1505,7 +1519,7 @@ function cardLookback(c, body) {
         '<text x="' + X[i] + '" y="' + (Y[i] + 5) + '" text-anchor="middle" font-size="15">' + esc(o.ic || '📖') + '</text>';
       if (st.fav === i) s += '<text x="' + X[i] + '" y="' + (Y[i] - 20) + '" text-anchor="middle" font-size="14">⭐</text>';
     });
-    if (st.at >= 0) s += '<g transform="translate(' + (X[st.at] + 10) + ',' + (Y[st.at] - 2) + ')">' + owlSVG('opti', 26).replace('<svg ', '<svg x="0" y="0" ') + '</g>';
+    if (st.at >= 0) s += g3OwlImage(X[st.at] + 8, Y[st.at] - 34, 32);
     return s + '</svg>';
   }
   function paint() {
@@ -1548,12 +1562,13 @@ function certSVG(name, pillar, c, w) {
     '<text x="200" y="198" text-anchor="middle" font-family="Georgia,serif" font-size="20" font-weight="700" fill="#C7922C">' + e2(pillar || '…') + '</text>' +
     '<text x="300" y="248" text-anchor="middle" font-family="Georgia,serif" font-size="14" font-style="italic" fill="#0E1C42">Opti</text>' +
     '<line x1="250" y1="234" x2="350" y2="234" stroke="#C9B48A" stroke-width="1"/>' +
-    '<g transform="translate(40,206)">' + owlSVG('opti', 54).replace('<svg ', '<svg x="0" y="0" ') + '</g></svg>';
+    g3OwlImage(34, 194, 66) + '</svg>';
 }
 function cardCert(c, body) {
   var P = c.pillars || []; if (!P.length) return;
   var KEY = 'oao.g3ela.cert', st = Sparkle.get(KEY, null) || { name: '', pillar: '' };
   var pr = profile(); if (!st.name && pr && pr.name) st.name = pr.name;
+  g3OwlPreload();
   body.insertAdjacentHTML('beforeend', lookCard(null, c.todo) + '<div class="g3-cert"></div>');
   var box = body.querySelector('.g3-cert');
   function save() { Sparkle.set(KEY, st); }
