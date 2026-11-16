@@ -396,3 +396,6 @@ button.g3-opt-btn.g3-tunnel { display:flex; flex-direction:column; align-items:c
 .g3-tunnel-txt { font-size:18px; font-weight:700; color:#24324F; line-height:1.35; }
 button.g3-opt-btn.g3-tunnel.tried { opacity:.55; }
 @media (max-width:420px) { .g3-tunnels { grid-template-columns:1fr; } }
+
+/* Courage/Truth Watch waits until the Read box is finished (Bethany, Nov 16 2026: 31.2 Reading felt jumbled) */
+body.os-on .os-act:not(.os-done) + .g3-virtue { display:none; }
