@@ -255,6 +255,21 @@
 .g3-statues svg.g3-clink { animation:g3clink .45s ease-out; }
 .g3-rowgame { flex:1 1 300px; max-width:360px; margin:0 auto; }
 .g3-rowgame svg.g3-clink { animation:g3clink .45s ease-out; }
+.g3-pillgame { flex:1 1 300px; max-width:360px; margin:0 auto; }
+.g3-pillgame svg.g3-clink { animation:g3clink .45s ease-out; }
+.g3-pill-names { display:flex; flex-wrap:wrap; gap:4px 6px; justify-content:center; margin-top:6px; }
+.g3-pill-names span { font:800 12px Nunito,sans-serif; color:#8B6914; background:#FFF6D8; border:1px solid #E8D28A; border-radius:999px; padding:2px 8px; }
+.g3-aw-now { display:flex; align-items:center; gap:10px; font:800 16px Nunito,sans-serif; color:#0E1C42; margin:6px 0 10px; }
+.g3-aw-rib { font-size:22px; } .g3-aw-rib.big { font-size:34px; }
+.g3-aw-next { margin-top:10px; }
+.g3-aw-shelf { display:grid; grid-template-columns:repeat(auto-fit,minmax(170px,1fr)); gap:8px; margin:10px 0; }
+.g3-aw-won { background:#FFFBEE; border:2px solid #E8D28A; border-radius:12px; padding:8px 10px; display:flex; flex-direction:column; gap:2px; font:14px Nunito,sans-serif; color:#3A4A6B; }
+.g3-aw-won b { color:#0E1C42; }
+.g3-aw .g3-stall.sel, .g3-lb .g3-stall.sel, .g3-cert .g3-stall.sel { border-color:#1B7A4E; background:#EAF6EE; }
+.g3-lb-road { max-width:420px; margin:0 auto 8px; }
+.g3-cert-p { margin-bottom:8px; }
+.g3-cert-live { max-width:440px; margin:10px auto; }
+.g3-cert-name { margin-left:6px; }
 .g3-vowels { grid-template-columns:repeat(auto-fit, minmax(110px, 1fr)); }
 .g3-vowel-ic { display:inline-flex; align-items:center; justify-content:center; width:34px; height:34px; border-radius:50%; background:#0E1C42; color:#fff; font-family:Lora,Georgia,serif; font-size:22px; font-weight:700; }
 .g3-mk-basket { display:flex; align-items:center; gap:10px; font-family:Lora,Georgia,serif; font-size:22px; line-height:1.45; color:#24324F;
