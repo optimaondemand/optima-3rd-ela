@@ -1,0 +1,2115 @@
+{
+ "week": 18,
+ "grade": 3,
+ "status": "DRAFT - for review",
+ "pages": [
+  {
+   "page": "lesson-18-1-wb.html",
+   "lesson": "18.1",
+   "week": 18,
+   "grade": 3,
+   "crosswalk": "standards/crosswalk-g3.json",
+   "standards_bar": [
+    "ELA.3.C.1.3",
+    "ELA.3.C.3.1",
+    "ELA.3.F.1.3",
+    "ELA.3.F.1.4",
+    "ELA.3.R.1.3",
+    "ELA.3.R.1.4",
+    "ELA.3.V.1.2"
+   ],
+   "lesson_tags": {
+    "FL": [
+     "ELA.3.R.1.3",
+     "ELA.3.C.3.1",
+     "ELA.3.V.1.2",
+     "ELA.3.F.1.3",
+     "ELA.3.C.1.3"
+    ],
+    "TX": [
+     "110.5(b)(10)(E)",
+     "110.5(b)(11)(D)",
+     "110.5(b)(2)(B)",
+     "110.5(b)(3)(C)",
+     "110.5(b)(2)(A)",
+     "110.5(b)(12)(C)"
+    ],
+    "AR": [
+     "3.RC.11.RL",
+     "3.W.8.P",
+     "3.V.6",
+     "3.FR.2.PD",
+     "3.FR.3.PD",
+     "3.W.1.S"
+    ],
+    "MO": [
+     "3.R.2.A.g",
+     "3.L.1.A",
+     "3.L.1.B",
+     "3.R.1.B.a",
+     "3.R.1.B.e",
+     "3.RF.3.A.a",
+     "3.W.2.A"
+    ],
+    "AL": [
+     "36",
+     "37",
+     "15c",
+     "15d",
+     "8",
+     "35"
+    ],
+    "TN": [
+     "3.RL.CS.6",
+     "3.FL.SC.6",
+     "3.FL.WC.4a",
+     "3.FL.VA.7a.ii",
+     "3.FL.VA.7a.iii",
+     "3.FL.PWR.3",
+     "3.W.TTP.1"
+    ],
+    "PR": "pending"
+   },
+   "blocks": [
+    {
+     "id": "18.1-01",
+     "title": "Big Question / Today's Wonder",
+     "FL": [
+      "ELA.3.R.1.3"
+     ],
+     "TX": [
+      "110.5(b)(10)(E)"
+     ],
+     "AR": [
+      "3.RC.11.RL"
+     ],
+     "MO": [
+      "3.R.2.A.g"
+     ],
+     "AL": [],
+     "TN": [
+      "3.RL.CS.6"
+     ],
+     "PR": "pending"
+    },
+    {
+     "id": "18.1-02",
+     "title": "📚 What Good Readers Do",
+     "FL": [
+      "ELA.3.R.1.3"
+     ],
+     "TX": [
+      "110.5(b)(10)(E)"
+     ],
+     "AR": [
+      "3.RC.11.RL"
+     ],
+     "MO": [
+      "3.R.2.A.g"
+     ],
+     "AL": [],
+     "TN": [
+      "3.RL.CS.6"
+     ],
+     "PR": "pending"
+    },
+    {
+     "id": "18.1-03",
+     "title": "✏️ Daily Oral Language",
+     "FL": [
+      "ELA.3.C.3.1"
+     ],
+     "TX": [
+      "110.5(b)(11)(D)",
+      "110.5(b)(2)(B)"
+     ],
+     "AR": [
+      "3.W.8.P"
+     ],
+     "MO": [
+      "3.L.1.A",
+      "3.L.1.B"
+     ],
+     "AL": [
+      "36",
+      "37"
+     ],
+     "TN": [
+      "3.FL.SC.6",
+      "3.FL.WC.4a"
+     ],
+     "PR": "pending"
+    },
+    {
+     "id": "18.1-04",
+     "title": "🌱 Morphology: inter- and sub-",
+     "FL": [
+      "ELA.3.V.1.2",
+      "ELA.3.F.1.3"
+     ],
+     "TX": [
+      "110.5(b)(3)(C)",
+      "110.5(b)(2)(A)"
+     ],
+     "AR": [
+      "3.V.6",
+      "3.FR.2.PD",
+      "3.FR.3.PD"
+     ],
+     "MO": [
+      "3.R.1.B.a",
+      "3.R.1.B.e",
+      "3.RF.3.A.a"
+     ],
+     "AL": [
+      "15c",
+      "15d",
+      "8"
+     ],
+     "TN": [
+      "3.FL.VA.7a.ii",
+      "3.FL.VA.7a.iii",
+      "3.FL.PWR.3"
+     ],
+     "PR": "pending"
+    },
+    {
+     "id": "18.1-05",
+     "title": "🔤 Vocabulary",
+     "FL": [
+      "ELA.3.V.1.2"
+     ],
+     "TX": [
+      "110.5(b)(3)(C)"
+     ],
+     "AR": [
+      "3.V.6"
+     ],
+     "MO": [
+      "3.R.1.B.a",
+      "3.R.1.B.e"
+     ],
+     "AL": [
+      "15c",
+      "15d"
+     ],
+     "TN": [
+      "3.FL.VA.7a.ii",
+      "3.FL.VA.7a.iii"
+     ],
+     "PR": "pending"
+    },
+    {
+     "id": "18.1-06",
+     "title": "✏️ Grammar: Conjunctions: and, but, so",
+     "FL": [
+      "ELA.3.C.3.1"
+     ],
+     "TX": [
+      "110.5(b)(11)(D)",
+      "110.5(b)(2)(B)"
+     ],
+     "AR": [
+      "3.W.8.P"
+     ],
+     "MO": [
+      "3.L.1.A",
+      "3.L.1.B"
+     ],
+     "AL": [
+      "36",
+      "37"
+     ],
+     "TN": [
+      "3.FL.SC.6",
+      "3.FL.WC.4a"
+     ],
+     "PR": "pending"
+    },
+    {
+     "id": "18.1-07",
+     "title": "🔠 Spelling: Vowel team syllables",
+     "FL": [
+      "ELA.3.C.3.1",
+      "ELA.3.F.1.3"
+     ],
+     "TX": [
+      "110.5(b)(11)(D)",
+      "110.5(b)(2)(B)",
+      "110.5(b)(2)(A)"
+     ],
+     "AR": [
+      "3.W.8.P",
+      "3.FR.2.PD",
+      "3.FR.3.PD"
+     ],
+     "MO": [
+      "3.L.1.A",
+      "3.L.1.B",
+      "3.RF.3.A.a"
+     ],
+     "AL": [
+      "36",
+      "37",
+      "8"
+     ],
+     "TN": [
+      "3.FL.SC.6",
+      "3.FL.WC.4a",
+      "3.FL.PWR.3"
+     ],
+     "PR": "pending"
+    },
+    {
+     "id": "18.1-08",
+     "title": "Character Spotlight — Week 18",
+     "FL": [
+      "ELA.3.R.1.3"
+     ],
+     "TX": [
+      "110.5(b)(10)(E)"
+     ],
+     "AR": [
+      "3.RC.11.RL"
+     ],
+     "MO": [
+      "3.R.2.A.g"
+     ],
+     "AL": [],
+     "TN": [
+      "3.RL.CS.6"
+     ],
+     "PR": "pending"
+    },
+    {
+     "id": "18.1-09",
+     "title": "📕 Read: Ch. 1–2",
+     "FL": [
+      "ELA.3.R.1.3"
+     ],
+     "TX": [
+      "110.5(b)(10)(E)"
+     ],
+     "AR": [
+      "3.RC.11.RL"
+     ],
+     "MO": [
+      "3.R.2.A.g"
+     ],
+     "AL": [],
+     "TN": [
+      "3.RL.CS.6"
+     ],
+     "PR": "pending"
+    },
+    {
+     "id": "18.1-10",
+     "title": "📖 Chapter Thinking",
+     "FL": [
+      "ELA.3.R.1.3"
+     ],
+     "TX": [
+      "110.5(b)(10)(E)"
+     ],
+     "AR": [
+      "3.RC.11.RL"
+     ],
+     "MO": [
+      "3.R.2.A.g"
+     ],
+     "AL": [],
+     "TN": [
+      "3.RL.CS.6"
+     ],
+     "PR": "pending"
+    },
+    {
+     "id": "18.1-11",
+     "title": "🔤 Word Study Check",
+     "FL": [
+      "ELA.3.V.1.2"
+     ],
+     "TX": [
+      "110.5(b)(3)(C)"
+     ],
+     "AR": [
+      "3.V.6"
+     ],
+     "MO": [
+      "3.R.1.B.a",
+      "3.R.1.B.e"
+     ],
+     "AL": [
+      "15c",
+      "15d"
+     ],
+     "TN": [
+      "3.FL.VA.7a.ii",
+      "3.FL.VA.7a.iii"
+     ],
+     "PR": "pending"
+    },
+    {
+     "id": "18.1-12",
+     "title": "Writer’s Workshop: Week 18 · Choose a Claim",
+     "FL": [
+      "ELA.3.C.1.3"
+     ],
+     "TX": [
+      "110.5(b)(12)(C)"
+     ],
+     "AR": [
+      "3.W.1.S"
+     ],
+     "MO": [
+      "3.W.2.A"
+     ],
+     "AL": [
+      "35"
+     ],
+     "TN": [
+      "3.W.TTP.1"
+     ],
+     "PR": "pending"
+    }
+   ]
+  },
+  {
+   "page": "lesson-18-2-wb.html",
+   "lesson": "18.2",
+   "week": 18,
+   "grade": 3,
+   "crosswalk": "standards/crosswalk-g3.json",
+   "standards_bar": [
+    "ELA.3.C.1.3",
+    "ELA.3.C.3.1",
+    "ELA.3.F.1.3",
+    "ELA.3.F.1.4",
+    "ELA.3.R.1.3",
+    "ELA.3.R.1.4",
+    "ELA.3.V.1.2"
+   ],
+   "lesson_tags": {
+    "FL": [
+     "ELA.3.R.1.3",
+     "ELA.3.C.3.1",
+     "ELA.3.R.1.4",
+     "ELA.3.V.1.2",
+     "ELA.3.F.1.3",
+     "ELA.3.C.1.3"
+    ],
+    "TX": [
+     "110.5(b)(10)(E)",
+     "110.5(b)(11)(D)",
+     "110.5(b)(2)(B)",
+     "110.5(b)(9)(B)",
+     "110.5(b)(3)(C)",
+     "110.5(b)(2)(A)",
+     "110.5(b)(12)(C)"
+    ],
+    "AR": [
+     "3.RC.11.RL",
+     "3.W.8.P",
+     "3.RC.12.RL",
+     "3.V.6",
+     "3.FR.2.PD",
+     "3.FR.3.PD",
+     "3.W.1.S"
+    ],
+    "MO": [
+     "3.R.2.A.g",
+     "3.L.1.A",
+     "3.L.1.B",
+     "3.R.2.B.b",
+     "3.R.1.B.a",
+     "3.R.1.B.e",
+     "3.RF.3.A.a",
+     "3.W.2.A"
+    ],
+    "AL": [
+     "36",
+     "37",
+     "27",
+     "15c",
+     "15d",
+     "8",
+     "35"
+    ],
+    "TN": [
+     "3.RL.CS.6",
+     "3.FL.SC.6",
+     "3.FL.WC.4a",
+     "3.RL.CS.5",
+     "3.FL.VA.7a.ii",
+     "3.FL.VA.7a.iii",
+     "3.FL.PWR.3",
+     "3.W.TTP.1"
+    ],
+    "PR": "pending"
+   },
+   "blocks": [
+    {
+     "id": "18.2-01",
+     "title": "Big Question / Today's Wonder",
+     "FL": [
+      "ELA.3.R.1.3"
+     ],
+     "TX": [
+      "110.5(b)(10)(E)"
+     ],
+     "AR": [
+      "3.RC.11.RL"
+     ],
+     "MO": [
+      "3.R.2.A.g"
+     ],
+     "AL": [],
+     "TN": [
+      "3.RL.CS.6"
+     ],
+     "PR": "pending"
+    },
+    {
+     "id": "18.2-02",
+     "title": "📚 What Good Readers Do",
+     "FL": [
+      "ELA.3.R.1.3"
+     ],
+     "TX": [
+      "110.5(b)(10)(E)"
+     ],
+     "AR": [
+      "3.RC.11.RL"
+     ],
+     "MO": [
+      "3.R.2.A.g"
+     ],
+     "AL": [],
+     "TN": [
+      "3.RL.CS.6"
+     ],
+     "PR": "pending"
+    },
+    {
+     "id": "18.2-03",
+     "title": "✏️ Daily Oral Language",
+     "FL": [
+      "ELA.3.C.3.1"
+     ],
+     "TX": [
+      "110.5(b)(11)(D)",
+      "110.5(b)(2)(B)"
+     ],
+     "AR": [
+      "3.W.8.P"
+     ],
+     "MO": [
+      "3.L.1.A",
+      "3.L.1.B"
+     ],
+     "AL": [
+      "36",
+      "37"
+     ],
+     "TN": [
+      "3.FL.SC.6",
+      "3.FL.WC.4a"
+     ],
+     "PR": "pending"
+    },
+    {
+     "id": "18.2-04",
+     "title": "🪶 Poetry",
+     "FL": [
+      "ELA.3.R.1.4"
+     ],
+     "TX": [
+      "110.5(b)(9)(B)"
+     ],
+     "AR": [
+      "3.RC.12.RL"
+     ],
+     "MO": [
+      "3.R.2.B.b"
+     ],
+     "AL": [
+      "27"
+     ],
+     "TN": [
+      "3.RL.CS.5"
+     ],
+     "PR": "pending"
+    },
+    {
+     "id": "18.2-05",
+     "title": "🌱 Morphology: inter- and sub-",
+     "FL": [
+      "ELA.3.V.1.2",
+      "ELA.3.F.1.3"
+     ],
+     "TX": [
+      "110.5(b)(3)(C)",
+      "110.5(b)(2)(A)"
+     ],
+     "AR": [
+      "3.V.6",
+      "3.FR.2.PD",
+      "3.FR.3.PD"
+     ],
+     "MO": [
+      "3.R.1.B.a",
+      "3.R.1.B.e",
+      "3.RF.3.A.a"
+     ],
+     "AL": [
+      "15c",
+      "15d",
+      "8"
+     ],
+     "TN": [
+      "3.FL.VA.7a.ii",
+      "3.FL.VA.7a.iii",
+      "3.FL.PWR.3"
+     ],
+     "PR": "pending"
+    },
+    {
+     "id": "18.2-06",
+     "title": "🔤 Vocabulary",
+     "FL": [
+      "ELA.3.V.1.2"
+     ],
+     "TX": [
+      "110.5(b)(3)(C)"
+     ],
+     "AR": [
+      "3.V.6"
+     ],
+     "MO": [
+      "3.R.1.B.a",
+      "3.R.1.B.e"
+     ],
+     "AL": [
+      "15c",
+      "15d"
+     ],
+     "TN": [
+      "3.FL.VA.7a.ii",
+      "3.FL.VA.7a.iii"
+     ],
+     "PR": "pending"
+    },
+    {
+     "id": "18.2-07",
+     "title": "✏️ Grammar: Conjunctions: and, but, so",
+     "FL": [
+      "ELA.3.C.3.1"
+     ],
+     "TX": [
+      "110.5(b)(11)(D)",
+      "110.5(b)(2)(B)"
+     ],
+     "AR": [
+      "3.W.8.P"
+     ],
+     "MO": [
+      "3.L.1.A",
+      "3.L.1.B"
+     ],
+     "AL": [
+      "36",
+      "37"
+     ],
+     "TN": [
+      "3.FL.SC.6",
+      "3.FL.WC.4a"
+     ],
+     "PR": "pending"
+    },
+    {
+     "id": "18.2-08",
+     "title": "🔠 Spelling: Vowel team syllables",
+     "FL": [
+      "ELA.3.C.3.1",
+      "ELA.3.F.1.3"
+     ],
+     "TX": [
+      "110.5(b)(11)(D)",
+      "110.5(b)(2)(B)",
+      "110.5(b)(2)(A)"
+     ],
+     "AR": [
+      "3.W.8.P",
+      "3.FR.2.PD",
+      "3.FR.3.PD"
+     ],
+     "MO": [
+      "3.L.1.A",
+      "3.L.1.B",
+      "3.RF.3.A.a"
+     ],
+     "AL": [
+      "36",
+      "37",
+      "8"
+     ],
+     "TN": [
+      "3.FL.SC.6",
+      "3.FL.WC.4a",
+      "3.FL.PWR.3"
+     ],
+     "PR": "pending"
+    },
+    {
+     "id": "18.2-09",
+     "title": "Character Spotlight — Week 18",
+     "FL": [
+      "ELA.3.R.1.3"
+     ],
+     "TX": [
+      "110.5(b)(10)(E)"
+     ],
+     "AR": [
+      "3.RC.11.RL"
+     ],
+     "MO": [
+      "3.R.2.A.g"
+     ],
+     "AL": [],
+     "TN": [
+      "3.RL.CS.6"
+     ],
+     "PR": "pending"
+    },
+    {
+     "id": "18.2-10",
+     "title": "📕 Read: Ch. 3–4",
+     "FL": [
+      "ELA.3.R.1.3"
+     ],
+     "TX": [
+      "110.5(b)(10)(E)"
+     ],
+     "AR": [
+      "3.RC.11.RL"
+     ],
+     "MO": [
+      "3.R.2.A.g"
+     ],
+     "AL": [],
+     "TN": [
+      "3.RL.CS.6"
+     ],
+     "PR": "pending"
+    },
+    {
+     "id": "18.2-11",
+     "title": "📖 Chapter Thinking",
+     "FL": [
+      "ELA.3.R.1.3"
+     ],
+     "TX": [
+      "110.5(b)(10)(E)"
+     ],
+     "AR": [
+      "3.RC.11.RL"
+     ],
+     "MO": [
+      "3.R.2.A.g"
+     ],
+     "AL": [],
+     "TN": [
+      "3.RL.CS.6"
+     ],
+     "PR": "pending"
+    },
+    {
+     "id": "18.2-12",
+     "title": "🔤 Word Study Check",
+     "FL": [
+      "ELA.3.V.1.2"
+     ],
+     "TX": [
+      "110.5(b)(3)(C)"
+     ],
+     "AR": [
+      "3.V.6"
+     ],
+     "MO": [
+      "3.R.1.B.a",
+      "3.R.1.B.e"
+     ],
+     "AL": [
+      "15c",
+      "15d"
+     ],
+     "TN": [
+      "3.FL.VA.7a.ii",
+      "3.FL.VA.7a.iii"
+     ],
+     "PR": "pending"
+    },
+    {
+     "id": "18.2-13",
+     "title": "Writer’s Workshop: Week 18 · Choose a Claim",
+     "FL": [
+      "ELA.3.C.1.3"
+     ],
+     "TX": [
+      "110.5(b)(12)(C)"
+     ],
+     "AR": [
+      "3.W.1.S"
+     ],
+     "MO": [
+      "3.W.2.A"
+     ],
+     "AL": [
+      "35"
+     ],
+     "TN": [
+      "3.W.TTP.1"
+     ],
+     "PR": "pending"
+    }
+   ]
+  },
+  {
+   "page": "lesson-18-3-wb.html",
+   "lesson": "18.3",
+   "week": 18,
+   "grade": 3,
+   "crosswalk": "standards/crosswalk-g3.json",
+   "standards_bar": [
+    "ELA.3.C.1.3",
+    "ELA.3.C.3.1",
+    "ELA.3.F.1.3",
+    "ELA.3.F.1.4",
+    "ELA.3.R.1.3",
+    "ELA.3.R.1.4",
+    "ELA.3.V.1.2"
+   ],
+   "lesson_tags": {
+    "FL": [
+     "ELA.3.R.1.3",
+     "ELA.3.C.3.1",
+     "ELA.3.V.1.2",
+     "ELA.3.F.1.3",
+     "ELA.3.C.1.3"
+    ],
+    "TX": [
+     "110.5(b)(10)(E)",
+     "110.5(b)(11)(D)",
+     "110.5(b)(2)(B)",
+     "110.5(b)(3)(C)",
+     "110.5(b)(2)(A)",
+     "110.5(b)(12)(C)"
+    ],
+    "AR": [
+     "3.RC.11.RL",
+     "3.W.8.P",
+     "3.V.6",
+     "3.FR.2.PD",
+     "3.FR.3.PD",
+     "3.W.1.S"
+    ],
+    "MO": [
+     "3.R.2.A.g",
+     "3.L.1.A",
+     "3.L.1.B",
+     "3.R.1.B.a",
+     "3.R.1.B.e",
+     "3.RF.3.A.a",
+     "3.W.2.A"
+    ],
+    "AL": [
+     "36",
+     "37",
+     "15c",
+     "15d",
+     "8",
+     "35"
+    ],
+    "TN": [
+     "3.RL.CS.6",
+     "3.FL.SC.6",
+     "3.FL.WC.4a",
+     "3.FL.VA.7a.ii",
+     "3.FL.VA.7a.iii",
+     "3.FL.PWR.3",
+     "3.W.TTP.1"
+    ],
+    "PR": "pending"
+   },
+   "blocks": [
+    {
+     "id": "18.3-01",
+     "title": "Big Question / Today's Wonder",
+     "FL": [
+      "ELA.3.R.1.3"
+     ],
+     "TX": [
+      "110.5(b)(10)(E)"
+     ],
+     "AR": [
+      "3.RC.11.RL"
+     ],
+     "MO": [
+      "3.R.2.A.g"
+     ],
+     "AL": [],
+     "TN": [
+      "3.RL.CS.6"
+     ],
+     "PR": "pending"
+    },
+    {
+     "id": "18.3-02",
+     "title": "📚 What Good Readers Do",
+     "FL": [
+      "ELA.3.R.1.3"
+     ],
+     "TX": [
+      "110.5(b)(10)(E)"
+     ],
+     "AR": [
+      "3.RC.11.RL"
+     ],
+     "MO": [
+      "3.R.2.A.g"
+     ],
+     "AL": [],
+     "TN": [
+      "3.RL.CS.6"
+     ],
+     "PR": "pending"
+    },
+    {
+     "id": "18.3-03",
+     "title": "✏️ Daily Oral Language",
+     "FL": [
+      "ELA.3.C.3.1"
+     ],
+     "TX": [
+      "110.5(b)(11)(D)",
+      "110.5(b)(2)(B)"
+     ],
+     "AR": [
+      "3.W.8.P"
+     ],
+     "MO": [
+      "3.L.1.A",
+      "3.L.1.B"
+     ],
+     "AL": [
+      "36",
+      "37"
+     ],
+     "TN": [
+      "3.FL.SC.6",
+      "3.FL.WC.4a"
+     ],
+     "PR": "pending"
+    },
+    {
+     "id": "18.3-04",
+     "title": "🌱 Morphology: inter- and sub-",
+     "FL": [
+      "ELA.3.V.1.2",
+      "ELA.3.F.1.3"
+     ],
+     "TX": [
+      "110.5(b)(3)(C)",
+      "110.5(b)(2)(A)"
+     ],
+     "AR": [
+      "3.V.6",
+      "3.FR.2.PD",
+      "3.FR.3.PD"
+     ],
+     "MO": [
+      "3.R.1.B.a",
+      "3.R.1.B.e",
+      "3.RF.3.A.a"
+     ],
+     "AL": [
+      "15c",
+      "15d",
+      "8"
+     ],
+     "TN": [
+      "3.FL.VA.7a.ii",
+      "3.FL.VA.7a.iii",
+      "3.FL.PWR.3"
+     ],
+     "PR": "pending"
+    },
+    {
+     "id": "18.3-05",
+     "title": "🔤 Vocabulary",
+     "FL": [
+      "ELA.3.V.1.2"
+     ],
+     "TX": [
+      "110.5(b)(3)(C)"
+     ],
+     "AR": [
+      "3.V.6"
+     ],
+     "MO": [
+      "3.R.1.B.a",
+      "3.R.1.B.e"
+     ],
+     "AL": [
+      "15c",
+      "15d"
+     ],
+     "TN": [
+      "3.FL.VA.7a.ii",
+      "3.FL.VA.7a.iii"
+     ],
+     "PR": "pending"
+    },
+    {
+     "id": "18.3-06",
+     "title": "✏️ Grammar: Conjunctions",
+     "FL": [
+      "ELA.3.C.3.1"
+     ],
+     "TX": [
+      "110.5(b)(11)(D)",
+      "110.5(b)(2)(B)"
+     ],
+     "AR": [
+      "3.W.8.P"
+     ],
+     "MO": [
+      "3.L.1.A",
+      "3.L.1.B"
+     ],
+     "AL": [
+      "36",
+      "37"
+     ],
+     "TN": [
+      "3.FL.SC.6",
+      "3.FL.WC.4a"
+     ],
+     "PR": "pending"
+    },
+    {
+     "id": "18.3-07",
+     "title": "🔠 Spelling: Vowel team syllables",
+     "FL": [
+      "ELA.3.C.3.1",
+      "ELA.3.F.1.3"
+     ],
+     "TX": [
+      "110.5(b)(11)(D)",
+      "110.5(b)(2)(B)",
+      "110.5(b)(2)(A)"
+     ],
+     "AR": [
+      "3.W.8.P",
+      "3.FR.2.PD",
+      "3.FR.3.PD"
+     ],
+     "MO": [
+      "3.L.1.A",
+      "3.L.1.B",
+      "3.RF.3.A.a"
+     ],
+     "AL": [
+      "36",
+      "37",
+      "8"
+     ],
+     "TN": [
+      "3.FL.SC.6",
+      "3.FL.WC.4a",
+      "3.FL.PWR.3"
+     ],
+     "PR": "pending"
+    },
+    {
+     "id": "18.3-08",
+     "title": "Character Spotlight — Week 18",
+     "FL": [
+      "ELA.3.R.1.3"
+     ],
+     "TX": [
+      "110.5(b)(10)(E)"
+     ],
+     "AR": [
+      "3.RC.11.RL"
+     ],
+     "MO": [
+      "3.R.2.A.g"
+     ],
+     "AL": [],
+     "TN": [
+      "3.RL.CS.6"
+     ],
+     "PR": "pending"
+    },
+    {
+     "id": "18.3-09",
+     "title": "📕 Read: Ch. 5",
+     "FL": [
+      "ELA.3.R.1.3"
+     ],
+     "TX": [
+      "110.5(b)(10)(E)"
+     ],
+     "AR": [
+      "3.RC.11.RL"
+     ],
+     "MO": [
+      "3.R.2.A.g"
+     ],
+     "AL": [],
+     "TN": [
+      "3.RL.CS.6"
+     ],
+     "PR": "pending"
+    },
+    {
+     "id": "18.3-10",
+     "title": "📖 Chapter Thinking",
+     "FL": [
+      "ELA.3.R.1.3"
+     ],
+     "TX": [
+      "110.5(b)(10)(E)"
+     ],
+     "AR": [
+      "3.RC.11.RL"
+     ],
+     "MO": [
+      "3.R.2.A.g"
+     ],
+     "AL": [],
+     "TN": [
+      "3.RL.CS.6"
+     ],
+     "PR": "pending"
+    },
+    {
+     "id": "18.3-11",
+     "title": "🔤 Word Study Check",
+     "FL": [
+      "ELA.3.V.1.2"
+     ],
+     "TX": [
+      "110.5(b)(3)(C)"
+     ],
+     "AR": [
+      "3.V.6"
+     ],
+     "MO": [
+      "3.R.1.B.a",
+      "3.R.1.B.e"
+     ],
+     "AL": [
+      "15c",
+      "15d"
+     ],
+     "TN": [
+      "3.FL.VA.7a.ii",
+      "3.FL.VA.7a.iii"
+     ],
+     "PR": "pending"
+    },
+    {
+     "id": "18.3-12",
+     "title": "Writer’s Workshop: Week 18 · Choose a Claim",
+     "FL": [
+      "ELA.3.C.1.3"
+     ],
+     "TX": [
+      "110.5(b)(12)(C)"
+     ],
+     "AR": [
+      "3.W.1.S"
+     ],
+     "MO": [
+      "3.W.2.A"
+     ],
+     "AL": [
+      "35"
+     ],
+     "TN": [
+      "3.W.TTP.1"
+     ],
+     "PR": "pending"
+    }
+   ]
+  },
+  {
+   "page": "lesson-18-4-wb.html",
+   "lesson": "18.4",
+   "week": 18,
+   "grade": 3,
+   "crosswalk": "standards/crosswalk-g3.json",
+   "standards_bar": [
+    "ELA.3.C.1.3",
+    "ELA.3.C.3.1",
+    "ELA.3.F.1.3",
+    "ELA.3.F.1.4",
+    "ELA.3.R.1.3",
+    "ELA.3.R.1.4",
+    "ELA.3.V.1.2"
+   ],
+   "lesson_tags": {
+    "FL": [
+     "ELA.3.R.1.3",
+     "ELA.3.C.3.1",
+     "ELA.3.R.1.4",
+     "ELA.3.V.1.2",
+     "ELA.3.F.1.3",
+     "ELA.3.C.1.3"
+    ],
+    "TX": [
+     "110.5(b)(10)(E)",
+     "110.5(b)(11)(D)",
+     "110.5(b)(2)(B)",
+     "110.5(b)(9)(B)",
+     "110.5(b)(3)(C)",
+     "110.5(b)(2)(A)",
+     "110.5(b)(12)(C)"
+    ],
+    "AR": [
+     "3.RC.11.RL",
+     "3.W.8.P",
+     "3.RC.12.RL",
+     "3.V.6",
+     "3.FR.2.PD",
+     "3.FR.3.PD",
+     "3.W.1.S"
+    ],
+    "MO": [
+     "3.R.2.A.g",
+     "3.L.1.A",
+     "3.L.1.B",
+     "3.R.2.B.b",
+     "3.R.1.B.a",
+     "3.R.1.B.e",
+     "3.RF.3.A.a",
+     "3.W.2.A"
+    ],
+    "AL": [
+     "36",
+     "37",
+     "27",
+     "15c",
+     "15d",
+     "8",
+     "35"
+    ],
+    "TN": [
+     "3.RL.CS.6",
+     "3.FL.SC.6",
+     "3.FL.WC.4a",
+     "3.RL.CS.5",
+     "3.FL.VA.7a.ii",
+     "3.FL.VA.7a.iii",
+     "3.FL.PWR.3",
+     "3.W.TTP.1"
+    ],
+    "PR": "pending"
+   },
+   "blocks": [
+    {
+     "id": "18.4-01",
+     "title": "Big Question / Today's Wonder",
+     "FL": [
+      "ELA.3.R.1.3"
+     ],
+     "TX": [
+      "110.5(b)(10)(E)"
+     ],
+     "AR": [
+      "3.RC.11.RL"
+     ],
+     "MO": [
+      "3.R.2.A.g"
+     ],
+     "AL": [],
+     "TN": [
+      "3.RL.CS.6"
+     ],
+     "PR": "pending"
+    },
+    {
+     "id": "18.4-02",
+     "title": "📚 What Good Readers Do",
+     "FL": [
+      "ELA.3.R.1.3"
+     ],
+     "TX": [
+      "110.5(b)(10)(E)"
+     ],
+     "AR": [
+      "3.RC.11.RL"
+     ],
+     "MO": [
+      "3.R.2.A.g"
+     ],
+     "AL": [],
+     "TN": [
+      "3.RL.CS.6"
+     ],
+     "PR": "pending"
+    },
+    {
+     "id": "18.4-03",
+     "title": "✏️ Daily Oral Language",
+     "FL": [
+      "ELA.3.C.3.1"
+     ],
+     "TX": [
+      "110.5(b)(11)(D)",
+      "110.5(b)(2)(B)"
+     ],
+     "AR": [
+      "3.W.8.P"
+     ],
+     "MO": [
+      "3.L.1.A",
+      "3.L.1.B"
+     ],
+     "AL": [
+      "36",
+      "37"
+     ],
+     "TN": [
+      "3.FL.SC.6",
+      "3.FL.WC.4a"
+     ],
+     "PR": "pending"
+    },
+    {
+     "id": "18.4-04",
+     "title": "🪶 Poetry",
+     "FL": [
+      "ELA.3.R.1.4"
+     ],
+     "TX": [
+      "110.5(b)(9)(B)"
+     ],
+     "AR": [
+      "3.RC.12.RL"
+     ],
+     "MO": [
+      "3.R.2.B.b"
+     ],
+     "AL": [
+      "27"
+     ],
+     "TN": [
+      "3.RL.CS.5"
+     ],
+     "PR": "pending"
+    },
+    {
+     "id": "18.4-05",
+     "title": "🌱 Morphology: inter- and sub-",
+     "FL": [
+      "ELA.3.V.1.2",
+      "ELA.3.F.1.3"
+     ],
+     "TX": [
+      "110.5(b)(3)(C)",
+      "110.5(b)(2)(A)"
+     ],
+     "AR": [
+      "3.V.6",
+      "3.FR.2.PD",
+      "3.FR.3.PD"
+     ],
+     "MO": [
+      "3.R.1.B.a",
+      "3.R.1.B.e",
+      "3.RF.3.A.a"
+     ],
+     "AL": [
+      "15c",
+      "15d",
+      "8"
+     ],
+     "TN": [
+      "3.FL.VA.7a.ii",
+      "3.FL.VA.7a.iii",
+      "3.FL.PWR.3"
+     ],
+     "PR": "pending"
+    },
+    {
+     "id": "18.4-06",
+     "title": "🔤 Vocabulary",
+     "FL": [
+      "ELA.3.V.1.2"
+     ],
+     "TX": [
+      "110.5(b)(3)(C)"
+     ],
+     "AR": [
+      "3.V.6"
+     ],
+     "MO": [
+      "3.R.1.B.a",
+      "3.R.1.B.e"
+     ],
+     "AL": [
+      "15c",
+      "15d"
+     ],
+     "TN": [
+      "3.FL.VA.7a.ii",
+      "3.FL.VA.7a.iii"
+     ],
+     "PR": "pending"
+    },
+    {
+     "id": "18.4-07",
+     "title": "✏️ Grammar: Conjunctions",
+     "FL": [
+      "ELA.3.C.3.1"
+     ],
+     "TX": [
+      "110.5(b)(11)(D)",
+      "110.5(b)(2)(B)"
+     ],
+     "AR": [
+      "3.W.8.P"
+     ],
+     "MO": [
+      "3.L.1.A",
+      "3.L.1.B"
+     ],
+     "AL": [
+      "36",
+      "37"
+     ],
+     "TN": [
+      "3.FL.SC.6",
+      "3.FL.WC.4a"
+     ],
+     "PR": "pending"
+    },
+    {
+     "id": "18.4-08",
+     "title": "🔠 Spelling: Vowel team syllables",
+     "FL": [
+      "ELA.3.C.3.1",
+      "ELA.3.F.1.3"
+     ],
+     "TX": [
+      "110.5(b)(11)(D)",
+      "110.5(b)(2)(B)",
+      "110.5(b)(2)(A)"
+     ],
+     "AR": [
+      "3.W.8.P",
+      "3.FR.2.PD",
+      "3.FR.3.PD"
+     ],
+     "MO": [
+      "3.L.1.A",
+      "3.L.1.B",
+      "3.RF.3.A.a"
+     ],
+     "AL": [
+      "36",
+      "37",
+      "8"
+     ],
+     "TN": [
+      "3.FL.SC.6",
+      "3.FL.WC.4a",
+      "3.FL.PWR.3"
+     ],
+     "PR": "pending"
+    },
+    {
+     "id": "18.4-09",
+     "title": "Character Spotlight — Week 18",
+     "FL": [
+      "ELA.3.R.1.3"
+     ],
+     "TX": [
+      "110.5(b)(10)(E)"
+     ],
+     "AR": [
+      "3.RC.11.RL"
+     ],
+     "MO": [
+      "3.R.2.A.g"
+     ],
+     "AL": [],
+     "TN": [
+      "3.RL.CS.6"
+     ],
+     "PR": "pending"
+    },
+    {
+     "id": "18.4-10",
+     "title": "📕 Look Back: Ch. 1–5",
+     "FL": [
+      "ELA.3.R.1.3"
+     ],
+     "TX": [
+      "110.5(b)(10)(E)"
+     ],
+     "AR": [
+      "3.RC.11.RL"
+     ],
+     "MO": [
+      "3.R.2.A.g"
+     ],
+     "AL": [],
+     "TN": [
+      "3.RL.CS.6"
+     ],
+     "PR": "pending"
+    },
+    {
+     "id": "18.4-11",
+     "title": "📖 Chapter Thinking",
+     "FL": [
+      "ELA.3.R.1.3"
+     ],
+     "TX": [
+      "110.5(b)(10)(E)"
+     ],
+     "AR": [
+      "3.RC.11.RL"
+     ],
+     "MO": [
+      "3.R.2.A.g"
+     ],
+     "AL": [],
+     "TN": [
+      "3.RL.CS.6"
+     ],
+     "PR": "pending"
+    },
+    {
+     "id": "18.4-12",
+     "title": "🔤 Word Study Check",
+     "FL": [
+      "ELA.3.V.1.2"
+     ],
+     "TX": [
+      "110.5(b)(3)(C)"
+     ],
+     "AR": [
+      "3.V.6"
+     ],
+     "MO": [
+      "3.R.1.B.a",
+      "3.R.1.B.e"
+     ],
+     "AL": [
+      "15c",
+      "15d"
+     ],
+     "TN": [
+      "3.FL.VA.7a.ii",
+      "3.FL.VA.7a.iii"
+     ],
+     "PR": "pending"
+    },
+    {
+     "id": "18.4-13",
+     "title": "Writer’s Workshop: Week 18 · Choose a Claim",
+     "FL": [
+      "ELA.3.C.1.3"
+     ],
+     "TX": [
+      "110.5(b)(12)(C)"
+     ],
+     "AR": [
+      "3.W.1.S"
+     ],
+     "MO": [
+      "3.W.2.A"
+     ],
+     "AL": [
+      "35"
+     ],
+     "TN": [
+      "3.W.TTP.1"
+     ],
+     "PR": "pending"
+    }
+   ]
+  },
+  {
+   "page": "lesson-18-fluency.html",
+   "lesson": "18.fluency",
+   "week": 18,
+   "grade": 3,
+   "crosswalk": "standards/crosswalk-g3.json",
+   "standards_bar": [
+    "ELA.3.C.1.3",
+    "ELA.3.C.3.1",
+    "ELA.3.F.1.3",
+    "ELA.3.F.1.4",
+    "ELA.3.R.1.3",
+    "ELA.3.R.1.4",
+    "ELA.3.V.1.2"
+   ],
+   "lesson_tags": {
+    "FL": [
+     "ELA.3.R.1.3",
+     "ELA.3.F.1.4"
+    ],
+    "TX": [
+     "110.5(b)(10)(E)",
+     "110.5(b)(4)"
+    ],
+    "AR": [
+     "3.RC.11.RL",
+     "3.FR.11.F"
+    ],
+    "MO": [
+     "3.R.2.A.g",
+     "3.RF.4.A"
+    ],
+    "AL": [
+     "10"
+    ],
+    "TN": [
+     "3.RL.CS.6",
+     "3.FL.F.5"
+    ],
+    "PR": "pending"
+   },
+   "blocks": [
+    {
+     "id": "18.fluency-01",
+     "title": "Big Question / Today's Wonder",
+     "FL": [
+      "ELA.3.R.1.3"
+     ],
+     "TX": [
+      "110.5(b)(10)(E)"
+     ],
+     "AR": [
+      "3.RC.11.RL"
+     ],
+     "MO": [
+      "3.R.2.A.g"
+     ],
+     "AL": [],
+     "TN": [
+      "3.RL.CS.6"
+     ],
+     "PR": "pending"
+    },
+    {
+     "id": "18.fluency-02",
+     "title": "📖 Week 18 Passage",
+     "FL": [
+      "ELA.3.F.1.4"
+     ],
+     "TX": [
+      "110.5(b)(4)"
+     ],
+     "AR": [
+      "3.FR.11.F"
+     ],
+     "MO": [
+      "3.RF.4.A"
+     ],
+     "AL": [
+      "10"
+     ],
+     "TN": [
+      "3.FL.F.5"
+     ],
+     "PR": "pending"
+    },
+    {
+     "id": "18.fluency-03",
+     "title": "🎯 The 4 Steps",
+     "FL": [
+      "ELA.3.F.1.4"
+     ],
+     "TX": [
+      "110.5(b)(4)"
+     ],
+     "AR": [
+      "3.FR.11.F"
+     ],
+     "MO": [
+      "3.RF.4.A"
+     ],
+     "AL": [
+      "10"
+     ],
+     "TN": [
+      "3.FL.F.5"
+     ],
+     "PR": "pending"
+    },
+    {
+     "id": "18.fluency-04",
+     "title": "🤔 Self-Check",
+     "FL": [
+      "ELA.3.F.1.4"
+     ],
+     "TX": [
+      "110.5(b)(4)"
+     ],
+     "AR": [
+      "3.FR.11.F"
+     ],
+     "MO": [
+      "3.RF.4.A"
+     ],
+     "AL": [
+      "10"
+     ],
+     "TN": [
+      "3.FL.F.5"
+     ],
+     "PR": "pending"
+    }
+   ]
+  },
+  {
+   "page": "week-18-checkin.html",
+   "lesson": "18.checkin",
+   "week": 18,
+   "grade": 3,
+   "crosswalk": "standards/crosswalk-g3.json",
+   "standards_bar": [],
+   "lesson_tags": {
+    "FL": [
+     "ELA.3.C.3.1",
+     "ELA.3.V.1.2",
+     "ELA.3.F.1.3",
+     "ELA.3.R.1.3",
+     "ELA.3.C.1.3"
+    ],
+    "TX": [
+     "110.5(b)(11)(D)",
+     "110.5(b)(2)(B)",
+     "110.5(b)(3)(C)",
+     "110.5(b)(2)(A)",
+     "110.5(b)(10)(E)",
+     "110.5(b)(12)(C)"
+    ],
+    "AR": [
+     "3.W.8.P",
+     "3.V.6",
+     "3.FR.2.PD",
+     "3.FR.3.PD",
+     "3.RC.11.RL",
+     "3.W.1.S"
+    ],
+    "MO": [
+     "3.L.1.A",
+     "3.L.1.B",
+     "3.R.1.B.a",
+     "3.R.1.B.e",
+     "3.RF.3.A.a",
+     "3.R.2.A.g",
+     "3.W.2.A"
+    ],
+    "AL": [
+     "36",
+     "37",
+     "15c",
+     "15d",
+     "8",
+     "35"
+    ],
+    "TN": [
+     "3.FL.SC.6",
+     "3.FL.WC.4a",
+     "3.FL.VA.7a.ii",
+     "3.FL.VA.7a.iii",
+     "3.FL.PWR.3",
+     "3.RL.CS.6",
+     "3.W.TTP.1"
+    ],
+    "PR": "pending"
+   },
+   "blocks": [
+    {
+     "id": "18.checkin-01",
+     "title": "Q1 (grammar)",
+     "FL": [
+      "ELA.3.C.3.1"
+     ],
+     "TX": [
+      "110.5(b)(11)(D)",
+      "110.5(b)(2)(B)"
+     ],
+     "AR": [
+      "3.W.8.P"
+     ],
+     "MO": [
+      "3.L.1.A",
+      "3.L.1.B"
+     ],
+     "AL": [
+      "36",
+      "37"
+     ],
+     "TN": [
+      "3.FL.SC.6",
+      "3.FL.WC.4a"
+     ],
+     "PR": "pending"
+    },
+    {
+     "id": "18.checkin-02",
+     "title": "Q2 (grammar)",
+     "FL": [
+      "ELA.3.C.3.1"
+     ],
+     "TX": [
+      "110.5(b)(11)(D)",
+      "110.5(b)(2)(B)"
+     ],
+     "AR": [
+      "3.W.8.P"
+     ],
+     "MO": [
+      "3.L.1.A",
+      "3.L.1.B"
+     ],
+     "AL": [
+      "36",
+      "37"
+     ],
+     "TN": [
+      "3.FL.SC.6",
+      "3.FL.WC.4a"
+     ],
+     "PR": "pending"
+    },
+    {
+     "id": "18.checkin-03",
+     "title": "Q3 (grammar)",
+     "FL": [
+      "ELA.3.C.3.1"
+     ],
+     "TX": [
+      "110.5(b)(11)(D)",
+      "110.5(b)(2)(B)"
+     ],
+     "AR": [
+      "3.W.8.P"
+     ],
+     "MO": [
+      "3.L.1.A",
+      "3.L.1.B"
+     ],
+     "AL": [
+      "36",
+      "37"
+     ],
+     "TN": [
+      "3.FL.SC.6",
+      "3.FL.WC.4a"
+     ],
+     "PR": "pending"
+    },
+    {
+     "id": "18.checkin-04",
+     "title": "Q4 (morph)",
+     "FL": [
+      "ELA.3.V.1.2"
+     ],
+     "TX": [
+      "110.5(b)(3)(C)"
+     ],
+     "AR": [
+      "3.V.6"
+     ],
+     "MO": [
+      "3.R.1.B.a",
+      "3.R.1.B.e"
+     ],
+     "AL": [
+      "15c",
+      "15d"
+     ],
+     "TN": [
+      "3.FL.VA.7a.ii",
+      "3.FL.VA.7a.iii"
+     ],
+     "PR": "pending"
+    },
+    {
+     "id": "18.checkin-05",
+     "title": "Q5 (morph)",
+     "FL": [
+      "ELA.3.V.1.2"
+     ],
+     "TX": [
+      "110.5(b)(3)(C)"
+     ],
+     "AR": [
+      "3.V.6"
+     ],
+     "MO": [
+      "3.R.1.B.a",
+      "3.R.1.B.e"
+     ],
+     "AL": [
+      "15c",
+      "15d"
+     ],
+     "TN": [
+      "3.FL.VA.7a.ii",
+      "3.FL.VA.7a.iii"
+     ],
+     "PR": "pending"
+    },
+    {
+     "id": "18.checkin-06",
+     "title": "Q6 (morph)",
+     "FL": [
+      "ELA.3.V.1.2"
+     ],
+     "TX": [
+      "110.5(b)(3)(C)"
+     ],
+     "AR": [
+      "3.V.6"
+     ],
+     "MO": [
+      "3.R.1.B.a",
+      "3.R.1.B.e"
+     ],
+     "AL": [
+      "15c",
+      "15d"
+     ],
+     "TN": [
+      "3.FL.VA.7a.ii",
+      "3.FL.VA.7a.iii"
+     ],
+     "PR": "pending"
+    },
+    {
+     "id": "18.checkin-07",
+     "title": "Q7 (spelling)",
+     "FL": [
+      "ELA.3.F.1.3",
+      "ELA.3.C.3.1"
+     ],
+     "TX": [
+      "110.5(b)(2)(A)",
+      "110.5(b)(11)(D)",
+      "110.5(b)(2)(B)"
+     ],
+     "AR": [
+      "3.FR.2.PD",
+      "3.FR.3.PD",
+      "3.W.8.P"
+     ],
+     "MO": [
+      "3.RF.3.A.a",
+      "3.L.1.A",
+      "3.L.1.B"
+     ],
+     "AL": [
+      "8",
+      "36",
+      "37"
+     ],
+     "TN": [
+      "3.FL.PWR.3",
+      "3.FL.SC.6",
+      "3.FL.WC.4a"
+     ],
+     "PR": "pending"
+    },
+    {
+     "id": "18.checkin-08",
+     "title": "Q8 (spelling)",
+     "FL": [
+      "ELA.3.F.1.3",
+      "ELA.3.C.3.1"
+     ],
+     "TX": [
+      "110.5(b)(2)(A)",
+      "110.5(b)(11)(D)",
+      "110.5(b)(2)(B)"
+     ],
+     "AR": [
+      "3.FR.2.PD",
+      "3.FR.3.PD",
+      "3.W.8.P"
+     ],
+     "MO": [
+      "3.RF.3.A.a",
+      "3.L.1.A",
+      "3.L.1.B"
+     ],
+     "AL": [
+      "8",
+      "36",
+      "37"
+     ],
+     "TN": [
+      "3.FL.PWR.3",
+      "3.FL.SC.6",
+      "3.FL.WC.4a"
+     ],
+     "PR": "pending"
+    },
+    {
+     "id": "18.checkin-09",
+     "title": "Q9 (spelling)",
+     "FL": [
+      "ELA.3.F.1.3",
+      "ELA.3.C.3.1"
+     ],
+     "TX": [
+      "110.5(b)(2)(A)",
+      "110.5(b)(11)(D)",
+      "110.5(b)(2)(B)"
+     ],
+     "AR": [
+      "3.FR.2.PD",
+      "3.FR.3.PD",
+      "3.W.8.P"
+     ],
+     "MO": [
+      "3.RF.3.A.a",
+      "3.L.1.A",
+      "3.L.1.B"
+     ],
+     "AL": [
+      "8",
+      "36",
+      "37"
+     ],
+     "TN": [
+      "3.FL.PWR.3",
+      "3.FL.SC.6",
+      "3.FL.WC.4a"
+     ],
+     "PR": "pending"
+    },
+    {
+     "id": "18.checkin-10",
+     "title": "Q10 (reading)",
+     "FL": [
+      "ELA.3.R.1.3"
+     ],
+     "TX": [
+      "110.5(b)(10)(E)"
+     ],
+     "AR": [
+      "3.RC.11.RL"
+     ],
+     "MO": [
+      "3.R.2.A.g"
+     ],
+     "AL": [],
+     "TN": [
+      "3.RL.CS.6"
+     ],
+     "PR": "pending"
+    },
+    {
+     "id": "18.checkin-11",
+     "title": "Q11 (reading)",
+     "FL": [
+      "ELA.3.R.1.3"
+     ],
+     "TX": [
+      "110.5(b)(10)(E)"
+     ],
+     "AR": [
+      "3.RC.11.RL"
+     ],
+     "MO": [
+      "3.R.2.A.g"
+     ],
+     "AL": [],
+     "TN": [
+      "3.RL.CS.6"
+     ],
+     "PR": "pending"
+    },
+    {
+     "id": "18.checkin-12",
+     "title": "Q12 (reading)",
+     "FL": [
+      "ELA.3.R.1.3"
+     ],
+     "TX": [
+      "110.5(b)(10)(E)"
+     ],
+     "AR": [
+      "3.RC.11.RL"
+     ],
+     "MO": [
+      "3.R.2.A.g"
+     ],
+     "AL": [],
+     "TN": [
+      "3.RL.CS.6"
+     ],
+     "PR": "pending"
+    },
+    {
+     "id": "18.checkin-13",
+     "title": "Q13 (writing)",
+     "FL": [
+      "ELA.3.C.1.3"
+     ],
+     "TX": [
+      "110.5(b)(12)(C)"
+     ],
+     "AR": [
+      "3.W.1.S"
+     ],
+     "MO": [
+      "3.W.2.A"
+     ],
+     "AL": [
+      "35"
+     ],
+     "TN": [
+      "3.W.TTP.1"
+     ],
+     "PR": "pending"
+    },
+    {
+     "id": "18.checkin-14",
+     "title": "Q14 (writing)",
+     "FL": [
+      "ELA.3.C.1.3"
+     ],
+     "TX": [
+      "110.5(b)(12)(C)"
+     ],
+     "AR": [
+      "3.W.1.S"
+     ],
+     "MO": [
+      "3.W.2.A"
+     ],
+     "AL": [
+      "35"
+     ],
+     "TN": [
+      "3.W.TTP.1"
+     ],
+     "PR": "pending"
+    }
+   ]
+  }
+ ]
+}
