@@ -3383,14 +3383,7 @@ function navTabTop() {
   var inner = window.switchTab;
   var f = function () {
     var r = inner.apply(this, arguments);
-    var top = document.getElementById('pageTop');
-    try { if (top) top.scrollIntoView({ block: 'start' }); else window.scrollTo(0, 0); } catch (e) { window.scrollTo(0, 0); }
-    try {
-      if (window.parent && window.parent !== window) {
-        window.parent.postMessage(JSON.stringify({ subject: 'lti.scrollToTop' }), '*');
-        window.parent.postMessage({ subject: 'lti.scrollToTop' }, '*');
-      }
-    } catch (e) {}
+    try { oaoGoTabTop(arguments[0]); } catch (e) { window.scrollTo(0, 0); }
     return r;
   };
   f._navTop = true; window.switchTab = f;
@@ -3539,19 +3532,38 @@ document.addEventListener('click', function (e) {
    hookTabScroll is left out of the G3 build (port.py), and this also
    asks Canvas to scroll its page up, since the lesson sits in an
    iframe there. */
+/* Every tab change lands at the top of the new tab (Bethany, Nov 20 2026, matching G4):
+   the new panel's first line sits just under the sticky progress bar and tab bar, not at
+   the very top of the page. Placed twice, because the intro collapsing can still move the
+   panel a frame or two later. Skipped while the page restores the last-used tab on load. */
+function oaoGoTabTop(tabId) {
+  if (window.__oaoRestoringTab) return;
+  var last = -1;
+  function place() {
+    var panel = document.getElementById('tab-' + tabId) || document.querySelector('.tab-panel.active');
+    if (!panel) { window.scrollTo(0, 0); return; }
+    var off = 8, bar = document.querySelector('.tab-bar');
+    if (bar) { var cs = getComputedStyle(bar); off += (parseFloat(cs.top) || 0) + bar.offsetHeight; }
+    var y = panel.getBoundingClientRect().top + (window.pageYOffset || 0) - off;
+    window.scrollTo(0, Math.max(0, Math.round(y)));
+    last = Math.round(window.pageYOffset || 0);
+  }
+  function again() { if (Math.abs((window.pageYOffset || 0) - last) <= 2) place(); }
+  place(); requestAnimationFrame(again); setTimeout(again, 380);
+  try {
+    if (window.parent && window.parent !== window) {
+      window.parent.postMessage(JSON.stringify({ subject: 'lti.scrollToTop' }), '*');
+      window.parent.postMessage({ subject: 'lti.scrollToTop' }, '*');
+    }
+  } catch (e) {}
+}
+
 function g3TabTop() {
   if (typeof window.switchTab !== 'function' || window.switchTab._g3top) return;
   var inner = window.switchTab;
   var f = function () {
     var r = inner.apply(this, arguments);
-    var top = document.getElementById('pageTop');
-    try { if (top) top.scrollIntoView({ block: 'start' }); else window.scrollTo(0, 0); } catch (e) { window.scrollTo(0, 0); }
-    try {
-      if (window.parent && window.parent !== window) {
-        window.parent.postMessage(JSON.stringify({ subject: 'lti.scrollToTop' }), '*');
-        window.parent.postMessage({ subject: 'lti.scrollToTop' }, '*');
-      }
-    } catch (e) {}
+    try { oaoGoTabTop(arguments[0]); } catch (e) { window.scrollTo(0, 0); }
     return r;
   };
   f._g3top = true; window.switchTab = f;
@@ -6188,7 +6200,9 @@ else boot();
     if (last && last !== 'warmup' && document.getElementById('tab-' + last)) {
       var pt = document.getElementById('pageTop'), keep = pt && pt.scrollIntoView;
       if (pt) pt.scrollIntoView = function () {};   /* no jump on restore */
+      window.__oaoRestoringTab = true;
       try { orig(last); } catch (e) {}
+      window.__oaoRestoringTab = false;
       if (pt) pt.scrollIntoView = keep;
     }
   }
