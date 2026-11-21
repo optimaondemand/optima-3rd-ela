@@ -92,3 +92,6 @@ with zipfile.ZipFile(out, "w", zipfile.ZIP_DEFLATED) as z:
     z.writestr("%s/%s.xml" % (gid, gid), qti)
     z.writestr("%s/assessment_meta.xml" % gid, ameta)
 print("wrote %s: %s, %d questions, %s points" % (out, title, len(qs), num(total)))
+sys.path.insert(0, __import__("os").path.join(__import__("os").path.dirname(__import__("os").path.abspath(__file__)), ".."))
+from tag_qti import tag   # each question's standards, from the page tags (tools/std_tag.py)
+tag(out)
