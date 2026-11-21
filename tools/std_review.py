@@ -20,7 +20,7 @@ DECIDED = {4: [(17, 'Check-in Q5 is context clues (V.1.3); left off the bar (che
                ('14, 19', 'Nov 20: standards bars added to the Anne scrapbook and Number the Stars project pages (tagged whole-page)')],
            3: [(24, 'Nov 20: R.3.1 added to the bar (Poetry Corner)'),
                (32, 'Nov 20: C.2.1, C.5.1, F.1.4 removed from the bar (not taught that week)'),
-               (32, 'Still off the bar, no decision asked: F.1.3 (spelling/morphology) and R.3.1 (Poetry Corner on days 2 and 4)')]}
+               (32, 'Nov 20: F.1.3 and R.3.1 added to the bar (spelling/morphology; Poetry Corner days 2 and 4)')]}
 wb = openpyxl.load_workbook(P)
 def reset(ws, rows):
     style = [copy(ws.cell(2, c)._style) for c in range(1, ws.max_column + 1)]
